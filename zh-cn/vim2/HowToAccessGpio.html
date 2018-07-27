@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>如何访问GPIO | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim2/HowToAccessGpio.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim2/HowToAccessGpio.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim2/HowToAccessGpio.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="这篇文档介绍如何在Android和Ubuntu下访问GPIO。 准备工作固件版本必须满足以下条件：  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V170515 Ubuntu Mate  &amp;gt;= V170605  在Android下 GPIO 列表  PIN         GPIO         N">
+<meta property="og:type" content="website">
+<meta property="og:title" content="如何访问GPIO">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/HowToAccessGpio.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="这篇文档介绍如何在Android和Ubuntu下访问GPIO。 准备工作固件版本必须满足以下条件：  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V170515 Ubuntu Mate  &amp;gt;= V170605  在Android下 GPIO 列表  PIN         GPIO         N">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何访问GPIO">
+<meta name="twitter:description" content="这篇文档介绍如何在Android和Ubuntu下访问GPIO。 准备工作固件版本必须满足以下条件：  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V170515 Ubuntu Mate  &amp;gt;= V170605  在Android下 GPIO 列表  PIN         GPIO         N">
+<meta name="twitter:site" content="khadas4u">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link current">VIM2</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim2/HowToAccessGpio.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">如何访问GPIO</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/HowToAccessGpio.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>这篇文档介绍如何在Android和Ubuntu下访问GPIO。</p>
+<h3 id="准备工作" class="article-heading"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作<a class="article-anchor" href="#准备工作" aria-hidden="true"></a></h3><p>固件版本必须满足以下条件：</p>
+<ul>
+<li>Android M &gt;= V170603</li>
+<li>Android N &gt;= V170421</li>
+<li>Ubuntu Server &gt;= V170515</li>
+<li>Ubuntu Mate  &gt;= V170605</li>
+</ul>
+<h3 id="在Android下" class="article-heading"><a href="#在Android下" class="headerlink" title="在Android下"></a>在Android下<a class="article-anchor" href="#在Android下" aria-hidden="true"></a></h3><p><strong> GPIO 列表 </strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         176</span><br><span class="line">PIN33       GPIOAO6        151</span><br></pre></td></tr></table></figure>
+<p>有两种方式访问GPIO：</p>
+<ul>
+<li>通过ADB命令</li>
+<li>第三方应用</li>
+</ul>
+<p><strong> ADB命令 </strong></p>
+<blockquote>
+<p>通过Wi-Fi ADB连接到VIMs<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb connect IP_ADDR</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>登录VIMs:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>获取root权限<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ su</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>请求GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176  &gt; /sys/class/gpio/export</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输出<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo out &gt; /sys/class/gpio/gpio176/direction</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)输出高电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 1 &gt;  /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)输出低电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 0 &gt;  /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo in &gt; /sys/class/gpio/gpio176/direction</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>读取GPIO(GPIOH5)电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>释放GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176 &gt; /sys/class/gpio/unexport</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong> 第三方应用 </strong></p>
+<blockquote>
+<p>获取root权限<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Process mProcess = Runtime.getRuntime().exec(&quot;su&quot;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>请求GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DataOutputStream os = new DataOutputStream(mProcess.getOutputStream());</span><br><span class="line">os.writeBytes(&quot;echo &quot; + 176 + &quot; &gt; /sys/class/gpio/export\n&quot;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输出<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">os.writeBytes(&quot;echo out &gt; /sys/class/gpio/gpio&quot; + 176 + &quot;/direction\n&quot;);</span><br><span class="line">os.writeBytes(&quot;echo 1 &gt; /sys/class/gpio/gpio&quot; + 176 + &quot;/value\n&quot;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">os.writeBytes(&quot;echo in &gt; /sys/class/gpio/gpio&quot; + 176 + &quot;/direction\n&quot;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>读取GPIO(GPIOH5)电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Runtime runtime = Runtime.getRuntime(); </span><br><span class="line">Process process = runtime.exec(&quot;cat &quot; + &quot;/sys/class/gpio/gpio&quot; + 176 + &quot;/value&quot;);  </span><br><span class="line">InputStream is = process.getInputStream(); </span><br><span class="line">InputStreamReader isr = new InputStreamReader(is); </span><br><span class="line">BufferedReader br = new BufferedReader(isr); </span><br><span class="line">String line ; </span><br><span class="line">while (null != (line = br.readLine())) &#123; </span><br><span class="line"> return Integer.parseInt(line.trim()); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>释放GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">os.writeBytes(&quot;echo &quot; + 176 + &quot; &gt; /sys/class/gpio/unexport\n&quot;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="在Ubuntu下" class="article-heading"><a href="#在Ubuntu下" class="headerlink" title="在Ubuntu下"></a>在Ubuntu下<a class="article-anchor" href="#在Ubuntu下" aria-hidden="true"></a></h3><p><strong> GPIO 列表 </strong></p>
+<ul>
+<li><p>Linux-3.14</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         176</span><br><span class="line">PIN33       GPIOAO6        151</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux-4.9.26</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         31</span><br><span class="line">PIN33       GPIOAO6        6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux-4.9.40</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         32</span><br><span class="line">PIN33       GPIOAO6        7</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong> 在终端访问GPIO </strong></p>
+<blockquote>
+<p>[以linux 3.14为例]<br> 请求GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176 &gt; /sys/class/gpio/export</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输出<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo out &gt; /sys/class/gpio/gpio176/direction</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPOIO(GPIOH5)输出高电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 1 &gt;  /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)输出低电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 0 &gt;  /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>配置GPIO(GPIOH5)为输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo in &gt; /sys/class/gpio/gpio176/direction</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>读取GPIO(GPIOH5)电平<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat  /sys/class/gpio/gpio176/value</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>释放GPIO(GPIOH5)<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176 &gt; /sys/class/gpio/unexport</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">上次更新：2018-07-27</time>
+                <a href="HowtoEraseEMMC.html" class="article-footer-prev" title="如何擦除eMMC存储器"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="UBootUsage.html" class="article-footer-next" title="U-boot使用说明"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Android下"><span class="toc-text">在Android下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Ubuntu下"><span class="toc-text">在Ubuntu下</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="Vim2Interfaces.html" class="sidebar-link">VIM2接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="sidebar-link">如何安装LibreELEC</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a><a href="GPIOPinout.html" class="sidebar-link">GPIO 管脚映射</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="sidebar-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link current">如何访问GPIO</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="SetupADB.html" class="sidebar-link">设置ADB</a><a href="HowtoUseWol.html" class="sidebar-link">如何使用WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="sidebar-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="sidebar-link">如何设置看门狗</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="HowToSetupFan.html" class="sidebar-link">如何设置风扇</a><a href="InstallTensorFlow.html" class="sidebar-link">安装TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a></details></strong><strong class="sidebar-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="sidebar-link first">编译Fuchsia</a></details></strong><strong class="sidebar-title"><details><summary>MCU</summary><a href="McuDevelop.html" class="sidebar-link first">MCU开发</a><a href="McuCodeFlowChart.html" class="sidebar-link">MCU代码流程图</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong><strong class="sidebar-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">第三方固件</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2018 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas4u" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link current">VIM2</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="Vim2Interfaces.html" class="mobile-nav-link">VIM2接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="mobile-nav-link">如何安装LibreELEC</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO 管脚映射</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link current">如何访问GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="SetupADB.html" class="mobile-nav-link">设置ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">如何使用WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="mobile-nav-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">如何设置看门狗</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="HowToSetupFan.html" class="mobile-nav-link">如何设置风扇</a><a href="InstallTensorFlow.html" class="mobile-nav-link">安装TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a></details></strong><strong class="mobile-nav-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="mobile-nav-link first">编译Fuchsia</a></details></strong><strong class="mobile-nav-title"><details><summary>MCU</summary><a href="McuDevelop.html" class="mobile-nav-link first">MCU开发</a><a href="McuCodeFlowChart.html" class="mobile-nav-link">MCU代码流程图</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong><strong class="mobile-nav-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">第三方固件</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim2/HowToAccessGpio.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>Khadas Tone Board 用户手册 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/toneboard/UserManual.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/toneboard/UserManual.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/toneboard/UserManual.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="感谢选购Khadas Tone Board，现在开始享受高品质音乐吧～ 包装和配件   VIMs 版本 通用版本     Tone Board (已焊接20脚排针和40脚排座) Tone Board   USB Type C数据线 USB Type C数据线   螺丝 螺丝   - 40脚排座   - 20脚排针     设备连接 VIMs版本     步骤 操作     1 把Tone Boar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khadas Tone Board 用户手册">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/toneboard/UserManual.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="感谢选购Khadas Tone Board，现在开始享受高品质音乐吧～ 包装和配件   VIMs 版本 通用版本     Tone Board (已焊接20脚排针和40脚排座) Tone Board   USB Type C数据线 USB Type C数据线   螺丝 螺丝   - 40脚排座   - 20脚排针     设备连接 VIMs版本     步骤 操作     1 把Tone Boar">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardOverview.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardRecipes.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardConnectionVIMs.png">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardConnectionGeneral.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardWindowsSetup1.png">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardWindowsSetup2.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardWindowsSetup3.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardUbuntuSetup.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardMacosSetup.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardRpiSetup.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/toneboard/ToneboardPorts.png">
+<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Khadas Tone Board 用户手册">
+<meta name="twitter:description" content="感谢选购Khadas Tone Board，现在开始享受高品质音乐吧～ 包装和配件   VIMs 版本 通用版本     Tone Board (已焊接20脚排针和40脚排座) Tone Board   USB Type C数据线 USB Type C数据线   螺丝 螺丝   - 40脚排座   - 20脚排针     设备连接 VIMs版本     步骤 操作     1 把Tone Boar">
+<meta name="twitter:image" content="https://docs.khadas.com/images/toneboard/ToneboardOverview.jpg">
+<meta name="twitter:site" content="khadas4u">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link current">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="toneboard/UserManual.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Khadas Tone Board 用户手册</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/toneboard/UserManual.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>感谢选购Khadas Tone Board，现在开始享受高品质音乐吧～<br><img src="/images/toneboard/ToneboardOverview.jpg" alt="Tone Board Overview"></p>
+<h2 id="包装和配件" class="article-heading"><a href="#包装和配件" class="headerlink" title="包装和配件"></a>包装和配件<a class="article-anchor" href="#包装和配件" aria-hidden="true"></a></h2><table>
+<thead>
+<tr>
+<th>VIMs 版本</th>
+<th style="text-align:left">通用版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tone Board (已焊接20脚排针和40脚排座)</td>
+<td style="text-align:left">Tone Board</td>
+</tr>
+<tr>
+<td>USB Type C数据线</td>
+<td style="text-align:left">USB Type C数据线</td>
+</tr>
+<tr>
+<td>螺丝</td>
+<td style="text-align:left">螺丝</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">40脚排座</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">20脚排针</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/toneboard/ToneboardRecipes.jpg" alt="Tone Board Recipes"></p>
+<h2 id="设备连接" class="article-heading"><a href="#设备连接" class="headerlink" title="设备连接"></a>设备连接<a class="article-anchor" href="#设备连接" aria-hidden="true"></a></h2><ul>
+<li><h3 id="VIMs版本" class="article-heading"><a href="#VIMs版本" class="headerlink" title="VIMs版本"></a>VIMs版本<a class="article-anchor" href="#VIMs版本" aria-hidden="true"></a></h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th style="text-align:left">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">把Tone Board和VIMs通过40脚排座连接起来</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">连接音频线到RCA座子</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">连接HDMI线到显示器</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">连接5V电源</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/toneboard/ToneboardConnectionVIMs.png" alt="Tone Board Connection VIMs"></p>
+<ul>
+<li><h3 id="通用版本" class="article-heading"><a href="#通用版本" class="headerlink" title="通用版本"></a>通用版本<a class="article-anchor" href="#通用版本" aria-hidden="true"></a></h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th style="text-align:left">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">连接音频线到RCA座子</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">通过USB Type C数据线连接Tone Board和PC</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/toneboard/ToneboardConnectionGeneral.jpg" alt="Tone Board Connection General"></p>
+<h2 id="设置" class="article-heading"><a href="#设置" class="headerlink" title="设置"></a>设置<a class="article-anchor" href="#设置" aria-hidden="true"></a></h2><p>大多数平台已经集成了Tone Board驱动，但是Windows平台需要额外安装驱动。</p>
+<ul>
+<li><h3 id="VIMs" class="article-heading"><a href="#VIMs" class="headerlink" title="VIMs"></a>VIMs<a class="article-anchor" href="#VIMs" aria-hidden="true"></a></h3><p>确保VIM1固件版本为<code>VIM_Nougat_V180524</code>或更新。<br>确保VIM2固件版本为<code>VIM2_Nougat_V180413</code>或更新。</p>
+</li>
+<li><h3 id="Windows" class="article-heading"><a href="#Windows" class="headerlink" title="Windows"></a>Windows<a class="article-anchor" href="#Windows" aria-hidden="true"></a></h3><p>以Windows 10为例进行说明，Windows 7和Windows XP也是类似的。</p>
+<ul>
+<li>安装XMOS驱动<ul>
+<li><a href="http://www.mediafire.com/file/hpjivuk0dbi8jqt/Thesycon-Stereo-USB-Audio-Driver-v224.rar" target="_blank" rel="noopener">下载</a>驱动</li>
+<li>解压并运行<code>setup.exe</code>来安装驱动</li>
+<li>安装完成后可以在设备管理器看到XMOS设备<br><img src="/images/toneboard/ToneboardWindowsSetup1.png" alt="Tone Board Windows Setup1"></li>
+</ul>
+</li>
+<li>选择声卡为Tone Board<ul>
+<li>点击底部任务栏的声音图标<br><img src="/images/toneboard/ToneboardWindowsSetup2.jpg" alt="Tone Board Windows Setup2"></li>
+<li>选择XMOS XS1-U8 DJ为默认输出声卡<br><img src="/images/toneboard/ToneboardWindowsSetup3.jpg" alt="Tone Board Windows Setup3"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="Ubuntu" class="article-heading"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu<a class="article-anchor" href="#Ubuntu" aria-hidden="true"></a></h3><ul>
+<li>选择声卡为Tone Board<br><img src="/images/toneboard/ToneboardUbuntuSetup.jpg" alt="Tone Board Ubuntu Setup"></li>
+</ul>
+</li>
+<li><h3 id="MacOS" class="article-heading"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS<a class="article-anchor" href="#MacOS" aria-hidden="true"></a></h3><ul>
+<li>选择声卡为Tone Board<br><img src="/images/toneboard/ToneboardMacosSetup.jpg" alt="Tone Board Mac OS Setup"></li>
+</ul>
+</li>
+<li><h3 id="树莓派" class="article-heading"><a href="#树莓派" class="headerlink" title="树莓派"></a>树莓派<a class="article-anchor" href="#树莓派" aria-hidden="true"></a></h3><ul>
+<li><p>选择声卡为Tone Board</p>
+<ul>
+<li><p>Volumio<br><img src="/images/toneboard/ToneboardRpiSetup.jpg" alt="Tone Board Rpi Setup"></p>
+</li>
+<li><p>Raspbian</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.list sound card</span><br><span class="line">$ aplay -l</span><br><span class="line"></span><br><span class="line">2.switch sound card</span><br><span class="line">$vi ~/.asoundrc</span><br><span class="line"></span><br><span class="line">3.replace card 0 for XMOS sound card</span><br><span class="line">pcm.!default &#123;</span><br><span class="line">    type hw</span><br><span class="line">    card 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ctl.!default &#123;</span><br><span class="line">    type hw</span><br><span class="line">    card 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="接口描述" class="article-heading"><a href="#接口描述" class="headerlink" title="接口描述"></a>接口描述<a class="article-anchor" href="#接口描述" aria-hidden="true"></a></h2><table>
+<thead>
+<tr>
+<th>No</th>
+<th style="text-align:left">Ports</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">USB-C</td>
+<td style="text-align:left">Power supply &amp; data transmission</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">S/PDIF</td>
+<td style="text-align:left">S/PDIF input/output</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">Audio left channel output</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">Audio right channel output</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:left">20Pin Header</td>
+<td style="text-align:left">Debug Port, update XMOS firmware</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:left">40Pin Header</td>
+<td style="text-align:left">VIMs connector (Power supply &amp; data transmission)</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:left">I2S</td>
+<td style="text-align:left">VIMs I2S output</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:left">8 Channel Ext</td>
+<td style="text-align:left">XMOS 8 Channel extend</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:left">OLED</td>
+<td style="text-align:left">VIMs OLED display</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:left">Power LED</td>
+<td style="text-align:left">Power supply indicator</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/toneboard/ToneboardPorts.png" alt="Tone Board Ports"></p>
+<p><strong>No5</strong>: 20 Pin Header Pinout (J4)</p>
+<table>
+<thead>
+<tr>
+<th>SIGNAL</th>
+<th style="text-align:left">PIN</th>
+<th style="text-align:left">PIN</th>
+<th style="text-align:left">SIGNAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VCC_3V3</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>Linux_TX</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>Linux_RX</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>GND</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">14</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>XL_DN1</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">XMOS_RST</td>
+</tr>
+<tr>
+<td>XL_DN0</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">XMOS_TDO</td>
+</tr>
+<tr>
+<td>XL_UP0</td>
+<td style="text-align:left">7</td>
+<td style="text-align:left">17</td>
+<td style="text-align:left">XMOS_TDI</td>
+</tr>
+<tr>
+<td>XL_UP1</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left">XMOS_TCK</td>
+</tr>
+<tr>
+<td>XMOS_3V3</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">19</td>
+<td style="text-align:left">XMOS_TMS</td>
+</tr>
+<tr>
+<td>GND</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">GND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No6:</strong> 40 Pin Header Pinout (J1)</p>
+<table>
+<thead>
+<tr>
+<th>SIGNAL</th>
+<th style="text-align:left">PIN</th>
+<th style="text-align:left">PIN</th>
+<th style="text-align:left">SIGNAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5V_1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">21</td>
+<td style="text-align:left">GND5</td>
+</tr>
+<tr>
+<td>5V_2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">22</td>
+<td style="text-align:left">OLED_SCL</td>
+</tr>
+<tr>
+<td>VIM_DN</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">23</td>
+<td style="text-align:left">OLED_SDA</td>
+</tr>
+<tr>
+<td>VIM_DP</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">24</td>
+<td style="text-align:left">GND6</td>
+</tr>
+<tr>
+<td>GND</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">25</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">26</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">7</td>
+<td style="text-align:left">27</td>
+<td style="text-align:left">VCC_3V3</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">28</td>
+<td style="text-align:left">GND7</td>
+</tr>
+<tr>
+<td>GND</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">29</td>
+<td style="text-align:left">I2S_SCLK</td>
+</tr>
+<tr>
+<td>ADC0</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">I2S_MCLK</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">31</td>
+<td style="text-align:left">I2S_SDO</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">I2S_LRCK</td>
+</tr>
+<tr>
+<td>VIM_SPDIF</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">33</td>
+<td style="text-align:left">I2S_SDI</td>
+</tr>
+<tr>
+<td>GND3</td>
+<td style="text-align:left">14</td>
+<td style="text-align:left">34</td>
+<td style="text-align:left">GND8</td>
+</tr>
+<tr>
+<td>UART_RX_AO_B/SPDIF_MODE</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">35</td>
+<td style="text-align:left">OLED_PWREN</td>
+</tr>
+<tr>
+<td>UART_TX_AO_B/SPDIF_IN_MODE</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">36</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>GND4</td>
+<td style="text-align:left">17</td>
+<td style="text-align:left">37</td>
+<td style="text-align:left">OLED_RST</td>
+</tr>
+<tr>
+<td>Linux_RX</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left">38</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>Linux_TX</td>
+<td style="text-align:left">19</td>
+<td style="text-align:left">39</td>
+<td style="text-align:left">MUTE</td>
+</tr>
+<tr>
+<td>VCC_3V3</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">40</td>
+<td style="text-align:left">GND9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No7:</strong> I2S FPC Connectors Pinout (J9)</p>
+<table>
+<thead>
+<tr>
+<th>PIN</th>
+<th style="text-align:left">SIGNAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">VCC_3V3</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:left">I2S_SCLK</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:left">I2S_MCLK</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:left">I2S_SDI</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:left">I2S_LRCK</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:left">I2S_SDO</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:left">GND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No8:</strong> 8 Channel Ext  FPC Connectors Pinout (J3)</p>
+<table>
+<thead>
+<tr>
+<th>PIN</th>
+<th style="text-align:left">SIGNAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>4-6</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>7,8</td>
+<td style="text-align:left">XMOS_3V3</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:left">XMOSIO3</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:left">XMOSIO2</td>
+</tr>
+<tr>
+<td>11</td>
+<td style="text-align:left">XMOSIO1</td>
+</tr>
+<tr>
+<td>12</td>
+<td style="text-align:left">ADC0</td>
+</tr>
+<tr>
+<td>13</td>
+<td style="text-align:left">VOLUME</td>
+</tr>
+<tr>
+<td>14</td>
+<td style="text-align:left">XMOS_SCL</td>
+</tr>
+<tr>
+<td>15</td>
+<td style="text-align:left">XMOS_SDA</td>
+</tr>
+<tr>
+<td>16</td>
+<td style="text-align:left">MUTE</td>
+</tr>
+<tr>
+<td>17</td>
+<td style="text-align:left">DAC_RST</td>
+</tr>
+<tr>
+<td>18</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>19</td>
+<td style="text-align:left">MCLK</td>
+</tr>
+<tr>
+<td>20</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>21</td>
+<td style="text-align:left">LRCK/DSD_CLK</td>
+</tr>
+<tr>
+<td>22</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>23</td>
+<td style="text-align:left">BCLK/DSD_1</td>
+</tr>
+<tr>
+<td>24</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>25</td>
+<td style="text-align:left">SIN0/DSD_2</td>
+</tr>
+<tr>
+<td>26</td>
+<td style="text-align:left">SIN1/DSD_3</td>
+</tr>
+<tr>
+<td>27</td>
+<td style="text-align:left">SIN2/DSD_4</td>
+</tr>
+<tr>
+<td>28</td>
+<td style="text-align:left">SIN3/DSD_5</td>
+</tr>
+<tr>
+<td>29</td>
+<td style="text-align:left">DSD_6</td>
+</tr>
+<tr>
+<td>30</td>
+<td style="text-align:left">GND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No9:</strong> OLED  FPC Connectors Pinout (J8)</p>
+<table>
+<thead>
+<tr>
+<th>PIN</th>
+<th style="text-align:left">SIGNAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">TONE_5V</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">OLED_SCL</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">OLED_SDA</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:left">GND</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:left">OLED_RST</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:left">OLED_PWREN</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:left">GND</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FAQs" class="article-heading"><a href="#FAQs" class="headerlink" title="FAQs"></a>FAQs<a class="article-anchor" href="#FAQs" aria-hidden="true"></a></h2><ul>
+<li>如何扩展8通道输出？<br>XMOS支持8通道模拟输出，Tone Board DAC（ES9038Q2M）已经用了2通道。用户可以增加DAC 8通道扩展。</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">上次更新：2018-07-27</time>
+                <a href="index.html" class="article-footer-prev" title="概述"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HardwareDocs.html" class="article-footer-next" title="下载"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#包装和配件"><span class="toc-text">包装和配件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设备连接"><span class="toc-text">设备连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VIMs版本"><span class="toc-text">VIMs版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通用版本"><span class="toc-text">通用版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置"><span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VIMs"><span class="toc-text">VIMs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu"><span class="toc-text">Ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MacOS"><span class="toc-text">MacOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树莓派"><span class="toc-text">树莓派</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口描述"><span class="toc-text">接口描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQs"><span class="toc-text">FAQs</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="UserManual.html" class="sidebar-link current">用户手册</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2018 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas4u" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link">VIM2</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link current">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="UserManual.html" class="mobile-nav-link current">用户手册</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="toneboard/UserManual.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

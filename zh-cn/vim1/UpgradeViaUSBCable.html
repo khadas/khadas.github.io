@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>通过USB-C数据线升级固件 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim1/UpgradeViaUSBCable.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行Run setup_v2.x.x.exe程序进行安装。   固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;gt;Import image”选择要升级的固件。 用USB-C线连接VIM1/VIM2和">
+<meta property="og:type" content="website">
+<meta property="og:title" content="通过USB-C数据线升级固件">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行Run setup_v2.x.x.exe程序进行安装。   固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;gt;Import image”选择要升级的固件。 用USB-C线连接VIM1/VIM2和">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_setup_v208_zh.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_interface_v208_zh.png">
+<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通过USB-C数据线升级固件">
+<meta name="twitter:description" content="通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行Run setup_v2.x.x.exe程序进行安装。   固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;gt;Import image”选择要升级的固件。 用USB-C线连接VIM1/VIM2和">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_setup_v208_zh.png">
+<meta name="twitter:site" content="khadas4u">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim1/UpgradeViaUSBCable.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">通过USB-C数据线升级固件</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/UpgradeViaUSBCable.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="通过Windows升级固件" class="article-heading"><a href="#通过Windows升级固件" class="headerlink" title="通过Windows升级固件"></a>通过Windows升级固件<a class="article-anchor" href="#通过Windows升级固件" aria-hidden="true"></a></h2><h3 id="准备工作" class="article-heading"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作<a class="article-anchor" href="#准备工作" aria-hidden="true"></a></h3><ul>
+<li>下载升级工具<a href="https://dl.khadas.com/Tools/USB_Burning_Tool_v2.1.6.3_zh.zip" target="_blank" rel="noopener">USB Upgrade Tool</a>并解压。</li>
+<li>运行Run <code>setup_v2.x.x.exe</code>程序进行安装。<br><img src="/images/vim1/usb_upgrade_tool_setup_v208_zh.png" alt="image"> </li>
+</ul>
+<h3 id="固件升级操作步骤" class="article-heading"><a href="#固件升级操作步骤" class="headerlink" title="固件升级操作步骤"></a>固件升级操作步骤<a class="article-anchor" href="#固件升级操作步骤" aria-hidden="true"></a></h3><p>确保已经正确安装好升级工具，按照下面步骤进行升级：</p>
+<ol>
+<li>打开升级工具<code>USB_Burning_Tool_v2.x.x.exe</code>，点击”File–&gt;Import image”选择要升级的固件。</li>
+<li>用USB-C线连接VIM1/VIM2和PC电脑（默认VIM1/VIM2上电会自动开机）。</li>
+<li>进入固件更新模式<ul>
+<li>长按Power键不要松开</li>
+<li>短按Rest键并松开</li>
+<li>大概10秒后松开Power键进入固件升级模式</li>
+</ul>
+</li>
+<li>如果上面操作已正确执行，电脑端会发现VIM1/VIM2升级设备，点击升级工具上的start按钮开始固件升级，升级进度条100%时完成升级。<br><img src="/images/vim1/usb_upgrade_tool_interface_v208_zh.png" alt="image"></li>
+</ol>
+<p>提示：</p>
+<ul>
+<li>先点击”stop”按钮再关闭升级工具。</li>
+<li><a href="/zh-cn/vim1/ExtraPowerInput.html">外部供电要求</a>，部分电脑供电比较弱会导致升级失败。</li>
+</ul>
+<h2 id="通过Ubuntu升级固件" class="article-heading"><a href="#通过Ubuntu升级固件" class="headerlink" title="通过Ubuntu升级固件"></a>通过Ubuntu升级固件<a class="article-anchor" href="#通过Ubuntu升级固件" aria-hidden="true"></a></h2><h3 id="准备" class="article-heading"><a href="#准备" class="headerlink" title="准备"></a>准备<a class="article-anchor" href="#准备" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install libusb-dev git parted</span><br></pre></td></tr></table></figure>
+<h3 id="获取Ubuntu烧录工具" class="article-heading"><a href="#获取Ubuntu烧录工具" class="headerlink" title="获取Ubuntu烧录工具"></a>获取Ubuntu烧录工具<a class="article-anchor" href="#获取Ubuntu烧录工具" aria-hidden="true"></a></h3><p>烧录工具在仓库<a href="https://github.com/khadas/utils" target="_blank" rel="noopener">utils</a>中.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/khadas/utils</span><br></pre></td></tr></table></figure></p>
+<p>如果你之前已经下载过<code>utils</code>仓库，那么你只需要更新到最新版本即可。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/utils</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装烧录工具" class="article-heading"><a href="#安装烧录工具" class="headerlink" title="安装烧录工具"></a>安装烧录工具<a class="article-anchor" href="#安装烧录工具" aria-hidden="true"></a></h3><p>需要安装USB规则以及创建链接文件。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/utils</span><br><span class="line">$ ./INSTALL</span><br></pre></td></tr></table></figure></p>
+<p>如果成功安装你会看到如下信息：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Installing Amlogic flash-tool...</span><br><span class="line"></span><br><span class="line">===============================================</span><br><span class="line"></span><br><span class="line">Host PC: Ubuntu 16.04</span><br><span class="line"></span><br><span class="line">===============================================</span><br><span class="line"></span><br><span class="line">Installing USB rules...</span><br><span class="line">[sudo] password for nick: </span><br><span class="line">Installing flash-tool...</span><br><span class="line">Done!</span><br><span class="line"></span><br><span class="line">Installing Rockchip flash-tool...</span><br><span class="line"></span><br><span class="line">===============================================</span><br><span class="line"></span><br><span class="line">Host PC: Ubuntu 16.04</span><br><span class="line"></span><br><span class="line">===============================================</span><br><span class="line"></span><br><span class="line">Installing USB rules...</span><br><span class="line">Installing flash-tool...</span><br><span class="line">Done!</span><br><span class="line">Installing Khadas burn-tool...</span><br><span class="line">Done!</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意</strong> 安装过程需要root权限.</p>
+<h3 id="检查USB驱动" class="article-heading"><a href="#检查USB驱动" class="headerlink" title="检查USB驱动"></a>检查USB驱动<a class="article-anchor" href="#检查USB驱动" aria-hidden="true"></a></h3><p>首先设置VIMs进入升级模式(<a href="/zh-cn/vim1/HowtoBootIntoUpgradeMode.html">VIM1</a>/<a href="/zh-cn/vim2/HowtoBootIntoUpgradeMode.html">VIM2</a>)，然后检查USB驱动：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ lsusb | grep Amlogic</span><br><span class="line">Bus 002 Device 036: ID 1b8e:c003 Amlogic, Inc.</span><br></pre></td></tr></table></figure></p>
+<p>以上信息表明已经识别到了VIMs。</p>
+<h3 id="如何在Ubuntu下烧录固件" class="article-heading"><a href="#如何在Ubuntu下烧录固件" class="headerlink" title="如何在Ubuntu下烧录固件"></a>如何在Ubuntu下烧录固件<a class="article-anchor" href="#如何在Ubuntu下烧录固件" aria-hidden="true"></a></h3><p>有2个命令可以用于烧录固件：<code>burn-tool</code>和<code>aml-burn-tool</code>。</p>
+<ul>
+<li>通过烧录命令<code>burn-tool</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ burn-tool -v aml -i /path/to/image</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Amlogic平台专用烧录命令<code>aml-burn-tool</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ aml-burn-tool -i /path/to/image</span><br></pre></td></tr></table></figure>
+<p>如果烧录成功你会看到如下信息：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Rebooting the board ........[OK]</span><br><span class="line">Unpacking image [OK]</span><br><span class="line">Initializing ddr ........[OK]</span><br><span class="line">Running u-boot ........[OK]</span><br><span class="line">Create partitions [OK]</span><br><span class="line">Writing device tree [OK]</span><br><span class="line">Writing bootloader [OK]</span><br><span class="line">Wiping  data partition [OK]</span><br><span class="line">Wiping  cache partition [OK]</span><br><span class="line">Writing boot partition [OK]</span><br><span class="line">Writing data partition [OK]</span><br><span class="line">Writing logo partition [OK]</span><br><span class="line">Writing system partition [OK]</span><br><span class="line">Do you want to reset the board? y/n [n]? y</span><br><span class="line">Resetting board [OK]</span><br></pre></td></tr></table></figure></p>
+<p>更多请参考<a href="https://github.com/khadas/utils/tree/master/aml-flash-tool/docs" target="_blank" rel="noopener">这里</a>。</p>
+<h3 id="卸载烧录工具" class="article-heading"><a href="#卸载烧录工具" class="headerlink" title="卸载烧录工具"></a>卸载烧录工具<a class="article-anchor" href="#卸载烧录工具" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/utils</span><br><span class="line">$ ./UNINSTALL</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>Ubuntu烧录工具仅仅在 <strong>Ubuntu 16.04</strong>上验证过。</p>
+<h3 id="更多资料" class="article-heading"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料<a class="article-anchor" href="#更多资料" aria-hidden="true"></a></h3><ul>
+<li><a href="/zh-cn/vim1/UpgradeViaTFBurningCard.html">通过TF卡升级固件</a></li>
+<li><a href="/zh-cn/vim1/HowtoBootIntoUpgradeMode.html">VIM1 怎样进入升级模式</a></li>
+<li><a href="/zh-cn/vim2/HowtoBootIntoUpgradeMode.html">VIM2 怎样进入升级模式</a></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">上次更新：2018-07-27</time>
+                <a href="HowtoBootIntoUpgradeMode.html" class="article-footer-prev" title="进入升级模式"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="UpgradeViaTFBurningCard.html" class="article-footer-next" title="通过TF卡升级安卓"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Windows升级固件"><span class="toc-text">通过Windows升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#固件升级操作步骤"><span class="toc-text">固件升级操作步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Ubuntu升级固件"><span class="toc-text">通过Ubuntu升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取Ubuntu烧录工具"><span class="toc-text">获取Ubuntu烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装烧录工具"><span class="toc-text">安装烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查USB驱动"><span class="toc-text">检查USB驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何在Ubuntu下烧录固件"><span class="toc-text">如何在Ubuntu下烧录固件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载烧录工具"><span class="toc-text">卸载烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多资料"><span class="toc-text">更多资料</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="VimInterfaces.html" class="sidebar-link">VIM1接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link current">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="sidebar-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a><a href="GPIOPinout.html" class="sidebar-link">GPIO 管脚映射</a></details></strong><strong class="sidebar-title"><details><summary>开发</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="sidebar-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link">如何访问GPIO</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="SetupADB.html" class="sidebar-link">设置ADB</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="sidebar-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="sidebar-link">如何设置看门狗</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="InstallTensorFlow.html" class="sidebar-link">安装TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong><strong class="sidebar-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">第三方固件</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2018 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas4u" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link">VIM2</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="VimInterfaces.html" class="mobile-nav-link">VIM1接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link current">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="mobile-nav-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO 管脚映射</a></details></strong><strong class="mobile-nav-title"><details><summary>开发</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link">如何访问GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="SetupADB.html" class="mobile-nav-link">设置ADB</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="mobile-nav-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">如何设置看门狗</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="InstallTensorFlow.html" class="mobile-nav-link">安装TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong><strong class="mobile-nav-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">第三方固件</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim1/UpgradeViaUSBCable.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
