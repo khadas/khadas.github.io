@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>Build Packages In Docker | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/edge/BuildPackagesInDocker.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/edge/BuildPackagesInDocker.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/edge/BuildPackagesInDocker.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Build Packages In Docker">
+<meta property="og:url" content="https://docs.khadas.com/edge/BuildPackagesInDocker.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-07-28T09:29:13.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Build Packages In Docker">
+<meta name="twitter:description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+<meta name="twitter:site" content="khadas4u">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link">VIM2</a><a href="/edge/" class="main-nav-link current">Edge</a><a href="/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="edge/BuildPackagesInDocker.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Build Packages In Docker</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/BuildPackagesInDocker.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker.</p>
+<p><em>Note: We only provide arm64 architecture.</em></p>
+<h3 id="Install-Docker" class="article-heading"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a>Install Docker<a class="article-anchor" href="#Install-Docker" aria-hidden="true"></a></h3><p>Require host PC <code>Ubuntu 16.04</code> or newer.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove docker docker-engine docker.io</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">$ sudo add-apt-repository \</span><br><span class="line">		&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span><br><span class="line">		$(lsb_release -cs) \</span><br><span class="line">		stable&quot;</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+<p>Start Docker:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl enable docker</span><br><span class="line">$ sudo systemctl start docker</span><br></pre></td></tr></table></figure></p>
+<p>Add Docker group:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo groupadd docker</span><br><span class="line">$ sudo usermod -aG docker $USER</span><br></pre></td></tr></table></figure></p>
+<p><em>NOTE: You need to logout or reboot your system.</em></p>
+<p>Check Docker:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run hello-world</span><br></pre></td></tr></table></figure></p>
+<p>If you see the following messages mean that Docker is setup OK.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unable to find image &apos;hello-world:latest&apos; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">ca4f61b1923c: Pull complete</span><br><span class="line">Digest: sha256:be0cd392e45be79ffeffa6b05338b98ebb16c87b255f48e297ec7f98e123905c</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://cloud.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/engine/userguide/</span><br></pre></td></tr></table></figure></p>
+<h3 id="Build-Debian-Docker-Image" class="article-heading"><a href="#Build-Debian-Docker-Image" class="headerlink" title="Build Debian Docker Image"></a>Build Debian Docker Image<a class="article-anchor" href="#Build-Debian-Docker-Image" aria-hidden="true"></a></h3><p>We provide a Debian stretch arm64 dockerfile. Clone it from GitHub.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/numbqq/docker-rockchip -b arm64</span><br><span class="line">$ sudo docker build -t rockchip-arm64 .</span><br></pre></td></tr></table></figure>
+<p>Now you get a Docker image named <code>rockchip-arm64</code> which include a debian multiarch cross-compiling enviroment.</p>
+<h3 id="Build-Packages" class="article-heading"><a href="#Build-Packages" class="headerlink" title="Build Packages"></a>Build Packages<a class="article-anchor" href="#Build-Packages" aria-hidden="true"></a></h3><p>Enter docker shell:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -it -v &lt;package dir&gt;:/home/rk/packages rockchip-arm64 /bin/bash</span><br></pre></td></tr></table></figure></p>
+<p><em>Note: <code>package dir</code> is the package full path which you want to build.</em></p>
+<p>Start to build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/&lt;package-name&gt;</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
+<h3 id="Example" class="article-heading"><a href="#Example" class="headerlink" title="Example"></a>Example<a class="article-anchor" href="#Example" aria-hidden="true"></a></h3><p>Build libdrm.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/test</span><br><span class="line">$ cd ~/test</span><br><span class="line">$ git clone https://github.com/numbqq/libdrm-rockchip -b rockchip-2.4.91</span><br><span class="line">$ cd libdrm-rockchip</span><br><span class="line">$ docker run -it -v $(pwd):/home/rk/packages rockchip-arm64 /bin/bash</span><br></pre></td></tr></table></figure>
+<p>We are in docker now, start to build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/libdrm-rockchip</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-07-28T09:29:13.024Z" itemprop="dateModified">Last updated: 2018-07-28</time>
+                <a href="InstallDocker.html" class="article-footer-prev" title="Install Docker"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HardwareDocs.html" class="article-footer-next" title="Download"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Docker"><span class="toc-text">Install Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Debian-Docker-Image"><span class="toc-text">Build Debian Docker Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Packages"><span class="toc-text">Build Packages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-text">Example</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting started</summary><a href="index.html" class="sidebar-link first">Overview</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Via a USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Via a TF Card</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Setup Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">How To Erase eMMC Storage</a><a href="RockchipDocs.html" class="sidebar-link">Rockchip Official Docs</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">Boot From SPI Flash</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download the Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a></details></strong><strong class="sidebar-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">How To Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">How To Setup Bluetooth</a><a href="AddChineseSupport.html" class="sidebar-link">Add Chinese Support</a><a href="HowToSetupFan.html" class="sidebar-link">How To Setup Cooling Fan</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="BuildPackagesInDocker.html" class="sidebar-link current">Build Packages In Docker</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareDebian.html" class="sidebar-link">Debian</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareBuildroot.html" class="sidebar-link">Buildroot</a><a href="FirmwareUboot.html" class="sidebar-link">U-boot</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2018 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas4u" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link">VIM2</a><a href="/edge/" class="mobile-nav-link current">Edge</a><a href="/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting started</summary><a href="index.html" class="mobile-nav-link first">Overview</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Via a USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Via a TF Card</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Setup Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">How To Erase eMMC Storage</a><a href="RockchipDocs.html" class="mobile-nav-link">Rockchip Official Docs</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">Boot From SPI Flash</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download the Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a></details></strong><strong class="mobile-nav-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">How To Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">How To Setup Bluetooth</a><a href="AddChineseSupport.html" class="mobile-nav-link">Add Chinese Support</a><a href="HowToSetupFan.html" class="mobile-nav-link">How To Setup Cooling Fan</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="BuildPackagesInDocker.html" class="mobile-nav-link current">Build Packages In Docker</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareDebian.html" class="mobile-nav-link">Debian</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareBuildroot.html" class="mobile-nav-link">Buildroot</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-boot</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="edge/BuildPackagesInDocker.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
