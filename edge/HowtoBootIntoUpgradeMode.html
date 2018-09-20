@@ -45,18 +45,18 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line Force enter Maskrom mode MRegister Mode  Usually, the first four methods">
+  <meta name="description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Howto Boot Into Upgrade Mode">
 <meta property="og:url" content="https://docs.khadas.com/edge/HowtoBootIntoUpgradeMode.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line Force enter Maskrom mode MRegister Mode  Usually, the first four methods">
+<meta property="og:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/MRegister_ShortCircuit.png">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.387Z">
+<meta property="og:updated_time" content="2018-09-20T09:12:40.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Howto Boot Into Upgrade Mode">
-<meta name="twitter:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line Force enter Maskrom mode MRegister Mode  Usually, the first four methods">
+<meta name="twitter:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
 <meta name="twitter:image" content="https://docs.khadas.com/images/edge/MRegister_ShortCircuit.png">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -125,7 +125,7 @@
 <li>Keys Mode</li>
 <li>Serial Mode</li>
 <li>Linux/Android command line</li>
-<li>Force enter Maskrom mode</li>
+<li>TST Mode (Recommend)</li>
 <li>MRegister Mode</li>
 </ul>
 <p>Usually, the first four methods will meet most of the user needs, but in some case, for example, if burnning a wrong u-boot, or your device cannot even boot any more, in thus cases, you can try with MRegister mode.</p>
@@ -148,10 +148,10 @@
 <li>Boot into android or linux command line.</li>
 <li>Linux executes <code>sudo reboot loader</code>, Android executes <code>su</code> and <code>reboot loader</code>, the system will reboot and enter upgrade mode, you will see the sys-led on when enter upgrade mode(loader mode).</li>
 </ol>
-<h3 id="Force-Enter-Maskrom-Mode" class="article-heading"><a href="#Force-Enter-Maskrom-Mode" class="headerlink" title="Force Enter Maskrom Mode"></a>Force Enter Maskrom Mode<a class="article-anchor" href="#Force-Enter-Maskrom-Mode" aria-hidden="true"></a></h3><ol>
+<h3 id="TST-Mode-Recommend" class="article-heading"><a href="#TST-Mode-Recommend" class="headerlink" title="TST Mode (Recommend)"></a>TST Mode (Recommend)<a class="article-anchor" href="#TST-Mode-Recommend" aria-hidden="true"></a></h3><ol>
 <li>Power on Edge.</li>
-<li>Quickly press <code>Func</code> key 3 times in 2 seconds.</li>
-<li>You will see the power-led blink, then short press <code>Reset</code> key, you will enter upgrade mode(maskrom mode).</li>
+<li>Quickly press <code>Func</code> key 3 times in 2 seconds and release the key.</li>
+<li>You will see the power-led(Blue) blink about 3 seconds, after the power-led(Blue) becomes breathe mode again indicate that the board is in upgrade mode(maskrom mode).</li>
 </ol>
 <h3 id="MRegister-Mode-Maskrom-Mode" class="article-heading"><a href="#MRegister-Mode-Maskrom-Mode" class="headerlink" title="MRegister Mode(Maskrom Mode)"></a>MRegister Mode(Maskrom Mode)<a class="article-anchor" href="#MRegister-Mode-Maskrom-Mode" aria-hidden="true"></a></h3><ol>
 <li>Power on Edge.</li>
@@ -162,7 +162,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.387Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-09-20T09:12:40.188Z" itemprop="dateModified">Last updated: 2018-09-20</time>
                 <a href="index.html" class="article-footer-prev" title="Overview"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UpgradeViaUSBCable.html" class="article-footer-next" title="Upgrade Via a USB-C Cable"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -171,7 +171,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-Mode-U-Boot-is-running"><span class="toc-text">Keys Mode(U-Boot is running)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode(For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Linux-command-line"><span class="toc-text">Android/Linux command line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Force-Enter-Maskrom-Mode"><span class="toc-text">Force Enter Maskrom Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-Mode-U-Boot-is-running"><span class="toc-text">Keys Mode(U-Boot is running)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode(For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Linux-command-line"><span class="toc-text">Android/Linux command line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TST-Mode-Recommend"><span class="toc-text">TST Mode (Recommend)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
