@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>How To Enable ADB | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim2/HowtoEnableAdb.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim2/HowtoEnableAdb.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim2/HowtoEnableAdb.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="This tutorial is about how to enable ADB on Ubuntu for VIMs/Edge. VIMsOnly linux 3.14 support ADB, you can enable it via the following commands:khadas@Khadas:~$ sudo systemctl enable adb-khadas.servic">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Enable ADB">
+<meta property="og:url" content="https://docs.khadas.com/vim2/HowtoEnableAdb.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="This tutorial is about how to enable ADB on Ubuntu for VIMs/Edge. VIMsOnly linux 3.14 support ADB, you can enable it via the following commands:khadas@Khadas:~$ sudo systemctl enable adb-khadas.servic">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-07T03:31:48.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How To Enable ADB">
+<meta name="twitter:description" content="This tutorial is about how to enable ADB on Ubuntu for VIMs/Edge. VIMsOnly linux 3.14 support ADB, you can enable it via the following commands:khadas@Khadas:~$ sudo systemctl enable adb-khadas.servic">
+<meta name="twitter:site" content="khadas4u">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link current">VIM2</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim2/HowtoEnableAdb.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Enable ADB</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/HowtoEnableAdb.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>This tutorial is about how to enable ADB on Ubuntu for VIMs/Edge.</p>
+<h3 id="VIMs" class="article-heading"><a href="#VIMs" class="headerlink" title="VIMs"></a>VIMs<a class="article-anchor" href="#VIMs" aria-hidden="true"></a></h3><p>Only linux 3.14 support ADB, you can enable it via the following commands:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo systemctl enable adb-khadas.service</span><br><span class="line">khadas@Khadas:~$ sudo systemctl start adb-khadas.service</span><br></pre></td></tr></table></figure></p>
+<h3 id="Edge" class="article-heading"><a href="#Edge" class="headerlink" title="Edge"></a>Edge<a class="article-anchor" href="#Edge" aria-hidden="true"></a></h3><p>Only linux 4.4 support ADB, you can enable it via the following commands:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo systemctl enable adb-khadas.service</span><br><span class="line">khadas@Khadas:~$ sudo systemctl start adb-khadas.service</span><br></pre></td></tr></table></figure></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-11-07T03:31:48.885Z" itemprop="dateModified">Last updated: 2018-11-07</time>
+                <a href="SetupGolang.html" class="article-footer-prev" title="Setup Golang"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BuildFuchsia.html" class="article-footer-next" title="Build Fuchsia"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#VIMs"><span class="toc-text">VIMs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Edge"><span class="toc-text">Edge</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting started</summary><a href="index.html" class="sidebar-link first">Overview</a><a href="Vim2Interfaces.html" class="sidebar-link">VIM2 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Via a USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Via a TF Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From external Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pinout</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Setup Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">How To Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot Usage Guidance</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Build Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">Setup TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="sidebar-link">KBI Guidance</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download the Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a><a href="ForceResetFeatures.html" class="sidebar-link">Force Reset Remotely</a></details></strong><strong class="sidebar-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">How To Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">How To Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="sidebar-link">How To Setup Watchdog</a><a href="AddChineseSupport.html" class="sidebar-link">Add Chinese Support</a><a href="HowToSetupFan.html" class="sidebar-link">How To Setup Cooling Fan</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link current">How To Enable ADB</a></details></strong><strong class="sidebar-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="sidebar-link first">Build Fuchsia</a></details></strong><strong class="sidebar-title"><details><summary>MCU</summary><a href="McuDevelop.html" class="sidebar-link first">MCU Development</a><a href="McuCodeFlowChart.html" class="sidebar-link">MCU Code Flow Chart</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2018 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas4u" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link current">VIM2</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting started</summary><a href="index.html" class="mobile-nav-link first">Overview</a><a href="Vim2Interfaces.html" class="mobile-nav-link">VIM2 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Via a USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Via a TF Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From external Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pinout</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Setup Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">How To Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot Usage Guidance</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Build Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">Setup TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI Guidance</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download the Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a><a href="ForceResetFeatures.html" class="mobile-nav-link">Force Reset Remotely</a></details></strong><strong class="mobile-nav-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">How To Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">How To Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">How To Setup Watchdog</a><a href="AddChineseSupport.html" class="mobile-nav-link">Add Chinese Support</a><a href="HowToSetupFan.html" class="mobile-nav-link">How To Setup Cooling Fan</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link current">How To Enable ADB</a></details></strong><strong class="mobile-nav-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="mobile-nav-link first">Build Fuchsia</a></details></strong><strong class="mobile-nav-title"><details><summary>MCU</summary><a href="McuDevelop.html" class="mobile-nav-link first">MCU Development</a><a href="McuCodeFlowChart.html" class="mobile-nav-link">MCU Code Flow Chart</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim2/HowtoEnableAdb.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
