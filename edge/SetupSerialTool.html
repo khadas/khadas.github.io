@@ -54,7 +54,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/edge_io.gif">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/SerialConnections_3Pin.png">
-<meta property="og:updated_time" content="2018-11-05T06:45:36.936Z">
+<meta property="og:updated_time" content="2018-11-07T01:21:22.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Serial Debugging Tool">
 <meta name="twitter:description" content="Preperations [x] A Serial Debugging Tool, what we used in the guidance is an USB to TTL Convertor, ensure it supports 1500000 baudrate. [x] For Edge need Edge IO board to support serial debug.  Connec">
@@ -137,8 +137,7 @@
 <p><img src="/images/edge/SerialConnections_3Pin.png" alt="Image of SerialConnections"></p>
 <p>3) Insert the USB to your PC.</p>
 <h3 id="Setup-the-Kermit-Protocol-C-Kermit" class="article-heading"><a href="#Setup-the-Kermit-Protocol-C-Kermit" class="headerlink" title="Setup the Kermit Protocol(C-Kermit)"></a>Setup the Kermit Protocol(C-Kermit)<a class="article-anchor" href="#Setup-the-Kermit-Protocol-C-Kermit" aria-hidden="true"></a></h3><p><strong>Install the c-kermit:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install ckermit</span><br></pre></td></tr></table></figure></p>
-<p><strong>Add the access permission</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G dialout gouwa</span><br></pre></td></tr></table></figure></p>
-<p><em>Tips: replace the <code>gouwa</code> with your real username.</em></p>
+<p><strong>Add the access permission</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G dialout $(whoami)</span><br></pre></td></tr></table></figure></p>
 <p><strong>Add the following contents into ~/.kermrc to finish the setup:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set line /dev/ttyUSB0</span><br><span class="line">set speed 115200</span><br><span class="line">set carrier-watch off</span><br><span class="line">set handshake none</span><br><span class="line">set flow-control none</span><br><span class="line">robust</span><br><span class="line">set file type bin</span><br><span class="line">set file name lit</span><br><span class="line">set rec pack 1000</span><br><span class="line">set send pack 1000</span><br><span class="line">set window 5</span><br><span class="line">c</span><br></pre></td></tr></table></figure></p>
 <p><strong>Run command <code>kermit</code> to launch C-Kermit</strong></p>
 <p>Ensure that you have done the right connection, and if everything goes fine, printing would be like this:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ kermit</span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line"> Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;</span><br><span class="line">TE: 116640</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
@@ -151,7 +150,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-05T06:45:36.936Z" itemprop="dateModified">Last updated: 2018-11-05</time>
+                <time class="article-footer-updated" datetime="2018-11-07T01:21:22.820Z" itemprop="dateModified">Last updated: 2018-11-07</time>
                 <a href="InstallToolchains.html" class="article-footer-prev" title="Install Toolchains"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowtoEraseEMMC.html" class="article-footer-next" title="How To Erase eMMC Storage"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
