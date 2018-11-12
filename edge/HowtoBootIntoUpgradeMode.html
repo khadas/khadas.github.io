@@ -46,8 +46,8 @@
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script> 
-  
+  </script>
+
   <!-- build:css build/css/navy.css -->
   <link rel="stylesheet" href="/css/navy.css">
   <!-- endbuild -->
@@ -65,7 +65,7 @@
 <meta property="og:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/MRegister_ShortCircuit.png">
-<meta property="og:updated_time" content="2018-11-07T01:21:22.820Z">
+<meta property="og:updated_time" content="2018-11-12T08:10:40.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Howto Boot Into Upgrade Mode">
 <meta name="twitter:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
@@ -151,9 +151,13 @@
 <li>Refer this <a href="/edge/SetupSerialTool.html">guidance</a> to setup serial tool for Edge.</li>
 <li>Make sure again you’ve done the right connections and setup.</li>
 <li>Hit any keys at the moment of booting to stop autoboot. This step will let Edge boot into u-boot mode.</li>
-<li>Type <code>run update</code> on the terminal of u-boot as belowing, you will see the sys-led on when enter upgrade mode(loader mode).</li>
+<li>Type <code>run update</code> on the terminal of u-boot as belowing, you will see the sys-led on when enter loader mode.</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# run update</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>Type <code>run maskrom</code> on the terminal of u-boot as belowing, you will enter maskrom mode.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# run maskrom</span><br></pre></td></tr></table></figure>
 <h3 id="Android-Linux-command-line" class="article-heading"><a href="#Android-Linux-command-line" class="headerlink" title="Android/Linux command line"></a>Android/Linux command line<a class="article-anchor" href="#Android-Linux-command-line" aria-hidden="true"></a></h3><ol>
 <li>Refer this <a href="/edge/SetupSerialTool.html">guidance</a> to setup serial tool for Edge.</li>
 <li>Make sure again you’ve done the right connections and setup.</li>
@@ -174,7 +178,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-07T01:21:22.820Z" itemprop="dateModified">Last updated: 2018-11-07</time>
+                <time class="article-footer-updated" datetime="2018-11-12T08:10:40.501Z" itemprop="dateModified">Last updated: 2018-11-12</time>
                 <a href="EdgeCaptainPowerPriority.html" class="article-footer-prev" title="Edge Captain Power Priority"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UpgradeViaUSBCable.html" class="article-footer-next" title="Upgrade Via a USB-C Cable"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
