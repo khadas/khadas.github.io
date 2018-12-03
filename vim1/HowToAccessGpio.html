@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Here is about how to access GPIO on Android and Ubuntu. PreconditionsThe Rom must satisfy the following conditions:  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V180712 Ubuntu">
+  <meta name="description" content="This guide is about how to access the GPIO on Android and Ubuntu. PreconditionsThe ROM must satisfy the following conditions:* Android M     &amp;gt;= V170603* Android N     &amp;gt;= V170421* Ubuntu Server &amp;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Access GPIO">
 <meta property="og:url" content="https://docs.khadas.com/vim1/HowToAccessGpio.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Here is about how to access GPIO on Android and Ubuntu. PreconditionsThe Rom must satisfy the following conditions:  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V180712 Ubuntu">
+<meta property="og:description" content="This guide is about how to access the GPIO on Android and Ubuntu. PreconditionsThe ROM must satisfy the following conditions:* Android M     &amp;gt;= V170603* Android N     &amp;gt;= V170421* Ubuntu Server &amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-15T03:08:55.325Z">
+<meta property="og:updated_time" content="2018-12-03T10:09:20.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Access GPIO">
-<meta name="twitter:description" content="Here is about how to access GPIO on Android and Ubuntu. PreconditionsThe Rom must satisfy the following conditions:  Android M &amp;gt;= V170603 Android N &amp;gt;= V170421 Ubuntu Server &amp;gt;= V180712 Ubuntu">
+<meta name="twitter:description" content="This guide is about how to access the GPIO on Android and Ubuntu. PreconditionsThe ROM must satisfy the following conditions:* Android M     &amp;gt;= V170603* Android N     &amp;gt;= V170421* Ubuntu Server &amp;">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,21 +130,15 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/HowToAccessGpio.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Here is about how to access GPIO on Android and Ubuntu.</p>
-<h3 id="Preconditions" class="article-heading"><a href="#Preconditions" class="headerlink" title="Preconditions"></a>Preconditions<a class="article-anchor" href="#Preconditions" aria-hidden="true"></a></h3><p>The Rom must satisfy the following conditions:</p>
+                <p>This guide is about how to access the GPIO on Android and Ubuntu.</p>
+<h3 id="Preconditions" class="article-heading"><a href="#Preconditions" class="headerlink" title="Preconditions"></a>Preconditions<a class="article-anchor" href="#Preconditions" aria-hidden="true"></a></h3><p>The ROM must satisfy the following conditions:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* Android M     &gt;= V170603</span><br><span class="line">* Android N     &gt;= V170421</span><br><span class="line">* Ubuntu Server &gt;= V180712</span><br><span class="line">* Ubuntu Mate   &gt;= V180531</span><br></pre></td></tr></table></figure></p>
+<h3 id="How-to-Get-the-GPIO-Number" class="article-heading"><a href="#How-to-Get-the-GPIO-Number" class="headerlink" title="How to Get the GPIO Number"></a>How to Get the GPIO Number<a class="article-anchor" href="#How-to-Get-the-GPIO-Number" aria-hidden="true"></a></h3><p>You can get the GPIO number from GPIO Banks or Pins. Different versions of kernel will be different.</p>
 <ul>
-<li>Android M &gt;= V170603</li>
-<li>Android N &gt;= V170421</li>
-<li>Ubuntu Server &gt;= V180712</li>
-<li>Ubuntu Mate  &gt;= V180531</li>
+<li>Linux 3.14 (Android M, N and Ubuntu)</li>
 </ul>
-<h3 id="How-to-get-GPIO-number" class="article-heading"><a href="#How-to-get-GPIO-number" class="headerlink" title="How to get GPIO number"></a>How to get GPIO number<a class="article-anchor" href="#How-to-get-GPIO-number" aria-hidden="true"></a></h3><p>You can get the GPIO number from GPIO banks and pins. Different version of kernel are different.</p>
-<ul>
-<li>Linux 3.14 (Android M,N and Ubuntu)</li>
-</ul>
-<p>Banks:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat /sys/kernel/debug/pinctrl/c1109880.pinmux/gpio-ranges</span><br><span class="line"></span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: banks GPIOS [155 - 255] PINS [10 - 110]</span><br><span class="line">0: ao-bank GPIOS [145 - 154] PINS [0 - 9]</span><br><span class="line"></span><br><span class="line">Notice: ao-bank means GPIOAO_X gpios</span><br></pre></td></tr></table></figure></p>
+<p>Banks:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat /sys/kernel/debug/pinctrl/c1109880.pinmux/gpio-ranges</span><br><span class="line"></span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: banks GPIOS   [155 - 255] PINS [10 - 110]</span><br><span class="line">0: ao-bank GPIOS [145 - 154] PINS [ 0 -   9]</span><br><span class="line"></span><br><span class="line">Notice: ao-bank means GPIOAO_X gpios</span><br></pre></td></tr></table></figure></p>
 <p>Pins:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat /sys/kernel/debug/pinctrl/c1109880.pinmux/pins</span><br><span class="line">...</span><br><span class="line">pin 5 (GPIOAO_5) </span><br><span class="line">pin 6 (GPIOAO_6) </span><br><span class="line">...</span><br><span class="line">pin 28 (GPIOH_2) </span><br><span class="line">pin 29 (GPIOH_3) </span><br><span class="line">pin 30 (GPIOH_4) </span><br><span class="line">pin 31 (GPIOH_5) </span><br><span class="line">pin 32 (GPIOH_6) </span><br><span class="line">pin 33 (GPIOH_7) </span><br><span class="line">pin 34 (GPIOH_8) </span><br><span class="line">pin 35 (GPIOH_9) </span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>For example, get the number of <code>GPIOH_4</code>, <code>GPIOH_5</code> and <code>GPIOAO_6</code>.<br>Number(GPIOH_5) = bank + pin = 155 - 10 + 31= 176<br>Number(GPIOH_4) = bank + pin = 155 - 10 + 30= 175<br>Number(GPIOAO_6) = bank + pin = 145 - 0 + 6 = 151</p>
+<p>For example, get the number of <code>GPIOH_4</code>, <code>GPIOH_5</code> and <code>GPIOAO_6</code>.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Number(GPIOH_5)  = bank + pin = 155 - 10 + 31 = 176</span><br><span class="line">Number(GPIOH_4)  = bank + pin = 155 - 10 + 30 = 175</span><br><span class="line">Number(GPIOAO_6) = bank + pin = 145 -  0 +  6 = 151</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>Linux 4.9 (Android O and Ubuntu)</li>
 </ul>
@@ -155,18 +149,18 @@
 <p>Pins:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# cat /sys/kernel/debug/pinctrl/pinctrl@4b0/pins </span><br><span class="line">registered pins: 100</span><br><span class="line">pin 11 (GPIOZ_0)  pinctrl@4b0</span><br><span class="line">pin 12 (GPIOZ_1)  pinctrl@4b0</span><br><span class="line">pin 13 (GPIOZ_2)  pinctrl@4b0</span><br><span class="line">...</span><br><span class="line">pin 27 (GPIOH_0)  pinctrl@4b0</span><br><span class="line">pin 28 (GPIOH_1)  pinctrl@4b0</span><br><span class="line">pin 29 (GPIOH_2)  pinctrl@4b0</span><br><span class="line">pin 30 (GPIOH_3)  pinctrl@4b0</span><br><span class="line">pin 31 (GPIOH_4)  pinctrl@4b0</span><br><span class="line">pin 32 (GPIOH_5)  pinctrl@4b0</span><br><span class="line">pin 33 (GPIOH_6)  pinctrl@4b0</span><br><span class="line">pin 34 (GPIOH_7)  pinctrl@4b0</span><br><span class="line">pin 35 (GPIOH_8)  pinctrl@4b0</span><br><span class="line">pin 36 (GPIOH_9)  pinctrl@4b0</span><br><span class="line">...</span><br><span class="line">pin 81 (GPIODV_21)  pinctrl@4b0</span><br><span class="line">pin 82 (GPIODV_22)  pinctrl@4b0</span><br><span class="line">pin 83 (GPIODV_23)  pinctrl@4b0</span><br><span class="line">pin 84 (GPIODV_24)  pinctrl@4b0</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
 <p>For example, get the number of <code>GPIOH_5</code>:<br>Number(GPIOH_5) = bank + pin = 11 - 11 + 32 = 32</p>
 <h3 id="On-Android" class="article-heading"><a href="#On-Android" class="headerlink" title="On Android"></a>On Android<a class="article-anchor" href="#On-Android" aria-hidden="true"></a></h3><p><strong> GPIO List </strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         176</span><br><span class="line">PIN33       GPIOAO6        151</span><br></pre></td></tr></table></figure>
-<p>There are two ways to access GPIO:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5       176</span><br><span class="line">PIN33       GPIOAO6      151</span><br></pre></td></tr></table></figure>
+<p>There are two ways to access the GPIO:</p>
 <ul>
 <li>ADB Command</li>
 <li>Third-Party Applications </li>
 </ul>
 <p><strong> ADB command </strong></p>
 <blockquote>
-<p>Connect the VIMs with wifi adb:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb connect IP_ADDR</span><br></pre></td></tr></table></figure></p>
+<p>Connect the VIMs with a wifi adb:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb connect IP_ADDR</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <blockquote>
-<p>Login the VIMs:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br></pre></td></tr></table></figure></p>
+<p>Login to the VIMs:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <blockquote>
 <p>Get root permision<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ su</span><br></pre></td></tr></table></figure></p>
@@ -245,7 +239,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-08-15T03:08:55.325Z" itemprop="dateModified">Last updated: 2018-08-15</time>
+                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.872Z" itemprop="dateModified">Last updated: 2018-12-03</time>
                 <a href="HowtoEraseEMMC.html" class="article-footer-prev" title="How To Erase eMMC Storage"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToAccessI2c.html" class="article-footer-next" title="How To Access I2C"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -254,7 +248,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preconditions"><span class="toc-text">Preconditions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-get-GPIO-number"><span class="toc-text">How to get GPIO number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Android"><span class="toc-text">On Android</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Ubuntu"><span class="toc-text">On Ubuntu</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preconditions"><span class="toc-text">Preconditions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-Get-the-GPIO-Number"><span class="toc-text">How to Get the GPIO Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Android"><span class="toc-text">On Android</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Ubuntu"><span class="toc-text">On Ubuntu</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

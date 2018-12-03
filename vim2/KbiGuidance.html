@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="The KBI is an abbreviation for Khadas Bootloader Instructions, which is developed based on the following purposes:  Manage the programable MCU Do the low level hardware management Let developers rock">
+  <meta name="description" content="KBI is an abbreviation for Khadas Bootloader Instructions, which is developed to fulfil the following purposes:  Manage the programmable MCU Carry out low level hardware management Let developers use">
 <meta property="og:type" content="website">
 <meta property="og:title" content="KBI Guidance for Khadas VIM2">
 <meta property="og:url" content="https://docs.khadas.com/vim2/KbiGuidance.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="The KBI is an abbreviation for Khadas Bootloader Instructions, which is developed based on the following purposes:  Manage the programable MCU Do the low level hardware management Let developers rock">
+<meta property="og:description" content="KBI is an abbreviation for Khadas Bootloader Instructions, which is developed to fulfil the following purposes:  Manage the programmable MCU Carry out low level hardware management Let developers use">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-03T10:09:20.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KBI Guidance for Khadas VIM2">
-<meta name="twitter:description" content="The KBI is an abbreviation for Khadas Bootloader Instructions, which is developed based on the following purposes:  Manage the programable MCU Do the low level hardware management Let developers rock">
+<meta name="twitter:description" content="KBI is an abbreviation for Khadas Bootloader Instructions, which is developed to fulfil the following purposes:  Manage the programmable MCU Carry out low level hardware management Let developers use">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,14 +130,14 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/KbiGuidance.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>The KBI is an abbreviation for Khadas Bootloader Instructions, which is developed based on the following purposes:</p>
+                <p>KBI is an abbreviation for Khadas Bootloader Instructions, which is developed to fulfil the following purposes:</p>
 <ul>
-<li>Manage the programable MCU</li>
-<li>Do the low level hardware management</li>
-<li>Let developers rock all the features of Khadas VIM2</li>
+<li>Manage the programmable MCU</li>
+<li>Carry out low level hardware management</li>
+<li>Let developers use all the features of Khadas VIM2</li>
 </ul>
-<p>The document describes how to setup, configure and use the KBI. As the KBI is one of the <a href="http://www.denx.de" target="_blank" rel="noopener">U-Boot</a> commands, so to get start you have to <a href="/vim1/SetupSerialTool.html">setup the Serial Debugging Tool</a> first.</p>
-<p>To continue the reading, make sure you have boot into the U-Boot:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">normal power off</span><br><span class="line">boot wol: enable</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 </span><br><span class="line">kvim2#</span><br></pre></td></tr></table></figure></p>
+<p>This document describes how to setup, configure and use the KBI. As the KBI is one of the <a href="http://www.denx.de" target="_blank" rel="noopener">U-Boot</a> commands, to get started you have to <a href="/vim1/SetupSerialTool.html">setup the Serial Debugging Tool</a>.</p>
+<p>To continue the reading, make sure you have booted into the U-Boot:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">normal power off</span><br><span class="line">boot wol: enable</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 </span><br><span class="line">kvim2#</span><br></pre></td></tr></table></figure></p>
 <h3 id="Get-help" class="article-heading"><a href="#Get-help" class="headerlink" title="Get help"></a>Get help<a class="article-anchor" href="#Get-help" aria-hidden="true"></a></h3><p>Similar with other U-Boot commands, you can get the help information by typing <strong>kbi</strong>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi</span><br><span class="line">kbi - Khadas Bootloader Instructions sub-system</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">kbi [function] [mode] [write|read] &lt;value&gt;</span><br><span class="line"></span><br><span class="line">kbi version - read version information</span><br><span class="line">kbi usid - read usid information</span><br><span class="line">kbi adc - read adc value</span><br><span class="line">kbi powerstate - read power on state</span><br><span class="line">kbi poweroff - power off device</span><br><span class="line">kbi ethmac - read ethernet mac address</span><br><span class="line"></span><br><span class="line">kbi led [systemoff|systemon] w &lt;off|on|breathe|heartbeat&gt; - set blue led mode</span><br><span class="line">kbi led [systemoff|systemon] r - read blue led mode</span><br><span class="line"></span><br><span class="line">kbi bootmode w &lt;emmc|spi&gt; - set bootmode to emmc or spi</span><br><span class="line">kbi bootmode r - read current bootmode</span><br><span class="line"></span><br><span class="line">kbi trigger [wol|rtc|ir|dcin|key|gpio] w &lt;0|1&gt; - disable/enable boot trigger</span><br><span class="line">kbi trigger [wol|rtc|ir|dcin|key|gpio] r - read mode of a boot trigger</span><br></pre></td></tr></table></figure></p>
 <h3 id="Command-Usage" class="article-heading"><a href="#Command-Usage" class="headerlink" title="Command Usage"></a>Command Usage<a class="article-anchor" href="#Command-Usage" aria-hidden="true"></a></h3><p><strong>1) Get the MCU firmware version:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi version</span><br><span class="line">version: 03</span><br></pre></td></tr></table></figure></p>
 <p>The MCU firmware can be upgrade by <a href="">TBD</a>.</p>
@@ -146,43 +146,43 @@
 <p><em>The ADC value can be used to distinguish different hardware modules.</em></p>
 <p><strong>4) Power off device:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi poweroff</span><br></pre></td></tr></table></figure></p>
 <p><strong>5) Get the Ethernet MAC address:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi ethmac</span><br><span class="line">mac address: 98:aa:fc:60:44:c0</span><br></pre></td></tr></table></figure></p>
-<p><strong>6) Setup the blue LED:</strong><br>The blue LED has different working modes like <code>Always Off</code>, <code>Always on</code>, <code>Breathe</code> and <code>Heartbeat</code> to indicate different status.</p>
-<p>The blue LED is controlled by MCU, and the MCU do the system power management for VIM2, so different with the white LED which is contorlled by the CPU, the blue LED still works even you power off the VIM2 device.</p>
-<p>Actually, the KBI can setup the blue LED for two different status:</p>
+<p><strong>6) Setup the blue LED:</strong><br>The blue LED has different working modes like <code>Always Off</code>, <code>Always on</code>, <code>Breathe</code> and <code>Heartbeat</code> to indicate different statuses.</p>
+<p>The blue LED is controlled by the MCU, and the MCU does the system power management for VIM2. The white LED is controlled by the CPU; therefore the blue LED still works even after you have powered off your VIM2.</p>
+<p>The KBI can be used to program the blue LED for two different statuses:</p>
 <ul>
 <li>system off / idle: power off status, the CPU/S912 is powered down.</li>
 <li>system on / working: power on status, the CPU/S912 is in working mode.</li>
 </ul>
 <p>Examples:</p>
-<p>To check the blue LED mode on system off / idle status:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemoff r</span><br><span class="line">led mode: breathe  [systemoff]</span><br></pre></td></tr></table></figure></p>
-<p>To check the blue LED mode on system on / working status:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon r</span><br><span class="line">led mode: off  [systemon]</span><br></pre></td></tr></table></figure></p>
-<p>Above says that the blue LED is on <code>Always off</code> mode when you power on the VIM2, you might want to change to <code>breathe</code> mode:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon w breathe</span><br></pre></td></tr></table></figure></p>
-<p>Same with system off / idle status, you can also setup the status for system on / working status:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon w breathe</span><br></pre></td></tr></table></figure></p>
-<p><strong>7) Boot Mode</strong><br>As VIM2 specs with both SPI Flash and eMMC storage, the KBI can be used to setup one of these as the boot media.</p>
-<p>To set the default boot meidia as SPI Flash:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi bootmode w spi</span><br></pre></td></tr></table></figure></p>
-<p><em>About SPI Flash boot mode, you might need further reading at <a href="http://forum.khadas.com/t/how-to-boot-from-spi-flash/1354" target="_blank" rel="noopener">How to boot from SPI Flash</a></em>.</p>
+<p>To check the blue LED’s setting for “system off / idle status”:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemoff r</span><br><span class="line">led mode: breathe  [systemoff]</span><br></pre></td></tr></table></figure></p>
+<p>To check the blue LED’s setting for “system on / working status”:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon r</span><br><span class="line">led mode: off  [systemon]</span><br></pre></td></tr></table></figure></p>
+<p>The terminal printout above says that the blue LED is to remain <code>Always off</code> when you power on the VIM2. You could instead change it to the <code>breathe</code> mode:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon w breathe</span><br></pre></td></tr></table></figure></p>
+<p>You can also change the setting for “system on / working status”:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi led systemon w breathe</span><br></pre></td></tr></table></figure></p>
+<p><strong>7) Boot Mode</strong><br>VIM2 comes with both SPI Flash and eMMC Storage. The KBI can be used to setup one of these as the default boot media.</p>
+<p>To set the default boot media as SPI Flash:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi bootmode w spi</span><br></pre></td></tr></table></figure></p>
+<p><em>For more information about the SPI Flash boot mode, see <a href="http://forum.khadas.com/t/how-to-boot-from-spi-flash/1354" target="_blank" rel="noopener">How to boot from SPI Flash</a></em>.</p>
 <p>To set the default boot media as eMMC storage:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi bootmode w emmc</span><br></pre></td></tr></table></figure></p>
-<p>You can check current boot media by running:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi bootmode r</span><br><span class="line">bootmode: emmc</span><br></pre></td></tr></table></figure></p>
-<p><strong>8) Boot Trigger Events</strong><br>VIM2 support different boot trigger evnents:</p>
+<p>You can check the default boot media by running:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi bootmode r</span><br><span class="line">bootmode: emmc</span><br></pre></td></tr></table></figure></p>
+<p><strong>8) Boot Trigger Events</strong><br>VIM2 supports different events for triggering boot:</p>
 <ul>
-<li>WOL: Wake on Lan</li>
-<li>RTC: RTC timer</li>
-<li>IR: IR remote controller</li>
+<li>WOL:  Wake on Lan</li>
+<li>RTC:  RTC timer</li>
+<li>IR:   IR remote controller</li>
 <li>DCIN: Plug in the DC adapter</li>
-<li>Key: Power Key/Button</li>
+<li>Key:  Power Key/Button</li>
 <li>GPIO: External GPIO events</li>
 </ul>
-<p>It means that when VIM2 is power off, any of above trigger event can power on the VIM2 in the case that the trigger event is in enable status.</p>
+<p>This means that when VIM2 is powered off, any of the above trigger events can power on the VIM2, when that trigger event has been set to the “enabled” status.</p>
 <p>Examples:</p>
 <p>Read the status of WOL trigger event:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol r</span><br><span class="line">boot wol: disable</span><br></pre></td></tr></table></figure></p>
-<p>By default, WOL is disabled for the preinstalled ROM, you can enable it by write a new value/status:</p>
+<p>By default, WOL is disabled for the preinstalled ROM, you can enable it by writing a new value/status:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol w 1</span><br><span class="line">set_wol: 1</span><br></pre></td></tr></table></figure>
-<p>Of course, for security reason, you might want to disable the WOL:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol w 0</span><br><span class="line">set_wol: 0</span><br></pre></td></tr></table></figure></p>
+<p>Of course, for security reasons, you might want to disable the WOL:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol w 0</span><br><span class="line">set_wol: 0</span><br></pre></td></tr></table></figure></p>
 <h3 id="See-also" class="article-heading"><a href="#See-also" class="headerlink" title="See also"></a>See also<a class="article-anchor" href="#See-also" aria-hidden="true"></a></h3><p><a href="/vim2/HowtoUseWol.html">WOL setup and usage</a>.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.872Z" itemprop="dateModified">Last updated: 2018-12-03</time>
                 <a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-prev" title="Load Images with U-Boot via TFTP"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="DownloadAndroidSourceCode.html" class="article-footer-next" title="Download the Android Source Code"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

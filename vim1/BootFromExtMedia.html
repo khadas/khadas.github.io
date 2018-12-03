@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Boot images from external medias | Khadas Docs</title>
+  <title>Boot Images from External Media | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="There are many images running on SD card or U-Disk,for example, LibreELEC,Armbian images and Khadas SD images.This tutorial is about how to boot these images. In order to boot images from exernal medi">
+  <meta name="description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these images. In">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Boot images from external medias">
+<meta property="og:title" content="Boot Images from External Media">
 <meta property="og:url" content="https://docs.khadas.com/vim1/BootFromExtMedia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="There are many images running on SD card or U-Disk,for example, LibreELEC,Armbian images and Khadas SD images.This tutorial is about how to boot these images. In order to boot images from exernal medi">
+<meta property="og:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these images. In">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-27T06:48:46.999Z">
+<meta property="og:updated_time" content="2018-12-03T10:09:20.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boot images from external medias">
-<meta name="twitter:description" content="There are many images running on SD card or U-Disk,for example, LibreELEC,Armbian images and Khadas SD images.This tutorial is about how to boot these images. In order to boot images from exernal medi">
+<meta name="twitter:title" content="Boot Images from External Media">
+<meta name="twitter:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these images. In">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,49 +126,49 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Boot images from external medias</h1>
+                <h1 class="article-title" itemprop="name">Boot Images from External Media</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/BootFromExtMedia.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>There are many images running on SD card or U-Disk,for example, <a href="http://forum.khadas.com/t/libreelec-for-khadas-vim-sd-usb-emmc/793" target="_blank" rel="noopener">LibreELEC</a>,<a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a> and <a href="/vim1/Firmware.html#SD-USB-Installation">Khadas SD images</a>.This tutorial is about how to boot these images.</p>
-<p>In order to boot images from exernal medias you must make sure:</p>
+                <p>There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, <a href="http://forum.khadas.com/t/libreelec-for-khadas-vim-sd-usb-emmc/793" target="_blank" rel="noopener">LibreELEC</a>, <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a> and <a href="/vim1/Firmware.html#SD-USB-Installation">Khadas SD images</a>. This tutorial is about how to boot these images.</p>
+<p>In order to boot images from external media you must make sure:</p>
 <ul>
-<li>Android running on eMMC</li>
-<li>Activate the multi-boot</li>
+<li>Android is running on the eMMC</li>
+<li>Activate the Multi-Boot</li>
 </ul>
-<p>For different images you need different Android version.</p>
+<p>For different images you may need different Android versions.</p>
 <ul>
-<li>LibreELEC, Ubuntu with linux 3.14 you need Android M or latest Android N(V180207 or later) running on eMMC.</li>
-<li>Ubuntu with linux 4.9 need Android O running on eMMC.</li>
+<li>LibreELEC / Ubuntu with Linux 3.14: You need <strong>Android M</strong> or the latest <strong>Android N (V180207 or later)</strong> running on the eMMC.</li>
+<li>Ubuntu with Linux 4.9: You need <strong>Android O</strong> running on eMMC.</li>
 </ul>
-<h3 id="1-Write-image-to-SD-card-or-U-Disk" class="article-heading"><a href="#1-Write-image-to-SD-card-or-U-Disk" class="headerlink" title="1. Write image to SD card or U-Disk"></a>1. Write image to SD card or U-Disk<a class="article-anchor" href="#1-Write-image-to-SD-card-or-U-Disk" aria-hidden="true"></a></h3><ul>
+<h3 id="1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" class="article-heading"><a href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" class="headerlink" title="1. Write image to SD Card or Thumbdrive (U-Disk)"></a>1. Write image to SD Card or Thumbdrive (U-Disk)<a class="article-anchor" href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" aria-hidden="true"></a></h3><ul>
 <li><p>Use <code>dd</code> on Ubuntu command line</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=/path/to/image of=/dev/sdX bs=8M</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Use <code>Win32DiskImager</code> on Windows. Please refer to <a href="/vim1/InstallLibreELEC.html#On-Windows-PC">Install LibreELEC Via Windows PC</a>.</p>
 </li>
 </ul>
-<h3 id="2-Prepare-dtb" class="article-heading"><a href="#2-Prepare-dtb" class="headerlink" title="2. Prepare dtb"></a>2. Prepare dtb<a class="article-anchor" href="#2-Prepare-dtb" aria-hidden="true"></a></h3><p>You need to choose different dtb for VIM1 and VIM2.</p>
+<h3 id="2-Prepare-DTB" class="article-heading"><a href="#2-Prepare-DTB" class="headerlink" title="2. Prepare DTB"></a>2. Prepare DTB<a class="article-anchor" href="#2-Prepare-DTB" aria-hidden="true"></a></h3><p>You need to choose different dtb for VIM1 and VIM2.</p>
 <ul>
 <li>VIM1: Copy <code>kvim.dtb</code>, <code>kvim_linux.dtb</code> or <code>meson-gxl-s905x-khadas-vim.dtb</code> to <code>/boot</code> and rename it to <code>dtb.img</code>.</li>
 <li>VIM2: Copy <code>kvim2.dtb</code>, <code>kvim2_linux.dtb</code> or <code>meson-gxm-khadas-vim2.dtb</code> to <code>/boot</code> and rename it to <code>dtb.img</code>.</li>
 </ul>
-<h3 id="3-Activate-the-multi-boot" class="article-heading"><a href="#3-Activate-the-multi-boot" class="headerlink" title="3. Activate the multi-boot"></a>3. Activate the multi-boot<a class="article-anchor" href="#3-Activate-the-multi-boot" aria-hidden="true"></a></h3><p>Two ways to activate the multi-boot:<br>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode</a><br>2). Activate multi-boot via Android.</p>
+<h3 id="3-Activate-the-Multi-Boot" class="article-heading"><a href="#3-Activate-the-Multi-Boot" class="headerlink" title="3. Activate the Multi-Boot"></a>3. Activate the Multi-Boot<a class="article-anchor" href="#3-Activate-the-Multi-Boot" aria-hidden="true"></a></h3><p>Two ways to activate the multi-boot:<br>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode</a><br>2). Activate multi-boot via Android.</p>
 <ul>
 <li>Enter <code>Settings&gt;About Device-&gt;System-&gt;updates</code></li>
 <li>Click select and choose <code>aml_autosript.zip</code></li>
-<li>Click update, then the system will reboot and boot to external media image<br><strong>Note: Don’t use PC USB host to supply the power, or will fail to activate multi-boot!</strong></li>
+<li>Click update, then the system will reboot and boot from the external media image<br><strong>Note: Don’t use PC USB host to supply the power, or will fail to activate multi-boot!</strong></li>
 </ul>
 <h3 id="NOTICE" class="article-heading"><a href="#NOTICE" class="headerlink" title="NOTICE"></a>NOTICE<a class="article-anchor" href="#NOTICE" aria-hidden="true"></a></h3><ul>
-<li><p>For previous Android N has permission issue, you can’t use it to boot your external media image, or your booting card will be broken.</p>
+<li><p>Android N has a permission issue. You cannot use it to boot from your external media image without damaging your SD card.</p>
 </li>
-<li><p>For Android O also has permission issue. If you want to boot Ubuntu with linux 4.9 please refer to <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825/109" target="_blank" rel="noopener">this reply</a>.</p>
+<li><p>Android O also has a permission issue. If you want to boot Ubuntu with Linux 4.9 please refer to <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825/109" target="_blank" rel="noopener">this reply</a>.</p>
 </li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-27T06:48:46.999Z" itemprop="dateModified">Last updated: 2018-11-27</time>
+                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.852Z" itemprop="dateModified">Last updated: 2018-12-03</time>
                 <a href="BootingCardVsBurningCard.html" class="article-footer-prev" title="Booting Card Versus Burning Card"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="ExtraPowerInput.html" class="article-footer-next" title="Extra Power Input"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -177,7 +177,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Write-image-to-SD-card-or-U-Disk"><span class="toc-text">1. Write image to SD card or U-Disk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Prepare-dtb"><span class="toc-text">2. Prepare dtb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Activate-the-multi-boot"><span class="toc-text">3. Activate the multi-boot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk"><span class="toc-text">1. Write image to SD Card or Thumbdrive (U-Disk)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Prepare-DTB"><span class="toc-text">2. Prepare DTB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Activate-the-Multi-Boot"><span class="toc-text">3. Activate the Multi-Boot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

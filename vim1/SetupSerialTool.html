@@ -57,19 +57,19 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Preperations [x] A Serial Debugging Tool, what we used in the guidance is an USB to TTL Convertor.  ConnectionsFollow the steps to do the connections: 1) Connect all the to GPIOs, and check the Tx / R">
+  <meta name="description" content="Preparations [x] You need a “Serial Debugging Tool”. In this guide, we use a USB to TTL Convertor.  ConnectionsFollow these steps to make the right connections: 1) Connect the Tool Pins to the GPIOs,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Setup Serial Debugging Tool">
 <meta property="og:url" content="https://docs.khadas.com/vim1/SetupSerialTool.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Preperations [x] A Serial Debugging Tool, what we used in the guidance is an USB to TTL Convertor.  ConnectionsFollow the steps to do the connections: 1) Connect all the to GPIOs, and check the Tx / R">
+<meta property="og:description" content="Preparations [x] You need a “Serial Debugging Tool”. In this guide, we use a USB to TTL Convertor.  ConnectionsFollow these steps to make the right connections: 1) Connect the Tool Pins to the GPIOs,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/SerialConnections_3Pin.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/SerialConnections.png">
-<meta property="og:updated_time" content="2018-11-07T01:21:22.820Z">
+<meta property="og:updated_time" content="2018-12-03T10:09:20.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Serial Debugging Tool">
-<meta name="twitter:description" content="Preperations [x] A Serial Debugging Tool, what we used in the guidance is an USB to TTL Convertor.  ConnectionsFollow the steps to do the connections: 1) Connect all the to GPIOs, and check the Tx / R">
+<meta name="twitter:description" content="Preparations [x] You need a “Serial Debugging Tool”. In this guide, we use a USB to TTL Convertor.  ConnectionsFollow these steps to make the right connections: 1) Connect the Tool Pins to the GPIOs,">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/SerialConnections_3Pin.png">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -133,16 +133,16 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/SetupSerialTool.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h3 id="Preperations" class="article-heading"><a href="#Preperations" class="headerlink" title="Preperations"></a>Preperations<a class="article-anchor" href="#Preperations" aria-hidden="true"></a></h3><ul>
-<li>[x] A Serial Debugging Tool, what we used in the guidance is an USB to TTL Convertor.</li>
+                <h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
+<li>[x] You need a “Serial Debugging Tool”. In this guide, we use a USB to TTL Convertor.</li>
 </ul>
-<h3 id="Connections" class="article-heading"><a href="#Connections" class="headerlink" title="Connections"></a>Connections<a class="article-anchor" href="#Connections" aria-hidden="true"></a></h3><p>Follow the steps to do the connections:</p>
-<p><strong>1)</strong> Connect all the to GPIOs, and check the Tx / Rx Pins and ensure done the right connection:</p>
+<h3 id="Connections" class="article-heading"><a href="#Connections" class="headerlink" title="Connections"></a>Connections<a class="article-anchor" href="#Connections" aria-hidden="true"></a></h3><p>Follow these steps to make the right connections:</p>
+<p><strong>1)</strong> Connect the Tool Pins to the GPIOs, and check the Tx / Rx Pins to ensure you’ve made the right connection:</p>
 <ul>
-<li>Tool Pin <code>GND</code>: <---> <code>Pin17</code> of VIM1’s GPIO</---></li>
-<li>Tool Pin <code>TXD</code>: <---> <code>Pin18</code> of VIM1’s GPIO(Linux_Rx)</---></li>
-<li>Tool Pin <code>RXD</code>: <---> <code>Pin19</code> of VIM1’s GPIO(Linux_Tx)</---></li>
-<li>Tool Pin <code>VCC</code>: <---> <code>Pin20</code> of VIM1’s GPIO</---></li>
+<li>Tool Pin <code>GND</code>: <---> <code>Pin17</code> of VIMs’s GPIO</---></li>
+<li>Tool Pin <code>TXD</code>: <---> <code>Pin18</code> of VIMs’s GPIO(Linux_Rx)</---></li>
+<li>Tool Pin <code>RXD</code>: <---> <code>Pin19</code> of VIMs’s GPIO(Linux_Tx)</---></li>
+<li>Tool Pin <code>VCC</code>: <---> <code>Pin20</code> of VIMs’s GPIO</---></li>
 </ul>
 <p><strong>2)</strong> Insert the USB to your PC.</p>
 <p>The connections should be like this:</p>
@@ -153,15 +153,15 @@
 <p><strong>Add the access permission</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G dialout $(whoami)</span><br></pre></td></tr></table></figure></p>
 <p><strong>Add the following contents into ~/.kermrc to finish the setup:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set line /dev/ttyUSB0</span><br><span class="line">set speed 115200</span><br><span class="line">set carrier-watch off</span><br><span class="line">set handshake none</span><br><span class="line">set flow-control none</span><br><span class="line">robust</span><br><span class="line">set file type bin</span><br><span class="line">set file name lit</span><br><span class="line">set rec pack 1000</span><br><span class="line">set send pack 1000</span><br><span class="line">set window 5</span><br><span class="line">c</span><br></pre></td></tr></table></figure></p>
 <p><strong>Run command <code>kermit</code> to launch C-Kermit</strong></p>
-<p>Ensure that you have done the right connection, and if everything goes fine, printing would be like this:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ kermit</span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line"> Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;</span><br><span class="line">TE: 116640</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p><em>Tips: If the printing contain following line, you might need to check the step <code>Add the access permission</code> above.</em><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/dev/ttyUSB0: Permission denied</span><br></pre></td></tr></table></figure></p>
+<p>Ensure that you have made the right connection. If everything went well, you’ll see the following:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ kermit</span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line"> Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;</span><br><span class="line">TE: 116640</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p><em>Tip: If the terminal output contains this line, you might need to check the previous step <code>Add the access permission</code> above.</em><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/dev/ttyUSB0: Permission denied</span><br></pre></td></tr></table></figure></p>
 <h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also:"></a>See Also:<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><ul>
 <li><a href="http://www.columbia.edu/kermit/index.html" target="_blank" rel="noopener">C-Kermit Offical website</a></li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-07T01:21:22.820Z" itemprop="dateModified">Last updated: 2018-11-07</time>
+                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.872Z" itemprop="dateModified">Last updated: 2018-12-03</time>
                 <a href="InstallToolchains.html" class="article-footer-prev" title="Install Toolchains"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowtoEraseEMMC.html" class="article-footer-next" title="How To Erase eMMC Storage"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -170,7 +170,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preperations"><span class="toc-text">Preperations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connections"><span class="toc-text">Connections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-the-Kermit-Protocol-C-Kermit"><span class="toc-text">Setup the Kermit Protocol(C-Kermit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also:</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connections"><span class="toc-text">Connections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-the-Kermit-Protocol-C-Kermit"><span class="toc-text">Setup the Kermit Protocol(C-Kermit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also:</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
