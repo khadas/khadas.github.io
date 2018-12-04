@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install toolchains for Amlogic platform  BuildingNote: Before you start to build, make sure you have done all t">
+  <meta name="description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Building Android Source Code">
 <meta property="og:url" content="https://docs.khadas.com/vim2/BuildAndroid.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install toolchains for Amlogic platform  BuildingNote: Before you start to build, make sure you have done all t">
+<meta property="og:description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building Android Source Code">
-<meta name="twitter:description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install toolchains for Amlogic platform  BuildingNote: Before you start to build, make sure you have done all t">
+<meta name="twitter:description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,14 +130,14 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/BuildAndroid.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h3 id="Preperations" class="article-heading"><a href="#Preperations" class="headerlink" title="Preperations"></a>Preperations<a class="article-anchor" href="#Preperations" aria-hidden="true"></a></h3><ul>
+                <h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
 <li>[x] <a href="http://source.android.com/source/initializing.html" target="_blank" rel="noopener">Establishing a Build Environment</a></li>
 <li>[x] <a href="/vim2/DownloadAndroidSourceCode.html">Downloading the Android Source</a></li>
-<li>[x] <a href="/vim2/InstallToolchains.html">Install toolchains for Amlogic platform</a></li>
+<li>[x] <a href="/vim2/InstallToolchains.html">Install Toolchains for the Amlogic Platform</a></li>
 </ul>
-<h3 id="Building" class="article-heading"><a href="#Building" class="headerlink" title="Building"></a>Building<a class="article-anchor" href="#Building" aria-hidden="true"></a></h3><p><em>Note: Before you start to build, make sure you have done all the <code>Preperations</code> listed above.</em></p>
+<h3 id="Building" class="article-heading"><a href="#Building" class="headerlink" title="Building"></a>Building<a class="article-anchor" href="#Building" aria-hidden="true"></a></h3><p><em>Note: Before you start to build, make sure you have done all the <code>Preparations</code> listed above.</em></p>
 <p><strong>Build U-Boot:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> uboot</span><br><span class="line">$ make CROSS_COMPILE=aarch64-linux-gnu- kvim2_defconfig</span><br><span class="line">$ make CROSS_COMPILE=aarch64-linux-gnu-</span><br></pre></td></tr></table></figure></p>
-<p><em>Gernerated images in this step:</em></p>
+<p><em>Gernerate images in this step:</em></p>
 <ul>
 <li>fip/u-boot.bin: for onboard EMMC storage booting</li>
 <li>fip/u-boot.bin.sd.bin: for external TF card booting</li>
@@ -147,13 +147,13 @@
 <ul>
 <li>Replace ‘N’ as the number you want when you run ‘make -jN’</li>
 </ul>
-<p><em>Gernerated images in this step:</em></p>
+<p><em>Gernerate images in this step:</em></p>
 <ul>
 <li>out/target/product/kvim2/update.img</li>
 </ul>
 <p><strong>Build Linux kernel:</strong></p>
-<p>When you build Android aboved, will build Linux kernel at the same time.</p>
-<p>In some case, you might want to build Linux kernel separately, you can run the script below to do that:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> device/khadas/kvim2/mkern.sh</span><br></pre></td></tr></table></figure></p>
+<p>When you build the Android Kernel (above), the Linux Kernel will also be built simultaneously.</p>
+<p>In some cases, you might want to build the Linux Kernel separately. You can run this script below to do that:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> device/khadas/kvim2/mkern.sh</span><br></pre></td></tr></table></figure></p>
 <h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><ul>
 <li><a href="/vim2/UpgradeViaUSBCable.html">Upgrade Via an USB Cable</a></li>
 <li><a href="/vim2/UpgradeViaTFBurningCard.html">Upgrade Via a Burnning TF Card</a></li>
@@ -161,7 +161,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.872Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="Download the Android Source Code"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="FastPackageUpdateImage.html" class="article-footer-next" title="Fast Package Update Image"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -170,7 +170,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preperations"><span class="toc-text">Preperations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

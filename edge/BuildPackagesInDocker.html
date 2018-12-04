@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Build Packages In Docker | Khadas Docs</title>
+  <title>Build Packages Using Docker | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+  <meta name="description" content="This guide is about how to build packages(libdrm, gstreamer, mpp, etc.) using Docker. Note: We only use the arm64 architecture. Install DockerRequires your Host PC to be Ubuntu 16.04 or newer. $ sudo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Build Packages In Docker">
+<meta property="og:title" content="Build Packages Using Docker">
 <meta property="og:url" content="https://docs.khadas.com/edge/BuildPackagesInDocker.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+<meta property="og:description" content="This guide is about how to build packages(libdrm, gstreamer, mpp, etc.) using Docker. Note: We only use the arm64 architecture. Install DockerRequires your Host PC to be Ubuntu 16.04 or newer. $ sudo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-28T09:29:13.024Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Build Packages In Docker">
-<meta name="twitter:description" content="This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker. Note: We only provide arm64 architecture. Install DockerRequire host PC Ubuntu 16.04 or newer. $ sudo apt-get remov">
+<meta name="twitter:title" content="Build Packages Using Docker">
+<meta name="twitter:description" content="This guide is about how to build packages(libdrm, gstreamer, mpp, etc.) using Docker. Note: We only use the arm64 architecture. Install DockerRequires your Host PC to be Ubuntu 16.04 or newer. $ sudo">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,32 +126,32 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Build Packages In Docker</h1>
+                <h1 class="article-title" itemprop="name">Build Packages Using Docker</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/BuildPackagesInDocker.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>This tutorial is about how to build packaes(libdrm, gstreamer, mpp, etc.) in docker.</p>
-<p><em>Note: We only provide arm64 architecture.</em></p>
-<h3 id="Install-Docker" class="article-heading"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a>Install Docker<a class="article-anchor" href="#Install-Docker" aria-hidden="true"></a></h3><p>Require host PC <code>Ubuntu 16.04</code> or newer.</p>
+                <p>This guide is about how to build packages(libdrm, gstreamer, mpp, etc.) using Docker.</p>
+<p><em>Note: We only use the arm64 architecture.</em></p>
+<h3 id="Install-Docker" class="article-heading"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a>Install Docker<a class="article-anchor" href="#Install-Docker" aria-hidden="true"></a></h3><p>Requires your Host PC to be <code>Ubuntu 16.04</code> or newer.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove docker docker-engine docker.io</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">$ sudo add-apt-repository \</span><br><span class="line">		&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span><br><span class="line">		$(lsb_release -cs) \</span><br><span class="line">		stable&quot;</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
 <p>Start Docker:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl enable docker</span><br><span class="line">$ sudo systemctl start docker</span><br></pre></td></tr></table></figure></p>
-<p>Add Docker group:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo groupadd docker</span><br><span class="line">$ sudo usermod -aG docker $USER</span><br></pre></td></tr></table></figure></p>
-<p><em>NOTE: You need to logout or reboot your system.</em></p>
+<p>Add Docker Group:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo groupadd docker</span><br><span class="line">$ sudo usermod -aG docker $USER</span><br></pre></td></tr></table></figure></p>
+<p><em>Tip: You need to logout or reboot your system.</em></p>
 <p>Check Docker:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run hello-world</span><br></pre></td></tr></table></figure></p>
-<p>If you see the following messages mean that Docker is setup OK.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unable to find image &apos;hello-world:latest&apos; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">ca4f61b1923c: Pull complete</span><br><span class="line">Digest: sha256:be0cd392e45be79ffeffa6b05338b98ebb16c87b255f48e297ec7f98e123905c</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://cloud.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/engine/userguide/</span><br></pre></td></tr></table></figure></p>
+<p>If you see the following messages, it means that Docker has installed successfully:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unable to find image &apos;hello-world:latest&apos; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">ca4f61b1923c: Pull complete</span><br><span class="line">Digest: sha256:be0cd392e45be79ffeffa6b05338b98ebb16c87b255f48e297ec7f98e123905c</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://cloud.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/engine/userguide/</span><br></pre></td></tr></table></figure></p>
 <h3 id="Build-Debian-Docker-Image" class="article-heading"><a href="#Build-Debian-Docker-Image" class="headerlink" title="Build Debian Docker Image"></a>Build Debian Docker Image<a class="article-anchor" href="#Build-Debian-Docker-Image" aria-hidden="true"></a></h3><p>We provide a Debian stretch arm64 dockerfile. Clone it from GitHub.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/numbqq/docker-rockchip -b arm64</span><br><span class="line">$ sudo docker build -t rockchip-arm64 .</span><br></pre></td></tr></table></figure>
-<p>Now you get a Docker image named <code>rockchip-arm64</code> which include a debian multiarch cross-compiling enviroment.</p>
-<h3 id="Build-Packages" class="article-heading"><a href="#Build-Packages" class="headerlink" title="Build Packages"></a>Build Packages<a class="article-anchor" href="#Build-Packages" aria-hidden="true"></a></h3><p>Enter docker shell:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -it -v &lt;package dir&gt;:/home/rk/packages rockchip-arm64 /bin/bash</span><br></pre></td></tr></table></figure></p>
-<p><em>Note: <code>package dir</code> is the package full path which you want to build.</em></p>
-<p>Start to build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/&lt;package-name&gt;</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
+<p>Now you’ll see a Docker image named <code>rockchip-arm64</code>, which also includes a debian multi-architecture cross-compiling enviroment.</p>
+<h3 id="Build-Packages" class="article-heading"><a href="#Build-Packages" class="headerlink" title="Build Packages"></a>Build Packages<a class="article-anchor" href="#Build-Packages" aria-hidden="true"></a></h3><p>Enter Docker Shell:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -it -v &lt;package dir&gt;:/home/rk/packages rockchip-arm64 /bin/bash</span><br></pre></td></tr></table></figure></p>
+<p><em>Tip: <code>package dir</code> is the full-path of the package that you want to build.</em></p>
+<p>Start To Build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/&lt;package-name&gt;</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
 <h3 id="Example" class="article-heading"><a href="#Example" class="headerlink" title="Example"></a>Example<a class="article-anchor" href="#Example" aria-hidden="true"></a></h3><p>Build libdrm.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/test</span><br><span class="line">$ cd ~/test</span><br><span class="line">$ git clone https://github.com/numbqq/libdrm-rockchip -b rockchip-2.4.91</span><br><span class="line">$ cd libdrm-rockchip</span><br><span class="line">$ docker run -it -v $(pwd):/home/rk/packages rockchip-arm64 /bin/bash</span><br></pre></td></tr></table></figure>
-<p>We are in docker now, start to build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/libdrm-rockchip</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
+<p>We are in Docker now, start your build:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd /home/rk/packages/libdrm-rockchip</span><br><span class="line"># DEB_BUILD_OPTIONS=nocheck dpkg-buildpackage -rfakeroot -b -d -uc -us -aarm64</span><br><span class="line"># ls ../*.deb</span><br></pre></td></tr></table></figure></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-28T09:29:13.024Z" itemprop="dateModified">Last updated: 2018-07-28</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.808Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="InstallDocker.html" class="article-footer-prev" title="Install Docker"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SetupGolang.html" class="article-footer-next" title="Setup Golang"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

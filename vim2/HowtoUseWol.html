@@ -57,12 +57,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Wake on LAN (WOL) is a standard that allows your PC/Phone to turn on a computer via a local network or internet.VIM2 is different with VIM1 and it support for WOL function. Firstly, You have to connec">
+  <meta name="description" content="Wake-On-LAN (WOL) is a protocol standard that allows your PC/Smartphone to turn on a computer via your local network or the Internet. VIM2 is different from VIM1, as it supports the WOL-function. Firs">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Use WOL">
 <meta property="og:url" content="https://docs.khadas.com/vim2/HowtoUseWol.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Wake on LAN (WOL) is a standard that allows your PC/Phone to turn on a computer via a local network or internet.VIM2 is different with VIM1 and it support for WOL function. Firstly, You have to connec">
+<meta property="og:description" content="Wake-On-LAN (WOL) is a protocol standard that allows your PC/Smartphone to turn on a computer via your local network or the Internet. VIM2 is different from VIM1, as it supports the WOL-function. Firs">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_mac.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_android_mac.png">
@@ -70,10 +70,10 @@
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/wol_sender_main.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/wol_sender_add_remote.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/wol_sender_send.png">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Use WOL">
-<meta name="twitter:description" content="Wake on LAN (WOL) is a standard that allows your PC/Phone to turn on a computer via a local network or internet.VIM2 is different with VIM1 and it support for WOL function. Firstly, You have to connec">
+<meta name="twitter:description" content="Wake-On-LAN (WOL) is a protocol standard that allows your PC/Smartphone to turn on a computer via your local network or the Internet. VIM2 is different from VIM1, as it supports the WOL-function. Firs">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim2/vim2_mac.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -137,35 +137,36 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/HowtoUseWol.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Wake on LAN (WOL) is a standard that allows your PC/Phone to turn on a computer via a local network or internet.<br>VIM2 is different with VIM1 and it support for WOL function.</p>
-<p>Firstly, You have to connect VIM2 with LAN and get the ethernet MAC address.</p>
-<h3 id="Get-ethernet-MAC-address" class="article-heading"><a href="#Get-ethernet-MAC-address" class="headerlink" title="Get ethernet MAC address"></a>Get ethernet MAC address<a class="article-anchor" href="#Get-ethernet-MAC-address" aria-hidden="true"></a></h3><p>MAC address sticker at the back of board:</p>
+                <p>Wake-On-LAN (WOL) is a protocol standard that allows your PC/Smartphone to turn on a computer via your local network or the Internet.</p>
+<p>VIM2 is different from VIM1, as it supports the WOL-function.</p>
+<p>Firstly, you have to connect VIM2 to your LAN, then get the Ethernet MAC address.</p>
+<h3 id="Get-Ethernet-MAC-address" class="article-heading"><a href="#Get-Ethernet-MAC-address" class="headerlink" title="Get Ethernet MAC address"></a>Get Ethernet MAC address<a class="article-anchor" href="#Get-Ethernet-MAC-address" aria-hidden="true"></a></h3><p>MAC Address Sticker on the backside of the VIM:</p>
 <p><img src="/images/vim2/vim2_mac.jpg" alt="mac_page"></p>
-<p>Unlucky, If the sticker was lost. you can following below steps to get it.<br><strong>1) On Ubuntu, you can type </strong>ifconfig<strong> on terminal</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@khadas:~$ ifconfig</span><br><span class="line">eth0      Link encap:Ethernet  HWaddr 98:aa:fc:60:46:de</span><br><span class="line">          inet addr:192.168.1.142  Bcast:192.168.1.255  Mask:255.255.255.0 </span><br><span class="line">          inet6 addr: fe80::9aaa:fcff:fe60:46de/64 Scope: Link</span><br></pre></td></tr></table></figure></p>
-<p>The <strong>98:aa:fc:60:46:de</strong> is ethernet MAC address.</p>
+<p>If the sticker has peeled-off, you can use following steps to get the MAC Address.<br><strong>1) On Ubuntu, type*</strong> ifconfig <strong>on terminal</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig</span><br><span class="line">eth0      Link encap:Ethernet  HWaddr 98:aa:fc:60:46:de</span><br><span class="line">          inet addr:192.168.1.142  Bcast:192.168.1.255  Mask:255.255.255.0 </span><br><span class="line">          inet6 addr: fe80::9aaa:fcff:fe60:46de/64 Scope: Link</span><br></pre></td></tr></table></figure></p>
+<p>HWaddr <strong>98:aa:fc:60:46:de</strong> corresponds to your Ethernet MAC Address.</p>
 <p><strong>2) On Android, you can get it from Settings-&gt;More Settings-&gt;About-&gt;Status menu.</strong></p>
 <p><img src="/images/vim2/vim2_android_mac.png" alt="mac"></p>
-<h3 id="Enable-WOL" class="article-heading"><a href="#Enable-WOL" class="headerlink" title="Enable WOL"></a>Enable WOL<a class="article-anchor" href="#Enable-WOL" aria-hidden="true"></a></h3><p>The  default <strong>WOL</strong> is disabled, and here we use kbi to enable it. kbi means Khadas Bootloader Instrucionts, you can refer more KBI instrucions at <a href="">TBD</a>.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol w 1</span><br><span class="line">set_wol: 1</span><br></pre></td></tr></table></figure></p>
-<p>If you wanna check the WOL status, you can run:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol r</span><br><span class="line">get_wol: 1</span><br></pre></td></tr></table></figure></p>
-<p>You also can enable <strong>WOL</strong> in <strong>Setting-&gt;More Settings-&gt;WOL</strong> menu on Android.</p>
+<h3 id="Enable-WOL" class="article-heading"><a href="#Enable-WOL" class="headerlink" title="Enable WOL"></a>Enable WOL<a class="article-anchor" href="#Enable-WOL" aria-hidden="true"></a></h3><p>By default <strong>WOL</strong> is disabled. So you’ll have to use the <a href="https://docs.khadas.com/vim2/KbiGuidance.html">KBI</a> (Khadas Bootloader Instructions) to enable it.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol w 1</span><br><span class="line">set_wol: 1</span><br></pre></td></tr></table></figure></p>
+<p>If you want to check the WOL status, you can run:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi trigger wol r</span><br><span class="line">get_wol: 1</span><br></pre></td></tr></table></figure></p>
+<p>You can also enable <strong>WOL</strong> in the <strong>Setting-&gt;More Settings-&gt;WOL</strong> menu on Android.</p>
 <p><img src="/images/vim2/vim2_android_wol.png" alt="wol"></p>
-<h3 id="Test-WOL" class="article-heading"><a href="#Test-WOL" class="headerlink" title="Test WOL"></a>Test WOL<a class="article-anchor" href="#Test-WOL" aria-hidden="true"></a></h3><p>After doing that, Now We can start to test WOL function.</p>
+<h3 id="Test-WOL" class="article-heading"><a href="#Test-WOL" class="headerlink" title="Test WOL"></a>Test WOL<a class="article-anchor" href="#Test-WOL" aria-hidden="true"></a></h3><p>After doing the steps above, we can test the WOL function.</p>
 <p><strong>1) Connect VIM2 with LAN</strong></p>
 <p><strong>2) Power off VIM2</strong></p>
-<p><strong>3) Try to wake up VIM2 with different device and OS.</strong></p>
-<p><em><1> On Ubuntu PC host, you need to install <strong>wakeonlan</strong> tool</1></em><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">terry@terry:~$ sudo apt-get install wakeonlan</span><br></pre></td></tr></table></figure></p>
-<p>Now you can wake up VIM2 with MAC address<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">terry@terry:~$ wakeonlan 98:aa:fc:60:46:de</span><br></pre></td></tr></table></figure></p>
-<p><em><2> On Windows PC host, you can download <strong><a href="http://www.yarovy.com/wol/" target="_blank" rel="noopener">Wake-On-LAN Sender</a></strong> tool</2></em></p>
+<p><strong>3) Attempt to wake up your VIM2 with different Devices and OSes.</strong></p>
+<p><em><1> On a Ubuntu, you need to install the <strong>wakeonlan</strong> tool</1></em><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install wakeonlan</span><br></pre></td></tr></table></figure></p>
+<p>Now you can wake up your VIM2 with it’s MAC Address<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ wakeonlan 98:aa:fc:60:46:de</span><br></pre></td></tr></table></figure></p>
+<p><em><2> On Windows, you can download <strong><a href="http://www.yarovy.com/wol/" target="_blank" rel="noopener">Wake-On-LAN Sender</a></strong> tool</2></em></p>
 <p><img src="/images/vim2/wol_sender_main.png" alt="sender"></p>
-<p>Add remote computer</p>
+<p>Add a remote computer</p>
 <p><img src="/images/vim2/wol_sender_add_remote.png" alt="sender_add"></p>
-<p>Wake up VIM2 with below  button<br><img src="/images/vim2/wol_sender_send.png" alt="sender"></p>
-<p><em><3> On IPhone, you can search for <strong>wake on lan</strong> in App Store.</3></em></p>
+<p>Wake up VIM2 with this button<br><img src="/images/vim2/wol_sender_send.png" alt="sender"></p>
+<p><em><3> On iPhone, you can search for <strong>wake on lan</strong> in the App Store.</3></em></p>
 <h3 id="See-also" class="article-heading"><a href="#See-also" class="headerlink" title="See also"></a>See also<a class="article-anchor" href="#See-also" aria-hidden="true"></a></h3><p><a href="/vim2/KbiGuidance.html">KBI Guidance</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.884Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="SetupADB.html" class="article-footer-prev" title="Setup ADB"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="ForceResetFeatures.html" class="article-footer-next" title="Force Reset Remotely"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -174,7 +175,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-ethernet-MAC-address"><span class="toc-text">Get ethernet MAC address</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-WOL"><span class="toc-text">Enable WOL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-WOL"><span class="toc-text">Test WOL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-also"><span class="toc-text">See also</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-Ethernet-MAC-address"><span class="toc-text">Get Ethernet MAC address</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-WOL"><span class="toc-text">Enable WOL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-WOL"><span class="toc-text">Test WOL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-also"><span class="toc-text">See also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

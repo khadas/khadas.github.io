@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Fast Package Update Image | Khadas Docs</title>
+  <title>Make a "Fast Package Update Image" | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Here is about how to package update image quickly while only change one part of android. Such as only change uboot, kernel or system. Preperations: Already build android completely.  Only Change U-Boo">
+  <meta name="description" content="This guide is about how to make a “Fast Package Update Image”; This means that you will only change one part of Android. For example, only change the U-Boot, Kernel or System. Preparations: Build Andr">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fast Package Update Image">
+<meta property="og:title" content="Make a &quot;Fast Package Update Image&quot;">
 <meta property="og:url" content="https://docs.khadas.com/vim2/FastPackageUpdateImage.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Here is about how to package update image quickly while only change one part of android. Such as only change uboot, kernel or system. Preperations: Already build android completely.  Only Change U-Boo">
+<meta property="og:description" content="This guide is about how to make a “Fast Package Update Image”; This means that you will only change one part of Android. For example, only change the U-Boot, Kernel or System. Preparations: Build Andr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fast Package Update Image">
-<meta name="twitter:description" content="Here is about how to package update image quickly while only change one part of android. Such as only change uboot, kernel or system. Preperations: Already build android completely.  Only Change U-Boo">
+<meta name="twitter:title" content="Make a &quot;Fast Package Update Image&quot;">
+<meta name="twitter:description" content="This guide is about how to make a “Fast Package Update Image”; This means that you will only change one part of Android. For example, only change the U-Boot, Kernel or System. Preparations: Build Andr">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,15 +126,15 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Fast Package Update Image</h1>
+                <h1 class="article-title" itemprop="name">Make a "Fast Package Update Image"</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/FastPackageUpdateImage.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Here is about how to package update image quickly while only change one part of android. Such as only change uboot, kernel or system.</p>
-<h3 id="Preperations" class="article-heading"><a href="#Preperations" class="headerlink" title="Preperations:"></a>Preperations:<a class="article-anchor" href="#Preperations" aria-hidden="true"></a></h3><ul>
-<li><a href="/vim1/BuildAndroid.html">Already build android completely</a>.</li>
+                <p>This guide is about how to make a “Fast Package Update Image”; This means that you will only change one part of Android. For example, only change the U-Boot, Kernel or System.</p>
+<h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations:"></a>Preparations:<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
+<li><a href="/vim1/BuildAndroid.html">Build Android Completely</a>.</li>
 </ul>
-<h3 id="Only-Change-U-Boot" class="article-heading"><a href="#Only-Change-U-Boot" class="headerlink" title="Only Change U-Boot"></a>Only Change U-Boot<a class="article-anchor" href="#Only-Change-U-Boot" aria-hidden="true"></a></h3><ul>
+<h3 id="Only-Change-the-U-Boot" class="article-heading"><a href="#Only-Change-the-U-Boot" class="headerlink" title="Only Change the U-Boot"></a>Only Change the U-Boot<a class="article-anchor" href="#Only-Change-the-U-Boot" aria-hidden="true"></a></h3><ul>
 <li><p>Rebuild U-Boot</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> uboot</span><br><span class="line">$ make CROSS_COMPILE=aarch64-linux-gnu- TARGET_DECONFIG</span><br><span class="line">$ make CROSS_COMPILE=aarch64-linux-gnu-</span><br></pre></td></tr></table></figure>
 </li>
@@ -145,7 +145,7 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./vendor/amlogic/tools/aml_upgrade/aml_image_v2_packer  -r out/target/product/TARGET/upgrade/aml_upgrade_package.conf  out/target/product/TARGET/upgrade/ out/target/product/TARGET/update.img</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Only-Change-Bootup-Logo" class="article-heading"><a href="#Only-Change-Bootup-Logo" class="headerlink" title="Only Change Bootup Logo"></a>Only Change Bootup Logo<a class="article-anchor" href="#Only-Change-Bootup-Logo" aria-hidden="true"></a></h3><ul>
+<h3 id="Only-Change-the-Bootup-Logo" class="article-heading"><a href="#Only-Change-the-Bootup-Logo" class="headerlink" title="Only Change the Bootup Logo"></a>Only Change the Bootup Logo<a class="article-anchor" href="#Only-Change-the-Bootup-Logo" aria-hidden="true"></a></h3><ul>
 <li><p>Rebuild Logo Image.(About more informations,You can refer to <a href="/vim1/BuildBootLogoForUboot.html">Build Bootup Logo For U-boot</a>)</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch TARGET_LUNCH</span><br><span class="line">$ make logoimg</span><br></pre></td></tr></table></figure>
 </li>
@@ -153,7 +153,7 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./vendor/amlogic/tools/aml_upgrade/aml_image_v2_packer  -r out/target/product/TARGET/upgrade/aml_upgrade_package.conf  out/target/product/TARGET/upgrade/ out/target/product/TARGET/update.img</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Only-Change-DTB-or-Kernel" class="article-heading"><a href="#Only-Change-DTB-or-Kernel" class="headerlink" title="Only Change DTB or Kernel"></a>Only Change DTB or Kernel<a class="article-anchor" href="#Only-Change-DTB-or-Kernel" aria-hidden="true"></a></h3><ul>
+<h3 id="Only-Change-the-DTB-or-Kernel" class="article-heading"><a href="#Only-Change-the-DTB-or-Kernel" class="headerlink" title="Only Change the DTB or Kernel"></a>Only Change the DTB or Kernel<a class="article-anchor" href="#Only-Change-the-DTB-or-Kernel" aria-hidden="true"></a></h3><ul>
 <li><p>Rebuild DTB and Kernel</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch TARGET_LUNCH</span><br><span class="line">$ <span class="built_in">source</span> device/khadas/TARGET/mkern.sh</span><br></pre></td></tr></table></figure>
 </li>
@@ -161,7 +161,7 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./vendor/amlogic/tools/aml_upgrade/aml_image_v2_packer  -r out/target/product/TARGET/upgrade/aml_upgrade_package.conf  out/target/product/TARGET/upgrade/ out/target/product/TARGET/update.img</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Only-Change-System" class="article-heading"><a href="#Only-Change-System" class="headerlink" title="Only Change System"></a>Only Change System<a class="article-anchor" href="#Only-Change-System" aria-hidden="true"></a></h3><ul>
+<h3 id="Only-Change-the-System" class="article-heading"><a href="#Only-Change-the-System" class="headerlink" title="Only Change the System"></a>Only Change the System<a class="article-anchor" href="#Only-Change-the-System" aria-hidden="true"></a></h3><ul>
 <li><p>Rebuild System Image</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch TARGET_LUNCH</span><br><span class="line">$ make snod</span><br></pre></td></tr></table></figure>
 </li>
@@ -179,7 +179,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.824Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="BuildAndroid.html" class="article-footer-prev" title="Build Android Source Code"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SetupADB.html" class="article-footer-next" title="Setup ADB"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -188,7 +188,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preperations"><span class="toc-text">Preperations:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-U-Boot"><span class="toc-text">Only Change U-Boot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-Bootup-Logo"><span class="toc-text">Only Change Bootup Logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-DTB-or-Kernel"><span class="toc-text">Only Change DTB or Kernel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-System"><span class="toc-text">Only Change System</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-the-U-Boot"><span class="toc-text">Only Change the U-Boot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-the-Bootup-Logo"><span class="toc-text">Only Change the Bootup Logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-the-DTB-or-Kernel"><span class="toc-text">Only Change the DTB or Kernel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-Change-the-System"><span class="toc-text">Only Change the System</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

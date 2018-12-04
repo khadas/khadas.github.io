@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Load Images with U-Boot via TFTP | Khadas Docs</title>
+  <title>Load Images With U-Boot Via TFTP | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="With a network connection available, U-Boot can load images quickly and easily via TFTP. Preperations [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
+  <meta name="description" content="With an available network connection, U-Boot can load images quickly and easily via TFTP. Preparation [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Load Images with U-Boot via TFTP">
+<meta property="og:title" content="Load Images With U-Boot Via TFTP">
 <meta property="og:url" content="https://docs.khadas.com/vim1/LoadImagesWithUBootViaTFTP.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="With a network connection available, U-Boot can load images quickly and easily via TFTP. Preperations [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
+<meta property="og:description" content="With an available network connection, U-Boot can load images quickly and easily via TFTP. Preparation [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-03T10:09:20.872Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Load Images with U-Boot via TFTP">
-<meta name="twitter:description" content="With a network connection available, U-Boot can load images quickly and easily via TFTP. Preperations [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
+<meta name="twitter:title" content="Load Images With U-Boot Via TFTP">
+<meta name="twitter:description" content="With an available network connection, U-Boot can load images quickly and easily via TFTP. Preparation [x] Setup TFTP Server for U-Boot  We’ll start off with a terminal connected to the board and sitti">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,29 +126,29 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Load Images with U-Boot via TFTP</h1>
+                <h1 class="article-title" itemprop="name">Load Images With U-Boot Via TFTP</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/LoadImagesWithUBootViaTFTP.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>With a network connection available, U-Boot can load images quickly and easily via TFTP.</p>
-<h3 id="Preperations" class="article-heading"><a href="#Preperations" class="headerlink" title="Preperations"></a>Preperations<a class="article-anchor" href="#Preperations" aria-hidden="true"></a></h3><ul>
+                <p>With an available network connection, U-Boot can load images quickly and easily via TFTP.</p>
+<h3 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h3><ul>
 <li>[x] <a href="/vim1/SetupTFTPServer.html">Setup TFTP Server for U-Boot</a></li>
 </ul>
 <p>We’ll start off with a terminal connected to the board and sitting at the U-Boot prompt.</p>
-<h3 id="Upgrade-bootloader" class="article-heading"><a href="#Upgrade-bootloader" class="headerlink" title="Upgrade bootloader"></a>Upgrade bootloader<a class="article-anchor" href="#Upgrade-bootloader" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 u-boot.bin</span><br><span class="line">kvim# store rom_write 1080000 0 100000</span><br></pre></td></tr></table></figure>
-<p><strong>Note</strong>: You might also need to clean up the old U-Boot environment value stored at <code>env</code> partition, and save as a new value:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# defenv</span><br><span class="line">kvim# saveenv</span><br></pre></td></tr></table></figure></p>
+<h3 id="Upgrade-Bootloader" class="article-heading"><a href="#Upgrade-Bootloader" class="headerlink" title="Upgrade Bootloader"></a>Upgrade Bootloader<a class="article-anchor" href="#Upgrade-Bootloader" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 u-boot.bin</span><br><span class="line">kvim# store rom_write 1080000 0 100000</span><br></pre></td></tr></table></figure>
+<p><strong>Note</strong>: You might also need to clean up the old U-Boot environment value stored in the <code>env</code> partition, and then save it as a new value:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# defenv</span><br><span class="line">kvim# saveenv</span><br></pre></td></tr></table></figure></p>
 <p>Run <code>reset</code> or press <code>reset</code> button to boot from the new bootloader:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# reset</span><br></pre></td></tr></table></figure></p>
 <h3 id="boot-img" class="article-heading"><a href="#boot-img" class="headerlink" title="boot.img"></a>boot.img<a class="article-anchor" href="#boot-img" aria-hidden="true"></a></h3><p>Load image into memory, then run <code>bootm</code> to boot from memory:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 boot.img</span><br><span class="line">kvim# bootm</span><br></pre></td></tr></table></figure></p>
-<h3 id="Linux-Kernel-Image" class="article-heading"><a href="#Linux-Kernel-Image" class="headerlink" title="Linux Kernel Image"></a>Linux Kernel Image<a class="article-anchor" href="#Linux-Kernel-Image" aria-hidden="true"></a></h3><p>Download and run linux:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 zImage</span><br><span class="line">kvim# tftp 10000000 uInitrd</span><br><span class="line">kvim# tftp 20000000 kvim.dtb </span><br><span class="line">kvim# booti 1080000 10000000 20000000</span><br></pre></td></tr></table></figure></p>
+<h3 id="Linux-Kernel-Image" class="article-heading"><a href="#Linux-Kernel-Image" class="headerlink" title="Linux Kernel Image"></a>Linux Kernel Image<a class="article-anchor" href="#Linux-Kernel-Image" aria-hidden="true"></a></h3><p>Download and run Linux:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 zImage</span><br><span class="line">kvim# tftp 10000000 uInitrd</span><br><span class="line">kvim# tftp 20000000 kvim.dtb </span><br><span class="line">kvim# booti 1080000 10000000 20000000</span><br></pre></td></tr></table></figure></p>
 <h3 id="Troubleshooting" class="article-heading"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting<a class="article-anchor" href="#Troubleshooting" aria-hidden="true"></a></h3><p>Failed to <code>saveenv</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# saveenv</span><br><span class="line">Saving Environment to aml-storage...</span><br><span class="line">get partition info failed !!</span><br><span class="line">kvim#</span><br></pre></td></tr></table></figure></p>
 <p>You need to write a DTB first!</p>
 <h3 id="Resources" class="article-heading"><a href="#Resources" class="headerlink" title="Resources"></a>Resources<a class="article-anchor" href="#Resources" aria-hidden="true"></a></h3><ul>
-<li><a href="http://www.denx.de/wiki/view/DULG/UBoot" target="_blank" rel="noopener">U-Boot Offical Guidance</a></li>
+<li><a href="http://www.denx.de/wiki/view/DULG/UBoot" target="_blank" rel="noopener">U-Boot Offical Guide</a></li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.872Z" itemprop="dateModified">Last updated: 2018-12-03</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.844Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="SetupTFTPServer.html" class="article-footer-prev" title="Setup TFTP Server for U-Boot"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="DownloadAndroidSourceCode.html" class="article-footer-next" title="Download the Android Source Code"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -157,7 +157,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preperations"><span class="toc-text">Preperations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Upgrade-bootloader"><span class="toc-text">Upgrade bootloader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boot-img"><span class="toc-text">boot.img</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Kernel-Image"><span class="toc-text">Linux Kernel Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Upgrade-Bootloader"><span class="toc-text">Upgrade Bootloader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boot-img"><span class="toc-text">boot.img</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Kernel-Image"><span class="toc-text">Linux Kernel Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

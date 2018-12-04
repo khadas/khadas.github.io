@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Upgrade Android Via a TF Card | Khadas Docs</title>
+  <title>Upgrade Android Via An SD-Card | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,20 +57,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Preparations: Download the Burn Card Maker Tool and extract it. Prepare a TF card and a card reader, the card will be formatted, you might need to back up the data first. A HDMI supported display/moni">
+  <meta name="description" content="Preparation: Download the Burn Card Maker Tool and extract it. Prepare an SD-Card and a Card Reader. Your card will be formatted, so you might want to back up your data first. A display/monitor that s">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Upgrade Android Via a TF Card">
+<meta property="og:title" content="Upgrade Android Via An SD-Card">
 <meta property="og:url" content="https://docs.khadas.com/vim1/UpgradeViaTFBurningCard.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Preparations: Download the Burn Card Maker Tool and extract it. Prepare a TF card and a card reader, the card will be formatted, you might need to back up the data first. A HDMI supported display/moni">
+<meta property="og:description" content="Preparation: Download the Burn Card Maker Tool and extract it. Prepare an SD-Card and a Card Reader. Your card will be formatted, so you might want to back up your data first. A display/monitor that s">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/BurnCardMaker_Tool.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/BurnCardMaker_Tool_Interface.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/Upgrading_interface.png">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Upgrade Android Via a TF Card">
-<meta name="twitter:description" content="Preparations: Download the Burn Card Maker Tool and extract it. Prepare a TF card and a card reader, the card will be formatted, you might need to back up the data first. A HDMI supported display/moni">
+<meta name="twitter:title" content="Upgrade Android Via An SD-Card">
+<meta name="twitter:description" content="Preparation: Download the Burn Card Maker Tool and extract it. Prepare an SD-Card and a Card Reader. Your card will be formatted, so you might want to back up your data first. A display/monitor that s">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/BurnCardMaker_Tool.png">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -130,47 +130,46 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Upgrade Android Via a TF Card</h1>
+                <h1 class="article-title" itemprop="name">Upgrade Android Via An SD-Card</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/UpgradeViaTFBurningCard.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations:"></a>Preparations:<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
+                <h3 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation:"></a>Preparation:<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h3><ul>
 <li>Download the <a href="https://dl.khadas.com/Tools/Burn_card_maker_V2.0.2_20150617_en.7z" target="_blank" rel="noopener">Burn Card Maker Tool</a> and extract it.</li>
-<li>Prepare a TF card and a card reader, the card will be formatted, you might need to back up the data first.</li>
-<li>A HDMI supported display/monitor.</li>
+<li>Prepare an SD-Card and a Card Reader. Your card will be formatted, so you might want to back up your data first.</li>
+<li>A display/monitor that supports HDMI video-input.</li>
 </ul>
 <h3 id="Upgrading-Steps" class="article-heading"><a href="#Upgrading-Steps" class="headerlink" title="Upgrading Steps:"></a>Upgrading Steps:<a class="article-anchor" href="#Upgrading-Steps" aria-hidden="true"></a></h3><ol>
 <li>Run ‘Burn_Card_Maker.exe’ tool:<br> <img src="/images/vim1/BurnCardMaker_Tool.png" alt="Image of BurnCardMaker_Tool"></li>
-<li>Insert the TF card into your PC, it should appear as a new drive letter. Then:<ul>
-<li>Select the TF card drive in the drop-down list of <code>Choose the disk</code>.</li>
-<li>[Optional] Enable <code>To Partition and Format</code>(Enable this when the first time you making the booting card for vim1).</li>
-<li>Click <code>Open</code> button and choose the image for Vim.</li>
-<li>Click <code>Make</code> button to create the burning card for Vim:<br><img src="/images/vim1/BurnCardMaker_Tool_Interface.png" alt="Image of BurnCardMaker_Tool_Interface"></li>
+<li>Insert the SD-Card into your PC, it should appear as a new drive letter. Then:<ul>
+<li>Select your SD-Card from the drop-down list of <code>Choose the disk</code>.</li>
+<li>[Optional] Enable <code>To Partition and Format</code>(Check this the first time you’re making a Booting Card for VIM).</li>
+<li>Click the <code>Open</code> button and choose an image for VIM.</li>
+<li>Click the <code>Make</code> button to create a Burning Card for VIM:<br><img src="/images/vim1/BurnCardMaker_Tool_Interface.png" alt="Image of BurnCardMaker_Tool_Interface"></li>
 </ul>
 </li>
-<li>When everything is done, click the <code>Success</code> button to quit current operation.</li>
-<li>Plug out the TF card from your PC and then insert it into the TF Card slot of Vim.</li>
-<li>Connect the USB-C &amp; HDMI cables, and power on Vim.</li>
-<li>Let Vim enter into upgrade mode to complete the upgrading:<ul>
-<li>Long press <code>Power</code> key without release</li>
-<li>Short press <code>Reset</code> key and release</li>
-<li>Count 2-3 seconds and release the <code>Power</code> key to enter into upgrade mode.</li>
+<li>When everything is finished, click the <code>Success</code> button to terminate the current operation.</li>
+<li>Unplug the SD-Card from your PC and insert it into the SD-Card slot on your VIM.</li>
+<li>Connect the USB-C &amp; HDMI cables, and VIM will power-on automatically.</li>
+<li>Place your VIM into Upgrade Mode to complete your Firmware upgrade:<ul>
+<li>Long press <code>Power</code> key without release it.</li>
+<li>Short press <code>Reset</code> key and then release it.</li>
+<li>Count 2 to 3 seconds and release the <code>Power</code> key to enter into Upgrade Mode.</li>
 </ul>
 </li>
 </ol>
-<p>If everything goes fine, now your display/monitor should display like this:</p>
-<p><img src="/images/vim1/Upgrading_interface.png" alt="Image of Upgrading_Interface"></p>
+<p>If everything went fine, now your display/monitor should show this:<br><img src="/images/vim1/Upgrading_interface.png" alt="Image of Upgrading_Interface"></p>
 <p>Have Fun!</p>
-<p><strong>See also:</strong></p>
+<p><strong>See Also:</strong></p>
 <ul>
-<li><a href="/vim1/UpgradeViaUSBCable.html">Upgrade via an USB cable</a></li>
-<li><a href="/vim1/HowtoBootIntoUpgradeMode.html">VIM1 Howto Boot Into Upgrade Mode</a></li>
-<li><a href="/vim2/HowtoBootIntoUpgradeMode.html">VIM2 Howto Boot Into Upgrade Mode</a></li>
+<li><a href="/vim1/UpgradeViaUSBCable.html">Upgrade Via A USB Cable</a></li>
+<li><a href="/vim1/HowtoBootIntoUpgradeMode.html">VIM1 How To Boot Into Upgrade Mode</a></li>
+<li><a href="/vim2/HowtoBootIntoUpgradeMode.html">VIM2 How To Boot Into Upgrade Mode</a></li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.868Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="UpgradeViaUSBCable.html" class="article-footer-prev" title="Upgrade Via a USB-C Cable"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="InstallLibreELEC.html" class="article-footer-next" title="Install LibreELEC"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -179,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Upgrading-Steps"><span class="toc-text">Upgrading Steps:</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Upgrading-Steps"><span class="toc-text">Upgrading Steps:</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

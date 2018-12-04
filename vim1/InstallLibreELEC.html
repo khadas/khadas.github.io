@@ -57,18 +57,18 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="LibreELEC runs on external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparations [x] Download the Win32DiskImager. [x] Extract and install it on your Windows PC">
+  <meta name="description" content="LibreELEC boots from external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparation [x] Download the Win32DiskImager. [x] Extract and install it on your Windows">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How to Install LibreELEC">
 <meta property="og:url" content="https://docs.khadas.com/vim1/InstallLibreELEC.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="LibreELEC runs on external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparations [x] Download the Win32DiskImager. [x] Extract and install it on your Windows PC">
+<meta property="og:description" content="LibreELEC boots from external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparation [x] Download the Win32DiskImager. [x] Extract and install it on your Windows">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/Win32DiskImagerLibreELEC.jpg">
-<meta property="og:updated_time" content="2018-12-03T10:09:20.872Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Install LibreELEC">
-<meta name="twitter:description" content="LibreELEC runs on external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparations [x] Download the Win32DiskImager. [x] Extract and install it on your Windows PC">
+<meta name="twitter:description" content="LibreELEC boots from external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage. Preparation [x] Download the Win32DiskImager. [x] Extract and install it on your Windows">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/Win32DiskImagerLibreELEC.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -132,41 +132,41 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/InstallLibreELEC.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p><strong>LibreELEC runs on external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage.</strong></p>
-<h2 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h2><ul>
+                <p><strong>LibreELEC boots from external media (SD-Card or Thumbdrive), so you need to write the image to SD/USB storage.</strong></p>
+<h2 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h2><ul>
 <li>[x] Download the <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32DiskImager</a>.</li>
 <li>[x] Extract and install it on your Windows PC.</li>
-<li>[x] An SD card and a card reader or a thumdrive (U-disk) is required, make sure there’s nothing important on your card as ALL the data will be wiped out after the following operations.</li>
+<li>[x] An SD Card and a Card Reader or a Thumdrive (U-Disk) is required, make sure there is nothing important on your card as ALL the data will be erased after the following operations.</li>
 </ul>
-<h2 id="Download-the-LibreELEC-image" class="article-heading"><a href="#Download-the-LibreELEC-image" class="headerlink" title="Download the LibreELEC image"></a>Download the LibreELEC image<a class="article-anchor" href="#Download-the-LibreELEC-image" aria-hidden="true"></a></h2><p>You can download LibreELEC images from <a href="/vim1/FirmwareThirdparty.html#LibreELEC">VIM1</a>/<a href="https://docs.khadas.com/vim2/FirmwareThirdparty.html#LibreELEC">VIM2</a>.<br><em>Note: Image contains KVIM is image for VIM1, and KVIM2 is for VIM2.</em></p>
-<h2 id="Write-image-to-SD-USB-storage" class="article-heading"><a href="#Write-image-to-SD-USB-storage" class="headerlink" title="Write image to SD/USB storage"></a>Write image to SD/USB storage<a class="article-anchor" href="#Write-image-to-SD-USB-storage" aria-hidden="true"></a></h2><p>There are two ways to write LibreELEC image to SD/USB storage:</p>
-<h3 id="On-Windows-PC" class="article-heading"><a href="#On-Windows-PC" class="headerlink" title="On Windows PC"></a>On Windows PC<a class="article-anchor" href="#On-Windows-PC" aria-hidden="true"></a></h3><ol>
+<h2 id="Download-The-LibreELEC-Image" class="article-heading"><a href="#Download-The-LibreELEC-Image" class="headerlink" title="Download The LibreELEC Image"></a>Download The LibreELEC Image<a class="article-anchor" href="#Download-The-LibreELEC-Image" aria-hidden="true"></a></h2><p>You can download LibreELEC images from <a href="/vim1/FirmwareThirdparty.html#LibreELEC">VIM1</a>/<a href="https://docs.khadas.com/vim2/FirmwareThirdparty.html#LibreELEC">VIM2</a>.<br><em>Note: Image names containing “KVIM” is an image for VIM1, and “KVIM2” is for VIM2.</em></p>
+<h2 id="Write-Image-to-SD-USB-Storage" class="article-heading"><a href="#Write-Image-to-SD-USB-Storage" class="headerlink" title="Write Image to SD/USB Storage"></a>Write Image to SD/USB Storage<a class="article-anchor" href="#Write-Image-to-SD-USB-Storage" aria-hidden="true"></a></h2><p>There are two ways to write a LibreELEC image to SD/USB storage:</p>
+<h3 id="Using-Windows" class="article-heading"><a href="#Using-Windows" class="headerlink" title="Using Windows"></a>Using Windows<a class="article-anchor" href="#Using-Windows" aria-hidden="true"></a></h3><ol>
 <li>Run Win32DiskImager.</li>
-<li>Insert the SD/USB storage into your PC, it should appear as a new drive letter</li>
-<li>Select the image file and verify that the destination drive letter is correct, then click <code>write</code>:<br><img src="/images/vim1/Win32DiskImagerLibreELEC.jpg" alt="Image of Win32DiskImagerLibreELEC.jpg"></li>
-<li>When the write process is complete, you can safely remove the SD/USB storage by right-clicking on the drive in Windows Explorer and selecting eject.</li>
+<li>Insert the SD/USB storage into your PC, it should appear as a new drive letter.</li>
+<li>Select the .img file and verify that the destination drive letter is correct, then click <code>write</code>:<br><img src="/images/vim1/Win32DiskImagerLibreELEC.jpg" alt="Image of Win32DiskImagerLibreELEC.jpg"></li>
+<li>When the write-process is complete, you can safely remove the SD/USB storage by right-clicking on the drive in “Windows Explorer” and selecting “Eject”.</li>
 </ol>
-<h3 id="On-Linux" class="article-heading"><a href="#On-Linux" class="headerlink" title="On Linux"></a>On Linux<a class="article-anchor" href="#On-Linux" aria-hidden="true"></a></h3><p><strong>Get the device node of SD/USB storage:</strong><br>After you’ve inserted the TF card to your PC, use <code>dmesg | tail</code> to find out what /dev/sdX it is.<br>You can also use <code>parted</code> or <code>fdisk</code>, It should be something like /dev/sdX:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo parted -l</span><br><span class="line">...</span><br><span class="line">Model: Mass Storage Device (scsi)</span><br><span class="line">Disk /dev/sdb: 3997MB</span><br><span class="line">Sector size (logical/physical): 512B/512B</span><br><span class="line">Partition Table: msdos</span><br><span class="line">Disk Flags: </span><br><span class="line"></span><br><span class="line">Number  Start   End     Size    Type     File system  Flags</span><br><span class="line"> 1      16.5MB  3989MB  3973MB  primary  fat32        boot</span><br></pre></td></tr></table></figure></p>
+<h3 id="Using-Linux" class="article-heading"><a href="#Using-Linux" class="headerlink" title="Using Linux"></a>Using Linux<a class="article-anchor" href="#Using-Linux" aria-hidden="true"></a></h3><p><strong>Get The SD/USB Storage Device Node:</strong><br>After you’ve inserted the SD-Card to your PC, use <code>dmesg | tail</code> to find out which /dev/sdX it is located at.<br>You can also use <code>parted</code> or <code>fdisk</code>, It should look something similar to /dev/sdX:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo parted -l</span><br><span class="line">...</span><br><span class="line">Model: Mass Storage Device (scsi)</span><br><span class="line">Disk /dev/sdb: 3997MB</span><br><span class="line">Sector size (logical/physical): 512B/512B</span><br><span class="line">Partition Table: msdos</span><br><span class="line">Disk Flags: </span><br><span class="line"></span><br><span class="line">Number  Start   End     Size    Type     File system  Flags</span><br><span class="line"> 1      16.5MB  3989MB  3973MB  primary  fat32        boot</span><br></pre></td></tr></table></figure></p>
 <p><strong>Make sure the disk is unmounted:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo umount /dev/sdb1</span><br></pre></td></tr></table></figure></p>
 <p><strong>Use <code>dd</code> to write the disk image into SD/USB storage:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo dd <span class="keyword">if</span>=LibreELEC-S905_SD_USB.aarch64-17.6_20180122-KVIM.img of=/dev/sdb bs=4M &amp;&amp; sync</span><br></pre></td></tr></table></figure></p>
-<p><em>Notice: <code>sync</code> is ensure the changes are synced to the SD/USB storage before removing it.</em></p>
+<p><em>Notice: The <code>sync</code> flag is to ensure that all changes are synced to the SD/USB storage before removing it.</em></p>
 <p><strong>Eject the SD/USB storage:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
-<h2 id="Boot-LibreELEC-from-the-SD-USB-storage" class="article-heading"><a href="#Boot-LibreELEC-from-the-SD-USB-storage" class="headerlink" title="Boot LibreELEC from the SD/USB storage"></a>Boot LibreELEC from the SD/USB storage<a class="article-anchor" href="#Boot-LibreELEC-from-the-SD-USB-storage" aria-hidden="true"></a></h2><p>In order to boot from SD/USB storage, <strong>you need Android running on the eMMC</strong> to activate the multi-boot.</p>
-<p>Two ways to activate the multi-boot:</p>
-<p>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html#Keys-Mode-U-Boot-is-running">Keys mode</a><br>2). Activate multi-boot via Android.</p>
+<h2 id="Boot-LibreELEC-from-the-SD-USB-storage" class="article-heading"><a href="#Boot-LibreELEC-from-the-SD-USB-storage" class="headerlink" title="Boot LibreELEC from the SD/USB storage"></a>Boot LibreELEC from the SD/USB storage<a class="article-anchor" href="#Boot-LibreELEC-from-the-SD-USB-storage" aria-hidden="true"></a></h2><p>In order to boot from the SD/USB storage, <strong>you need Android running on the eMMC</strong> to activate the Multi-Boot.</p>
+<p>2 to activate the Multi-Boot:</p>
+<p>1). <a href="/vim1/HowtoBootIntoUpgradeMode.html#Keys-Mode-U-Boot-is-running">Keys mode (Side-Buttons)</a><br>2). Activate Multi-Boot using Android.</p>
 <ul>
-<li>Enter <code>Settings&gt;About Device-&gt;System-&gt;updates</code></li>
+<li>Enter <code>Settings&gt;About Device-&gt;System-&gt;Updates</code></li>
 <li>Click select and choose <code>aml_autosript.zip</code></li>
-<li>Click update, then the system will reboot and boot to external media image<br><strong>Note: Don’t use PC USB host to supply the power, or will fail to activate multi-boot!</strong></li>
+<li>Click update, then the system will reboot and boot from the external media image stored on the SD-Card.<br><strong>Note: Don’t use your PC as a USB-Host to supply the electrical-power, lest Multi-Boot will fail to activate!</strong></li>
 </ul>
 <h2 id="NOTICE" class="article-heading"><a href="#NOTICE" class="headerlink" title="NOTICE"></a>NOTICE<a class="article-anchor" href="#NOTICE" aria-hidden="true"></a></h2><ul>
 <li>Android N has a permission issue; Your bootable SD card will be damaged, if you attempt to use it to boot.</li>
-<li>Android O also has a permission issue. If you want to boot Ubuntu with Linux 4.9 please refer to <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-em mc/825/109" target="_blank" rel="noopener">this reply</a>.</li>
+<li>Android O also has a permission issue. If you want to boot Ubuntu with Linux 4.9 please refer to <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-em mc/825/109" target="_blank" rel="noopener">this guide</a>.</li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.872Z" itemprop="dateModified">Last updated: 2018-12-03</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.844Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="UpgradeViaTFBurningCard.html" class="article-footer-prev" title="Upgrade Android Via a TF Card"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CreateBurnCardViaCLI.html" class="article-footer-next" title="Create Burning Card Via CLI"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -175,7 +175,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-the-LibreELEC-image"><span class="toc-text">Download the LibreELEC image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Write-image-to-SD-USB-storage"><span class="toc-text">Write image to SD/USB storage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Windows-PC"><span class="toc-text">On Windows PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Linux"><span class="toc-text">On Linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-LibreELEC-from-the-SD-USB-storage"><span class="toc-text">Boot LibreELEC from the SD/USB storage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-The-LibreELEC-Image"><span class="toc-text">Download The LibreELEC Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Write-Image-to-SD-USB-Storage"><span class="toc-text">Write Image to SD/USB Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-Windows"><span class="toc-text">Using Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-Linux"><span class="toc-text">Using Linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-LibreELEC-from-the-SD-USB-storage"><span class="toc-text">Boot LibreELEC from the SD/USB storage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

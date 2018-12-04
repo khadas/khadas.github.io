@@ -57,19 +57,19 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="IntroduceDue to the programable MCU(STM8S003F3U6), VIM2 can support more feature like:  WOL: Wake-on-Lan Boot media setup: boot from eMMC or SPI-Flash IR Remote power on/off Timer power on/off KBI: Kh">
+  <meta name="description" content="IntroductionYour VIM is equipped with a programmable MCU(STM8S003F3U6), this allows it to support more features:  WOL: Wake-On-Lan Boot Media Setup: Boot from eMMC or SPI-Flash IR Remote Power On/Off">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Force Reset Remotely">
 <meta property="og:url" content="https://docs.khadas.com/vim2/ForceResetFeatures.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="IntroduceDue to the programable MCU(STM8S003F3U6), VIM2 can support more feature like:  WOL: Wake-on-Lan Boot media setup: boot from eMMC or SPI-Flash IR Remote power on/off Timer power on/off KBI: Kh">
+<meta property="og:description" content="IntroductionYour VIM is equipped with a programmable MCU(STM8S003F3U6), this allows it to support more features:  WOL: Wake-On-Lan Boot Media Setup: Boot from eMMC or SPI-Flash IR Remote Power On/Off">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_mac.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_android_mac.jpg">
-<meta property="og:updated_time" content="2018-11-01T07:13:24.112Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Force Reset Remotely">
-<meta name="twitter:description" content="IntroduceDue to the programable MCU(STM8S003F3U6), VIM2 can support more feature like:  WOL: Wake-on-Lan Boot media setup: boot from eMMC or SPI-Flash IR Remote power on/off Timer power on/off KBI: Kh">
+<meta name="twitter:description" content="IntroductionYour VIM is equipped with a programmable MCU(STM8S003F3U6), this allows it to support more features:  WOL: Wake-On-Lan Boot Media Setup: Boot from eMMC or SPI-Flash IR Remote Power On/Off">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim2/vim2_mac.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -133,55 +133,54 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/ForceResetFeatures.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h3 id="Introduce" class="article-heading"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce<a class="article-anchor" href="#Introduce" aria-hidden="true"></a></h3><p>Due to the programable MCU(STM8S003F3U6), VIM2 can support more feature like:</p>
+                <h3 id="Introduction" class="article-heading"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction<a class="article-anchor" href="#Introduction" aria-hidden="true"></a></h3><p>Your VIM is equipped with a programmable MCU(STM8S003F3U6), this allows it to support more features:</p>
 <ul>
-<li><a href="/vim2/HowtoUseWol.html">WOL: Wake-on-Lan</a></li>
-<li>Boot media setup: boot from eMMC or SPI-Flash</li>
-<li>IR Remote power on/off</li>
-<li>Timer power on/off</li>
+<li><a href="/vim2/HowtoUseWol.html">WOL: Wake-On-Lan</a></li>
+<li>Boot Media Setup: Boot from eMMC or SPI-Flash</li>
+<li>IR Remote Power On/Off</li>
+<li>Timer Power On/Off</li>
 <li><a href="/vim2/KbiGuidance.html">KBI: Khadas Bootloader Instructions</a></li>
 </ul>
-<p>But for some purposes, some makers might want more features like:</p>
+<p>For other purposes, Makers could want more features like:</p>
 <ul>
 <li>Power on the VIM2 via a PIN on the 40-PIN GPIO</li>
 <li>Force reset the VIM2 via a PIN on the 40-PIN GPIO</li>
 <li>Force reset the VIM2 remotely via LAN</li>
-<li>More</li>
 </ul>
-<p>Here walk you through with simple step how to use the force reset features on VIM2.</p>
-<p><em>Note that this article only suit for <strong>V05 and upper version</strong> of MCU firmware.</em></p>
-<h3 id="WOL-Working-Modes" class="article-heading"><a href="#WOL-Working-Modes" class="headerlink" title="WOL Working Modes"></a>WOL Working Modes<a class="article-anchor" href="#WOL-Working-Modes" aria-hidden="true"></a></h3><p>The WOL features is default disabled, but users can also change the WOL working mode via <a href="/vim2/KbiGuidance.html">KBI</a> commands.</p>
-<p>Here is a simple method to check the states of WOL:</p>
+<p>This guide will walk you through step-by-step, on how use the various force-reset features of your VIM2.</p>
+<p><em>This article is only suitable for <strong>V05 and Higher Versions</strong> of the MCU firmware.</em></p>
+<h3 id="WOL-Working-Modes" class="article-heading"><a href="#WOL-Working-Modes" class="headerlink" title="WOL Working Modes"></a>WOL Working Modes<a class="article-anchor" href="#WOL-Working-Modes" aria-hidden="true"></a></h3><p>The WOL feature is disabled by default, however you can enable it using <a href="/vim2/KbiGuidance.html">KBI</a> commands.</p>
+<p>This is a simple method to check the WOL-state:</p>
 <ul>
-<li><p><strong>WOL Enable State:</strong></p>
+<li><p><strong>WOL Enabled State:</strong></p>
 <ul>
-<li>Power on VIM2</li>
-<li>VIM2 turning on shortly(Initialize the registors on PHY) then power off</li>
-<li>the Blue LED is light on.</li>
+<li>Power on your VIM2.</li>
+<li>A short while after your VIM2 powers on (initialization of the registers on PHY), turn it off.</li>
+<li>Blue LED remains ON.</li>
 </ul>
 </li>
-<li><p><strong>WOL Disable State:</strong></p>
+<li><p><strong>WOL Disabled State:</strong></p>
 <ul>
-<li>Power on VIM2</li>
-<li>VIM2 keep turning on and the Blue LED is light off (White LED is light on).</li>
+<li>Power on your VIM2</li>
+<li>VIM2 remains on, and the Blue LED remains OFF (White LED is ON).</li>
 </ul>
 </li>
 </ul>
-<h3 id="Enable-WOL-Force-Feset-feature" class="article-heading"><a href="#Enable-WOL-Force-Feset-feature" class="headerlink" title="Enable WOL-Force-Feset feature"></a>Enable WOL-Force-Feset feature<a class="article-anchor" href="#Enable-WOL-Force-Feset-feature" aria-hidden="true"></a></h3><p>Boot into u-boot mode via <a href="/vim2/SetupSerialTool.html">serial</a> and run following KBI sub-command to enable WOL-Force-Reset feature:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi forcereset wol w 1</span><br><span class="line">[BL31]: tee size: 0</span><br><span class="line"></span><br><span class="line">getmac = 98:aa:fc:60:45:87</span><br><span class="line">kvim2# kbi trigger wol w 1</span><br><span class="line">[BL31]: tee size: 0</span><br><span class="line"></span><br><span class="line">getmac = 98:aa:fc:60:45:87</span><br><span class="line">kvim2#</span><br></pre></td></tr></table></figure></p>
-<p>After the command above, the VIM2 will work with WOL-Force-Reset enabled state, it means that you can force reset the VIM2 remotely for both following situations:</p>
+<h3 id="Enable-WOL-Force-Feset-feature" class="article-heading"><a href="#Enable-WOL-Force-Feset-feature" class="headerlink" title="Enable WOL-Force-Feset feature"></a>Enable WOL-Force-Feset feature<a class="article-anchor" href="#Enable-WOL-Force-Feset-feature" aria-hidden="true"></a></h3><p>Boot into U-Boot mode via <a href="/vim2/SetupSerialTool.html">serial</a> and run following KBI sub-command to enable the WOL-Force-Reset feature:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# kbi forcereset wol w 1</span><br><span class="line">[BL31]: tee size: 0</span><br><span class="line"></span><br><span class="line">getmac = 98:aa:fc:60:45:87</span><br><span class="line">kvim2# kbi trigger wol w 1</span><br><span class="line">[BL31]: tee size: 0</span><br><span class="line"></span><br><span class="line">getmac = 98:aa:fc:60:45:87</span><br><span class="line">kvim2#</span><br></pre></td></tr></table></figure></p>
+<p>After the command above, the VIM2 will work with the “WOL-Force-Reset Feature” in the “Enabled State”. This means that you can force reset your VIM2 remotely during the following situations:</p>
 <ul>
-<li>VIM2 is working, like runing Android or Linux O/S.</li>
-<li>VIM2 is powering off</li>
+<li>VIM2 is powered-on and working normally, for example running Android or Linux O/S.</li>
+<li>VIM2 is in a powered-off state (but still connected to LAN).</li>
 </ul>
-<p>Yes, it just works like your prese the physical RESET button on the board.</p>
-<h3 id="Test" class="article-heading"><a href="#Test" class="headerlink" title="Test"></a>Test<a class="article-anchor" href="#Test" aria-hidden="true"></a></h3><p>Same with WOL usage, to test the WOL-Force-Reset feature, what you need to do is just sent a Magic Packet to VIM2 via any magic packet sender. Here is a example on  Ubuntu:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ wakeonlan 98:aa:fc:60:45:87</span><br></pre></td></tr></table></figure></p>
-<p><em>Notice: make sure the VIM2 and the device to sent the magic packet are on the same local network</em></p>
+<p>Yes! It works just as though you’ve pressed the physical RESET button on the VIM2 itself!</p>
+<h3 id="Test" class="article-heading"><a href="#Test" class="headerlink" title="Test"></a>Test<a class="article-anchor" href="#Test" aria-hidden="true"></a></h3><p>To test the WOL-Force-Reset feature, you’ll need to use a “magic packet sender” to send a “magic packet” to your VIM2. For example, on Ubuntu:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ wakeonlan 98:aa:fc:60:45:87</span><br></pre></td></tr></table></figure></p>
+<p><em>Tip: Ensure your VIM2 and the Device sending the “magic packet” are on the same local network</em></p>
 <h3 id="Tips-Ways-to-get-the-MAC-Address" class="article-heading"><a href="#Tips-Ways-to-get-the-MAC-Address" class="headerlink" title="Tips: Ways to get the MAC Address"></a>Tips: Ways to get the MAC Address<a class="article-anchor" href="#Tips-Ways-to-get-the-MAC-Address" aria-hidden="true"></a></h3><ul>
-<li><p>From the sticker on the bottom side of VIM2 board:<br><img src="/images/vim2/vim2_mac.jpg" alt="image|487x136"></p>
+<li><p>From the sticker on the backside of VIM2 board:<br><img src="/images/vim2/vim2_mac.jpg" alt="image|487x136"></p>
 </li>
-<li><p>From the Setting App(For Android): Setting –&gt; network –&gt; MAC address<br><img src="/images/vim2/vim2_android_mac.jpg" alt="image|489x200"></p>
+<li><p>From the Setting app (Android): Setting –&gt; Network –&gt; MAC Address<br><img src="/images/vim2/vim2_android_mac.jpg" alt="image|489x200"></p>
 </li>
-<li><p>From the UART printing:</p>
+<li><p>From the UART print-out:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">getmac = 98:aa:fc:60:45:87</span><br><span class="line">gpio: pin GPIODV_2 (gpio 21) value is 1</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -189,7 +188,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-01T07:13:24.112Z" itemprop="dateModified">Last updated: 2018-11-01</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.884Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="HowtoUseWol.html" class="article-footer-prev" title="How To Use WOL"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="FenixScript.html" class="article-footer-next" title="Build Ubuntu/Debian Image"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -198,7 +197,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduce"><span class="toc-text">Introduce</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WOL-Working-Modes"><span class="toc-text">WOL Working Modes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-WOL-Force-Feset-feature"><span class="toc-text">Enable WOL-Force-Feset feature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test"><span class="toc-text">Test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips-Ways-to-get-the-MAC-Address"><span class="toc-text">Tips: Ways to get the MAC Address</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WOL-Working-Modes"><span class="toc-text">WOL Working Modes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-WOL-Force-Feset-feature"><span class="toc-text">Enable WOL-Force-Feset feature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test"><span class="toc-text">Test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips-Ways-to-get-the-MAC-Address"><span class="toc-text">Tips: Ways to get the MAC Address</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

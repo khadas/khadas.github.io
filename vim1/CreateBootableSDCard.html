@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Create a Bootable SD Card | Khadas Docs</title>
+  <title>Create A Bootable SD Card | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Well, what is a bootable SD card?  Bootable SD card is a SD card install the bootable bootloader on it. Bootable SD card is a boot disk and your target device boot from the SD card.  And why we need a">
+  <meta name="description" content="What is a “Bootable SD-Card”?  A “Bootable SD-Card” is an SD-Card that has a bootloader installed on it. A “Bootable SD-Card” is also known as a “Boot-Disk”, and your target device will be able to boo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Create a Bootable SD Card">
+<meta property="og:title" content="Create A Bootable SD Card">
 <meta property="og:url" content="https://docs.khadas.com/vim1/CreateBootableSDCard.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Well, what is a bootable SD card?  Bootable SD card is a SD card install the bootable bootloader on it. Bootable SD card is a boot disk and your target device boot from the SD card.  And why we need a">
+<meta property="og:description" content="What is a “Bootable SD-Card”?  A “Bootable SD-Card” is an SD-Card that has a bootloader installed on it. A “Bootable SD-Card” is also known as a “Boot-Disk”, and your target device will be able to boo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Create a Bootable SD Card">
-<meta name="twitter:description" content="Well, what is a bootable SD card?  Bootable SD card is a SD card install the bootable bootloader on it. Bootable SD card is a boot disk and your target device boot from the SD card.  And why we need a">
+<meta name="twitter:title" content="Create A Bootable SD Card">
+<meta name="twitter:description" content="What is a “Bootable SD-Card”?  A “Bootable SD-Card” is an SD-Card that has a bootloader installed on it. A “Bootable SD-Card” is also known as a “Boot-Disk”, and your target device will be able to boo">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,38 +126,38 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Create a Bootable SD Card</h1>
+                <h1 class="article-title" itemprop="name">Create A Bootable SD Card</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/CreateBootableSDCard.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Well, what is a bootable SD card?</p>
+                <p>What is a “Bootable SD-Card”?</p>
 <ul>
-<li>Bootable SD card is a SD card install the bootable bootloader on it.</li>
-<li>Bootable SD card is a boot disk and your target device boot from the SD card.</li>
+<li>A “Bootable SD-Card” is an SD-Card that has a bootloader installed on it.</li>
+<li>A “Bootable SD-Card” is also known as a “Boot-Disk”, and your target device will be able to boot from the SD-Card, as though it were the onboard eMMC storage.</li>
 </ul>
-<p>And why we need a bootable SD card?</p>
+<p>Why do we need a “Bootable SD-Card”?</p>
 <ul>
-<li>Bootable SD card can be used in the development, to speed up the process.</li>
-<li>If you wanna release ROM for SD card, Bootable SD card can be used in the development, </li>
-<li>In some cases, when your target device can not boot and even fail to load the bootloader, you can use bootable SD card to do the recovery.</li>
+<li>A “Bootable SD-Card can be used to speed up the development process.</li>
+<li>If you want to release ROM for an SD-Card, the Bootable SD-Card can be used during your development process.</li>
+<li>In some extreme cases, when your target-device is unable to boot from the eMMC (e.g. damaged bootloader), you can use a Bootable SD-Card to do your system/file recovery.</li>
 </ul>
-<h3 id="Steps-to-get-started" class="article-heading"><a href="#Steps-to-get-started" class="headerlink" title="Steps to get started"></a>Steps to get started<a class="article-anchor" href="#Steps-to-get-started" aria-hidden="true"></a></h3><p><a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">Download</a> or build u-boot to get the bootloader blob for SD card.<br>No matter which way you take, you both need to keep in mind that there are different bootloader blobs for different boot disk/media:</p>
+<h3 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h3><p><a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">Download VIM1 U-Boot</a> or build U-Boot to get the bootloader blob for your SD-Card.<br>No matter which method you choose, you need to keep in mind that there are different bootloader blobs for different boot disks/media:</p>
 <ul>
-<li>u-boot blob <code>u-boot.bin.sd.bin</code> is built for SD card</li>
-<li>u-boot blob <code>u-boot.bin</code> is built for eMMC storage</li>
+<li>U-Boot blob <code>u-boot.bin.sd.bin</code> is built for SD-Cards</li>
+<li>U-Boot blob <code>u-boot.bin</code> is built for eMMC Storage</li>
 </ul>
-<p>Pop the SD card into your PC, and make sure the disk is unmounted:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p>Format the SD card as Fat32:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p>Run <code>dd</code> to write the u-boot blob into the first sector of SD card:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
-<p>Eject the SD card from PC:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
-<h3 id="Check-it" class="article-heading"><a href="#Check-it" class="headerlink" title="Check it"></a>Check it<a class="article-anchor" href="#Check-it" aria-hidden="true"></a></h3><p>Ensure that you have done the right <a href="/vim1/SetupSerialTool.html">setup of Serial to USB module</a>.</p>
-<p>In order to check the bootable SD card, you might also need to make sure that all the data stored in the onboard eMMC has been <a href="/vim1/HowtoEraseEMMC.html">wipe out</a>.</p>
-<p>Open a terminal type <code>kermit</code> command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gouwa@Wesion:~$ kermit</span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line"> Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br></pre></td></tr></table></figure></p>
-<p>Insert the bootable SD card you create aboved into your target device and power it on, the printing should be like:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;CHK:AA;SD:0;READ:0;0.0;CHK:0;</span><br><span class="line">no sdio debug board detected </span><br><span class="line">TE: 194208</span><br><span class="line"></span><br><span class="line">BL2 Built : 13:48:56, Sep 23 2016. </span><br><span class="line">gxl g7459bd4 - jianxin.pan@droid06</span><br><span class="line"></span><br><span class="line">set vcck to 1120 mv</span><br><span class="line">set vddee to 1000 mv</span><br><span class="line">Board ID = 6</span><br><span class="line">CPU clk: 1200MHz</span><br><span class="line">DQS-corr enabled</span><br><span class="line">DDR scramble enabled</span><br><span class="line">DDR3 chl: Rank0+1 @ 792MHz - PASS</span><br><span class="line">Rank0: 1024MB(auto)-2T-11</span><br><span class="line">Rank1: 1024MB(auto)-2T-11</span><br><span class="line">DataBus test pass!</span><br><span class="line">AddrBus test pass!</span><br><span class="line">Load fip header from SD, src: 0x0000c200, des: 0x01400000, size: 0x00004000</span><br><span class="line">New fip structure!</span><br><span class="line">Load bl30 from SD, src: 0x00010200, des: 0x01100000, size: 0x0000d600</span><br><span class="line">Load bl31 from SD, src: 0x00020200, des: 0x10100000, size: 0x00015400</span><br><span class="line">Load bl33 from SD, src: 0x00038200, des: 0x01000000, size: 0x000a3400</span><br><span class="line">NOTICE:  BL3-1: v1.0(debug):2e39a99</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>Insert the SD-Card into your PC, and make sure the disk is unmounted:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdb1</span><br></pre></td></tr></table></figure></p>
+<p>Format the SD-Card as Fat32:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdb1</span><br></pre></td></tr></table></figure></p>
+<p>Run <code>dd</code> to write the U-Boot blob into the first sector of SD-Card:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
+<p>Eject the SD-Card from your PC:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
+<h3 id="Check-Your-Bootable-SD-Card" class="article-heading"><a href="#Check-Your-Bootable-SD-Card" class="headerlink" title="Check Your Bootable SD-Card"></a>Check Your Bootable SD-Card<a class="article-anchor" href="#Check-Your-Bootable-SD-Card" aria-hidden="true"></a></h3><p>Ensure that you have done the correct setup of your <a href="/vim1/SetupSerialTool.html">Serial to USB Module</a>.</p>
+<p>In order to check the Bootable SD-Card, you may also need to make sure that all data stored in the onboard eMMC has been <a href="/vim1/HowtoEraseEMMC.html">completely erased</a>.</p>
+<p>Open a terminal and type the <code>kermit</code> command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ kermit</span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line"> Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p>Insert the Bootable SD-Card you created previously, into your target device and power-on. The terminal should print this out:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;CHK:AA;SD:0;READ:0;0.0;CHK:0;</span><br><span class="line">no sdio debug board detected </span><br><span class="line">TE: 194208</span><br><span class="line"></span><br><span class="line">BL2 Built : 13:48:56, Sep 23 2016. </span><br><span class="line">gxl g7459bd4 - jianxin.pan@droid06</span><br><span class="line"></span><br><span class="line">set vcck to 1120 mv</span><br><span class="line">set vddee to 1000 mv</span><br><span class="line">Board ID = 6</span><br><span class="line">CPU clk: 1200MHz</span><br><span class="line">DQS-corr enabled</span><br><span class="line">DDR scramble enabled</span><br><span class="line">DDR3 chl: Rank0+1 @ 792MHz - PASS</span><br><span class="line">Rank0: 1024MB(auto)-2T-11</span><br><span class="line">Rank1: 1024MB(auto)-2T-11</span><br><span class="line">DataBus test pass!</span><br><span class="line">AddrBus test pass!</span><br><span class="line">Load fip header from SD, src: 0x0000c200, des: 0x01400000, size: 0x00004000</span><br><span class="line">New fip structure!</span><br><span class="line">Load bl30 from SD, src: 0x00010200, des: 0x01100000, size: 0x0000d600</span><br><span class="line">Load bl31 from SD, src: 0x00020200, des: 0x10100000, size: 0x00015400</span><br><span class="line">Load bl33 from SD, src: 0x00038200, des: 0x01000000, size: 0x000a3400</span><br><span class="line">NOTICE:  BL3-1: v1.0(debug):2e39a99</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.824Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="CreateBurnCardViaCLI.html" class="article-footer-prev" title="Create Burning Card Via CLI"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BootingCardVsBurningCard.html" class="article-footer-next" title="Booting Card Versus Burning Card"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -166,7 +166,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps-to-get-started"><span class="toc-text">Steps to get started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-it"><span class="toc-text">Check it</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-Your-Bootable-SD-Card"><span class="toc-text">Check Your Bootable SD-Card</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

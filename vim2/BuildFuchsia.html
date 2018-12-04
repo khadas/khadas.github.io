@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="As some of you may know that Google’s new operating system Fuchsia has added support for Khadas VIM2, but still under developing. Now I will give some instructions about how to build Fuchsia and get i">
+  <meta name="description" content="Google’s new operating system Fuchsia has added support for our Khadas VIM2. However, its still under development. In this guide, I will give instructions on how to build Fuchsia and get it running on">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Build Fuchsia">
 <meta property="og:url" content="https://docs.khadas.com/vim2/BuildFuchsia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="As some of you may know that Google’s new operating system Fuchsia has added support for Khadas VIM2, but still under developing. Now I will give some instructions about how to build Fuchsia and get i">
+<meta property="og:description" content="Google’s new operating system Fuchsia has added support for our Khadas VIM2. However, its still under development. In this guide, I will give instructions on how to build Fuchsia and get it running on">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build Fuchsia">
-<meta name="twitter:description" content="As some of you may know that Google’s new operating system Fuchsia has added support for Khadas VIM2, but still under developing. Now I will give some instructions about how to build Fuchsia and get i">
+<meta name="twitter:description" content="Google’s new operating system Fuchsia has added support for our Khadas VIM2. However, its still under development. In this guide, I will give instructions on how to build Fuchsia and get it running on">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,46 +130,46 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/BuildFuchsia.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>As some of you may know that Google’s new operating system <a href="https://en.wikipedia.org/wiki/Google_Fuchsia" target="_blank" rel="noopener">Fuchsia</a> has added support for Khadas VIM2, but still under developing. Now I will give some instructions about how to build Fuchsia and get it running on VIM2. Let’s go!</p>
-<h3 id="Prepare-your-build-environment-Once-per-build-environment" class="article-heading"><a href="#Prepare-your-build-environment-Once-per-build-environment" class="headerlink" title="Prepare your build environment (Once per build environment)"></a>Prepare your build environment (Once per build environment)<a class="article-anchor" href="#Prepare-your-build-environment-Once-per-build-environment" aria-hidden="true"></a></h3><p>Install some essential packages:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install texinfo libglib2.0-dev liblz4-tool autoconf libtool libsdl-dev build-essential golang git curl unzip</span><br></pre></td></tr></table></figure></p>
-<h3 id="Build-U-boot-for-Fuchsia" class="article-heading"><a href="#Build-U-boot-for-Fuchsia" class="headerlink" title="Build U-boot for Fuchsia"></a>Build U-boot for Fuchsia<a class="article-anchor" href="#Build-U-boot-for-Fuchsia" aria-hidden="true"></a></h3><p>In order to boot Fuchsia, a special u-boot is needed.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/project</span><br><span class="line">$ cd ~/project</span><br><span class="line">$ git clone https://github.com/mikevoydanoff/u-boot -b vim</span><br><span class="line">$ cd u-boot</span><br><span class="line">$ make kvim2_defconfig</span><br><span class="line">$ make -j8 CROSS_COMPILE=aarch64-linux-gnu-</span><br></pre></td></tr></table></figure></p>
-<p>After build you wii find <code>fip/u-boot.bin</code>.</p>
-<h3 id="Get-Fuchsia-source-code" class="article-heading"><a href="#Get-Fuchsia-source-code" class="headerlink" title="Get Fuchsia source code"></a>Get Fuchsia source code<a class="article-anchor" href="#Get-Fuchsia-source-code" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/project</span><br><span class="line">$ curl -s &quot;https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT&quot; | base64 --decode | bash -s garnet</span><br></pre></td></tr></table></figure>
-<p>This will download all the source code of Fuchsia under <code>~/project/fuchsia</code>.</p>
+                <p>Google’s new operating system <a href="https://en.wikipedia.org/wiki/Google_Fuchsia" target="_blank" rel="noopener">Fuchsia</a> has added support for our Khadas VIM2. However, its still under development. In this guide, I will give instructions on how to build Fuchsia and get it running on your VIM2. Let’s go!</p>
+<h3 id="Prepare-your-Build-Environment-needs-to-be-done-once-per-build-environment" class="article-heading"><a href="#Prepare-your-Build-Environment-needs-to-be-done-once-per-build-environment" class="headerlink" title="Prepare your Build Environment (needs to be done once per build environment)"></a>Prepare your Build Environment (needs to be done once per build environment)<a class="article-anchor" href="#Prepare-your-Build-Environment-needs-to-be-done-once-per-build-environment" aria-hidden="true"></a></h3><p>Install Essential Packages:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install texinfo libglib2.0-dev liblz4-tool autoconf libtool libsdl-dev build-essential golang git curl unzip</span><br></pre></td></tr></table></figure></p>
+<h3 id="Build-U-boot-for-Fuchsia" class="article-heading"><a href="#Build-U-boot-for-Fuchsia" class="headerlink" title="Build U-boot for Fuchsia"></a>Build U-boot for Fuchsia<a class="article-anchor" href="#Build-U-boot-for-Fuchsia" aria-hidden="true"></a></h3><p>In order to boot Fuchsia, a special U-Boot is needed.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/project</span><br><span class="line">$ cd ~/project</span><br><span class="line">$ git clone https://github.com/mikevoydanoff/u-boot -b vim</span><br><span class="line">$ cd u-boot</span><br><span class="line">$ make kvim2_defconfig</span><br><span class="line">$ make -j8 CROSS_COMPILE=aarch64-linux-gnu-</span><br></pre></td></tr></table></figure></p>
+<p>After building, you will see a <code>fip/u-boot.bin</code>.</p>
+<h3 id="Get-Fuchsia-Source-Code" class="article-heading"><a href="#Get-Fuchsia-Source-Code" class="headerlink" title="Get Fuchsia Source Code"></a>Get Fuchsia Source Code<a class="article-anchor" href="#Get-Fuchsia-Source-Code" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/project</span><br><span class="line">$ curl -s &quot;https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT&quot; | base64 --decode | bash -s garnet</span><br></pre></td></tr></table></figure>
+<p>This will download all the source code of Fuchsia into the directory <code>~/project/fuchsia</code>.</p>
 <h3 id="Build-Fuchsia" class="article-heading"><a href="#Build-Fuchsia" class="headerlink" title="Build Fuchsia"></a>Build Fuchsia<a class="article-anchor" href="#Build-Fuchsia" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/project/fuchsia</span><br><span class="line">$ source scripts/fx-env.sh</span><br><span class="line">$ fx set arm64</span><br><span class="line">$ fx full-build</span><br></pre></td></tr></table></figure>
-<p>If successfully will start to build Fuchsia, this will take some time.</p>
-<h3 id="Boot-Fuchsia" class="article-heading"><a href="#Boot-Fuchsia" class="headerlink" title="Boot Fuchsia"></a>Boot Fuchsia<a class="article-anchor" href="#Boot-Fuchsia" aria-hidden="true"></a></h3><h4 id="Update-u-boot-to-Fuchsia-version" class="article-heading"><a href="#Update-u-boot-to-Fuchsia-version" class="headerlink" title="Update u-boot to Fuchsia version"></a>Update u-boot to Fuchsia version<a class="article-anchor" href="#Update-u-boot-to-Fuchsia-version" aria-hidden="true"></a></h4><p>Copy the u-boot for Fuchsia you build above to TF card or U-disk, and insert it to VIM2, power on VIM2 and boot into u-boot command line. And execute the following commands to update u-boot.</p>
+<p>If you did the above steps correctly, Fuchsia will now begin to build. This will take some time, be patient.</p>
+<h3 id="Boot-Fuchsia" class="article-heading"><a href="#Boot-Fuchsia" class="headerlink" title="Boot Fuchsia"></a>Boot Fuchsia<a class="article-anchor" href="#Boot-Fuchsia" aria-hidden="true"></a></h3><h4 id="Update-your-U-Boot-to-the-Fuchsia-Version" class="article-heading"><a href="#Update-your-U-Boot-to-the-Fuchsia-Version" class="headerlink" title="Update your U-Boot to the Fuchsia Version"></a>Update your U-Boot to the Fuchsia Version<a class="article-anchor" href="#Update-your-U-Boot-to-the-Fuchsia-Version" aria-hidden="true"></a></h4><p>Copy the U-Boot for Fuchsia that you’ve built above, to a TF card or Thumbdrive (U-Disk) and insert it into your VIM2. Power on your VIM2 and boot into U-Boot’s command line. Then execute the following commands to update VIM2’s U-Boot.</p>
 <ul>
-<li><p>If your u-boot stored in U-disk</p>
+<li><p>If your U-Boot is stored on a Thumbdrive (U-Disk)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2#usb start</span><br><span class="line">kvim2#fatload usb 0 1080000 u-boot.bin</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>If your u-boot stored in TF card</p>
+<li><p>If your U-Boot stored on a TF-Card</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2#mmc info</span><br><span class="line">kvim2#fatload mmc 0 1080000 u-boot.bin</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Update u-boot<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2#store rom_write 1080000 0 1000000</span><br><span class="line">kvim2#reset</span><br></pre></td></tr></table></figure></p>
-<p>You will boot the u-boot for Fuchsia. </p>
-<h4 id="Flash-Fuchsia" class="article-heading"><a href="#Flash-Fuchsia" class="headerlink" title="Flash Fuchsia"></a>Flash Fuchsia<a class="article-anchor" href="#Flash-Fuchsia" aria-hidden="true"></a></h4><p>Enter u-boot command line again and enter <code>fastboot</code> mode to flash Fuchsia.</p>
+<p>Update U-Boot<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2#store rom_write 1080000 0 1000000</span><br><span class="line">kvim2#reset</span><br></pre></td></tr></table></figure></p>
+<p>You will now boot the U-Boot for Fuchsia. </p>
+<h4 id="Flash-Fuchsia" class="article-heading"><a href="#Flash-Fuchsia" class="headerlink" title="Flash Fuchsia"></a>Flash Fuchsia<a class="article-anchor" href="#Flash-Fuchsia" aria-hidden="true"></a></h4><p>Enter the U-Boot command-line again and enter the <code>fastboot</code> mode to flash Fuchsia.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2#fastboot</span><br></pre></td></tr></table></figure>
-<p>Switch to your build host and enter your fuchsia folder. And make sure thst your VIM2  and host PC are in  the same local area network.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/project/fuchsia</span><br><span class="line">$ sudo ./scripts/fx flash vim2 --pave</span><br></pre></td></tr></table></figure></p>
-<p>After this you will boot into Fuchsia, and you can connect VIM2 to the HDMI screen you will find the shell.</p>
-<h3 id="In-the-end" class="article-heading"><a href="#In-the-end" class="headerlink" title="In the end"></a>In the end<a class="article-anchor" href="#In-the-end" aria-hidden="true"></a></h3><p>If you don’t want to build the Fuchsia from scratch you can use the ready to use <a href="http://www.mediafire.com/file/ilpx433krhzit6j/u-boot.bin" target="_blank" rel="noopener">u-boot</a> and <a href="http://www.mediafire.com/file/d63ffa2fdyg6uts/vim2-boot.img" target="_blank" rel="noopener">zircon kernel</a> I build.</p>
+<p>Switch to your Build Host and enter your Fuchsia folder. Make sure that your VIM2 and host PC are on the same local area network (LAN).<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/project/fuchsia</span><br><span class="line">$ sudo ./scripts/fx flash vim2 --pave</span><br></pre></td></tr></table></figure></p>
+<p>After this you will boot into Fuchsia. Connect your VIM2 to a HDMI screen to see the shell.</p>
+<h3 id="Conclusions" class="article-heading"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions<a class="article-anchor" href="#Conclusions" aria-hidden="true"></a></h3><p>If you don’t want to build Fuchsia from scratch, you can use this ready-to-use <a href="http://www.mediafire.com/file/ilpx433krhzit6j/u-boot.bin" target="_blank" rel="noopener">U-Boot</a> and <a href="http://www.mediafire.com/file/d63ffa2fdyg6uts/vim2-boot.img" target="_blank" rel="noopener">Zircon Kernel</a>, which I built myself.</p>
 <ul>
-<li><p>Update u-boot<br>Please follow the instructions in <code>Build U-boot for Fuchsia</code> about how to burn u-boot.</p>
+<li><p>Update U-Boot<br>Please follow the instructions in <code>Build U-boot for Fuchsia</code>, to burn the U-Boot.</p>
 </li>
 <li><p>Flash Zircon</p>
 <ul>
-<li>Enter <code>fastboot</code> mode by holding down <code>POWER KEY</code>, pressing <code>RESET KEY</code> quickly and keeping pressing <code>POWER KEY</code> for a few seconds.</li>
+<li>Enter <code>fastboot</code> mode by (1) holding-down the <code>POWER KEY</code>, (2) then tap the <code>RESET KEY</code> quickly WITHOUT releasing the <code>POWER KEY</code>, and (3) keep holding-down the <code>POWER KEY</code> for a few more seconds (10-seconds to be safe).</li>
 <li>Burn<br><code>sudo fastboot flash boot vim2-boot.img</code></li>
 </ul>
 </li>
 </ul>
-<p>Reboot the board you will enter <code>zedboot</code>.</p>
-<h3 id="See-also" class="article-heading"><a href="#See-also" class="headerlink" title="See also"></a>See also<a class="article-anchor" href="#See-also" aria-hidden="true"></a></h3><p><a href="https://fuchsia.googlesource.com/docs/+/master/getting_started.md#Prerequisites" target="_blank" rel="noopener">Google Fuchsia Docs</a><br><a href="https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/khadas-vim.md" target="_blank" rel="noopener">Zircon on Khadas VIM2 Board</a></p>
+<p>Reboot your VIM2 to enter <code>zedboot</code>.</p>
+<h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><p><a href="https://fuchsia.googlesource.com/docs/+/master/getting_started.md#Prerequisites" target="_blank" rel="noopener">Google Fuchsia Docs</a><br><a href="https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/khadas-vim.md" target="_blank" rel="noopener">Zircon on Khadas VIM2 Board</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.872Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="HowtoEnableAdb.html" class="article-footer-prev" title="How To Enable ADB"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="McuDevelop.html" class="article-footer-next" title="MCU Development"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -178,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prepare-your-build-environment-Once-per-build-environment"><span class="toc-text">Prepare your build environment (Once per build environment)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-U-boot-for-Fuchsia"><span class="toc-text">Build U-boot for Fuchsia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-Fuchsia-source-code"><span class="toc-text">Get Fuchsia source code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Fuchsia"><span class="toc-text">Build Fuchsia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boot-Fuchsia"><span class="toc-text">Boot Fuchsia</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Update-u-boot-to-Fuchsia-version"><span class="toc-text">Update u-boot to Fuchsia version</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flash-Fuchsia"><span class="toc-text">Flash Fuchsia</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#In-the-end"><span class="toc-text">In the end</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-also"><span class="toc-text">See also</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prepare-your-Build-Environment-needs-to-be-done-once-per-build-environment"><span class="toc-text">Prepare your Build Environment (needs to be done once per build environment)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-U-boot-for-Fuchsia"><span class="toc-text">Build U-boot for Fuchsia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-Fuchsia-Source-Code"><span class="toc-text">Get Fuchsia Source Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Fuchsia"><span class="toc-text">Build Fuchsia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boot-Fuchsia"><span class="toc-text">Boot Fuchsia</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Update-your-U-Boot-to-the-Fuchsia-Version"><span class="toc-text">Update your U-Boot to the Fuchsia Version</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flash-Fuchsia"><span class="toc-text">Flash Fuchsia</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusions"><span class="toc-text">Conclusions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

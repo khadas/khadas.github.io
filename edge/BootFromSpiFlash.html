@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Khadas Edge contains a 16 MiB SPI flash on board used as boot storage, so you can image from it. This tutorial is about how to boot from the on board SPI falsh. Build U-boot for SPI FlashThe u-boot fo">
+  <meta name="description" content="Khadas Edge contains a 16 MB SPI-Flash that’s used as boot storage; so you can image from it. This guide is about how to boot from the on-board SPI-Flash. Build U-boot For SPI-FlashThe U-Boot for SPI-">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Boot From SPI Flash">
 <meta property="og:url" content="https://docs.khadas.com/edge/BootFromSpiFlash.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Khadas Edge contains a 16 MiB SPI flash on board used as boot storage, so you can image from it. This tutorial is about how to boot from the on board SPI falsh. Build U-boot for SPI FlashThe u-boot fo">
+<meta property="og:description" content="Khadas Edge contains a 16 MB SPI-Flash that’s used as boot storage; so you can image from it. This guide is about how to boot from the on-board SPI-Flash. Build U-boot For SPI-FlashThe U-Boot for SPI-">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-22T08:29:41.526Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Boot From SPI Flash">
-<meta name="twitter:description" content="Khadas Edge contains a 16 MiB SPI flash on board used as boot storage, so you can image from it. This tutorial is about how to boot from the on board SPI falsh. Build U-boot for SPI FlashThe u-boot fo">
+<meta name="twitter:description" content="Khadas Edge contains a 16 MB SPI-Flash that’s used as boot storage; so you can image from it. This guide is about how to boot from the on-board SPI-Flash. Build U-boot For SPI-FlashThe U-Boot for SPI-">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,11 +130,11 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/BootFromSpiFlash.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Khadas Edge contains a 16 MiB SPI flash on board used as boot storage, so you can image from it. This tutorial is about how to boot from the on board SPI falsh.</p>
-<h3 id="Build-U-boot-for-SPI-Flash" class="article-heading"><a href="#Build-U-boot-for-SPI-Flash" class="headerlink" title="Build U-boot for SPI Flash"></a>Build U-boot for SPI Flash<a class="article-anchor" href="#Build-U-boot-for-SPI-Flash" aria-hidden="true"></a></h3><p>The u-boot for SPI flash is different from eMMC/SD one. It’s recommend you to use <a href="https://github.com/khadas/fenix" target="_blank" rel="noopener">Fenix script</a> to build u-boot, it’s easy to build.</p>
-<p><strong>Assume that you have setup basic build environment, if not please refer to <a href="/edge/FenixScript.html">Fenix Usage</a>.</strong></p>
+                <p>Khadas Edge contains a 16 MB SPI-Flash that’s used as boot storage; so you can image from it. This guide is about how to boot from the on-board SPI-Flash.</p>
+<h3 id="Build-U-boot-For-SPI-Flash" class="article-heading"><a href="#Build-U-boot-For-SPI-Flash" class="headerlink" title="Build U-boot For SPI-Flash"></a>Build U-boot For SPI-Flash<a class="article-anchor" href="#Build-U-boot-For-SPI-Flash" aria-hidden="true"></a></h3><p>The U-Boot for SPI-Flash is different from the eMMC/SD’s U-Boot. We recommend using <a href="https://github.com/khadas/fenix" target="_blank" rel="noopener">Fenix Script</a> to build U-Boot, as it’s easy this way.</p>
+<p><strong>This guide assumes that you have already setup a basic build environment. If not, please refer to <a href="/edge/FenixScript.html">Fenix Usage</a>.</strong></p>
 <ul>
-<li>Setup environment:</li>
+<li>Setup Environment:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd fenix</span><br><span class="line">$ source env/setenv.sh</span><br></pre></td></tr></table></figure>
 <p>Select <code>Edge</code> board.</p>
@@ -142,25 +142,25 @@
 <li>Build U-boot</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot</span><br></pre></td></tr></table></figure>
-<p>If successfully, you will get u-boot for SPI flash <code>u-boot-spi.bin</code> under folder <code>fenix/u-boot</code>.</p>
-<h3 id="Burn-U-boot-to-SPI-Flash" class="article-heading"><a href="#Burn-U-boot-to-SPI-Flash" class="headerlink" title="Burn U-boot to SPI Flash"></a>Burn U-boot to SPI Flash<a class="article-anchor" href="#Burn-U-boot-to-SPI-Flash" aria-hidden="true"></a></h3><p>Copy <code>u-boot-spi.bin</code> to TF card or u-disk and insert to Edge.</p>
-<p><a href="/edge/SetupSerialTool.html">Setup serial debugging tool</a> and boot to u-boot command line.</p>
+<p>If successful, you will get a U-Boot for the SPI-Flash <code>u-boot-spi.bin</code>, in the directory <code>fenix/u-boot</code>.</p>
+<h3 id="Burn-U-boot-To-SPI-Flash" class="article-heading"><a href="#Burn-U-boot-To-SPI-Flash" class="headerlink" title="Burn U-boot To SPI Flash"></a>Burn U-boot To SPI Flash<a class="article-anchor" href="#Burn-U-boot-To-SPI-Flash" aria-hidden="true"></a></h3><p>Copy <code>u-boot-spi.bin</code> to an SD-Card or Thumbdrive (U-Disk) and insert it into your Edge.</p>
+<p><a href="/edge/SetupSerialTool.html">Setup serial debugging tool</a> and boot to the U-Boot Command Line.</p>
 <h4 id="Load-U-boot-to-DDR" class="article-heading"><a href="#Load-U-boot-to-DDR" class="headerlink" title="Load U-boot to DDR"></a>Load U-boot to DDR<a class="article-anchor" href="#Load-U-boot-to-DDR" aria-hidden="true"></a></h4><ul>
-<li>Load u-boot from TF card:</li>
+<li>Load U-Boot from SD-Card:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# load mmc 1 $kernel_addr_r u-boot-spi.bin</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Load u-boot from u-disk:</li>
+<li>Load U-Boot from Thumbdrive (U-Disk):</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# usb start</span><br><span class="line">kedge# load usb 0 $kernel_addr_r u-boot-spi.bin</span><br></pre></td></tr></table></figure>
 <h4 id="Burning" class="article-heading"><a href="#Burning" class="headerlink" title="Burning"></a>Burning<a class="article-anchor" href="#Burning" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# sf probe</span><br><span class="line">kedge# sf erase 0 +$filesize</span><br><span class="line">kedge# sf write $kernel_addr_r 0 $filesize</span><br><span class="line">kedge# reset</span><br></pre></td></tr></table></figure>
-<p><em>Note: This will take about 3 minutes, please keep patient.</em></p>
-<p>After reboot, you will boot from SPI flash.</p>
-<h3 id="See-also" class="article-heading"><a href="#See-also" class="headerlink" title="See also"></a>See also<a class="article-anchor" href="#See-also" aria-hidden="true"></a></h3><p><a href="http://opensource.rock-chips.com/wiki_Boot_option" target="_blank" rel="noopener">RK3399 boot options</a></p>
+<p><em>Tip: This will take about 3 minutes, please be patient.</em></p>
+<p>After reboot, you will boot from the SPI-Flash.</p>
+<h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><p><a href="http://opensource.rock-chips.com/wiki_Boot_option" target="_blank" rel="noopener">RK3399 Boot Options</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-22T08:29:41.526Z" itemprop="dateModified">Last updated: 2018-11-22</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.808Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="RockchipDocs.html" class="article-footer-prev" title="Rockchip Official Docs"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="DownloadAndroidSourceCode.html" class="article-footer-next" title="Download the Android Source Code"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -169,7 +169,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-U-boot-for-SPI-Flash"><span class="toc-text">Build U-boot for SPI Flash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Burn-U-boot-to-SPI-Flash"><span class="toc-text">Burn U-boot to SPI Flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Load-U-boot-to-DDR"><span class="toc-text">Load U-boot to DDR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Burning"><span class="toc-text">Burning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-also"><span class="toc-text">See also</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-U-boot-For-SPI-Flash"><span class="toc-text">Build U-boot For SPI-Flash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Burn-U-boot-To-SPI-Flash"><span class="toc-text">Burn U-boot To SPI Flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Load-U-boot-to-DDR"><span class="toc-text">Load U-boot to DDR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Burning"><span class="toc-text">Burning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

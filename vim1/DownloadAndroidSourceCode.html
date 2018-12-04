@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Download the Android Source Code | Khadas Docs</title>
+  <title>Download The Android Source Code | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="The Android source tree of Khadas VIMs are hosted on Github with many different repositories. Walk through the below steps to download the source code.  Steps1) Create an empty directory to hold your">
+  <meta name="description" content="The Android Source Tree of our Khadas VIMs are hosted on Github. There are many different repositories. Walk through the steps below to download the Source Code.  Steps1) Create an empty directory to">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Download the Android Source Code">
+<meta property="og:title" content="Download The Android Source Code">
 <meta property="og:url" content="https://docs.khadas.com/vim1/DownloadAndroidSourceCode.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="The Android source tree of Khadas VIMs are hosted on Github with many different repositories. Walk through the below steps to download the source code.  Steps1) Create an empty directory to hold your">
+<meta property="og:description" content="The Android Source Tree of our Khadas VIMs are hosted on Github. There are many different repositories. Walk through the steps below to download the Source Code.  Steps1) Create an empty directory to">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Download the Android Source Code">
-<meta name="twitter:description" content="The Android source tree of Khadas VIMs are hosted on Github with many different repositories. Walk through the below steps to download the source code.  Steps1) Create an empty directory to hold your">
+<meta name="twitter:title" content="Download The Android Source Code">
+<meta name="twitter:description" content="The Android Source Tree of our Khadas VIMs are hosted on Github. There are many different repositories. Walk through the steps below to download the Source Code.  Steps1) Create an empty directory to">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,32 +126,32 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Download the Android Source Code</h1>
+                <h1 class="article-title" itemprop="name">Download The Android Source Code</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/DownloadAndroidSourceCode.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>The Android source tree of Khadas VIMs are hosted on <a href="https://www.github.com/khadas" target="_blank" rel="noopener">Github</a> with many different repositories.</p>
-<p>Walk through the below steps to download the source code. </p>
+                <p>The Android Source Tree of our Khadas VIMs are hosted on <a href="https://www.github.com/khadas" target="_blank" rel="noopener">Github</a>. There are many different repositories.</p>
+<p>Walk through the steps below to download the Source Code. </p>
 <h3 id="Steps" class="article-heading"><a href="#Steps" class="headerlink" title="Steps"></a>Steps<a class="article-anchor" href="#Steps" aria-hidden="true"></a></h3><p>1) Create an empty directory to hold your working files:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ mkdir -p WORKING_DIRECTORY</span><br><span class="line">$ <span class="built_in">cd</span> WORKING_DIRECTORY</span><br></pre></td></tr></table></figure></p>
-<p>2) Run <code>repo init</code> to bring down the manifest repository first:<br>For Android Marshmallow(6.0):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Mmallow</span><br></pre></td></tr></table></figure></p>
+<p>2) Run <code>repo init</code> to download the manifest repository first:<br>For Android Marshmallow(6.0):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Mmallow</span><br></pre></td></tr></table></figure></p>
 <p><em>Note: Only available for VIM1.</em></p>
-<p>For Android Nougat(7.1):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Nougat</span><br></pre></td></tr></table></figure></p>
+<p>For Android Nougat (7.1):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Nougat</span><br></pre></td></tr></table></figure></p>
 <p><em>Note: Available for both VIM1 &amp; VIM2.</em></p>
-<p>For Android Oreo(8.0):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Oreo</span><br></pre></td></tr></table></figure></p>
+<p>For Android Oreo (8.0):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b Oreo</span><br></pre></td></tr></table></figure></p>
 <p><em>Note: Only available for VIM1.</em></p>
-<p>3) Run <code>repo sync</code> to pull down the Android source tree:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo sync -j4</span><br></pre></td></tr></table></figure></p>
-<p>The initial sync operation will take an hour or more to complete.</p>
-<p><em>Tips: you might need to run above command repeatly if it failed halfway. Or you can try with below script instead:</em><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">repo sync -j4</span><br><span class="line"><span class="keyword">while</span> [ $? = 1 ]; <span class="keyword">do</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"Sync failed, repeat again:"</span></span><br><span class="line">	repo sync -j4</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<p>3) Run <code>repo sync</code> to pull down the Android Source Tree:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo sync -j4</span><br></pre></td></tr></table></figure></p>
+<p>The initial sync operation may take an hour or more to complete.</p>
+<p><em>Tip: You might need to run above command repeatly if it fails halfway. Or you can try with this script instead:</em><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">repo sync -j4</span><br><span class="line"><span class="keyword">while</span> [ $? = 1 ]; <span class="keyword">do</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"Sync failed, repeat again:"</span></span><br><span class="line">	repo sync -j4</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 <p><em>If needed, press Ctrl-\ to quit.</em></p>
-<p>4) Begins a new branch for development:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo start &lt;BRANCH_NAME&gt; --all</span><br></pre></td></tr></table></figure></p>
+<p>4) Begin a new branch for development:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo start &lt;BRANCH_NAME&gt; --all</span><br></pre></td></tr></table></figure></p>
 <h3 id="Further-Reading" class="article-heading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading<a class="article-anchor" href="#Further-Reading" aria-hidden="true"></a></h3><ul>
-<li><a href="https://source.android.com/source/downloading.html" target="_blank" rel="noopener">Android official documents</a></li>
+<li><a href="https://source.android.com/source/downloading.html" target="_blank" rel="noopener">Android Official Documents</a></li>
 <li><a href="/vim1/BuildAndroid.html">Build Android Source Code</a></li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.824Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-prev" title="Load Images with U-Boot via TFTP"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BuildAndroid.html" class="article-footer-next" title="Build Android Source Code"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Howto Boot Into Upgrade Mode | Khadas Docs</title>
+  <title>How To Boot Into Upgrade Mode | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,18 +57,18 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
+  <meta name="description" content="There are 5 ways to boot into Upgrade Mode: 1 Buttons Mode2 Serial Mode3 Linux/Android Command Line4 TST Mode (Recommended)5 MRegister Mode Usually, the first 4 methods will meet the needs of most use">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Howto Boot Into Upgrade Mode">
+<meta property="og:title" content="How To Boot Into Upgrade Mode">
 <meta property="og:url" content="https://docs.khadas.com/edge/HowtoBootIntoUpgradeMode.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
+<meta property="og:description" content="There are 5 ways to boot into Upgrade Mode: 1 Buttons Mode2 Serial Mode3 Linux/Android Command Line4 TST Mode (Recommended)5 MRegister Mode Usually, the first 4 methods will meet the needs of most use">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/MRegister_ShortCircuit.png">
-<meta property="og:updated_time" content="2018-11-12T08:10:40.501Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.820Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Howto Boot Into Upgrade Mode">
-<meta name="twitter:description" content="There are many different ways to boot into upgrade mode listed as following:  Keys Mode Serial Mode Linux/Android command line TST Mode (Recommend) MRegister Mode  Usually, the first four methods will">
+<meta name="twitter:title" content="How To Boot Into Upgrade Mode">
+<meta name="twitter:description" content="There are 5 ways to boot into Upgrade Mode: 1 Buttons Mode2 Serial Mode3 Linux/Android Command Line4 TST Mode (Recommended)5 MRegister Mode Usually, the first 4 methods will meet the needs of most use">
 <meta name="twitter:image" content="https://docs.khadas.com/images/edge/MRegister_ShortCircuit.png">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -128,57 +128,51 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Howto Boot Into Upgrade Mode</h1>
+                <h1 class="article-title" itemprop="name">How To Boot Into Upgrade Mode</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/HowtoBootIntoUpgradeMode.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>There are many different ways to boot into upgrade mode listed as following:</p>
-<ul>
-<li>Keys Mode</li>
-<li>Serial Mode</li>
-<li>Linux/Android command line</li>
-<li>TST Mode (Recommend)</li>
-<li>MRegister Mode</li>
-</ul>
-<p>Usually, the first four methods will meet most of the user needs, but in some case, for example, if burnning a wrong u-boot, or your device cannot even boot any more, in thus cases, you can try with MRegister mode.</p>
-<h3 id="Keys-Mode-U-Boot-is-running" class="article-heading"><a href="#Keys-Mode-U-Boot-is-running" class="headerlink" title="Keys Mode(U-Boot is running)"></a>Keys Mode(U-Boot is running)<a class="article-anchor" href="#Keys-Mode-U-Boot-is-running" aria-hidden="true"></a></h3><ol>
+                <p>There are 5 ways to boot into Upgrade Mode:</p>
+<p>1 Buttons Mode<br>2 Serial Mode<br>3 Linux/Android Command Line<br>4 TST Mode (Recommended)<br>5 MRegister Mode</p>
+<p>Usually, the first 4 methods will meet the needs of most users. In exceptional cases, for example you’ve burned the incorrect U-Boot, or your device can’t boot at all, you can use method 5: MRegister.</p>
+<h3 id="Buttons-Mode-U-Boot-is-Running-Normally" class="article-heading"><a href="#Buttons-Mode-U-Boot-is-Running-Normally" class="headerlink" title="Buttons Mode (U-Boot is Running Normally)"></a>Buttons Mode (U-Boot is Running Normally)<a class="article-anchor" href="#Buttons-Mode-U-Boot-is-Running-Normally" aria-hidden="true"></a></h3><ol>
 <li>Power on Edge.</li>
-<li>Long press <code>Func</code> key without release.</li>
-<li>Short press ‘Reset’ key and release.</li>
-<li>Count 2-3 seconds and release the ‘Func’ key to enter into upgrade mode, you will see the sys-led on when enter upgrade mode(loader mode).</li>
+<li>Long press the <code>Function</code> key without releasing it.</li>
+<li>Short press the ‘Reset’ key and release it.</li>
+<li>Count for 2 to 3 seconds, then release the ‘Function’ key to enter into Upgrade Mode. You will see the sys-led turn ON when you’ve entered Upgrade Mode (Loader Mode).</li>
 </ol>
-<h3 id="Serial-Mode-For-developers" class="article-heading"><a href="#Serial-Mode-For-developers" class="headerlink" title="Serial Mode(For developers)"></a>Serial Mode(For developers)<a class="article-anchor" href="#Serial-Mode-For-developers" aria-hidden="true"></a></h3><ol>
-<li>Refer this <a href="/edge/SetupSerialTool.html">guidance</a> to setup serial tool for Edge.</li>
-<li>Make sure again you’ve done the right connections and setup.</li>
-<li>Hit any keys at the moment of booting to stop autoboot. This step will let Edge boot into u-boot mode.</li>
-<li>Type <code>run update</code> on the terminal of u-boot as belowing, you will see the sys-led on when enter loader mode.</li>
+<h3 id="Serial-Mode-For-Developers" class="article-heading"><a href="#Serial-Mode-For-Developers" class="headerlink" title="Serial Mode (For Developers)"></a>Serial Mode (For Developers)<a class="article-anchor" href="#Serial-Mode-For-Developers" aria-hidden="true"></a></h3><ol>
+<li>Refer this <a href="/edge/SetupSerialTool.html">guide</a> to setup your serial tool for Edge.</li>
+<li>Once again, make sure you’ve done the correct connections and setup.</li>
+<li>Hit any keys at the moment of booting to stop autoboot. This step will let Edge boot into U-Boot Mode.</li>
+<li>Type <code>run update</code> in the terminal of U-Boot as below. You will see the sys-led turn ON when you’ve entered Upgrade Mode.</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# run update</span><br></pre></td></tr></table></figure>
 <ol start="5">
-<li>Type <code>run maskrom</code> on the terminal of u-boot as belowing, you will enter maskrom mode.</li>
+<li>Type <code>run maskrom</code> on the terminal of U-Boot as below, and you will enter Markrom Mode.</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kedge# run maskrom</span><br></pre></td></tr></table></figure>
-<h3 id="Android-Linux-command-line" class="article-heading"><a href="#Android-Linux-command-line" class="headerlink" title="Android/Linux command line"></a>Android/Linux command line<a class="article-anchor" href="#Android-Linux-command-line" aria-hidden="true"></a></h3><ol>
-<li>Refer this <a href="/edge/SetupSerialTool.html">guidance</a> to setup serial tool for Edge.</li>
-<li>Make sure again you’ve done the right connections and setup.</li>
-<li>Boot into android or linux command line.</li>
-<li>Linux executes <code>sudo reboot loader</code>, Android executes <code>su</code> and <code>reboot loader</code>, the system will reboot and enter upgrade mode, you will see the sys-led on when enter upgrade mode(loader mode).</li>
+<h3 id="Android-Linux-Command-Line" class="article-heading"><a href="#Android-Linux-Command-Line" class="headerlink" title="Android/Linux Command Line"></a>Android/Linux Command Line<a class="article-anchor" href="#Android-Linux-Command-Line" aria-hidden="true"></a></h3><ol>
+<li>Refer to this <a href="/edge/SetupSerialTool.html">guide</a> to setup your serial tool for Edge.</li>
+<li>Once again, make sure you’ve done the correct connections and setup.</li>
+<li>Boot into Android or Linux command line.</li>
+<li>For Linux, execute <code>sudo reboot loader</code>. For Android, execute <code>su</code> and <code>reboot loader</code>. The system will reboot and enter Upgrade Mode. You will see the sys-led turn ON when you’ve entered Upgrade Mode (Loader Mode).</li>
 </ol>
-<h3 id="TST-Mode-Recommend" class="article-heading"><a href="#TST-Mode-Recommend" class="headerlink" title="TST Mode (Recommend)"></a>TST Mode (Recommend)<a class="article-anchor" href="#TST-Mode-Recommend" aria-hidden="true"></a></h3><ol>
+<h3 id="TST-Mode-Recommended" class="article-heading"><a href="#TST-Mode-Recommended" class="headerlink" title="TST Mode (Recommended)"></a>TST Mode (Recommended)<a class="article-anchor" href="#TST-Mode-Recommended" aria-hidden="true"></a></h3><ol>
 <li>Power on Edge.</li>
-<li>Quickly press <code>Func</code> key 3 times in 2 seconds and release the key.</li>
-<li>You will see the power-led(Blue) blink about 3 seconds, after the power-led(Blue) off indicate that the board is in upgrade mode(maskrom mode).</li>
+<li>Quickly press the <code>Function</code> key 3 times in 2 seconds, then release the key.</li>
+<li>You will see the Power-LED (Blue) blink for about 3 seconds. After the Power-LED (Blue) turns OFF, this indicates that the board is in Upgrade Mode (Maskrom Mode).</li>
 </ol>
 <h3 id="MRegister-Mode-Maskrom-Mode" class="article-heading"><a href="#MRegister-Mode-Maskrom-Mode" class="headerlink" title="MRegister Mode(Maskrom Mode)"></a>MRegister Mode(Maskrom Mode)<a class="article-anchor" href="#MRegister-Mode-Maskrom-Mode" aria-hidden="true"></a></h3><ol>
 <li>Power on Edge.</li>
-<li>Use a tweezer to short-circuit the two pads of <code>M</code> register and without release.</li>
-<li>Short press <code>Reset</code> key and release it to boot into upgrade mode(maskrom mode).</li>
+<li>Use a tweezer to short-circuit the two pads of <code>M</code> register, then without releasing…</li>
+<li>Short press the <code>Reset</code> key and release it to boot into Upgrade Mode (Maskrom Mode).</li>
 </ol>
-<p><img src="/images/edge/MRegister_ShortCircuit.png" alt="Image of MRegister_ShortCircuit"><br><em>Tips: The  <code>M</code> register is loacated on the bottom of Edge</em></p>
+<p><img src="/images/edge/MRegister_ShortCircuit.png" alt="Image of MRegister_ShortCircuit"><br><em>Tip: The <code>M</code> register is located on the backside of Edge</em></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-12T08:10:40.501Z" itemprop="dateModified">Last updated: 2018-11-12</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.820Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="EdgeCaptainPowerPriority.html" class="article-footer-prev" title="Edge Captain Power Priority"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UpgradeViaUSBCable.html" class="article-footer-next" title="Upgrade Via a USB-C Cable"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -187,7 +181,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-Mode-U-Boot-is-running"><span class="toc-text">Keys Mode(U-Boot is running)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode(For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Linux-command-line"><span class="toc-text">Android/Linux command line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TST-Mode-Recommend"><span class="toc-text">TST Mode (Recommend)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Buttons-Mode-U-Boot-is-Running-Normally"><span class="toc-text">Buttons Mode (U-Boot is Running Normally)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-Developers"><span class="toc-text">Serial Mode (For Developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Linux-Command-Line"><span class="toc-text">Android/Linux Command Line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TST-Mode-Recommended"><span class="toc-text">TST Mode (Recommended)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

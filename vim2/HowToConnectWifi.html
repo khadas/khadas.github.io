@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>How To Connect to Wi-Fi | Khadas Docs</title>
+  <title>How to Connect to Wi-Fi | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="For desktop system you can setup Wi-Fi via GUI easily, so in this tutorial we just talk about how to connect to Wi-Fi under command line. For Ubuntu/Debian server we can use NetworkManager to setup Wi">
+  <meta name="description" content="For desktop systems you can setup Wi-Fi via the GUI easily. So in this guide, we’ll just talk about how to connect to Wi-Fi via command line. For the Ubuntu/Debian server we can use NetworkManager to">
 <meta property="og:type" content="website">
-<meta property="og:title" content="How To Connect to Wi-Fi">
+<meta property="og:title" content="How to Connect to Wi-Fi">
 <meta property="og:url" content="https://docs.khadas.com/vim2/HowToConnectWifi.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="For desktop system you can setup Wi-Fi via GUI easily, so in this tutorial we just talk about how to connect to Wi-Fi under command line. For Ubuntu/Debian server we can use NetworkManager to setup Wi">
+<meta property="og:description" content="For desktop systems you can setup Wi-Fi via the GUI easily. So in this guide, we’ll just talk about how to connect to Wi-Fi via command line. For the Ubuntu/Debian server we can use NetworkManager to">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How To Connect to Wi-Fi">
-<meta name="twitter:description" content="For desktop system you can setup Wi-Fi via GUI easily, so in this tutorial we just talk about how to connect to Wi-Fi under command line. For Ubuntu/Debian server we can use NetworkManager to setup Wi">
+<meta name="twitter:title" content="How to Connect to Wi-Fi">
+<meta name="twitter:description" content="For desktop systems you can setup Wi-Fi via the GUI easily. So in this guide, we’ll just talk about how to connect to Wi-Fi via command line. For the Ubuntu/Debian server we can use NetworkManager to">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,20 +126,20 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">How To Connect to Wi-Fi</h1>
+                <h1 class="article-title" itemprop="name">How to Connect to Wi-Fi</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/HowToConnectWifi.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>For desktop system you can setup Wi-Fi via GUI easily, so in this tutorial we just talk about how to connect to Wi-Fi under command line. For Ubuntu/Debian server we can use <code>NetworkManager</code> to setup Wi-Fi.</p>
-<h3 id="Scan-Wi-Fi-hotspot" class="article-heading"><a href="#Scan-Wi-Fi-hotspot" class="headerlink" title="Scan Wi-Fi hotspot"></a>Scan Wi-Fi hotspot<a class="article-anchor" href="#Scan-Wi-Fi-hotspot" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ nmcli d wifi list</span><br><span class="line">IN-USE  SSID                          MODE   CHAN  RATE        SIGNAL  BARS  SEC</span><br><span class="line">        VIM                           Infra  2     195 Mbit/s  92      ▂▄▆█  WPA</span><br><span class="line">        Wesion                        Infra  7     260 Mbit/s  84      ▂▄▆█  WPA</span><br><span class="line">        VIM_5G                        Infra  161   405 Mbit/s  84      ▂▄▆█  WPA</span><br><span class="line">        HP-HOTSPOT-48-LaserJet M1218  Infra  7     54 Mbit/s   69      ▂▄▆_  WPA</span><br><span class="line">        ChinaNet-xjCH                 Infra  13    270 Mbit/s  67      ▂▄▆_  WPA</span><br><span class="line">        BRGCN_GUEST                   Infra  1     405 Mbit/s  64      ▂▄▆_  WPA</span><br><span class="line">        BRGCN                         Infra  1     405 Mbit/s  62      ▂▄▆_  WPA</span><br></pre></td></tr></table></figure>
-<p>You will find the Wi-Fi hotspot you can connect to.</p>
-<h3 id="Connect-to-Wi-Fi-hotspot" class="article-heading"><a href="#Connect-to-Wi-Fi-hotspot" class="headerlink" title="Connect to Wi-Fi hotspot"></a>Connect to Wi-Fi hotspot<a class="article-anchor" href="#Connect-to-Wi-Fi-hotspot" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo nmcli d wifi connect your_ssid password your_password</span><br><span class="line">[sudo] password for khadas:</span><br><span class="line">Device &apos;wlan0&apos; successfully activated with &apos;206ab399-3822-4652-ba4c-64847af0bce9&apos;.</span><br></pre></td></tr></table></figure>
-<p><em>Note: Replace the <code>your_ssid</code> &amp; <code>your_password</code> to your SSID and password.</em></p>
-<h3 id="Disconnect-Wi-Fi" class="article-heading"><a href="#Disconnect-Wi-Fi" class="headerlink" title="Disconnect Wi-Fi"></a>Disconnect Wi-Fi<a class="article-anchor" href="#Disconnect-Wi-Fi" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo nmcli d disconnect wlan0</span><br><span class="line">Device &apos;wlan0&apos; successfully disconnected.</span><br></pre></td></tr></table></figure>
+                <p>For desktop systems you can setup Wi-Fi via the GUI easily. So in this guide, we’ll just talk about how to connect to Wi-Fi via command line. For the Ubuntu/Debian server we can use <code>NetworkManager</code> to setup Wi-Fi.</p>
+<h3 id="Scan-for-Wi-Fi-Networks" class="article-heading"><a href="#Scan-for-Wi-Fi-Networks" class="headerlink" title="Scan for Wi-Fi Networks"></a>Scan for Wi-Fi Networks<a class="article-anchor" href="#Scan-for-Wi-Fi-Networks" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ nmcli d wifi list</span><br><span class="line">IN-USE  SSID                          MODE   CHAN  RATE        SIGNAL  BARS  SEC</span><br><span class="line">        VIM                           Infra  2     195 Mbit/s  92      ▂▄▆█  WPA</span><br><span class="line">        Wesion                        Infra  7     260 Mbit/s  84      ▂▄▆█  WPA</span><br><span class="line">        VIM_5G                        Infra  161   405 Mbit/s  84      ▂▄▆█  WPA</span><br><span class="line">        HP-HOTSPOT-48-LaserJet M1218  Infra  7     54 Mbit/s   69      ▂▄▆_  WPA</span><br><span class="line">        ChinaNet-xjCH                 Infra  13    270 Mbit/s  67      ▂▄▆_  WPA</span><br><span class="line">        BRGCN_GUEST                   Infra  1     405 Mbit/s  64      ▂▄▆_  WPA</span><br><span class="line">        BRGCN                         Infra  1     405 Mbit/s  62      ▂▄▆_  WPA</span><br></pre></td></tr></table></figure>
+<p>Find a Wi-Fi network that you can connect to.</p>
+<h3 id="Connect-to-a-Wi-Fi-Network" class="article-heading"><a href="#Connect-to-a-Wi-Fi-Network" class="headerlink" title="Connect to a Wi-Fi Network"></a>Connect to a Wi-Fi Network<a class="article-anchor" href="#Connect-to-a-Wi-Fi-Network" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo nmcli d wifi connect your_ssid password your_password</span><br><span class="line">[sudo] password for khadas:</span><br><span class="line">Device &apos;wlan0&apos; successfully activated with &apos;206ab399-3822-4652-ba4c-64847af0bce9&apos;.</span><br></pre></td></tr></table></figure>
+<p><em>Tip: Replace the <code>your_ssid</code> &amp; <code>your_password</code> with your SSID and password.</em></p>
+<h3 id="Disconnect-from-a-Wi-Fi-Network" class="article-heading"><a href="#Disconnect-from-a-Wi-Fi-Network" class="headerlink" title="Disconnect from a Wi-Fi Network"></a>Disconnect from a Wi-Fi Network<a class="article-anchor" href="#Disconnect-from-a-Wi-Fi-Network" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo nmcli d disconnect wlan0</span><br><span class="line">Device &apos;wlan0&apos; successfully disconnected.</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.840Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 <a href="FenixScript.html" class="article-footer-prev" title="Build Ubuntu/Debian Image"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToSetupBluetooth.html" class="article-footer-next" title="How To Setup Bluetooth"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -148,7 +148,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Scan-Wi-Fi-hotspot"><span class="toc-text">Scan Wi-Fi hotspot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-to-Wi-Fi-hotspot"><span class="toc-text">Connect to Wi-Fi hotspot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disconnect-Wi-Fi"><span class="toc-text">Disconnect Wi-Fi</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Scan-for-Wi-Fi-Networks"><span class="toc-text">Scan for Wi-Fi Networks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-to-a-Wi-Fi-Network"><span class="toc-text">Connect to a Wi-Fi Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disconnect-from-a-Wi-Fi-Network"><span class="toc-text">Disconnect from a Wi-Fi Network</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

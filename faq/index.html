@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="How to upgrade firmware?VIMs  Put VIMs enter upgrade mode. Two ways to upgrade: Upgrade via USB cable: Follow upgrade via USB cable to burn image on Windows or Ubuntu. Upgrade via TF card(For Android">
+  <meta name="description" content="How To Upgrade Firmware?*VIM1/VIM2  Place VIM into Upgrade Mode. 2 ways to upgrade: Upgrade Using USB Cable - Burn an .img file to the eMMC, from a Ubuntu or Windows Host. Upgrade Android Using An SD-">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Frequently Asked Questions">
 <meta property="og:url" content="https://docs.khadas.com/faq/index.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="How to upgrade firmware?VIMs  Put VIMs enter upgrade mode. Two ways to upgrade: Upgrade via USB cable: Follow upgrade via USB cable to burn image on Windows or Ubuntu. Upgrade via TF card(For Android">
+<meta property="og:description" content="How To Upgrade Firmware?*VIM1/VIM2  Place VIM into Upgrade Mode. 2 ways to upgrade: Upgrade Using USB Cable - Burn an .img file to the eMMC, from a Ubuntu or Windows Host. Upgrade Android Using An SD-">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.387Z">
+<meta property="og:updated_time" content="2018-12-04T08:28:04.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Frequently Asked Questions">
-<meta name="twitter:description" content="How to upgrade firmware?VIMs  Put VIMs enter upgrade mode. Two ways to upgrade: Upgrade via USB cable: Follow upgrade via USB cable to burn image on Windows or Ubuntu. Upgrade via TF card(For Android">
+<meta name="twitter:description" content="How To Upgrade Firmware?*VIM1/VIM2  Place VIM into Upgrade Mode. 2 ways to upgrade: Upgrade Using USB Cable - Burn an .img file to the eMMC, from a Ubuntu or Windows Host. Upgrade Android Using An SD-">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,32 +130,32 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/faq/index.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="How-to-upgrade-firmware" class="article-heading"><a href="#How-to-upgrade-firmware" class="headerlink" title="How to upgrade firmware?"></a>How to upgrade firmware?<a class="article-anchor" href="#How-to-upgrade-firmware" aria-hidden="true"></a></h1><p><strong>VIMs</strong></p>
+                <h1 id="How-To-Upgrade-Firmware" class="article-heading"><a href="#How-To-Upgrade-Firmware" class="headerlink" title="How To Upgrade Firmware?"></a>How To Upgrade Firmware?<a class="article-anchor" href="#How-To-Upgrade-Firmware" aria-hidden="true"></a></h1><p>*<em>VIM1/VIM2</em></p>
 <ol>
-<li>Put VIMs <a href="/vim1/HowtoBootIntoUpgradeMode.html">enter upgrade mode</a>.</li>
-<li>Two ways to upgrade:<ul>
-<li>Upgrade via USB cable: Follow <a href="/vim1/UpgradeViaUSBCable.html">upgrade via USB cable</a> to burn image on Windows or Ubuntu.</li>
-<li>Upgrade via TF card(For Android only): Follow <a href="/vim1/UpgradeViaTFBurningCard.html">upgrade Android via a TF card</a> to burn image.</li>
+<li>Place VIM into <a href="/vim1/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a>.</li>
+<li>2 ways to upgrade:<ul>
+<li><a href="/vim1/UpgradeViaUSBCable.html">Upgrade Using USB Cable</a> - Burn an .img file to the eMMC, from a Ubuntu or Windows Host.</li>
+<li><a href="/vim1/UpgradeViaTFBurningCard.html">Upgrade Android Using An SD-Card</a> - Burn an .img file to the MMC, from an SD-Card.</li>
 </ul>
 </li>
 </ol>
 <p><strong>Edge</strong></p>
 <ol>
-<li>Put Edge <a href="/edge/HowtoBootIntoUpgradeMode.html">enter upgrade mode</a>.</li>
-<li>Two ways to upgrade:<ul>
-<li>Upgrade via USB cable: Follow <a href="/edge/UpgradeViaUSBCable.html">upgrade via USB cable</a> to burn image on Windows or Ubuntu.</li>
-<li>Upgrade via TF card: Follow <a href="/edge/UpgradeViaTFBurningCard.html">upgrade Android via a TF card</a> to burn image.</li>
+<li>Place Edge into <a href="/edge/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a>.</li>
+<li>2 ways to upgrade:<ul>
+<li><a href="/edge/UpgradeViaUSBCable.html">Upgrade Using USB cable</a> - Burn an .img file to the eMMC, from a Ubuntu or Windows Host.</li>
+<li><a href="/edge/UpgradeViaTFBurningCard.html">upgrade Android Using An SD-Card</a> - Burn an .img file to the eMMC, from an SD-Card.</li>
 </ul>
 </li>
 </ol>
-<h1 id="What’s-eMMC-image-and-SD-USB-image" class="article-heading"><a href="#What’s-eMMC-image-and-SD-USB-image" class="headerlink" title="What’s eMMC image and SD/USB image?"></a>What’s eMMC image and SD/USB image?<a class="article-anchor" href="#What’s-eMMC-image-and-SD-USB-image" aria-hidden="true"></a></h1><p><strong>eMMC image:</strong> Should burn to eMMC storage via USB cable and boot form it, can’t burn to SD/USB storage.<br>For example: Android and Ubuntu contains <code>EMMC</code> mark.</p>
-<p><strong>SD/USB image:</strong> Should burn to TF card or U-disk and boot from it, can’t burn to eMMC storage.<br>For example: Armbian, Ubuntu contains <code>SD_USB</code> mark, LibreELEC and CoreELEC.</p>
-<h1 id="How-to-bootup-SD-USB-images" class="article-heading"><a href="#How-to-bootup-SD-USB-images" class="headerlink" title="How to bootup SD/USB images?"></a>How to bootup SD/USB images?<a class="article-anchor" href="#How-to-bootup-SD-USB-images" aria-hidden="true"></a></h1><p>In order to bootup <code>SD/USB</code> images, you need Android(V180209 or newer) or Ubuntu(V180531 or newer) running on eMMC and need to activate the multi-boot, please refer to <a href="/vim1/BootFromExtMedia.html">boot from external media</a>.</p>
-<h1 id="How-to-build-my-own-Ubuntu-Debian-images" class="article-heading"><a href="#How-to-build-my-own-Ubuntu-Debian-images" class="headerlink" title="How to build my own Ubuntu/Debian images?"></a>How to build my own Ubuntu/Debian images?<a class="article-anchor" href="#How-to-build-my-own-Ubuntu-Debian-images" aria-hidden="true"></a></h1><p>Please refer to <a href="/vim1/FenixScript.html">build Ubuntu/Debian images</a>.</p>
+<h1 id="What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" class="article-heading"><a href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" class="headerlink" title="What is the difference between an eMMC image and an SD/USB image?"></a>What is the difference between an eMMC image and an SD/USB image?<a class="article-anchor" href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" aria-hidden="true"></a></h1><p><strong>eMMC image:</strong> An eMMC image should be burned directly to the eMMC using a USB-C data cable, connected to a Ubuntu or Windows Host. It must not be burned into an SD-Card. For Example: Android and Ubuntu distributions containing the <code>EMMC</code> mark.</p>
+<p><strong>SD/USB image:</strong> An SD/USB image should be burned into an SD-Card, before that card is then used to reformat the eMMC storage. For Example: Armbian, Ubuntu distributions containing the <code>SD_USB</code> mark, as well as LibreELEC and CoreELEC.</p>
+<h1 id="How-to-bootup-SD-USB-images" class="article-heading"><a href="#How-to-bootup-SD-USB-images" class="headerlink" title="How to bootup SD/USB images?"></a>How to bootup SD/USB images?<a class="article-anchor" href="#How-to-bootup-SD-USB-images" aria-hidden="true"></a></h1><p>In order to bootup from <code>SD/USB</code> images, you need Android (V180209 or newer) or Ubuntu (V180531 or newer) running on your eMMC with Multi-Boot activated. Please refer to <a href="/vim1/BootFromExtMedia.html">Boot From External Media</a> for more information.</p>
+<h1 id="How-to-build-my-own-Ubuntu-Debian-images" class="article-heading"><a href="#How-to-build-my-own-Ubuntu-Debian-images" class="headerlink" title="How to build my own Ubuntu/Debian images?"></a>How to build my own Ubuntu/Debian images?<a class="article-anchor" href="#How-to-build-my-own-Ubuntu-Debian-images" aria-hidden="true"></a></h1><p>Please refer to <a href="/vim1/FenixScript.html">Build Ubuntu/Debian Images</a>.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.387Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.820Z" itemprop="dateModified">Last updated: 2018-12-04</time>
                 
               </footer>
               
@@ -164,7 +164,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-upgrade-firmware"><span class="toc-text">How to upgrade firmware?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What’s-eMMC-image-and-SD-USB-image"><span class="toc-text">What’s eMMC image and SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-To-Upgrade-Firmware"><span class="toc-text">How To Upgrade Firmware?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image"><span class="toc-text">What is the difference between an eMMC image and an SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
