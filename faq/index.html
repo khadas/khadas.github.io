@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="How To Upgrade Firmware?VIM1/VIM2  Place VIM into Upgrade Mode. Two ways to upgrade: Upgrade Using A USB Cable - Burn an .img file to the eMMC, directly from a Ubuntu or Windows Host. Upgrade Android">
+  <meta name="description" content="Where can I find “getting started” guides?These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time. Guides:  VIM1 VIM2 Edge  Tip: In addition to reading our document">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Frequently Asked Questions">
 <meta property="og:url" content="https://docs.khadas.com/faq/index.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="How To Upgrade Firmware?VIM1/VIM2  Place VIM into Upgrade Mode. Two ways to upgrade: Upgrade Using A USB Cable - Burn an .img file to the eMMC, directly from a Ubuntu or Windows Host. Upgrade Android">
+<meta property="og:description" content="Where can I find “getting started” guides?These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time. Guides:  VIM1 VIM2 Edge  Tip: In addition to reading our document">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-04T09:27:45.043Z">
+<meta property="og:updated_time" content="2018-12-05T10:24:07.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Frequently Asked Questions">
-<meta name="twitter:description" content="How To Upgrade Firmware?VIM1/VIM2  Place VIM into Upgrade Mode. Two ways to upgrade: Upgrade Using A USB Cable - Burn an .img file to the eMMC, directly from a Ubuntu or Windows Host. Upgrade Android">
+<meta name="twitter:description" content="Where can I find “getting started” guides?These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time. Guides:  VIM1 VIM2 Edge  Tip: In addition to reading our document">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,7 +130,27 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/faq/index.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="How-To-Upgrade-Firmware" class="article-heading"><a href="#How-To-Upgrade-Firmware" class="headerlink" title="How To Upgrade Firmware?"></a>How To Upgrade Firmware?<a class="article-anchor" href="#How-To-Upgrade-Firmware" aria-hidden="true"></a></h1><p><strong>VIM1/VIM2</strong></p>
+                <h1 id="Where-can-I-find-“getting-started”-guides" class="article-heading"><a href="#Where-can-I-find-“getting-started”-guides" class="headerlink" title="Where can I find “getting started” guides?"></a>Where can I find “getting started” guides?<a class="article-anchor" href="#Where-can-I-find-“getting-started”-guides" aria-hidden="true"></a></h1><p>These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time.</p>
+<p><strong>Guides:</strong></p>
+<ul>
+<li><a href="https://docs.khadas.com/vim1/index.html">VIM1</a></li>
+<li><a href="https://docs.khadas.com/vim2/index.html">VIM2</a></li>
+<li><a href="https://docs.khadas.com/edge/index.html">Edge</a></li>
+</ul>
+<p><strong>Tip:</strong> In addition to reading our documentation, you’ll find many helpful people on our <a href="https://forum.khadas.com" target="_blank" rel="noopener">Khadas Forum</a>.</p>
+<h1 id="How-to-use-an-SD-card-to-expand-eMMC-storage" class="article-heading"><a href="#How-to-use-an-SD-card-to-expand-eMMC-storage" class="headerlink" title="How to use an SD-card to expand eMMC storage?"></a>How to use an SD-card to expand eMMC storage?<a class="article-anchor" href="#How-to-use-an-SD-card-to-expand-eMMC-storage" aria-hidden="true"></a></h1><p>Using Android OS, you can use SD-cards to augment the limited amount of storage on the eMMC. Make sure that you’re using a modern “high-speed” SD-card; something like a <em>microSDXC UHS-I</em> card will be suitable for this application.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Insert your SD-card into your VIM1/VIM2/Edge-V</li>
+<li>Open the “Android-Settings” App (Gear Icon)</li>
+<li>Select “Storage &amp; Reset”.</li>
+<li>Select your SD-card under “Removable Storage”</li>
+<li>Select “Set up as device storage”</li>
+</ol>
+<p><strong>Tip:</strong> If you’ve done the above steps correctly, your SD-card will become a seamless part of your SBC’s eMMC storage. Exercise caution when unplugging your SD-card as some files and photos will become inaccessible!</p>
+<h1 id="How-to-change-upgrade-the-Operating-System" class="article-heading"><a href="#How-to-change-upgrade-the-Operating-System" class="headerlink" title="How to change/upgrade the Operating System?"></a>How to change/upgrade the Operating System?<a class="article-anchor" href="#How-to-change-upgrade-the-Operating-System" aria-hidden="true"></a></h1><p>Depending on your use-case, you may want to change/upgrade your Android OS to Ubuntu Mate, or even run a dual-OS configuration. We refer to “operating system” files as “<a href="https://dl.khadas.com/Firmware/" target="_blank" rel="noopener">Firmware Images</a>“, or .img files. On our server, they are compressed into <a href="https://www.howtogeek.com/357846/what-is-a-7z-file-and-how-do-i-open-one/" target="_blank" rel="noopener">.7z containers</a>, and will require <a href="https://www.rarlab.com/" target="_blank" rel="noopener">WinRAR</a> to unpack on Windows OS.</p>
+<p><strong>Tip:</strong> Changing operating systems will erase ALL the data on your eMMC. Unless the OS is meant to run from a Bootable SD-card (Booting Card), be sure to back-up all your data before following the instructions below.</p>
+<p><strong>VIM1/VIM2 Upgrading Instructions:</strong></p>
 <ol>
 <li>Place VIM into <a href="/vim1/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a>.</li>
 <li>Two ways to upgrade:<ul>
@@ -139,7 +159,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>Edge</strong></p>
+<p><strong>Edge Upgrading Instructions:</strong></p>
 <ol>
 <li>Place Edge into <a href="/edge/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a>.</li>
 <li>Two ways to upgrade:<ul>
@@ -148,14 +168,49 @@
 </ul>
 </li>
 </ol>
-<h1 id="What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" class="article-heading"><a href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" class="headerlink" title="What is the difference between an eMMC image and an SD/USB image?"></a>What is the difference between an eMMC image and an SD/USB image?<a class="article-anchor" href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image" aria-hidden="true"></a></h1><p><strong>eMMC image:</strong> An eMMC image should be burned directly to the eMMC using a USB-C data cable, from a Ubuntu or Windows Host. It must not be burned into an SD-Card. For Example: Android and Ubuntu distributions containing the <code>EMMC</code> mark.</p>
+<h1 id="eMMC-image-versus-a-SD-USB-image" class="article-heading"><a href="#eMMC-image-versus-a-SD-USB-image" class="headerlink" title="eMMC image versus a SD/USB image?"></a>eMMC image versus a SD/USB image?<a class="article-anchor" href="#eMMC-image-versus-a-SD-USB-image" aria-hidden="true"></a></h1><p><strong>eMMC image:</strong> An eMMC image should be burned directly to the eMMC using a USB-C data cable, from a Ubuntu or Windows Host. It must not be burned into an SD-Card. For Example: Android and Ubuntu distributions containing the <code>EMMC</code> mark.</p>
 <p><strong>SD/USB image:</strong> An SD/USB image should be copied into an SD-Card, before that card is then used to reformat the eMMC storage with a new OS. For Example: Armbian, Ubuntu distributions containing the <code>SD_USB</code> mark, as well as LibreELEC and CoreELEC.</p>
 <h1 id="How-to-bootup-SD-USB-images" class="article-heading"><a href="#How-to-bootup-SD-USB-images" class="headerlink" title="How to bootup SD/USB images?"></a>How to bootup SD/USB images?<a class="article-anchor" href="#How-to-bootup-SD-USB-images" aria-hidden="true"></a></h1><p>In order to bootup from <code>SD/USB</code> images, you need Android (V180209 or newer) or Ubuntu (V180531 or newer) running on your eMMC with Multi-Boot activated. Please refer to <a href="/vim1/BootFromExtMedia.html">Boot From External Media</a> for more information.</p>
-<h1 id="How-to-build-my-own-Ubuntu-Debian-images" class="article-heading"><a href="#How-to-build-my-own-Ubuntu-Debian-images" class="headerlink" title="How to build my own Ubuntu/Debian images?"></a>How to build my own Ubuntu/Debian images?<a class="article-anchor" href="#How-to-build-my-own-Ubuntu-Debian-images" aria-hidden="true"></a></h1><p>Please refer to <a href="/vim1/FenixScript.html">Build Ubuntu/Debian Images</a>.</p>
+<h1 id="Help-My-SBC-won’t-power-on" class="article-heading"><a href="#Help-My-SBC-won’t-power-on" class="headerlink" title="Help! My SBC won’t power-on!"></a>Help! My SBC won’t power-on!<a class="article-anchor" href="#Help-My-SBC-won’t-power-on" aria-hidden="true"></a></h1><p><strong>Recommended VIM1/VIM2 Power Supply</strong></p>
+<p>Although your VIM1/VIM2 SBC is compatible with various types of power supplies, these are the recommended specs for the best performance-output and stability.</p>
+<ol>
+<li>5V, 2000mA Power Adapter</li>
+<li>USB-A to USB-C Cable</li>
+</ol>
+<p><strong>Learn More:</strong></p>
+<ul>
+<li><a href="https://docs.khadas.com/vim2/ExtraPowerInput.html">Extra Power Input For Khadas VIMs</a></li>
+<li><a href="https://www.khadas.com/vim" target="_blank" rel="noopener">Khadas VIM Specifications</a></li>
+<li><a href="https://www.khadas.com/product-page/power-adapter" target="_blank" rel="noopener">Khadas Shop - Power Adapter</a></li>
+<li><a href="https://www.khadas.com/product-page/usb-c-cable" target="_blank" rel="noopener">Khadas Shop - USB-C Cable</a></li>
+</ul>
+<p><strong>Recommended Edge Power Supply</strong></p>
+<p>Although your Edge SBC is compatible with various types of power supplies, these are the recommended specs for the best performance-output and stability.</p>
+<ol>
+<li>USB-C 24W Power Adapter (USB Power Delivery Specifications)</li>
+<li>USB-C to USB-C Cable</li>
+</ol>
+<p><strong>Learn More:</strong></p>
+<ul>
+<li><a href="https://docs.khadas.com/edge/EdgeCaptainPowerPriority.html">Edge+Captain Power Priority</a></li>
+<li><a href="https://khadas.com/edge" target="_blank" rel="noopener">Khadas Edge Specifications</a></li>
+<li><a href="https://www.khadas.com/edge-add-ons" target="_blank" rel="noopener">Khadas Edge Accessories</a></li>
+</ul>
+<p><strong>My Bootloader is Damaged</strong></p>
+<p>Your SBC may also fail to power-on if the bootloader is damaged. In such cases, you’ll need to place your SBC into Upgrade Mode using the MRegister, and then re-install the Operating System.</p>
+<p><strong>Learn More:</strong></p>
+<ul>
+<li><a href="/vim1/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a></li>
+<li><a href="https://docs.khadas.com/vim2/UpgradeViaUSBCable.html">Upgrade Using USB-C Cable</a></li>
+</ul>
+<h1 id="How-to-build-my-own-Ubuntu-Debian-images" class="article-heading"><a href="#How-to-build-my-own-Ubuntu-Debian-images" class="headerlink" title="How to build my own Ubuntu/Debian images?"></a>How to build my own Ubuntu/Debian images?<a class="article-anchor" href="#How-to-build-my-own-Ubuntu-Debian-images" aria-hidden="true"></a></h1><p>Please refer to: <a href="/vim1/FenixScript.html">Build Ubuntu/Debian Images</a>.</p>
+<h1 id="How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" class="article-heading"><a href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" class="headerlink" title="How to connect to Wi-Fi from the Linux Command Line?"></a>How to connect to Wi-Fi from the Linux Command Line?<a class="article-anchor" href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" aria-hidden="true"></a></h1><p>Please refer to: <a href="https://docs.khadas.com/edge/HowToConnectWifi.html">Connecting to Wi-Fi from CLI</a></p>
+<h1 id="How-to-setup-Bluetooth-from-the-Linux-Command-Line" class="article-heading"><a href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line" class="headerlink" title="How to setup Bluetooth from the Linux Command Line?"></a>How to setup Bluetooth from the Linux Command Line?<a class="article-anchor" href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line" aria-hidden="true"></a></h1><p>Please refer to: <a href="https://docs.khadas.com/edge/HowToSetupBluetooth.html">Setup Bluetooth from CLI</a></p>
+<h1 id="How-can-I-check-my-MAC-address" class="article-heading"><a href="#How-can-I-check-my-MAC-address" class="headerlink" title="How can I check my MAC address?"></a>How can I check my MAC address?<a class="article-anchor" href="#How-can-I-check-my-MAC-address" aria-hidden="true"></a></h1><p>Please refer to: <a href="https://docs.khadas.com/edge/HowtoUseWol.html">How to Use WOL</a>.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-04T09:27:45.043Z" itemprop="dateModified">Last updated: 2018-12-04</time>
+                <time class="article-footer-updated" datetime="2018-12-05T10:24:07.303Z" itemprop="dateModified">Last updated: 2018-12-05</time>
                 
               </footer>
               
@@ -164,7 +219,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-To-Upgrade-Firmware"><span class="toc-text">How To Upgrade Firmware?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-the-difference-between-an-eMMC-image-and-an-SD-USB-image"><span class="toc-text">What is the difference between an eMMC image and an SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Where-can-I-find-“getting-started”-guides"><span class="toc-text">Where can I find “getting started” guides?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-use-an-SD-card-to-expand-eMMC-storage"><span class="toc-text">How to use an SD-card to expand eMMC storage?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-change-upgrade-the-Operating-System"><span class="toc-text">How to change/upgrade the Operating System?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eMMC-image-versus-a-SD-USB-image"><span class="toc-text">eMMC image versus a SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Help-My-SBC-won’t-power-on"><span class="toc-text">Help! My SBC won’t power-on!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line"><span class="toc-text">How to connect to Wi-Fi from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line"><span class="toc-text">How to setup Bluetooth from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-can-I-check-my-MAC-address"><span class="toc-text">How can I check my MAC address?</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
