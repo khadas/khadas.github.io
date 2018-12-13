@@ -64,10 +64,12 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="Where can I find “getting started” guides?These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time. Guides:  VIM1 VIM2 Edge Toneboard  Tip: In addition to reading ou">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-10T01:26:06.134Z">
+<meta property="og:image" content="https://docs.khadas.com/images/vim2/wol_status.jpg">
+<meta property="og:updated_time" content="2018-12-13T14:37:43.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Frequently Asked Questions">
 <meta name="twitter:description" content="Where can I find “getting started” guides?These guides will be helpful for anyone learning how to use a Khadas SBC for the first-time. Guides:  VIM1 VIM2 Edge Toneboard  Tip: In addition to reading ou">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim2/wol_status.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -204,6 +206,17 @@
 <li><a href="/vim1/HowtoBootIntoUpgradeMode.html">Upgrade Mode</a></li>
 <li><a href="https://docs.khadas.com/vim2/UpgradeViaUSBCable.html">Upgrade Using USB-C Cable</a></li>
 </ul>
+<h1 id="Help-I-turned-on-WOL-and-now-there’s-this-blue-light" class="article-heading"><a href="#Help-I-turned-on-WOL-and-now-there’s-this-blue-light" class="headerlink" title="Help! I turned on WOL, and now there’s this blue light?"></a>Help! I turned on WOL, and now there’s this blue light?<a class="article-anchor" href="#Help-I-turned-on-WOL-and-now-there’s-this-blue-light" aria-hidden="true"></a></h1><p><img src="/images/vim2/wol_status.jpg" alt="vim2 blue light"></p>
+<p>If you’ve turned on Wake-On-LAN (WOL) in your VIM2, it will no longer power-on automatically when you connect a USB-C cable to it. Instead, you’ll merely see a blue light activate indicating that there is electrical power being supplied to your SBC.</p>
+<p><strong>Furthermore, your VIM2 will only power-on under these conditions:</strong></p>
+<ol>
+<li>You physically press the <code>power</code> button, after seeing the blue light.</li>
+<li>You send a magic packet to turn it on via LAN (Ethernet cable must be connected, and sending device must be on the same LAN as your VIM2)</li>
+</ol>
+<p><strong>Learn More:</strong></p>
+<ul>
+<li><a href="https://docs.khadas.com/vim2/HowtoUseWol.html">Turn On WOL</a></li>
+</ul>
 <h1 id="How-to-build-my-own-Ubuntu-Debian-images" class="article-heading"><a href="#How-to-build-my-own-Ubuntu-Debian-images" class="headerlink" title="How to build my own Ubuntu/Debian images?"></a>How to build my own Ubuntu/Debian images?<a class="article-anchor" href="#How-to-build-my-own-Ubuntu-Debian-images" aria-hidden="true"></a></h1><p>Please refer to: <a href="/vim1/FenixScript.html">Build Ubuntu/Debian Images</a>.</p>
 <h1 id="How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" class="article-heading"><a href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" class="headerlink" title="How to connect to Wi-Fi from the Linux Command Line?"></a>How to connect to Wi-Fi from the Linux Command Line?<a class="article-anchor" href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line" aria-hidden="true"></a></h1><p>Please refer to: <a href="https://docs.khadas.com/edge/HowToConnectWifi.html">Connecting to Wi-Fi from CLI</a></p>
 <h1 id="How-to-setup-Bluetooth-from-the-Linux-Command-Line" class="article-heading"><a href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line" class="headerlink" title="How to setup Bluetooth from the Linux Command Line?"></a>How to setup Bluetooth from the Linux Command Line?<a class="article-anchor" href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line" aria-hidden="true"></a></h1><p>Please refer to: <a href="https://docs.khadas.com/edge/HowToSetupBluetooth.html">Setup Bluetooth from CLI</a></p>
@@ -211,7 +224,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-10T01:26:06.134Z" itemprop="dateModified">Last updated: 2018-12-10</time>
+                <time class="article-footer-updated" datetime="2018-12-13T14:37:43.485Z" itemprop="dateModified">Last updated: 2018-12-13</time>
                 
               </footer>
               
@@ -220,7 +233,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Where-can-I-find-“getting-started”-guides"><span class="toc-text">Where can I find “getting started” guides?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-use-an-SD-card-to-expand-eMMC-storage"><span class="toc-text">How to use an SD-card to expand eMMC storage?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-change-upgrade-the-Operating-System"><span class="toc-text">How to change/upgrade the Operating System?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eMMC-image-versus-a-SD-USB-image"><span class="toc-text">eMMC image versus a SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Help-My-SBC-won’t-power-on"><span class="toc-text">Help! My SBC won’t power-on!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line"><span class="toc-text">How to connect to Wi-Fi from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line"><span class="toc-text">How to setup Bluetooth from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-can-I-check-my-MAC-address"><span class="toc-text">How can I check my MAC address?</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Where-can-I-find-“getting-started”-guides"><span class="toc-text">Where can I find “getting started” guides?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-use-an-SD-card-to-expand-eMMC-storage"><span class="toc-text">How to use an SD-card to expand eMMC storage?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-change-upgrade-the-Operating-System"><span class="toc-text">How to change/upgrade the Operating System?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eMMC-image-versus-a-SD-USB-image"><span class="toc-text">eMMC image versus a SD/USB image?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-bootup-SD-USB-images"><span class="toc-text">How to bootup SD/USB images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Help-My-SBC-won’t-power-on"><span class="toc-text">Help! My SBC won’t power-on!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Help-I-turned-on-WOL-and-now-there’s-this-blue-light"><span class="toc-text">Help! I turned on WOL, and now there’s this blue light?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-build-my-own-Ubuntu-Debian-images"><span class="toc-text">How to build my own Ubuntu/Debian images?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-connect-to-Wi-Fi-from-the-Linux-Command-Line"><span class="toc-text">How to connect to Wi-Fi from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-setup-Bluetooth-from-the-Linux-Command-Line"><span class="toc-text">How to setup Bluetooth from the Linux Command Line?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-can-I-check-my-MAC-address"><span class="toc-text">How can I check my MAC address?</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
