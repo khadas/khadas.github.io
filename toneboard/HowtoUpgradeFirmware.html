@@ -57,26 +57,25 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Upgrade On Windows:Preparation:  Connect your Tone Board to your PC using a USB-C data cable.    Download the USB Upgrade Tool and extract it. Run setup_eval.exe to install the tool to upgrade your To">
+  <meta name="description" content="Upgrade On Windows:Preparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them. Recommend upgrading using Khadas_Tone_Board_dfu-20">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Upgrade Firmware">
 <meta property="og:url" content="https://docs.khadas.com/toneboard/HowtoUpgradeFirmware.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Upgrade On Windows:Preparation:  Connect your Tone Board to your PC using a USB-C data cable.    Download the USB Upgrade Tool and extract it. Run setup_eval.exe to install the tool to upgrade your To">
+<meta property="og:description" content="Upgrade On Windows:Preparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them. Recommend upgrading using Khadas_Tone_Board_dfu-20">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_01.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_02.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_03.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_04.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_05.jpg">
-<meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_06.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_07.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_08.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_09.jpg">
-<meta property="og:updated_time" content="2018-12-18T07:32:14.194Z">
+<meta property="og:updated_time" content="2018-12-18T09:09:23.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Upgrade Firmware">
-<meta name="twitter:description" content="Upgrade On Windows:Preparation:  Connect your Tone Board to your PC using a USB-C data cable.    Download the USB Upgrade Tool and extract it. Run setup_eval.exe to install the tool to upgrade your To">
+<meta name="twitter:description" content="Upgrade On Windows:Preparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them. Recommend upgrading using Khadas_Tone_Board_dfu-20">
 <meta name="twitter:image" content="https://docs.khadas.com/images/toneboard/tb_fw_01.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -142,11 +141,13 @@
               <div class="article-content" itemprop="articleBody">
                 <h1 id="Upgrade-On-Windows" class="article-heading"><a href="#Upgrade-On-Windows" class="headerlink" title="Upgrade On Windows:"></a>Upgrade On Windows:<a class="article-anchor" href="#Upgrade-On-Windows" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
 <ul>
+<li>Download the <a href="https://bit.ly/2LnQZhD" target="_blank" rel="noopener">USB Upgrade Tool</a> and extract it.</li>
+<li>Download the firmware <code>.img</code> files from <a href="https://dl.khadas.com/Firmware/ToneBoard/" target="_blank" rel="noopener">this directory</a> and extract them. Recommend upgrading using <code>Khadas_Tone_Board_dfu-2018-1206-Upgrade-Firmware.zip</code>, followed by using <code>Khadas_Tone_Board_dfu_1207-Default maximum volume.zip</code>.</li>
 <li>Connect your Tone Board to your PC using a USB-C data cable.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_01.jpg" alt="Tone Board With USB-C Cable"></p>
+<p><strong>Installation:</strong></p>
 <ul>
-<li>Download the <a href="https://bit.ly/2LnQZhD" target="_blank" rel="noopener">USB Upgrade Tool</a> and extract it.</li>
 <li>Run <code>setup_eval.exe</code> to install the tool to upgrade your Tone Board’s firmware.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_02.jpg" alt="Tone Board USB Upgrade Tool Installation"></p>
@@ -154,20 +155,17 @@
 <li>Press <code>Yes</code>, then disconnect and reconnect your Tone Board.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_03.jpg" alt="Disconnect and Reconnect Tone Board"></p>
+<p><strong>Upgrading:</strong></p>
 <ul>
 <li>Open the <code>TUSBAudio Firmware Upgrade</code> tool, from your Start Menu.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_04.jpg" alt="TUSBAudio Firmware Upgrade Tool"></p>
 <ul>
-<li>It should show <code>Device Opened</code>, which means your Tone Board is connected and ready for upgrading.</li>
+<li>It should show <code>Device Opened</code>, which means your Tone Board is connected and ready for upgrading. (If not, disconnect and reconnect your Tone Board)</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_05.jpg" alt="Tone Board Ready For Upgrade"></p>
 <ul>
-<li>Download the firmware files from <a href="https://dl.khadas.com/Firmware/ToneBoard/" target="_blank" rel="noopener">this directory</a>, recommend upgrading using <code>Khadas_Tone_Board_dfu-2018-1206-Upgrade-Firmware.zip</code> followed by using <code>Khadas_Tone_Board_dfu_1207-Default maximum volume.zip</code>.</li>
-</ul>
-<p><img src="/images/toneboard/tb_fw_06.jpg" alt="Tone Board Firmware Directory"></p>
-<ul>
-<li>After extracting the firmware, click browse and load it into the tool.</li>
+<li>Click <code>Browse</code> and load the firmware <code>.img</code> file you extracted, into the tool.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_07.jpg" alt="Tone Board USB Upgrade Tool Browse For .img"></p>
 <ul>
@@ -193,7 +191,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-18T07:32:14.194Z" itemprop="dateModified">Last updated: 2018-12-18</time>
+                <time class="article-footer-updated" datetime="2018-12-18T09:09:23.242Z" itemprop="dateModified">Last updated: 2018-12-18</time>
                 <a href="UserManual.html" class="article-footer-prev" title="User Manual"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HardwareDocs.html" class="article-footer-next" title="Download"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
