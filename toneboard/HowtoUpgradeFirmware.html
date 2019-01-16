@@ -57,12 +57,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Recommend upgrading using Khadas_Tone_Board_dfu-20">
+  <meta name="description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Connect your Tone Board to your PC using a USB-C d">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Upgrade Firmware">
 <meta property="og:url" content="https://docs.khadas.com/toneboard/HowtoUpgradeFirmware.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Recommend upgrading using Khadas_Tone_Board_dfu-20">
+<meta property="og:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Connect your Tone Board to your PC using a USB-C d">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_01.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_02.jpg">
@@ -72,10 +72,10 @@
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_07.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_08.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_09.jpg">
-<meta property="og:updated_time" content="2018-12-18T14:18:27.612Z">
+<meta property="og:updated_time" content="2019-01-16T06:48:37.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Upgrade Firmware">
-<meta name="twitter:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Recommend upgrading using Khadas_Tone_Board_dfu-20">
+<meta name="twitter:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .img files from this directory and extract them.  Connect your Tone Board to your PC using a USB-C d">
 <meta name="twitter:image" content="https://docs.khadas.com/images/toneboard/tb_fw_01.jpg">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
@@ -141,12 +141,8 @@
               <div class="article-content" itemprop="articleBody">
                 <h1 id="Upgrade-On-Windows" class="article-heading"><a href="#Upgrade-On-Windows" class="headerlink" title="Upgrade On Windows"></a>Upgrade On Windows<a class="article-anchor" href="#Upgrade-On-Windows" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
 <ul>
-<li>Download the <a href="https://bit.ly/2LnQZhD" target="_blank" rel="noopener">USB Upgrade Tool</a> and extract it.</li>
-<li>Download the firmware <code>.img</code> files from <a href="https://dl.khadas.com/Firmware/ToneBoard/" target="_blank" rel="noopener">this directory</a> and extract them. <ul>
-<li>Recommend upgrading using <code>Khadas_Tone_Board_dfu-2018-1206-Upgrade-Firmware.zip</code> first.</li>
-<li>Followed by using <code>Khadas_Tone_Board_dfu_1207-Default maximum volume.zip</code>.</li>
-</ul>
-</li>
+<li>Download the <a href="https://dl.khadas.com/Firmware/ToneBoard/Driver/%5bOnly%20for%20some%20OS%20Upgrade%20XMOS%5d-XMOS-TUSBAudio-EVAL-V4.11.0-Setup.zip" target="_blank" rel="noopener">USB Upgrade Tool</a> and extract it.</li>
+<li>Download the firmware <code>.img</code> files from <a href="https://dl.khadas.com/Firmware/ToneBoard/" target="_blank" rel="noopener">this directory</a> and extract them. </li>
 <li>Connect your Tone Board to your PC using a USB-C data cable.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_01.jpg" alt="Tone Board With USB-C Cable"></p>
@@ -216,7 +212,54 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Upgrading ToneBoard firmware...</span><br><span class="line">VID = 0xbda, PID = 0x411</span><br><span class="line">VID = 0x1d6b, PID = 0x3</span><br><span class="line">VID = 0x1a86, PID = 0x7523</span><br><span class="line">VID = 0x2207, PID = 0x330c</span><br><span class="line">VID = 0x4ca, PID = 0xa8</span><br><span class="line">VID = 0x20b1, PID = 0x8</span><br><span class="line">ToneBoard DFU application started - Interface 2 claimed</span><br><span class="line">Detaching device from application mode.</span><br><span class="line">Waiting for device to restart and enter DFU mode...</span><br><span class="line">VID = 0x20b1, PID = 0x8</span><br><span class="line">... DFU firmware upgrade device opened</span><br><span class="line">... Downloading image (firmware.bin) to device</span><br><span class="line">... Download complete</span><br><span class="line">... Returning device to application mode</span><br></pre></td></tr></table></figure>
 <p><strong>Uninstall Burning Tool:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/utils/toneboard-dfu-tool </span><br><span class="line">$ sudo ./UNINSTALL</span><br></pre></td></tr></table></figure></p>
-<h1 id="Upgrade-On-Mac-OS" class="article-heading"><a href="#Upgrade-On-Mac-OS" class="headerlink" title="Upgrade On Mac OS"></a>Upgrade On Mac OS<a class="article-anchor" href="#Upgrade-On-Mac-OS" aria-hidden="true"></a></h1><p>TODO</p>
+<h1 id="Upgrade-On-Mac-OS-BETA" class="article-heading"><a href="#Upgrade-On-Mac-OS-BETA" class="headerlink" title="Upgrade On Mac OS (BETA)"></a>Upgrade On Mac OS (BETA)<a class="article-anchor" href="#Upgrade-On-Mac-OS-BETA" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
+<ul>
+<li>Visit our Github and download the <a href="https://github.com/numbqq/USB-Audio-2.0-Software-v6.1" target="_blank" rel="noopener">Mac OS X - USB Upgrade Tool</a>.<ul>
+<li>Click the green <code>Clone or download</code> button.</li>
+<li>Then press the <code>Download ZIP</code> option.</li>
+<li>Afterwards, extract the <code>.zip</code> file to a directory of your choosing.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Open a <code>Mac OS X Terminal</code> window, by pressing <code>Command-Space</code> on your keyboard, then type <code>terminal</code> into <code>Spotlight</code>. </li>
+<li>From within <code>Terminal</code> type <code>cd your_custom_directory/sc_usb_audio/module_dfu/host/xmos_dfu_osx</code>.<ul>
+<li>Replace <code>your_custom_directory</code> with the directory that you’ve unzipped the <code>USB Upgrade Tool</code> to.</li>
+</ul>
+</li>
+<li>Alternatively, navigate to <code>/sc_usb_audio/module_dfu/host/</code> from within the <code>Finder</code>.<ul>
+<li>Then type <code>cd</code>, followed by space, into <code>Terminal</code>.</li>
+<li>And drag the <code>/xmos_dfu_osx/</code> folder into <code>Terminal</code>, and hit your <code>Enter</code> key.</li>
+</ul>
+</li>
+<li>Build the tool by typing: <code>make -f Makefile.OSX all</code> into your <code>Terminal</code> window, original instructions are <a href="https://www.xmos.com/developer/published/dfu-user-guide?page=4#usb-audiosec-building-xmos-dfu" target="_blank" rel="noopener">here</a>.</li>
+<li><p>If build was successful, you should see the following:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make -f Makefile.OSX all</span><br><span class="line">g++ -g -o xmosdfu xmosdfu.cpp -I. -IOSX libusb-1.0.0-x86_64.dylib -m64</span><br><span class="line">xmosdfu.cpp:96:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:100:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:256:1: warning: control may reach end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:417:3: warning: bool literal returned from &apos;main&apos; [-Wmain]</span><br><span class="line">  return true;</span><br><span class="line">  ^      ~~~~</span><br><span class="line">6 warnings generated.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Finally, type <code>source setup.sh</code> into Terminal, original instructions are <a href="https://www.xmos.com/developer/published/dfu-user-guide?version=&amp;page=3" target="_blank" rel="noopener">here</a>.</p>
+<ul>
+<li>If successful, <code>Terminal</code> will be silent.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Upgrading:</strong></p>
+<ul>
+<li>Download a firmware image file from <a href="https://dl.khadas.com/Firmware/ToneBoard/" target="_blank" rel="noopener">https://dl.khadas.com/Firmware/ToneBoard/</a>, then extract the <code>.zip</code> file.</li>
+<li>Next connect your Tone Board to your Macbook / iMac via a USB-C data cable.</li>
+<li>Then return to <code>Terminal</code> and type <code>./xmosdfu --download</code>, followed by space, and drag the <code>firmware.bin</code> you just downloaded, from the <code>Finder</code> into <code>Terminal</code>. Then hit <code>Enter</code>.</li>
+<li>If successful, you should see the following <code>Terminal</code> output:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">./xmosdfu --download /Users/ossyx/Documents/Wesion/TONEBOARD\ FIRMWARE\ UPGRADE\ TOOL/Khadas_Tone_Board_dfu-2018-1226-Upgrade-Firmware/Khadas_Tone_Board_dfu_1226.bin </span><br><span class="line">VID = 0x20b1, PID = 0x8</span><br><span class="line">XMOS DFU application started - Interface 2 claimed</span><br><span class="line">Detaching device from application mode.</span><br><span class="line">Waiting for device to restart and enter DFU mode...</span><br><span class="line">VID = 0x20b1, PID = 0x8</span><br><span class="line">... DFU firmware upgrade device opened</span><br><span class="line">... Downloading image (/Users/ossyx/Documents/Wesion/TONEBOARD FIRMWARE UPGRADE TOOL/Khadas_Tone_Board_dfu-2018-1226-Upgrade-Firmware/Khadas_Tone_Board_dfu_1226.bin) to device</span><br><span class="line">... Download complete</span><br><span class="line">... Returning device to application mode</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><p>If you get the following output when attempting to upgrade the firmware on Mac OS X:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">./xmosdfu --download /Users/ossyx/Downloads/USB-Audio-2.0-Software-v6.1-master/sc_usb_audio/module_dfu/host/xmos_dfu_osx/Khadas_Tone_Board_dfu_1226.bin </span><br><span class="line">dyld: Library not loaded: /usr/local/lib/libusb-1.0.0.dylib</span><br><span class="line">  Referenced from: /Users/ossyx/Downloads/USB-Audio-2.0-Software-v6.1-master/sc_usb_audio/module_dfu/host/xmos_dfu_osx/./xmosdfu</span><br><span class="line">  Reason: image not found</span><br><span class="line">Abort trap: 6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>It means you need to upgrade <code>libusb</code>. You can do this by typing <code>brew install libusb</code>.</p>
+</li>
+<li>To install homebrew on your Mac: <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a></li>
+</ul>
 <h1 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also:"></a>See Also:<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h1><ul>
 <li><a href="https://docs.khadas.com/toneboard/index.html">Tone Board Beginners FAQ</a></li>
 <li><a href="https://docs.khadas.com/toneboard/UserManual.html">Tone Board User Manual</a></li>
@@ -225,7 +268,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-18T14:18:27.612Z" itemprop="dateModified">Last updated: 2018-12-18</time>
+                <time class="article-footer-updated" datetime="2019-01-16T06:48:37.798Z" itemprop="dateModified">Last updated: 2019-01-16</time>
                 <a href="UserManual.html" class="article-footer-prev" title="User Manual"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HardwareDocs.html" class="article-footer-next" title="Download"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -234,7 +277,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Windows"><span class="toc-text">Upgrade On Windows</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Ubuntu"><span class="toc-text">Upgrade On Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Mac-OS"><span class="toc-text">Upgrade On Mac OS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also:</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Windows"><span class="toc-text">Upgrade On Windows</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Ubuntu"><span class="toc-text">Upgrade On Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Mac-OS-BETA"><span class="toc-text">Upgrade On Mac OS (BETA)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also:</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
