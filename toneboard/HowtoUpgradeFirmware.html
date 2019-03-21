@@ -72,7 +72,7 @@
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_07.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_08.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/toneboard/tb_fw_09.jpg">
-<meta property="og:updated_time" content="2019-01-18T10:05:48.335Z">
+<meta property="og:updated_time" content="2019-03-21T06:16:52.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Upgrade Firmware">
 <meta name="twitter:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .bin files from this directory and extract them.  Connect your Tone Board to your PC using a USB-C d">
@@ -176,6 +176,12 @@
 <li>Once firmware has upgraded, click <code>Exit</code>.</li>
 </ul>
 <p><img src="/images/toneboard/tb_fw_09.jpg" alt="Tone Board USB Upgrade Tool Finished And Exit"></p>
+<ul>
+<li><p>Uninstall the <a href="https://dl.khadas.com/Firmware/ToneBoard/Driver/%5bOnly%20for%20some%20OS%20Upgrade%20XMOS%5d-XMOS-TUSBAudio-EVAL-V4.11.0-Setup.zip" target="_blank" rel="noopener">EVAL driver</a> that you used for upgrading firmware, and re-install the <a href="https://dl.khadas.com/Firmware/ToneBoard/Driver/Thesycon-Stereo-USB-Audio-Driver-V224.rar" target="_blank" rel="noopener">v224 driver</a>.</p>
+</li>
+<li><p>Alternatively, if you’re on Windows 10, uninstall all Khadas-supplied drivers and use the native <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/audio/usb-2-0-audio-drivers" target="_blank" rel="noopener">Win10 UAC2 driver</a> supplied with the OS.</p>
+</li>
+</ul>
 <h1 id="Upgrade-On-Ubuntu" class="article-heading"><a href="#Upgrade-On-Ubuntu" class="headerlink" title="Upgrade On Ubuntu"></a>Upgrade On Ubuntu<a class="article-anchor" href="#Upgrade-On-Ubuntu" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install git libusb-1.0-0 libusb-1.0-0-dev</span><br></pre></td></tr></table></figure>
 <p><strong>Download Burning Tool:</strong></p>
@@ -269,7 +275,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-01-18T10:05:48.335Z" itemprop="dateModified">Last updated: 2019-01-18</time>
+                <time class="article-footer-updated" datetime="2019-03-21T06:16:52.675Z" itemprop="dateModified">Last updated: 2019-03-21</time>
                 <a href="UserManual.html" class="article-footer-prev" title="User Manual"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HardwareDocs.html" class="article-footer-next" title="Download"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

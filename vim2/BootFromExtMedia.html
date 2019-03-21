@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these i">
+  <meta name="description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Boot Images from External Media">
 <meta property="og:url" content="https://docs.khadas.com/vim2/BootFromExtMedia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these i">
+<meta property="og:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-13T12:40:41.023Z">
+<meta property="og:updated_time" content="2019-03-21T06:16:52.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Boot Images from External Media">
-<meta name="twitter:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boot these i">
+<meta name="twitter:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images. This tutorial is about how to boo">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,10 +130,10 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/BootFromExtMedia.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, <a href="https://coreelec.org/" target="_blank" rel="noopener">CoreELEC</a>, <a href="http://forum.khadas.com/t/libreelec-for-khadas-vim-sd-usb-emmc/793" target="_blank" rel="noopener">LibreELEC</a>, <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a> and <a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">Khadas SD images</a>. This tutorial is about how to boot these images.</p>
+                <p>There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, <a href="https://forum.khadas.com/t/volumio-for-khadas/1437" target="_blank" rel="noopener">Volumio</a>, <a href="https://coreelec.org/" target="_blank" rel="noopener">CoreELEC</a>, <a href="http://forum.khadas.com/t/libreelec-for-khadas-vim-sd-usb-emmc/793" target="_blank" rel="noopener">LibreELEC</a>, <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a> and <a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">Khadas SD images</a>. This tutorial is about how to boot these images.</p>
 <p>In order to boot images from external media you must make sure:</p>
 <ul>
-<li>Android is running on the eMMC</li>
+<li>Android OS is installed on the eMMC</li>
 <li>Activate the Multi-Boot</li>
 </ul>
 <p>For different images you may need different Android versions.</p>
@@ -141,24 +141,42 @@
 <li>LibreELEC / Ubuntu with Linux 3.14: You need <strong>Android M</strong> or the latest <strong>Android N (V180207 or later)</strong> running on the eMMC.</li>
 <li>Ubuntu with Linux 4.9: You need <strong>Android O</strong> running on the eMMC.</li>
 </ul>
-<h3 id="1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" class="article-heading"><a href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" class="headerlink" title="1. Write image to SD-Card or Thumbdrive (U-Disk)"></a>1. Write image to SD-Card or Thumbdrive (U-Disk)<a class="article-anchor" href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" class="article-heading"><a href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" class="headerlink" title="Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)"></a>Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)<a class="article-anchor" href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" aria-hidden="true"></a></h3><ul>
+<li><p>Download <a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">Etcher</a>, it will clone the image into your SD Card or Thumbdrive. It’s got a user-friendly GUI for beginners, and is compatible with Mac, Windows and Linux.</p>
+</li>
+<li><p>Else, use <code>dd</code> on Ubuntu:</p>
+</li>
 <li><p>Use <code>dd</code> on the Ubuntu command line</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=/path/to/image of=/dev/sdX bs=8M</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or, <code>Win32DiskImager</code> on Windows:</p>
 </li>
 <li><p>Use <code>Win32DiskImager</code> on Windows. Please refer to <a href="/vim1/InstallLibreELEC.html#On-Windows-PC">Install LibreELEC Via Windows PC</a>.</p>
 </li>
 </ul>
-<h3 id="2-Prepare-DTB" class="article-heading"><a href="#2-Prepare-DTB" class="headerlink" title="2. Prepare DTB"></a>2. Prepare DTB<a class="article-anchor" href="#2-Prepare-DTB" aria-hidden="true"></a></h3><p>You will have to choose different DTB for VIM1 and VIM2.</p>
-<ul>
-<li>VIM1: Copy <code>kvim.dtb</code>, <code>kvim_linux.dtb</code> or <code>meson-gxl-s905x-khadas-vim.dtb</code> to <code>/boot</code> and rename it to <code>dtb.img</code>.</li>
-<li>VIM2: Copy <code>kvim2.dtb</code>, <code>kvim2_linux.dtb</code> or <code>meson-gxm-khadas-vim2.dtb</code> to <code>/boot</code> and rename it to <code>dtb.img</code>.</li>
+<h3 id="Step-2-Copy-the-Appropriate-DTB-File" class="article-heading"><a href="#Step-2-Copy-the-Appropriate-DTB-File" class="headerlink" title="Step 2. Copy the Appropriate DTB File"></a>Step 2. Copy the Appropriate DTB File<a class="article-anchor" href="#Step-2-Copy-the-Appropriate-DTB-File" aria-hidden="true"></a></h3><ul>
+<li><p>Unplug then plug your SD card into your computer (re-mount it).</p>
+</li>
+<li><p>Navigate to your SD card’s <code>/boot</code> directory, and open the folder labelled <code>DTB</code>.</p>
+</li>
+<li><p>Find the appropriate <code>.dtb</code> file and copy it into your SD card’s <code>/boot</code> directory.</p>
+</li>
+<li><p>For VIM1: Copy <code>kvim.dtb</code>, <code>kvim_linux.dtb</code> or <code>meson-gxl-s905x-khadas-vim.dtb</code> to <code>/boot</code>, and rename it to <code>dtb.img</code>.</p>
+</li>
+<li><p>For VIM2: Copy <code>kvim2.dtb</code>, <code>kvim2_linux.dtb</code> or <code>meson-gxm-khadas-vim2.dtb</code> to <code>/boot</code>, and rename it to <code>dtb.img</code>.</p>
+</li>
+<li><p>Unplug your SD card from your computer, then plug it into your Khadas VIM1, VIM2, or Edge.</p>
+</li>
 </ul>
-<h3 id="3-Activate-The-Multi-Boot" class="article-heading"><a href="#3-Activate-The-Multi-Boot" class="headerlink" title="3. Activate The Multi-Boot"></a>3. Activate The Multi-Boot<a class="article-anchor" href="#3-Activate-The-Multi-Boot" aria-hidden="true"></a></h3><p>2 ways to activate Multi-Boot:<br>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode (Side-Buttons).</a><br>2). Activate Multi-Boot via Android.</p>
+<h3 id="Step-3-Boot-VIM-from-SD-Card" class="article-heading"><a href="#Step-3-Boot-VIM-from-SD-Card" class="headerlink" title="Step 3. Boot VIM from SD Card"></a>Step 3. Boot VIM from SD Card<a class="article-anchor" href="#Step-3-Boot-VIM-from-SD-Card" aria-hidden="true"></a></h3><p>There are 2 ways to boot from the SD Card:</p>
+<p>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode (Side-Buttons).</a></p>
+<p>2). Activate Multi-Boot via Android.</p>
 <ul>
 <li>Enter <code>Settings&gt;About Device-&gt;System-&gt;Updates</code>.</li>
 <li>Click select and choose <code>aml_autosript.zip</code>.</li>
-<li>Click update, then the system will reboot and boot from the external media image.<br><strong>Note: Don’t use your PC as the USB-Host to supply the electrical power, lest it will fail to activate Multi-Boot!</strong></li>
+<li>Click update, then the system will reboot and boot from the external media image.</li>
 </ul>
+<p><strong>WARNING: Don’t use your PC as the USB-Host to supply the electrical power, lest it will fail to activate Multi-Boot!</strong></p>
 <h3 id="NOTICE" class="article-heading"><a href="#NOTICE" class="headerlink" title="NOTICE"></a>NOTICE<a class="article-anchor" href="#NOTICE" aria-hidden="true"></a></h3><ul>
 <li><p>Android N has a permission issue. You cannot use it to boot from your external media image without damaging your SD card.</p>
 </li>
@@ -168,7 +186,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-13T12:40:41.023Z" itemprop="dateModified">Last updated: 2018-12-13</time>
+                <time class="article-footer-updated" datetime="2019-03-21T06:16:52.675Z" itemprop="dateModified">Last updated: 2019-03-21</time>
                 <a href="InstallLibreELEC.html" class="article-footer-prev" title="Install LibreELEC"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="ExtraPowerInput.html" class="article-footer-next" title="Extra Power Input"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -177,7 +195,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Write-image-to-SD-Card-or-Thumbdrive-U-Disk"><span class="toc-text">1. Write image to SD-Card or Thumbdrive (U-Disk)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Prepare-DTB"><span class="toc-text">2. Prepare DTB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Activate-The-Multi-Boot"><span class="toc-text">3. Activate The Multi-Boot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk"><span class="toc-text">Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Copy-the-Appropriate-DTB-File"><span class="toc-text">Step 2. Copy the Appropriate DTB File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Boot-VIM-from-SD-Card"><span class="toc-text">Step 3. Boot VIM from SD Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
