@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>How To Setup Cooling Fan | Khadas Docs</title>
+  <title>How To Setup A Cooling Fan | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="This tutorial is about how to setup cooling fan on Ubuntu/Debian. The cooling fan has 5 working modes:  off: Cooling fan is disabled. low: Cooling fan is working on low speed mode. mid: Coolinn fan is">
+  <meta name="description" content="This guide is about how to setup a cooling fan in Ubuntu. Preparations Ubuntu version must be V20190116 or newer  For Ubuntu V20190116, the cooling fan is enabled by default. The cooling fan has 5 wor">
 <meta property="og:type" content="website">
-<meta property="og:title" content="How To Setup Cooling Fan">
+<meta property="og:title" content="How To Setup A Cooling Fan">
 <meta property="og:url" content="https://docs.khadas.com/edge/HowToSetupFan.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="This tutorial is about how to setup cooling fan on Ubuntu/Debian. The cooling fan has 5 working modes:  off: Cooling fan is disabled. low: Cooling fan is working on low speed mode. mid: Coolinn fan is">
+<meta property="og:description" content="This guide is about how to setup a cooling fan in Ubuntu. Preparations Ubuntu version must be V20190116 or newer  For Ubuntu V20190116, the cooling fan is enabled by default. The cooling fan has 5 wor">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.387Z">
+<meta property="og:updated_time" content="2019-03-26T08:19:19.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How To Setup Cooling Fan">
-<meta name="twitter:description" content="This tutorial is about how to setup cooling fan on Ubuntu/Debian. The cooling fan has 5 working modes:  off: Cooling fan is disabled. low: Cooling fan is working on low speed mode. mid: Coolinn fan is">
+<meta name="twitter:title" content="How To Setup A Cooling Fan">
+<meta name="twitter:description" content="This guide is about how to setup a cooling fan in Ubuntu. Preparations Ubuntu version must be V20190116 or newer  For Ubuntu V20190116, the cooling fan is enabled by default. The cooling fan has 5 wor">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -126,45 +126,50 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">How To Setup Cooling Fan</h1>
+                <h1 class="article-title" itemprop="name">How To Setup A Cooling Fan</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/HowToSetupFan.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>This tutorial is about how to setup cooling fan on Ubuntu/Debian.</p>
+                <p>This guide is about how to setup a cooling fan in Ubuntu.</p>
+<h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
+<li>Ubuntu version must be <code>V20190116</code> or newer</li>
+</ul>
+<p>For Ubuntu <code>V20190116</code>, the cooling fan is enabled by default.</p>
 <p>The cooling fan has 5 working modes:</p>
 <ul>
-<li><code>off</code>: Cooling fan is disabled.</li>
-<li><code>low</code>: Cooling fan is working on low speed mode.</li>
-<li><code>mid</code>: Coolinn fan is working on middle speed mode.</li>
-<li><code>high</code>: Cooling fan is working on higt speed mode.</li>
-<li><code>auto</code>: Cooling fan is working on auto speed mode, setup speed depend on the temperature, it is the default mode.</li>
+<li><code>off</code> : Cooling fan is disabled.</li>
+<li><code>low</code> : Cooling fan is working at low speed mode.</li>
+<li><code>mid</code> : Coolinn fan is working at middle speed mode.</li>
+<li><code>high</code>: Cooling fan is working at high speed mode.</li>
+<li><code>auto</code>: Cooling fan is working at auto speed mode. By default, the fan speed is determined by CPU temperature.</li>
 </ul>
-<h3 id="Check-Current-Working-Mode" class="article-heading"><a href="#Check-Current-Working-Mode" class="headerlink" title="Check Current Working Mode"></a>Check Current Working Mode<a class="article-anchor" href="#Check-Current-Working-Mode" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ fw_printenv fan</span><br><span class="line">fan=auto</span><br></pre></td></tr></table></figure>
-<p><code>fan=auto</code> means current mode is <code>auto</code> speed mode.</p>
-<h3 id="Setup-Working-Mode" class="article-heading"><a href="#Setup-Working-Mode" class="headerlink" title="Setup Working Mode"></a>Setup Working Mode<a class="article-anchor" href="#Setup-Working-Mode" aria-hidden="true"></a></h3><ul>
-<li>Setup cooling fan <code>low</code> speed mode</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan low</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<h3 id="Setup-Working-Mode" class="article-heading"><a href="#Setup-Working-Mode" class="headerlink" title="Setup Working Mode"></a>Setup Working Mode<a class="article-anchor" href="#Setup-Working-Mode" aria-hidden="true"></a></h3><p>You can edit file <code>/boot/env.txt</code> to setup the FAN mode, the default mode is <code>auto</code>.</p>
 <ul>
-<li>Setup cooling fan <code>mid</code> speed mode</li>
+<li>Set cooling fan to <code>low</code> speed mode:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan mid</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>Edit file <code>/boot/env.txt</code> and set <code>fan_mode=low</code>.</p>
 <ul>
-<li>Setup cooling fan <code>high</code> speed mode</li>
+<li>Set cooling fan to <code>mid</code> speed mode:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan high</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>Edit file <code>/boot/env.txt</code> and set <code>fan_mode=mid</code>.</p>
 <ul>
-<li>Setup cooling fan <code>auto</code> speed mode</li>
+<li>Set cooling fan to <code>high</code> speed mode:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan auto</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>Edit file <code>/boot/env.txt</code> and set <code>fan_mode=high</code>.</p>
 <ul>
-<li>Disable cooling fan</li>
+<li>Set cooling fan to <code>auto</code> speed mode:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan off</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>Edit file <code>/boot/env.txt</code> and set <code>fan_mode=auto</code>.</p>
+<ul>
+<li>Disable cooling fan:</li>
+</ul>
+<p>Edit file <code>/boot/env.txt</code> and set <code>fan_mode=off</code>.</p>
+<p>After edit the file, please save the modification and reboot the board.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sync</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.387Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2019-03-26T08:19:19.519Z" itemprop="dateModified">Last updated: 2019-03-26</time>
                 <a href="AddChineseSupport.html" class="article-footer-prev" title="Chinese Support"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="InstallTensorFlow.html" class="article-footer-next" title="Install TensorFlow"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -173,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-Current-Working-Mode"><span class="toc-text">Check Current Working Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-Working-Mode"><span class="toc-text">Setup Working Mode</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-Working-Mode"><span class="toc-text">Setup Working Mode</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
