@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20180531或更新版本  对于Ubuntu V20180531风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
+  <meta name="description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20190320或更新版本  对于Ubuntu V20190320风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何设置风扇">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/HowToSetupFan.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20180531或更新版本  对于Ubuntu V20180531风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
+<meta property="og:description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20190320或更新版本  对于Ubuntu V20190320风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:updated_time" content="2019-03-26T08:08:01.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何设置风扇">
-<meta name="twitter:description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20180531或更新版本  对于Ubuntu V20180531风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
+<meta name="twitter:description" content="这篇文档介绍如何在Ubuntu下设置风扇。 准备工作 Ubuntu版本必须为V20190320或更新版本  对于Ubuntu V20190320风扇默认是使能的。 风扇有5种工作模式：  off: 风扇关闭。 low: 风扇工作在低速模式。 mid: 风扇工作在中等速度模式。 high: 风扇工作在高速模式。 auto: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -132,9 +132,9 @@
               <div class="article-content" itemprop="articleBody">
                 <p>这篇文档介绍如何在Ubuntu下设置风扇。</p>
 <h3 id="准备工作" class="article-heading"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作<a class="article-anchor" href="#准备工作" aria-hidden="true"></a></h3><ul>
-<li>Ubuntu版本必须为<code>V20180531</code>或更新版本</li>
+<li>Ubuntu版本必须为<code>V20190320</code>或更新版本</li>
 </ul>
-<p>对于Ubuntu <code>V20180531</code>风扇默认是使能的。</p>
+<p>对于Ubuntu <code>V20190320</code>风扇默认是使能的。</p>
 <p>风扇有5种工作模式：</p>
 <ul>
 <li><code>off</code>: 风扇关闭。</li>
@@ -143,32 +143,33 @@
 <li><code>high</code>: 风扇工作在高速模式。</li>
 <li><code>auto</code>: 风扇工作在自动调节速度模式，根据温度自动调节速度，这个是默认的工作模式。</li>
 </ul>
-<h3 id="查看当前工作模式" class="article-heading"><a href="#查看当前工作模式" class="headerlink" title="查看当前工作模式"></a>查看当前工作模式<a class="article-anchor" href="#查看当前工作模式" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ fw_printenv fan</span><br><span class="line">fan=auto</span><br></pre></td></tr></table></figure>
-<p><code>fan=auto</code>标识工作在自动调节模式。</p>
-<h3 id="设置工作模式" class="article-heading"><a href="#设置工作模式" class="headerlink" title="设置工作模式"></a>设置工作模式<a class="article-anchor" href="#设置工作模式" aria-hidden="true"></a></h3><ul>
+<h3 id="设置工作模式" class="article-heading"><a href="#设置工作模式" class="headerlink" title="设置工作模式"></a>设置工作模式<a class="article-anchor" href="#设置工作模式" aria-hidden="true"></a></h3><p>你可以通过编辑文件<code>/boot/env.txt</code>来设置风扇的工作模式。</p>
+<ul>
 <li>设置风扇低速模式</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan low</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>编辑<code>/boot/env.txt</code>设置<code>fan_mode=low</code>。</p>
 <ul>
 <li>设置风扇中等速度模式</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan mid</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>编辑<code>/boot/env.txt</code>设置<code>fan_mode=mid</code>。</p>
 <ul>
 <li>设置风扇高速模式</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan high</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>编辑<code>/boot/env.txt</code>设置<code>fan_mode=high</code>。</p>
 <ul>
 <li>设置风扇自动调节速度模式</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan auto</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>编辑<code>/boot/env.txt</code>设置<code>fan_mode=auto</code>。</p>
 <ul>
 <li>关闭风扇</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo fw_setenv fan off</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>编辑<code>/boot/env.txt</code>设置<code>fan_mode=off</code>。</p>
+<p>编辑完后记得保存文件并重启板子。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sync</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.475Z" itemprop="dateModified">上次更新：2018-07-27</time>
+                <time class="article-footer-updated" datetime="2019-03-26T08:08:01.978Z" itemprop="dateModified">上次更新：2019-03-26</time>
                 <a href="AddChineseSupport.html" class="article-footer-prev" title="增加中文支持"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="InstallTensorFlow.html" class="article-footer-next" title="安装TensorFlow"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -177,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看当前工作模式"><span class="toc-text">查看当前工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置工作模式"><span class="toc-text">设置工作模式</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置工作模式"><span class="toc-text">设置工作模式</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
