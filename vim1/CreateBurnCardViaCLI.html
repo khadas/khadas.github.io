@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide instead. Preparation: Build your own, or download the latest U-Boot file for">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-04T08:28:04.824Z">
+<meta property="og:updated_time" content="2019-05-10T10:11:59.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create A Burning Card From Command Line">
 <meta name="twitter:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide instead. Preparation: Build your own, or download the latest U-Boot file for">
@@ -142,7 +142,7 @@
 <p><strong>Use <code>dd</code> to write the Bootloader/U-Boot to the first sector of SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
 <p><em>Notice: u-boot file <code>u-boot.bin.sd.bin</code> is build for SD, and <code>u-boot.bin</code> is for EMMC.</em></p>
 <p><strong>Copy the images to your SD-Card:</strong><br>Insert the SD-Card in again, then run the following command:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ cp -a aml_sdc_burn.ini Vim_Marshmallow_160928/update.img /media/gouwa/9CE9-3938/</span><br></pre></td></tr></table></figure></p>
-<p><em>Tip: <code>aml_sdc_burn.ini</code> is a configuration file for U-Boot to burn/download images into the onboard eMMC storage</em></p>
+<p><em>Tip: <code>aml_sdc_burn.ini</code> is a configuration file for U-Boot to burn/download images into the onboard eMMC storage. You can found it <a href="https://github.com/khadas/images_upgrade/blob/master/Amlogic/aml_sdc_burn.ini" target="_blank" rel="noopener">here</a></em></p>
 <p><strong>Eject the SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
 <p>Done!</p>
 <h3 id="Upgrade-Using-Your-“Burning-Card”" class="article-heading"><a href="#Upgrade-Using-Your-“Burning-Card”" class="headerlink" title="Upgrade Using Your “Burning Card”"></a>Upgrade Using Your “Burning Card”<a class="article-anchor" href="#Upgrade-Using-Your-“Burning-Card”" aria-hidden="true"></a></h3><ol>
@@ -156,7 +156,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-04T08:28:04.824Z" itemprop="dateModified">Last updated: 2018-12-04</time>
+                <time class="article-footer-updated" datetime="2019-05-10T10:11:59.201Z" itemprop="dateModified">Last updated: 2019-05-10</time>
                 <a href="InstallLibreELEC.html" class="article-footer-prev" title="Install LibreELEC"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CreateBootableSDCard.html" class="article-footer-next" title="Create Booting Card Using CLI"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
