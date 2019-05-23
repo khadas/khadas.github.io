@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root    /usr/sb">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-11-07T01:21:22.832Z">
+<meta property="og:updated_time" content="2019-05-23T09:24:46.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建TFTP服务器">
 <meta name="twitter:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root    /usr/sb">
@@ -144,22 +144,23 @@
 <li>上电，确保U-boot正常运行</li>
 </ul>
 <p>按 <code>Enter</code> or <code>Space</code> 键进入U-boot命令行模式：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">U-Boot 2015.01-g1e20d03-dirty (Jan 01 2017 - 14:40:23)</span><br><span class="line"></span><br><span class="line">DRAM:  2 GiB</span><br><span class="line">Relocation Offset is: 76ed0000</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">[CANVAS]addr=0x3d800000 width=3840, height=2160</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 </span><br><span class="line">kvim#</span><br></pre></td></tr></table></figure>
-<p>设置目标板IP地址以及TFTP服务器地址：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# setenv ipaddr 192.168.1.100</span><br><span class="line">kvim# setenv serverip 192.168.1.168</span><br></pre></td></tr></table></figure></p>
-<p>保存环境变量：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# saveenv</span><br><span class="line">Saving Environment to aml-storage...</span><br><span class="line">mmc env offset: 0x7400000 </span><br><span class="line">Writing to MMC(1)... done</span><br><span class="line">kvim#</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">U-Boot 2015.01 (May 18 2019 - 19:31:53)</span><br><span class="line"></span><br><span class="line">DRAM:  3.8 GiB</span><br><span class="line">Relocation Offset is: d6e5600000</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">gpio: pin GPIOAO_7 (gpio 7) value is 1</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 </span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure>
+<p>设置目标板IP地址以及TFTP服务器地址：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# setenv ipaddr 192.168.1.249</span><br><span class="line">kvim3# setenv serverip 192.168.1.117</span><br></pre></td></tr></table></figure></p>
+<p>保存环境变量：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# saveenv</span><br><span class="line">Saving Environment to aml-storage...</span><br><span class="line">mmc env offset: 0x6c00000 </span><br><span class="line">Writing to MMC(1)... done</span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure></p>
 <p>执行 <code>saveenv</code> 将会把环境变量保存到eMMC，所以在执行上述步骤后IP地址会一直存在，除非你执行<code>env default -a</code>来恢复默认环境变量。</p>
+<p><strong>提示</strong>:如何确认你的环境变量设置是正确的。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#print ipaddr</span><br><span class="line">ipaddr=192.168.1.249</span><br><span class="line">kvim3#print serverip</span><br><span class="line">serverip=192.168.1.117</span><br></pre></td></tr></table></figure></p>
 <h3 id="测试" class="article-heading"><a href="#测试" class="headerlink" title="测试"></a>测试<a class="article-anchor" href="#测试" aria-hidden="true"></a></h3><p>确保已经拷贝测试文件（如u-boot.bin）到TFTP服务器根目录（<code>/srv/tftp</code>）:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ls /srv/tftp/u-boot.bin</span><br><span class="line">/srv/tftp/u-boot.bin</span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
-<p>下载文件到地址 <code>0x1080000</code>：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 100, full duplex</span><br><span class="line">Using dwmac.c9410000 device</span><br><span class="line">TFTP from server 192.168.1.168; our IP address is 192.168.1.100</span><br><span class="line">Filename &apos;u-boot.bin&apos;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: #################################################################</span><br><span class="line">	 #################################################################</span><br><span class="line">	 ###############################################</span><br><span class="line">	 2.5 MiB/s</span><br><span class="line">done</span><br><span class="line">Bytes transferred = 901120 (dc000 hex)</span><br><span class="line">kvim#</span><br></pre></td></tr></table></figure></p>
+<p>下载文件到地址 <code>0x1080000</code>：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.117; our IP address is 192.168.1.249</span><br><span class="line">Filename &apos;u-boot.bin&apos;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: #################################################################</span><br><span class="line">	 #################################################################</span><br><span class="line">	 ###############################################</span><br><span class="line">	 2.5 MiB/s</span><br><span class="line">done</span><br><span class="line">Bytes transferred = 1371504 (14ed70 hex)</span><br></pre></td></tr></table></figure></p>
 <p>如果一切正常，你将会看到上述打印信息。</p>
 <h3 id="调试" class="article-heading"><a href="#调试" class="headerlink" title="调试"></a>调试<a class="article-anchor" href="#调试" aria-hidden="true"></a></h3><ul>
 <li><p>如果你看到如下打印信息，那么你可能需要检查你的网线连接：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# tftp 1080000 u-boot.bin</span><br><span class="line">dwmac.c9410000 Waiting for PHY auto negotiation to complete......... TIMEOUT !</span><br><span class="line">dwmac.c9410000: No link.</span><br><span class="line">kvim#</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">dwmac.ff3f0000 Waiting for PHY auto negotiation to complete......... TIMEOUT !</span><br><span class="line">dwmac.ff3f0000: No link.</span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>如果看到如下打印信息，那么你可能是TFTP服务器地址设置错误</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim#tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 100, full duplex</span><br><span class="line">Using dwmac.c9410000 device</span><br><span class="line">TFTP from server 192.168.1.68; our IP address is 192.168.1.100</span><br><span class="line">Filename &apos;u-boot.bin&apos;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: T T T T T T T T T T </span><br><span class="line">Retry count exceeded; starting again</span><br><span class="line">Speed: 100, full duplex</span><br></pre></td></tr></table></figure>
+<li><p>如果看到如下打印信息，那么你可能是TFTP服务器地址设置错误或者文件名错误</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.177; our IP address is 192.168.1.249</span><br><span class="line">Filename &apos;u-boot.bin&apos;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: T T T T T T T T T T </span><br><span class="line">Retry count exceeded; starting again</span><br><span class="line">Speed: 1000, full duplex</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>在这种情况下，我把服务器IP设置为错误的IP <code>192.168.1.68</code>，然而正确的应该是<code>192.168.1.168</code>。</p>
+<p>在这种情况下，我把服务器IP设置为错误的IP <code>192.168.1.177</code>，然而正确的应该是<code>192.168.1.117</code>。</p>
 <h3 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h3><ul>
 <li><a href="https://help.ubuntu.com/community/TFTP" target="_blank" rel="noopener">Ubuntu Wiki: TFTP</a></li>
 <li><a href="http://venkateshabbarapu.blogspot.com/2012/10/configuring-tftp-server-for-linux.html" target="_blank" rel="noopener">Configuring TFTP server for linux</a></li>
@@ -167,7 +168,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-07T01:21:22.832Z" itemprop="dateModified">上次更新：2018-11-07</time>
+                <time class="article-footer-updated" datetime="2019-05-23T09:24:46.263Z" itemprop="dateModified">上次更新：2019-05-23</time>
                 <a href="BuildBootLogoForUboot.html" class="article-footer-prev" title="编译U-boot启动Logo"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-next" title="通过TFTP下载镜像"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

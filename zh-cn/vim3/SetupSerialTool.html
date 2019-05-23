@@ -57,17 +57,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="准备工作 [x] 准备一个串口调试工具，我们使用的是一个USB转TTL的串口调试工具  如何连接请按下面方式连接： 1) 连接所需的GPIO, 确保TX/RX连接正确 * Tool Pin `GND`: &amp;lt;---&amp;gt; `Pin17` of VIM3&amp;apos;s GPIO * Tool Pin `TXD`: &amp;lt;---&amp;gt; `Pin18` of VIM3&amp;apos;s GPIO(">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Setup Serial Debugging Tool">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/SetupSerialTool.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="准备工作 [x] 准备一个串口调试工具，我们使用的是一个USB转TTL的串口调试工具  如何连接请按下面方式连接： 1) 连接所需的GPIO, 确保TX/RX连接正确 * Tool Pin `GND`: &amp;lt;---&amp;gt; `Pin17` of VIM3&amp;apos;s GPIO * Tool Pin `TXD`: &amp;lt;---&amp;gt; `Pin18` of VIM3&amp;apos;s GPIO(">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-13T08:23:42.753Z">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/SerialConnections_3Pin.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/SerialConnections.png">
+<meta property="og:updated_time" content="2019-05-23T09:24:46.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Serial Debugging Tool">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:description" content="准备工作 [x] 准备一个串口调试工具，我们使用的是一个USB转TTL的串口调试工具  如何连接请按下面方式连接： 1) 连接所需的GPIO, 确保TX/RX连接正确 * Tool Pin `GND`: &amp;lt;---&amp;gt; `Pin17` of VIM3&amp;apos;s GPIO * Tool Pin `TXD`: &amp;lt;---&amp;gt; `Pin18` of VIM3&amp;apos;s GPIO(">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim3/SerialConnections_3Pin.png">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,10 +133,43 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/SetupSerialTool.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <h3 id="准备工作" class="article-heading"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作<a class="article-anchor" href="#准备工作" aria-hidden="true"></a></h3><ul>
+<li>[x] 准备一个串口调试工具，我们使用的是一个USB转TTL的串口调试工具</li>
+</ul>
+<h3 id="如何连接" class="article-heading"><a href="#如何连接" class="headerlink" title="如何连接"></a>如何连接<a class="article-anchor" href="#如何连接" aria-hidden="true"></a></h3><p>请按下面方式连接：</p>
+<p><strong>1)</strong> 连接所需的GPIO, 确保TX/RX连接正确</p>
+<pre><code>* Tool Pin `GND`: &lt;---&gt; `Pin17` of VIM3&apos;s GPIO
+* Tool Pin `TXD`: &lt;---&gt; `Pin18` of VIM3&apos;s GPIO(Linux_Rx)
+* Tool Pin `RXD`: &lt;---&gt; `Pin19` of VIM3&apos;s GPIO(Linux_Tx)
+* Tool Pin `VCC`: &lt;---&gt; `Pin20` of VIM3&apos;s GPIO
+</code></pre><p><strong>2)</strong> 把串口调试工具插入PC</p>
+<p>连接方式如下：</p>
+<p><img src="/images/vim3/SerialConnections_3Pin.png" alt="Image of SerialConnections"></p>
+<p>参考下图(<code>VCC</code> 管脚可以不接):</p>
+<p><img src="/images/vim3/SerialConnections.png" alt="Image of SerialConnections"></p>
+<h3 id="设置串口软件kermit" class="article-heading"><a href="#设置串口软件kermit" class="headerlink" title="设置串口软件kermit"></a>设置串口软件<code>kermit</code><a class="article-anchor" href="#设置串口软件kermit" aria-hidden="true"></a></h3><p><strong>安装c-kermit:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install ckermit</span><br></pre></td></tr></table></figure></p>
+<p><strong>添加权限</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G dialout $(whoami)</span><br></pre></td></tr></table></figure></p>
+<p><strong>添加如下命令到　~/.kermrc进行配置</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set line /dev/ttyUSB0</span><br><span class="line">set speed 115200</span><br><span class="line">set carrier-watch off</span><br><span class="line">set handshake none</span><br><span class="line">set flow-control none</span><br><span class="line">robust</span><br><span class="line">set file type bin</span><br><span class="line">set file name lit</span><br><span class="line">set rec pack 1000</span><br><span class="line">set send pack 1000</span><br><span class="line">set window 5</span><br><span class="line">c</span><br></pre></td></tr></table></figure></p>
+<p><strong>从命令行运行<code>kermit</code>进入c-kermit</strong></p>
+<p>确保连接正确，如果一切正常那么你会看到如下信息:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$kermit</span></span><br><span class="line">Connecting to /dev/ttyUSB0, speed 115200</span><br><span class="line">Escape character: Ctrl-\ (ASCII 28, FS): enabled</span><br><span class="line">Type the escape character followed by C to get back,</span><br><span class="line">or followed by ? to see other options.</span><br><span class="line">----------------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p><em>提示</em></p>
+<ol>
+<li><p>如果看到如下的打印信息，你需要检查上面添加权限的步骤是否执行正确。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/dev/ttyUSB0:Permission denied</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要访问U-boot，请保持USB串行调试工具连接，然后按一次设备上的<code>reset</code>按钮。您应该看到终端上有一些打印输出，然后您就可以访问U-boot了。</p>
+</li>
+<li>如果你的终端打印了这些信息：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?SET SPEED has no effect without prior SET LINE</span><br><span class="line">Sorry, you must SET LINE or SET HOST first</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这是因为你的ttyUSB设备选择不正确,在<code>/dev</code>目录下查找正确的设备号，并修改<code>.kermrc</code>文件为正确的设备号</p>
+<h3 id="更多请参考" class="article-heading"><a href="#更多请参考" class="headerlink" title="更多请参考:"></a>更多请参考:<a class="article-anchor" href="#更多请参考" aria-hidden="true"></a></h3><ul>
+<li><a href="http://www.columbia.edu/kermit/index.html" target="_blank" rel="noopener">C-Kermit 官方网站</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-13T08:23:42.753Z" itemprop="dateModified">上次更新：2019-05-13</time>
+                <time class="article-footer-updated" datetime="2019-05-23T09:24:46.263Z" itemprop="dateModified">上次更新：2019-05-23</time>
                 <a href="InstallToolchains.html" class="article-footer-prev" title="安装交叉编译器"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowtoEraseEMMC.html" class="article-footer-next" title="如何擦除eMMC存储器"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何连接"><span class="toc-text">如何连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置串口软件kermit"><span class="toc-text">设置串口软件kermit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多请参考"><span class="toc-text">更多请参考:</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
