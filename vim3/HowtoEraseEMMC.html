@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="There are 4 different ways to erase all data on the onboard eMMC storage:  Keys Mode (Side-Buttons) Serial Mode Interrupt Mode CLI Mode  Note: The operation of VIM1, VIM2 and VIM3 is almost the same,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How to Erase the eMMC Storage">
 <meta property="og:url" content="https://docs.khadas.com/vim3/HowtoEraseEMMC.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="There are 4 different ways to erase all data on the onboard eMMC storage:  Keys Mode (Side-Buttons) Serial Mode Interrupt Mode CLI Mode  Note: The operation of VIM1, VIM2 and VIM3 is almost the same,">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-13T08:23:42.673Z">
+<meta property="og:updated_time" content="2019-05-30T06:32:19.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Erase the eMMC Storage">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:description" content="There are 4 different ways to erase all data on the onboard eMMC storage:  Keys Mode (Side-Buttons) Serial Mode Interrupt Mode CLI Mode  Note: The operation of VIM1, VIM2 and VIM3 is almost the same,">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,10 +130,48 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim3/HowtoEraseEMMC.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <p>There are 4 different ways to erase all data on the onboard eMMC storage:</p>
+<ol>
+<li>Keys Mode (Side-Buttons)</li>
+<li>Serial Mode</li>
+<li>Interrupt Mode</li>
+<li>CLI Mode</li>
+</ol>
+<p><strong>Note: The operation of VIM1, VIM2 and VIM3 is almost the same, so this document will take VIM1 as an example.</strong></p>
+<h3 id="Keys-Mode-U-Boot-is-functional" class="article-heading"><a href="#Keys-Mode-U-Boot-is-functional" class="headerlink" title="Keys Mode(U-Boot is functional)"></a>Keys Mode(U-Boot is functional)<a class="article-anchor" href="#Keys-Mode-U-Boot-is-functional" aria-hidden="true"></a></h3><p>All ROMs we have released support eMMC erasure. Please follow the steps below to erase the data on the eMMC:</p>
+<ol>
+<li>Power on VIM.</li>
+<li>Long press <code>Power</code> and <code>Function</code> buttons simultaneously, without releasing them.</li>
+<li>Short press the ‘Reset’ key and release.</li>
+<li>After the operations above, the system will begin to erase automatically; it will take about 10 seconds to finish.</li>
+<li>Your connected display/monitor will display a black screen when the erasure process is complete.</li>
+</ol>
+<h3 id="Serial-Mode-For-developers" class="article-heading"><a href="#Serial-Mode-For-developers" class="headerlink" title="Serial Mode(For developers)"></a>Serial Mode(For developers)<a class="article-anchor" href="#Serial-Mode-For-developers" aria-hidden="true"></a></h3><ol>
+<li>Refer to this guide (<a href="/vim1/SetupSerialTool.html">VIM1</a>/<a href="/vim2/SetupSerialTool.html">VIM2</a>/<a href="/vim3/SetupSerialTool.html">VIM3</a>) to setup the Serial Tool for your VIM.</li>
+<li>Once again, ensure you’ve done the correct connections and setup.</li>
+<li>Hit any keys at the moment of bootup to stop autoboot. This step will make your VIM enter into u-boot mode.</li>
+<li>Type <code>store init 3</code> on the terminal of u-boot, and wait for the erasure process to complete.</li>
+<li>Type <code>reboot</code> or press the <code>Reset</code> button</li>
+<li>Use the following as a reference:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim# store init 3</span><br><span class="line">emmc/sd response timeout, cmd8, status=0x1ff2800</span><br><span class="line">emmc/sd response timeout, cmd55, status=0x1ff2800</span><br><span class="line">[mmc_startup] mmc refix success</span><br><span class="line">[mmc_init] mmc init success</span><br><span class="line">switch to partitions #0, OK</span><br><span class="line">mmc1(part 0) is current device</span><br><span class="line">Device: SDIO Port C</span><br><span class="line">Manufacturer ID: 15</span><br><span class="line">OEM: 100</span><br><span class="line">Name: 8WPD3 </span><br><span class="line">Tran Speed: 52000000</span><br><span class="line">Rd Block Len: 512</span><br><span class="line">MMC version 5.0</span><br><span class="line">High Capacity: Yes</span><br><span class="line">Capacity: 7.3 GiB</span><br><span class="line">mmc clock: 40000000</span><br><span class="line">Bus Width: 8-bit DDR</span><br><span class="line">[store]amlmmc erase 1emmckey_is_protected : protect</span><br><span class="line">start = 0,end = 57343</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Caution! Your devices Erase group is 0x400</span><br><span class="line">The erase range would be change to 0x36000~0xe8ffff</span><br><span class="line"></span><br><span class="line">start = 221184,end = 15269886</span><br><span class="line">Vim# reboot</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Tip:</strong><br>If the erasure process completed successfully, the terminal should look like this when you power on your device:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;CHK:AA;SD:800;USB:8;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Interrupt-Mode" class="article-heading"><a href="#Interrupt-Mode" class="headerlink" title="Interrupt Mode"></a>Interrupt Mode<a class="article-anchor" href="#Interrupt-Mode" aria-hidden="true"></a></h3><p>This approach is suitable for all products that use the Amlogic SoC:</p>
+<ol>
+<li>Carry out normal upgrading via USB-C Cable(<a href="/vim1/UpgradeViaUSBCable.html">VIM1</a>/<a href="/vim2/UpgradeViaUSBCable.html">VIM2</a>/<a href="/vim3/UpgradeViaUSBCable.html">VIM3</a>) or TF Card(<a href="/vim1/UpgradeViaTFBurningCard.html">VIM1</a>/<a href="/vim2/UpgradeViaTFBurningCard.html">VIM2</a>/<a href="/vim3/UpgradeViaTFBurningCard.html">VIM3</a>).</li>
+<li>Manually interrupt the upgrading process (forcefully disconnect after 15% is recommended). For example, unplug the USB-C cable or the TF card.</li>
+<li>Power on your VIM again, and you’ll find that all the data on the eMMC has been erased.</li>
+</ol>
+<h3 id="CLI-Mode" class="article-heading"><a href="#CLI-Mode" class="headerlink" title="CLI Mode"></a>CLI Mode<a class="article-anchor" href="#CLI-Mode" aria-hidden="true"></a></h3><p>This approach is suitable for a VIM that has Linux installed:</p>
+<ol>
+<li>Power on and boot up.</li>
+<li>Open a terminal, and run <code>dd</code> to fill your bootloader partition with zeros:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# dd if=/dev/zero of=/dev/bootloader</span><br><span class="line">dd: writing to &apos;/dev/bootloader&apos;: No space left on device</span><br><span class="line">8193+0 records in</span><br><span class="line">8192+0 records out</span><br><span class="line">4194304 bytes (4.2 MB, 4.0 MiB) copied, 1.1226 s, 3.7 MB/s</span><br><span class="line">root@Khadas:~# reboot</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-13T08:23:42.673Z" itemprop="dateModified">Last updated: 2019-05-13</time>
+                <time class="article-footer-updated" datetime="2019-05-30T06:32:19.193Z" itemprop="dateModified">Last updated: 2019-05-30</time>
                 <a href="SetupSerialTool.html" class="article-footer-prev" title="Serial Debugging Tool"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToAccessGpio.html" class="article-footer-next" title="How To Access GPIO"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +180,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keys-Mode-U-Boot-is-functional"><span class="toc-text">Keys Mode(U-Boot is functional)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode(For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interrupt-Mode"><span class="toc-text">Interrupt Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CLI-Mode"><span class="toc-text">CLI Mode</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

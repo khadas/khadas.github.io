@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide instead. Preparation: Build your own, or download the latest U-Boot file for">
+  <meta name="description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide(VIM1/VIM2/VIM3) instead. Note: The operation of VIM1, VIM2 and VIM3 is almos">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Create A Burning Card From Command Line">
 <meta property="og:url" content="https://docs.khadas.com/vim1/CreateBurnCardViaCLI.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide instead. Preparation: Build your own, or download the latest U-Boot file for">
+<meta property="og:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide(VIM1/VIM2/VIM3) instead. Note: The operation of VIM1, VIM2 and VIM3 is almos">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-10T10:11:59.201Z">
+<meta property="og:updated_time" content="2019-05-30T06:36:39.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create A Burning Card From Command Line">
-<meta name="twitter:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide instead. Preparation: Build your own, or download the latest U-Boot file for">
+<meta name="twitter:description" content="This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide(VIM1/VIM2/VIM3) instead. Note: The operation of VIM1, VIM2 and VIM3 is almos">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,33 +130,35 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/CreateBurnCardViaCLI.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this <a href="/vim1/UpgradeViaTFBurningCard.html">Windows Guide</a> instead.</p>
+                <p>This guide contains step-by-step instructions to create a Burning Card for Linux users. You may also use this Windows Guide(<a href="/vim1/UpgradeViaTFBurningCard.html">VIM1</a>/<a href="/vim2/UpgradeViaTFBurningCard.html">VIM2</a>/<a href="/vim3/UpgradeViaTFBurningCard.html">VIM3</a>) instead.</p>
+<p><strong>Note: The operation of VIM1, VIM2 and VIM3 is almost the same, so this document will take VIM1 as an example.</strong></p>
 <h3 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation:"></a>Preparation:<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h3><ul>
-<li>Build your own, or <a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">download</a> the latest U-Boot file for SD-Cards.</li>
-<li>You may need to <a href="/vim1/CreateBurnCardViaCLI.html">format the SD-Card Via FDisk</a> if your SD-Card contains &gt;1 partition.</li>
+<li>Build your own, or download (<a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">VIM1</a>/<a href="https://dl.khadas.com/Firmware/VIM2/U-boot/" target="_blank" rel="noopener">VIM2</a>/<a href="https://dl.khadas.com/Firmware/VIM3/U-boot/" target="_blank" rel="noopener">VIM3</a>) the latest U-Boot file for SD-Cards.</li>
+<li>You may need to format the SD-Card Via FDisk (<a href="/vim1/CreateBurnCardViaCLI.html">VIM1</a>/<a href="/vim2/CreateBurnCardViaCLI.html">VIM2</a>/<a href="/vim3/CreateBurnCardViaCLI.html">VIM3</a>) if your SD-Card contains &gt;1 partition.</li>
 </ul>
-<h3 id="Before-You-Start" class="article-heading"><a href="#Before-You-Start" class="headerlink" title="Before You Start"></a>Before You Start<a class="article-anchor" href="#Before-You-Start" aria-hidden="true"></a></h3><p>If your SD-Card has &gt;1 partition.<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ls /dev/sdb*</span><br><span class="line">/dev/sdb  /dev/sdb1  /dev/sdb2</span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
-<p>You may have to delete the other partitions first:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">fdisk /dev/sdb</span><br></pre></td></tr></table></figure></p>
-<h3 id="Create-the-Burning-SD-Card" class="article-heading"><a href="#Create-the-Burning-SD-Card" class="headerlink" title="Create the Burning SD-Card"></a>Create the Burning SD-Card<a class="article-anchor" href="#Create-the-Burning-SD-Card" aria-hidden="true"></a></h3><p><strong>Insert the SD-Card into your PC, and make sure the disk is unmounted:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p><strong>Format the SD-Card to FAT32:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p><strong>Use <code>dd</code> to write the Bootloader/U-Boot to the first sector of SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
+<h3 id="Before-You-Start" class="article-heading"><a href="#Before-You-Start" class="headerlink" title="Before You Start"></a>Before You Start<a class="article-anchor" href="#Before-You-Start" aria-hidden="true"></a></h3><p>If your SD-Card has &gt;1 partition.<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ls /dev/sdX*</span><br><span class="line">/dev/sdX  /dev/sdX1  /dev/sdX2</span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
+<p>You may have to delete the other partitions first:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">fdisk /dev/sdX</span><br></pre></td></tr></table></figure></p>
+<h3 id="Create-the-Burning-SD-Card" class="article-heading"><a href="#Create-the-Burning-SD-Card" class="headerlink" title="Create the Burning SD-Card"></a>Create the Burning SD-Card<a class="article-anchor" href="#Create-the-Burning-SD-Card" aria-hidden="true"></a></h3><p><strong>Insert the SD-Card into your PC, and make sure the disk is unmounted:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdX1</span><br></pre></td></tr></table></figure></p>
+<p><strong>Format the SD-Card to FAT32:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdX1</span><br></pre></td></tr></table></figure></p>
+<p><em>Note: Replace <code>sdX the correct one on your PC.</code></em></p>
+<p><strong>Use <code>dd</code> to write the Bootloader/U-Boot to the first sector of SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdX conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=u-boot.bin.sd.bin of=/dev/sdX conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
 <p><em>Notice: u-boot file <code>u-boot.bin.sd.bin</code> is build for SD, and <code>u-boot.bin</code> is for EMMC.</em></p>
 <p><strong>Copy the images to your SD-Card:</strong><br>Insert the SD-Card in again, then run the following command:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ cp -a aml_sdc_burn.ini Vim_Marshmallow_160928/update.img /media/gouwa/9CE9-3938/</span><br></pre></td></tr></table></figure></p>
 <p><em>Tip: <code>aml_sdc_burn.ini</code> is a configuration file for U-Boot to burn/download images into the onboard eMMC storage. You can found it <a href="https://github.com/khadas/images_upgrade/blob/master/Amlogic/aml_sdc_burn.ini" target="_blank" rel="noopener">here</a></em></p>
-<p><strong>Eject the SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
+<p><strong>Eject the SD-Card:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdX</span><br></pre></td></tr></table></figure></p>
 <p>Done!</p>
 <h3 id="Upgrade-Using-Your-“Burning-Card”" class="article-heading"><a href="#Upgrade-Using-Your-“Burning-Card”" class="headerlink" title="Upgrade Using Your “Burning Card”"></a>Upgrade Using Your “Burning Card”<a class="article-anchor" href="#Upgrade-Using-Your-“Burning-Card”" aria-hidden="true"></a></h3><ol>
 <li>Insert your Burning Card into your VIM, and power-on.</li>
-<li>Follow this <a href="/vim1/HowtoBootIntoUpgradeMode.html">guide</a> to boot into Upgrade Mode.</li>
+<li>Follow this guide(<a href="/vim1/HowtoBootIntoUpgradeMode.html">VIM1</a>/<a href="/vim2/HowtoBootIntoUpgradeMode.html">VIM2</a>/<a href="/vim3/HowtoBootIntoUpgradeMode.html">VIM3</a>) to boot into Upgrade Mode.</li>
 <li>Wait till the process completes.</li>
 </ol>
 <h3 id="Further-Reading" class="article-heading"><a href="#Further-Reading" class="headerlink" title="Further Reading:"></a>Further Reading:<a class="article-anchor" href="#Further-Reading" aria-hidden="true"></a></h3><ul>
-<li><a href="/vim1/BootingCardVsBurningCard.html">Booting_Card Vs Burning Card</a></li>
+<li>Booting_Card Vs Burning Card(<a href="/vim1/BootingCardVsBurningCard.html">VIM1</a>/<a href="/vim2/BootingCardVsBurningCard.html">VIM2</a>/<a href="/vim3/BootingCardVsBurningCard.html">VIM3</a>)</li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-10T10:11:59.201Z" itemprop="dateModified">Last updated: 2019-05-10</time>
+                <time class="article-footer-updated" datetime="2019-05-30T06:36:39.692Z" itemprop="dateModified">Last updated: 2019-05-30</time>
                 <a href="InstallLibreELEC.html" class="article-footer-prev" title="Install LibreELEC"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CreateBootableSDCard.html" class="article-footer-next" title="Create Booting Card Using CLI"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

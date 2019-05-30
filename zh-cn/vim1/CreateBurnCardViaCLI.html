@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡 准备工作 编译或下载最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡。  开始前如果TF卡有多个分区gouwa@Wesion:~$ ls /dev/sdb*/dev/sdb  /dev/sdb1  /dev/sdb2gouwa@Wesion:~$">
+  <meta name="description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡(VIM1/VIM2/VIM3) 注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 准备工作 编译或下载(VIM1/VIM2/VIM3)最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡(VIM1/VI">
 <meta property="og:type" content="website">
 <meta property="og:title" content="通过命令行方式创建系统烧录卡">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/CreateBurnCardViaCLI.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡 准备工作 编译或下载最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡。  开始前如果TF卡有多个分区gouwa@Wesion:~$ ls /dev/sdb*/dev/sdb  /dev/sdb1  /dev/sdb2gouwa@Wesion:~$">
+<meta property="og:description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡(VIM1/VIM2/VIM3) 注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 准备工作 编译或下载(VIM1/VIM2/VIM3)最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡(VIM1/VI">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-10T10:13:23.809Z">
+<meta property="og:updated_time" content="2019-05-30T06:40:51.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过命令行方式创建系统烧录卡">
-<meta name="twitter:description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡 准备工作 编译或下载最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡。  开始前如果TF卡有多个分区gouwa@Wesion:~$ ls /dev/sdb*/dev/sdb  /dev/sdb1  /dev/sdb2gouwa@Wesion:~$">
+<meta name="twitter:description" content="本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡(VIM1/VIM2/VIM3) 注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 准备工作 编译或下载(VIM1/VIM2/VIM3)最新的U-Boot文件。 准备好TF卡和读卡器。 如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡(VIM1/VI">
 <meta name="twitter:site" content="khadas4u">
   <!-- Google Analytics -->
   
@@ -130,34 +130,36 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/CreateBurnCardViaCLI.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用<a href="/zh-cn/vim1/UpgradeViaTFBurningCard.html">Windows方式创建烧录卡</a></p>
+                <p>本教程是指导linux用户一步一步地创建TF烧录卡，你也可以使用Windows方式创建烧录卡(<a href="/zh-cn/vim1/UpgradeViaTFBurningCard.html">VIM1</a>/<a href="/zh-cn/vim2/UpgradeViaTFBurningCard.html">VIM2</a>/<a href="/zh-cn/vim3/UpgradeViaTFBurningCard.html">VIM3</a>)</p>
+<p><strong>注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。</strong></p>
 <h3 id="准备工作" class="article-heading"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作<a class="article-anchor" href="#准备工作" aria-hidden="true"></a></h3><ul>
-<li>编译或<a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">下载</a>最新的U-Boot文件。</li>
+<li>编译或下载(<a href="https://dl.khadas.com/Firmware/VIM1/U-boot/" target="_blank" rel="noopener">VIM1</a>/<a href="https://dl.khadas.com/Firmware/VIM2/U-boot/" target="_blank" rel="noopener">VIM2</a>/<a href="https://dl.khadas.com/Firmware/VIM3/U-boot/" target="_blank" rel="noopener">VIM3</a>)最新的U-Boot文件。</li>
 <li>准备好TF卡和读卡器。</li>
-<li>如果TF卡上有多个分区的话，需要<a href="/zh-cn/vim1/CreateBurnCardViaCLI.html">通过fdisk格式化TF卡</a>。</li>
+<li>如果TF卡上有多个分区的话，需要通过fdisk格式化TF卡(<a href="/zh-cn/vim1/CreateBurnCardViaCLI.html">VIM1</a>/<a href="/zh-cn/vim2/CreateBurnCardViaCLI.html">VIM2</a>/<a href="/zh-cn/vim3/CreateBurnCardViaCLI.html">VIM3</a>)。</li>
 </ul>
-<h3 id="开始前" class="article-heading"><a href="#开始前" class="headerlink" title="开始前"></a>开始前<a class="article-anchor" href="#开始前" aria-hidden="true"></a></h3><p>如果TF卡有多个分区<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gouwa@Wesion:~$ ls /dev/sdb*</span><br><span class="line">/dev/sdb  /dev/sdb1  /dev/sdb2</span><br><span class="line">gouwa@Wesion:~$</span><br></pre></td></tr></table></figure></p>
-<p>则要先删除其它分区<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fdisk /dev/sdb</span><br></pre></td></tr></table></figure></p>
-<h3 id="制作TF烧录卡" class="article-heading"><a href="#制作TF烧录卡" class="headerlink" title="制作TF烧录卡"></a>制作TF烧录卡<a class="article-anchor" href="#制作TF烧录卡" aria-hidden="true"></a></h3><p><strong>把TF卡接到电脑上，并确保接上去的TF卡处于未挂载状态:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p><strong>把TF卡格式化为FAT32格式:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdb1</span><br></pre></td></tr></table></figure></p>
-<p><strong>使用”dd”工具把bootloader/u-boot写入到TF卡的第一扇区</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd if=u-boot.bin.sd.bin of=/dev/sdb conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
+<h3 id="开始前" class="article-heading"><a href="#开始前" class="headerlink" title="开始前"></a>开始前<a class="article-anchor" href="#开始前" aria-hidden="true"></a></h3><p>如果TF卡有多个分区<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gouwa@Wesion:~$ ls /dev/sdX*</span><br><span class="line">/dev/sdX  /dev/sdX1  /dev/sdX2</span><br><span class="line">gouwa@Wesion:~$</span><br></pre></td></tr></table></figure></p>
+<p>则要先删除其它分区<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fdisk /dev/sdX</span><br></pre></td></tr></table></figure></p>
+<h3 id="制作TF烧录卡" class="article-heading"><a href="#制作TF烧录卡" class="headerlink" title="制作TF烧录卡"></a>制作TF烧录卡<a class="article-anchor" href="#制作TF烧录卡" aria-hidden="true"></a></h3><p><strong>把TF卡接到电脑上，并确保接上去的TF卡处于未挂载状态:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ umount /dev/sdX1</span><br></pre></td></tr></table></figure></p>
+<p><strong>把TF卡格式化为FAT32格式:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo mkfs.vfat /dev/sdX1</span><br></pre></td></tr></table></figure></p>
+<p><em>注意：请替换<code>sdX</code>为正确的块设备。</em></p>
+<p><strong>使用”dd”工具把bootloader/u-boot写入到TF卡的第一扇区</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=u-boot.bin.sd.bin of=/dev/sdX conv=fsync,notrunc bs=1 count=444</span><br><span class="line">$ sudo dd if=u-boot.bin.sd.bin of=/dev/sdX conv=fsync,notrunc bs=512 skip=1 seek=1</span><br></pre></td></tr></table></figure></p>
 <p><em>说明：编译出来的U-Boot文件，其中“u-boot.bin.sd.bin”是用于制作 TF卡的，而“u-boot.bin”是用于eMMC启动的。你可以在<a href="https://github.com/khadas/images_upgrade/blob/master/Amlogic/aml_sdc_burn.ini" target="_blank" rel="noopener">这里</a>找到。</em></p>
 <p><strong>复制系统固件到TF卡上:</strong><br>重新拔插一下TF卡并运行以下命令:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp -a aml_sdc_burn.ini Vim_Marshmallow_160928/update.img /media/gouwa/9CE9-3938/</span><br></pre></td></tr></table></figure></p>
 <p><em>说明:”aml_sdc_burn.ini”是u-boot烧录/下载固件到eMMC的配置文件 。</em></p>
-<p><strong>安全移除TF卡:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdb</span><br></pre></td></tr></table></figure></p>
+<p><strong>安全移除TF卡:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo eject /dev/sdX</span><br></pre></td></tr></table></figure></p>
 <p>至此，TF烧录卡的制作已完成。</p>
 <h3 id="通过TF烧录卡升级固件" class="article-heading"><a href="#通过TF烧录卡升级固件" class="headerlink" title="通过TF烧录卡升级固件"></a>通过TF烧录卡升级固件<a class="article-anchor" href="#通过TF烧录卡升级固件" aria-hidden="true"></a></h3><ol>
 <li>把制作好的烧录卡插入VIM/VIM2设备中，然后上电。</li>
-<li>参考<a href="/zh-cn/vim1/HowtoBootIntoUpgradeMode.html">文档</a>进入升级模式。</li>
+<li>参考文档(<a href="/zh-cn/vim1/HowtoBootIntoUpgradeMode.html">VIM1</a>/<a href="/zh-cn/vim2/HowtoBootIntoUpgradeMode.html">VIM2</a>/<a href="/zh-cn/vim3/HowtoBootIntoUpgradeMode.html">VIM3</a>)进入升级模式。</li>
 <li>等待升级完成。</li>
 </ol>
 <h3 id="更多资料" class="article-heading"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料<a class="article-anchor" href="#更多资料" aria-hidden="true"></a></h3><ul>
-<li><a href="/zh-cn/vim1/BootingCardVsBurningCard.html">启动卡VS烧录卡</a></li>
+<li>启动卡VS烧录卡(<a href="/zh-cn/vim1/BootingCardVsBurningCard.html">VIM1</a>/<a href="/zh-cn/vim2/BootingCardVsBurningCard.html">VIM2</a>/<a href="/zh-cn/vim3/BootingCardVsBurningCard.html">VIM3</a>)</li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-10T10:13:23.809Z" itemprop="dateModified">上次更新：2019-05-10</time>
+                <time class="article-footer-updated" datetime="2019-05-30T06:40:51.878Z" itemprop="dateModified">上次更新：2019-05-30</time>
                 <a href="InstallLibreELEC.html" class="article-footer-prev" title="如何安装LibreELEC"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="CreateBootableSDCard.html" class="article-footer-next" title="通过命令行创建启动卡"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
