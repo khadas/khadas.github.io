@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for Rockchip Platform  BuildingNote: Before you start to build, make sure you have done all">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Building Android Source Code">
 <meta property="og:url" content="https://docs.khadas.com/edge/BuildAndroid.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for Rockchip Platform  BuildingNote: Before you start to build, make sure you have done all">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.387Z">
+<meta property="og:updated_time" content="2019-06-13T12:14:44.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building Android Source Code">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:description" content="Preperations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for Rockchip Platform  BuildingNote: Before you start to build, make sure you have done all">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -130,10 +130,26 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/edge/BuildAndroid.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <h3 id="Preperations" class="article-heading"><a href="#Preperations" class="headerlink" title="Preperations"></a>Preperations<a class="article-anchor" href="#Preperations" aria-hidden="true"></a></h3><ul>
+<li>[x] <a href="http://source.android.com/source/initializing.html" target="_blank" rel="noopener">Establishing a Build Environment</a></li>
+<li>[x] <a href="/zh-cn/edge/DownloadAndroidSourceCode.html">Downloading the Android Source</a></li>
+<li>[x] <a href="/zh-cn/edge/InstallToolchains.html">Install Toolchains for Rockchip Platform</a></li>
+</ul>
+<h3 id="Building" class="article-heading"><a href="#Building" class="headerlink" title="Building"></a>Building<a class="article-anchor" href="#Building" aria-hidden="true"></a></h3><p><em>Note: Before you start to build, make sure you have done all the <code>Preperations</code> listed above.</em></p>
+<p><strong>Build U-boot：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> uboot</span><br><span class="line">$ make kedge_defconfig</span><br><span class="line">$ make ARCHV=aarch64</span><br></pre></td></tr></table></figure></p>
+<p><strong>Build kernel：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> kernel</span><br><span class="line">$ make ARCH=arm64 kedge_defconfig -jN</span><br><span class="line">$ make ARCH=arm64 rk3399-khadas-edge-android.img -jN</span><br></pre></td></tr></table></figure></p>
+<p><strong>Build android：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_all-userdebug</span><br><span class="line">$ make -jN</span><br><span class="line">$ ./mkimage.sh</span><br></pre></td></tr></table></figure></p>
+<p><em>Note: Replace ‘N’ as the number you want when you run ‘make -jN</em></p>
+<p><strong>After executing<code>./mkimage.sh</code>, generate a complete firmware package in the rockdev/Image-xxx/directory (xxx is the product name of the specific lunch)</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rockdev/Image-xxx/</span><br><span class="line">├── boot.img</span><br><span class="line">├── kernel.img</span><br><span class="line">├── misc.img</span><br><span class="line">├── parameter.txt</span><br><span class="line">├── recovery.img</span><br><span class="line">├── resource.img</span><br><span class="line">├── RK3399MiniLoaderAll.bin</span><br><span class="line">├── system.img</span><br><span class="line">├── trust.img</span><br><span class="line">└── uboot.img</span><br></pre></td></tr></table></figure></p>
+<p><strong>Packing update.img：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_all-userdebug</span><br><span class="line">$ ./pack_image.sh</span><br></pre></td></tr></table></figure></p>
+<h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><ul>
+<li><a href="/zh-cn/edge/UpgradeViaUSBCable.html">Upgrade Via an USB Cable</a></li>
+<li><a href="/zh-cn/edge/UpgradeViaTFBurningCard.html">Upgrade Via a Burnning TF Card</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-07-27T06:36:44.387Z" itemprop="dateModified">Last updated: 2018-07-27</time>
+                <time class="article-footer-updated" datetime="2019-06-13T12:14:44.130Z" itemprop="dateModified">Last updated: 2019-06-13</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="Download Android Source Code"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SetupADB.html" class="article-footer-next" title="Setup ADB"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +158,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preperations"><span class="toc-text">Preperations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
