@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="The Android Source Tree of our Khadas Edge are hosted on Github. There are many different repositories. Walk through the steps below to download the Source Code.  Steps1) Create an empty directory to">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-12T11:07:07.917Z">
+<meta property="og:updated_time" content="2019-06-28T01:49:55.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Download The Android Source Code">
 <meta name="twitter:description" content="The Android Source Tree of our Khadas Edge are hosted on Github. There are many different repositories. Walk through the steps below to download the Source Code.  Steps1) Create an empty directory to">
@@ -134,7 +134,8 @@
 <p>Walk through the steps below to download the Source Code. </p>
 <h3 id="Steps" class="article-heading"><a href="#Steps" class="headerlink" title="Steps"></a>Steps<a class="article-anchor" href="#Steps" aria-hidden="true"></a></h3><p>1) Create an empty directory to hold your working files:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ mkdir -p WORKING_DIRECTORY</span><br><span class="line">$ <span class="built_in">cd</span> WORKING_DIRECTORY</span><br></pre></td></tr></table></figure></p>
 <p>2) Run <code>repo init</code> to download the manifest repository first:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/khadas/android_manifest.git -b khadas-edge-nougat</span><br></pre></td></tr></table></figure>
+<p><strong>android 7.1:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> init -u https://github.com/khadas/android_manifest.git -b khadas-edge-nougat</span><br></pre></td></tr></table></figure></p>
+<p><strong>android 9.0:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> init -u https://github.com/khadas/android_manifest.git -b khadas-edge-pie</span><br></pre></td></tr></table></figure></p>
 <p>3) Run <code>repo sync</code> to pull down the Android Source Tree:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo sync -j4</span><br></pre></td></tr></table></figure></p>
 <p>The initial sync operation may take an hour or more to complete.</p>
 <p><em>Tip: You might need to run above command repeatly if it fails halfway. Or you can try with this script instead:</em><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">repo sync -j4</span><br><span class="line"><span class="keyword">while</span> [ $? = 1 ]; <span class="keyword">do</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"Sync failed, repeat again:"</span></span><br><span class="line">	repo sync -j4</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
@@ -147,7 +148,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-04-12T11:07:07.917Z" itemprop="dateModified">Last updated: 2019-04-12</time>
+                <time class="article-footer-updated" datetime="2019-06-28T01:49:55.930Z" itemprop="dateModified">Last updated: 2019-06-28</time>
                 <a href="KbiGuidance.html" class="article-footer-prev" title="KBI Guide"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BuildAndroid.html" class="article-footer-next" title="Build Android Source Code"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

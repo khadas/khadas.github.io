@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PROJECT$ cd ke">
+  <meta name="description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 android 7.1:编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PR">
 <meta property="og:type" content="website">
 <meta property="og:title" content="编译安卓">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/BuildAndroid.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PROJECT$ cd ke">
+<meta property="og:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 android 7.1:编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PR">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-13T12:14:44.130Z">
+<meta property="og:updated_time" content="2019-06-28T01:49:55.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译安卓">
-<meta name="twitter:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PROJECT$ cd ke">
+<meta name="twitter:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Rockchip平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 android 7.1:编译 U-boot：$ cd PATH_YOUR_PROJECT$ cd uboot$ make kedge_defconfig$ make ARCHV=aarch64 编译 kernel：$ cd PATH_YOUR_PR">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -136,12 +136,18 @@
 <li>[x] <a href="/zh-cn/edge/InstallToolchains.html">安装Rockchip平台工具链</a></li>
 </ul>
 <h3 id="编译" class="article-heading"><a href="#编译" class="headerlink" title="编译"></a>编译<a class="article-anchor" href="#编译" aria-hidden="true"></a></h3><p><em>注意：在开始编译前，确保已经搭建好如上<code>准备</code>所述的环境。</em></p>
-<p><strong>编译 U-boot：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> uboot</span><br><span class="line">$ make kedge_defconfig</span><br><span class="line">$ make ARCHV=aarch64</span><br></pre></td></tr></table></figure></p>
+<h1 id="android-7-1" class="article-heading"><a href="#android-7-1" class="headerlink" title="android 7.1:"></a>android 7.1:<a class="article-anchor" href="#android-7-1" aria-hidden="true"></a></h1><p><strong>编译 U-boot：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> uboot</span><br><span class="line">$ make kedge_defconfig</span><br><span class="line">$ make ARCHV=aarch64</span><br></pre></td></tr></table></figure></p>
 <p><strong>编译 kernel：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> kernel</span><br><span class="line">$ make ARCH=arm64 kedge_defconfig -jN</span><br><span class="line">$ make ARCH=arm64 rk3399-khadas-edge-android.img -jN</span><br></pre></td></tr></table></figure></p>
-<p><strong>编译 android：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_all-userdebug</span><br><span class="line">$ make -jN</span><br><span class="line">$ ./mkimage.sh</span><br></pre></td></tr></table></figure></p>
+<p><strong>编译 android：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_all-userdebug</span><br><span class="line">$ make installclean</span><br><span class="line">$ make -jN</span><br><span class="line">$ ./mkimage.sh</span><br></pre></td></tr></table></figure></p>
 <p><em>注意：替换<code>N</code>为你自己电脑实际的线程数。</em></p>
 <p><strong>执行<code>./mkimage.sh</code>后，在 rockdev/Image-xxx/目录生成完整的固件包(xxx 是具体 lunch的产品名)</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rockdev/Image-xxx/</span><br><span class="line">├── boot.img</span><br><span class="line">├── kernel.img</span><br><span class="line">├── misc.img</span><br><span class="line">├── parameter.txt</span><br><span class="line">├── recovery.img</span><br><span class="line">├── resource.img</span><br><span class="line">├── RK3399MiniLoaderAll.bin</span><br><span class="line">├── system.img</span><br><span class="line">├── trust.img</span><br><span class="line">└── uboot.img</span><br></pre></td></tr></table></figure></p>
 <p><strong>打包 update.img：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_all-userdebug</span><br><span class="line">$ ./pack_image.sh</span><br></pre></td></tr></table></figure></p>
+<h1 id="android-9-0" class="article-heading"><a href="#android-9-0" class="headerlink" title="android 9.0:"></a>android 9.0:<a class="article-anchor" href="#android-9-0" aria-hidden="true"></a></h1><p><strong>编译 U-boot：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> u-boot</span><br><span class="line">$ make mrproper</span><br><span class="line">$ ./make.sh kedge</span><br></pre></td></tr></table></figure></p>
+<p><strong>编译 kernel：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> kernel</span><br><span class="line">$ make ARCH=arm64 kedge_defconfig -jN</span><br><span class="line">$ make ARCH=arm64 rk3399-khadas-edge-android.img -jN</span><br></pre></td></tr></table></figure></p>
+<p><strong>编译 android：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399-userdebug</span><br><span class="line">$ make installclean</span><br><span class="line">$ make -jN</span><br><span class="line">$ ./mkimage.sh</span><br></pre></td></tr></table></figure></p>
+<p><em>注意：替换<code>N</code>为你自己电脑实际的线程数。</em></p>
+<p><strong>执行<code>./mkimage.sh</code>后，在 rockdev/Image-xxx/目录生成完整的固件包(xxx 是具体 lunch的产品名)</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rockdev/Image-xxx/</span><br><span class="line">├── MiniLoaderAll.bin</span><br><span class="line">├── boot.img</span><br><span class="line">├── dtbo.img</span><br><span class="line">├── kernel.img</span><br><span class="line">├── misc.img</span><br><span class="line">├── oem.img</span><br><span class="line">├── parameter.txt</span><br><span class="line">├── pcba_small_misc.img</span><br><span class="line">├── pcba_whole_misc.img</span><br><span class="line">├── recovery.img</span><br><span class="line">├── resource.img</span><br><span class="line">├── system.img</span><br><span class="line">├── trust.img</span><br><span class="line">├── uboot.img</span><br><span class="line">├── update.img</span><br><span class="line">├── vbmeta.img</span><br><span class="line">└── vendor.img</span><br></pre></td></tr></table></figure></p>
+<p><strong>打包 update.img：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399-userdebug</span><br><span class="line">$ ./pack_image.sh</span><br></pre></td></tr></table></figure></p>
 <h3 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h3><ul>
 <li><a href="/zh-cn/edge/UpgradeViaUSBCable.html">通过USB数据线升级</a></li>
 <li><a href="/zh-cn/edge/UpgradeViaTFBurningCard.html">通过TF卡升级</a></li>
@@ -149,7 +155,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-06-13T12:14:44.130Z" itemprop="dateModified">上次更新：2019-06-13</time>
+                <time class="article-footer-updated" datetime="2019-06-28T01:49:55.930Z" itemprop="dateModified">上次更新：2019-06-28</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="下载安卓源码"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="SetupADB.html" class="article-footer-next" title="设置ADB"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -158,9 +164,9 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#android-7-1"><span class="toc-text">android 7.1:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#android-9-0"><span class="toc-text">android 9.0:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
-            </div>
+            </li></div>
           </aside>
         </div>
       </article>

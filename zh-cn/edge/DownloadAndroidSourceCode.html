@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库：$repo init -u https://github.com/khadas/android_">
+  <meta name="description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库： android 7.1:$repo init -u https://github.com/kh">
 <meta property="og:type" content="website">
 <meta property="og:title" content="下载安卓源码">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/DownloadAndroidSourceCode.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库：$repo init -u https://github.com/khadas/android_">
+<meta property="og:description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库： android 7.1:$repo init -u https://github.com/kh">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-13T12:14:44.130Z">
+<meta property="og:updated_time" content="2019-06-28T01:49:55.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="下载安卓源码">
-<meta name="twitter:description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库：$repo init -u https://github.com/khadas/android_">
+<meta name="twitter:description" content="我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。 按如下步骤下载源代码。 步骤1）创建一个空目录来保存您的工作文件：$mkdir -p WORKING_DIRECTORY$cd WORKING_DIRECTORY 2）首先运行repo init下载清单存储库： android 7.1:$repo init -u https://github.com/kh">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -133,7 +133,9 @@
                 <p>我们的Khadas Edge的Android源代码托管在Github上。有许多不同的存储库。</p>
 <p>按如下步骤下载源代码。</p>
 <h3 id="步骤" class="article-heading"><a href="#步骤" class="headerlink" title="步骤"></a>步骤<a class="article-anchor" href="#步骤" aria-hidden="true"></a></h3><p>1）创建一个空目录来保存您的工作文件：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$mkdir</span> -p WORKING_DIRECTORY</span><br><span class="line"><span class="variable">$cd</span> WORKING_DIRECTORY</span><br></pre></td></tr></table></figure></p>
-<p>2）首先运行repo init下载清单存储库：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> init -u https://github.com/khadas/android_manifest.git -b khadas-edge-nougat</span><br></pre></td></tr></table></figure></p>
+<p>2）首先运行repo init下载清单存储库：</p>
+<p><strong>android 7.1:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> init -u https://github.com/khadas/android_manifest.git -b khadas-edge-nougat</span><br></pre></td></tr></table></figure></p>
+<p><strong>android 9.0:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> init -u https://github.com/khadas/android_manifest.git -b khadas-edge-pie</span><br></pre></td></tr></table></figure></p>
 <p>3）运行repo-sync下拉Android源代码：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$repo</span> sync -j4</span><br></pre></td></tr></table></figure></p>
 <p>初始同步操作可能需要很长时间才能完成。<br>提示：如果命令中途失败，您可能需要重复运行上面的命令。或者您可以尝试使用此脚本：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">repo sync -j4</span><br><span class="line"><span class="keyword">while</span> [ $? = 1 ]; <span class="keyword">do</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"Sync failed, repeat again:"</span></span><br><span class="line">	repo sync -j4</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 <p>如果需要，请按ctrl-\退出。</p>
@@ -141,7 +143,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-06-13T12:14:44.130Z" itemprop="dateModified">上次更新：2019-06-13</time>
+                <time class="article-footer-updated" datetime="2019-06-28T01:49:55.930Z" itemprop="dateModified">上次更新：2019-06-28</time>
                 <a href="KbiGuidance.html" class="article-footer-prev" title="KBI说明"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="BuildAndroid.html" class="article-footer-next" title="编译安卓源码"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
