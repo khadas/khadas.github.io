@@ -64,12 +64,13 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="There are many different ways to boot into upgrade mode. They are listed below:  Button Mode Serial Mode MRegister Mode  Usually, the first two methods will meet the needs of most users. However, in s">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://docs.khadas.com/images/vim2/MRegister_ShortCircuit_V14.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/MRegister_ShortCircuit.png">
-<meta property="og:updated_time" content="2019-02-22T02:48:34.461Z">
+<meta property="og:updated_time" content="2019-06-29T04:02:20.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Howto Boot Into Upgrade Mode">
 <meta name="twitter:description" content="There are many different ways to boot into upgrade mode. They are listed below:  Button Mode Serial Mode MRegister Mode  Usually, the first two methods will meet the needs of most users. However, in s">
-<meta name="twitter:image" content="https://docs.khadas.com/images/vim2/MRegister_ShortCircuit.png">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim2/MRegister_ShortCircuit_V14.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -149,9 +150,9 @@
 <li>Refer to this <a href="/vim1/SetupSerialTool.html">guide</a> to setup a serial tool for VIM2.</li>
 <li>Make sure again that you’ve done the right connections and setup.</li>
 <li>Hit any keys at the moment of booting to stop autoboot. This step will let VIM boot into u-boot mode.</li>
-<li>Type <code>run update</code> in the terminal of u-boot as shown below:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# run update</span><br></pre></td></tr></table></figure>
-</li>
+<li>Type <code>run update</code> in the terminal of u-boot as shown below:</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim2# run update</span><br></pre></td></tr></table></figure>
 <h3 id="TST-Mode-v1-4-only" class="article-heading"><a href="#TST-Mode-v1-4-only" class="headerlink" title="TST Mode (v1.4 only)"></a>TST Mode (v1.4 only)<a class="article-anchor" href="#TST-Mode-v1-4-only" aria-hidden="true"></a></h3><ol>
 <li>Power-on VIM2.</li>
 <li>Quickly press the Function key 3 times in 2 seconds, then release the key.</li>
@@ -163,11 +164,12 @@
 <li>Use a tweezer to short-circuit the two pads of the <code>M</code> register, and without releasing…</li>
 <li>Short press the <code>Reset</code> key and then release it, to boot into upgrade mode</li>
 </ol>
-<p><img src="/images/vim2/MRegister_ShortCircuit.png" alt="Image of MRegister_ShortCircuit"><br><em>Tip: The <code>M</code> register is located on the underside of VIM2</em></p>
+<h4 id="VIM2-V14" class="article-heading"><a href="#VIM2-V14" class="headerlink" title="VIM2 V14"></a>VIM2 V14<a class="article-anchor" href="#VIM2-V14" aria-hidden="true"></a></h4><p><img src="/images/vim2/MRegister_ShortCircuit_V14.png" alt="Image of MRegister_ShortCircuit"></p>
+<h4 id="VIM2-V12" class="article-heading"><a href="#VIM2-V12" class="headerlink" title="VIM2 V12"></a>VIM2 V12<a class="article-anchor" href="#VIM2-V12" aria-hidden="true"></a></h4><p><img src="/images/vim2/MRegister_ShortCircuit.png" alt="Image of MRegister_ShortCircuit"><br><em>Tip: The <code>M</code> register is located on the underside of VIM2</em></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-02-22T02:48:34.461Z" itemprop="dateModified">Last updated: 2019-02-22</time>
+                <time class="article-footer-updated" datetime="2019-06-29T04:02:20.723Z" itemprop="dateModified">Last updated: 2019-06-29</time>
                 <a href="Vim2Interfaces.html" class="article-footer-prev" title="VIM2 Interfaces"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UpgradeViaUSBCable.html" class="article-footer-next" title="Upgrade Using USB-C Cable"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -176,7 +178,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Button-Mode-U-Boot-is-running"><span class="toc-text">Button Mode (U-Boot is running)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode (For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TST-Mode-v1-4-only"><span class="toc-text">TST Mode (v1.4 only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Button-Mode-U-Boot-is-running"><span class="toc-text">Button Mode (U-Boot is running)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Serial-Mode-For-developers"><span class="toc-text">Serial Mode (For developers)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TST-Mode-v1-4-only"><span class="toc-text">TST Mode (v1.4 only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MRegister-Mode-Maskrom-Mode"><span class="toc-text">MRegister Mode(Maskrom Mode)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#VIM2-V14"><span class="toc-text">VIM2 V14</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VIM2-V12"><span class="toc-text">VIM2 V12</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
