@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Building Android Source Code">
 <meta property="og:url" content="https://docs.khadas.com/vim3/BuildAndroid.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-13T08:23:42.353Z">
+<meta property="og:updated_time" content="2019-07-13T11:08:38.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building Android Source Code">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:description" content="Preparations [x] Establishing a Build Environment [x] Downloading the Android Source [x] Install Toolchains for the Amlogic Platform  BuildingNote: Before you start to build, make sure you have done a">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -130,10 +130,38 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim3/BuildAndroid.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <h3 id="Preparations" class="article-heading"><a href="#Preparations" class="headerlink" title="Preparations"></a>Preparations<a class="article-anchor" href="#Preparations" aria-hidden="true"></a></h3><ul>
+<li>[x] <a href="http://source.android.com/source/initializing.html" target="_blank" rel="noopener">Establishing a Build Environment</a></li>
+<li>[x] <a href="/vim3/DownloadAndroidSourceCode.html">Downloading the Android Source</a></li>
+<li>[x] <a href="/vim3/InstallToolchains.html">Install Toolchains for the Amlogic Platform</a></li>
+</ul>
+<h3 id="Building" class="article-heading"><a href="#Building" class="headerlink" title="Building"></a>Building<a class="article-anchor" href="#Building" aria-hidden="true"></a></h3><p><em>Note: Before you start to build, make sure you have done all the <code>Preparations</code> listed above.</em></p>
+<p><strong>Build U-Boot:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> bootloader/uboot</span><br><span class="line">$ ./mk kvim3</span><br></pre></td></tr></table></figure></p>
+<p><em>Gernerate images in this step:</em></p>
+<ul>
+<li>build/u-boot.bin: for onboard EMMC storage booting</li>
+<li>build/u-boot.bin.sd.bin: for external TF card booting</li>
+</ul>
+<p><strong>Build Android:</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch kvim3-userdebug</span><br><span class="line">$ make -jN otapackage</span><br></pre></td></tr></table></figure></p>
+<p><em>Note:</em></p>
+<ul>
+<li>Replace ‘N’ as the number you want when you run ‘make -jN’</li>
+</ul>
+<p><em>Gernerate images in this step:</em></p>
+<ul>
+<li>out/target/product/kvim3/update.img</li>
+</ul>
+<p><strong>Build Linux kernel:</strong></p>
+<p>When you build the Android Kernel (above), the Linux Kernel will also be built simultaneously.</p>
+<p>In some cases, you might want to build the Linux Kernel separately. You can run this script below to do that:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make bootimage</span><br></pre></td></tr></table></figure></p>
+<h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><ul>
+<li><a href="/vim3/UpgradeViaUSBCable.html">Upgrade Via an USB Cable</a></li>
+<li><a href="/vim3/UpgradeViaTFBurningCard.html">Upgrade Via a Burnning TF Card</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-13T08:23:42.353Z" itemprop="dateModified">Last updated: 2019-05-13</time>
+                <time class="article-footer-updated" datetime="2019-07-13T11:08:38.528Z" itemprop="dateModified">Last updated: 2019-07-13</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="Download Android Source Code"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="FastPackageUpdateImage.html" class="article-footer-next" title="Fast Package Update Image"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +170,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparations"><span class="toc-text">Preparations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building"><span class="toc-text">Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Building Android Source Code | Khadas Docs</title>
+  <title>编译Amlogic平台安卓源码 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Amlogic平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译U-boot：$ cd PATH_YOUR_PROJECT$ cd bootloader/uboot$ ./mk kvim3 生成文件描述如下：  build/u-boot.bin: 板载EMMC烧录uboot build/u-boot.bin.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Building Android Source Code">
+<meta property="og:title" content="编译Amlogic平台安卓源码">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/BuildAndroid.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Amlogic平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译U-boot：$ cd PATH_YOUR_PROJECT$ cd bootloader/uboot$ ./mk kvim3 生成文件描述如下：  build/u-boot.bin: 板载EMMC烧录uboot build/u-boot.bin.">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-13T08:23:42.753Z">
+<meta property="og:updated_time" content="2019-07-13T11:08:38.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building Android Source Code">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:title" content="编译Amlogic平台安卓源码">
+<meta name="twitter:description" content="准备 [x] 搭建开发环境 [x] 下载安卓源码 [x] 安装Amlogic平台工具链  编译注意：在开始编译前，确保已经搭建好如上准备所述的环境。 编译U-boot：$ cd PATH_YOUR_PROJECT$ cd bootloader/uboot$ ./mk kvim3 生成文件描述如下：  build/u-boot.bin: 板载EMMC烧录uboot build/u-boot.bin.">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -126,14 +126,42 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Building Android Source Code</h1>
+                <h1 class="article-title" itemprop="name">编译Amlogic平台安卓源码</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/BuildAndroid.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <h3 id="准备" class="article-heading"><a href="#准备" class="headerlink" title="准备"></a>准备<a class="article-anchor" href="#准备" aria-hidden="true"></a></h3><ul>
+<li>[x] <a href="http://source.android.com/source/initializing.html" target="_blank" rel="noopener">搭建开发环境</a></li>
+<li>[x] <a href="/zh-cn/vim3/DownloadAndroidSourceCode.html">下载安卓源码</a></li>
+<li>[x] <a href="/zh-cn/vim3/InstallToolchains.html">安装Amlogic平台工具链</a></li>
+</ul>
+<h3 id="编译" class="article-heading"><a href="#编译" class="headerlink" title="编译"></a>编译<a class="article-anchor" href="#编译" aria-hidden="true"></a></h3><p><em>注意：在开始编译前，确保已经搭建好如上<code>准备</code>所述的环境。</em></p>
+<p><strong>编译U-boot：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> bootloader/uboot</span><br><span class="line">$ ./mk kvim3</span><br></pre></td></tr></table></figure></p>
+<p><em>生成文件描述如下：</em></p>
+<ul>
+<li>build/u-boot.bin: 板载EMMC烧录uboot</li>
+<li>build/u-boot.bin.sd.bin: TF卡烧录uboot</li>
+</ul>
+<p><strong>编译安卓：</strong><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch kvim3-userdebug</span><br><span class="line">$ make -jN otapackage</span><br></pre></td></tr></table></figure></p>
+<p><em>注意：</em></p>
+<ul>
+<li>替换<code>N</code>为你自己电脑实际的线程数。</li>
+</ul>
+<p><em>生成镜像文件如下：</em></p>
+<ul>
+<li>out/target/product/kvim3/update.img</li>
+</ul>
+<p><strong>编译linux内核：</strong></p>
+<p>当你按上面步骤编译安卓时会同时编译linux内核。</p>
+<p>在某些情况下你可能需要单独编译linux内核，按如下步骤单独编译linux内核。<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make bootimage</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h3><ul>
+<li><a href="/zh-cn/vim3/UpgradeViaUSBCable.html">通过USB数据线升级</a></li>
+<li><a href="/zh-cn/vim3/UpgradeViaTFBurningCard.html">通过TF卡升级</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-13T08:23:42.753Z" itemprop="dateModified">上次更新：2019-05-13</time>
+                <time class="article-footer-updated" datetime="2019-07-13T11:08:38.528Z" itemprop="dateModified">上次更新：2019-07-13</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="下载安卓源码"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="FastPackageUpdateImage.html" class="article-footer-next" title="快速打包安卓固件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +170,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

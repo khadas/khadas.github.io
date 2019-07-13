@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
   <meta charset="utf-8">
-  <title>Download The Android Source Code | Khadas Docs</title>
+  <title>如何下载安卓源码 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="TBD">
+  <meta name="description" content="由于Android SDK的部分仓库需要从Google服务器下载，中国大陆地区用户，可以通过如下两种方式下载完整Android源码：  使用VPN直接下载源码 优点：直接下载，无需额外修改XML文件 缺点：需要使用VPN，根据不同VPN提供商网速可能较慢   使用内地镜像服务器下载 优点：国内镜像服务器访问速度更快 缺点：需要额外修改XML文件    VPN方式不再介绍，如下方法基于清华大学镜像服">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Download The Android Source Code">
+<meta property="og:title" content="如何下载安卓源码">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/DownloadAndroidSourceCode.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="TBD">
+<meta property="og:description" content="由于Android SDK的部分仓库需要从Google服务器下载，中国大陆地区用户，可以通过如下两种方式下载完整Android源码：  使用VPN直接下载源码 优点：直接下载，无需额外修改XML文件 缺点：需要使用VPN，根据不同VPN提供商网速可能较慢   使用内地镜像服务器下载 优点：国内镜像服务器访问速度更快 缺点：需要额外修改XML文件    VPN方式不再介绍，如下方法基于清华大学镜像服">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-13T08:23:42.753Z">
+<meta property="og:updated_time" content="2019-07-13T11:08:38.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Download The Android Source Code">
-<meta name="twitter:description" content="TBD">
+<meta name="twitter:title" content="如何下载安卓源码">
+<meta name="twitter:description" content="由于Android SDK的部分仓库需要从Google服务器下载，中国大陆地区用户，可以通过如下两种方式下载完整Android源码：  使用VPN直接下载源码 优点：直接下载，无需额外修改XML文件 缺点：需要使用VPN，根据不同VPN提供商网速可能较慢   使用内地镜像服务器下载 优点：国内镜像服务器访问速度更快 缺点：需要额外修改XML文件    VPN方式不再介绍，如下方法基于清华大学镜像服">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -126,14 +126,43 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Download The Android Source Code</h1>
+                <h1 class="article-title" itemprop="name">如何下载安卓源码</h1>
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/DownloadAndroidSourceCode.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h1>
+                <p>由于Android SDK的部分仓库需要从Google服务器下载，中国大陆地区用户，可以通过如下两种方式下载完整Android源码：</p>
+<ul>
+<li>使用VPN直接下载源码<ul>
+<li>优点：直接下载，无需额外修改XML文件</li>
+<li>缺点：需要使用VPN，根据不同VPN提供商网速可能较慢</li>
+</ul>
+</li>
+<li>使用内地镜像服务器下载<ul>
+<li>优点：国内镜像服务器访问速度更快</li>
+<li>缺点：需要额外修改XML文件</li>
+</ul>
+</li>
+</ul>
+<p>VPN方式不再介绍，如下方法基于清华大学镜像服务器：</p>
+<ul>
+<li>步骤参考<a href="/vim3/DownloadAndroidSourceCode.html">Download the Android Source Code</a></li>
+<li>在<code>repo sync</code>之前修改default.xml文件，把Google的URL地址改为清华大学的，如下：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gouwa@Server:~/project/khadas/aosp/.repo/manifests$ git diff</span><br><span class="line">diff --git a/default.xml b/default.xml</span><br><span class="line">index f48a988..b8cb9da 100644</span><br><span class="line">--- a/default.xml</span><br><span class="line">+++ b/default.xml</span><br><span class="line">@@ -1,6 +1,6 @@</span><br><span class="line"> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line"> &lt;manifest&gt;</span><br><span class="line">-  &lt;remote fetch=&quot;https://android.googlesource.com/&quot; name=&quot;aosp&quot; review=&quot;https:/</span><br><span class="line">+  &lt;remote fetch=&quot;https://aosp.tuna.tsinghua.edu.cn/&quot; name=&quot;aosp&quot; review=&quot;https:</span><br><span class="line">   &lt;remote fetch=&quot;https://github.com/khadas/&quot; name=&quot;github&quot;/&gt;</span><br><span class="line"></span><br><span class="line">   &lt;default remote=&quot;github&quot; revision=&quot;refs/heads/Nougat&quot; sync-j=&quot;4&quot;/&gt;</span><br><span class="line">gouwa@Server:~/project/khadas/aosp/.repo/manifests$</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="常见问题：" class="article-heading"><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：<a class="article-anchor" href="#常见问题：" aria-hidden="true"></a></h3><ul>
+<li><p>repo在运行过程中会尝试访问Google官方的git源更新自己，因此在运行过程中有可能出现”无法连接gerrit.googlesource.com“的问题，解决方案参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/git-repo/" target="_blank" rel="noopener">这里</a>。</p>
+</li>
+<li><p>下载过程中如果报如下错误，检查上述VPN或者修改XML方法是否正确配置*</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">Fetching project platform/prebuilts/sdk</span><br><span class="line">Fetching projects:  66% (4/6)  fatal: unable to access &apos;https://android.googlesource.com/platform/prebuilts/tools/&apos;: Failed to connect to android.googlesource.com port 443: Connection timed out</span><br><span class="line">fatal: unable to access &apos;https://android.googlesource.com/platform/prebuilts/sdk/&apos;: Failed to connect to android.googlesource.com port 443: Connection timed out</span><br><span class="line">fatal: unable to access &apos;https://android.googlesource.com/platform/prebuilts/tools/&apos;: Failed to connect to android.googlesource.com port 443: Connection timed out</span><br><span class="line">fatal: unable to access &apos;https://android.googlesource.com/platform/prebuilts/sdk/&apos;: Failed to connect to android.googlesource.com port 443: Connection timed out</span><br><span class="line">error: Cannot fetch platform/prebuilts/tools</span><br><span class="line">error: Cannot fetch platform/prebuilts/sdk</span><br><span class="line"></span><br><span class="line">error: Exited sync due to fetch errors</span><br><span class="line">gouwa@Server:~/project/khadas/aosp$</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="更多参考：" class="article-heading"><a href="#更多参考：" class="headerlink" title="更多参考："></a>更多参考：<a class="article-anchor" href="#更多参考：" aria-hidden="true"></a></h3><ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/" target="_blank" rel="noopener">清华大学官方文档：如何下载Android AOSP源码</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-13T08:23:42.753Z" itemprop="dateModified">上次更新：2019-05-13</time>
+                <time class="article-footer-updated" datetime="2019-07-13T11:08:38.528Z" itemprop="dateModified">上次更新：2019-07-13</time>
                 <a href="KbiGuidance.html" class="article-footer-prev" title="KBI说明"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="BuildAndroid.html" class="article-footer-next" title="编译安卓源码"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -142,7 +171,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见问题："><span class="toc-text">常见问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多参考："><span class="toc-text">更多参考：</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
