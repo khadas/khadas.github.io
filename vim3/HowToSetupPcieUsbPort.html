@@ -57,18 +57,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are two ways to setup the PCIe/USB3.0 port">
+  <meta name="description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are three ways to setup the PCIe/USB3.0 po">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Setup PCIe&#x2F;USB3.0 Port">
 <meta property="og:url" content="https://docs.khadas.com/vim3/HowToSetupPcieUsbPort.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are two ways to setup the PCIe/USB3.0 port">
+<meta property="og:description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are three ways to setup the PCIe/USB3.0 po">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/vim3_pcie_usb3_block.png">
-<meta property="og:updated_time" content="2019-06-18T03:53:32.222Z">
+<meta property="og:image" content="https://github.com/tsangyoujun/khadas_docs/blob/master/settings_toggle.jpg?raw=true">
+<meta property="og:image" content="https://github.com/tsangyoujun/khadas_docs/blob/master/mode_switch.jpg?raw=true">
+<meta property="og:updated_time" content="2019-08-05T03:01:02.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Setup PCIe&#x2F;USB3.0 Port">
-<meta name="twitter:description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are two ways to setup the PCIe/USB3.0 port">
+<meta name="twitter:description" content="Khadas VIM3 contains a data switch to switch the “combo interface” between PCIe and USB 3.0. The default mode is USB 3.0.You can find the block below.  There are three ways to setup the PCIe/USB3.0 po">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/vim3_pcie_usb3_block.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -134,12 +136,13 @@
               <div class="article-content" itemprop="articleBody">
                 <p>Khadas VIM3 contains a data switch to switch the “combo interface” between <code>PCIe</code> and <code>USB 3.0</code>. The default mode is <code>USB 3.0</code>.<br>You can find the block below.</p>
 <p><img src="/images/vim3/vim3_pcie_usb3_block.png" alt="VIM3 PCIe/USB3.0 Block"></p>
-<p>There are two ways to setup the <code>PCIe/USB3.0</code> port:</p>
+<p>There are three ways to setup the <code>PCIe/USB3.0</code> port:</p>
 <ul>
 <li>Use <a href="/vim3/KbiGuidance.html">KBI</a> to setup the port</li>
-<li>Setup the port in Android/Ubuntu command line</li>
+<li>Setup the port using the Android UI</li>
+<li>Setup the port using the Android/Ubuntu command line</li>
 </ul>
-<h3 id="Use-KBI-to-setup-the-PCIe-USB3-0-port" class="article-heading"><a href="#Use-KBI-to-setup-the-PCIe-USB3-0-port" class="headerlink" title="Use KBI to setup the PCIe/USB3.0 port"></a>Use KBI to setup the <code>PCIe/USB3.0</code> port<a class="article-anchor" href="#Use-KBI-to-setup-the-PCIe-USB3-0-port" aria-hidden="true"></a></h3><p>You need to <a href="/vim3/SetupSerialTool.html">setup the serial tool</a> and enter u-boot command line.</p>
+<h3 id="Use-KBI-to-setup-the-PCIe-USB3-0-port" class="article-heading"><a href="#Use-KBI-to-setup-the-PCIe-USB3-0-port" class="headerlink" title="Use KBI to setup the PCIe/USB3.0 port"></a>Use KBI to setup the <code>PCIe/USB3.0</code> port<a class="article-anchor" href="#Use-KBI-to-setup-the-PCIe-USB3-0-port" aria-hidden="true"></a></h3><p>You need to <a href="/vim3/SetupSerialTool.html">setup the serial debug tool</a> and enter the u-boot command line.</p>
 <ul>
 <li>Initialize the KBI:</li>
 </ul>
@@ -148,7 +151,7 @@
 <li>Check current port mode:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi portmode r</span><br><span class="line">port mode is USB3.0</span><br></pre></td></tr></table></figure>
-<p>The default mode is USB 3.0.</p>
+<p>The default mode is USB-3.0.</p>
 <ul>
 <li>Change mode to <code>PCIe</code>:</li>
 </ul>
@@ -157,14 +160,17 @@
 <li>Change mode to <code>USB 3.0</code>:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi portmode w 0</span><br><span class="line">set port mode to :USB3.0</span><br></pre></td></tr></table></figure>
-<p><strong>Please poweroff the system to make it available:</strong></p>
+<p><strong>Poweroff the system to bring changes into effect:</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi poweroff </span><br><span class="line">do_kbi_poweroff</span><br></pre></td></tr></table></figure>
-<p>Then you can press the POWER KEY to poweron the system.</p>
+<p>Then press the POWER KEY to reboot the system.</p>
+<h3 id="Use-Android-UI-to-setup-the-PCIe-USB3-0-port" class="article-heading"><a href="#Use-Android-UI-to-setup-the-PCIe-USB3-0-port" class="headerlink" title="Use Android UI to setup the PCIe/USB3.0 port"></a>Use Android UI to setup the <code>PCIe/USB3.0</code> port<a class="article-anchor" href="#Use-Android-UI-to-setup-the-PCIe-USB3-0-port" aria-hidden="true"></a></h3><p>You’ll need to navigate to “Device Preferences” using an IR remote, mouse or attached keyboard.</p>
+<p><img src="https://github.com/tsangyoujun/khadas_docs/blob/master/settings_toggle.jpg?raw=true" alt="Android Device Preferences"><br><img src="https://github.com/tsangyoujun/khadas_docs/blob/master/mode_switch.jpg?raw=true" alt="Mode Switch UI"></p>
+<p><strong>Reboot</strong> the system to bring changes into effect.</p>
 <h3 id="Setup-the-PCIe-USB3-0-port-in-command-line" class="article-heading"><a href="#Setup-the-PCIe-USB3-0-port-in-command-line" class="headerlink" title="Setup the PCIe/USB3.0 port in command line"></a>Setup the <code>PCIe/USB3.0</code> port in command line<a class="article-anchor" href="#Setup-the-PCIe-USB3-0-port-in-command-line" aria-hidden="true"></a></h3><h4 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h4><h3 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also"></a>See Also<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h3><p><a href="/vim3/KbiGuidance.html">KBI Guide</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-06-18T03:53:32.222Z" itemprop="dateModified">Last updated: 2019-06-18</time>
+                <time class="article-footer-updated" datetime="2019-08-05T03:01:02.108Z" itemprop="dateModified">Last updated: 2019-08-05</time>
                 <a href="HowToAccessI2c.html" class="article-footer-prev" title="How To Access I2C"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BootFromSpiFlash.html" class="article-footer-next" title="Boot From SPI-Flash"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -173,7 +179,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-KBI-to-setup-the-PCIe-USB3-0-port"><span class="toc-text">Use KBI to setup the PCIe/USB3.0 port</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-the-PCIe-USB3-0-port-in-command-line"><span class="toc-text">Setup the PCIe/USB3.0 port in command line</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-KBI-to-setup-the-PCIe-USB3-0-port"><span class="toc-text">Use KBI to setup the PCIe/USB3.0 port</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-Android-UI-to-setup-the-PCIe-USB3-0-port"><span class="toc-text">Use Android UI to setup the PCIe/USB3.0 port</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-the-PCIe-USB3-0-port-in-command-line"><span class="toc-text">Setup the PCIe/USB3.0 port in command line</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
