@@ -57,18 +57,18 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="有很多系统运行在SD卡或U盘上,例如：LibreELEC,Armbian images以及Khadas SD images(VIM1/VIM2/VIM3)。这篇文档介绍如何运行这些镜像。 为了从外部媒体介质启动系统，需要确保如下两件事：  eMMC中要运行安卓系统 激活多启动  对于不同的镜像需要不同的安卓版本。 VIM1和VIM2：  LibreELEC, Ubuntu使用linux 3.14内">
+  <meta name="description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
 <meta property="og:type" content="website">
 <meta property="og:title" content="从外部媒体介质启动系统">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/BootFromExtMedia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="有很多系统运行在SD卡或U盘上,例如：LibreELEC,Armbian images以及Khadas SD images(VIM1/VIM2/VIM3)。这篇文档介绍如何运行这些镜像。 为了从外部媒体介质启动系统，需要确保如下两件事：  eMMC中要运行安卓系统 激活多启动  对于不同的镜像需要不同的安卓版本。 VIM1和VIM2：  LibreELEC, Ubuntu使用linux 3.14内">
+<meta property="og:description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
-<meta property="og:updated_time" content="2019-05-30T06:40:15.940Z">
+<meta property="og:updated_time" content="2019-10-24T01:30:32.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从外部媒体介质启动系统">
-<meta name="twitter:description" content="有很多系统运行在SD卡或U盘上,例如：LibreELEC,Armbian images以及Khadas SD images(VIM1/VIM2/VIM3)。这篇文档介绍如何运行这些镜像。 为了从外部媒体介质启动系统，需要确保如下两件事：  eMMC中要运行安卓系统 激活多启动  对于不同的镜像需要不同的安卓版本。 VIM1和VIM2：  LibreELEC, Ubuntu使用linux 3.14内">
+<meta name="twitter:description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -132,55 +132,70 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/BootFromExtMedia.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>有很多系统运行在SD卡或U盘上,例如：<a href="https://libreelec.tv/downloads_new/khadas-vim/" target="_blank" rel="noopener">LibreELEC</a>,<a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a>以及Khadas SD images(<a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM1</a>/<a href="https://dl.khadas.com/Firmware/VIM2/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM2</a>/<a href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM3</a>)。这篇文档介绍如何运行这些镜像。</p>
-<p>为了从外部媒体介质启动系统，需要确保如下两件事：</p>
+                <p>有很多系统运行在SD卡或U盘上,例如：</p>
 <ul>
-<li>eMMC中要运行安卓系统</li>
-<li>激活多启动</li>
+<li><a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian with Debian / Ubuntu</a></li>
+<li><a href="https://forum.khadas.com/t/altlinux-sd-usb-emmc/1653" target="_blank" rel="noopener">AltLinux</a></li>
+<li><a href="https://forum.khadas.com/t/archlinux-kodi-sd-usb-emmc/1152" target="_blank" rel="noopener">ArchLinux</a></li>
+<li><a href="https://coreelec.org/" target="_blank" rel="noopener">CoreELEC</a></li>
+<li><a href="https://libreelec.tv/downloads_new/khadas-vim/" target="_blank" rel="noopener">LibreELEC</a></li>
+<li><a href="https://forum.khadas.com/t/manjaro-linux-desktop-environment-for-vim1-vim3/3945" target="_blank" rel="noopener">Manjaro</a></li>
+<li><a href="https://forum.khadas.com/t/volumio-for-khadas/1437" target="_blank" rel="noopener">Volumio</a></li>
+<li>Khadas SD images<ul>
+<li><a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM1</a></li>
+<li><a href="https://dl.khadas.com/Firmware/VIM2/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM2</a></li>
+<li><a href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM3</a></li>
 </ul>
-<p>对于不同的镜像需要不同的安卓版本。</p>
-<p>VIM1和VIM2：</p>
-<ul>
-<li>LibreELEC, Ubuntu使用linux 3.14内核的需要Android M或Android N(V180207及更新版本)或最新的Ubuntu运行在eMMC。</li>
-<li>Ubuntu使用linux 4.9内核的需要Android O或最新的Ubuntu运行在eMMC。</li>
-</ul>
-<p>VIM3：</p>
-<ul>
-<li>Ubuntu使用linux 4.9内核的需要Android Q或Ubuntu运行在eMMC。</li>
+</li>
 </ul>
 <h3 id="1、把固件写入到SD卡或U盘" class="article-heading"><a href="#1、把固件写入到SD卡或U盘" class="headerlink" title="1、把固件写入到SD卡或U盘"></a>1、把固件写入到SD卡或U盘<a class="article-anchor" href="#1、把固件写入到SD卡或U盘" aria-hidden="true"></a></h3><ul>
 <li>下载烧录工具<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">Etcher</a>, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的图形用户界面，与Mac、Windows和Linux兼容，解压后是一个可执行文件，直接执行即可。选择固件，它将自动识别您的USB设备，然后烧录就可以了。</li>
 </ul>
 <p><img src="/images/vim1/HowtoUseEtcher.png" alt="Howto Use Etcher"></p>
 <ul>
-<li><p>在Ubuntu下使用<code>dd</code>命令写入</p>
+<li>在Ubuntu下使用<code>dd</code>命令写入</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=/path/to/image of=/dev/sdX bs=8M</span><br></pre></td></tr></table></figure>
+<h3 id="2、准备DTB文件" class="article-heading"><a href="#2、准备DTB文件" class="headerlink" title="2、准备DTB文件"></a>2、准备DTB文件<a class="article-anchor" href="#2、准备DTB文件" aria-hidden="true"></a></h3><p><strong>如果固件是Khadas SD卡固件，那么你可以跳过此步骤，直接到下一步。</strong></p>
+<h4 id="对于Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" class="article-heading"><a href="#对于Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" class="headerlink" title="对于Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux"></a>对于Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux<a class="article-anchor" href="#对于Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" aria-hidden="true"></a></h4><p>你需要设置正确的DTB文件，设置方法如下：</p>
+<ul>
+<li>进入SD卡或U盘的<code>BOOT</code>分区下的<code>dtb</code>文件夹。</li>
+<li>在<code>dtb</code>文件夹中找到相应的<code>.dtb</code>文件，如：<ul>
+<li>VIM1: <code>/dtb/meson-gxl-s905x-khadas-vim.dtb</code></li>
+<li>VIM2: <code>/dtb/meson-gxm-khadas-vim2.dtb</code></li>
+<li>VIM3: <code>/dtb/meson-g12b-a311d-khadas-vim3.dtb</code></li>
+<li>VIM3L: <code>/dtb/meson-sm1-khadas-vim3l.dtb</code></li>
+</ul>
 </li>
-<li><p>在Windows下使用工具<code>Win32DiskImager</code>写入。可以参考<a href="/zh-cn/vim1/InstallLibreELEC.html#通过Windows-PC写入">在Windows下安装LibreELEC</a>.</p>
+<li>编辑<code>/extlinux/extlinux.conf</code>里面的<code>FDT</code>，以及<code>uEnv.ini</code>文件里面的<code>dtb_name=</code>设置为上面相应的值。</li>
+</ul>
+<h4 id="对于CoreELEC" class="article-heading"><a href="#对于CoreELEC" class="headerlink" title="对于CoreELEC"></a>对于CoreELEC<a class="article-anchor" href="#对于CoreELEC" aria-hidden="true"></a></h4><ul>
+<li>在SD卡或U盘的<code>COREELEC</code>分区<code>device_trees</code>目录下找到相应的<code>.dtb</code>文件：<ul>
+<li>VIM1：拷贝<code>gxl_p212_2g_kvim.dtb</code>到<code>COREELEC</code>分区，并重命名为<code>dtb.img</code>。</li>
+<li>VIM2：拷贝<code>gxm_kvim2.dtb</code>到<code>COREELEC</code>分区，并重命名为<code>dtb.img</code>。</li>
+<li>VIM3：拷贝<code>g12b_a311d_khadas_vim3</code>到<code>COREELEC</code>分区，并重命名为<code>dtb.img</code>。</li>
+</ul>
 </li>
 </ul>
-<h3 id="2、准备DTB文件" class="article-heading"><a href="#2、准备DTB文件" class="headerlink" title="2、准备DTB文件"></a>2、准备DTB文件<a class="article-anchor" href="#2、准备DTB文件" aria-hidden="true"></a></h3><p>VIM1、VIM2和VIM3使用不同的DTB文件。</p>
-<ul>
-<li>VIM1: 拷贝<code>kvim.dtb</code>、<code>kvim_linux.dtb</code>或者<code>meson-gxl-s905x-khadas-vim.dtb</code>到<code>/boot</code>目录并重命名为<code>dtb.img</code>。</li>
-<li>VIM2: 拷贝<code>kvim2.dtb</code>、<code>kvim2_linux.dtb</code>或者<code>meson-gxm-khadas-vim2.dtb</code>到<code>/boot</code>目录并重命名为<code>dtb.img</code>。</li>
-<li>VIM3: 拷贝<code>kvim3_linux.dtb</code>或者<code>kvim3l_linux.dtb</code>到<code>/boot</code>目录并重命名为<code>dtb.img</code>.<br><strong>注意:<code>VIM3</code>的板子选择<code>kvim3_linux.dtb</code>,<code>VIM3 Light</code>的板子请选择<code>kvim3l_linux.dtb</code>.</strong></li>
+<h4 id="对于Volumio" class="article-heading"><a href="#对于Volumio" class="headerlink" title="对于Volumio"></a>对于Volumio<a class="article-anchor" href="#对于Volumio" aria-hidden="true"></a></h4><ul>
+<li>在SD卡或U盘的<code>BOOT</code>分区<code>dtb</code>目录下找到相应的<code>.dtb</code>文件：<ul>
+<li>VIM1：拷贝<code>kvim.dtb</code>，<code>kvim_linux.dtb</code>或<code>meson-gxl-s905x-khadas-vim.dtb</code>到<code>BOOT</code>分区，并重命名为<code>dtb.img</code>。</li>
+<li>VIM2：拷贝<code>kvim2.dtb</code>，<code>kvim2_linux.dtb</code>或<code>meson-gxm-khadas-vim2.dtb</code>到<code>BOOT</code>分区并重命名为<code>dtb.img</code>。</li>
+<li>VIM3：拷贝<code>kvim3_linux.dtb</code>或<code>kvim3l_linux.dtb</code>到<code>BOOT</code>分区，并重命名为<code>dtb.img</code>。</li>
+</ul>
+</li>
 </ul>
 <h3 id="3、激活多启动" class="article-heading"><a href="#3、激活多启动" class="headerlink" title="3、激活多启动"></a>3、激活多启动<a class="article-anchor" href="#3、激活多启动" aria-hidden="true"></a></h3><p>两种方式激活多启动：<br>1)、通过<a href="/zh-cn/vim1/HowtoBootIntoUpgradeMode.html">按键模式</a>。<br>2)、通过安卓系统激活。</p>
 <ul>
 <li>进入<code>Settings&gt;About Device-&gt;System-&gt;updates</code>。</li>
 <li>点击<code>select</code>并选择<code>aml_autosript.zip</code>。</li>
-<li>点击<code>update</code>，系统会重启运行外部媒体介质固件。<br><strong>注意：不要使用电脑USB供电，要使用适配器供电，否则会导致激活多启动失败！</strong></li>
+<li>点击<code>update</code>，系统会重启运行外部媒体介质固件。</li>
 </ul>
-<h3 id="注意" class="article-heading"><a href="#注意" class="headerlink" title="注意"></a>注意<a class="article-anchor" href="#注意" aria-hidden="true"></a></h3><ul>
-<li><p>对于之前的Android N存在权限问题，所以不能通过之前版本来启动外部媒体介质镜像，否则或导致外部媒体介质镜像被破坏。</p>
-</li>
-<li><p>对于Android O同样有权限问题。如果你想要通过Android O来启动linux 4.9内核的系统，可以参考<a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825/109" target="_blank" rel="noopener">这里</a>解决。</p>
-</li>
-</ul>
+<p><strong>注意：不要使用电脑USB供电，要使用适配器供电，否则会导致激活多启动失败！</strong></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-30T06:40:15.940Z" itemprop="dateModified">上次更新：2019-05-30</time>
+                <time class="article-footer-updated" datetime="2019-10-24T01:30:32.005Z" itemprop="dateModified">上次更新：2019-10-24</time>
                 <a href="BootingCardVsBurningCard.html" class="article-footer-prev" title="启动卡与烧录卡的比较"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="ExtraPowerInput.html" class="article-footer-next" title="外部电源供电"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -189,7 +204,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、把固件写入到SD卡或U盘"><span class="toc-text">1、把固件写入到SD卡或U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、准备DTB文件"><span class="toc-text">2、准备DTB文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、激活多启动"><span class="toc-text">3、激活多启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、把固件写入到SD卡或U盘"><span class="toc-text">1、把固件写入到SD卡或U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、准备DTB文件"><span class="toc-text">2、准备DTB文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对于Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux"><span class="toc-text">对于Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对于CoreELEC"><span class="toc-text">对于CoreELEC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对于Volumio"><span class="toc-text">对于Volumio</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、激活多启动"><span class="toc-text">3、激活多启动</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

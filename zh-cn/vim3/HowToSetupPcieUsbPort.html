@@ -57,18 +57,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有两种方式可以来切换PCIe/USB3.0模式：  使用KBI来切换 在Android/Ubuntu命令行下切换  使用KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvim3#kbi init  查看当">
+  <meta name="description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有多种方式可以来切换PCIe/USB3.0模式：  通过KBI来切换 通过Android菜单来切换 通过Android/Ubuntu命令行来切换  通过KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvi">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何设置PCIe&#x2F;USB3.0端口模式">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToSetupPcieUsbPort.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有两种方式可以来切换PCIe/USB3.0模式：  使用KBI来切换 在Android/Ubuntu命令行下切换  使用KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvim3#kbi init  查看当">
+<meta property="og:description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有多种方式可以来切换PCIe/USB3.0模式：  通过KBI来切换 通过Android菜单来切换 通过Android/Ubuntu命令行来切换  通过KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvi">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/vim3_pcie_usb3_block.png">
-<meta property="og:updated_time" content="2019-06-18T03:53:39.346Z">
+<meta property="og:image" content="https://github.com/tsangyoujun/khadas_docs/blob/master/settings_toggle.jpg?raw=true">
+<meta property="og:image" content="https://github.com/tsangyoujun/khadas_docs/blob/master/mode_switch.jpg?raw=true">
+<meta property="og:updated_time" content="2019-10-24T01:30:32.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何设置PCIe&#x2F;USB3.0端口模式">
-<meta name="twitter:description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有两种方式可以来切换PCIe/USB3.0模式：  使用KBI来切换 在Android/Ubuntu命令行下切换  使用KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvim3#kbi init  查看当">
+<meta name="twitter:description" content="Khadas VIM3包含一个数据切换开关来切换PCIe或USB 3.0模式。默认为USB 3.0模式。下图为逻辑框图：  有多种方式可以来切换PCIe/USB3.0模式：  通过KBI来切换 通过Android菜单来切换 通过Android/Ubuntu命令行来切换  通过KBI来切换PCIe/USB3.0模式你要先 设置串口调试工具，然后进入u-boot命令行模式。  初始化KBI：  kvi">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/vim3_pcie_usb3_block.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -134,12 +136,13 @@
               <div class="article-content" itemprop="articleBody">
                 <p>Khadas VIM3包含一个数据切换开关来切换<code>PCIe</code>或<code>USB 3.0</code>模式。默认为<code>USB 3.0</code>模式。<br>下图为逻辑框图：</p>
 <p><img src="/images/vim3/vim3_pcie_usb3_block.png" alt="VIM3 PCIe/USB3.0 Block"></p>
-<p>有两种方式可以来切换<code>PCIe/USB3.0</code>模式：</p>
+<p>有多种方式可以来切换<code>PCIe/USB3.0</code>模式：</p>
 <ul>
-<li>使用<a href="/zh-cn//vim3/KbiGuidance.html">KBI</a>来切换</li>
-<li>在Android/Ubuntu命令行下切换</li>
+<li>通过<a href="/zh-cn//vim3/KbiGuidance.html">KBI</a>来切换</li>
+<li>通过Android菜单来切换</li>
+<li>通过Android/Ubuntu命令行来切换</li>
 </ul>
-<h3 id="使用KBI来切换PCIe-USB3-0模式" class="article-heading"><a href="#使用KBI来切换PCIe-USB3-0模式" class="headerlink" title="使用KBI来切换PCIe/USB3.0模式"></a>使用KBI来切换<code>PCIe/USB3.0</code>模式<a class="article-anchor" href="#使用KBI来切换PCIe-USB3-0模式" aria-hidden="true"></a></h3><p>你要先 <a href="/zh-cn/vim3/SetupSerialTool.html">设置串口调试工具</a>，然后进入u-boot命令行模式。</p>
+<h3 id="通过KBI来切换PCIe-USB3-0模式" class="article-heading"><a href="#通过KBI来切换PCIe-USB3-0模式" class="headerlink" title="通过KBI来切换PCIe/USB3.0模式"></a>通过KBI来切换<code>PCIe/USB3.0</code>模式<a class="article-anchor" href="#通过KBI来切换PCIe-USB3-0模式" aria-hidden="true"></a></h3><p>你要先 <a href="/zh-cn/vim3/SetupSerialTool.html">设置串口调试工具</a>，然后进入u-boot命令行模式。</p>
 <ul>
 <li>初始化KBI：</li>
 </ul>
@@ -160,11 +163,30 @@
 <p><strong>设置完后一定要给系统断电，以保证配置生效：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi poweroff </span><br><span class="line">do_kbi_poweroff</span><br></pre></td></tr></table></figure>
 <p>然后可以按电源键开机。</p>
-<h3 id="在命令行下设置PCIe-USB3-0模式" class="article-heading"><a href="#在命令行下设置PCIe-USB3-0模式" class="headerlink" title="在命令行下设置PCIe/USB3.0模式"></a>在命令行下设置<code>PCIe/USB3.0</code>模式<a class="article-anchor" href="#在命令行下设置PCIe-USB3-0模式" aria-hidden="true"></a></h3><h4 id="TBD" class="article-heading"><a href="#TBD" class="headerlink" title="TBD"></a>TBD<a class="article-anchor" href="#TBD" aria-hidden="true"></a></h4><h3 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h3><p><a href="/zh-cn/vim3/KbiGuidance.html">KBI Guide</a></p>
+<h3 id="通过Android菜单来设置PCIe-USB3-0模式" class="article-heading"><a href="#通过Android菜单来设置PCIe-USB3-0模式" class="headerlink" title="通过Android菜单来设置PCIe/USB3.0模式"></a>通过Android菜单来设置<code>PCIe/USB3.0</code>模式<a class="article-anchor" href="#通过Android菜单来设置PCIe-USB3-0模式" aria-hidden="true"></a></h3><p>You’ll need to navigate to “Device Preferences” using an IR remote, mouse or attached keyboard.<br>通过遥控或鼠标进入<code>Device Preferences</code>菜单，选择<code>Toggle USB-3.0/PCI-E</code>菜单：</p>
+<p><img src="https://github.com/tsangyoujun/khadas_docs/blob/master/settings_toggle.jpg?raw=true" alt="Android Device Preferences"><br><img src="https://github.com/tsangyoujun/khadas_docs/blob/master/mode_switch.jpg?raw=true" alt="Mode Switch UI"></p>
+<p><strong>设置完后一定要给系统断电，以保证配置生效：</strong></p>
+<h3 id="通过Android-Ubuntu命令行设置PCIe-USB3-0模式" class="article-heading"><a href="#通过Android-Ubuntu命令行设置PCIe-USB3-0模式" class="headerlink" title="通过Android/Ubuntu命令行设置PCIe/USB3.0模式"></a>通过Android/Ubuntu命令行设置<code>PCIe/USB3.0</code>模式<a class="article-anchor" href="#通过Android-Ubuntu命令行设置PCIe-USB3-0模式" aria-hidden="true"></a></h3><ul>
+<li>查看当前模式：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ cat /sys/class/mcu/usb_pcie_switch_mode</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p><code>0</code> - USB 3.0<br><code>1</code> - PCIe</p>
+<ul>
+<li>设置模式为<code>USB 3.0</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ echo 0 &gt; /sys/class/mcu/usb_pcie_switch_mode</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置模式为<code>PCIe</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ echo 1 &gt; /sys/class/mcu/usb_pcie_switch_mode</span><br></pre></td></tr></table></figure>
+<p><strong>设置完后一定要给系统断电，以保证配置生效：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ echo 1 &gt; /sys/class/mcu/poweroff</span><br></pre></td></tr></table></figure>
+<p>然后可以按电源键开机。</p>
+<h3 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h3><p><a href="/zh-cn/vim3/KbiGuidance.html">KBI Guide</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-06-18T03:53:39.346Z" itemprop="dateModified">上次更新：2019-06-18</time>
+                <time class="article-footer-updated" datetime="2019-10-24T01:30:32.041Z" itemprop="dateModified">上次更新：2019-10-24</time>
                 <a href="HowToAccessI2c.html" class="article-footer-prev" title="如何使用I2C接口"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToInstallADBTool.html" class="article-footer-next" title="如何安装ADB调试工具"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -173,7 +195,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用KBI来切换PCIe-USB3-0模式"><span class="toc-text">使用KBI来切换PCIe/USB3.0模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在命令行下设置PCIe-USB3-0模式"><span class="toc-text">在命令行下设置PCIe/USB3.0模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TBD"><span class="toc-text">TBD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过KBI来切换PCIe-USB3-0模式"><span class="toc-text">通过KBI来切换PCIe/USB3.0模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过Android菜单来设置PCIe-USB3-0模式"><span class="toc-text">通过Android菜单来设置PCIe/USB3.0模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过Android-Ubuntu命令行设置PCIe-USB3-0模式"><span class="toc-text">通过Android/Ubuntu命令行设置PCIe/USB3.0模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

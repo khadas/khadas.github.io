@@ -57,18 +57,18 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images(VIM1/VIM2/VIM3). This tutorial is">
+  <meta name="description" content="There are several images that are designed to run from a SD Card or Thumbdrive (U-Disk) and are compatible with VIMs. For example:  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC M">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Boot Images from External Media">
 <meta property="og:url" content="https://docs.khadas.com/vim1/BootFromExtMedia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images(VIM1/VIM2/VIM3). This tutorial is">
+<meta property="og:description" content="There are several images that are designed to run from a SD Card or Thumbdrive (U-Disk) and are compatible with VIMs. For example:  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC M">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
-<meta property="og:updated_time" content="2019-05-23T10:41:05.734Z">
+<meta property="og:updated_time" content="2019-10-24T01:30:31.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Boot Images from External Media">
-<meta name="twitter:description" content="There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, Volumio, CoreELEC, LibreELEC, Armbian images and Khadas SD images(VIM1/VIM2/VIM3). This tutorial is">
+<meta name="twitter:description" content="There are several images that are designed to run from a SD Card or Thumbdrive (U-Disk) and are compatible with VIMs. For example:  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC M">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -132,71 +132,83 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/BootFromExtMedia.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>There are many images that are designed to run from an SD Card or Thumbdrive (U-Disk). For example, <a href="https://forum.khadas.com/t/volumio-for-khadas/1437" target="_blank" rel="noopener">Volumio</a>, <a href="https://coreelec.org/" target="_blank" rel="noopener">CoreELEC</a>, <a href="https://libreelec.tv/downloads_new/khadas-vim/" target="_blank" rel="noopener">LibreELEC</a>, <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian images</a> and Khadas SD images(<a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM1</a>/<a href="https://dl.khadas.com/Firmware/VIM2/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM2</a>/<a href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM3</a>). This tutorial is about how to boot these images.</p>
-<p>In order to boot images from external media you must make sure:</p>
+                <p>There are several images that are designed to run from a SD Card or Thumbdrive (U-Disk) and are compatible with VIMs. For example:</p>
 <ul>
-<li>Android OS is installed on the eMMC</li>
-<li>Activate the Multi-Boot</li>
+<li><a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825" target="_blank" rel="noopener">Armbian with Debian / Ubuntu</a></li>
+<li><a href="https://forum.khadas.com/t/altlinux-sd-usb-emmc/1653" target="_blank" rel="noopener">AltLinux</a></li>
+<li><a href="https://forum.khadas.com/t/archlinux-kodi-sd-usb-emmc/1152" target="_blank" rel="noopener">ArchLinux</a></li>
+<li><a href="https://coreelec.org/" target="_blank" rel="noopener">CoreELEC</a></li>
+<li><a href="https://libreelec.tv/downloads_new/khadas-vim/" target="_blank" rel="noopener">LibreELEC</a></li>
+<li><a href="https://forum.khadas.com/t/manjaro-linux-desktop-environment-for-vim1-vim3/3945" target="_blank" rel="noopener">Manjaro</a></li>
+<li><a href="https://forum.khadas.com/t/volumio-for-khadas/1437" target="_blank" rel="noopener">Volumio</a></li>
+<li>Khadas SD images<ul>
+<li><a href="https://dl.khadas.com/Firmware/VIM1/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM1</a></li>
+<li><a href="https://dl.khadas.com/Firmware/VIM2/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM2</a></li>
+<li><a href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/SD_USB/" target="_blank" rel="noopener">VIM3</a></li>
 </ul>
-<p>For different images you may need different Android versions.</p>
-<p>VIM1 and VIM2:</p>
+</li>
+</ul>
+<p>This tutorial is about how to boot these images.</p>
+<h3 id="Step-1-Clone-image-to-SD-card-or-Thumbdrive-U-Disk" class="article-heading"><a href="#Step-1-Clone-image-to-SD-card-or-Thumbdrive-U-Disk" class="headerlink" title="Step 1. Clone image to SD card or Thumbdrive (U-Disk)"></a>Step 1. Clone image to SD card or Thumbdrive (U-Disk)<a class="article-anchor" href="#Step-1-Clone-image-to-SD-card-or-Thumbdrive-U-Disk" aria-hidden="true"></a></h3><p>There are several ways to burn an image to a SD card or Thumbdrive:</p>
 <ul>
-<li>LibreELEC / Ubuntu with Linux 3.14: You need <strong>Android M</strong> or the latest <strong>Android N (V180207 or later)</strong> or latest Ubuntu running on the eMMC.</li>
-<li>Ubuntu with Linux 4.9: You need <strong>Android O</strong> or latest Ubuntu running on the eMMC.</li>
-</ul>
-<p>VIM3:</p>
-<ul>
-<li>Ubuntu with Linux 4.9: You need Android Q or Ubuntu running on the eMMC.</li>
-</ul>
-<h3 id="Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" class="article-heading"><a href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" class="headerlink" title="Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)"></a>Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)<a class="article-anchor" href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk" aria-hidden="true"></a></h3><ul>
-<li>Download <a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">Etcher</a>, it will clone the image into your SD Card or Thumbdrive. It’s got a user-friendly GUI for beginners, and is compatible with Mac, Windows and Linux.After decompression, it is an executable file. Select firmware and it will automatically identify your USB device.</li>
+<li><a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">Etcher</a> got a user-friendly GUI for beginners, and is compatible with Mac, Windows and Linux. Simply select an image and it will automatically identify your external device which the image is going to be burned to. <strong>(Recommended)</strong></li>
 </ul>
 <p><img src="/images/vim1/HowtoUseEtcher.png" alt="Howto Use Etcher"></p>
 <ul>
-<li><p>Else, use <code>dd</code> on Ubuntu:</p>
-</li>
-<li><p>Use <code>dd</code> on the Ubuntu command line</p>
-</li>
+<li><code>dd</code> on Ubuntu / Debian with command line:</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=/path/to/image of=/dev/sdX bs=8M</span><br></pre></td></tr></table></figure>
+<h3 id="Step-2-Select-the-appropriate-DTB-file" class="article-heading"><a href="#Step-2-Select-the-appropriate-DTB-file" class="headerlink" title="Step 2. Select the appropriate DTB file"></a>Step 2. Select the appropriate DTB file<a class="article-anchor" href="#Step-2-Select-the-appropriate-DTB-file" aria-hidden="true"></a></h3><p><strong>If the image you choose is Khadas SD image, skip this step and goto Step 3.</strong></p>
+<h4 id="For-Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" class="article-heading"><a href="#For-Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" class="headerlink" title="For Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux"></a>For Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux<a class="article-anchor" href="#For-Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux" aria-hidden="true"></a></h4><p>You need to select the appropriate DTB file.</p>
 <ul>
-<li><p>Or, <code>Win32DiskImager</code> on Windows:</p>
+<li><p>Navigate to your SD card’s / Thumbdrive’s <code>BOOT</code> partition, and open the folder labelled <code>dtb</code>.</p>
 </li>
-<li><p>Use <code>Win32DiskImager</code> on Windows. Please refer to <a href="/vim1/InstallLibreELEC.html#On-Windows-PC">Install LibreELEC Via Windows PC</a>.</p>
+<li><p>Find the correct .dtb filename in the folder <code>/dtb</code>. Examples:</p>
+<ul>
+<li>VIM1: <code>/dtb/meson-gxl-s905x-khadas-vim.dtb</code></li>
+<li>VIM2: <code>/dtb/meson-gxm-khadas-vim2.dtb</code></li>
+<li>VIM3: <code>/dtb/meson-g12b-a311d-khadas-vim3.dtb</code></li>
+<li>VIM3L: <code>/dtb/meson-sm1-khadas-vim3l.dtb</code></li>
+</ul>
+</li>
+<li>Edit <code>FDT</code> in <code>/extlinux/extlinux.conf</code> and <code>dtb_name=</code> in <code>uEnv.ini</code> with the correct dtb filename.</li>
+</ul>
+<h4 id="For-CoreELEC" class="article-heading"><a href="#For-CoreELEC" class="headerlink" title="For CoreELEC"></a>For CoreELEC<a class="article-anchor" href="#For-CoreELEC" aria-hidden="true"></a></h4><ul>
+<li>Find the appropriate <code>.dtb</code> file in <code>COREELEC</code> partition <code>dtb</code> folder:<ul>
+<li>VIM1: Copy <code>gxl_p212_2g_kvim.dtb</code> to <code>COREELEC</code> partition, and rename it to <code>dtb.img</code>.</li>
+<li>VIM2: Copy <code>gxm_kvim2.dtb</code> to <code>COREELEC</code> partition, and rename it to <code>dtb.img</code>.</li>
+<li>VIM3: Copy <code>g12b_a311d_khadas_vim3</code> to <code>COREELEC</code> partition, and rename it to <code>dtb.img</code>.</li>
+</ul>
 </li>
 </ul>
-<h3 id="Step-2-Copy-the-Appropriate-DTB-File" class="article-heading"><a href="#Step-2-Copy-the-Appropriate-DTB-File" class="headerlink" title="Step 2. Copy the Appropriate DTB File"></a>Step 2. Copy the Appropriate DTB File<a class="article-anchor" href="#Step-2-Copy-the-Appropriate-DTB-File" aria-hidden="true"></a></h3><ul>
-<li><p>Unplug then plug your SD card into your computer (re-mount it).</p>
-</li>
-<li><p>Navigate to your SD card’s <code>/boot</code> directory, and open the folder labelled <code>DTB</code>.</p>
-</li>
-<li><p>Find the appropriate <code>.dtb</code> file and copy it into your SD card’s <code>/boot</code> directory.</p>
-</li>
-<li><p>For VIM1: Copy <code>kvim.dtb</code>, <code>kvim_linux.dtb</code> or <code>meson-gxl-s905x-khadas-vim.dtb</code> to <code>/boot</code>, and rename it to <code>dtb.img</code>.</p>
-</li>
-<li>For VIM2: Copy <code>kvim2.dtb</code>, <code>kvim2_linux.dtb</code> or <code>meson-gxm-khadas-vim2.dtb</code> to <code>/boot</code>, and rename it to <code>dtb.img</code>.</li>
-<li>For VIM3: Copy <code>kvim3_linux.dtb</code> or <code>kvim3l_linux.dtb</code> to <code>/boot</code>, and rename it to <code>dtb.img</code>.</li>
+<h4 id="For-Volumio" class="article-heading"><a href="#For-Volumio" class="headerlink" title="For Volumio"></a>For Volumio<a class="article-anchor" href="#For-Volumio" aria-hidden="true"></a></h4><ul>
+<li>Find the appropriate <code>.dtb</code> file in <code>BOOT</code> partition <code>dtb</code> folder:<ul>
+<li>VIM1: Copy <code>kvim.dtb</code>, <code>kvim_linux.dtb</code> or <code>meson-gxl-s905x-khadas-vim.dtb</code> to <code>BOOT</code> partition, and rename it to <code>dtb.img</code>.</li>
+<li>VIM2: Copy <code>kvim2.dtb</code>, <code>kvim2_linux.dtb</code> or <code>meson-gxm-khadas-vim2.dtb</code> to <code>BOOT</code> partition, and rename it to <code>dtb.img</code>.</li>
+<li>VIM3: Copy <code>kvim3_linux.dtb</code> or <code>kvim3l_linux.dtb</code> to <code>BOOT</code> partition, and rename it to <code>dtb.img</code>.</li>
 </ul>
-<p><strong>Note:if you board is <code>VIM3</code>,please choose <code>kvim3_linux.dtb</code>, or your board is <code>VIM3 Light</code>,please choose <code>kvim3l_linux.dtb</code>.</strong></p>
-<h3 id="Step-3-Boot-VIM-from-SD-Card" class="article-heading"><a href="#Step-3-Boot-VIM-from-SD-Card" class="headerlink" title="Step 3. Boot VIM from SD Card"></a>Step 3. Boot VIM from SD Card<a class="article-anchor" href="#Step-3-Boot-VIM-from-SD-Card" aria-hidden="true"></a></h3><p>There are 2 ways to boot from the SD Card:</p>
-<p>1). Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode (Side-Buttons)</a></p>
-<p>2). Activate Multi-Boot via Android.</p>
+</li>
+</ul>
+<h3 id="Step-3-Boot-VIMs-from-SD-card-or-Thumbdrive" class="article-heading"><a href="#Step-3-Boot-VIMs-from-SD-card-or-Thumbdrive" class="headerlink" title="Step 3. Boot VIMs from SD card or Thumbdrive"></a>Step 3. Boot VIMs from SD card or Thumbdrive<a class="article-anchor" href="#Step-3-Boot-VIMs-from-SD-card-or-Thumbdrive" aria-hidden="true"></a></h3><p>There are several ways to boot (activate multi-boot) from the SD card / Thumbdrive:</p>
+<ul>
+<li><p>Via <a href="/vim1/HowtoBootIntoUpgradeMode.html">Keys mode (Side-Buttons)</a> - the easiest and fastest way</p>
+</li>
+<li><p>Via Android</p>
 <ul>
 <li>Enter <code>Settings-&gt;About Device-&gt;System-&gt;Updates</code>.</li>
 <li>Click select and choose <code>aml_autosript.zip</code>.</li>
 <li>Click update, then the system will reboot and boot from the external media image.</li>
 </ul>
-<p><strong>WARNING: Don’t use your PC as the USB-Host to supply the electrical power, lest it will fail to activate Multi-Boot!</strong></p>
+</li>
+</ul>
+<p><strong>WARNING: Don’t use your PC as the USB-Host to supply the electrical power, otherwise it will fail to activate Multi-Boot!</strong></p>
 <h3 id="NOTICE" class="article-heading"><a href="#NOTICE" class="headerlink" title="NOTICE"></a>NOTICE<a class="article-anchor" href="#NOTICE" aria-hidden="true"></a></h3><ul>
-<li><p>Android N has a permission issue. You cannot use it to boot from your external media image without damaging your SD card.</p>
-</li>
-<li><p>Android O also has a permission issue. If you want to boot Ubuntu with Linux 4.9 please refer to <a href="http://forum.khadas.com/t/armbian-kodi-ubuntu-debian-for-sd-usb-emmc/825/109" target="_blank" rel="noopener">this guide</a>.</p>
-</li>
+<li>If any other OS than Android, Armbian or LibreELEC has been installed to eMMC and you want to install either Armbian or LibreELEC to eMMC, the eMMC has to be completely wiped with <code>dd</code> before latest Android is burned to eMMC by following <a href="https://docs.khadas.com/vim1/UpgradeViaUSBCable.html">Upgrade Via a USB-C Cable</a>.</li>
 </ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-23T10:41:05.734Z" itemprop="dateModified">Last updated: 2019-05-23</time>
+                <time class="article-footer-updated" datetime="2019-10-24T01:30:31.949Z" itemprop="dateModified">Last updated: 2019-10-24</time>
                 <a href="BootingCardVsBurningCard.html" class="article-footer-prev" title="Booting Card Vs Burning Card"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="ExtraPowerInput.html" class="article-footer-next" title="Extra Power Input"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -205,7 +217,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Clone-image-to-SD-Card-or-Thumbdrive-U-Disk"><span class="toc-text">Step 1. Clone image to SD-Card or Thumbdrive (U-Disk)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Copy-the-Appropriate-DTB-File"><span class="toc-text">Step 2. Copy the Appropriate DTB File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Boot-VIM-from-SD-Card"><span class="toc-text">Step 3. Boot VIM from SD Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Clone-image-to-SD-card-or-Thumbdrive-U-Disk"><span class="toc-text">Step 1. Clone image to SD card or Thumbdrive (U-Disk)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Select-the-appropriate-DTB-file"><span class="toc-text">Step 2. Select the appropriate DTB file</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux"><span class="toc-text">For Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-CoreELEC"><span class="toc-text">For CoreELEC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Volumio"><span class="toc-text">For Volumio</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Boot-VIMs-from-SD-card-or-Thumbdrive"><span class="toc-text">Step 3. Boot VIMs from SD card or Thumbdrive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOTICE"><span class="toc-text">NOTICE</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
@@ -213,7 +225,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="VimInterfaces.html" class="sidebar-link">VIM1 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="sidebar-link current">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pin-Outs</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="sidebar-link">How To Install ADB Tool</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="sidebar-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use PRi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">Dual OS</a><a href="FirmwareUboot.html" class="sidebar-link">U-Boot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="VimInterfaces.html" class="sidebar-link">VIM1 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="sidebar-link current">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pin-Outs</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="sidebar-link">How To Install ADB Tool</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="sidebar-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">Dual OS</a><a href="FirmwareUboot.html" class="sidebar-link">U-Boot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
   </div>
 </aside>
     </div>
@@ -243,7 +255,7 @@
       </li>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="VimInterfaces.html" class="mobile-nav-link">VIM1 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link current">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pin-Outs</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">How To Install ADB Tool</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="mobile-nav-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use PRi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">Dual OS</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-Boot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="VimInterfaces.html" class="mobile-nav-link">VIM1 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link current">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pin-Outs</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">How To Install ADB Tool</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="mobile-nav-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">Dual OS</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-Boot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
     
   </div>
   <div id="mobile-lang-select-wrap">
