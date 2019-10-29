@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>如何使用NPU | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim3/HowToUseNpu.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToUseNpu.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToUseNpu.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="下载NPU相关工具包SDK请访问这里来获取SDK下载链接。 下载NPU相关SDK到某个目录，如：~/npu 目录说明：  docs：模型转换说明文档 acuity-toolkit：模型转换相关工具 linux_sdk：Linux SDK android_sdk：Android SDK  环境搭建要使用模型转换工具必须要先安装TensorFlow等工具。 主机环境要求：  Ubuntu 16.04">
+<meta property="og:type" content="website">
+<meta property="og:title" content="如何使用NPU">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToUseNpu.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="下载NPU相关工具包SDK请访问这里来获取SDK下载链接。 下载NPU相关SDK到某个目录，如：~/npu 目录说明：  docs：模型转换说明文档 acuity-toolkit：模型转换相关工具 linux_sdk：Linux SDK android_sdk：Android SDK  环境搭建要使用模型转换工具必须要先安装TensorFlow等工具。 主机环境要求：  Ubuntu 16.04">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-10-29T06:35:26.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何使用NPU">
+<meta name="twitter:description" content="下载NPU相关工具包SDK请访问这里来获取SDK下载链接。 下载NPU相关SDK到某个目录，如：~/npu 目录说明：  docs：模型转换说明文档 acuity-toolkit：模型转换相关工具 linux_sdk：Linux SDK android_sdk：Android SDK  环境搭建要使用模型转换工具必须要先安装TensorFlow等工具。 主机环境要求：  Ubuntu 16.04">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToUseNpu.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">如何使用NPU</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToUseNpu.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="下载NPU相关工具包SDK" class="article-heading"><a href="#下载NPU相关工具包SDK" class="headerlink" title="下载NPU相关工具包SDK"></a>下载NPU相关工具包SDK<a class="article-anchor" href="#下载NPU相关工具包SDK" aria-hidden="true"></a></h3><p>请访问<a href="https://www.khadas.com/npu-toolkit-vim3" target="_blank" rel="noopener">这里</a>来获取SDK下载链接。</p>
+<p>下载NPU相关SDK到某个目录，如：<code>~/npu</code></p>
+<p>目录说明：</p>
+<ul>
+<li>docs：模型转换说明文档</li>
+<li>acuity-toolkit：模型转换相关工具</li>
+<li>linux_sdk：Linux SDK</li>
+<li>android_sdk：Android SDK</li>
+</ul>
+<h3 id="环境搭建" class="article-heading"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建<a class="article-anchor" href="#环境搭建" aria-hidden="true"></a></h3><p>要使用模型转换工具必须要先安装<a href="https://www.tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a>等工具。</p>
+<p>主机环境要求：</p>
+<ul>
+<li><code>Ubuntu 16.04 X64</code></li>
+<li><code>Ubuntu 18.04 X64</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install python3 python3-pip python3-virtualenv</span><br><span class="line">$ cd ~/npu/aml_npu_sdk/acuity-toolkit</span><br><span class="line">$ for req in $(cat requirements.txt); do pip3 install $req; done</span><br></pre></td></tr></table></figure>
+<p><em>注意：默认安装的TensorFlow为CPU版本，如果你的电脑有英伟达GPU，你也可以选择安装<a href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener">GPU版本</a>来加速模型转换速度。</em></p>
+<p>验证TensorFlow安装：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nick@Nick:~/npu/aml_npu_sdk/acuity-toolkit$ python3</span><br><span class="line">Python 3.5.2 (default, Jul 10 2019, 11:58:48) </span><br><span class="line">[GCC 5.4.0 20160609] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; sess = tf.Session()</span><br><span class="line">&gt;&gt;&gt; hello = tf.constant(&quot;Hello World&quot;)</span><br><span class="line">&gt;&gt;&gt; print(sess.run(hello))</span><br><span class="line">b&apos;Hello World&apos;</span><br></pre></td></tr></table></figure></p>
+<p>如果看到<code>Hello World</code>打印说明<code>TensorFlow</code>安装成功。</p>
+<h3 id="模型转换" class="article-heading"><a href="#模型转换" class="headerlink" title="模型转换"></a>模型转换<a class="article-anchor" href="#模型转换" aria-hidden="true"></a></h3><p>要想把训练好的模型部署在VIM3上运行，需要进行模型转换，当前只支持 <code>Caffe/Tensorflow/Tflite/Darknet/Onnx</code> 等模型。</p>
+<p>SDK里面自带了一个<code>TensorFlow</code>模型转换的示例脚本。执行如下脚本进行模型转换：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/npu/aml_npu_sdk/acuity-toolkit/conversion_scripts</span><br><span class="line">$ ./0_import_model.sh</span><br><span class="line">$ ./1_quantize_model.sh</span><br><span class="line">$ ./2_export_case_code.sh</span><br></pre></td></tr></table></figure>
+<p>转换成功后会生成case代码在目录<code>nbg_unify_model-name</code>如：<code>nbg_unify_inception_v3</code>下，这个就是我们最终需要的代码，可以编译后放在VIM3上运行。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd nbg_unify_inception_v3</span><br><span class="line">$ ll</span><br><span class="line">drwxrwxr-x 2 nick nick     4096 9月  20 15:16 ./</span><br><span class="line">drwxrwxr-x 5 nick nick     4096 9月  20 15:16 ../</span><br><span class="line">-rw-rw-r-- 1 nick nick      577 9月  20 15:16 BUILD</span><br><span class="line">-rw-rw-r-- 1 nick nick    37763 9月  20 15:16 .cproject</span><br><span class="line">-rw-rw-r-- 1 nick nick 28807168 9月  20 15:16 inception_v3.nb</span><br><span class="line">-rw-rw-r-- 1 nick nick    12691 9月  20 15:16 inceptionv3.vcxproj</span><br><span class="line">-rw-rw-r-- 1 nick nick     5869 9月  20 15:16 main.c</span><br><span class="line">-rw-rw-r-- 1 nick nick     2000 9月  20 15:16 makefile.linux</span><br><span class="line">-rw-rw-r-- 1 nick nick     2194 9月  20 15:16 .project</span><br><span class="line">-rw-rw-r-- 1 nick nick      358 9月  20 15:16 vnn_global.h</span><br><span class="line">-rw-rw-r-- 1 nick nick     7191 9月  20 15:16 vnn_inceptionv3.c</span><br><span class="line">-rw-rw-r-- 1 nick nick      985 9月  20 15:16 vnn_inceptionv3.h</span><br><span class="line">-rw-rw-r-- 1 nick nick     3566 9月  20 15:16 vnn_post_process.c</span><br><span class="line">-rw-rw-r-- 1 nick nick      464 9月  20 15:16 vnn_post_process.h</span><br><span class="line">-rw-rw-r-- 1 nick nick    20385 9月  20 15:16 vnn_pre_process.c</span><br><span class="line">-rw-rw-r-- 1 nick nick     1294 9月  20 15:16 vnn_pre_process.h</span><br></pre></td></tr></table></figure>
+<p><em>注意：如果你要转换自己的模型，那么需要修改脚本里面相应文件的路径和参数。</em></p>
+<p>以上是一个模型转换的示例脚本，更多详细信息请参考模型转换文档<code>docs/Model-convert-0.4-Wesion_zh.pdf</code>。</p>
+<h3 id="编译转换好的case代码" class="article-heading"><a href="#编译转换好的case代码" class="headerlink" title="编译转换好的case代码"></a>编译转换好的case代码<a class="article-anchor" href="#编译转换好的case代码" aria-hidden="true"></a></h3><h4 id="基于Linux运行" class="article-heading"><a href="#基于Linux运行" class="headerlink" title="基于Linux运行"></a>基于Linux运行<a class="article-anchor" href="#基于Linux运行" aria-hidden="true"></a></h4><p>要想在VIM3上运行这个模型，需要编译上述转换好的case代码。<br>需要交叉编译代码，这里使用<a href="/zh-cn/vim3/FenixScript.html">Fenix</a>来提供交叉编译工具链。</p>
+<ul>
+<li>从示例demo中拷贝编译脚本到转换的case代码目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~/npu/aml_npu_sdk/acuity-toolkit/conversion_scripts/nbg_unify_inception_v3</span><br><span class="line">$ cp ~/npu/aml_npu_sdk/linux_sdk/demo/inceptionv3/build_vx.sh .</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编译case代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ./build_vx.sh ~/npu/aml_npu_sdk/linux_sdk/linux_sdk ~/code/fenix</span><br></pre></td></tr></table></figure>
+<p><em>说明： 编译脚本用法： <strong>./build_vx.sh linux-SDK-directory fenix-directory</strong>。</em></p>
+<p>编译成功后生成的可执行文件在目录<code>bin_r</code>下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ll bin_r/</span><br><span class="line">total 172</span><br><span class="line">drwxrwxr-x 2 nick nick   4096 9月  20 15:24 ./</span><br><span class="line">drwxrwxr-x 3 nick nick   4096 9月  20 15:24 ../</span><br><span class="line">-rwxrwxr-x 1 nick nick 129568 9月  20 15:24 inceptionv3*</span><br><span class="line">-rw-rw-r-- 1 nick nick   6272 9月  20 15:24 main.o</span><br><span class="line">-rw-rw-r-- 1 nick nick   3888 9月  20 15:24 vnn_inceptionv3.o</span><br><span class="line">-rw-rw-r-- 1 nick nick   3496 9月  20 15:24 vnn_post_process.o</span><br><span class="line">-rw-rw-r-- 1 nick nick  16624 9月  20 15:24 vnn_pre_process.o</span><br></pre></td></tr></table></figure>
+<p><code>inceptionv3</code>即为编译好的可执行文件。</p>
+<ul>
+<li>在VIM3上运行</li>
+</ul>
+<p>固件版本需要<a href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/EMMC/" target="_blank" rel="noopener">V190830</a>及以上版本，并更新至最新系统。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sync</span><br><span class="line">$ sudo reboot</span><br></pre></td></tr></table></figure>
+<p>拷贝上面编译生成的可执行文件<code>inceptionv3</code>以及模型文件<code>inception_v3.nb</code>到VIM3上，同时拷贝要识别的图片（尺寸为299x299的jpeg图片）到VIM3上并运行。</p>
+<p><em>说明：示例图片可以在目录<code>linux_sdk/demo/inceptionv3/bin_demo</code>下面找到。</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~/inceptionv3# ./inceptionv3 inception_v3.nb goldfish_299x299.jpg </span><br><span class="line">D [setup_node:367]Setup node id[0] uid[0] op[NBG]</span><br><span class="line">D [print_tensor:129]in : id[   1] shape[ 3, 299, 299, 1   ] fmt[u8 ] qnt[ASM zp=137, scale=0.007292]</span><br><span class="line">D [print_tensor:129]out: id[   0] shape[ 1001, 1          ] fmt[f16] qnt[NONE]</span><br><span class="line">D [optimize_node:311]Backward optimize neural network</span><br><span class="line">D [optimize_node:318]Forward optimize neural network</span><br><span class="line">I [compute_node:260]Create vx node</span><br><span class="line">Create Neural Network: 40ms or 40037us</span><br><span class="line">I [vsi_nn_PrintGraph:1308]Graph:</span><br><span class="line">I [vsi_nn_PrintGraph:1309]***************** Tensors ******************</span><br><span class="line">D [print_tensor:137]id[   0] shape[ 1001, 1          ] fmt[f16] qnt[NONE]</span><br><span class="line">D [print_tensor:137]id[   1] shape[ 3, 299, 299, 1   ] fmt[u8 ] qnt[ASM zp=137, scale=0.007292]</span><br><span class="line">I [vsi_nn_PrintGraph:1318]***************** Nodes ******************</span><br><span class="line">I [vsi_nn_PrintNode:156](             NBG)node[0] [in: 1 ], [out: 0 ] [33f7cec0]</span><br><span class="line">I [vsi_nn_PrintGraph:1327]******************************************</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 268203 data.</span><br><span class="line">Verify...</span><br><span class="line">Verify Graph: 1ms or 1562us</span><br><span class="line">Start run graph [1] times...</span><br><span class="line">Run the 1 time: 27ms or 27960us</span><br><span class="line">vxProcessGraph execution time:</span><br><span class="line">Total   27ms or 27973us</span><br><span class="line">Average 27.97ms or 27973.00us</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 2002 data.</span><br><span class="line"> --- Top5 ---</span><br><span class="line">  2: 0.826660</span><br><span class="line">795: 0.008255</span><br><span class="line">974: 0.004066</span><br><span class="line">393: 0.002390</span><br><span class="line">408: 0.002285</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 2002 data.</span><br></pre></td></tr></table></figure>
+<p>这个demo只是做了top5处理，可以看到识别的概率最大为索引<code>2</code>的<code>0.826660</code>，对比labels <code>linux_sdk/inceptionv3_demo/bin_demo/imagenet_slim_labels.txt</code>可以发现识别出来是<code>金鱼</code>，结果正确。</p>
+<h4 id="基于Android运行" class="article-heading"><a href="#基于Android运行" class="headerlink" title="基于Android运行"></a>基于Android运行<a class="article-anchor" href="#基于Android运行" aria-hidden="true"></a></h4><p>参考Android&amp;Linux编译集成指导<code>docs/Android-Linux-compile-guidance-0.1-Wesion_zh.pdf</code> Android相关部分。</p>
+<h3 id="写在最后" class="article-heading"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后<a class="article-anchor" href="#写在最后" aria-hidden="true"></a></h3><p>以上只是简单说明了模型转换以及case代码编译运行，更多详细信息请参考模型转换文档<code>docs/Model-convert-0.4-Wesion_zh.pdf</code>。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-10-29T06:35:26.615Z" itemprop="dateModified">上次更新：2019-10-29</time>
+                <a href="SetupSerialTool.html" class="article-footer-prev" title="设置串口调试工具"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowtoEraseEMMC.html" class="article-footer-next" title="如何擦除eMMC存储器"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载NPU相关工具包SDK"><span class="toc-text">下载NPU相关工具包SDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模型转换"><span class="toc-text">模型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译转换好的case代码"><span class="toc-text">编译转换好的case代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基于Linux运行"><span class="toc-text">基于Linux运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基于Android运行"><span class="toc-text">基于Android运行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写在最后"><span class="toc-text">写在最后</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="sidebar-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a><a href="GPIOPinout.html" class="sidebar-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="sidebar-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="sidebar-link">NVMe SSD支持列表</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="sidebar-link current">如何使用NPU</a><a href="HowtoEraseEMMC.html" class="sidebar-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="sidebar-link">如何安装ADB调试工具</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="sidebar-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="SetupADB.html" class="sidebar-link">设置ADB</a><a href="HowtoUseWol.html" class="sidebar-link">如何使用WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="sidebar-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="sidebar-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="sidebar-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="InstallTensorFlow.html" class="sidebar-link">安装TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a><a href="SetupGolang.html" class="sidebar-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="sidebar-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">如何使用RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong><strong class="sidebar-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">第三方固件</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="mobile-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="mobile-nav-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="mobile-nav-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="mobile-nav-link">NVMe SSD支持列表</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="mobile-nav-link current">如何使用NPU</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">如何安装ADB调试工具</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="SetupADB.html" class="mobile-nav-link">设置ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">如何使用WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="mobile-nav-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="mobile-nav-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="InstallTensorFlow.html" class="mobile-nav-link">安装TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a><a href="SetupGolang.html" class="mobile-nav-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">如何使用RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong><strong class="mobile-nav-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">第三方固件</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToUseNpu.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
