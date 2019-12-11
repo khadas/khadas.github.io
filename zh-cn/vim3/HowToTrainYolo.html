@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>使用darknet训练自己的yolo模型 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToTrainYolo.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
+<meta property="og:type" content="website">
+<meta property="og:title" content="使用darknet训练自己的yolo模型">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/howto_labelImg_tool.png">
+<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用darknet训练自己的yolo模型">
+<meta name="twitter:description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToTrainYolo.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">使用darknet训练自己的yolo模型</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainYolo.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="准备" class="article-heading"><a href="#准备" class="headerlink" title="准备"></a>准备<a class="article-anchor" href="#准备" aria-hidden="true"></a></h2><h3 id="搭建darknet开发环境" class="article-heading"><a href="#搭建darknet开发环境" class="headerlink" title="搭建darknet开发环境"></a>搭建darknet开发环境<a class="article-anchor" href="#搭建darknet开发环境" aria-hidden="true"></a></h3><p>darknet的搭建可以参考这个文档，安装需求搭建<a href="/zh-cn/vim3/HowToInstallDarknet.html">安装配置darknet环境</a><br>darknet环境训练yolo模型的几点说明：</p>
+<blockquote>
+<ol>
+<li>opencv的选项一定要打开 </li>
+<li>使用GPU训练的，最好要有8G以上的显存</li>
+<li>使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明</li>
+</ol>
+</blockquote>
+<h3 id="建立数据集目录" class="article-heading"><a href="#建立数据集目录" class="headerlink" title="建立数据集目录"></a>建立数据集目录<a class="article-anchor" href="#建立数据集目录" aria-hidden="true"></a></h3><p>训练的数据集按照voc训练的数据标准来定。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ mkdir VOCdevkit</span><br><span class="line">$ <span class="built_in">cd</span> VOCdevkit</span><br><span class="line">$ mkdir VOC2019</span><br><span class="line">$ <span class="built_in">cd</span> VOC2019</span><br><span class="line">$ mkdir Annotations ImageSets JPEGImages SegmentationClass SegmentationObject</span><br><span class="line">$ <span class="built_in">cd</span> ImageSets</span><br><span class="line">$ mkdir Main</span><br></pre></td></tr></table></figure></p>
+<p>建立完的目录如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd $workspace</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">└── VOCdevkit</span><br><span class="line">    └── VOC2019</span><br><span class="line">        ├── Annotations</span><br><span class="line">        ├── ImageSets</span><br><span class="line">        │   └── Main</span><br><span class="line">        ├── JPEGImages</span><br><span class="line">        ├── labels</span><br><span class="line">        ├── SegmentationClass</span><br><span class="line">        └── SegmentationObject</span><br></pre></td></tr></table></figure></p>
+<h3 id="准备数据集" class="article-heading"><a href="#准备数据集" class="headerlink" title="准备数据集"></a>准备数据集<a class="article-anchor" href="#准备数据集" aria-hidden="true"></a></h3><p>把训练的图片放入<code>$workspace/VOCdevkit/VOC2019/JPEGImages/</code>中。<br>这里对于训练图片的准备有一下说明:</p>
+<blockquote>
+<ol>
+<li>一个图片中可以包含多个训练的对象</li>
+<li>训练的对象在图中的占比不能大于50%，同时不能过小，yolo模型对小物体的识别效果一般</li>
+<li>图片的尺寸没有要求，最好是1比1的</li>
+<li>图片数据的样本大小，每个训练的类不能少于300</li>
+</ol>
+</blockquote>
+<h2 id="数据集处理" class="article-heading"><a href="#数据集处理" class="headerlink" title="数据集处理"></a>数据集处理<a class="article-anchor" href="#数据集处理" aria-hidden="true"></a></h2><p>移动物体检测的模型基本都要为训练样本做标注，标注工具使用github上开源的一款工具</p>
+<h3 id="labelImg工具" class="article-heading"><a href="#labelImg工具" class="headerlink" title="labelImg工具"></a>labelImg工具<a class="article-anchor" href="#labelImg工具" aria-hidden="true"></a></h3><h4 id="依赖包安装" class="article-heading"><a href="#依赖包安装" class="headerlink" title="依赖包安装"></a>依赖包安装<a class="article-anchor" href="#依赖包安装" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install pyqt4-dev-tools lxml git python-lxml python3 python3-dev</span><br></pre></td></tr></table></figure>
+<h4 id="安装labelImg" class="article-heading"><a href="#安装labelImg" class="headerlink" title="安装labelImg"></a>安装labelImg<a class="article-anchor" href="#安装labelImg" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/tzutalin/labelImg</span><br><span class="line">$ <span class="built_in">cd</span> labelImg/</span><br><span class="line">$ python3 labelImg.py</span><br></pre></td></tr></table></figure>
+<p>安装依赖正确就会打开一个图形化工具。如下图所示:<br><img src="/images/vim3/darknet_labelImg_tool.png" alt="ai-examples0002-1"></p>
+<h3 id="制作标签" class="article-heading"><a href="#制作标签" class="headerlink" title="制作标签"></a>制作标签<a class="article-anchor" href="#制作标签" aria-hidden="true"></a></h3><h4 id="设置路径" class="article-heading"><a href="#设置路径" class="headerlink" title="设置路径"></a>设置路径<a class="article-anchor" href="#设置路径" aria-hidden="true"></a></h4><p>如上图所示，两个方框分别是原始图片的路径和标注后xml文件的路径</p>
+<blockquote>
+<p>Opendir            –&gt;     <code>$workspace/VOCdevkit/VOC2019/JPEGImages/</code><br>Change save dir    –&gt;     <code>$workspace/VOCdevkit/VOC2019/Annotations/</code></p>
+</blockquote>
+<h4 id="设置labels" class="article-heading"><a href="#设置labels" class="headerlink" title="设置labels"></a>设置labels<a class="article-anchor" href="#设置labels" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/labelImg/data/</span><br><span class="line">$ vim predefined_classes.txt</span><br></pre></td></tr></table></figure>
+<p>可以看到默认的类别为20个，可以加在默认的类别后面，或者清空只写入你要训练的类别。<br>这里使用khadas的物体检测为例:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">Heatsink(Edge)</span><br></pre></td></tr></table></figure></p>
+<h4 id="标注" class="article-heading"><a href="#标注" class="headerlink" title="标注"></a>标注<a class="article-anchor" href="#标注" aria-hidden="true"></a></h4><p>如下图所示:<br><img src="/images/vim3/howto_labelImg_tool.png" alt="ai-examples0002-2"></p>
+<blockquote>
+<ol>
+<li>点击左边的’Create’按钮创建新的标注，或者按快捷键<code>w</code>.保存选择一个labels保存，右边这里可以看到labels。</li>
+<li>按照图中的标识1，把需要识别的物体整个放入标识框内。</li>
+<li>按照图中的标识2，设置相应的labels。点击右边的labels。相应的框会变亮。<br><strong>注意</strong> : labels一定要和识别框正确对应上，否则会导致训练失败。</li>
+</ol>
+</blockquote>
+<h3 id="格式转换" class="article-heading"><a href="#格式转换" class="headerlink" title="格式转换"></a>格式转换<a class="article-anchor" href="#格式转换" aria-hidden="true"></a></h3><p>所有的图片标注完了以后，还需要转成yolo模型的数据。</p>
+<h4 id="生成list文件" class="article-heading"><a href="#生成list文件" class="headerlink" title="生成list文件"></a>生成list文件<a class="article-anchor" href="#生成list文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ vim xml2txt.py</span><br></pre></td></tr></table></figure>
+<p>把下面的转换代码写入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">from os import listdir, getcwd</span><br><span class="line">from os.path import join</span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    source_folder=&apos;VOCdevkit/VOC2019/JPEGImages/&apos;</span><br><span class="line">    dest=&apos;VOCdevkit/VOC2019/ImageSets/Main/train.txt&apos;</span><br><span class="line">    dest2=&apos;VOCdevkit/VOC2019/ImageSets/Main/val.txt&apos;</span><br><span class="line">    file_list=os.listdir(source_folder)</span><br><span class="line">    train_file=open(dest,&apos;a&apos;)</span><br><span class="line">    val_file=open(dest2,&apos;a&apos;)</span><br><span class="line">    file_num=0</span><br><span class="line">    for file_obj in file_list:</span><br><span class="line">        file_path=os.path.join(source_folder,file_obj)</span><br><span class="line"></span><br><span class="line">        file_name,file_extend=os.path.splitext(file_obj)</span><br><span class="line"></span><br><span class="line">        if(file_num&lt;4000):</span><br><span class="line"></span><br><span class="line">            train_file.write(file_name+&apos;\n&apos;)</span><br><span class="line">        else :</span><br><span class="line">            val_file.write(file_name+&apos;\n&apos;)</span><br><span class="line">        file_num=file_num+1</span><br><span class="line">    train_file.close()</span><br><span class="line">val_file.close()</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中file_num依照你的样本数而定。例如你的样本总合有5000个，那么这个位置就是<code>5000*80%=4000</code>.<br>运行上面的python代码，生成list文件。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ python3 xml2txt.py</span><br></pre></td></tr></table></figure></p>
+<p>运行完在<code>$workspace/VOCdevkit/VOC2019/ImageSets/Main/</code>里面会看到两个txt文件。</p>
+<h4 id="生成训练文件" class="article-heading"><a href="#生成训练文件" class="headerlink" title="生成训练文件"></a>生成训练文件<a class="article-anchor" href="#生成训练文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br></pre></td></tr></table></figure>
+<h5 id="获取脚本文件" class="article-heading"><a href="#获取脚本文件" class="headerlink" title="获取脚本文件"></a>获取脚本文件<a class="article-anchor" href="#获取脚本文件" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://pjreddie.com/media/files/voc_label.py</span><br></pre></td></tr></table></figure>
+<h5 id="修改脚本文件" class="article-heading"><a href="#修改脚本文件" class="headerlink" title="修改脚本文件"></a>修改脚本文件<a class="article-anchor" href="#修改脚本文件" aria-hidden="true"></a></h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vim voc_label.py</span><br></pre></td></tr></table></figure>
+<p>将<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sets=[(&apos;2012&apos;, &apos;train&apos;), (&apos;2012&apos;, &apos;val&apos;), (&apos;2007&apos;, &apos;train&apos;), (&apos;2007&apos;, &apos;val&apos;), (&apos;2007&apos;, &apos;test&apos;)]</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sets=[(&apos;2019&apos;, &apos;train&apos;), (&apos;2019&apos;, &apos;val&apos;)]</span><br></pre></td></tr></table></figure></p>
+<p>将class里面的类修改成你需要训练的类。<br>这里以khadas的物体检测为例:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes = [&quot;person&quot;,&quot;bicycle&quot;,&quot;car&quot;,&quot;motorbike&quot;,&quot;aeroplane&quot;,&quot;bus&quot;,&quot;train&quot;,&quot;truck&quot;,&quot;boat&quot;,&quot;traffic light&quot;,&quot;fire hydrant&quot;,&quot;stop sign&quot;,&quot;parking meter&quot;,&quot;bench&quot;,&quot;bird&quot;,&quot;cat&quot;,&quot;dog&quot;,&quot;horse&quot;,&quot;sheep&quot;,&quot;cow&quot;,&quot;elephant&quot;,&quot;bear&quot;,&quot;zebra&quot;,&quot;giraffe&quot;,&quot;backpack&quot;,&quot;umbrella&quot;,&quot;handbag&quot;,&quot;tie&quot;,&quot;suitcase&quot;,&quot;frisbee&quot;,&quot;skis&quot;,&quot;snowboard&quot;,&quot;sports ball&quot;,&quot;kite&quot;,&quot;baseball bat&quot;,&quot;baseball glove&quot;,&quot;skateboard&quot;,&quot;surfboard&quot;,&quot;tennis racket&quot;,&quot;bottle&quot;,&quot;wine glass&quot;,&quot;cup&quot;,&quot;fork&quot;,&quot;knife&quot;,&quot;spoon&quot;,&quot;bowl&quot;,&quot;banana&quot;,&quot;apple&quot;,&quot;sandwich&quot;,&quot;orange&quot;,&quot;broccoli&quot;,&quot;carrot&quot;,&quot;hot dog&quot;,&quot;pizza&quot;,&quot;donut&quot;,&quot;cake&quot;,&quot;chair&quot;,&quot;sofa&quot;,&quot;pottedplant&quot;,&quot;bed&quot;,&quot;diningtable&quot;,&quot;toilet&quot;,&quot;tvmonitor&quot;,&quot;laptop&quot;,&quot;mouse&quot;,&quot;remote&quot;,&quot;keyboard&quot;,&quot;cell phone&quot;,&quot;microwave&quot;,&quot;oven&quot;,&quot;toaster&quot;,&quot;sink&quot;,&quot;refrigerator&quot;,&quot;book&quot;,&quot;clock&quot;,&quot;vase&quot;,&quot;scissors&quot;,&quot;teddy bear&quot;,&quot;hair drier&quot;,&quot;toothbrush&quot;,&quot;Edge-V&quot;,&quot;Edge&quot;,&quot;VIM1&quot;,&quot;VIM2&quot;,&quot;VIM3&quot;,&quot;VIM3L&quot;,&quot;Fan3705&quot;,&quot;Captain&quot;,&quot;Captain+Edge&quot;,&quot;ToneBoard&quot;,&quot;Heatsink(VIMs)&quot;,&quot;Heatsink(Edge)&quot;]</span><br></pre></td></tr></table></figure></p>
+<h5 id="运行" class="article-heading"><a href="#运行" class="headerlink" title="运行"></a>运行<a class="article-anchor" href="#运行" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ python3 voc_label.py</span><br></pre></td></tr></table></figure>
+<ol>
+<li>运行完毕以后，在<code>workspace</code>下会生成两个txt文件<code>2019_train.txt</code>和<code>2019_val.txt</code>。</li>
+<li>同时在<code>$workspace/VOCdevkit/VOC2019/</code>下生成一个文件夹<code>labels</code>,里面存放了每个图片的训练样本的位置信息</li>
+</ol>
+<p>到此，训练数据集的准备工作就完成了。</p>
+<h2 id="训练" class="article-heading"><a href="#训练" class="headerlink" title="训练"></a>训练<a class="article-anchor" href="#训练" aria-hidden="true"></a></h2><h3 id="准备训练文件" class="article-heading"><a href="#准备训练文件" class="headerlink" title="准备训练文件"></a>准备训练文件<a class="article-anchor" href="#准备训练文件" aria-hidden="true"></a></h3><p>准备好数据集以后，需要准备训练的配置文件。</p>
+<h4 id="准备names文件" class="article-heading"><a href="#准备names文件" class="headerlink" title="准备names文件"></a>准备names文件<a class="article-anchor" href="#准备names文件" aria-hidden="true"></a></h4><p>新建训练数据目录，再新建voc.names文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ mkdir yolov3-train/</span><br><span class="line">$ <span class="built_in">cd</span> yolov3-train/</span><br><span class="line">$ touch voc.names</span><br></pre></td></tr></table></figure></p>
+<h4 id="准备data文件" class="article-heading"><a href="#准备data文件" class="headerlink" title="准备data文件"></a>准备data文件<a class="article-anchor" href="#准备data文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ touch voc.data</span><br></pre></td></tr></table></figure>
+<h4 id="复制cfg文件" class="article-heading"><a href="#复制cfg文件" class="headerlink" title="复制cfg文件"></a>复制cfg文件<a class="article-anchor" href="#复制cfg文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ cp /path/to/darknet/cfg/yolov3-voc.cfg ./</span><br></pre></td></tr></table></figure>
+<h4 id="新建backup目录" class="article-heading"><a href="#新建backup目录" class="headerlink" title="新建backup目录"></a>新建backup目录<a class="article-anchor" href="#新建backup目录" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mkdir backup</span><br></pre></td></tr></table></figure>
+<p><code>backup</code>目录用来存放训练产生的数据</p>
+<h4 id="移动训练数据文件" class="article-heading"><a href="#移动训练数据文件" class="headerlink" title="移动训练数据文件"></a>移动训练数据文件<a class="article-anchor" href="#移动训练数据文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mv ../2019_train.txt ./train.txt</span><br><span class="line">$ mv ../2019_val.txt ./val.txt</span><br></pre></td></tr></table></figure>
+<h3 id="配置文件修改" class="article-heading"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改<a class="article-anchor" href="#配置文件修改" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br></pre></td></tr></table></figure>
+<h4 id="修改voc-names文件" class="article-heading"><a href="#修改voc-names文件" class="headerlink" title="修改voc.names文件"></a>修改voc.names文件<a class="article-anchor" href="#修改voc-names文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim voc.names</span><br></pre></td></tr></table></figure>
+<p>按照<code>$workspace/voc_label.py</code>设置的class的顺序，写入<code>voc.names</code>中，每个类为一行，<br>这里以khadas的物体检测为例;<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">Heatsink(Edge)</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改cfg文件" class="article-heading"><a href="#修改cfg文件" class="headerlink" title="修改cfg文件"></a>修改cfg文件<a class="article-anchor" href="#修改cfg文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim yolov3-voc.cfg</span><br></pre></td></tr></table></figure>
+<h5 id="修改组数和组大小参数" class="article-heading"><a href="#修改组数和组大小参数" class="headerlink" title="修改组数和组大小参数"></a>修改组数和组大小参数<a class="article-anchor" href="#修改组数和组大小参数" aria-hidden="true"></a></h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line">batch=1</span><br><span class="line">subdivisions=1</span><br><span class="line"># Training</span><br><span class="line"># batch=64</span><br><span class="line"># subdivisions=16</span><br></pre></td></tr></table></figure>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line"># batch=1</span><br><span class="line"># subdivisions=1</span><br><span class="line"># Training</span><br><span class="line">batch=64</span><br><span class="line">subdivisions=16</span><br></pre></td></tr></table></figure></p>
+<h5 id="修改yolo神经元参数" class="article-heading"><a href="#修改yolo神经元参数" class="headerlink" title="修改yolo神经元参数"></a>修改yolo神经元参数<a class="article-anchor" href="#修改yolo神经元参数" aria-hidden="true"></a></h5><p>一共有3处神经元要修改,找到[yolo]的三处<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[convolutional]</span><br><span class="line">size=1</span><br><span class="line">stride=1</span><br><span class="line">pad=1</span><br><span class="line">filters=85</span><br><span class="line">activation=linear</span><br><span class="line"> </span><br><span class="line">[yolo]         </span><br><span class="line">mask = 6,7,8</span><br><span class="line">anchors = 10,13,  16,30,  33,23,  30,61,  62,45,  59,119,  116,90,  156,198,  373,326</span><br><span class="line">classes=20</span><br><span class="line">num=9</span><br><span class="line">jitter=.3</span><br><span class="line">ignore_thresh = .5</span><br><span class="line">truth_thresh = 1</span><br><span class="line">random=1</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>修改class参数，按照<code>$workspace/voc_label.py</code>的数量设置</li>
+<li>设置filters参数,计算方法: <code>filters=(class+5)*3*1*1</code><br>这里以khadas的物体检测为例，<code>class=92</code>,<code>filters=291</code></li>
+</ol>
+</blockquote>
+<h4 id="编辑voc-data文件" class="article-heading"><a href="#编辑voc-data文件" class="headerlink" title="编辑voc.data文件"></a>编辑voc.data文件<a class="article-anchor" href="#编辑voc-data文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim voc.data</span><br></pre></td></tr></table></figure>
+<p>内容如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes= </span><br><span class="line">train  = $workspace/yolov3-train/train.txt</span><br><span class="line">valid  = $workspace/yolov3-train/val.txt</span><br><span class="line">names  = $workspace/yolov3-train/voc.names</span><br><span class="line">backup = $workspace/yolov3-train/backup</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>其中class的值等于你在yolov3-voc.cfg设置的class的值</li>
+<li>路径全部使用绝对路径，darknet不识别相对路径<br>这里以khadas的物体检测为例:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes= 92</span><br><span class="line">train  = /home/khadas/Pictures/VOCdevkit/yolov3-train/train.txt</span><br><span class="line">valid  = /home/khadas/Pictures/VOCdevkit/yolov3-train/val.txt</span><br><span class="line">names = /home/khadas/Pictures/VOCdevkit/yolov3-train/voc.names</span><br><span class="line">backup = /home/khadas/Pictures/VOCdevkit/yolov3-train/backup</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>准备完毕的目录如下:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">├── backup</span><br><span class="line">├── train.txt</span><br><span class="line">├── val.txt</span><br><span class="line">├── voc.data</span><br><span class="line">├── voc.names</span><br><span class="line">└── yolov3-voc.cfg</span><br></pre></td></tr></table></figure></p>
+<h3 id="训练过程" class="article-heading"><a href="#训练过程" class="headerlink" title="训练过程"></a>训练过程<a class="article-anchor" href="#训练过程" aria-hidden="true"></a></h3><h4 id="获取权重文件" class="article-heading"><a href="#获取权重文件" class="headerlink" title="获取权重文件"></a>获取权重文件<a class="article-anchor" href="#获取权重文件" aria-hidden="true"></a></h4><p>你可以选择自己涉及一个权重文件，这里darknet官方提供了一个。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet/</span><br><span class="line">$ wget https://pjreddie.com/media/files/darknet53.conv.74</span><br></pre></td></tr></table></figure></p>
+<h4 id="训练命令" class="article-heading"><a href="#训练命令" class="headerlink" title="训练命令"></a>训练命令<a class="article-anchor" href="#训练命令" aria-hidden="true"></a></h4><h6 id="从头开始训练" class="article-heading"><a href="#从头开始训练" class="headerlink" title="从头开始训练"></a>从头开始训练<a class="article-anchor" href="#从头开始训练" aria-hidden="true"></a></h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet</span><br><span class="line">$ ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg darknet53.conv.74</span><br></pre></td></tr></table></figure>
+<h6 id="从保存的中间点恢复训练" class="article-heading"><a href="#从保存的中间点恢复训练" class="headerlink" title="从保存的中间点恢复训练"></a>从保存的中间点恢复训练<a class="article-anchor" href="#从保存的中间点恢复训练" aria-hidden="true"></a></h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg <span class="variable">$workspace</span>/yolov3-train/backup/yolov3-voc.backup</span><br></pre></td></tr></table></figure>
+<h4 id="训练状态" class="article-heading"><a href="#训练状态" class="headerlink" title="训练状态"></a>训练状态<a class="article-anchor" href="#训练状态" aria-hidden="true"></a></h4><p>训练时终端会打印出每一步的数据，如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Region 94 Avg IOU: 0.540326, Class: 0.139797, Obj: 0.130498, No Obj: 0.001526, .5R: 0.700000, .75R: 0.100000,  count: 10</span><br><span class="line">Region 106 Avg IOU: 0.482969, Class: 0.177537, Obj: 0.019915, No Obj: 0.000925, .5R: 0.375000, .75R: 0.000000,  count: 8</span><br><span class="line">Region 82 Avg IOU: 0.524465, Class: 0.015476, Obj: 0.208355, No Obj: 0.005669, .5R: 0.666667, .75R: 0.000000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.511687, Class: 0.360272, Obj: 0.063160, No Obj: 0.001155, .5R: 0.400000, .75R: 0.200000,  count: 5</span><br><span class="line">Region 106 Avg IOU: 0.557980, Class: 0.012614, Obj: 0.021471, No Obj: 0.000624, .5R: 0.666667, .75R: 0.000000,  count: 3</span><br><span class="line">Region 82 Avg IOU: 0.682441, Class: 0.174183, Obj: 0.089430, No Obj: 0.006534, .5R: 0.833333, .75R: 0.500000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.386654, Class: 0.070363, Obj: 0.014934, No Obj: 0.000916, .5R: 0.333333, .75R: 0.000000,  count: 3</span><br><span class="line">Region 106 Avg IOU: 0.436000, Class: 0.006006, Obj: 0.088640, No Obj: 0.001066, .5R: 0.000000, .75R: 0.000000,  count: 1</span><br><span class="line">Region 82 Avg IOU: 0.521084, Class: 0.025058, Obj: 0.132706, No Obj: 0.006369, .5R: 0.500000, .75R: 0.000000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.577572, Class: 0.178678, Obj: 0.097599, No Obj: 0.001857, .5R: 0.727273, .75R: 0.000000,  count: 11</span><br><span class="line">Region 106 Avg IOU: 0.332272, Class: 0.099031, Obj: 0.051440, No Obj: 0.000967, .5R: 0.176471, .75R: 0.000000,  count: 17</span><br><span class="line">Region 82 Avg IOU: 0.639035, Class: 0.274132, Obj: 0.219622, No Obj: 0.006810, .5R: 1.000000, .75R: 0.000000,  count: 3</span><br><span class="line">Region 94 Avg IOU: 0.545786, Class: 0.129236, Obj: 0.028372, No Obj: 0.000898, .5R: 0.666667, .75R: 0.000000,  count: 3</span><br><span class="line">Region 106 Avg IOU: 0.543433, Class: 0.296318, Obj: 0.075353, No Obj: 0.000830, .5R: 1.000000, .75R: 0.000000,  count: 1</span><br><span class="line">705: 7.811739, 8.019678 avg, 0.000247 rate, 2.236426 seconds, 45120 images</span><br><span class="line">Loaded: 0.000059 seconds</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>class: 标注物体的概率，期望该值趋近于1</li>
+<li>Obj: 期望该值趋近于1</li>
+<li>No Obj: 期望该值越来越小但不为零</li>
+<li>Avg Recall：期望该值趋近1 </li>
+<li>avg：平均损失，期望该值趋近于0</li>
+<li>Region Avg IOU：平均的IOU，代表预测的bounding box和ground truth的交集与并集之比，期望该值趋近于1</li>
+</ol>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.047Z" itemprop="dateModified">上次更新：2019-11-15</time>
+                <a href="HowToInstallDarknet.html" class="article-footer-prev" title="如何安装darknet模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToTransformYolo.html" class="article-footer-next" title="如何转换yolo模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建darknet开发环境"><span class="toc-text">搭建darknet开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建立数据集目录"><span class="toc-text">建立数据集目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备数据集"><span class="toc-text">准备数据集</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据集处理"><span class="toc-text">数据集处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#labelImg工具"><span class="toc-text">labelImg工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖包安装"><span class="toc-text">依赖包安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装labelImg"><span class="toc-text">安装labelImg</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#制作标签"><span class="toc-text">制作标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置路径"><span class="toc-text">设置路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置labels"><span class="toc-text">设置labels</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标注"><span class="toc-text">标注</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#格式转换"><span class="toc-text">格式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成list文件"><span class="toc-text">生成list文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成训练文件"><span class="toc-text">生成训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#获取脚本文件"><span class="toc-text">获取脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改脚本文件"><span class="toc-text">修改脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#训练"><span class="toc-text">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备训练文件"><span class="toc-text">准备训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#准备names文件"><span class="toc-text">准备names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#准备data文件"><span class="toc-text">准备data文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复制cfg文件"><span class="toc-text">复制cfg文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建backup目录"><span class="toc-text">新建backup目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移动训练数据文件"><span class="toc-text">移动训练数据文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件修改"><span class="toc-text">配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改voc-names文件"><span class="toc-text">修改voc.names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改cfg文件"><span class="toc-text">修改cfg文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#修改组数和组大小参数"><span class="toc-text">修改组数和组大小参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改yolo神经元参数"><span class="toc-text">修改yolo神经元参数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编辑voc-data文件"><span class="toc-text">编辑voc.data文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#训练过程"><span class="toc-text">训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取权重文件"><span class="toc-text">获取权重文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#训练命令"><span class="toc-text">训练命令</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#从头开始训练"><span class="toc-text">从头开始训练</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#从保存的中间点恢复训练"><span class="toc-text">从保存的中间点恢复训练</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#训练状态"><span class="toc-text">训练状态</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="sidebar-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a><a href="GPIOPinout.html" class="sidebar-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="sidebar-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="sidebar-link">NVMe SSD支持列表</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="sidebar-link">如何使用NPU</a><a href="HowToInstallDarknet.html" class="sidebar-link">如何安装darknet模型</a><a href="HowToTrainYolo.html" class="sidebar-link current">如何训练自己的yolo模型</a><a href="HowToTransformYolo.html" class="sidebar-link">如何转换yolo模型</a><a href="HowToTrainInception.html" class="sidebar-link">如何训练自己的Inception模型</a><a href="HowtoEraseEMMC.html" class="sidebar-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="sidebar-link">如何安装ADB调试工具</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="sidebar-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="SetupADB.html" class="sidebar-link">设置ADB</a><a href="HowtoUseWol.html" class="sidebar-link">如何使用WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="sidebar-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="sidebar-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="sidebar-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="InstallTensorFlow.html" class="sidebar-link">安装TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a><a href="SetupGolang.html" class="sidebar-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="sidebar-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">如何使用RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong><strong class="sidebar-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">第三方固件</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="mobile-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="mobile-nav-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="mobile-nav-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="mobile-nav-link">NVMe SSD支持列表</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="mobile-nav-link">如何使用NPU</a><a href="HowToInstallDarknet.html" class="mobile-nav-link">如何安装darknet模型</a><a href="HowToTrainYolo.html" class="mobile-nav-link current">如何训练自己的yolo模型</a><a href="HowToTransformYolo.html" class="mobile-nav-link">如何转换yolo模型</a><a href="HowToTrainInception.html" class="mobile-nav-link">如何训练自己的Inception模型</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">如何安装ADB调试工具</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="SetupADB.html" class="mobile-nav-link">设置ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">如何使用WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="mobile-nav-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="mobile-nav-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="InstallTensorFlow.html" class="mobile-nav-link">安装TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a><a href="SetupGolang.html" class="mobile-nav-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">如何使用RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong><strong class="mobile-nav-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">第三方固件</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToTrainYolo.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

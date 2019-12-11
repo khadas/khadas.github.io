@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Setup TFTPInstall TFTP packages:$ sudo apt-get instal">
+  <meta name="description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Ubuntu16.04Setup TFTPInstall TFTP packages:$ sudo apt">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Setup TFTP Server for U-Boot">
 <meta property="og:url" content="https://docs.khadas.com/vim2/SetupTFTPServer.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Setup TFTPInstall TFTP packages:$ sudo apt-get instal">
+<meta property="og:description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Ubuntu16.04Setup TFTPInstall TFTP packages:$ sudo apt">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-23T09:24:46.235Z">
+<meta property="og:updated_time" content="2019-11-15T09:18:22.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup TFTP Server for U-Boot">
-<meta name="twitter:description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Setup TFTPInstall TFTP packages:$ sudo apt-get instal">
+<meta name="twitter:description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Ubuntu16.04Setup TFTPInstall TFTP packages:$ sudo apt">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -131,11 +131,17 @@
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.<br>Here we provide some instructions for reference:</p>
-<h3 id="Setup-TFTP" class="article-heading"><a href="#Setup-TFTP" class="headerlink" title="Setup TFTP"></a>Setup TFTP<a class="article-anchor" href="#Setup-TFTP" aria-hidden="true"></a></h3><p>Install TFTP packages:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openbsd-inetd tftpd tftp</span><br></pre></td></tr></table></figure></p>
-<h3 id="Configuration" class="article-heading"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration" aria-hidden="true"></a></h3><p>To enable the TFTP server, edit the file <code>/etc/inetd.conf</code> as the root user, and locate the line that looks like the following:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#tftp   dgram   udp     wait    root    /usr/sbin/tcpd  /usr/sbin/in.tftpd</span><br></pre></td></tr></table></figure></p>
+<h3 id="Ubuntu16-04" class="article-heading"><a href="#Ubuntu16-04" class="headerlink" title="Ubuntu16.04"></a>Ubuntu16.04<a class="article-anchor" href="#Ubuntu16-04" aria-hidden="true"></a></h3><h4 id="Setup-TFTP" class="article-heading"><a href="#Setup-TFTP" class="headerlink" title="Setup TFTP"></a>Setup TFTP<a class="article-anchor" href="#Setup-TFTP" aria-hidden="true"></a></h4><p>Install TFTP packages:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openbsd-inetd tftpd tftp</span><br></pre></td></tr></table></figure></p>
+<h4 id="Configuration" class="article-heading"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration" aria-hidden="true"></a></h4><p>To enable the TFTP server, edit the file <code>/etc/inetd.conf</code> as the root user, and locate the line that looks like the following:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#tftp   dgram   udp     wait    root    /usr/sbin/tcpd  /usr/sbin/in.tftpd</span><br></pre></td></tr></table></figure></p>
 <p>Uncomment this line, and add the option and value <code>-s /srv/tftp</code> to the end of this line:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tftp   dgram   udp   wait   root   /usr/sbin/tcpd  /usr/sbin/in.tftpd -s /srv/tftp</span><br></pre></td></tr></table></figure></p>
 <p>Create and modify permissions on the TFTP root directory:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure></p>
 <p>Restart the TFTP Service:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo /etc/init.d/xinetd restart</span><br></pre></td></tr></table></figure></p>
+<h3 id="Ubuntu18-04" class="article-heading"><a href="#Ubuntu18-04" class="headerlink" title="Ubuntu18.04"></a>Ubuntu18.04<a class="article-anchor" href="#Ubuntu18-04" aria-hidden="true"></a></h3><h4 id="Setup-TFTP-1" class="article-heading"><a href="#Setup-TFTP-1" class="headerlink" title="Setup TFTP"></a>Setup TFTP<a class="article-anchor" href="#Setup-TFTP-1" aria-hidden="true"></a></h4><p>Install TFTP packages:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install tftp-hpa tftpd-hpa</span><br></pre></td></tr></table></figure></p>
+<h4 id="Configuration-1" class="article-heading"><a href="#Configuration-1" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration-1" aria-hidden="true"></a></h4><p>edit the file <code>etc/default/tftpd-hpa</code> as the root user, and edit the line look like this:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TFTP_DIRECTORY=&quot;/usr/lib/tftpboot&quot;</span><br></pre></td></tr></table></figure></p>
+<p>change the dir to <code>/srv/tftp</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TFTP_DIRECTORY=&quot;/srv/tftp&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Create and modify permissions on the TFTP root directory:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure>
+<p>Restart the TFTP Services:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo service tftpd-hpa restart</span><br></pre></td></tr></table></figure></p>
 <h3 id="Setup-For-Target-Device" class="article-heading"><a href="#Setup-For-Target-Device" class="headerlink" title="Setup For Target Device"></a>Setup For Target Device<a class="article-anchor" href="#Setup-For-Target-Device" aria-hidden="true"></a></h3><p>To setup TFTP on your target device, you will need to:</p>
 <ul>
 <li>Connect a LAN cable to your target device, and make sure your device is on same local network with your Host PC.</li>
@@ -167,7 +173,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-23T09:24:46.235Z" itemprop="dateModified">Last updated: 2019-05-23</time>
+                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.015Z" itemprop="dateModified">Last updated: 2019-11-15</time>
                 <a href="BuildBootLogoForUboot.html" class="article-footer-prev" title="Boot Logo For U-boot"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-next" title="Load Images with U-Boot Using TFTP"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -176,7 +182,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-TFTP"><span class="toc-text">Setup TFTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration"><span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-For-Target-Device"><span class="toc-text">Setup For Target Device</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Your-TFTP-Server"><span class="toc-text">Test Your TFTP Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu16-04"><span class="toc-text">Ubuntu16.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setup-TFTP"><span class="toc-text">Setup TFTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configuration"><span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04"><span class="toc-text">Ubuntu18.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setup-TFTP-1"><span class="toc-text">Setup TFTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configuration-1"><span class="toc-text">Configuration</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-For-Target-Device"><span class="toc-text">Setup For Target Device</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-Your-TFTP-Server"><span class="toc-text">Test Your TFTP Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

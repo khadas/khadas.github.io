@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root    /usr/sb">
+  <meta name="description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
 <meta property="og:type" content="website">
 <meta property="og:title" content="搭建TFTP服务器">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/SetupTFTPServer.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root    /usr/sb">
+<meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-23T09:24:46.263Z">
+<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建TFTP服务器">
-<meta name="twitter:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root    /usr/sb">
+<meta name="twitter:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -132,12 +132,17 @@
               <div class="article-content" itemprop="articleBody">
                 <p>很常用的搭建方法，你也可以通过Google搜索相关信息。</p>
 <p>这里我们提供一个参考。</p>
-<h3 id="设置TFTP" class="article-heading"><a href="#设置TFTP" class="headerlink" title="设置TFTP"></a>设置TFTP<a class="article-anchor" href="#设置TFTP" aria-hidden="true"></a></h3><p>安装TFTP相关软件包：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openbsd-inetd tftpd tftp</span><br></pre></td></tr></table></figure></p>
+<h3 id="Ubuntu16-04" class="article-heading"><a href="#Ubuntu16-04" class="headerlink" title="Ubuntu16.04"></a>Ubuntu16.04<a class="article-anchor" href="#Ubuntu16-04" aria-hidden="true"></a></h3><h4 id="设置TFTP" class="article-heading"><a href="#设置TFTP" class="headerlink" title="设置TFTP"></a>设置TFTP<a class="article-anchor" href="#设置TFTP" aria-hidden="true"></a></h4><p>安装TFTP相关软件包：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openbsd-inetd tftpd tftp</span><br></pre></td></tr></table></figure></p>
 <p>配置<br>通过root权限编辑文件<code>/etc/inetd.conf</code>来使能TFTP服务，文件内容如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#tftp   dgram   udp     wait    root    /usr/sbin/tcpd  /usr/sbin/in.tftpd</span><br></pre></td></tr></table></figure></p>
 <p>取消注释下面这一行，并添加 <code>-s /srv/tftp</code> 到行尾：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tftp   dgram   udp   wait   root   /usr/sbin/tcpd  /usr/sbin/in.tftpd -s /srv/tftp</span><br></pre></td></tr></table></figure></p>
 <p>创建<code>/srv/tftp</code>目录，并修改权限：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure></p>
 <p>重启TFTP服务：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo /etc/init.d/xinetd restart</span><br></pre></td></tr></table></figure></p>
-<h3 id="设置VIM目标板" class="article-heading"><a href="#设置VIM目标板" class="headerlink" title="设置VIM目标板"></a>设置VIM目标板<a class="article-anchor" href="#设置VIM目标板" aria-hidden="true"></a></h3><p>为了设置TFTP你需要做如下事情：</p>
+<h3 id="Ubuntu18-04" class="article-heading"><a href="#Ubuntu18-04" class="headerlink" title="Ubuntu18.04"></a>Ubuntu18.04<a class="article-anchor" href="#Ubuntu18-04" aria-hidden="true"></a></h3><p>安装TFTP相关软件包：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install tftp-hpa tftpd-hpa</span><br></pre></td></tr></table></figure></p>
+<p>配置<br>使用root权限修改tftp配置文件，修改的行如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TFTP_DIRECTORY=&quot;/usr/lib/tftpboot&quot;</span><br></pre></td></tr></table></figure></p>
+<p>修改为:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TFTP_DIRECTORY=&quot;/srv/tftp&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建<code>/srv/tftp</code>目录，并修改权限：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure></p>
+<p>重启TFTP服务：<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo service tftpd-hpa restart</span><br></pre></td></tr></table></figure></p>
+<h4 id="设置VIM目标板" class="article-heading"><a href="#设置VIM目标板" class="headerlink" title="设置VIM目标板"></a>设置VIM目标板<a class="article-anchor" href="#设置VIM目标板" aria-hidden="true"></a></h4><p>为了设置TFTP你需要做如下事情：</p>
 <ul>
 <li>连接网线到VIM，并确保和你的PC在同一个局域网 </li>
 <li>连接串口线，参考<a href="/zh-cn/vim1/SetupSerialTool.html">这里设置串口</a> </li>
@@ -168,7 +173,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-05-23T09:24:46.263Z" itemprop="dateModified">上次更新：2019-05-23</time>
+                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.047Z" itemprop="dateModified">上次更新：2019-11-15</time>
                 <a href="BuildBootLogoForUboot.html" class="article-footer-prev" title="编译U-boot启动Logo"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-next" title="通过TFTP下载镜像"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -177,7 +182,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置TFTP"><span class="toc-text">设置TFTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置VIM目标板"><span class="toc-text">设置VIM目标板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu16-04"><span class="toc-text">Ubuntu16.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置TFTP"><span class="toc-text">设置TFTP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04"><span class="toc-text">Ubuntu18.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置VIM目标板"><span class="toc-text">设置VIM目标板</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

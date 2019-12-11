@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>How To Train Inception Model | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim3/HowToTrainInception.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToTrainInception.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainInception.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="Inception Model is a model used to detect objects, and only one object can be monitored at the same time. Here we use tensorflow version of Inception Model Prepare Training Environment and Dataset$ mk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Train Inception Model">
+<meta property="og:url" content="https://docs.khadas.com/vim3/HowToTrainInception.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="Inception Model is a model used to detect objects, and only one object can be monitored at the same time. Here we use tensorflow version of Inception Model Prepare Training Environment and Dataset$ mk">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-20T01:07:17.870Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How To Train Inception Model">
+<meta name="twitter:description" content="Inception Model is a model used to detect objects, and only one object can be monitored at the same time. Here we use tensorflow version of Inception Model Prepare Training Environment and Dataset$ mk">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link">VIM2</a><a href="/vim3/" class="main-nav-link current">VIM3</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToTrainInception.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Train Inception Model</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim3/HowToTrainInception.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Inception Model is a model used to detect objects, and only one object can be monitored at the same time. Here we use tensorflow version of Inception Model</p>
+<h2 id="Prepare-Training-Environment-and-Dataset" class="article-heading"><a href="#Prepare-Training-Environment-and-Dataset" class="headerlink" title="Prepare Training Environment and Dataset"></a>Prepare Training Environment and Dataset<a class="article-anchor" href="#Prepare-Training-Environment-and-Dataset" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir inception</span><br><span class="line">$ <span class="built_in">cd</span> inception</span><br></pre></td></tr></table></figure>
+<h3 id="Install-TensorFlow" class="article-heading"><a href="#Install-TensorFlow" class="headerlink" title="Install TensorFlow"></a>Install TensorFlow<a class="article-anchor" href="#Install-TensorFlow" aria-hidden="true"></a></h3><p>You can follow this offical page to Install :<a href="https://www.tensorflow.org/install/pip?lang=python3" target="_blank" rel="noopener">Install TensorFlow</a></p>
+<h3 id="Perpare-Pictures-dataset" class="article-heading"><a href="#Perpare-Pictures-dataset" class="headerlink" title="Perpare Pictures dataset"></a>Perpare Pictures dataset<a class="article-anchor" href="#Perpare-Pictures-dataset" aria-hidden="true"></a></h3><p>This is a example with <code>flowers datasets</code>:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir data/</span><br><span class="line">$ <span class="built_in">cd</span> data/</span><br><span class="line">$ mkdir flowers/</span><br></pre></td></tr></table></figure></p>
+<p>Create 5 classes, and put the pictures in the corresponding directory.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls</span><br><span class="line">daisy  dandelion  roses  sunflowers  tulips</span><br></pre></td></tr></table></figure>
+<p>At least 300 pictures in each picture classification.</p>
+<h3 id="Download-checkpoints-file" class="article-heading"><a href="#Download-checkpoints-file" class="headerlink" title="Download checkpoints file"></a>Download checkpoints file<a class="article-anchor" href="#Download-checkpoints-file" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ mkdir checkpoints</span><br><span class="line">$ <span class="built_in">cd</span> checkpoints</span><br><span class="line">$ wget http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz</span><br><span class="line">$ tar zxvf inception_v3_2016_08_28.tar.gz</span><br><span class="line">$ rm inception_v3_2016_08_28.tar.gz</span><br></pre></td></tr></table></figure>
+<p>There is a <code>.ckpt</code> file of the Inception Model in the checkpoints folder</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls</span><br><span class="line">inception_v3.ckpt</span><br></pre></td></tr></table></figure>
+<h3 id="clone-slim-tools-with-tensorflow" class="article-heading"><a href="#clone-slim-tools-with-tensorflow" class="headerlink" title="clone slim tools with tensorflow"></a>clone <code>slim tools</code> with tensorflow<a class="article-anchor" href="#clone-slim-tools-with-tensorflow" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/tensorflow/models.git</span><br></pre></td></tr></table></figure>
+<p>The complete directory is as follows.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls</span><br><span class="line">checkpoints  data  models</span><br></pre></td></tr></table></figure>
+<h2 id="Transform-Dataset" class="article-heading"><a href="#Transform-Dataset" class="headerlink" title="Transform Dataset"></a>Transform Dataset<a class="article-anchor" href="#Transform-Dataset" aria-hidden="true"></a></h2><p>After the data set is ready, it needs to be converted to tensorflow image format, which can be provided for tensorflow training to speed up the training.</p>
+<h3 id="1-Perpare-labels-file" class="article-heading"><a href="#1-Perpare-labels-file" class="headerlink" title="1. Perpare labels file"></a>1. Perpare labels file<a class="article-anchor" href="#1-Perpare-labels-file" aria-hidden="true"></a></h3><p>The labels file is used by the model to verify and identify the training set.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> data/</span><br><span class="line">$ vim labels.txt</span><br></pre></td></tr></table></figure>
+<p>Each class has a row, and my picture set has 5 classes.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0:daisy</span><br><span class="line">1:dandelion</span><br><span class="line">2:roses</span><br><span class="line">3:sunflowers</span><br><span class="line">4:tulips</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-Generate-list-file" class="article-heading"><a href="#2-Generate-list-file" class="headerlink" title="2.Generate list file"></a>2.Generate list file<a class="article-anchor" href="#2-Generate-list-file" aria-hidden="true"></a></h3><p>The list file maps each picture to labels.</p>
+<h4 id="Generate-list-py" class="article-heading"><a href="#Generate-list-py" class="headerlink" title="Generate list.py"></a>Generate list.py<a class="article-anchor" href="#Generate-list-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim generate_list.py</span><br></pre></td></tr></table></figure>
+<p>Write the following Python code.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">data_dir = &apos;flowers/&apos;</span><br><span class="line">class_names_to_ids = &#123;&apos;daisy&apos;: 0, &apos;dandelion&apos;: 1, &apos;roses&apos;: 2, &apos;sunflowers&apos;: 3, &apos;tulips&apos;: 4&#125;</span><br><span class="line">output_path = &apos;list.txt&apos;</span><br><span class="line">fd = open(output_path, &apos;w&apos;)</span><br><span class="line">for class_name in class_names_to_ids.keys():</span><br><span class="line">    images_list = os.listdir(data_dir + class_name)</span><br><span class="line">    for image_name in images_list:</span><br><span class="line">        fd.write(&apos;&#123;&#125;/&#123;&#125; &#123;&#125;\n&apos;.format(class_name, image_name, class_names_to_ids[class_name]))</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure></p>
+<p><strong>Note</strong> that the class in the figure corresponds to the labels file.</p>
+<h4 id="Run-and-generate-list-file" class="article-heading"><a href="#Run-and-generate-list-file" class="headerlink" title="Run and generate list file"></a>Run and generate list file<a class="article-anchor" href="#Run-and-generate-list-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 generate_list.py</span><br></pre></td></tr></table></figure>
+<h3 id="3-Generate-train-file-and-val-file" class="article-heading"><a href="#3-Generate-train-file-and-val-file" class="headerlink" title="3.Generate train file and val file"></a>3.Generate train file and val file<a class="article-anchor" href="#3-Generate-train-file-and-val-file" aria-hidden="true"></a></h3><p>random_data.py use to Randomly divided into two parts.</p>
+<h4 id="random-data-py" class="article-heading"><a href="#random-data-py" class="headerlink" title="random_data.py"></a>random_data.py<a class="article-anchor" href="#random-data-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim random_data.py</span><br></pre></td></tr></table></figure>
+<p>Write the following code.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">_NUM_VALIDATION = 350</span><br><span class="line">_RANDOM_SEED = 0</span><br><span class="line">list_path = &apos;list.txt&apos;</span><br><span class="line">train_list_path = &apos;list_train.txt&apos;</span><br><span class="line">val_list_path = &apos;list_val.txt&apos;</span><br><span class="line"></span><br><span class="line">fd = open(list_path)</span><br><span class="line">lines = fd.readlines()</span><br><span class="line">fd.close()</span><br><span class="line">random.seed(_RANDOM_SEED)</span><br><span class="line">random.shuffle(lines)</span><br><span class="line"></span><br><span class="line">fd = open(train_list_path, &apos;w&apos;)</span><br><span class="line">for line in lines[_NUM_VALIDATION:]:</span><br><span class="line">    fd.write(line)</span><br><span class="line">fd.close()</span><br><span class="line">fd = open(val_list_path, &apos;w&apos;)</span><br><span class="line">for line in lines[:_NUM_VALIDATION]:</span><br><span class="line">    fd.write(line)</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure></p>
+<p>The <code>_NUM_VALIDATION</code> in the above figure is the data size of the validation set, which can be modified.</p>
+<h4 id="Generate-Train-Dataset-and-Val-Dataset" class="article-heading"><a href="#Generate-Train-Dataset-and-Val-Dataset" class="headerlink" title="Generate Train Dataset and Val Dataset"></a>Generate <code>Train Dataset</code> and <code>Val Dataset</code><a class="article-anchor" href="#Generate-Train-Dataset-and-Val-Dataset" aria-hidden="true"></a></h4><p>Run this script.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 random_data.py</span><br></pre></td></tr></table></figure></p>
+<p>In the current directory, <code>list_train.txt</code> and <code>list_val.txt</code> will be generated.</p>
+<h3 id="4-Transform-Dataset" class="article-heading"><a href="#4-Transform-Dataset" class="headerlink" title="4.Transform Dataset"></a>4.Transform Dataset<a class="article-anchor" href="#4-Transform-Dataset" aria-hidden="true"></a></h3><p>Transform with tensorflow interface.</p>
+<h4 id="Generate-generate-TFRecord-py" class="article-heading"><a href="#Generate-generate-TFRecord-py" class="headerlink" title="Generate generate_TFRecord.py"></a>Generate <code>generate_TFRecord.py</code><a class="article-anchor" href="#Generate-generate-TFRecord-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim generate_TFRecord.py</span><br></pre></td></tr></table></figure>
+<p>Write the following code.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import sys</span><br><span class="line">sys.path.insert(0, &apos;../models/research/slim/&apos;)</span><br><span class="line">from datasets import dataset_utils</span><br><span class="line">import math</span><br><span class="line">import os</span><br><span class="line">import tensorflow as tf</span><br><span class="line">def convert_dataset(list_path, data_dir, output_dir, _NUM_SHARDS=5):</span><br><span class="line">    fd = open(list_path)</span><br><span class="line">    lines = [line.split() for line in fd]</span><br><span class="line">    fd.close()</span><br><span class="line">    num_per_shard = int(math.ceil(len(lines) / float(_NUM_SHARDS)))</span><br><span class="line">    with tf.Graph().as_default():</span><br><span class="line">        decode_jpeg_data = tf.placeholder(dtype=tf.string)</span><br><span class="line">        decode_jpeg = tf.image.decode_jpeg(decode_jpeg_data, channels=3)</span><br><span class="line">        with tf.Session(&apos;&apos;) as sess:</span><br><span class="line">            for shard_id in range(_NUM_SHARDS):</span><br><span class="line">                output_path = os.path.join(output_dir,</span><br><span class="line">                    data_dir+&apos;_&apos;+output_dir+&apos;_&#123;:05&#125;-of-&#123;:05&#125;.tfrecord&apos;.format(shard_id, _NUM_SHARDS))</span><br><span class="line">                tfrecord_writer = tf.python_io.TFRecordWriter(output_path)</span><br><span class="line">                start_ndx = shard_id * num_per_shard</span><br><span class="line">                end_ndx = min((shard_id + 1) * num_per_shard, len(lines))</span><br><span class="line">                for i in range(start_ndx, end_ndx):</span><br><span class="line">                    sys.stdout.write(&apos;\r&gt;&gt; Converting image &#123;&#125;/&#123;&#125; shard &#123;&#125;&apos;.format(</span><br><span class="line">                        i + 1, len(lines), shard_id))</span><br><span class="line">                    sys.stdout.flush()</span><br><span class="line">                    image_data = tf.gfile.FastGFile(os.path.join(data_dir, lines[i][0]), &apos;rb&apos;).read()</span><br><span class="line">                    image = sess.run(decode_jpeg, feed_dict=&#123;decode_jpeg_data: image_data&#125;)</span><br><span class="line">                    height, width = image.shape[0], image.shape[1]</span><br><span class="line">                    example = dataset_utils.image_to_tfexample(</span><br><span class="line">                        image_data, b&apos;jpg&apos;, height, width, int(lines[i][1]))</span><br><span class="line">                    tfrecord_writer.write(example.SerializeToString())</span><br><span class="line">                tfrecord_writer.close()</span><br><span class="line">    sys.stdout.write(&apos;\n&apos;)</span><br><span class="line">    sys.stdout.flush()</span><br><span class="line">os.system(&apos;mkdir -p train&apos;)</span><br><span class="line">convert_dataset(&apos;list_train.txt&apos;, &apos;flowers&apos;, &apos;train&apos;)</span><br><span class="line">os.system(&apos;mkdir -p val&apos;)</span><br><span class="line">convert_dataset(&apos;list_val.txt&apos;, &apos;flowers&apos;, &apos;val&apos;)</span><br></pre></td></tr></table></figure>
+<h4 id="Generate-TensorFlow-Dataset" class="article-heading"><a href="#Generate-TensorFlow-Dataset" class="headerlink" title="Generate TensorFlow Dataset"></a>Generate TensorFlow Dataset<a class="article-anchor" href="#Generate-TensorFlow-Dataset" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 generate_TFRecord.py</span><br></pre></td></tr></table></figure>
+<p>Two folders, train and Val, will be generated.</p>
+<p>After all the conversion work is completed, the folder is as follows:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── flowers</span><br><span class="line">│   ├── daisy</span><br><span class="line">│   ├── dandelion</span><br><span class="line">│   ├── roses</span><br><span class="line">│   ├── sunflowers</span><br><span class="line">│   └── tulips</span><br><span class="line">├── generate_list.py</span><br><span class="line">├── generate_TFRecord.py</span><br><span class="line">├── labels.txt</span><br><span class="line">├── list_train.txt</span><br><span class="line">├── list.txt</span><br><span class="line">├── list_val.txt</span><br><span class="line">├── random_data.py</span><br><span class="line">├── train</span><br><span class="line">└── val</span><br></pre></td></tr></table></figure></p>
+<h2 id="Train" class="article-heading"><a href="#Train" class="headerlink" title="Train"></a>Train<a class="article-anchor" href="#Train" aria-hidden="true"></a></h2><ol>
+<li>The training of tensorflow framework can be divided into two types, fine-tuning or ab initio training.</li>
+<li>Using tensorflow’s official slim tool.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> models/research/slim</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Training-Command" class="article-heading"><a href="#Training-Command" class="headerlink" title="Training Command"></a>Training Command<a class="article-anchor" href="#Training-Command" aria-hidden="true"></a></h3><h4 id="Training-inception-model-from-scratch" class="article-heading"><a href="#Training-inception-model-from-scratch" class="headerlink" title="Training inception model from scratch"></a>Training inception model from scratch<a class="article-anchor" href="#Training-inception-model-from-scratch" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_train</span><br><span class="line">python train_image_classifier.py \</span><br><span class="line">    --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">    --dataset_name=flowers \</span><br><span class="line">    --dataset_split_name=train \</span><br><span class="line">    --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">    --model_name=inception_v3</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>DATASET_DIR is the path of the training data set, that is, the train directory just generated in the data directory.</li>
+<li>TRAIN_DIR   is the path to save the data generated by training.</li>
+<li>train_image_classifier.py   Script of slim tool training.</li>
+<li>parameter<br><code>--train_dir</code>          Path to save training data<br><code>--dataset_name</code>       Total name of the dataset<br><code>--dataset_split_name</code> Name of the training set<br><code>--dataset_dir</code>        Training set path<br><code>--model_name</code>         Specify <code>inception model</code> and load the corresponding neural network</li>
+</ol>
+</blockquote>
+<h4 id="Fine-tuning-the-inception-model" class="article-heading"><a href="#Fine-tuning-the-inception-model" class="headerlink" title="Fine tuning the inception model"></a>Fine tuning the inception model<a class="article-anchor" href="#Fine-tuning-the-inception-model" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_retrain</span><br><span class="line">$ CHECKPOINT_PATH=../../../checkpoints/inception_v3.ckpt</span><br><span class="line">$ python train_image_classifier.py \</span><br><span class="line">    --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">    --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">    --dataset_name=flowers \</span><br><span class="line">    --dataset_split_name=train \</span><br><span class="line">    --model_name=inception_v3 \</span><br><span class="line">    --checkpoint_path=<span class="variable">$&#123;CHECKPOINT_PATH&#125;</span> \</span><br><span class="line">    --checkpoint_exclude_scopes=InceptionV3/Logits,InceptionV3/AuxLogits \</span><br><span class="line">    --trainable_scopes=InceptionV3/Logits,InceptionV3/AuxLogits</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>DATASET_DIR                  is the path of the training data set, that is, the train directory just generated in the data directory.</li>
+<li>TRAIN_DIR                    is the path to save the data generated by training.</li>
+<li>CHECKPOINT_PATH              Model file path of pre training.</li>
+<li>train_image_classifier.py    Script of train with slim tool.</li>
+<li>parameter<br><code>--train_dir</code>          Path to save training data<br><code>--dataset_name</code>       Total name of the dataset<br><code>--dataset_split_name</code> Name of the training set<br><code>--dataset_dir</code>        Training set path<br><code>--model_name</code>         Specify <code>inception model</code> and load the corresponding neural network<br><code>--checkpoint_path</code>    Specify the loaded pretraining model<br><code>--checkpoint_exclude_scopes</code> –trainable_scopes Lock other layers and train only the specified layers</li>
+</ol>
+</blockquote>
+<h3 id="View-the-training-process" class="article-heading"><a href="#View-the-training-process" class="headerlink" title="View the training process"></a>View the training process<a class="article-anchor" href="#View-the-training-process" aria-hidden="true"></a></h3><h4 id="tensorboard" class="article-heading"><a href="#tensorboard" class="headerlink" title="tensorboard"></a>tensorboard<a class="article-anchor" href="#tensorboard" aria-hidden="true"></a></h4><p>Tensorboard is a tool used by tensorflow framework to view training process.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tensorboard --logdir=<span class="variable">$&#123;TRAIN_DIR&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>You will see similar information.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TensorBoard 1.14.0 at http://yan-pc:6006/ (Press CTRL+C to quit)</span><br></pre></td></tr></table></figure></p>
+<p>You can see the corresponding interface through the browser.</p>
+<h3 id="Training-data-processing" class="article-heading"><a href="#Training-data-processing" class="headerlink" title="Training data processing"></a>Training data processing<a class="article-anchor" href="#Training-data-processing" aria-hidden="true"></a></h3><p>The training data is saved in the path specified by <code>TRAIN_DIR</code></p>
+<h4 id="export-graph" class="article-heading"><a href="#export-graph" class="headerlink" title="export graph"></a>export graph<a class="article-anchor" href="#export-graph" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_retrain</span><br><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ python export_inference_graph.py \</span><br><span class="line">   --alsologtostderr \</span><br><span class="line">   --model_name=inception_v3 \</span><br><span class="line">   --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">   --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">   --dataset_name=flowers \</span><br><span class="line">   --output_file=/tmp/inception_v3_inf_graph.pb</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>TRAIN_DIR                    is the path of the traing data set,that is the train directory just generate in the data directory</li>
+<li>DATASET_DIR                  is the path to save the data generate by training</li>
+<li>export_inference_graph.py    Script of export with slim tool .</li>
+<li>parameter<br><code>--train_dir</code>          Path to save training data<br><code>--dataset_dir</code>        training set<br><code>--model_name</code>         Specify <code>inception model</code> and load the corresponding neural network<br><code>--dataset_name</code>       Total name of the dataset<br><code>--output_file</code>        Path to export file</li>
+</ol>
+</blockquote>
+<h4 id="Frozen-graph" class="article-heading"><a href="#Frozen-graph" class="headerlink" title="Frozen graph"></a>Frozen graph<a class="article-anchor" href="#Frozen-graph" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python ~/path/to/tensorflow/tensorflow/python/tools/freeze_graph.py \</span><br><span class="line">    --input_graph=/tmp/inception_v3_inf_graph.pb \</span><br><span class="line">    --input_checkpoint=&#123;TRAIN_DIR&#125;/model.ckpt-66505 \</span><br><span class="line">    --input_binary=<span class="literal">true</span> --output_graph=/tmp/frozen_inception_v3.pb \</span><br><span class="line">    --output_node_names=InceptionV3/Predictions/Reshape_1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>The <code>freeze_graph</code> tool is the tool tensorflow uses to freeze graphs.The compilation of the tool can refer to the following:<a href="https://github.com/tensorflow/models/tree/master/research/slim" target="_blank" rel="noopener">TensorFlow model</a></li>
+<li>parameter<br><code>--input_graph</code>        Location of the entered graph.<br><code>--input_checkpoint</code>   For the final .cpkt file, see the checkpoint file under TRAIN_DIR<br><code>--output_graph</code>       Output the position of frozen graph<br><code>--output_node_names</code>  Output node</li>
+</ol>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-20T01:07:17.870Z" itemprop="dateModified">Last updated: 2019-11-20</time>
+                <a href="HowToTransformYolo.html" class="article-footer-prev" title="How To Transform Yolo Model"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowtoEraseEMMC.html" class="article-footer-next" title="Erase eMMC Storage"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-Training-Environment-and-Dataset"><span class="toc-text">Prepare Training Environment and Dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-TensorFlow"><span class="toc-text">Install TensorFlow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Perpare-Pictures-dataset"><span class="toc-text">Perpare Pictures dataset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-checkpoints-file"><span class="toc-text">Download checkpoints file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clone-slim-tools-with-tensorflow"><span class="toc-text">clone slim tools with tensorflow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transform-Dataset"><span class="toc-text">Transform Dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Perpare-labels-file"><span class="toc-text">1. Perpare labels file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Generate-list-file"><span class="toc-text">2.Generate list file</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-list-py"><span class="toc-text">Generate list.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Run-and-generate-list-file"><span class="toc-text">Run and generate list file</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Generate-train-file-and-val-file"><span class="toc-text">3.Generate train file and val file</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#random-data-py"><span class="toc-text">random_data.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-Train-Dataset-and-Val-Dataset"><span class="toc-text">Generate Train Dataset and Val Dataset</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Transform-Dataset"><span class="toc-text">4.Transform Dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-generate-TFRecord-py"><span class="toc-text">Generate generate_TFRecord.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-TensorFlow-Dataset"><span class="toc-text">Generate TensorFlow Dataset</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Train"><span class="toc-text">Train</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Training-Command"><span class="toc-text">Training Command</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Training-inception-model-from-scratch"><span class="toc-text">Training inception model from scratch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fine-tuning-the-inception-model"><span class="toc-text">Fine tuning the inception model</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#View-the-training-process"><span class="toc-text">View the training process</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tensorboard"><span class="toc-text">tensorboard</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Training-data-processing"><span class="toc-text">Training data processing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#export-graph"><span class="toc-text">export graph</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Frozen-graph"><span class="toc-text">Frozen graph</span></a></li></ol></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pin-Outs</a><a href="ConnectLcd.html" class="sidebar-link">Connect to TS050 Touchscreen</a><a href="ListOfCompatibleNVMeSSDs.html" class="sidebar-link">List of compatible NVMe SSDs</a></details></strong><strong class="sidebar-title"><details open><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowToUseNpu.html" class="sidebar-link">How To Use the NPU</a><a href="HowToInstallDarknet.html" class="sidebar-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="sidebar-link">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="sidebar-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="sidebar-link current">How To Train Inception Model</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">How To Setup PCIe/USB3.0 Port</a><a href="HowToInstallADBTool.html" class="sidebar-link">How To Install ADB Tool</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="sidebar-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="sidebar-link">KBI Guide</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="BluetoothInstructions.html" class="sidebar-link">Bluetooth Instructions</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">Dual OS</a><a href="FirmwareUboot.html" class="sidebar-link">U-Boot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link">VIM2</a><a href="/vim3/" class="mobile-nav-link current">VIM3</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pin-Outs</a><a href="ConnectLcd.html" class="mobile-nav-link">Connect to TS050 Touchscreen</a><a href="ListOfCompatibleNVMeSSDs.html" class="mobile-nav-link">List of compatible NVMe SSDs</a></details></strong><strong class="mobile-nav-title"><details open><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowToUseNpu.html" class="mobile-nav-link">How To Use the NPU</a><a href="HowToInstallDarknet.html" class="mobile-nav-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="mobile-nav-link">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="mobile-nav-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="mobile-nav-link current">How To Train Inception Model</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">How To Setup PCIe/USB3.0 Port</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">How To Install ADB Tool</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI Guide</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="BluetoothInstructions.html" class="mobile-nav-link">Bluetooth Instructions</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">Dual OS</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-Boot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToTrainInception.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

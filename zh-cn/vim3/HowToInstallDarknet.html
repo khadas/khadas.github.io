@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>安装配置darknet环境 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim3/HowToInstallDarknet.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToInstallDarknet.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToInstallDarknet.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
+<meta property="og:type" content="website">
+<meta property="og:title" content="安装配置darknet环境">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToInstallDarknet.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_check.png">
+<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装配置darknet环境">
+<meta name="twitter:description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToInstallDarknet.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">安装配置darknet环境</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToInstallDarknet.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架</p>
+<h2 id="基本环境配置" class="article-heading"><a href="#基本环境配置" class="headerlink" title="基本环境配置"></a>基本环境配置<a class="article-anchor" href="#基本环境配置" aria-hidden="true"></a></h2><h3 id="基础工具安装" class="article-heading"><a href="#基础工具安装" class="headerlink" title="基础工具安装"></a>基础工具安装<a class="article-anchor" href="#基础工具安装" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br><span class="line">$ sudo apt install git wget build-essential　python3-dev python3-pip</span><br></pre></td></tr></table></figure>
+<h3 id="opencv安装" class="article-heading"><a href="#opencv安装" class="headerlink" title="opencv安装"></a>opencv安装<a class="article-anchor" href="#opencv安装" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install libopencv-dev</span><br><span class="line">$ sudo pip3 install opencv-python</span><br></pre></td></tr></table></figure>
+<p>最新已经更新到了4.1.x,要安装3.4.x的版本可以指定版本号</p>
+<h3 id="cuda和cudnn安装-不使用GPU跳过" class="article-heading"><a href="#cuda和cudnn安装-不使用GPU跳过" class="headerlink" title="cuda和cudnn安装(不使用GPU跳过)"></a>cuda和cudnn安装(不使用GPU跳过)<a class="article-anchor" href="#cuda和cudnn安装-不使用GPU跳过" aria-hidden="true"></a></h3><p>参考这里安装<a href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener">配置和安装cuda&amp;cudnn</a></p>
+<h2 id="darknet安装" class="article-heading"><a href="#darknet安装" class="headerlink" title="darknet安装"></a>darknet安装<a class="article-anchor" href="#darknet安装" aria-hidden="true"></a></h2><h3 id="下载darnket" class="article-heading"><a href="#下载darnket" class="headerlink" title="下载darnket"></a>下载darnket<a class="article-anchor" href="#下载darnket" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/git</span><br><span class="line">$ <span class="built_in">cd</span> ~/git</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/pjreddie/darknet.git</span><br><span class="line">$ <span class="built_in">cd</span> darknet</span><br></pre></td></tr></table></figure>
+<h3 id="配置darknet" class="article-heading"><a href="#配置darknet" class="headerlink" title="配置darknet"></a>配置darknet<a class="article-anchor" href="#配置darknet" aria-hidden="true"></a></h3><p>编译darnket之前需要配置darknet已适配你的PC,修改Makefile文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim Makefile</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用GPU" class="article-heading"><a href="#使用GPU" class="headerlink" title="使用GPU"></a>使用GPU<a class="article-anchor" href="#使用GPU" aria-hidden="true"></a></h4><p>使用GPU将GPU和cudnn打开<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GPU=0</span><br><span class="line">CUDNN=0</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GPU=1</span><br><span class="line">CUDNN=1</span><br></pre></td></tr></table></figure></p>
+<p>使用cpu的这里不需要更改</p>
+<h4 id="打开opencv" class="article-heading"><a href="#打开opencv" class="headerlink" title="打开opencv"></a>打开opencv<a class="article-anchor" href="#打开opencv" aria-hidden="true"></a></h4><p>darknet的大部分物体检测都需要使用opencv<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">OPENCV=0</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">OPENCV=1</span><br></pre></td></tr></table></figure></p>
+<h3 id="编译" class="article-heading"><a href="#编译" class="headerlink" title="编译"></a>编译<a class="article-anchor" href="#编译" aria-hidden="true"></a></h3><p>在根目录下执行make<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ make</span><br></pre></td></tr></table></figure></p>
+<h2 id="darknet验证和使用" class="article-heading"><a href="#darknet验证和使用" class="headerlink" title="darknet验证和使用"></a>darknet验证和使用<a class="article-anchor" href="#darknet验证和使用" aria-hidden="true"></a></h2><h3 id="测试" class="article-heading"><a href="#测试" class="headerlink" title="测试"></a>测试<a class="article-anchor" href="#测试" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./darknet imtest data/eagle.jpg</span><br></pre></td></tr></table></figure>
+<p>如果看到类似下面的图案即使安装成功<br><img src="/images/vim3/darknet_install_success.png" alt="ai-basic0002-1"></p>
+<h3 id="使用yolo模型" class="article-heading"><a href="#使用yolo模型" class="headerlink" title="使用yolo模型"></a>使用yolo模型<a class="article-anchor" href="#使用yolo模型" aria-hidden="true"></a></h3><h4 id="获取训练好的模型文件" class="article-heading"><a href="#获取训练好的模型文件" class="headerlink" title="获取训练好的模型文件"></a>获取训练好的模型文件<a class="article-anchor" href="#获取训练好的模型文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://pjreddie.com/media/files/yolov3.weights</span><br></pre></td></tr></table></figure>
+<h4 id="通过图片检测" class="article-heading"><a href="#通过图片检测" class="headerlink" title="通过图片检测"></a>通过图片检测<a class="article-anchor" href="#通过图片检测" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg</span><br></pre></td></tr></table></figure>
+<p>结果如下</p>
+<p><img src="/images/vim3/darknet_install_check.png" alt="ai-basic0002-2"></p>
+<h4 id="使用摄像头" class="article-heading"><a href="#使用摄像头" class="headerlink" title="使用摄像头"></a>使用摄像头<a class="article-anchor" href="#使用摄像头" aria-hidden="true"></a></h4><p>使用摄像头必须使用opencv和gpu，指令如下<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights</span><br></pre></td></tr></table></figure></p>
+<p>从摄像头里就可以看到效果</p>
+<h2 id="FAQ" class="article-heading"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ<a class="article-anchor" href="#FAQ" aria-hidden="true"></a></h2><h4 id="出现Not-compiled-with-OpenCV" class="article-heading"><a href="#出现Not-compiled-with-OpenCV" class="headerlink" title="出现Not compiled with OpenCV"></a>出现<code>Not compiled with OpenCV</code><a class="article-anchor" href="#出现Not-compiled-with-OpenCV" aria-hidden="true"></a></h4><ol>
+<li>opencv未成功安装，卸载原先的opencv，按照上面的方法重新安装一遍。</li>
+<li>opencv版本不对，确保opencv版本&gt;=3.0</li>
+</ol>
+<h4 id="显示nvcc或者cudnn相关的-h未找到" class="article-heading"><a href="#显示nvcc或者cudnn相关的-h未找到" class="headerlink" title="显示nvcc或者cudnn相关的.h未找到"></a>显示nvcc或者cudnn相关的.h未找到<a class="article-anchor" href="#显示nvcc或者cudnn相关的-h未找到" aria-hidden="true"></a></h4><p>cuda和cudnn安装未成功，安装这里的配置，重新检查一遍。<a href="https://www.tensorflow.org/install/gpu" target="_blank" rel="noopener">配置和安装cuda&amp;cudnn</a></p>
+<h4 id="GPU报错" class="article-heading"><a href="#GPU报错" class="headerlink" title="GPU报错"></a>GPU报错<a class="article-anchor" href="#GPU报错" aria-hidden="true"></a></h4><p>有可能是gpu的显存不够，darknet对gpu要求比较高。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.047Z" itemprop="dateModified">上次更新：2019-11-15</time>
+                <a href="HowToUseNpu.html" class="article-footer-prev" title="如何使用NPU"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToTrainYolo.html" class="article-footer-next" title="如何训练自己的yolo模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本环境配置"><span class="toc-text">基本环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础工具安装"><span class="toc-text">基础工具安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opencv安装"><span class="toc-text">opencv安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cuda和cudnn安装-不使用GPU跳过"><span class="toc-text">cuda和cudnn安装(不使用GPU跳过)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet安装"><span class="toc-text">darknet安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载darnket"><span class="toc-text">下载darnket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置darknet"><span class="toc-text">配置darknet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用GPU"><span class="toc-text">使用GPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#打开opencv"><span class="toc-text">打开opencv</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet验证和使用"><span class="toc-text">darknet验证和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用yolo模型"><span class="toc-text">使用yolo模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取训练好的模型文件"><span class="toc-text">获取训练好的模型文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通过图片检测"><span class="toc-text">通过图片检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用摄像头"><span class="toc-text">使用摄像头</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#出现Not-compiled-with-OpenCV"><span class="toc-text">出现Not compiled with OpenCV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#显示nvcc或者cudnn相关的-h未找到"><span class="toc-text">显示nvcc或者cudnn相关的.h未找到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GPU报错"><span class="toc-text">GPU报错</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="sidebar-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a><a href="GPIOPinout.html" class="sidebar-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="sidebar-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="sidebar-link">NVMe SSD支持列表</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="sidebar-link">如何使用NPU</a><a href="HowToInstallDarknet.html" class="sidebar-link current">如何安装darknet模型</a><a href="HowToTrainYolo.html" class="sidebar-link">如何训练自己的yolo模型</a><a href="HowToTransformYolo.html" class="sidebar-link">如何转换yolo模型</a><a href="HowToTrainInception.html" class="sidebar-link">如何训练自己的Inception模型</a><a href="HowtoEraseEMMC.html" class="sidebar-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="sidebar-link">如何安装ADB调试工具</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="sidebar-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="SetupADB.html" class="sidebar-link">设置ADB</a><a href="HowtoUseWol.html" class="sidebar-link">如何使用WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="sidebar-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="sidebar-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="sidebar-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="InstallTensorFlow.html" class="sidebar-link">安装TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a><a href="SetupGolang.html" class="sidebar-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="sidebar-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">如何使用RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="sidebar-link first">下载</a></details></strong><strong class="sidebar-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">DualOS</a><a href="FirmwareUboot.html" class="sidebar-link">Uboot</a><a href="FirmwareThirdparty.html" class="sidebar-link">第三方固件</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/vim1/" class="mobile-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="mobile-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="mobile-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3接口描述</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="InstallLibreELEC.html" class="mobile-nav-link">如何安装LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">启动卡与烧录卡的比较</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO 管脚映射</a><a href="ConnectLcd.html" class="mobile-nav-link">配置触摸屏TS050</a><a href="ListOfCompatibleNVMeSSDs.html" class="mobile-nav-link">NVMe SSD支持列表</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowToUseNpu.html" class="mobile-nav-link">如何使用NPU</a><a href="HowToInstallDarknet.html" class="mobile-nav-link current">如何安装darknet模型</a><a href="HowToTrainYolo.html" class="mobile-nav-link">如何训练自己的yolo模型</a><a href="HowToTransformYolo.html" class="mobile-nav-link">如何转换yolo模型</a><a href="HowToTrainInception.html" class="mobile-nav-link">如何训练自己的Inception模型</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">如何擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link">如何访问GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">如何使用I2C接口</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">如何设置PCIe或USB3.0</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">如何安装ADB调试工具</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="SetupADB.html" class="mobile-nav-link">设置ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">如何使用WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToConnectWifi.html" class="mobile-nav-link">如何连接Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">如何设置蓝牙</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">如何设置看门狗</a><a href="BluetoothInstructions.html" class="mobile-nav-link">蓝牙使用说明</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="InstallTensorFlow.html" class="mobile-nav-link">安装TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a><a href="SetupGolang.html" class="mobile-nav-link">搭建GO语言环境</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">如何使能ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">如何使用WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">如何使用RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>硬件资料</summary><a href="HardwareDocs.html" class="mobile-nav-link first">下载</a></details></strong><strong class="mobile-nav-title"><details><summary>固件下载</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">DualOS</a><a href="FirmwareUboot.html" class="mobile-nav-link">Uboot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">第三方固件</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToInstallDarknet.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

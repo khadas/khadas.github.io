@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>How to Train Yolo Model on Darknet | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim3/HowToTrainYolo.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToTrainYolo.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="PreparationInstall and configure DarknetFor the construction of Darknet, please refer to this document:How to Install DarknetSeveral explanations of Yolo model for Darknet environment training:   must">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Train Yolo Model on Darknet">
+<meta property="og:url" content="https://docs.khadas.com/vim3/HowToTrainYolo.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="PreparationInstall and configure DarknetFor the construction of Darknet, please refer to this document:How to Install DarknetSeveral explanations of Yolo model for Darknet environment training:   must">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim3/howto_labelImg_tool.png">
+<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Train Yolo Model on Darknet">
+<meta name="twitter:description" content="PreparationInstall and configure DarknetFor the construction of Darknet, please refer to this document:How to Install DarknetSeveral explanations of Yolo model for Darknet environment training:   must">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link">VIM2</a><a href="/vim3/" class="main-nav-link current">VIM3</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToTrainYolo.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How to Train Yolo Model on Darknet</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim3/HowToTrainYolo.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h2><h3 id="Install-and-configure-Darknet" class="article-heading"><a href="#Install-and-configure-Darknet" class="headerlink" title="Install and configure Darknet"></a>Install and configure Darknet<a class="article-anchor" href="#Install-and-configure-Darknet" aria-hidden="true"></a></h3><p>For the construction of Darknet, please refer to this document:<a href="/zh-cn/vim3/HowToInstallDarknet.html">How to Install Darknet</a><br>Several explanations of Yolo model for Darknet environment training:</p>
+<blockquote>
+<ol>
+<li>must open the <code>Opencv</code></li>
+<li>For GPU training, it is better to have more than 8g RAM</li>
+<li>The speed of training with CPU will be hundreds of times slower than that of GPU. There is an official explanation about this.</li>
+</ol>
+</blockquote>
+<h3 id="Create-a-dataset-directory" class="article-heading"><a href="#Create-a-dataset-directory" class="headerlink" title="Create a dataset directory"></a>Create a dataset directory<a class="article-anchor" href="#Create-a-dataset-directory" aria-hidden="true"></a></h3><p>The training data set is determined according to the <code>VOC training dataset</code> standard.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ mkdir VOCdevkit</span><br><span class="line">$ <span class="built_in">cd</span> VOCdevkit</span><br><span class="line">$ mkdir VOC2019</span><br><span class="line">$ <span class="built_in">cd</span> VOC2019</span><br><span class="line">$ mkdir Annotations ImageSets JPEGImages SegmentationClass SegmentationObject</span><br><span class="line">$ <span class="built_in">cd</span> ImageSets</span><br><span class="line">$ mkdir Main</span><br></pre></td></tr></table></figure></p>
+<p>The established directory is as follows:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd $workspace</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">└── VOCdevkit</span><br><span class="line">    └── VOC2019</span><br><span class="line">        ├── Annotations</span><br><span class="line">        ├── ImageSets</span><br><span class="line">        │   └── Main</span><br><span class="line">        ├── JPEGImages</span><br><span class="line">        ├── labels</span><br><span class="line">        ├── SegmentationClass</span><br><span class="line">        └── SegmentationObject</span><br></pre></td></tr></table></figure></p>
+<h3 id="Preparation-dataset" class="article-heading"><a href="#Preparation-dataset" class="headerlink" title="Preparation dataset"></a>Preparation dataset<a class="article-anchor" href="#Preparation-dataset" aria-hidden="true"></a></h3><p>talk all you pictures into the dir <code>$workspace/VOCdevkit/VOC2019/JPEGImages/</code>.<br>Here are some instructions for the preparation of training pictures:</p>
+<blockquote>
+<ol>
+<li>A picture can contain multiple training objects.</li>
+<li>The proportion of trained objects in the graph should not be more than 50%, and it should not be too small. <code>Yolo model</code> has a general recognition effect on small objects.</li>
+<li>There is no requirement for the size of the picture. It’s better to be 1:1.</li>
+<li>The sample size of image data, each training class cannot be less than 300.</li>
+</ol>
+</blockquote>
+<h2 id="Dataset-Processing" class="article-heading"><a href="#Dataset-Processing" class="headerlink" title="Dataset Processing"></a>Dataset Processing<a class="article-anchor" href="#Dataset-Processing" aria-hidden="true"></a></h2><p>The model of mobile object detection basically needs to mark the training samples. The marking tool uses an open-source tool on GitHub.</p>
+<h3 id="labelImg-tool" class="article-heading"><a href="#labelImg-tool" class="headerlink" title="labelImg tool"></a>labelImg tool<a class="article-anchor" href="#labelImg-tool" aria-hidden="true"></a></h3><h4 id="Dependent-package-installation" class="article-heading"><a href="#Dependent-package-installation" class="headerlink" title="Dependent package installation"></a>Dependent package installation<a class="article-anchor" href="#Dependent-package-installation" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install pyqt4-dev-tools lxml git python-lxml python3 python3-dev</span><br></pre></td></tr></table></figure>
+<h4 id="Install-labelImg" class="article-heading"><a href="#Install-labelImg" class="headerlink" title="Install labelImg"></a>Install labelImg<a class="article-anchor" href="#Install-labelImg" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/tzutalin/labelImg</span><br><span class="line">$ <span class="built_in">cd</span> labelImg/</span><br><span class="line">$ python3 labelImg.py</span><br></pre></td></tr></table></figure>
+<p>A graphical tool opens when the installation dependency is correct. As shown in the figure below:<br><img src="/images/vim3/darknet_labelImg_tool.png" alt="ai-examples0002-1"></p>
+<h3 id="Making-labels" class="article-heading"><a href="#Making-labels" class="headerlink" title="Making labels"></a>Making labels<a class="article-anchor" href="#Making-labels" aria-hidden="true"></a></h3><h4 id="Set-up-path-to-VOC-data" class="article-heading"><a href="#Set-up-path-to-VOC-data" class="headerlink" title="Set up path to VOC data"></a>Set up path to <code>VOC</code> data<a class="article-anchor" href="#Set-up-path-to-VOC-data" aria-hidden="true"></a></h4><p>As shown in the above figure, the two boxes are the path of the original image and the path of the annotated XML file.</p>
+<blockquote>
+<p>Opendir            –&gt;     <code>$workspace/VOCdevkit/VOC2019/JPEGImages/</code><br>Change save dir    –&gt;     <code>$workspace/VOCdevkit/VOC2019/Annotations/</code></p>
+</blockquote>
+<h4 id="Set-up-default-labels-file" class="article-heading"><a href="#Set-up-default-labels-file" class="headerlink" title="Set up default labels file"></a>Set up default labels file<a class="article-anchor" href="#Set-up-default-labels-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/labelImg/data/</span><br><span class="line">$ vim predefined_classes.txt</span><br></pre></td></tr></table></figure>
+<p>You can see that the default lables are 20, which you need can be added after the default labels, or empty and only write the labels you want to train.<br>Here we use the object detection of khadas as an example:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">The model of mobile object detection basically needs to mark the training samples. The marking tool uses an open-source tool on GitHubHeatsink(Edge)</span><br></pre></td></tr></table></figure></p>
+<h4 id="Making" class="article-heading"><a href="#Making" class="headerlink" title="Making"></a>Making<a class="article-anchor" href="#Making" aria-hidden="true"></a></h4><p>As shown in the figure below:<br><img src="/images/vim3/howto_labelImg_tool.png" alt="ai-examples0002-2"></p>
+<blockquote>
+<ol>
+<li>Click the ‘create’ button on the left to create a new annotation, or press the shortcut key ‘W’. Save and select a labels to save. You can see the labels here on the right.</li>
+<li>According to the mark 1 in the figure, put the whole object to be recognized into the mark box.</li>
+<li>Set the corresponding labels according to the identification 2 in the figure. Click labels on the right. The corresponding box lights up.<br><strong>note</strong> : Labels must correspond to the identification box correctly, otherwise the training will fail.</li>
+</ol>
+</blockquote>
+<h3 id="Format-Transform" class="article-heading"><a href="#Format-Transform" class="headerlink" title="Format Transform"></a>Format Transform<a class="article-anchor" href="#Format-Transform" aria-hidden="true"></a></h3><p>After all the pictures are labeled, they need to be converted to Yolo model data.</p>
+<h4 id="Generate-list-file" class="article-heading"><a href="#Generate-list-file" class="headerlink" title="Generate list file"></a>Generate list file<a class="article-anchor" href="#Generate-list-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ vim xml2txt.py</span><br></pre></td></tr></table></figure>
+<p>Write the following conversion code.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">from os import listdir, getcwd</span><br><span class="line">from os.path import join</span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    source_folder=&apos;VOCdevkit/VOC2019/JPEGImages/&apos;</span><br><span class="line">    dest=&apos;VOCdevkit/VOC2019/ImageSets/Main/train.txt&apos;</span><br><span class="line">    dest2=&apos;VOCdevkit/VOC2019/ImageSets/Main/val.txt&apos;</span><br><span class="line">    file_list=os.listdir(source_folder)</span><br><span class="line">    train_file=open(dest,&apos;a&apos;)</span><br><span class="line">    val_file=open(dest2,&apos;a&apos;)</span><br><span class="line">    file_num=0</span><br><span class="line">    for file_obj in file_list:</span><br><span class="line">        file_path=os.path.join(source_folder,file_obj)</span><br><span class="line"></span><br><span class="line">        file_name,file_extend=os.path.splitext(file_obj)</span><br><span class="line"></span><br><span class="line">        if(file_num&lt;4000):</span><br><span class="line"></span><br><span class="line">            train_file.write(file_name+&apos;\n&apos;)</span><br><span class="line">        else :</span><br><span class="line">            val_file.write(file_name+&apos;\n&apos;)</span><br><span class="line">        file_num=file_num+1</span><br><span class="line">    train_file.close()</span><br><span class="line">val_file.close()</span><br></pre></td></tr></table></figure></p>
+<p>File num in the above code depends on the number of samples you have. For example, if your total number of samples is 5000, then this position is <code>5000*80%=4000</code>.<br>Run the Python code above to generate the list file.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ python3 xml2txt.py</span><br></pre></td></tr></table></figure></p>
+<p>You will see two files in <code>$workspace/VOCdevkit/VOC2019/ImageSets/Main/</code> after run the python code.</p>
+<h4 id="Generate-train-file" class="article-heading"><a href="#Generate-train-file" class="headerlink" title="Generate train file"></a>Generate train file<a class="article-anchor" href="#Generate-train-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br></pre></td></tr></table></figure>
+<h5 id="Clone-the-shell-file" class="article-heading"><a href="#Clone-the-shell-file" class="headerlink" title="Clone the shell file"></a>Clone the shell file<a class="article-anchor" href="#Clone-the-shell-file" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://pjreddie.com/media/files/voc_label.py</span><br></pre></td></tr></table></figure>
+<h5 id="Edit-the-shell-file" class="article-heading"><a href="#Edit-the-shell-file" class="headerlink" title="Edit the shell file"></a>Edit the shell file<a class="article-anchor" href="#Edit-the-shell-file" aria-hidden="true"></a></h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vim voc_label.py</span><br></pre></td></tr></table></figure>
+<p>Find this line<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sets=[(&apos;2012&apos;, &apos;train&apos;), (&apos;2012&apos;, &apos;val&apos;), (&apos;2007&apos;, &apos;train&apos;), (&apos;2007&apos;, &apos;val&apos;), (&apos;2007&apos;, &apos;test&apos;)]</span><br></pre></td></tr></table></figure></p>
+<p>Edit it,<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sets=[(&apos;2019&apos;, &apos;train&apos;), (&apos;2019&apos;, &apos;val&apos;)]</span><br></pre></td></tr></table></figure></p>
+<p>Change the class in the class to the one you need to train.<br>Here we take the object detection of khadas as an example:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes = [&quot;person&quot;,&quot;bicycle&quot;,&quot;car&quot;,&quot;motorbike&quot;,&quot;aeroplane&quot;,&quot;bus&quot;,&quot;train&quot;,&quot;truck&quot;,&quot;boat&quot;,&quot;traffic light&quot;,&quot;fire hydrant&quot;,&quot;stop sign&quot;,&quot;parking meter&quot;,&quot;bench&quot;,&quot;bird&quot;,&quot;cat&quot;,&quot;dog&quot;,&quot;horse&quot;,&quot;sheep&quot;,&quot;cow&quot;,&quot;elephant&quot;,&quot;bear&quot;,&quot;zebra&quot;,&quot;giraffe&quot;,&quot;backpack&quot;,&quot;umbrella&quot;,&quot;handbag&quot;,&quot;tie&quot;,&quot;suitcase&quot;,&quot;frisbee&quot;,&quot;skis&quot;,&quot;snowboard&quot;,&quot;sports ball&quot;,&quot;kite&quot;,&quot;baseball bat&quot;,&quot;baseball glove&quot;,&quot;skateboard&quot;,&quot;surfboard&quot;,&quot;tennis racket&quot;,&quot;bottle&quot;,&quot;wine glass&quot;,&quot;cup&quot;,&quot;fork&quot;,&quot;knife&quot;,&quot;spoon&quot;,&quot;bowl&quot;,&quot;banana&quot;,&quot;apple&quot;,&quot;sandwich&quot;,&quot;orange&quot;,&quot;broccoli&quot;,&quot;carrot&quot;,&quot;hot dog&quot;,&quot;pizza&quot;,&quot;donut&quot;,&quot;cake&quot;,&quot;chair&quot;,&quot;sofa&quot;,&quot;pottedplant&quot;,&quot;bed&quot;,&quot;diningtable&quot;,&quot;toilet&quot;,&quot;tvmonitor&quot;,&quot;laptop&quot;,&quot;mouse&quot;,&quot;remote&quot;,&quot;keyboard&quot;,&quot;cell phone&quot;,&quot;microwave&quot;,&quot;oven&quot;,&quot;toaster&quot;,&quot;sink&quot;,&quot;refrigerator&quot;,&quot;book&quot;,&quot;clock&quot;,&quot;vase&quot;,&quot;scissors&quot;,&quot;teddy bear&quot;,&quot;hair drier&quot;,&quot;toothbrush&quot;,&quot;Edge-V&quot;,&quot;Edge&quot;,&quot;VIM1&quot;,&quot;VIM2&quot;,&quot;VIM3&quot;,&quot;VIM3L&quot;,&quot;Fan3705&quot;,&quot;Captain&quot;,&quot;Captain+Edge&quot;,&quot;ToneBoard&quot;,&quot;Heatsink(VIMs)&quot;,&quot;Heatsink(Edge)&quot;]</span><br></pre></td></tr></table></figure></p>
+<h5 id="Run" class="article-heading"><a href="#Run" class="headerlink" title="Run"></a>Run<a class="article-anchor" href="#Run" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ python3 voc_label.py</span><br></pre></td></tr></table></figure>
+<ol>
+<li>You will see the file <code>2019_train.txt</code> and <code>2019_val.txt</code> in <code>$workspace</code> after run the shell file.</li>
+<li>At the same time, a folder <code>labels</code> is generated under <code>$workspace/vocdevkit/voc219/</code>, which stores the location information of training samples of each picture</li>
+</ol>
+<p>At this point, the preparation of the training data set is completed.</p>
+<h2 id="Train" class="article-heading"><a href="#Train" class="headerlink" title="Train"></a>Train<a class="article-anchor" href="#Train" aria-hidden="true"></a></h2><h3 id="Preparation-train-files" class="article-heading"><a href="#Preparation-train-files" class="headerlink" title="Preparation train files"></a>Preparation train files<a class="article-anchor" href="#Preparation-train-files" aria-hidden="true"></a></h3><p>After the dataset is ready, you need to prepare the training profile.</p>
+<h4 id="Preparate-names-file" class="article-heading"><a href="#Preparate-names-file" class="headerlink" title="Preparate names file"></a>Preparate names file<a class="article-anchor" href="#Preparate-names-file" aria-hidden="true"></a></h4><p>Create a new training data directory and a new file names <code>voc.names</code>.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ mkdir yolov3-train/</span><br><span class="line">$ <span class="built_in">cd</span> yolov3-train/</span><br><span class="line">$ touch voc.names</span><br></pre></td></tr></table></figure></p>
+<h4 id="Preparate-data-file" class="article-heading"><a href="#Preparate-data-file" class="headerlink" title="Preparate data file"></a>Preparate data file<a class="article-anchor" href="#Preparate-data-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ touch voc.data</span><br></pre></td></tr></table></figure>
+<h4 id="Copy-the-cfg-file" class="article-heading"><a href="#Copy-the-cfg-file" class="headerlink" title="Copy the cfg file"></a>Copy the cfg file<a class="article-anchor" href="#Copy-the-cfg-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ cp /path/to/darknet/cfg/yolov3-voc.cfg ./</span><br></pre></td></tr></table></figure>
+<h4 id="New-backup-directory" class="article-heading"><a href="#New-backup-directory" class="headerlink" title="New backup directory"></a>New backup directory<a class="article-anchor" href="#New-backup-directory" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mkdir backup</span><br></pre></td></tr></table></figure>
+<p><code>backup</code> directory use for save the train data.</p>
+<h4 id="Move-training-data-file" class="article-heading"><a href="#Move-training-data-file" class="headerlink" title="Move training data file"></a>Move training data file<a class="article-anchor" href="#Move-training-data-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mv ../2019_train.txt ./train.txt</span><br><span class="line">$ mv ../2019_val.txt ./val.txt</span><br></pre></td></tr></table></figure>
+<h3 id="Edit-configure-file" class="article-heading"><a href="#Edit-configure-file" class="headerlink" title="Edit configure file"></a>Edit configure file<a class="article-anchor" href="#Edit-configure-file" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br></pre></td></tr></table></figure>
+<h4 id="Edit-file-voc-names" class="article-heading"><a href="#Edit-file-voc-names" class="headerlink" title="Edit file voc.names"></a>Edit file <code>voc.names</code><a class="article-anchor" href="#Edit-file-voc-names" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim voc.names</span><br></pre></td></tr></table></figure>
+<p>Write to <code>voc.names</code> in the order of the class set by <code>$workspace/voc_label.py</code>. Each class is a line,<br>Here we take the object detection of khadas as an example:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">Heatsink(Edge)</span><br></pre></td></tr></table></figure></p>
+<h4 id="edit-cfg-file" class="article-heading"><a href="#edit-cfg-file" class="headerlink" title="edit cfg file"></a>edit cfg file<a class="article-anchor" href="#edit-cfg-file" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim yolov3-voc.cfg</span><br></pre></td></tr></table></figure>
+<h5 id="Edit-batch-size-and-subdivisions-size" class="article-heading"><a href="#Edit-batch-size-and-subdivisions-size" class="headerlink" title="Edit batch size and subdivisions size"></a>Edit batch size and subdivisions size<a class="article-anchor" href="#Edit-batch-size-and-subdivisions-size" aria-hidden="true"></a></h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line">batch=1</span><br><span class="line">subdivisions=1</span><br><span class="line"># Training</span><br><span class="line"># batch=64</span><br><span class="line"># subdivisions=16</span><br></pre></td></tr></table></figure>
+<p>change to,<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line"># batch=1</span><br><span class="line"># subdivisions=1</span><br><span class="line"># Training</span><br><span class="line">batch=64</span><br><span class="line">subdivisions=16</span><br></pre></td></tr></table></figure></p>
+<h5 id="Modify-Yolo-neuron-parameters" class="article-heading"><a href="#Modify-Yolo-neuron-parameters" class="headerlink" title="Modify Yolo neuron parameters"></a>Modify Yolo neuron parameters<a class="article-anchor" href="#Modify-Yolo-neuron-parameters" aria-hidden="true"></a></h5><p>There are three neurons to modify. Find three of <code>[Yolo]</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[convolutional]</span><br><span class="line">size=1</span><br><span class="line">stride=1</span><br><span class="line">pad=1</span><br><span class="line">filters=85</span><br><span class="line">activation=linear</span><br><span class="line"> </span><br><span class="line">[yolo]         </span><br><span class="line">mask = 6,7,8</span><br><span class="line">anchors = 10,13,  16,30,  33,23,  30,61,  62,45,  59,119,  116,90,  156,198,  373,326</span><br><span class="line">classes=20</span><br><span class="line">num=9</span><br><span class="line">jitter=.3</span><br><span class="line">ignore_thresh = .5</span><br><span class="line">truth_thresh = 1</span><br><span class="line">random=1</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>Modify the class parameter and set it according to the quantity of <code>$workspace/voc_label.py</code></li>
+<li>Set the parameters of filters, calculation method: <code>filters=(class+5)*3*1*1</code><br>Here we take the object detection of khadas as an example:<code>class=92</code>,<code>filters=291</code></li>
+</ol>
+</blockquote>
+<h4 id="Edit-the-file-voc-data" class="article-heading"><a href="#Edit-the-file-voc-data" class="headerlink" title="Edit the file voc.data"></a>Edit the file <code>voc.data</code><a class="article-anchor" href="#Edit-the-file-voc-data" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim voc.data</span><br></pre></td></tr></table></figure>
+<p>内容如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes= </span><br><span class="line">train  = $workspace/yolov3-train/train.txt</span><br><span class="line">valid  = $workspace/yolov3-train/val.txt</span><br><span class="line">names  = $workspace/yolov3-train/voc.names</span><br><span class="line">backup = $workspace/yolov3-train/backup</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>Where the value of class is equal to the value of class you set in yolov3-voc.cfg</li>
+<li>All paths use absolute paths<br>Here we take the object detection of khadas as an example:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes= 92</span><br><span class="line">train  = /home/khadas/Pictures/VOCdevkit/yolov3-train/train.txt</span><br><span class="line">valid  = /home/khadas/Pictures/VOCdevkit/yolov3-train/val.txt</span><br><span class="line">names = /home/khadas/Pictures/VOCdevkit/yolov3-train/voc.names</span><br><span class="line">backup = /home/khadas/Pictures/VOCdevkit/yolov3-train/backup</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>The prepared directory is as follows:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">├── backup</span><br><span class="line">├── train.txt</span><br><span class="line">├── val.txt</span><br><span class="line">├── voc.data</span><br><span class="line">├── voc.names</span><br><span class="line">└── yolov3-voc.cfg</span><br></pre></td></tr></table></figure></p>
+<h3 id="Training-process" class="article-heading"><a href="#Training-process" class="headerlink" title="Training process"></a>Training process<a class="article-anchor" href="#Training-process" aria-hidden="true"></a></h3><h4 id="Get-the-pretrained-convolutional-weights" class="article-heading"><a href="#Get-the-pretrained-convolutional-weights" class="headerlink" title="Get the pretrained convolutional weights"></a>Get the pretrained convolutional weights<a class="article-anchor" href="#Get-the-pretrained-convolutional-weights" aria-hidden="true"></a></h4><p>You can choose to design a weight file of your own, which is officially provided by Darknet.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet/</span><br><span class="line">$ wget https://pjreddie.com/media/files/darknet53.conv.74</span><br></pre></td></tr></table></figure></p>
+<h4 id="Train-comand" class="article-heading"><a href="#Train-comand" class="headerlink" title="Train comand"></a>Train comand<a class="article-anchor" href="#Train-comand" aria-hidden="true"></a></h4><h5 id="Start-from-scratch" class="article-heading"><a href="#Start-from-scratch" class="headerlink" title="Start from scratch"></a>Start from scratch<a class="article-anchor" href="#Start-from-scratch" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet</span><br><span class="line">$ ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg darknet53.conv.74</span><br></pre></td></tr></table></figure>
+<h5 id="Resume-training-from-a-saved-middle-point" class="article-heading"><a href="#Resume-training-from-a-saved-middle-point" class="headerlink" title="Resume training from a saved middle point"></a>Resume training from a saved middle point<a class="article-anchor" href="#Resume-training-from-a-saved-middle-point" aria-hidden="true"></a></h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg <span class="variable">$workspace</span>/yolov3-train/backup/yolov3-voc.backup</span><br></pre></td></tr></table></figure>
+<h4 id="Train-status" class="article-heading"><a href="#Train-status" class="headerlink" title="Train status"></a>Train status<a class="article-anchor" href="#Train-status" aria-hidden="true"></a></h4><p>During training, the terminal will print the data of each step, as follows:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Region 94 Avg IOU: 0.540326, Class: 0.139797, Obj: 0.130498, No Obj: 0.001526, .5R: 0.700000, .75R: 0.100000,  count: 10</span><br><span class="line">Region 106 Avg IOU: 0.482969, Class: 0.177537, Obj: 0.019915, No Obj: 0.000925, .5R: 0.375000, .75R: 0.000000,  count: 8</span><br><span class="line">Region 82 Avg IOU: 0.524465, Class: 0.015476, Obj: 0.208355, No Obj: 0.005669, .5R: 0.666667, .75R: 0.000000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.511687, Class: 0.360272, Obj: 0.063160, No Obj: 0.001155, .5R: 0.400000, .75R: 0.200000,  count: 5</span><br><span class="line">Region 106 Avg IOU: 0.557980, Class: 0.012614, Obj: 0.021471, No Obj: 0.000624, .5R: 0.666667, .75R: 0.000000,  count: 3</span><br><span class="line">Region 82 Avg IOU: 0.682441, Class: 0.174183, Obj: 0.089430, No Obj: 0.006534, .5R: 0.833333, .75R: 0.500000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.386654, Class: 0.070363, Obj: 0.014934, No Obj: 0.000916, .5R: 0.333333, .75R: 0.000000,  count: 3</span><br><span class="line">Region 106 Avg IOU: 0.436000, Class: 0.006006, Obj: 0.088640, No Obj: 0.001066, .5R: 0.000000, .75R: 0.000000,  count: 1</span><br><span class="line">Region 82 Avg IOU: 0.521084, Class: 0.025058, Obj: 0.132706, No Obj: 0.006369, .5R: 0.500000, .75R: 0.000000,  count: 6</span><br><span class="line">Region 94 Avg IOU: 0.577572, Class: 0.178678, Obj: 0.097599, No Obj: 0.001857, .5R: 0.727273, .75R: 0.000000,  count: 11</span><br><span class="line">Region 106 Avg IOU: 0.332272, Class: 0.099031, Obj: 0.051440, No Obj: 0.000967, .5R: 0.176471, .75R: 0.000000,  count: 17</span><br><span class="line">Region 82 Avg IOU: 0.639035, Class: 0.274132, Obj: 0.219622, No Obj: 0.006810, .5R: 1.000000, .75R: 0.000000,  count: 3</span><br><span class="line">Region 94 Avg IOU: 0.545786, Class: 0.129236, Obj: 0.028372, No Obj: 0.000898, .5R: 0.666667, .75R: 0.000000,  count: 3</span><br><span class="line">Region 106 Avg IOU: 0.543433, Class: 0.296318, Obj: 0.075353, No Obj: 0.000830, .5R: 1.000000, .75R: 0.000000,  count: 1</span><br><span class="line">705: 7.811739, 8.019678 avg, 0.000247 rate, 2.236426 seconds, 45120 images</span><br><span class="line">Loaded: 0.000059 seconds</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>class: The probability of labeling objects, which is expected to approach 1</li>
+<li>Obj: Expect this value to approach 1</li>
+<li>No Obj: It is expected that the value will be smaller and smaller but not zero</li>
+<li>Avg Recall: Expect this value to approach 1 </li>
+<li>avg: Average loss, which is expected to approach 0</li>
+<li>The average IOU represents the ratio of intersection and union of the predicted <code>bounding box</code> and <code>ground truth</code>, which is expected to approach 1</li>
+</ol>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.047Z" itemprop="dateModified">Last updated: 2019-11-15</time>
+                <a href="HowToInstallDarknet.html" class="article-footer-prev" title="How To Install Darnket"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToTransformYolo.html" class="article-footer-next" title="How To Transform Yolo Model"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-and-configure-Darknet"><span class="toc-text">Install and configure Darknet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-dataset-directory"><span class="toc-text">Create a dataset directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation-dataset"><span class="toc-text">Preparation dataset</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dataset-Processing"><span class="toc-text">Dataset Processing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#labelImg-tool"><span class="toc-text">labelImg tool</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dependent-package-installation"><span class="toc-text">Dependent package installation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Install-labelImg"><span class="toc-text">Install labelImg</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Making-labels"><span class="toc-text">Making labels</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Set-up-path-to-VOC-data"><span class="toc-text">Set up path to VOC data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Set-up-default-labels-file"><span class="toc-text">Set up default labels file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Making"><span class="toc-text">Making</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Format-Transform"><span class="toc-text">Format Transform</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-list-file"><span class="toc-text">Generate list file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generate-train-file"><span class="toc-text">Generate train file</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Clone-the-shell-file"><span class="toc-text">Clone the shell file</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Edit-the-shell-file"><span class="toc-text">Edit the shell file</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Run"><span class="toc-text">Run</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Train"><span class="toc-text">Train</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation-train-files"><span class="toc-text">Preparation train files</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Preparate-names-file"><span class="toc-text">Preparate names file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Preparate-data-file"><span class="toc-text">Preparate data file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Copy-the-cfg-file"><span class="toc-text">Copy the cfg file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#New-backup-directory"><span class="toc-text">New backup directory</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Move-training-data-file"><span class="toc-text">Move training data file</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Edit-configure-file"><span class="toc-text">Edit configure file</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Edit-file-voc-names"><span class="toc-text">Edit file voc.names</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#edit-cfg-file"><span class="toc-text">edit cfg file</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Edit-batch-size-and-subdivisions-size"><span class="toc-text">Edit batch size and subdivisions size</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Modify-Yolo-neuron-parameters"><span class="toc-text">Modify Yolo neuron parameters</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Edit-the-file-voc-data"><span class="toc-text">Edit the file voc.data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Training-process"><span class="toc-text">Training process</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Get-the-pretrained-convolutional-weights"><span class="toc-text">Get the pretrained convolutional weights</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Train-comand"><span class="toc-text">Train comand</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Start-from-scratch"><span class="toc-text">Start from scratch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Resume-training-from-a-saved-middle-point"><span class="toc-text">Resume training from a saved middle point</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Train-status"><span class="toc-text">Train status</span></a></li></ol></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pin-Outs</a><a href="ConnectLcd.html" class="sidebar-link">Connect to TS050 Touchscreen</a><a href="ListOfCompatibleNVMeSSDs.html" class="sidebar-link">List of compatible NVMe SSDs</a></details></strong><strong class="sidebar-title"><details open><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowToUseNpu.html" class="sidebar-link">How To Use the NPU</a><a href="HowToInstallDarknet.html" class="sidebar-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="sidebar-link current">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="sidebar-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="sidebar-link">How To Train Inception Model</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">How To Setup PCIe/USB3.0 Port</a><a href="HowToInstallADBTool.html" class="sidebar-link">How To Install ADB Tool</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="sidebar-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="sidebar-link">KBI Guide</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="BluetoothInstructions.html" class="sidebar-link">Bluetooth Instructions</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use RPi.GPIO</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">Dual OS</a><a href="FirmwareUboot.html" class="sidebar-link">U-Boot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link">VIM2</a><a href="/vim3/" class="mobile-nav-link current">VIM3</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pin-Outs</a><a href="ConnectLcd.html" class="mobile-nav-link">Connect to TS050 Touchscreen</a><a href="ListOfCompatibleNVMeSSDs.html" class="mobile-nav-link">List of compatible NVMe SSDs</a></details></strong><strong class="mobile-nav-title"><details open><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowToUseNpu.html" class="mobile-nav-link">How To Use the NPU</a><a href="HowToInstallDarknet.html" class="mobile-nav-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="mobile-nav-link current">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="mobile-nav-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="mobile-nav-link">How To Train Inception Model</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">How To Setup PCIe/USB3.0 Port</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">How To Install ADB Tool</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI Guide</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="BluetoothInstructions.html" class="mobile-nav-link">Bluetooth Instructions</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use RPi.GPIO</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">Dual OS</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-Boot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToTrainYolo.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
