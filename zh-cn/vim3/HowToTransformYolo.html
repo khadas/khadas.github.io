@@ -57,17 +57,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 转换工具使用0_import_model.sh参数设置   NAME 设置为yol">
+  <meta name="description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在SDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 申请SDK可以在我们网站上申请转换工具的SDK，填写相关的信息后，会通过邮件的方式">
 <meta property="og:type" content="website">
 <meta property="og:title" content="yolov3模型转换">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToTransformYolo.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 转换工具使用0_import_model.sh参数设置   NAME 设置为yol">
+<meta property="og:description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在SDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 申请SDK可以在我们网站上申请转换工具的SDK，填写相关的信息后，会通过邮件的方式">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta property="og:updated_time" content="2019-12-27T13:05:19.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yolov3模型转换">
-<meta name="twitter:description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 转换工具使用0_import_model.sh参数设置   NAME 设置为yol">
+<meta name="twitter:description" content="训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在SDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 申请SDK可以在我们网站上申请转换工具的SDK，填写相关的信息后，会通过邮件的方式">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -130,7 +130,8 @@
                 <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTransformYolo.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。<br><strong>说明</strong>: 下面的例子都是以训练好的khadas的物体检测模型为例。</p>
+                <p>训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在SDK上适配我们的模型。<br><strong>说明</strong>: 下面的例子都是以训练好的khadas的物体检测模型为例。</p>
+<h2 id="申请SDK" class="article-heading"><a href="#申请SDK" class="headerlink" title="申请SDK"></a>申请SDK<a class="article-anchor" href="#申请SDK" aria-hidden="true"></a></h2><p>可以在我们<a href="https://www.khadas.com/npu-toolkit-vim3" target="_blank" rel="noopener">网站</a>上申请转换工具的SDK，填写相关的信息后，会通过邮件的方式发送SDK。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> acuity-toolkit-binary-5.0.0/conversion_scripts/</span><br></pre></td></tr></table></figure></p>
 <h2 id="转换工具使用" class="article-heading"><a href="#转换工具使用" class="headerlink" title="转换工具使用"></a>转换工具使用<a class="article-anchor" href="#转换工具使用" aria-hidden="true"></a></h2><h3 id="0-import-model-sh" class="article-heading"><a href="#0-import-model-sh" class="headerlink" title="0_import_model.sh"></a>0_import_model.sh<a class="article-anchor" href="#0-import-model-sh" aria-hidden="true"></a></h3><p>参数设置</p>
 <blockquote>
 <ol>
@@ -165,12 +166,24 @@
 <blockquote>
 <p><code>NAME=yolov3</code><br><code>--reorder-channel &#39;2 1 0&#39; \</code><br><code>--channel-mean-value &#39;0 0 0 256&#39; \</code><br><code>--export-dtype quantized \</code></p>
 </blockquote>
-<h2 id="DDK使用" class="article-heading"><a href="#DDK使用" class="headerlink" title="DDK使用"></a>DDK使用<a class="article-anchor" href="#DDK使用" aria-hidden="true"></a></h2><h3 id="文件替换" class="article-heading"><a href="#文件替换" class="headerlink" title="文件替换"></a>文件替换<a class="article-anchor" href="#文件替换" aria-hidden="true"></a></h3><ol>
+<h3 id="运行转换工具" class="article-heading"><a href="#运行转换工具" class="headerlink" title="运行转换工具"></a>运行转换工具<a class="article-anchor" href="#运行转换工具" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd acuity-toolkit-binary-5.0.0/conversion_scripts/</span><br><span class="line">$ chmod +x 0_import_model.sh</span><br><span class="line">$ chmod +x 1_quantize_model.sh</span><br><span class="line">$ chmod +x 2_export_case_code.sh</span><br><span class="line">$ ./0_import_model.sh</span><br><span class="line">$ ./1_quantize_model.sh</span><br><span class="line">$ ./2_export_case_code.sh</span><br></pre></td></tr></table></figure>
+<p>转换完成以后，在<code>acuity-toolkit-binary-5.0.0/conversion_scripts/</code>目录下，会生成一个与脚本中的名字相同的文件,这些文件就是转换完的基础文件。</p>
+<h2 id="应用自己转换的代码" class="article-heading"><a href="#应用自己转换的代码" class="headerlink" title="应用自己转换的代码"></a>应用自己转换的代码<a class="article-anchor" href="#应用自己转换的代码" aria-hidden="true"></a></h2><h3 id="下载aml-npu-app-以及-aml-npu-demo-binaries" class="article-heading"><a href="#下载aml-npu-app-以及-aml-npu-demo-binaries" class="headerlink" title="下载aml_npu_app 以及 aml_npu_demo_binaries"></a>下载aml_npu_app 以及 aml_npu_demo_binaries<a class="article-anchor" href="#下载aml-npu-app-以及-aml-npu-demo-binaries" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd $workspace</span><br><span class="line">$ git clone https://gitlab.com/khadas/aml_npu_demo_binaries.git</span><br><span class="line">$ git clone https://gitlab.com/khadas/aml_npu_app.git</span><br></pre></td></tr></table></figure>
+<p>下载完成以后会有两个目录<code>aml_npu_app</code>和<code>aml_npu_binaries</code></p>
+<blockquote>
+<ol>
+<li>aml_npu_app里面的代码是生成可执行文件的源码</li>
+<li>aml_npu_binaries里面的是可以直接执行的demo</li>
+</ol>
+</blockquote>
+<h3 id="文件替换" class="article-heading"><a href="#文件替换" class="headerlink" title="文件替换"></a>文件替换<a class="article-anchor" href="#文件替换" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/</span><br></pre></td></tr></table></figure>
+<ol>
 <li>将转换工具转换出来的<code>yolov3.nb</code>文件复制过来，替换<code>nn_data</code>目录下的<code>yolov3_88.nb</code>.</li>
 <li>将转换工具转换出来的<code>vnn_yolov3.c</code> 替换DDK目录下的<code>vnn_yolov3.c</code>。</li>
 <li>将转换工具转换出来的<code>vnn_yolov3.h</code> 文件复制过来，替换<code>include</code>下的<code>vnn_yolov3.h</code>文件</li>
 </ol>
-<h3 id="文件修改" class="article-heading"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改<a class="article-anchor" href="#文件修改" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim yolov3_process.c</span><br></pre></td></tr></table></figure>
+<h3 id="文件修改" class="article-heading"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改<a class="article-anchor" href="#文件修改" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim yolov3_process.c</span><br></pre></td></tr></table></figure>
 <p>修改3个位置</p>
 <ol>
 <li><code>*coco_names[]</code> 的内容修改为你训练的模型的class，顺序要和你训练时的.names文件一致。</li>
@@ -185,11 +198,20 @@
 <li><code>int size[3]={nn_width/32, nn_height/32,97*3};</code></li>
 </ol>
 </blockquote>
-<h3 id="DDK编译" class="article-heading"><a href="#DDK编译" class="headerlink" title="DDK编译"></a>DDK编译<a class="article-anchor" href="#DDK编译" aria-hidden="true"></a></h3><p>编译相应的yolov3目录以后，在<code>bin_r</code>目录下会找到生成的<code>.so</code>文件。</p>
+<h3 id="代码编译" class="article-heading"><a href="#代码编译" class="headerlink" title="代码编译"></a>代码编译<a class="article-anchor" href="#代码编译" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/</span><br><span class="line">$ ./build_vx.sh <span class="variable">$path</span>/to/linux_sdk_dir <span class="variable">$path</span>/to/fenix</span><br></pre></td></tr></table></figure>
+<p>编译相应的yolov3目录以后，在<code>bin_r</code>目录下会找到生成的<code>.so</code>文件。</p>
+<h3 id="替换demo文件" class="article-heading"><a href="#替换demo文件" class="headerlink" title="替换demo文件"></a>替换demo文件<a class="article-anchor" href="#替换demo文件" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/aml_npu_demo_binaries/detect_demo/</span><br></pre></td></tr></table></figure>
+<p>替换两个位置</p>
+<ol>
+<li>复制上一步生成的so文替换到lib里</li>
+<li>复制上一步的nb文件替换nn_data里面的文件<br>举例：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cp workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/bin_dir/libnn_yolo_v3.so $workspace/aml_npu_demo_binaries/detect_demo/lib/libnn_yolo_v3.so</span><br><span class="line">$ cp workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/nn_data/yolov3_88.nb $workspace/aml_npu_demo_binaries/detect_demo/n_data/yolov3_88.nb</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>完成之后的demo就可以运行你自己的模型了.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-11-15T09:18:22.047Z" itemprop="dateModified">上次更新：2019-11-15</time>
+                <time class="article-footer-updated" datetime="2019-12-27T13:05:19.002Z" itemprop="dateModified">上次更新：2019-12-27</time>
                 <a href="HowToTrainYolo.html" class="article-footer-prev" title="如何训练自己的yolo模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToTrainInception.html" class="article-footer-next" title="如何训练自己的Inception模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -198,7 +220,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#转换工具使用"><span class="toc-text">转换工具使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-import-model-sh"><span class="toc-text">0_import_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-quantize-model-sh"><span class="toc-text">1_quantize_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-export-case-code-sh"><span class="toc-text">2_export_case_code.sh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDK使用"><span class="toc-text">DDK使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件替换"><span class="toc-text">文件替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件修改"><span class="toc-text">文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDK编译"><span class="toc-text">DDK编译</span></a></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请SDK"><span class="toc-text">申请SDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转换工具使用"><span class="toc-text">转换工具使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-import-model-sh"><span class="toc-text">0_import_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-quantize-model-sh"><span class="toc-text">1_quantize_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-export-case-code-sh"><span class="toc-text">2_export_case_code.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行转换工具"><span class="toc-text">运行转换工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用自己转换的代码"><span class="toc-text">应用自己转换的代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载aml-npu-app-以及-aml-npu-demo-binaries"><span class="toc-text">下载aml_npu_app 以及 aml_npu_demo_binaries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件替换"><span class="toc-text">文件替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件修改"><span class="toc-text">文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码编译"><span class="toc-text">代码编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#替换demo文件"><span class="toc-text">替换demo文件</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
