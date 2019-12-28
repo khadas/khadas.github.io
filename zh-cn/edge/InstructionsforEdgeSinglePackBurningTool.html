@@ -71,7 +71,7 @@
 <meta property="og:image" content="https://docs.khadas.com/images/edge/config_ini.png">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/export_config.png">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/burn_partiton_mirrors.png">
-<meta property="og:updated_time" content="2019-08-24T03:26:10.383Z">
+<meta property="og:updated_time" content="2019-12-28T16:25:02.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Khadas Docs">
 <meta name="twitter:description" content="Windows1. 导入分区配置 1.1 修改分区配置 每次随新工具发布的分区配置文件内容如上图，大部分情况下与项目的分区配置存在一定程度差异，此时用户可以通过在分区配置区域空白处右击鼠标，选择“导入配置”,加载之前保存的项目分区配置文件。如果想在工具启动时加载指定的分区配置文件，可以通过修改 Config.ini 文件中 DEFAULT_IMAGE_CONFIG 项。  2. 导出分区配置用户完">
@@ -144,7 +144,7 @@
 <p><img src="/images/edge/config_ini.png" alt="config ini"></p>
 <h2 id="2-导出分区配置" class="article-heading"><a href="#2-导出分区配置" class="headerlink" title="2. 导出分区配置"></a>2. 导出分区配置<a class="article-anchor" href="#2-导出分区配置" aria-hidden="true"></a></h2><p><img src="/images/edge/export_config.png" alt="export config"><br>用户完成分区配置后，可以将分区配置通过导出功能进行保存，在分区配置区域<br>空白处点击“导出配置”，输入保存的文件名和目录，如果替换掉工具目录下的<br>config.cfg 文件，则可以在工具启动时加载当前保存的配置。</p>
 <h2 id="3-烧写一个或多个分区镜像" class="article-heading"><a href="#3-烧写一个或多个分区镜像" class="headerlink" title="3. 烧写一个或多个分区镜像"></a>3. 烧写一个或多个分区镜像<a class="article-anchor" href="#3-烧写一个或多个分区镜像" aria-hidden="true"></a></h2><p><img src="/images/edge/burn_partiton_mirrors.png" alt="burn partition"></p>
-<h1 id="Linux" class="article-heading"><a href="#Linux" class="headerlink" title="Linux"></a>Linux<a class="article-anchor" href="#Linux" aria-hidden="true"></a></h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">unzip Linux_Upgrade_Tool_v1.47.zip</span><br><span class="line"><span class="built_in">cd</span> Linux_Upgrade_Tool_v1.47</span><br><span class="line">sudo mv upgrade_tool /usr/<span class="built_in">local</span>/bin</span><br><span class="line">sudo chown root:root /usr/<span class="built_in">local</span>/bin/upgrade_tool</span><br><span class="line">sudo chmod a+x /usr/<span class="built_in">local</span>/bin/upgrade_tool</span><br></pre></td></tr></table></figure>
+<h1 id="Linux" class="article-heading"><a href="#Linux" class="headerlink" title="Linux"></a>Linux<a class="article-anchor" href="#Linux" aria-hidden="true"></a></h1><p>check <a href="https://mega.nz/#!TnI3CAyD!pI5ptpffTpZfT7Brjm2CvHQge5MaCdGy9xgcM6uu9RQ" target="_blank" rel="noopener">Linux_Upgrade_Tool_v1.47</a><br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">unzip Linux_Upgrade_Tool_v1.47.zip</span><br><span class="line"><span class="built_in">cd</span> Linux_Upgrade_Tool_v1.47</span><br><span class="line">sudo mv upgrade_tool /usr/<span class="built_in">local</span>/bin</span><br><span class="line">sudo chown root:root /usr/<span class="built_in">local</span>/bin/upgrade_tool</span><br><span class="line">sudo chmod a+x /usr/<span class="built_in">local</span>/bin/upgrade_tool</span><br></pre></td></tr></table></figure></p>
 <p>如果板子为  <code>android 7.1</code>  升级到  <code>android 9.0</code>  固件或者<br>板子为  <code>android 9.0</code>  升级到  <code>android 7.1</code>  固件，需要先执行 <strong><code>擦除Flash</code></strong> 。<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo upgrade_tool ef update.img</span><br></pre></td></tr></table></figure></p>
 <h3 id="烧写整个固件-update-img：" class="article-heading"><a href="#烧写整个固件-update-img：" class="headerlink" title="烧写整个固件 update.img："></a>烧写整个固件 update.img：<a class="article-anchor" href="#烧写整个固件-update-img：" aria-hidden="true"></a></h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo upgrade_tool uf update.img</span><br></pre></td></tr></table></figure>
 <h3 id="烧写一个或多个分区镜像：" class="article-heading"><a href="#烧写一个或多个分区镜像：" class="headerlink" title="烧写一个或多个分区镜像："></a>烧写一个或多个分区镜像：<a class="article-anchor" href="#烧写一个或多个分区镜像：" aria-hidden="true"></a></h3><p>目前已知的定义缩写分区有-s(system 分区)、-k(kernel 分区)、-b(boot 分区)、-r(recovery 分区) 、-m(misc 分区) 、-u(uboot 分区) 、-t(trust 分区)和-re(resource 分区)，举例说明：</p>
@@ -157,7 +157,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-08-24T03:26:10.383Z" itemprop="dateModified">上次更新：2019-08-24</time>
+                <time class="article-footer-updated" datetime="2019-12-28T16:25:02.824Z" itemprop="dateModified">上次更新：2019-12-29</time>
                 <a href="HowtoUseWol.html" class="article-footer-prev" title="如何使用WOL"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="FenixScript.html" class="article-footer-next" title="编译Ubuntu/Debian固件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
