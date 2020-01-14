@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareAndroid.html</loc>
+    
+    <lastmod>2020-01-14T14:05:07.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:57:37.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:57:11.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:56:49.604Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:56:42.100Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:56:33.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:56:11.204Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:56:01.948Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HardwareExtra.html</loc>
+    
+    <lastmod>2020-01-13T01:55:50.652Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/edge/FirmwareUbuntu.html</loc>
     
     <lastmod>2020-01-11T03:59:49.202Z</lastmod>
@@ -135,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/UpgradeViaUSBCable.html</loc>
+    <loc>https://docs.khadas.com/edge/InstructionsforEdgeSinglePackBurningTool.html</loc>
     
     <lastmod>2019-12-28T16:25:02.824Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/InstructionsforEdgeSinglePackBurningTool.html</loc>
+    <loc>https://docs.khadas.com/edge/UpgradeViaUSBCable.html</loc>
     
     <lastmod>2019-12-28T16:25:02.824Z</lastmod>
     
@@ -194,13 +257,6 @@
     <loc>https://docs.khadas.com/edge/index.html</loc>
     
     <lastmod>2019-12-03T06:21:28.860Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareAndroid.html</loc>
-    
-    <lastmod>2019-12-02T02:10:57.419Z</lastmod>
     
   </url>
   
@@ -583,14 +639,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseWiringPi.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseRPiGPIO.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseWiringPi.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
@@ -618,14 +674,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
@@ -702,14 +758,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BuildAndroid.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BluetoothInstructions.html</loc>
     
     <lastmod>2019-08-24T03:26:10.383Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BluetoothInstructions.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BuildAndroid.html</loc>
     
     <lastmod>2019-08-24T03:26:10.383Z</lastmod>
     
@@ -751,13 +807,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/HowToInstallADBTool.html</loc>
-    
-    <lastmod>2019-08-24T03:26:10.351Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/edge/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.351Z</lastmod>
@@ -766,6 +815,13 @@
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToUseWiringPi.html</loc>
+    
+    <lastmod>2019-08-24T03:26:10.351Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToInstallADBTool.html</loc>
     
     <lastmod>2019-08-24T03:26:10.351Z</lastmod>
     
@@ -891,14 +947,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/AddChineseSupport.html</loc>
+    <loc>https://docs.khadas.com/vim2/BluetoothInstructions.html</loc>
     
     <lastmod>2019-08-24T03:26:10.327Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/BluetoothInstructions.html</loc>
+    <loc>https://docs.khadas.com/vim2/AddChineseSupport.html</loc>
     
     <lastmod>2019-08-24T03:26:10.327Z</lastmod>
     
@@ -1535,13 +1591,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareLibreelec.html</loc>
-    
-    <lastmod>2019-05-13T08:23:42.753Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/FastPackageUpdateImage.html</loc>
     
     <lastmod>2019-05-13T08:23:42.753Z</lastmod>
@@ -1549,14 +1598,21 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareUboot.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareDualos.html</loc>
     
     <lastmod>2019-05-13T08:23:42.753Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareDualos.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareLibreelec.html</loc>
+    
+    <lastmod>2019-05-13T08:23:42.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareUboot.html</loc>
     
     <lastmod>2019-05-13T08:23:42.753Z</lastmod>
     
@@ -1934,6 +1990,13 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupBluetooth.html</loc>
+    
+    <lastmod>2018-12-04T08:28:04.840Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/vim1/HowToAccessGpio.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
@@ -1948,7 +2011,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupBluetooth.html</loc>
+    <loc>https://docs.khadas.com/vim1/HowtoEnableAdb.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -1962,7 +2025,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowtoEnableAdb.html</loc>
+    <loc>https://docs.khadas.com/vim2/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -1970,13 +2033,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim2/HowToAccessGpio.html</loc>
-    
-    <lastmod>2018-12-04T08:28:04.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -2004,14 +2060,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessGpio.html</loc>
+    <loc>https://docs.khadas.com/vim3/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessI2c.html</loc>
+    <loc>https://docs.khadas.com/vim3/HowToAccessGpio.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -2081,14 +2137,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/BootFromSpiFlash.html</loc>
+    <loc>https://docs.khadas.com/edge/BuildPackagesInDocker.html</loc>
     
     <lastmod>2018-12-04T08:28:04.808Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/BuildPackagesInDocker.html</loc>
+    <loc>https://docs.khadas.com/edge/BootFromSpiFlash.html</loc>
     
     <lastmod>2018-12-04T08:28:04.808Z</lastmod>
     
@@ -2536,6 +2592,13 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaTFBurningCard.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/zh-cn/edge/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2557,7 +2620,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaTFBurningCard.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/firmware/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2571,13 +2634,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/index.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/firmware/Vim2Firmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2585,14 +2641,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/toneboard/index.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/AddChineseSupport.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/AddChineseSupport.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/toneboard/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2627,13 +2683,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUboot.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2642,6 +2691,13 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/GPIOPinout.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2711,6 +2767,13 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BuildAndroid.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/zh-cn/vim2/BootingCardVsBurningCard.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2718,7 +2781,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BuildAndroid.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2732,7 +2795,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BuildFuchsia.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2753,14 +2816,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUboot.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareThirdparty.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareThirdparty.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUboot.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2774,7 +2837,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BuildFuchsia.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupBluetooth.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2782,13 +2845,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim2/HowToConnectWifi.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupBluetooth.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2809,14 +2865,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/McuCodeFlowChart.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/SetupADB.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/SetupADB.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/McuCodeFlowChart.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2956,14 +3012,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/EdgeFirmware.html</loc>
+    <loc>https://docs.khadas.com/firmware/Vim1Firmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/Vim1Firmware.html</loc>
+    <loc>https://docs.khadas.com/firmware/EdgeFirmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
