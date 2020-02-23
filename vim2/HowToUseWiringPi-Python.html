@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+  <meta charset="utf-8">
+  <title>How To Use WiringPi-Python | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim2/HowToUseWiringPi-Python.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim2/HowToUseWiringPi-Python.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim2/HowToUseWiringPi-Python.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="What is WiringPi-PythonWiringPi-Python is the python version of wiringPi. Now we also migrate it to VIMs Board GPIO for control GPIO Headlers. WiringPi-Python Function List//GPIOclass GPIO(object):  d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Use WiringPi-Python">
+<meta property="og:url" content="https://docs.khadas.com/vim2/HowToUseWiringPi-Python.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="What is WiringPi-PythonWiringPi-Python is the python version of wiringPi. Now we also migrate it to VIMs Board GPIO for control GPIO Headlers. WiringPi-Python Function List//GPIOclass GPIO(object):  d">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-23T01:43:22.080Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How To Use WiringPi-Python">
+<meta name="twitter:description" content="What is WiringPi-PythonWiringPi-Python is the python version of wiringPi. Now we also migrate it to VIMs Board GPIO for control GPIO Headlers. WiringPi-Python Function List//GPIOclass GPIO(object):  d">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link current">VIM2</a><a href="/vim3/" class="main-nav-link">VIM3</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim2/HowToUseWiringPi-Python.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Use WiringPi-Python</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/vim2/HowToUseWiringPi-Python.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h3 id="What-is-WiringPi-Python" class="article-heading"><a href="#What-is-WiringPi-Python" class="headerlink" title="What is WiringPi-Python"></a>What is WiringPi-Python<a class="article-anchor" href="#What-is-WiringPi-Python" aria-hidden="true"></a></h3><p>WiringPi-Python is the python version of wiringPi. Now we also migrate it to VIMs Board GPIO for control GPIO Headlers.</p>
+<h3 id="WiringPi-Python-Function-List" class="article-heading"><a href="#WiringPi-Python-Function-List" class="headerlink" title="WiringPi-Python Function List"></a>WiringPi-Python Function List<a class="article-anchor" href="#WiringPi-Python-Function-List" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//GPIO</span><br><span class="line">class GPIO(object):</span><br><span class="line">  def __init__(self,pinmode=0):</span><br><span class="line">    self.MODE=pinmode</span><br><span class="line">    if pinmode==self.WPI_MODE_PINS:</span><br><span class="line">      wiringPiSetup()</span><br><span class="line">    if pinmode==self.WPI_MODE_GPIO:</span><br><span class="line">      wiringPiSetupGpio()</span><br><span class="line">    if pinmode==self.WPI_MODE_GPIO_SYS:</span><br><span class="line">      wiringPiSetupSys()</span><br><span class="line">    if pinmode==self.WPI_MODE_PHYS:</span><br><span class="line">      wiringPiSetupPhys()</span><br><span class="line">	if pinmode==self.WPI_MODE_PIFACE:</span><br><span class="line">      wiringPiSetupPiFace()</span><br><span class="line"></span><br><span class="line">  def delay(self,*args):</span><br><span class="line">    delay(*args)</span><br><span class="line">  def delayMicroseconds(self,*args):</span><br><span class="line">    delayMicroseconds(*args)</span><br><span class="line"></span><br><span class="line">  def piBoardRev(self):</span><br><span class="line">    return piBoardRev()</span><br><span class="line">  def wpiPinToGpio(self,*args):</span><br><span class="line">    return wpiPinToGpio(*args)</span><br><span class="line">  def setPadDrive(self,*args):</span><br><span class="line">    return setPadDrive(*args)</span><br><span class="line">  def getAlt(self,*args):</span><br><span class="line">    return getAlt(*args)</span><br><span class="line">  def digitalWriteByte(self,*args):</span><br><span class="line">    return digitalWriteByte(*args)</span><br><span class="line"></span><br><span class="line">  def pinMode(self,*args):</span><br><span class="line">    pinMode(*args)</span><br><span class="line"></span><br><span class="line">  def digitalWrite(self,*args):</span><br><span class="line">    digitalWrite(*args)</span><br><span class="line">  def digitalRead(self,*args):</span><br><span class="line">    return digitalRead(*args)</span><br><span class="line"></span><br><span class="line">  def analogWrite(self,*args):</span><br><span class="line">    analogWrite(*args)</span><br><span class="line">  def analogRead(self,*args):</span><br><span class="line">    return analogRead(*args)</span><br><span class="line"></span><br><span class="line">  def pullUpDnControl(self,*args):</span><br><span class="line">    return pullUpDnControl(*args)</span><br><span class="line"></span><br><span class="line">  def softPwmCreate(self,*args):</span><br><span class="line">    return softPwmCreate(*args)</span><br><span class="line">  def softPwmWrite(self,*args):</span><br><span class="line">    return softPwmWrite(*args)</span><br><span class="line"></span><br><span class="line">//I2C:</span><br><span class="line">class I2C(object):</span><br><span class="line">  def setupInterface(self,*args):</span><br><span class="line">  	return wiringPiI2CSetupInterface(*args)</span><br><span class="line">  def setup(self,*args):</span><br><span class="line">    return wiringPiI2CSetup(*args)</span><br><span class="line">  def read(self,*args):</span><br><span class="line">    return wiringPiI2CRead(*args)</span><br><span class="line">  def readReg8(self,*args):</span><br><span class="line">    return wiringPiI2CReadReg8(*args)</span><br><span class="line">  def readReg16(self,*args):</span><br><span class="line">    return wiringPiI2CReadReg16(*args)</span><br><span class="line">  def write(self,*args):</span><br><span class="line">    return wiringPiI2CWrite(*args)</span><br><span class="line">  def writeReg8(self,*args):</span><br><span class="line">    return wiringPiI2CWriteReg8(*args)</span><br><span class="line">  def writeReg16(self,*args):</span><br><span class="line">    return wiringPiI2CWriteReg16(*args)</span><br><span class="line"></span><br><span class="line">//Serial:</span><br><span class="line">class Serial(object):</span><br><span class="line">  device = &apos;/dev/ttyAMA0&apos;</span><br><span class="line">  baud = 9600</span><br><span class="line">  serial_id = 0</span><br><span class="line">  def printf(self,*args):</span><br><span class="line">    return serialPrintf(self.serial_id,*args)</span><br><span class="line">  def dataAvail(self,*args):</span><br><span class="line">    return serialDataAvail(self.serial_id,*args)</span><br><span class="line">  def getchar(self,*args):</span><br><span class="line">    return serialGetchar(self.serial_id,*args)</span><br><span class="line">  def putchar(self,*args):</span><br><span class="line">    return serialPutchar(self.serial_id,*args)</span><br><span class="line">  def puts(self,*args):</span><br><span class="line">    return serialPuts(self.serial_id,*args)</span><br><span class="line">  def __init__(self,device,baud):</span><br><span class="line">    self.device = device</span><br><span class="line">    self.baud = baud</span><br><span class="line">    self.serial_id = serialOpen(self.device,self.baud)</span><br><span class="line">  def __del__(self):</span><br><span class="line">    serialClose(self.serial_id)</span><br></pre></td></tr></table></figure>
+<h3 id="WieingPi-Python-sample-demo" class="article-heading"><a href="#WieingPi-Python-sample-demo" class="headerlink" title="WieingPi-Python sample demo"></a>WieingPi-Python sample demo<a class="article-anchor" href="#WieingPi-Python-sample-demo" aria-hidden="true"></a></h3><p>This is a simple program of pin read-write control<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 1 import wiringpi as GPIO</span><br><span class="line"> 2</span><br><span class="line"> 3 INPUT = 0</span><br><span class="line"> 4 OUTPUT = 1</span><br><span class="line"> 5 OUTPUT_PIN = 1</span><br><span class="line"> 6 INPUT_PIN = 2</span><br><span class="line"> 7 OUTPUT_HIGH = 1</span><br><span class="line"> 8 OUTPUT_LOW = 0</span><br><span class="line"> 9 pinstatus_list = [&apos;LOW&apos;,&apos;HIGH&apos;]</span><br><span class="line">10</span><br><span class="line">11 GPIO.wiringPiSetup()</span><br><span class="line">12 GPIO.pinMode(OUTPUT_PIN, OUTPUT)</span><br><span class="line">13 GPIO.pinMode(INPUT_PIN, INPUT)</span><br><span class="line">14</span><br><span class="line">15 print(&quot;----GPIO W&amp;R test demo-----&quot;)</span><br><span class="line">16 print(&quot;set output pin is LOW level&quot;)</span><br><span class="line">17 GPIO.digitalWrite(OUTPUT_PIN, OUTPUT_LOW)</span><br><span class="line">18 result = GPIO.digitalRead(INPUT_PIN)</span><br><span class="line">19 print(&apos;&#123;&#125;&#123;&#125;&apos;.format(&apos;The read Pin value is&apos;, pinstatus_list[result]))</span><br><span class="line">20 GPIO.delay(2000)</span><br><span class="line">21 print(&quot;set output pin is High level&quot;)</span><br><span class="line">22 GPIO.digitalWrite(OUTPUT_PIN, OUTPUT_HIGH)</span><br><span class="line">23 result = GPIO.digitalRead(INPUT_PIN)</span><br><span class="line">24 print(&apos;&#123;&#125;&#123;&#125;&apos;.format(&apos;The read Pin value is&apos;, pinstatus_list[result]))</span><br><span class="line">25 GPIO.delay(2000)</span><br><span class="line">26 print(&quot;End&quot;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="notes" class="article-heading"><a href="#notes" class="headerlink" title="notes"></a>notes<a class="article-anchor" href="#notes" aria-hidden="true"></a></h3><p>If you need to use the special function pin of wiringPi-Python, you need to confirm that the corresponding configuration is opened in DTB<br>WiringPi-Python itself includes many functions, not just controlling the output of GPIO pins and reading pin levels. Here is only a simple introduction and use, more use needs to be explored by users themselves.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-02-23T01:43:22.080Z" itemprop="dateModified">Last updated: 2020-02-23</time>
+                <a href="HowToUseWiringPi.html" class="article-footer-prev" title="How To Use WiringPi"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToUseRPiGPIO.html" class="article-footer-next" title="How To Use RPi.GPIO"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-WiringPi-Python"><span class="toc-text">What is WiringPi-Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WiringPi-Python-Function-List"><span class="toc-text">WiringPi-Python Function List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WieingPi-Python-sample-demo"><span class="toc-text">WieingPi-Python sample demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#notes"><span class="toc-text">notes</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="Vim2Interfaces.html" class="sidebar-link">VIM2 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="sidebar-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="sidebar-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a><a href="GPIOPinout.html" class="sidebar-link">GPIO Pin-Outs</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="sidebar-link">How To Install ADB Tool</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-Boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot Using TFTP</a><a href="KbiGuidance.html" class="sidebar-link">KBI Guide</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="sidebar-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="SetupADB.html" class="sidebar-link">Setup ADB</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a><a href="ForceResetFeatures.html" class="sidebar-link">Force Reset Remotely</a></details></strong><strong class="sidebar-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Images</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="sidebar-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="HowToSetupFan.html" class="sidebar-link">Add Cooling Fan</a><a href="InstallTensorFlow.html" class="sidebar-link">Install TensorFlow</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="SetupGolang.html" class="sidebar-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="sidebar-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseWiringPi-Python.html" class="sidebar-link current">How To Use WiringPi-Python</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use RPi.GPIO</a><a href="HowToUpgradeTheLogo.html" class="sidebar-link">How To Upgrade The Logo</a><a href="HowToUpgradeTheUboot.html" class="sidebar-link">How To Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="sidebar-link">How To Upgrade The kernel</a></details></strong><strong class="sidebar-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="sidebar-link first">Build Fuchsia</a></details></strong><strong class="sidebar-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="sidebar-link first">Download</a><a href="HardwareExtra.html" class="sidebar-link">Extra</a></details></strong><strong class="sidebar-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="sidebar-link first">Android</a><a href="FirmwareUbuntu.html" class="sidebar-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="sidebar-link">LibreELEC</a><a href="FirmwareDualos.html" class="sidebar-link">Dual OS</a><a href="FirmwareUboot.html" class="sidebar-link">U-Boot</a><a href="FirmwareThirdparty.html" class="sidebar-link">Third Party</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link current">VIM2</a><a href="/vim3/" class="mobile-nav-link">VIM3</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/toneboard/" class="mobile-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="Vim2Interfaces.html" class="mobile-nav-link">VIM2 Interfaces</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="InstallLibreELEC.html" class="mobile-nav-link">Install LibreELEC</a><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="BootingCardVsBurningCard.html" class="mobile-nav-link">Booting Card Vs Burning Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a><a href="GPIOPinout.html" class="mobile-nav-link">GPIO Pin-Outs</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToInstallADBTool.html" class="mobile-nav-link">How To Install ADB Tool</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-Boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot Using TFTP</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI Guide</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link first">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="SetupADB.html" class="mobile-nav-link">Setup ADB</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a><a href="ForceResetFeatures.html" class="mobile-nav-link">Force Reset Remotely</a></details></strong><strong class="mobile-nav-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Images</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="BluetoothInstructions.html" class="mobile-nav-link">Bluetooth Instructions</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="HowToSetupFan.html" class="mobile-nav-link">Add Cooling Fan</a><a href="InstallTensorFlow.html" class="mobile-nav-link">Install TensorFlow</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="SetupGolang.html" class="mobile-nav-link">Setup Golang</a><a href="HowtoEnableAdb.html" class="mobile-nav-link">Enable ADB</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseWiringPi-Python.html" class="mobile-nav-link current">How To Use WiringPi-Python</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use RPi.GPIO</a><a href="HowToUpgradeTheLogo.html" class="mobile-nav-link">How To Upgrade The Logo</a><a href="HowToUpgradeTheUboot.html" class="mobile-nav-link">How To Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="mobile-nav-link">How To Upgrade The kernel</a></details></strong><strong class="mobile-nav-title"><details><summary>Fuchsia</summary><a href="BuildFuchsia.html" class="mobile-nav-link first">Build Fuchsia</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware</summary><a href="HardwareDocs.html" class="mobile-nav-link first">Download</a><a href="HardwareExtra.html" class="mobile-nav-link">Extra</a></details></strong><strong class="mobile-nav-title"><details><summary>Firmware</summary><a href="FirmwareAndroid.html" class="mobile-nav-link first">Android</a><a href="FirmwareUbuntu.html" class="mobile-nav-link">Ubuntu</a><a href="FirmwareLibreelec.html" class="mobile-nav-link">LibreELEC</a><a href="FirmwareDualos.html" class="mobile-nav-link">Dual OS</a><a href="FirmwareUboot.html" class="mobile-nav-link">U-Boot</a><a href="FirmwareThirdparty.html" class="mobile-nav-link">Third Party</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim2/HowToUseWiringPi-Python.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
