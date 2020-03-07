@@ -2,58 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.khadas.com/vim1/Krescue.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/Krescue.html</loc>
     
-    <lastmod>2020-02-24T03:00:38.608Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/Krescue.html</loc>
-    
-    <lastmod>2020-02-24T03:00:38.608Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/Krescue.html</loc>
-    
-    <lastmod>2020-02-24T03:00:38.608Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/Krescue.html</loc>
-    
-    <lastmod>2020-02-24T03:00:38.608Z</lastmod>
+    <lastmod>2020-03-07T02:09:53.301Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/Krescue.html</loc>
     
-    <lastmod>2020-02-24T03:00:26.880Z</lastmod>
+    <lastmod>2020-03-07T02:09:53.301Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim2/Krescue.html</loc>
     
-    <lastmod>2020-02-24T03:00:26.880Z</lastmod>
+    <lastmod>2020-03-07T02:09:53.301Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/Krescue.html</loc>
     
-    <lastmod>2020-02-24T03:00:26.880Z</lastmod>
+    <lastmod>2020-03-07T02:09:53.301Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/Krescue.html</loc>
+    <loc>https://docs.khadas.com/vim1/UpgradeViaUSBCable.html</loc>
     
-    <lastmod>2020-02-24T03:00:26.880Z</lastmod>
+    <lastmod>2020-03-07T02:09:53.289Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/UpgradeViaUSBCable.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.289Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/UpgradeViaUSBCable.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.289Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/Krescue.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/Krescue.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/Krescue.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/Krescue.html</loc>
+    
+    <lastmod>2020-03-07T02:09:53.261Z</lastmod>
     
   </url>
   
@@ -114,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi-Python.html</loc>
-    
-    <lastmod>2020-02-23T01:43:22.080Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/vim1/HowToUseWiringPi.html</loc>
     
     <lastmod>2020-02-23T01:43:22.080Z</lastmod>
@@ -128,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi.html</loc>
+    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi-Python.html</loc>
     
     <lastmod>2020-02-23T01:43:22.080Z</lastmod>
     
@@ -142,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi.html</loc>
+    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi.html</loc>
     
     <lastmod>2020-02-23T01:43:22.080Z</lastmod>
     
@@ -150,6 +164,13 @@
   
   <url>
     <loc>https://docs.khadas.com/vim3/HowToUseWiringPi-Python.html</loc>
+    
+    <lastmod>2020-02-23T01:43:22.080Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi.html</loc>
     
     <lastmod>2020-02-23T01:43:22.080Z</lastmod>
     
@@ -555,27 +576,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/UpgradeViaUSBCable.html</loc>
-    
-    <lastmod>2020-01-02T09:12:08.718Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/UpgradeViaUSBCable.html</loc>
-    
-    <lastmod>2020-01-02T09:12:08.718Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/UpgradeViaUSBCable.html</loc>
-    
-    <lastmod>2020-01-02T09:12:08.718Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/edge/InstructionsforEdgeSinglePackBurningTool.html</loc>
     
     <lastmod>2019-12-28T16:25:02.824Z</lastmod>
@@ -590,14 +590,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/InstructionsforEdgeSinglePackBurningTool.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaUSBCable.html</loc>
     
     <lastmod>2019-12-28T16:25:02.824Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaUSBCable.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/InstructionsforEdgeSinglePackBurningTool.html</loc>
     
     <lastmod>2019-12-28T16:25:02.824Z</lastmod>
     
@@ -961,13 +961,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToInstallADBTool.html</loc>
-    
-    <lastmod>2019-08-24T03:26:10.403Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/edge/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
@@ -975,7 +968,21 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToInstallADBTool.html</loc>
+    
+    <lastmod>2019-08-24T03:26:10.403Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareAndroid.html</loc>
+    
+    <lastmod>2019-08-24T03:26:10.403Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
@@ -990,13 +997,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/InstallToolchains.html</loc>
-    
-    <lastmod>2019-08-24T03:26:10.403Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.403Z</lastmod>
     
@@ -1101,14 +1101,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/HowToInstallADBTool.html</loc>
+    <loc>https://docs.khadas.com/edge/HowToUseRPiGPIO.html</loc>
     
     <lastmod>2019-08-24T03:26:10.351Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/HowToUseRPiGPIO.html</loc>
+    <loc>https://docs.khadas.com/edge/HowToInstallADBTool.html</loc>
     
     <lastmod>2019-08-24T03:26:10.351Z</lastmod>
     
@@ -1234,14 +1234,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/AddChineseSupport.html</loc>
+    <loc>https://docs.khadas.com/vim3/BluetoothInstructions.html</loc>
     
     <lastmod>2019-08-24T03:26:10.327Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/BluetoothInstructions.html</loc>
+    <loc>https://docs.khadas.com/vim3/AddChineseSupport.html</loc>
     
     <lastmod>2019-08-24T03:26:10.327Z</lastmod>
     
@@ -2193,6 +2193,13 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/vim2/InstallDocker.html</loc>
+    
+    <lastmod>2018-12-04T08:28:04.844Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/vim2/InstallTensorFlow.html</loc>
     
     <lastmod>2018-12-04T08:28:04.844Z</lastmod>
@@ -2201,13 +2208,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim2/SetupADB.html</loc>
-    
-    <lastmod>2018-12-04T08:28:04.844Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/InstallDocker.html</loc>
     
     <lastmod>2018-12-04T08:28:04.844Z</lastmod>
     
@@ -2256,14 +2256,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowToAccessI2c.html</loc>
+    <loc>https://docs.khadas.com/vim1/HowToAccessGpio.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowToAccessGpio.html</loc>
+    <loc>https://docs.khadas.com/vim1/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -2291,14 +2291,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/HowToAccessI2c.html</loc>
+    <loc>https://docs.khadas.com/vim2/HowToAccessGpio.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/HowToAccessGpio.html</loc>
+    <loc>https://docs.khadas.com/vim2/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -2326,14 +2326,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessI2c.html</loc>
+    <loc>https://docs.khadas.com/vim3/HowToAccessGpio.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessGpio.html</loc>
+    <loc>https://docs.khadas.com/vim3/HowToAccessI2c.html</loc>
     
     <lastmod>2018-12-04T08:28:04.840Z</lastmod>
     
@@ -2431,14 +2431,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/ExtraPowerInput.html</loc>
+    <loc>https://docs.khadas.com/vim2/BuildBootLogoForUboot.html</loc>
     
     <lastmod>2018-12-03T10:09:20.852Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/BuildBootLogoForUboot.html</loc>
+    <loc>https://docs.khadas.com/vim2/ExtraPowerInput.html</loc>
     
     <lastmod>2018-12-03T10:09:20.852Z</lastmod>
     
@@ -2718,6 +2718,13 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/index.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/vim1/FirmwareDualos.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2739,7 +2746,7 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/index.html</loc>
+    <loc>https://docs.khadas.com/vim2/FirmwareLibreelec.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2747,13 +2754,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim2/FirmwareDualos.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareLibreelec.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2788,14 +2788,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareBuildroot.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDebian.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDebian.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareBuildroot.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2865,14 +2865,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/faq/index.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/index.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/faq/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2886,20 +2886,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/index.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/Vim2Firmware.html</loc>
-    
-    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/firmware/EdgeFirmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
@@ -2907,7 +2893,21 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/index.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/AddChineseSupport.html</loc>
+    
+    <lastmod>2018-07-27T06:36:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/Vim2Firmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2928,14 +2928,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FastPackageUpdateImage.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/ExtraPowerInput.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/ExtraPowerInput.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FastPackageUpdateImage.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2949,14 +2949,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUboot.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUboot.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -2977,14 +2977,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupBluetooth.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupWatchdog.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupWatchdog.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupBluetooth.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -3054,14 +3054,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/ExtraPowerInput.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage.html</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/ExtraPowerInput.html</loc>
     
     <lastmod>2018-07-27T06:36:44.475Z</lastmod>
     
@@ -3243,14 +3243,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/FirmwareDualos.html</loc>
+    <loc>https://docs.khadas.com/edge/FirmwareDebian.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/FirmwareDebian.html</loc>
+    <loc>https://docs.khadas.com/edge/FirmwareDualos.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
@@ -3292,14 +3292,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/Vim2Firmware.html</loc>
+    <loc>https://docs.khadas.com/firmware/index.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/index.html</loc>
+    <loc>https://docs.khadas.com/firmware/Vim2Firmware.html</loc>
     
     <lastmod>2018-07-27T06:36:44.387Z</lastmod>
     
