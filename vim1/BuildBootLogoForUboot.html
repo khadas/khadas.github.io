@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="This is a guide for building the boot-up logo on Amlogic platforms (may be different on other SoC platforms):  The Logo is loaded on U-Boot Build as logo.img with a separate logo partition Will displa">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-03T10:09:20.852Z">
+<meta property="og:updated_time" content="2020-03-19T12:01:23.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build Boot-Up Logo for U-Boot">
 <meta name="twitter:description" content="This is a guide for building the boot-up logo on Amlogic platforms (may be different on other SoC platforms):  The Logo is loaded on U-Boot Build as logo.img with a separate logo partition Will displa">
@@ -156,7 +156,7 @@
 <p><strong>2)</strong> Build the logo:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make logoimg</span><br></pre></td></tr></table></figure></p>
 <p>See this build log for reference:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make logoimg</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">generate out/target/product/kvim/upgrade/logo.img</span><br><span class="line">gzip -c device/khadas/kvim/product/logo/bootup.bmp &gt; out/target/product/kvim/upgrade/logo/bootup.bmp</span><br><span class="line">dbg:item num 8</span><br><span class="line">dbg:pack item [bootup]</span><br><span class="line">dbg:pack item [upgrade_upgrading]</span><br><span class="line">dbg:pack item [upgrade_fail]</span><br><span class="line">dbg:pack item [upgrade_unfocus]</span><br><span class="line">dbg:pack item [upgrade_error]</span><br><span class="line">dbg:pack item [upgrade_success]</span><br><span class="line">dbg:pack item [upgrade_logo]</span><br><span class="line">dbg:pack item [upgrade_bar]</span><br><span class="line">Installed out/target/product/kvim/upgrade/logo.img</span><br><span class="line"></span><br><span class="line"><span class="comment">#### make completed successfully (01:54 (mm:ss)) ####</span></span><br><span class="line"></span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
 <h3 id="Download-the-logo-img" class="article-heading"><a href="#Download-the-logo-img" class="headerlink" title="Download the logo.img"></a>Download the logo.img<a class="article-anchor" href="#Download-the-logo-img" aria-hidden="true"></a></h3><p><strong>1)</strong> Copy the new logo.img to a thumbdrive (U-disk):<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ cp images/logo.img /media/gouwa/9B98-6C15/</span><br></pre></td></tr></table></figure></p>
-<p><strong>2)</strong> Insert the thumbdrive into your VIM, then boot into U-Boot mode.</p>
+<p><strong>2)</strong> Insert the thumbdrive into your VIM, then boot into <a href="https://docs.khadas.com/vim1/SetupSerialTool.html">U-Boot mode</a>.</p>
 <p><strong>3)</strong> Update logo partition as new <code>logo.img</code>:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">kvim<span class="comment"># usb_update logo logo.img</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>4)</strong> Refresh to see the new logo:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">kvim<span class="comment"># run init_display</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="Further-reading" class="article-heading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading<a class="article-anchor" href="#Further-reading" aria-hidden="true"></a></h3><p>You might notice that there are <a href="https://github.com/khadas/android_device_khadas/tree/Vim/kvim/product/logo" target="_blank" rel="noopener">other pictures</a> that are also built into <code>logo.img</code>. They are listed below:</p>
@@ -164,11 +164,11 @@
 <p>These pictures are used to indicate different upgrade states. They are optional.</p>
 <p>You can check this source code for further details:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">u-boot/drivers/usb/gadget/v2_burning/v2_common/optimus_progress_ui.c</span><br></pre></td></tr></table></figure>
-<p>See Also<br><a href="">U-Boot Usage</a></p>
+<p>See Also<br><a href="https://docs.khadas.com/vim1/SetupSerialTool.html">U-Boot Usage</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-12-03T10:09:20.852Z" itemprop="dateModified">Last updated: 2018-12-03</time>
+                <time class="article-footer-updated" datetime="2020-03-19T12:01:23.509Z" itemprop="dateModified">Last updated: 2020-03-19</time>
                 <a href="UBootUsage.html" class="article-footer-prev" title="U-boot Usage Guide"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SetupTFTPServer.html" class="article-footer-next" title="TFTP Server for U-Boot"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
