@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>如何连接Wi-Fi | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,25 +52,27 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu/Debian服务器版本，没有图形界面，可以通过NetworkManager提供的命令来连接Wi-Fi。 扫描Wi-Fi热点khadas@Khadas:~$ nmcli d wifi listIN-USE  SSID                          MODE">
+  <meta name="description" content="对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu&#x2F;Debian服务器版本，没有图形界面，可以通过NetworkManager提供的命令来连接Wi-Fi。 扫描Wi-Fi热点khadas@Khadas:~$ nmcli d wifi listIN-USE  SSID                          MODE">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何连接Wi-Fi">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/HowToConnectWifi.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu/Debian服务器版本，没有图形界面，可以通过NetworkManager提供的命令来连接Wi-Fi。 扫描Wi-Fi热点khadas@Khadas:~$ nmcli d wifi listIN-USE  SSID                          MODE">
-<meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="og:description" content="对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu&#x2F;Debian服务器版本，没有图形界面，可以通过NetworkManager提供的命令来连接Wi-Fi。 扫描Wi-Fi热点khadas@Khadas:~$ nmcli d wifi listIN-USE  SSID                          MODE">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-07-27T06:36:44.475Z">
+<meta property="article:modified_time" content="2018-07-27T06:36:44.475Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何连接Wi-Fi">
-<meta name="twitter:description" content="对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu/Debian服务器版本，没有图形界面，可以通过NetworkManager提供的命令来连接Wi-Fi。 扫描Wi-Fi热点khadas@Khadas:~$ nmcli d wifi listIN-USE  SSID                          MODE">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -92,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link current">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -121,13 +126,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">如何连接Wi-Fi</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/HowToConnectWifi.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/HowToConnectWifi.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>对于桌面系统，可以通过图形界面很方便地连接到Wi-Fi热点，所以在这里只说如何通过命令行连接Wi-Fi。对于Ubuntu/Debian服务器版本，没有图形界面，可以通过<code>NetworkManager</code>提供的命令来连接Wi-Fi。</p>
@@ -148,7 +153,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#扫描Wi-Fi热点"><span class="toc-text">扫描Wi-Fi热点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接到Wi-Fi热点"><span class="toc-text">连接到Wi-Fi热点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#断开Wi-Fi"><span class="toc-text">断开Wi-Fi</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%AB%E6%8F%8FWi-Fi%E7%83%AD%E7%82%B9"><span class="toc-text">扫描Wi-Fi热点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%88%B0Wi-Fi%E7%83%AD%E7%82%B9"><span class="toc-text">连接到Wi-Fi热点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%AD%E5%BC%80Wi-Fi"><span class="toc-text">断开Wi-Fi</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -202,9 +207,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

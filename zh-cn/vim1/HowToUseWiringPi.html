@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>如何使用WiringPi | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
 <meta property="og:type" content="website">
@@ -63,11 +68,11 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
-<meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-23T01:43:22.096Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-23T01:43:22.096Z">
+<meta property="article:modified_time" content="2020-02-23T01:43:22.096Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用WiringPi">
-<meta name="twitter:description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -92,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -121,13 +126,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">如何使用WiringPi</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/HowToUseWiringPi.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/HowToUseWiringPi.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h3 id="什么是-WiringPi" class="article-heading"><a href="#什么是-WiringPi" class="headerlink" title="什么是 WiringPi"></a>什么是 WiringPi<a class="article-anchor" href="#什么是-WiringPi" aria-hidden="true"></a></h3><p>WiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。</p>
@@ -180,7 +185,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是-WiringPi"><span class="toc-text">什么是 WiringPi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始使用wiringPi"><span class="toc-text">开始使用wiringPi</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#控制命令"><span class="toc-text">控制命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通过命令行控制"><span class="toc-text">通过命令行控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通过编写linuxC程序控制GPIO"><span class="toc-text">通过编写linuxC程序控制GPIO</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WiringPi特殊功能引脚"><span class="toc-text">WiringPi特殊功能引脚</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SPI"><span class="toc-text">SPI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I2C"><span class="toc-text">I2C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ADC"><span class="toc-text">ADC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Serial"><span class="toc-text">Serial</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wiringPi函数列表"><span class="toc-text">wiringPi函数列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-WiringPi"><span class="toc-text">什么是 WiringPi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8wiringPi"><span class="toc-text">开始使用wiringPi</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%91%BD%E4%BB%A4"><span class="toc-text">控制命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8E%A7%E5%88%B6"><span class="toc-text">通过命令行控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E7%BC%96%E5%86%99linuxC%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6GPIO"><span class="toc-text">通过编写linuxC程序控制GPIO</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WiringPi%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E5%BC%95%E8%84%9A"><span class="toc-text">WiringPi特殊功能引脚</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SPI"><span class="toc-text">SPI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I2C"><span class="toc-text">I2C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ADC"><span class="toc-text">ADC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Serial"><span class="toc-text">Serial</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wiringPi%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8"><span class="toc-text">wiringPi函数列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -234,9 +239,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

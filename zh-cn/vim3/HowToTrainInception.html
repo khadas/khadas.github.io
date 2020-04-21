@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,25 +52,27 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow$ mkdir inception$ cd inception 准备数据集这里以flowers图片集为例$ mkdir data/$">
+  <meta name="description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow$ mkdir inception$ cd inception 准备数据集这里以flowers图片集为例$ mkdir data&#x2F;$">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Khadas Docs">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToTrainInception.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow$ mkdir inception$ cd inception 准备数据集这里以flowers图片集为例$ mkdir data/$">
-<meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-11-20T01:07:17.870Z">
+<meta property="og:description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow$ mkdir inception$ cd inception 准备数据集这里以flowers图片集为例$ mkdir data&#x2F;$">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-20T01:07:17.870Z">
+<meta property="article:modified_time" content="2019-11-20T01:07:17.870Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Khadas Docs">
-<meta name="twitter:description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow$ mkdir inception$ cd inception 准备数据集这里以flowers图片集为例$ mkdir data/$">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -92,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -121,13 +126,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name"></h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainInception.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainInception.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h1 id="训练inception模型" class="article-heading"><a href="#训练inception模型" class="headerlink" title="训练inception模型"></a>训练inception模型<a class="article-anchor" href="#训练inception模型" aria-hidden="true"></a></h1><p>inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型.</p>
@@ -215,7 +220,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#训练inception模型"><span class="toc-text">训练inception模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备训练环境和数据集"><span class="toc-text">准备训练环境和数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装TensorFlow"><span class="toc-text">安装TensorFlow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备数据集"><span class="toc-text">准备数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载checkpoints文件"><span class="toc-text">下载checkpoints文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clone训练用的slim工具"><span class="toc-text">clone训练用的slim工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转换数据集"><span class="toc-text">转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备labels文件"><span class="toc-text">1.准备labels文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-生成list文件"><span class="toc-text">2.生成list文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#generate-list-py"><span class="toc-text">generate_list.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行生成list文件"><span class="toc-text">运行生成list文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-生成train和val文件"><span class="toc-text">3.生成train和val文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#random-data-py"><span class="toc-text">random_data.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成训练集和验证集"><span class="toc-text">生成训练集和验证集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-转换数据集"><span class="toc-text">4.转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#转换脚本generate-TFRecord-py"><span class="toc-text">转换脚本generate_TFRecord.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成TensorFlow数据集"><span class="toc-text">生成TensorFlow数据集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#训练"><span class="toc-text">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#训练方式"><span class="toc-text">训练方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#从头训练inception模型"><span class="toc-text">从头训练inception模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微调inception模型"><span class="toc-text">微调inception模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看训练过程"><span class="toc-text">查看训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tensorboard"><span class="toc-text">tensorboard</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#训练数据处理"><span class="toc-text">训练数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#导出graph"><span class="toc-text">导出graph</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#冻结graph"><span class="toc-text">冻结graph</span></a></li></ol></li></ol></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text">训练inception模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E8%AE%AD%E7%BB%83%E7%8E%AF%E5%A2%83%E5%92%8C%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">准备训练环境和数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85TensorFlow"><span class="toc-text">安装TensorFlow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">准备数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDcheckpoints%E6%96%87%E4%BB%B6"><span class="toc-text">下载checkpoints文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clone%E8%AE%AD%E7%BB%83%E7%94%A8%E7%9A%84slim%E5%B7%A5%E5%85%B7"><span class="toc-text">clone训练用的slim工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87labels%E6%96%87%E4%BB%B6"><span class="toc-text">1.准备labels文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%9F%E6%88%90list%E6%96%87%E4%BB%B6"><span class="toc-text">2.生成list文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#generate-list-py"><span class="toc-text">generate_list.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%94%9F%E6%88%90list%E6%96%87%E4%BB%B6"><span class="toc-text">运行生成list文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%94%9F%E6%88%90train%E5%92%8Cval%E6%96%87%E4%BB%B6"><span class="toc-text">3.生成train和val文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#random-data-py"><span class="toc-text">random_data.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E8%AE%AD%E7%BB%83%E9%9B%86%E5%92%8C%E9%AA%8C%E8%AF%81%E9%9B%86"><span class="toc-text">生成训练集和验证集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BD%AC%E6%8D%A2%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">4.转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E8%84%9A%E6%9C%ACgenerate-TFRecord-py"><span class="toc-text">转换脚本generate_TFRecord.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90TensorFlow%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">生成TensorFlow数据集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83"><span class="toc-text">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%96%B9%E5%BC%8F"><span class="toc-text">训练方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E5%A4%B4%E8%AE%AD%E7%BB%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text">从头训练inception模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E8%B0%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text">微调inception模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="toc-text">查看训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tensorboard"><span class="toc-text">tensorboard</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-text">训练数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%87%BAgraph"><span class="toc-text">导出graph</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%BB%E7%BB%93graph"><span class="toc-text">冻结graph</span></a></li></ol></li></ol></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -269,9 +274,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

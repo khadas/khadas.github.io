@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>使用darknet训练自己的yolo模型 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
 <meta property="og:type" content="website">
@@ -63,13 +68,13 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/howto_labelImg_tool.png">
-<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:published_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:modified_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用darknet训练自己的yolo模型">
-<meta name="twitter:description" content="准备搭建darknet开发环境darknet的搭建可以参考这个文档，安装需求搭建安装配置darknet环境darknet环境训练yolo模型的几点说明：   opencv的选项一定要打开  使用GPU训练的，最好要有8G以上的显存 使用CPU训练的速度会比GPU慢上几百倍，官方有关于这个的说明   建立数据集目录训练的数据集按照voc训练的数据标准来定。$ cd $workspace$ mkdir">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -95,7 +100,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -124,13 +129,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">使用darknet训练自己的yolo模型</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainYolo.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainYolo.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h2 id="准备" class="article-heading"><a href="#准备" class="headerlink" title="准备"></a>准备<a class="article-anchor" href="#准备" aria-hidden="true"></a></h2><h3 id="搭建darknet开发环境" class="article-heading"><a href="#搭建darknet开发环境" class="headerlink" title="搭建darknet开发环境"></a>搭建darknet开发环境<a class="article-anchor" href="#搭建darknet开发环境" aria-hidden="true"></a></h3><p>darknet的搭建可以参考这个文档，安装需求搭建<a href="/zh-cn/vim3/HowToInstallDarknet.html">安装配置darknet环境</a><br>darknet环境训练yolo模型的几点说明：</p>
@@ -243,7 +248,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建darknet开发环境"><span class="toc-text">搭建darknet开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建立数据集目录"><span class="toc-text">建立数据集目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备数据集"><span class="toc-text">准备数据集</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据集处理"><span class="toc-text">数据集处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#labelImg工具"><span class="toc-text">labelImg工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖包安装"><span class="toc-text">依赖包安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装labelImg"><span class="toc-text">安装labelImg</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#制作标签"><span class="toc-text">制作标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置路径"><span class="toc-text">设置路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置labels"><span class="toc-text">设置labels</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标注"><span class="toc-text">标注</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#格式转换"><span class="toc-text">格式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成list文件"><span class="toc-text">生成list文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成训练文件"><span class="toc-text">生成训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#获取脚本文件"><span class="toc-text">获取脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改脚本文件"><span class="toc-text">修改脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#训练"><span class="toc-text">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备训练文件"><span class="toc-text">准备训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#准备names文件"><span class="toc-text">准备names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#准备data文件"><span class="toc-text">准备data文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复制cfg文件"><span class="toc-text">复制cfg文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建backup目录"><span class="toc-text">新建backup目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移动训练数据文件"><span class="toc-text">移动训练数据文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件修改"><span class="toc-text">配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改voc-names文件"><span class="toc-text">修改voc.names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改cfg文件"><span class="toc-text">修改cfg文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#修改组数和组大小参数"><span class="toc-text">修改组数和组大小参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改yolo神经元参数"><span class="toc-text">修改yolo神经元参数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编辑voc-data文件"><span class="toc-text">编辑voc.data文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#训练过程"><span class="toc-text">训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取权重文件"><span class="toc-text">获取权重文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#训练命令"><span class="toc-text">训练命令</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#从头开始训练"><span class="toc-text">从头开始训练</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#从保存的中间点恢复训练"><span class="toc-text">从保存的中间点恢复训练</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#训练状态"><span class="toc-text">训练状态</span></a></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAdarknet%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建darknet开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9B%AE%E5%BD%95"><span class="toc-text">建立数据集目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">准备数据集</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86"><span class="toc-text">数据集处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#labelImg%E5%B7%A5%E5%85%B7"><span class="toc-text">labelImg工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%8C%85%E5%AE%89%E8%A3%85"><span class="toc-text">依赖包安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85labelImg"><span class="toc-text">安装labelImg</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E4%BD%9C%E6%A0%87%E7%AD%BE"><span class="toc-text">制作标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%B7%AF%E5%BE%84"><span class="toc-text">设置路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AElabels"><span class="toc-text">设置labels</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E6%B3%A8"><span class="toc-text">标注</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">格式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90list%E6%96%87%E4%BB%B6"><span class="toc-text">生成list文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E8%AE%AD%E7%BB%83%E6%96%87%E4%BB%B6"><span class="toc-text">生成训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="toc-text">获取脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="toc-text">修改脚本文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-text">运行</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83"><span class="toc-text">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E8%AE%AD%E7%BB%83%E6%96%87%E4%BB%B6"><span class="toc-text">准备训练文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87names%E6%96%87%E4%BB%B6"><span class="toc-text">准备names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87data%E6%96%87%E4%BB%B6"><span class="toc-text">准备data文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6cfg%E6%96%87%E4%BB%B6"><span class="toc-text">复制cfg文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAbackup%E7%9B%AE%E5%BD%95"><span class="toc-text">新建backup目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6"><span class="toc-text">移动训练数据文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9"><span class="toc-text">配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9voc-names%E6%96%87%E4%BB%B6"><span class="toc-text">修改voc.names文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9cfg%E6%96%87%E4%BB%B6"><span class="toc-text">修改cfg文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%BB%84%E6%95%B0%E5%92%8C%E7%BB%84%E5%A4%A7%E5%B0%8F%E5%8F%82%E6%95%B0"><span class="toc-text">修改组数和组大小参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9yolo%E7%A5%9E%E7%BB%8F%E5%85%83%E5%8F%82%E6%95%B0"><span class="toc-text">修改yolo神经元参数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%BE%91voc-data%E6%96%87%E4%BB%B6"><span class="toc-text">编辑voc.data文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="toc-text">训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%9D%83%E9%87%8D%E6%96%87%E4%BB%B6"><span class="toc-text">获取权重文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E5%91%BD%E4%BB%A4"><span class="toc-text">训练命令</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%E8%AE%AD%E7%BB%83"><span class="toc-text">从头开始训练</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BB%8E%E4%BF%9D%E5%AD%98%E7%9A%84%E4%B8%AD%E9%97%B4%E7%82%B9%E6%81%A2%E5%A4%8D%E8%AE%AD%E7%BB%83"><span class="toc-text">从保存的中间点恢复训练</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E7%8A%B6%E6%80%81"><span class="toc-text">训练状态</span></a></li></ol></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -297,9 +302,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>通过USB升级固件 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行setup_v2.x.x.exe程序进行安装。  固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;g">
 <meta property="og:type" content="website">
@@ -63,13 +68,13 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行setup_v2.x.x.exe程序进行安装。  固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;g">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_setup_v217_zh.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_interface_v217_zh.png">
-<meta property="og:updated_time" content="2020-01-02T09:12:21.294Z">
+<meta property="article:published_time" content="2020-01-02T09:12:21.374Z">
+<meta property="article:modified_time" content="2020-01-02T09:12:21.294Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过USB升级固件">
-<meta name="twitter:description" content="注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。 通过Windows升级固件准备工作 下载升级工具USB Upgrade Tool并解压。 运行setup_v2.x.x.exe程序进行安装。  固件升级操作步骤确保已经正确安装好升级工具，按照下面步骤进行升级：  打开升级工具USB_Burning_Tool_v2.x.x.exe，点击”File–&amp;g">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/usb_upgrade_tool_setup_v217_zh.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -95,7 +100,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -124,13 +129,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">通过USB升级固件</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/UpgradeViaUSBCable.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/UpgradeViaUSBCable.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p><strong>注意：由于VIM1、VIM2和VIM3操作方式基本上是一样的，所以本文档以VIM1为例进行说明。</strong></p>
@@ -189,7 +194,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Windows升级固件"><span class="toc-text">通过Windows升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#固件升级操作步骤"><span class="toc-text">固件升级操作步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Ubuntu升级固件"><span class="toc-text">通过Ubuntu升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取ubuntu烧录工具"><span class="toc-text">获取ubuntu烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装烧录工具"><span class="toc-text">安装烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查USB驱动"><span class="toc-text">检查USB驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何在Ubuntu下烧录固件"><span class="toc-text">如何在Ubuntu下烧录固件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载烧录工具"><span class="toc-text">卸载烧录工具</span></a></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87Windows%E5%8D%87%E7%BA%A7%E5%9B%BA%E4%BB%B6"><span class="toc-text">通过Windows升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BA%E4%BB%B6%E5%8D%87%E7%BA%A7%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-text">固件升级操作步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87Ubuntu%E5%8D%87%E7%BA%A7%E5%9B%BA%E4%BB%B6"><span class="toc-text">通过Ubuntu升级固件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96ubuntu%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7"><span class="toc-text">获取ubuntu烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7"><span class="toc-text">安装烧录工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5USB%E9%A9%B1%E5%8A%A8"><span class="toc-text">检查USB驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8Ubuntu%E4%B8%8B%E7%83%A7%E5%BD%95%E5%9B%BA%E4%BB%B6"><span class="toc-text">如何在Ubuntu下烧录固件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7"><span class="toc-text">卸载烧录工具</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -243,9 +248,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

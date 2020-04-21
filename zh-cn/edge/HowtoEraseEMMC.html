@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>如何擦除eMMC | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,26 +52,28 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="在Windows下你可以用AndroidTool来擦除eMMC。  给Edge上电并通过USB-C数据线连接Edge和你的电脑。  进入Loader或MASKROM，参考如何进入升级模式。  打开AndroidTool选择升级固件-&amp;gt;固件来加载固件。  点击擦除Flash来擦除eMMC。   在Ubuntu下你可以使用Linux_Upgrade_Tool来擦除eMMC。  给Edge上电并通">
+  <meta name="description" content="在Windows下你可以用AndroidTool来擦除eMMC。  给Edge上电并通过USB-C数据线连接Edge和你的电脑。  进入Loader或MASKROM，参考如何进入升级模式。  打开AndroidTool选择升级固件-&gt;固件来加载固件。  点击擦除Flash来擦除eMMC。   在Ubuntu下你可以使用Linux_Upgrade_Tool来擦除eMMC。  给Edge上电并通">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何擦除eMMC">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/HowtoEraseEMMC.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="在Windows下你可以用AndroidTool来擦除eMMC。  给Edge上电并通过USB-C数据线连接Edge和你的电脑。  进入Loader或MASKROM，参考如何进入升级模式。  打开AndroidTool选择升级固件-&amp;gt;固件来加载固件。  点击擦除Flash来擦除eMMC。   在Ubuntu下你可以使用Linux_Upgrade_Tool来擦除eMMC。  给Edge上电并通">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:description" content="在Windows下你可以用AndroidTool来擦除eMMC。  给Edge上电并通过USB-C数据线连接Edge和你的电脑。  进入Loader或MASKROM，参考如何进入升级模式。  打开AndroidTool选择升级固件-&gt;固件来加载固件。  点击擦除Flash来擦除eMMC。   在Ubuntu下你可以使用Linux_Upgrade_Tool来擦除eMMC。  给Edge上电并通">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/AndroidTool_erase_zh.png">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.475Z">
+<meta property="article:published_time" content="2018-07-27T06:36:44.475Z">
+<meta property="article:modified_time" content="2018-07-27T06:36:44.475Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何擦除eMMC">
-<meta name="twitter:description" content="在Windows下你可以用AndroidTool来擦除eMMC。  给Edge上电并通过USB-C数据线连接Edge和你的电脑。  进入Loader或MASKROM，参考如何进入升级模式。  打开AndroidTool选择升级固件-&amp;gt;固件来加载固件。  点击擦除Flash来擦除eMMC。   在Ubuntu下你可以使用Linux_Upgrade_Tool来擦除eMMC。  给Edge上电并通">
 <meta name="twitter:image" content="https://docs.khadas.com/images/edge/AndroidTool_erase_zh.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -94,7 +99,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link current">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -123,13 +128,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">如何擦除eMMC</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/HowtoEraseEMMC.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/HowtoEraseEMMC.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h3 id="在Windows下" class="article-heading"><a href="#在Windows下" class="headerlink" title="在Windows下"></a>在Windows下<a class="article-anchor" href="#在Windows下" aria-hidden="true"></a></h3><p>你可以用<a href="https://dl.khadas.com/Tools/AndroidTool_Release_zh_v2.58.zip" target="_blank" rel="noopener">AndroidTool</a>来擦除eMMC。</p>
@@ -166,7 +171,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#在Windows下"><span class="toc-text">在Windows下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Ubuntu下"><span class="toc-text">在Ubuntu下</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Windows%E4%B8%8B"><span class="toc-text">在Windows下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B"><span class="toc-text">在Ubuntu下</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -220,9 +225,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>搭建TFTP服务器 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,25 +52,27 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
+  <meta name="description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件&#x2F;etc&#x2F;inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
 <meta property="og:type" content="website">
 <meta property="og:title" content="搭建TFTP服务器">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/SetupTFTPServer.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
-<meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件&#x2F;etc&#x2F;inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:modified_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建TFTP服务器">
-<meta name="twitter:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包：$ sudo apt-get install openbsd-inetd tftpd tftp 配置通过root权限编辑文件/etc/inetd.conf来使能TFTP服务，文件内容如下：#tftp   dgram   udp     wait    root">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -92,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -121,13 +126,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">搭建TFTP服务器</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/SetupTFTPServer.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/SetupTFTPServer.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>很常用的搭建方法，你也可以通过Google搜索相关信息。</p>
@@ -182,7 +187,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu16-04"><span class="toc-text">Ubuntu16.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置TFTP"><span class="toc-text">设置TFTP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04"><span class="toc-text">Ubuntu18.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置VIM目标板"><span class="toc-text">设置VIM目标板</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu16-04"><span class="toc-text">Ubuntu16.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AETFTP"><span class="toc-text">设置TFTP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04"><span class="toc-text">Ubuntu18.04</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEVIM%E7%9B%AE%E6%A0%87%E6%9D%BF"><span class="toc-text">设置VIM目标板</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -236,9 +241,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>安装配置darknet环境 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
 <meta property="og:type" content="website">
@@ -63,13 +68,13 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToInstallDarknet.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_check.png">
-<meta property="og:updated_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:published_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:modified_time" content="2019-11-15T09:18:22.047Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装配置darknet环境">
-<meta name="twitter:description" content="darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架 基本环境配置基础工具安装$ sudo apt update$ sudo apt upgrade$ sudo apt install git wget build-essential　python3-dev python3-pip opencv安装$ sudo apt install libopencv-dev$ sudo pip3 i">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -95,7 +100,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link current">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -124,13 +129,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">安装配置darknet环境</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToInstallDarknet.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToInstallDarknet.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>darknet是基于ｃ语言设计的一个主要用于物体检测训练的框架</p>
@@ -172,7 +177,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本环境配置"><span class="toc-text">基本环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础工具安装"><span class="toc-text">基础工具安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opencv安装"><span class="toc-text">opencv安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cuda和cudnn安装-不使用GPU跳过"><span class="toc-text">cuda和cudnn安装(不使用GPU跳过)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet安装"><span class="toc-text">darknet安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载darnket"><span class="toc-text">下载darnket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置darknet"><span class="toc-text">配置darknet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用GPU"><span class="toc-text">使用GPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#打开opencv"><span class="toc-text">打开opencv</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet验证和使用"><span class="toc-text">darknet验证和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用yolo模型"><span class="toc-text">使用yolo模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取训练好的模型文件"><span class="toc-text">获取训练好的模型文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通过图片检测"><span class="toc-text">通过图片检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用摄像头"><span class="toc-text">使用摄像头</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#出现Not-compiled-with-OpenCV"><span class="toc-text">出现Not compiled with OpenCV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#显示nvcc或者cudnn相关的-h未找到"><span class="toc-text">显示nvcc或者cudnn相关的.h未找到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GPU报错"><span class="toc-text">GPU报错</span></a></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">基本环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85"><span class="toc-text">基础工具安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opencv%E5%AE%89%E8%A3%85"><span class="toc-text">opencv安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cuda%E5%92%8Ccudnn%E5%AE%89%E8%A3%85-%E4%B8%8D%E4%BD%BF%E7%94%A8GPU%E8%B7%B3%E8%BF%87"><span class="toc-text">cuda和cudnn安装(不使用GPU跳过)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet%E5%AE%89%E8%A3%85"><span class="toc-text">darknet安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDdarnket"><span class="toc-text">下载darnket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEdarknet"><span class="toc-text">配置darknet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8GPU"><span class="toc-text">使用GPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%BC%80opencv"><span class="toc-text">打开opencv</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-text">编译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#darknet%E9%AA%8C%E8%AF%81%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-text">darknet验证和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8yolo%E6%A8%A1%E5%9E%8B"><span class="toc-text">使用yolo模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AE%AD%E7%BB%83%E5%A5%BD%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="toc-text">获取训练好的模型文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BE%E7%89%87%E6%A3%80%E6%B5%8B"><span class="toc-text">通过图片检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4"><span class="toc-text">使用摄像头</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ"><span class="toc-text">FAQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0Not-compiled-with-OpenCV"><span class="toc-text">出现Not compiled with OpenCV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAnvcc%E6%88%96%E8%80%85cudnn%E7%9B%B8%E5%85%B3%E7%9A%84-h%E6%9C%AA%E6%89%BE%E5%88%B0"><span class="toc-text">显示nvcc或者cudnn相关的.h未找到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GPU%E6%8A%A5%E9%94%99"><span class="toc-text">GPU报错</span></a></li></ol></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -226,9 +231,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

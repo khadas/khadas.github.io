@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>安装STM8开发环境--基于Ubuntu 16.04 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="概述 本文档是关于如何在Ubuntu上搭建STM8的开发环境。搭建环境时会安装SDCC编译器和stm8flash烧录工具。  SDCC 和 stm8flash 都是开源项目, 更多细节请查看SDCC, stm8flash.  除了SDCC外，还有几个工具都可用于STM8的开发,比如：STVD, IAR, Cosmic(free) ……  开始搭建开发环境前先安装好Ubuntu操作系统并准备好烧录器">
 <meta property="og:type" content="website">
@@ -63,13 +68,13 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/McuDevelop.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="概述 本文档是关于如何在Ubuntu上搭建STM8的开发环境。搭建环境时会安装SDCC编译器和stm8flash烧录工具。  SDCC 和 stm8flash 都是开源项目, 更多细节请查看SDCC, stm8flash.  除了SDCC外，还有几个工具都可用于STM8的开发,比如：STVD, IAR, Cosmic(free) ……  开始搭建开发环境前先安装好Ubuntu操作系统并准备好烧录器">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_mcu_header.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim2/vim2_mcu_header_desc.png">
-<meta property="og:updated_time" content="2018-07-27T06:36:44.479Z">
+<meta property="article:published_time" content="2018-07-27T06:36:44.479Z">
+<meta property="article:modified_time" content="2018-07-27T06:36:44.479Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装STM8开发环境--基于Ubuntu 16.04">
-<meta name="twitter:description" content="概述 本文档是关于如何在Ubuntu上搭建STM8的开发环境。搭建环境时会安装SDCC编译器和stm8flash烧录工具。  SDCC 和 stm8flash 都是开源项目, 更多细节请查看SDCC, stm8flash.  除了SDCC外，还有几个工具都可用于STM8的开发,比如：STVD, IAR, Cosmic(free) ……  开始搭建开发环境前先安装好Ubuntu操作系统并准备好烧录器">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim2/vim2_mcu_header.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -95,7 +100,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link current">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -124,13 +129,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">安装STM8开发环境--基于Ubuntu 16.04</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/McuDevelop.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/McuDevelop.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h3 id="概述" class="article-heading"><a href="#概述" class="headerlink" title="概述"></a>概述<a class="article-anchor" href="#概述" aria-hidden="true"></a></h3><ul>
@@ -167,7 +172,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装编译器：SDCC"><span class="toc-text">安装编译器：SDCC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看SDCC版本（从下面的版本信息可以看出SDCC已经支持编译STM8了）。"><span class="toc-text">查看SDCC版本（从下面的版本信息可以看出SDCC已经支持编译STM8了）。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装烧录工具：stm8flash"><span class="toc-text">安装烧录工具：stm8flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#下载stm8flash"><span class="toc-text">下载stm8flash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译并安装stm8flash烧录工具"><span class="toc-text">编译并安装stm8flash烧录工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#烧录器与VIM2的连接"><span class="toc-text">烧录器与VIM2的连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#烧录器只需要连接-VCC-MCU-MCU-SWIM-MCU-NRST-GND-就可以实现烧录。"><span class="toc-text">烧录器只需要连接 VCC_MCU, MCU_SWIM, MCU_NRST, GND 就可以实现烧录。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加USB烧录器的权限"><span class="toc-text">增加USB烧录器的权限</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#烧录器与PC连接后查看USB烧录器的ID号。"><span class="toc-text">烧录器与PC连接后查看USB烧录器的ID号。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#增加下面内容到文件-etc-udev-rules-d-51-android-rules，并保存。"><span class="toc-text">增加下面内容到文件/etc/udev/rules.d/51-android.rules，并保存。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译烧录例程"><span class="toc-text">编译烧录例程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解压源码"><span class="toc-text">解压源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译源码-由于sdcc不支持多文件同时编译，代码里面用Makefile来管理"><span class="toc-text">编译源码 (由于sdcc不支持多文件同时编译，代码里面用Makefile来管理)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#烧录固件"><span class="toc-text">烧录固件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%99%A8%EF%BC%9ASDCC"><span class="toc-text">安装编译器：SDCC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BSDCC%E7%89%88%E6%9C%AC%EF%BC%88%E4%BB%8E%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%87%BASDCC%E5%B7%B2%E7%BB%8F%E6%94%AF%E6%8C%81%E7%BC%96%E8%AF%91STM8%E4%BA%86%EF%BC%89%E3%80%82"><span class="toc-text">查看SDCC版本（从下面的版本信息可以看出SDCC已经支持编译STM8了）。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%EF%BC%9Astm8flash"><span class="toc-text">安装烧录工具：stm8flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDstm8flash"><span class="toc-text">下载stm8flash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%B9%B6%E5%AE%89%E8%A3%85stm8flash%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7"><span class="toc-text">编译并安装stm8flash烧录工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%A7%E5%BD%95%E5%99%A8%E4%B8%8EVIM2%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="toc-text">烧录器与VIM2的连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%A7%E5%BD%95%E5%99%A8%E5%8F%AA%E9%9C%80%E8%A6%81%E8%BF%9E%E6%8E%A5-VCC-MCU-MCU-SWIM-MCU-NRST-GND-%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E7%83%A7%E5%BD%95%E3%80%82"><span class="toc-text">烧录器只需要连接 VCC_MCU, MCU_SWIM, MCU_NRST, GND 就可以实现烧录。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0USB%E7%83%A7%E5%BD%95%E5%99%A8%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-text">增加USB烧录器的权限</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%A7%E5%BD%95%E5%99%A8%E4%B8%8EPC%E8%BF%9E%E6%8E%A5%E5%90%8E%E6%9F%A5%E7%9C%8BUSB%E7%83%A7%E5%BD%95%E5%99%A8%E7%9A%84ID%E5%8F%B7%E3%80%82"><span class="toc-text">烧录器与PC连接后查看USB烧录器的ID号。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E4%B8%8B%E9%9D%A2%E5%86%85%E5%AE%B9%E5%88%B0%E6%96%87%E4%BB%B6-etc-udev-rules-d-51-android-rules%EF%BC%8C%E5%B9%B6%E4%BF%9D%E5%AD%98%E3%80%82"><span class="toc-text">增加下面内容到文件&#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;51-android.rules，并保存。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E7%83%A7%E5%BD%95%E4%BE%8B%E7%A8%8B"><span class="toc-text">编译烧录例程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B%E6%BA%90%E7%A0%81"><span class="toc-text">解压源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E6%BA%90%E7%A0%81-%E7%94%B1%E4%BA%8Esdcc%E4%B8%8D%E6%94%AF%E6%8C%81%E5%A4%9A%E6%96%87%E4%BB%B6%E5%90%8C%E6%97%B6%E7%BC%96%E8%AF%91%EF%BC%8C%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E7%94%A8Makefile%E6%9D%A5%E7%AE%A1%E7%90%86"><span class="toc-text">编译源码 (由于sdcc不支持多文件同时编译，代码里面用Makefile来管理)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%A7%E5%BD%95%E5%9B%BA%E4%BB%B6"><span class="toc-text">烧录固件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -221,9 +226,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

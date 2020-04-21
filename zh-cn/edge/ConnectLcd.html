@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>Connect to TS050 Touchscreen | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,13 +52,15 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="1.简介Edge-V开发板外置了3个LCD屏接口：HDMI + MIPI + EDP。接口对应板子上的位置如下图：   Edge开发板外置了2个LCD屏接口：HDMI + DP。接口对应板子上的位置如下图：    Captain开发板外置了2个LCD屏接口：EDP + MIPI。接口对应板子上的位置如下图：   2.（HDMI + DP）屏幕配置2.1配置 dtsrk3399-khadas-edg">
 <meta property="og:type" content="website">
@@ -63,17 +68,17 @@
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/ConnectLcd.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="1.简介Edge-V开发板外置了3个LCD屏接口：HDMI + MIPI + EDP。接口对应板子上的位置如下图：   Edge开发板外置了2个LCD屏接口：HDMI + DP。接口对应板子上的位置如下图：    Captain开发板外置了2个LCD屏接口：EDP + MIPI。接口对应板子上的位置如下图：   2.（HDMI + DP）屏幕配置2.1配置 dtsrk3399-khadas-edg">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/edge-v_display_interfaces.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/edge_display_interfaces.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/captain_display_interfaces.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/edge_v_ts050.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/timing_attribute_reference_figure.png">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/timing_attribute_reference_figure_2.png">
-<meta property="og:updated_time" content="2019-08-24T03:26:10.379Z">
+<meta property="article:published_time" content="2019-08-24T03:26:10.379Z">
+<meta property="article:modified_time" content="2019-08-24T03:26:10.379Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Connect to TS050 Touchscreen">
-<meta name="twitter:description" content="1.简介Edge-V开发板外置了3个LCD屏接口：HDMI + MIPI + EDP。接口对应板子上的位置如下图：   Edge开发板外置了2个LCD屏接口：HDMI + DP。接口对应板子上的位置如下图：    Captain开发板外置了2个LCD屏接口：EDP + MIPI。接口对应板子上的位置如下图：   2.（HDMI + DP）屏幕配置2.1配置 dtsrk3399-khadas-edg">
 <meta name="twitter:image" content="https://docs.khadas.com/images/edge/edge-v_display_interfaces.jpg">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -99,7 +104,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link current">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -128,13 +133,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">Connect to TS050 Touchscreen</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/ConnectLcd.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/edge/ConnectLcd.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h1 id="1-简介" class="article-heading"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介<a class="article-anchor" href="#1-简介" aria-hidden="true"></a></h1><p>Edge-V开发板外置了3个LCD屏接口：HDMI + MIPI + EDP。接口对应板子上的位置如下图：</p>
@@ -183,7 +188,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介"><span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-（HDMI-DP）屏幕配置"><span class="toc-text">2.（HDMI + DP）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1配置-dts"><span class="toc-text">2.1配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-使能对应显示设备节点"><span class="toc-text">2.1.1 使能对应显示设备节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-绑定-VOP"><span class="toc-text">2.1.2 绑定 VOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-开机-logo"><span class="toc-text">2.1.3 开机 logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-绑定-PLL"><span class="toc-text">2.1.4 绑定 PLL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-5-打开音频"><span class="toc-text">2.1.5 打开音频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-主副显示器配置"><span class="toc-text">2.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0配置"><span class="toc-text">android 9.0配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#android-7-1配置"><span class="toc-text">android 7.1配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-（MIPI-HDMI）屏幕配置"><span class="toc-text">3.（MIPI + HDMI）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1配置-dts"><span class="toc-text">3.1配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-使能对应显示设备节点"><span class="toc-text">3.1.1 使能对应显示设备节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-绑定-VOP"><span class="toc-text">3.1.2 绑定 VOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-开机-logo"><span class="toc-text">3.1.3 开机 logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-绑定-PLL"><span class="toc-text">3.1.4 绑定 PLL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-5-打开音频"><span class="toc-text">3.1.5 打开音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-6-配置-timing"><span class="toc-text">3.1.6 配置 timing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-7-命令格式说明"><span class="toc-text">3.1.7 命令格式说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-8-背光-backlight"><span class="toc-text">3.1.8 背光 backlight</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-主副显示器配置"><span class="toc-text">3.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0配置-1"><span class="toc-text">android 9.0配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#android-7-1配置-1"><span class="toc-text">android 7.1配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-（HDMI-or-DP-MIPI）屏幕配置"><span class="toc-text">4.（HDMI or DP + MIPI）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-配置-dts"><span class="toc-text">4.1 配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0配置-2"><span class="toc-text">android 9.0配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-主副显示器配置"><span class="toc-text">4.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0配置-3"><span class="toc-text">android 9.0配置</span></a></li></ol></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%EF%BC%88HDMI-DP%EF%BC%89%E5%B1%8F%E5%B9%95%E9%85%8D%E7%BD%AE"><span class="toc-text">2.（HDMI + DP）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E9%85%8D%E7%BD%AE-dts"><span class="toc-text">2.1配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-%E4%BD%BF%E8%83%BD%E5%AF%B9%E5%BA%94%E6%98%BE%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9"><span class="toc-text">2.1.1 使能对应显示设备节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E7%BB%91%E5%AE%9A-VOP"><span class="toc-text">2.1.2 绑定 VOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-%E5%BC%80%E6%9C%BA-logo"><span class="toc-text">2.1.3 开机 logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-%E7%BB%91%E5%AE%9A-PLL"><span class="toc-text">2.1.4 绑定 PLL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-5-%E6%89%93%E5%BC%80%E9%9F%B3%E9%A2%91"><span class="toc-text">2.1.5 打开音频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E4%B8%BB%E5%89%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">2.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0%E9%85%8D%E7%BD%AE"><span class="toc-text">android 9.0配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#android-7-1%E9%85%8D%E7%BD%AE"><span class="toc-text">android 7.1配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%EF%BC%88MIPI-HDMI%EF%BC%89%E5%B1%8F%E5%B9%95%E9%85%8D%E7%BD%AE"><span class="toc-text">3.（MIPI + HDMI）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E9%85%8D%E7%BD%AE-dts"><span class="toc-text">3.1配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E4%BD%BF%E8%83%BD%E5%AF%B9%E5%BA%94%E6%98%BE%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%8A%82%E7%82%B9"><span class="toc-text">3.1.1 使能对应显示设备节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E7%BB%91%E5%AE%9A-VOP"><span class="toc-text">3.1.2 绑定 VOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E5%BC%80%E6%9C%BA-logo"><span class="toc-text">3.1.3 开机 logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E7%BB%91%E5%AE%9A-PLL"><span class="toc-text">3.1.4 绑定 PLL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-5-%E6%89%93%E5%BC%80%E9%9F%B3%E9%A2%91"><span class="toc-text">3.1.5 打开音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-6-%E9%85%8D%E7%BD%AE-timing"><span class="toc-text">3.1.6 配置 timing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-7-%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E"><span class="toc-text">3.1.7 命令格式说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-8-%E8%83%8C%E5%85%89-backlight"><span class="toc-text">3.1.8 背光 backlight</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E4%B8%BB%E5%89%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">3.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0%E9%85%8D%E7%BD%AE-1"><span class="toc-text">android 9.0配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#android-7-1%E9%85%8D%E7%BD%AE-1"><span class="toc-text">android 7.1配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%EF%BC%88HDMI-or-DP-MIPI%EF%BC%89%E5%B1%8F%E5%B9%95%E9%85%8D%E7%BD%AE"><span class="toc-text">4.（HDMI or DP + MIPI）屏幕配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E9%85%8D%E7%BD%AE-dts"><span class="toc-text">4.1 配置 dts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0%E9%85%8D%E7%BD%AE-2"><span class="toc-text">android 9.0配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E4%B8%BB%E5%89%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">4.2 主副显示器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android-9-0%E9%85%8D%E7%BD%AE-3"><span class="toc-text">android 9.0配置</span></a></li></ol></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -237,9 +242,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.7.1">
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>从外部媒体介质启动系统 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -34,7 +34,10 @@
   <link rel="Shortcut Icon" href="/images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="/vendor/semantic/dist/semantic.min.js"></script>
  <!-- Hotjar Tracking Code for https://docs.khadas.com -->
   <script>
@@ -49,26 +52,28 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-  <link rel="stylesheet" href="/css/navy.css">
+  
+<link rel="stylesheet" href="/css/navy.css">
+
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
+  <meta name="description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian &#x2F; Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
 <meta property="og:type" content="website">
 <meta property="og:title" content="从外部媒体介质启动系统">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/BootFromExtMedia.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian &#x2F; Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
-<meta property="og:updated_time" content="2019-10-24T01:30:32.005Z">
+<meta property="article:published_time" content="2019-10-24T01:30:32.005Z">
+<meta property="article:modified_time" content="2019-10-24T01:30:32.005Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从外部媒体介质启动系统">
-<meta name="twitter:description" content="有很多系统运行在SD卡或U盘上,例如：  Armbian with Debian / Ubuntu AltLinux ArchLinux CoreELEC LibreELEC Manjaro Volumio Khadas SD images VIM1 VIM2 VIM3    1、把固件写入到SD卡或U盘 下载烧录工具Etcher, 它会将镜像写入你的SD卡或U盘中。它为初学者提供了一个用户友好的">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
@@ -94,7 +99,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link current">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -123,13 +128,13 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">从外部媒体介质启动系统</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/BootFromExtMedia.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/BootFromExtMedia.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>有很多系统运行在SD卡或U盘上,例如：</p>
@@ -204,7 +209,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、把固件写入到SD卡或U盘"><span class="toc-text">1、把固件写入到SD卡或U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、准备DTB文件"><span class="toc-text">2、准备DTB文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对于Armbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux"><span class="toc-text">对于Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对于CoreELEC"><span class="toc-text">对于CoreELEC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对于Volumio"><span class="toc-text">对于Volumio</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、激活多启动"><span class="toc-text">3、激活多启动</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%8A%8A%E5%9B%BA%E4%BB%B6%E5%86%99%E5%85%A5%E5%88%B0SD%E5%8D%A1%E6%88%96U%E7%9B%98"><span class="toc-text">1、把固件写入到SD卡或U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%87%86%E5%A4%87DTB%E6%96%87%E4%BB%B6"><span class="toc-text">2、准备DTB文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8EArmbian-LibreELEC-Manjaro-AltLinux-and-ArchLinux"><span class="toc-text">对于Armbian, LibreELEC, Manjaro, AltLinux and ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8ECoreELEC"><span class="toc-text">对于CoreELEC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8EVolumio"><span class="toc-text">对于Volumio</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%BF%80%E6%B4%BB%E5%A4%9A%E5%90%AF%E5%8A%A8"><span class="toc-text">3、激活多启动</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -258,9 +263,15 @@
 </nav>
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+
 <script src="/js/lang_select.js"></script>
+
+
 <script src="/js/toc.js"></script>
+
+
 <script src="/js/mobile_nav.js"></script>
+
 <!-- endbuild -->
 
 <!-- Algolia -->
