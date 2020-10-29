@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="很常用的搭建方法，你也可以通过Google搜索相关信息。 这里我们提供一个参考。 Ubuntu16.04设置TFTP安装TFTP相关软件包： $ sudo apt-get install openbsd-inetd tftpd tftp  配置通过root权限编辑文件&#x2F;etc&#x2F;inetd.conf来使能TFTP服务，文件内容如下： #tftp   dgram   udp     wait    r">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-18T03:01:54.361Z">
-<meta property="article:modified_time" content="2020-09-18T03:01:54.361Z">
+<meta property="article:published_time" content="2020-10-29T10:20:25.298Z">
+<meta property="article:modified_time" content="2020-10-29T10:20:25.298Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -86,7 +86,7 @@
   ga('send', 'pageview');
 </script>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container">
@@ -186,7 +186,7 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ls /srv/tftp/u-boot.bin</span><br><span class="line">/srv/tftp/u-boot.bin</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
 
 <p>下载文件到地址 <code>0x1080000</code>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.117; our IP address is 192.168.1.249</span><br><span class="line">Filename &#39;u-boot.bin&#39;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: #################################################################</span><br><span class="line">     #################################################################</span><br><span class="line">     ###############################################</span><br><span class="line">     2.5 MiB&#x2F;s</span><br><span class="line">done</span><br><span class="line">Bytes transferred &#x3D; 1371504 (14ed70 hex)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.117; our IP address is 192.168.1.249</span><br><span class="line">Filename &#39;u-boot.bin&#39;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: #################################################################</span><br><span class="line">	 #################################################################</span><br><span class="line">	 ###############################################</span><br><span class="line">	 2.5 MiB&#x2F;s</span><br><span class="line">done</span><br><span class="line">Bytes transferred &#x3D; 1371504 (14ed70 hex)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>如果一切正常，你将会看到上述打印信息。</p>
 <h3 id="调试" class="article-heading"><a href="#调试" class="headerlink" title="调试"></a>调试<a class="article-anchor" href="#调试" aria-hidden="true"></a></h3><ul>
 <li><p>如果你看到如下打印信息，那么你可能需要检查你的网线连接：</p>
@@ -204,7 +204,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-09-18T03:01:54.361Z" itemprop="dateModified">上次更新：2020-09-18</time>
+                <time class="article-footer-updated" datetime="2020-10-29T10:20:25.298Z" itemprop="dateModified">上次更新：2020-10-29</time>
                 <a href="BuildBootLogoForUboot.html" class="article-footer-prev" title="编译U-boot启动Logo"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-next" title="通过TFTP下载镜像"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

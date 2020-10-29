@@ -2,3832 +2,3843 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/CreateBurnCardViaCLI</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo</loc>
     
-    <lastmod>2020-10-29T09:49:53.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/CreateBurnCardViaCLI</loc>
-    
-    <lastmod>2020-10-29T09:49:53.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/CreateBurnCardViaCLI</loc>
-    
-    <lastmod>2020-10-29T09:49:53.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/CreateBurnCardViaCLI</loc>
-    
-    <lastmod>2020-10-29T09:43:32.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/CreateBurnCardViaCLI</loc>
-    
-    <lastmod>2020-10-29T09:43:32.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/CreateBurnCardViaCLI</loc>
-    
-    <lastmod>2020-10-29T09:43:32.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseLinuxHardwareEncodingLibrary</loc>
-    
-    <lastmod>2020-10-29T09:27:16.077Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FenixScript</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/Krescue</loc>
-    
-    <lastmod>2020-10-29T09:27:16.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToRun32-bitApplicationsOn64-bitSystem</loc>
-    
-    <lastmod>2020-09-24T10:49:18.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseLinuxHardwareEncodingLibrary</loc>
-    
-    <lastmod>2020-09-24T09:22:17.683Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseFastboot</loc>
-    
-    <lastmod>2020-09-24T09:22:17.683Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.655Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseFastboot</loc>
-    
-    <lastmod>2020-09-24T09:22:17.655Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.655Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.655Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheSystem</loc>
-    
-    <lastmod>2020-09-24T09:22:17.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/tone1/HowtoUpgradeFirmware</loc>
-    
-    <lastmod>2020-09-24T09:22:17.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-23T05:42:52.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/Vim3Firmware</loc>
-    
-    <lastmod>2020-09-23T05:42:52.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-23T05:42:52.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim3Firmware</loc>
-    
-    <lastmod>2020-09-23T05:42:51.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToTransformYolo</loc>
-    
-    <lastmod>2020-09-19T02:17:18.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseKhadasNPURepositories</loc>
-    
-    <lastmod>2020-09-19T02:17:18.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTransformYolo</loc>
-    
-    <lastmod>2020-09-19T02:17:18.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseKhadasNPURepositories</loc>
-    
-    <lastmod>2020-09-19T02:17:18.738Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/</loc>
     
-    <lastmod>2020-09-19T02:17:18.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:16:15.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:16:15.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:16:15.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:16:15.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:09:00.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:09:00.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:09:00.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToWriteSDImageToEmmc</loc>
-    
-    <lastmod>2020-09-18T03:09:00.917Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/SetupSerialTool</loc>
     
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/ListOfCompatibleNVMeSSDs</loc>
     
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/InstallToolchains</loc>
     
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/ListOfCompatibleNVMeSSDs</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoBootIntoUpgradeMode</loc>
     
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/Vim3Interfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.449Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTrainInception</loc>
-    
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupPcieUsbPort</loc>
-    
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTrainYolo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupMaxCPUFrequency</loc>
-    
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseLTEModule</loc>
-    
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseNpu</loc>
     
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseMIPICamera</loc>
     
-    <lastmod>2020-09-18T03:01:54.437Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareUbuntu</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseLinuxHardwareEncodingLibrary</loc>
     
-    <lastmod>2020-09-18T03:01:54.421Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseLTEModule</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseKhadasNPURepositories</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseFastboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTransformYolo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/Vim3Interfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTrainInception</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupPcieUsbPort</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupMaxCPUFrequency</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToInstallDarknet</loc>
     
-    <lastmod>2020-09-18T03:01:54.421Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HardwareExtra</loc>
     
-    <lastmod>2020-09-18T03:01:54.421Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HardwareDocs</loc>
     
-    <lastmod>2020-09-18T03:01:54.421Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/GPIOPinout</loc>
     
-    <lastmod>2020-09-18T03:01:54.421Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareUboot</loc>
     
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareThirdparty</loc>
     
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareDualos</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareLibreelec</loc>
     
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/FastPackageUpdateImage</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/ListOfCompatibleNVMeSSDs</loc>
     
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/ExtraPowerInput</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/Krescue</loc>
     
-    <lastmod>2020-09-18T03:01:54.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/BootFromSpiFlash</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/BuildBootLogoForUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/McuDevelop</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/ConnectLcd</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/Vim2Interfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/McuCodeFlowChart</loc>
-    
-    <lastmod>2020-09-18T03:01:54.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowtoUseWol</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoUseWol</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/KbiGuidance</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/KbiGuidance</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoUseWol</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/KbiGuidance</loc>
-    
-    <lastmod>2020-09-18T03:01:54.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUbuntu</loc>
-    
-    <lastmod>2020-09-18T03:01:54.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/GPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:54.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HardwareExtra</loc>
-    
-    <lastmod>2020-09-18T03:01:54.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HardwareDocs</loc>
-    
-    <lastmod>2020-09-18T03:01:54.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/ForceResetFeatures</loc>
-    
-    <lastmod>2020-09-18T03:01:54.385Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareDualos</loc>
-    
-    <lastmod>2020-09-18T03:01:54.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:54.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:54.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareThirdparty</loc>
-    
-    <lastmod>2020-09-18T03:01:54.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BuildFuchsia</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/VimInterfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:54.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:54.369Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:54.369Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:54.369Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:54.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:54.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:54.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/LoadImagesWithUBootViaTFTP</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/LoadImagesWithUBootViaTFTP</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/LoadImagesWithUBootViaTFTP</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/SetupTFTPServer</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/SetupTFTPServer</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/SetupTFTPServer</loc>
-    
-    <lastmod>2020-09-18T03:01:54.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/InstallToolchains</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/InstallToolchains</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:54.349Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseHardwarePWM</loc>
     
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/KbiGuidance</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseDeviceTreeOverlay</loc>
     
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseHardwarePWM</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseDeviceTreeOverlay</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseADBTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseHardwarePWM</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseDeviceTreeOverlay</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUse1wire</loc>
     
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheUboot</loc>
     
-    <lastmod>2020-09-18T03:01:54.321Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetAutoLogin</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheSystem</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupHDMI</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheLogo</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupWatchdog</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupHDMI</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowtoEraseEMMC</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupFan</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/UBootUsage</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetAutoLogin</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupHDMI</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheKernel</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupFramebufferConsoleFont</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupWatchdog</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupFan</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupHDMI</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupBluetooth</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupBluetooth</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetAutoLogin</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheKernel</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToRun32-bitApplicationsOn64-bitSystem</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupWatchdog</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToWriteSDImageToEmmc</loc>
     
-    <lastmod>2020-09-18T03:01:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToCustomIRCodeToBoot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToChangeBootLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToCustomMac</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToCustomMac</loc>
     
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToCustomIRCodeToBoot</loc>
     
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToControlLED</loc>
     
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToConnectWifi</loc>
     
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToChangeBootLogo</loc>
     
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToCustomMac</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToCustomIRCodeToBoot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToControlLED</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToChangeBootLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToControlLED</loc>
-    
-    <lastmod>2020-09-18T03:01:54.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUbuntu</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToAccessGpio</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToAccessI2c</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToAccessI2c</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/GPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToAccessGpio</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToAccessI2c</loc>
     
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HardwareDocs</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToAccessGpio</loc>
     
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HardwareExtra</loc>
-    
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToAccessGpio</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseWiringPi</loc>
     
-    <lastmod>2020-09-18T03:01:54.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareDualos</loc>
-    
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/ExtraPowerInput</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseWiringPi-Python</loc>
     
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareAndroid</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseUart</loc>
     
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/ExtraPowerInput</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseRPiGPIO</loc>
     
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage</loc>
-    
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/FastPackageUpdateImage</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/SetupTFTPServer</loc>
     
-    <lastmod>2020-09-18T03:01:54.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/CreateLibreELECBootCardViaCLI</loc>
-    
-    <lastmod>2020-09-18T03:01:54.265Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/CreateBootableSDCard</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/KbiGuidance</loc>
     
-    <lastmod>2020-09-18T03:01:54.249Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/CreateBootableSDCard</loc>
     
-    <lastmod>2020-09-18T03:01:54.249Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/CreateBootableSDCard</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/ConnectLcd</loc>
     
-    <lastmod>2020-09-18T03:01:54.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BuildBootLogoForUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.237Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BuildBootLogoForUboot</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/BuildBootLogoForUboot</loc>
     
-    <lastmod>2020-09-18T03:01:54.237Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:54.237Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BootFromExtMedia</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/BuildAndroid</loc>
     
-    <lastmod>2020-09-18T03:01:54.233Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/BootFromSpiFlash</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/BootFromExtMedia</loc>
     
-    <lastmod>2020-09-18T03:01:54.233Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BootFromExtMedia</loc>
-    
-    <lastmod>2020-09-18T03:01:54.233Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/BluetoothInstructions</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/BluetoothInstructions</loc>
     
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/BluetoothInstructions</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim3/AddChineseSupport</loc>
     
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/tone1/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/tone1/UserManual</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/</loc>
     
-    <lastmod>2020-09-18T03:01:54.217Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/Vim2Interfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/UBootUsage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/SetupTFTPServer</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/McuDevelop</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/McuCodeFlowChart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/</loc>
     
-    <lastmod>2020-09-18T03:01:54.209Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/tone1/HardwareDocs</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/AddChineseSupport</loc>
     
-    <lastmod>2020-09-18T03:01:54.209Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/tone1/HowtoUpgradeFirmware</loc>
-    
-    <lastmod>2020-09-18T03:01:54.209Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim3</loc>
+    <loc>https://docs.khadas.com/zh-cn/vim2/Krescue</loc>
     
-    <lastmod>2020-09-18T03:01:54.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.197Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim1</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/FenixScript</loc>
     
-    <lastmod>2020-09-18T03:01:54.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim2</loc>
-    
-    <lastmod>2020-09-18T03:01:54.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/EdgeFirmware</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/Vim1Firmware</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/Vim2Firmware</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareTone1</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/faq/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareEdge</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/InstallToolchains</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/InstructionsforEdgeSinglePackBurningTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/RockchipDocs</loc>
-    
-    <lastmod>2020-09-18T03:01:54.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseLTEModule</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseADBTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:54.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:54.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToControlLED</loc>
-    
-    <lastmod>2020-09-18T03:01:54.165Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HardwareDocs</loc>
-    
-    <lastmod>2020-09-18T03:01:54.161Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HardwareExtra</loc>
-    
-    <lastmod>2020-09-18T03:01:54.161Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/HowToAccessGpio</loc>
-    
-    <lastmod>2020-09-18T03:01:54.161Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/edge/FirmwareUbuntu</loc>
     
-    <lastmod>2020-09-18T03:01:54.157Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareThirdparty</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HardwareDocs</loc>
     
-    <lastmod>2020-09-18T03:01:54.149Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.149Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareAndroid</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HardwareExtra</loc>
     
-    <lastmod>2020-09-18T03:01:54.141Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDebian</loc>
-    
-    <lastmod>2020-09-18T03:01:54.141Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDualos</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToAccessGpio</loc>
     
-    <lastmod>2020-09-18T03:01:54.141Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:54.141Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareBuildroot</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToConnectWifi</loc>
     
-    <lastmod>2020-09-18T03:01:54.141Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/EdgeVGPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:54.125Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/EdgeVInterfaces</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToControlLED</loc>
     
-    <lastmod>2020-09-18T03:01:54.125Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/EdgeInterfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.121Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/EdgeCaptainPowerPriority</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetAutoLogin</loc>
     
-    <lastmod>2020-09-18T03:01:54.121Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.121Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/ConnectLcd</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupBluetooth</loc>
     
-    <lastmod>2020-09-18T03:01:54.121Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/CaptainGPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:54.117Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/CaptainInterfaces</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupFan</loc>
     
-    <lastmod>2020-09-18T03:01:54.117Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/BootFromSpiFlash</loc>
-    
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/BuildAndroid</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToSetupFramebufferConsoleFont</loc>
     
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/edge/BuildPackagesInDocker</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToTestGPIOIRQ</loc>
     
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/Vim3Interfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheKernel</loc>
     
-    <lastmod>2020-09-18T03:01:54.101Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/ListOfCompatibleNVMeSSDs</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheLogo</loc>
     
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseLTEModule</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/InstallToolchains</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/InstructionsforEdgeSinglePackBurningTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/KbiGuidance</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/Krescue</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/RockchipDocs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/faq/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/EdgeFirmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/Vim1Firmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/Vim2Firmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareEdge</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareTone1</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim1</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim2</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/hardwareVim3</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/hardware/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/tone1/HardwareDocs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/tone1/HowtoUpgradeFirmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/tone1/UserManual</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/tone1/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/AddChineseSupport</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BluetoothInstructions</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BootFromExtMedia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/BuildBootLogoForUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/CreateBootableSDCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/CreateLibreELECBootCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/GPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HardwareDocs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HardwareExtra</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToAccessGpio</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToAccessI2c</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToChangeBootLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToControlLED</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToCustomIRCodeToBoot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToCustomMac</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToRun32-bitApplicationsOn64-bitSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupFan</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupHDMI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupWatchdog</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseDeviceTreeOverlay</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseHardwarePWM</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseUart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi-Python</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/InstallToolchains</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/Krescue</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/SetupTFTPServer</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/UBootUsage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/VimInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/AddChineseSupport</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BluetoothInstructions</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BootFromExtMedia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BuildBootLogoForUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/BuildFuchsia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/CreateBootableSDCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/ForceResetFeatures</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/GPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HardwareDocs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HardwareExtra</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToAccessGpio</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToAccessI2c</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToChangeBootLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToControlLED</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToCustomIRCodeToBoot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToCustomMac</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToRun32-bitApplicationsOn64-bitSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupFan</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupHDMI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupWatchdog</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseDeviceTreeOverlay</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseHardwarePWM</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseUart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseWiringPi-Python</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/InstallToolchains</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/Vim3Firmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim3/InstallToolchains</loc>
     
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseNpu</loc>
-    
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseMIPICamera</loc>
-    
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseLTEModule</loc>
-    
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/ListOfCompatibleNVMeSSDs</loc>
-    
-    <lastmod>2020-09-18T03:01:54.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToTrainInception</loc>
-    
-    <lastmod>2020-09-18T03:01:54.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToTrainYolo</loc>
-    
-    <lastmod>2020-09-18T03:01:54.093Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupMaxCPUFrequency</loc>
-    
-    <lastmod>2020-09-18T03:01:54.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupPcieUsbPort</loc>
-    
-    <lastmod>2020-09-18T03:01:54.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessI2c</loc>
-    
-    <lastmod>2020-09-18T03:01:54.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToInstallDarknet</loc>
-    
-    <lastmod>2020-09-18T03:01:54.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareUbuntu</loc>
-    
-    <lastmod>2020-09-18T03:01:54.085Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/GPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:54.085Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:54.073Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareThirdparty</loc>
-    
-    <lastmod>2020-09-18T03:01:54.073Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.073Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/ExtraPowerInput</loc>
-    
-    <lastmod>2020-09-18T03:01:54.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FastPackageUpdateImage</loc>
-    
-    <lastmod>2020-09-18T03:01:54.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/FirmwareDualos</loc>
-    
-    <lastmod>2020-09-18T03:01:54.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.057Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/BuildBootLogoForUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:54.057Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/ConnectLcd</loc>
-    
-    <lastmod>2020-09-18T03:01:54.057Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/BootFromSpiFlash</loc>
-    
-    <lastmod>2020-09-18T03:01:54.049Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:54.049Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/</loc>
-    
-    <lastmod>2020-09-18T03:01:54.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/Vim2Interfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:54.041Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/McuDevelop</loc>
-    
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim3/KbiGuidance</loc>
     
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/HowtoUseWol</loc>
+    <loc>https://docs.khadas.com/vim3/Krescue</loc>
     
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/McuCodeFlowChart</loc>
-    
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowtoUseWol</loc>
+    <loc>https://docs.khadas.com/vim3/ListOfCompatibleNVMeSSDs</loc>
     
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowtoUseWol</loc>
-    
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/KbiGuidance</loc>
-    
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/KbiGuidance</loc>
-    
-    <lastmod>2020-09-18T03:01:54.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:54.025Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareUbuntu</loc>
-    
-    <lastmod>2020-09-18T03:01:53.961Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/ForceResetFeatures</loc>
-    
-    <lastmod>2020-09-18T03:01:53.961Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/GPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:53.961Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.957Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareThirdparty</loc>
-    
-    <lastmod>2020-09-18T03:01:53.957Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareDualos</loc>
-    
-    <lastmod>2020-09-18T03:01:53.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:53.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:53.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:53.949Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/BuildFuchsia</loc>
-    
-    <lastmod>2020-09-18T03:01:53.949Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:53.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/VimInterfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:53.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:53.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/</loc>
-    
-    <lastmod>2020-09-18T03:01:53.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2020-09-18T03:01:53.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:53.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:53.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:53.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/LoadImagesWithUBootViaTFTP</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim3/LoadImagesWithUBootViaTFTP</loc>
     
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/UBootUsage</loc>
+    <loc>https://docs.khadas.com/vim3/SetupSerialTool</loc>
     
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/LoadImagesWithUBootViaTFTP</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/SetupTFTPServer</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/SetupTFTPServer</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim3/SetupTFTPServer</loc>
     
-    <lastmod>2020-09-18T03:01:53.893Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/InstallDocker</loc>
+    <loc>https://docs.khadas.com/vim3/UBootUsage</loc>
     
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowtoEraseEMMC</loc>
+    <loc>https://docs.khadas.com/vim3/UpgradeViaTFBurningCard</loc>
     
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/InstallDocker</loc>
+    <loc>https://docs.khadas.com/vim3/UpgradeViaUSBCable</loc>
     
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/InstallToolchains</loc>
+    <loc>https://docs.khadas.com/vim3/Vim3Interfaces</loc>
     
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/InstallToolchains</loc>
-    
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/InstallDocker</loc>
-    
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowtoEraseEMMC</loc>
-    
-    <lastmod>2020-09-18T03:01:53.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowtoBootIntoUpgradeMode</loc>
-    
-    <lastmod>2020-09-18T03:01:53.877Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi-Python</loc>
-    
-    <lastmod>2020-09-18T03:01:53.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseHardwarePWM</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseHardwarePWM</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseDeviceTreeOverlay</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseDeviceTreeOverlay</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseUart</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseHardwarePWM</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseDeviceTreeOverlay</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseRPiGPIO</loc>
-    
-    <lastmod>2020-09-18T03:01:53.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUseADBTool</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUse1wire</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUseADBTool</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUseADBTool</loc>
-    
-    <lastmod>2020-09-18T03:01:53.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:53.837Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:53.837Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:53.837Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheKernel</loc>
-    
-    <lastmod>2020-09-18T03:01:53.837Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetupHDMI</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetupWatchdog</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupWatchdog</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupHDMI</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetupFan</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupWatchdog</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupHDMI</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupFramebufferConsoleFont</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:53.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToCustomMac</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToCustomMac</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToCustomMac</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToSetupBluetooth</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToSetAutoLogin</loc>
-    
-    <lastmod>2020-09-18T03:01:53.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToCustomIRCodeToBoot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToCustomIRCodeToBoot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToCustomIRCodeToBoot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToAccessGpio</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToAccessI2c</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToChangeBootLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToControlLED</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToChangeBootLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToChangeBootLogo</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToAccessI2c</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim1/HowToAccessGpio</loc>
     
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToAccessGpio</loc>
+    <loc>https://docs.khadas.com/vim1/HowToAccessI2c</loc>
     
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToConnectWifi</loc>
-    
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToControlLED</loc>
+    <loc>https://docs.khadas.com/zh-cn/edge/BootFromSpiFlash</loc>
     
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToChangeBootLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/CaptainGPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/CaptainInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/ConnectLcd</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/EdgeCaptainPowerPriority</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/EdgeInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/EdgeVGPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/EdgeVInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareBuildroot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDebian</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim1/HowToControlLED</loc>
     
-    <lastmod>2020-09-18T03:01:53.817Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/FirmwareUbuntu</loc>
+    <loc>https://docs.khadas.com/vim1/HowToCustomIRCodeToBoot</loc>
     
-    <lastmod>2020-09-18T03:01:53.813Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/GPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:53.813Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/FirmwareUboot</loc>
+    <loc>https://docs.khadas.com/vim1/HowToCustomMac</loc>
     
-    <lastmod>2020-09-18T03:01:53.797Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/FirmwareThirdparty</loc>
+    <loc>https://docs.khadas.com/vim1/HowToRun32-bitApplicationsOn64-bitSystem</loc>
     
-    <lastmod>2020-09-18T03:01:53.777Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupFan</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupHDMI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToSetupWatchdog</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseDeviceTreeOverlay</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseHardwarePWM</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseUart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi-Python</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/InstallToolchains</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/Krescue</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/SetupTFTPServer</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/UBootUsage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/VimInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/BuildFuchsia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/KbiGuidance</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/Krescue</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/ListOfCompatibleNVMeSSDs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/ForceResetFeatures</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/GPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToAccessGpio</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToAccessI2c</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToChangeBootLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToControlLED</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToCustomIRCodeToBoot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToCustomMac</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToRun32-bitApplicationsOn64-bitSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetupFan</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetupHDMI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToSetupWatchdog</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseDeviceTreeOverlay</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseHardwarePWM</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseUart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi-Python</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/InstallToolchains</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/KbiGuidance</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/Krescue</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/McuCodeFlowChart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/McuDevelop</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/SetupTFTPServer</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/UBootUsage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/UpgradeViaUSBCable</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/Vim2Interfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/BootFromSpiFlash</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/BuildBootLogoForUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/ConnectLcd</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/edge/BuildPackagesInDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/GPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToAccessGpio</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToAccessI2c</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToChangeBootLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToConnectWifi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToControlLED</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToCustomIRCodeToBoot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToCustomMac</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToInstallDarknet</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToRun32-bitApplicationsOn64-bitSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetAutoLogin</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupBluetooth</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupFan</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupHDMI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupMaxCPUFrequency</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupPcieUsbPort</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToSetupWatchdog</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToTrainInception</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToTrainYolo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToTransformYolo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheKernel</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheLogo</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheSystem</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUpgradeTheUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUse1wire</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseDeviceTreeOverlay</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseFastboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseHardwarePWM</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseKhadasNPURepositories</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseLTEModule</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseLinuxHardwareEncodingLibrary</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseMIPICamera</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseNpu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseRPiGPIO</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseUart</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi-Python</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseWiringPi</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToWriteSDImageToEmmc</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowtoBootIntoUpgradeMode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowtoEraseEMMC</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowtoUseWol</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/InstallDocker</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim1/FirmwareLibreelec</loc>
     
-    <lastmod>2020-09-18T03:01:53.777Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/FirmwareDualos</loc>
+    <loc>https://docs.khadas.com/edge/FenixScript</loc>
     
-    <lastmod>2020-09-18T03:01:53.773Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:53.773Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/FastPackageUpdateImage</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/ExtraPowerInput</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/DownloadAndroidSourceCode</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/FastPackageUpdateImage</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/ExtraPowerInput</loc>
-    
-    <lastmod>2020-09-18T03:01:53.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/BootFromExtMedia</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/BluetoothInstructions</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/BootFromExtMedia</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/CreateBootableSDCard</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/BuildBootLogoForUboot</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/AddChineseSupport</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/BluetoothInstructions</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/BootFromExtMedia</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim3/CreateBootableSDCard</loc>
     
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/BuildBootLogoForUboot</loc>
+    <loc>https://docs.khadas.com/vim3/BootFromExtMedia</loc>
     
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/CreateBootableSDCard</loc>
-    
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/BuildAndroid</loc>
+    <loc>https://docs.khadas.com/vim3/BluetoothInstructions</loc>
     
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/AddChineseSupport</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/CreateBootableSDCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/BuildBootLogoForUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/BootFromExtMedia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/vim2/BluetoothInstructions</loc>
     
-    <lastmod>2020-09-18T03:01:53.753Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/tone1/</loc>
+    <loc>https://docs.khadas.com/vim2/AddChineseSupport</loc>
     
-    <lastmod>2020-09-18T03:01:53.425Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/GPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/FastPackageUpdateImage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/ExtraPowerInput</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/DownloadAndroidSourceCode</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/CreateBootableSDCard</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/BuildBootLogoForUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/BootFromExtMedia</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/BluetoothInstructions</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/AddChineseSupport</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/AddChineseSupport</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/FenixScript</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/tone1/HowtoUpgradeFirmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/tone1/UserManual</loc>
     
-    <lastmod>2020-09-18T03:01:53.425Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/tone1/</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/</loc>
     
-    <lastmod>2020-09-18T03:01:53.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/</loc>
-    
-    <lastmod>2020-09-18T03:01:51.621Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareTone1</loc>
-    
-    <lastmod>2020-09-18T03:01:51.621Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareVim3</loc>
-    
-    <lastmod>2020-09-18T03:01:51.621Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareVim1</loc>
-    
-    <lastmod>2020-09-18T03:01:51.621Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/hardware/hardwareVim2</loc>
     
-    <lastmod>2020-09-18T03:01:51.621Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareVim1</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareTone1</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/hardware/hardwareEdge</loc>
     
-    <lastmod>2020-09-18T03:01:51.613Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim1Firmware</loc>
-    
-    <lastmod>2020-09-18T03:01:51.553Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/firmware/</loc>
     
-    <lastmod>2020-09-18T03:01:51.553Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/EdgeFirmware</loc>
+    <loc>https://docs.khadas.com/firmware/Vim3Firmware</loc>
     
-    <lastmod>2020-09-18T03:01:51.553Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/firmware/Vim2Firmware</loc>
     
-    <lastmod>2020-09-18T03:01:51.553Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim1Firmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/EdgeFirmware</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/faq/</loc>
     
-    <lastmod>2020-09-18T03:01:51.537Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/UpgradeViaTFBurningCard</loc>
-    
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/RockchipDocs</loc>
-    
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/UBootUsage</loc>
-    
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/</loc>
-    
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/SetupSerialTool</loc>
-    
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/UpgradeViaUSBCable</loc>
     
-    <lastmod>2020-09-18T03:01:51.529Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/InstallToolchains</loc>
+    <loc>https://docs.khadas.com/edge/UpgradeViaTFBurningCard</loc>
     
-    <lastmod>2020-09-18T03:01:51.521Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/UBootUsage</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/SetupSerialTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/RockchipDocs</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/InstructionsforEdgeSinglePackBurningTool</loc>
     
-    <lastmod>2020-09-18T03:01:51.521Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/HowtoBootIntoUpgradeMode</loc>
+    <loc>https://docs.khadas.com/edge/InstallToolchains</loc>
     
-    <lastmod>2020-09-18T03:01:51.497Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowtoEraseEMMC</loc>
     
-    <lastmod>2020-09-18T03:01:51.497Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/HowToUseADBTool</loc>
+    <loc>https://docs.khadas.com/edge/HowtoBootIntoUpgradeMode</loc>
     
-    <lastmod>2020-09-18T03:01:51.485Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToUseLTEModule</loc>
     
-    <lastmod>2020-09-18T03:01:51.485Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToUseADBTool</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToUse1wire</loc>
     
-    <lastmod>2020-09-18T03:01:51.485Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/HowToTestGPIOIRQ</loc>
-    
-    <lastmod>2020-09-18T03:01:51.473Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToUpgradeTheLogo</loc>
     
-    <lastmod>2020-09-18T03:01:51.473Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToSetupFan</loc>
     
-    <lastmod>2020-09-18T03:01:51.465Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToControlLED</loc>
     
-    <lastmod>2020-09-18T03:01:51.457Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/HowToAccessGpio</loc>
     
-    <lastmod>2020-09-18T03:01:51.457Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/FirmwareUbuntu</loc>
+    <loc>https://docs.khadas.com/hardware/</loc>
     
-    <lastmod>2020-09-18T03:01:51.453Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FirmwareThirdparty</loc>
-    
-    <lastmod>2020-09-18T03:01:51.441Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/FirmwareUboot</loc>
+    <loc>https://docs.khadas.com/edge/</loc>
     
-    <lastmod>2020-09-18T03:01:51.441Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FirmwareLibreelec</loc>
-    
-    <lastmod>2020-09-18T03:01:51.437Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/edge/FirmwareDebian</loc>
+    <loc>https://docs.khadas.com/hardware/hardwareVim3</loc>
     
-    <lastmod>2020-09-18T03:01:51.421Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FirmwareDualos</loc>
-    
-    <lastmod>2020-09-18T03:01:51.421Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FirmwareAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:51.421Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/FirmwareBuildroot</loc>
-    
-    <lastmod>2020-09-18T03:01:51.421Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/EdgeVInterfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:51.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/EdgeVGPIOPinout</loc>
-    
-    <lastmod>2020-09-18T03:01:51.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/EdgeInterfaces</loc>
-    
-    <lastmod>2020-09-18T03:01:51.069Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/EdgeCaptainPowerPriority</loc>
-    
-    <lastmod>2020-09-18T03:01:51.005Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/DownloadAndroidSourceCode</loc>
     
-    <lastmod>2020-09-18T03:01:50.985Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareLibreelec</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareDebian</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareBuildroot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareThirdparty</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/EdgeVInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/EdgeVGPIOPinout</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/EdgeInterfaces</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/EdgeCaptainPowerPriority</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareDualos</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/ConnectLcd</loc>
     
-    <lastmod>2020-09-18T03:01:50.985Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/CaptainInterfaces</loc>
     
-    <lastmod>2020-09-18T03:01:50.977Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/CaptainGPIOPinout</loc>
     
-    <lastmod>2020-09-18T03:01:50.965Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/BuildAndroid</loc>
-    
-    <lastmod>2020-09-18T03:01:50.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/edge/BootFromSpiFlash</loc>
-    
-    <lastmod>2020-09-18T03:01:50.953Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/edge/BuildPackagesInDocker</loc>
     
-    <lastmod>2020-09-18T03:01:50.953Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/BuildAndroid</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/BootFromSpiFlash</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareUboot</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/edge/FirmwareUbuntu</loc>
+    
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/about/</loc>
     
-    <lastmod>2020-09-18T03:01:50.905Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.khadas.com/404</loc>
     
-    <lastmod>2020-09-18T03:01:50.829Z</lastmod>
+    <lastmod>2020-10-29</lastmod>
     
   </url>
+  
+
+  <url>
+    <loc>https://docs.khadas.com/</loc>
+    <lastmod>2020-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
   
 </urlset>
