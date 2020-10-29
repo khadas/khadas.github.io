@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>How To Use Pre-Built NPU Demo | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim3/HowToUseKhadasNPURepositories.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToUseKhadasNPURepositories.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToUseKhadasNPURepositories.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Pre-Build NPU demo Repositoryaml_npu_demo_binaries repository are executable files repositories, this repository are used to run NPU demo on khadas VIM3&#x2F;VIM3L Repository information Repository address">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Use Pre-Built NPU Demo">
+<meta property="og:url" content="https://docs.khadas.com/vim3/HowToUseKhadasNPURepositories">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="Pre-Build NPU demo Repositoryaml_npu_demo_binaries repository are executable files repositories, this repository are used to run NPU demo on khadas VIM3&#x2F;VIM3L Repository information Repository address">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-19T02:17:18.738Z">
+<meta property="article:modified_time" content="2020-09-19T02:17:18.738Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link">VIM2</a><a href="/vim3/" class="main-nav-link current">VIM3</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/tone1/" class="main-nav-link">Tone1</a><a href="/hardware/" class="main-nav-link">Hardware</a><a href="/firmware/" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToUseKhadasNPURepositories.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Use Pre-Built NPU Demo</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/source/vim3/HowToUseKhadasNPURepositories.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="Pre-Build-NPU-demo-Repository" class="article-heading"><a href="#Pre-Build-NPU-demo-Repository" class="headerlink" title="Pre-Build NPU demo Repository"></a>Pre-Build NPU demo Repository<a class="article-anchor" href="#Pre-Build-NPU-demo-Repository" aria-hidden="true"></a></h1><p><code>aml_npu_demo_binaries repository</code> are executable files repositories, this repository are used to run NPU demo on <strong>khadas VIM3/VIM3L</strong></p>
+<h2 id="Repository-information" class="article-heading"><a href="#Repository-information" class="headerlink" title="Repository information"></a>Repository information<a class="article-anchor" href="#Repository-information" aria-hidden="true"></a></h2><ul>
+<li><p>Repository address: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gitlab.com/khadas/aml_npu_demo_binaries">gitlab.com/khadas/aml_npu_demo_binaries</a></p>
+</li>
+<li><p>Repository structure</p>
+<ol>
+<li>detect_demo/detect_demo_khadas : These two demos are demos that use cameras to recognize objects for classification</li>
+<li>detect_demo_picture : This demo is to identify and classify multi-object pictures</li>
+<li>inceptionv3 : This demo is a demo that recognizes pictures and makes top5 predictions</li>
+</ol>
+</li>
+</ul>
+<h2 id="How-To-Use" class="article-heading"><a href="#How-To-Use" class="headerlink" title="How To Use"></a>How To Use<a class="article-anchor" href="#How-To-Use" aria-hidden="true"></a></h2><h3 id="preparation" class="article-heading"><a href="#preparation" class="headerlink" title="preparation"></a>preparation<a class="article-anchor" href="#preparation" aria-hidden="true"></a></h3><ol>
+<li><p><strong>Please run ubuntu firmware on VIM3 and upgrade the system through <code>sudo apt update &amp;&amp; sudo apt upgrade</code></strong></p>
+</li>
+<li><p><code>detect_demo_picture</code>/<code>detect_demo</code>/<code>detect_demo_khadas</code> need to be used in <code>framebuffer</code> mode, use <code>Ctrl</code>+<code>Alt</code>+<code>F1</code> to switch to <code>framebuffer</code> mode</p>
+</li>
+<li><p>Clone the repository to VIM3/VIM3L</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://gitlab.com/khadas/aml_npu_demo_binaries</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" class="article-heading"><a href="#Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" class="headerlink" title="Use detect_demo or detect_demo_khadas or detect_demo_picture"></a>Use <code>detect_demo</code> or <code>detect_demo_khadas</code> or <code>detect_demo_picture</code><a class="article-anchor" href="#Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" aria-hidden="true"></a></h3><p>Install demo:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo ./INSTALL</span></span><br></pre></td></tr></table></figure>
+<p>After installation, the instructions to install the README file can run the demo.</p>
+<p><code>detect_demo_uvc</code> is the running file of the USB camera<br><code>detect_demo_mipi</code>是mipi摄像头的运行文件</p>
+<p>uninstall demo:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./UNINSTALL</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-inceptionv3" class="article-heading"><a href="#Use-inceptionv3" class="headerlink" title="Use inceptionv3"></a>Use inceptionv3<a class="article-anchor" href="#Use-inceptionv3" aria-hidden="true"></a></h3><p>If you board is VIM3</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries/inceptionv3/vim3</span></span><br></pre></td></tr></table></figure>
+
+<p>If you board is VIM3L</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries/inceptionv3/vim3l</span></span><br></pre></td></tr></table></figure>
+
+<p>run demo</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./inceptionv3 inception_v3.nb /path/to/picture</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Image format needs to use jpg format</strong></p>
+<h1 id="aml-npu-app-Repository" class="article-heading"><a href="#aml-npu-app-Repository" class="headerlink" title="aml_npu_app Repository"></a>aml_npu_app Repository<a class="article-anchor" href="#aml-npu-app-Repository" aria-hidden="true"></a></h1><p>aml_npu_app repository is used to compile demo repository, <strong>this repository runs on PC</strong></p>
+<h2 id="Repository-information-1" class="article-heading"><a href="#Repository-information-1" class="headerlink" title="Repository information"></a>Repository information<a class="article-anchor" href="#Repository-information-1" aria-hidden="true"></a></h2><ul>
+<li><p>Repository address: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gitlab.com/khadas/aml_npu_app">gitlab.com/khadas/aml_npu_app</a> </p>
+</li>
+<li><p>Repository structure</p>
+<ol>
+<li><code>DDK_6.3.2</code>/<code>DDK_6.3.2.3</code>/<code>DDK_6.3.2.5</code>/<code>DDK_6.3.3.4</code> is the source code of different versions of library files</li>
+<li><code>detect_library/model_code</code> point to the latest version of the library source code</li>
+<li><code>detect_library/source_code</code> generate detect.so</li>
+<li><code>detect_library/yolo_demo_gst_uvc</code> or <code>detect_library/yolo_demo_mipi</code> generate USB demo or MIPI demo</li>
+<li><code>detect_library/sample_demo</code> Generate a demo that recognizes the picture.</li>
+</ol>
+</li>
+</ul>
+<h2 id="How-To-Use-1" class="article-heading"><a href="#How-To-Use-1" class="headerlink" title="How To Use"></a>How To Use<a class="article-anchor" href="#How-To-Use-1" aria-hidden="true"></a></h2><h3 id="Preparation" class="article-heading"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation<a class="article-anchor" href="#Preparation" aria-hidden="true"></a></h3><ol>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.khadas.com/npu-toolkit-vim3">Apply sdk</a>,and unzip.</p>
+</li>
+<li><p>clone repository to you PC</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://gitlab.com/khadas/aml_npu_app</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Compile" class="article-heading"><a href="#Compile" class="headerlink" title="Compile"></a>Compile<a class="article-anchor" href="#Compile" aria-hidden="true"></a></h3><p>Enter the location where you need to compile, here takes <code>yolov3</code> as an example.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> aml_npu_app/detect_library/model_code/detect_yolo_v3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./build_vx.sh /path/to/sdk/linux_sdk/linux_sdk</span></span><br></pre></td></tr></table></figure>
+
+<p>After compilation, the files in the <code>bin_r</code> directory are the files generated by the compilation</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls bin_r/</span></span><br><span class="line">libnn_yolo_v3.so  vnn_yolov3.o  yolo_v3.o  yolov3_process.o</span><br></pre></td></tr></table></figure>
+
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-09-19T02:17:18.738Z" itemprop="dateModified">Last updated: 2020-09-19</time>
+                <a href="HowToUseNpu.html" class="article-footer-prev" title="How To Use the NPU"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToInstallDarknet.html" class="article-footer-next" title="How To Install Darnket"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pre-Build-NPU-demo-Repository"><span class="toc-text">Pre-Build NPU demo Repository</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Repository-information"><span class="toc-text">Repository information</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-To-Use"><span class="toc-text">How To Use</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#preparation"><span class="toc-text">preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture"><span class="toc-text">Use detect_demo or detect_demo_khadas or detect_demo_picture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-inceptionv3"><span class="toc-text">Use inceptionv3</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#aml-npu-app-Repository"><span class="toc-text">aml_npu_app Repository</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Repository-information-1"><span class="toc-text">Repository information</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-To-Use-1"><span class="toc-text">How To Use</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compile"><span class="toc-text">Compile</span></a></li></ol></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3 Interfaces</a><a href="HowToConnectWifi.html" class="sidebar-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a></details></strong><strong class="sidebar-title"><details><summary>Accessories</summary><a href="HowToSetupFan.html" class="sidebar-link first">How To Setup Fan</a><a href="ConnectLcd.html" class="sidebar-link">Connect to TS050 Touchscreen</a><a href="HowToUseMIPICamera.html" class="sidebar-link">How To Use MIPI Camera</a><a href="HowToUseLTEModule.html" class="sidebar-link">How To Use LTE Module</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="CreateBurnCardViaCLI.html" class="sidebar-link first">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="sidebar-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">How To Setup PCIe/USB3.0 Port</a></details></strong><strong class="sidebar-title"><details open><summary>NPU</summary><a href="HowToUseNpu.html" class="sidebar-link first">How To Use the NPU</a><a href="HowToUseKhadasNPURepositories.html" class="sidebar-link current">How To Use Khadas NPU Repositories</a><a href="HowToInstallDarknet.html" class="sidebar-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="sidebar-link">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="sidebar-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="sidebar-link">How To Train Inception Model</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="sidebar-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="sidebar-link">KBI Guide</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="DownloadAndroidSourceCode.html" class="sidebar-link">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="HowToUseADBTool.html" class="sidebar-link">How To Use ADB Tool</a><a href="HowtoUseWol.html" class="sidebar-link">How To Use WOL</a><a href="HowToUseFastboot.html" class="sidebar-link">How To Use Fastboot</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToUpgradeTheSystem.html" class="sidebar-link">How To Upgrade the System</a><a href="Krescue.html" class="sidebar-link">Krescue</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="HowToUseWiringPi.html" class="sidebar-link">How To Use WiringPi</a><a href="HowToUseWiringPi-Python.html" class="sidebar-link">How To Use WiringPi-Python</a><a href="HowToUseRPiGPIO.html" class="sidebar-link">How To Use RPi.GPIO</a><a href="HowToUpgradeTheLogo.html" class="sidebar-link">How To Upgrade The Logo</a><a href="HowToUpgradeTheUboot.html" class="sidebar-link">How To Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="sidebar-link">How To Upgrade The kernel</a><a href="HowToUseHardwarePWM.html" class="sidebar-link">How To Use Hardware PWM</a><a href="HowToUseUart.html" class="sidebar-link">How To Use Uart</a><a href="HowToControlLED.html" class="sidebar-link">How To Control LEDs</a><a href="HowToTestGPIOIRQ.html" class="sidebar-link">How To Test GPIO IRQ</a><a href="HowToSetAutoLogin.html" class="sidebar-link">How To Set Auto Login</a><a href="HowToUse1wire.html" class="sidebar-link">How To User 1-Wire driver</a><a href="HowToSetupHDMI.html" class="sidebar-link">How To Setup HDMI</a><a href="HowToSetupMaxCPUFrequency.html" class="sidebar-link">How To Setup Maximum CPU Frequency</a><a href="HowToChangeBootLogo.html" class="sidebar-link">How To Change Boot Logo</a><a href="HowToCustomMac.html" class="sidebar-link">How To Custom MAC Addres</a><a href="HowToUseDeviceTreeOverlay.html" class="sidebar-link">How To Use Device Tree Overlay</a><a href="HowToCustomIRCodeToBoot.html" class="sidebar-link">How To Custom IR Code To Boot System</a><a href="HowToSetupFramebufferConsoleFont.html" class="sidebar-link">How To Setup Framebuffer Console Font</a><a href="HowToWriteSDImageToEmmc.html" class="sidebar-link">How To Write SD Image To EMMC</a><a href="HowToUseLinuxHardwareEncodingLibrary.html" class="sidebar-link">How To Use Linux Hardware Encoding Library</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="sidebar-link">How To Run 32-bit Applications On 64-bit System</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link">VIM2</a><a href="/vim3/" class="mobile-nav-link current">VIM3</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/tone1/" class="mobile-nav-link">Tone1</a><a href="/hardware/" class="mobile-nav-link">Hardware</a><a href="/firmware/" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3 Interfaces</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Connect to Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a></details></strong><strong class="mobile-nav-title"><details><summary>Accessories</summary><a href="HowToSetupFan.html" class="mobile-nav-link first">How To Setup Fan</a><a href="ConnectLcd.html" class="mobile-nav-link">Connect to TS050 Touchscreen</a><a href="HowToUseMIPICamera.html" class="mobile-nav-link">How To Use MIPI Camera</a><a href="HowToUseLTEModule.html" class="mobile-nav-link">How To Use LTE Module</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link first">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">How To Access GPIO</a><a href="HowToAccessI2c.html" class="mobile-nav-link">How To Access I2C</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">How To Setup PCIe/USB3.0 Port</a></details></strong><strong class="mobile-nav-title"><details open><summary>NPU</summary><a href="HowToUseNpu.html" class="mobile-nav-link first">How To Use the NPU</a><a href="HowToUseKhadasNPURepositories.html" class="mobile-nav-link current">How To Use Khadas NPU Repositories</a><a href="HowToInstallDarknet.html" class="mobile-nav-link">How To Install Darnket</a><a href="HowToTrainYolo.html" class="mobile-nav-link">How To Train Yolo Model</a><a href="HowToTransformYolo.html" class="mobile-nav-link">How To Transform Yolo Model</a><a href="HowToTrainInception.html" class="mobile-nav-link">How To Train Inception Model</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">Boot From SPI-Flash</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI Guide</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="HowToUseADBTool.html" class="mobile-nav-link">How To Use ADB Tool</a><a href="HowtoUseWol.html" class="mobile-nav-link">How To Use WOL</a><a href="HowToUseFastboot.html" class="mobile-nav-link">How To Use Fastboot</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToUpgradeTheSystem.html" class="mobile-nav-link">How To Upgrade the System</a><a href="Krescue.html" class="mobile-nav-link">Krescue</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">How To Use WiringPi</a><a href="HowToUseWiringPi-Python.html" class="mobile-nav-link">How To Use WiringPi-Python</a><a href="HowToUseRPiGPIO.html" class="mobile-nav-link">How To Use RPi.GPIO</a><a href="HowToUpgradeTheLogo.html" class="mobile-nav-link">How To Upgrade The Logo</a><a href="HowToUpgradeTheUboot.html" class="mobile-nav-link">How To Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="mobile-nav-link">How To Upgrade The kernel</a><a href="HowToUseHardwarePWM.html" class="mobile-nav-link">How To Use Hardware PWM</a><a href="HowToUseUart.html" class="mobile-nav-link">How To Use Uart</a><a href="HowToControlLED.html" class="mobile-nav-link">How To Control LEDs</a><a href="HowToTestGPIOIRQ.html" class="mobile-nav-link">How To Test GPIO IRQ</a><a href="HowToSetAutoLogin.html" class="mobile-nav-link">How To Set Auto Login</a><a href="HowToUse1wire.html" class="mobile-nav-link">How To User 1-Wire driver</a><a href="HowToSetupHDMI.html" class="mobile-nav-link">How To Setup HDMI</a><a href="HowToSetupMaxCPUFrequency.html" class="mobile-nav-link">How To Setup Maximum CPU Frequency</a><a href="HowToChangeBootLogo.html" class="mobile-nav-link">How To Change Boot Logo</a><a href="HowToCustomMac.html" class="mobile-nav-link">How To Custom MAC Addres</a><a href="HowToUseDeviceTreeOverlay.html" class="mobile-nav-link">How To Use Device Tree Overlay</a><a href="HowToCustomIRCodeToBoot.html" class="mobile-nav-link">How To Custom IR Code To Boot System</a><a href="HowToSetupFramebufferConsoleFont.html" class="mobile-nav-link">How To Setup Framebuffer Console Font</a><a href="HowToWriteSDImageToEmmc.html" class="mobile-nav-link">How To Write SD Image To EMMC</a><a href="HowToUseLinuxHardwareEncodingLibrary.html" class="mobile-nav-link">How To Use Linux Hardware Encoding Library</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="mobile-nav-link">How To Run 32-bit Applications On 64-bit System</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToUseKhadasNPURepositories.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

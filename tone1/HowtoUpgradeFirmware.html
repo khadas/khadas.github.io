@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>How To Upgrade Firmware | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/tone1/HowtoUpgradeFirmware.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/tone1/HowtoUpgradeFirmware.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/tone1/HowtoUpgradeFirmware.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .bin files from this directory and extract them.  Connect your TONE1 to your PC using a USB-C data c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Upgrade Firmware">
+<meta property="og:url" content="https://docs.khadas.com/tone1/HowtoUpgradeFirmware">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="Upgrade On WindowsPreparation:  Download the USB Upgrade Tool and extract it. Download the firmware .bin files from this directory and extract them.  Connect your TONE1 to your PC using a USB-C data c">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_01.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_02.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_03.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_04.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_05.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_07.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_08.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/tone1/tb_fw_09.jpg">
+<meta property="article:published_time" content="2020-09-24T09:22:17.619Z">
+<meta property="article:modified_time" content="2020-09-24T09:22:17.619Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.khadas.com/images/tone1/tb_fw_01.jpg">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/vim1/" class="main-nav-link">VIM1</a><a href="/vim2/" class="main-nav-link">VIM2</a><a href="/vim3/" class="main-nav-link">VIM3</a><a href="/edge/" class="main-nav-link">Edge</a><a href="/tone1/" class="main-nav-link current">Tone1</a><a href="/hardware/" class="main-nav-link">Hardware</a><a href="/firmware/" class="main-nav-link">Firmware</a><a href="/faq/" class="main-nav-link">FAQ</a>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="tone1/HowtoUpgradeFirmware.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Upgrade Firmware</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/source/tone1/HowtoUpgradeFirmware.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="Upgrade-On-Windows" class="article-heading"><a href="#Upgrade-On-Windows" class="headerlink" title="Upgrade On Windows"></a>Upgrade On Windows<a class="article-anchor" href="#Upgrade-On-Windows" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
+<ul>
+<li>Download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/Driver/%5bOnly%20for%20some%20OS%20Upgrade%20XMOS%5d-XMOS-TUSBAudio-EVAL-V4.11.0-Setup.zip">USB Upgrade Tool</a> and extract it.</li>
+<li>Download the firmware <code>.bin</code> files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/">this directory</a> and extract them. </li>
+<li>Connect your TONE1 to your PC using a USB-C data cable.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_01.jpg" alt="TONE1 With USB-C Cable"></p>
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Run <code>setup_eval.exe</code> to install the tool to upgrade your TONE1’s firmware.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_02.jpg" alt="TONE1 USB Upgrade Tool Installation"></p>
+<ul>
+<li>Press <code>Yes</code>, then disconnect and reconnect your TONE1.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_03.jpg" alt="Disconnect and Reconnect TONE1"></p>
+<p><strong>Upgrading:</strong></p>
+<ul>
+<li>Open the <code>TUSBAudio Firmware Upgrade</code> tool, from your Start Menu.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_04.jpg" alt="TUSBAudio Firmware Upgrade Tool"></p>
+<ul>
+<li>It should show <code>Device Opened</code>, which means your TONE1 is connected and ready for upgrading. (If not, disconnect and reconnect your TONE1)</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_05.jpg" alt="TONE1 Ready For Upgrade"></p>
+<ul>
+<li>Click <code>Browse</code> and load the firmware <code>.bin</code> file you extracted, into the tool.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_07.jpg" alt="TONE1 USB Upgrade Tool Browse For .img"></p>
+<ul>
+<li>Click <code>Start</code> to begin the upgrade process.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_08.jpg" alt="TONE1 USB Upgrade Tool Click Start"></p>
+<ul>
+<li>Once firmware has upgraded, click <code>Exit</code>.</li>
+</ul>
+<p><img src="/images/tone1/tb_fw_09.jpg" alt="TONE1 USB Upgrade Tool Finished And Exit"></p>
+<ul>
+<li><p>Uninstall the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/Driver/%5bOnly%20for%20some%20OS%20Upgrade%20XMOS%5d-XMOS-TUSBAudio-EVAL-V4.11.0-Setup.zip">EVAL driver</a> that you used for upgrading firmware, and re-install the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/Driver/Thesycon-Stereo-USB-Audio-Driver-V224.rar">v224 driver</a>.</p>
+</li>
+<li><p>Alternatively, if you’re on Windows 10, uninstall all Khadas-supplied drivers and use the native <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/audio/usb-2-0-audio-drivers">Win10 UAC2 driver</a> supplied with the OS.</p>
+</li>
+</ul>
+<h1 id="Upgrade-On-Ubuntu" class="article-heading"><a href="#Upgrade-On-Ubuntu" class="headerlink" title="Upgrade On Ubuntu"></a>Upgrade On Ubuntu<a class="article-anchor" href="#Upgrade-On-Ubuntu" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install git libusb-1.0-0 libusb-1.0-0-dev</span><br></pre></td></tr></table></figure>
+
+<p><strong>Download Burning Tool:</strong></p>
+<p>TONE1 DFU burning tool on Ubuntu is in <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/utils">utils</a> repository.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;khadas&#x2F;utils</span><br></pre></td></tr></table></figure>
+
+<p>Or just pull it (if you have already cloned this repository).</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;path&#x2F;to&#x2F;utils</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+<p><strong>Install Burning Tool:</strong><br>You need to install USB rules and create some links.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;path&#x2F;to&#x2F;utils&#x2F;toneboard-dfu-tool</span><br><span class="line">$ sudo .&#x2F;INSTALL</span><br></pre></td></tr></table></figure>
+
+<p>You will see this print-out if it was successful.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[sudo] password for nick: </span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">Host PC: Ubuntu 16.04</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">Installing USB rules...</span><br><span class="line">Installing toneboard-burn-tool...</span><br><span class="line">Done!</span><br></pre></td></tr></table></figure>
+
+<p><em>Note: Root privilege required.</em></p>
+<p><strong>Upgrading:</strong></p>
+<ul>
+<li><p>Download the firmware files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/">this directory</a> and extract them to somewhere like your <code>Home</code> folder.</p>
+</li>
+<li><p>Open a <code>Terminal</code> window, and <code>cd</code> into your <code>Home</code> folder.</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;home&#x2F;*</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Connect your TONE1 using a USB-C data cable to your PC. Check that it is recognised by Ubuntu.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ lsusb</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>If your TONE1 is recognised, you should see this (else, restart Ubuntu).</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Bus 001 Device 005: ID 20b1:0008 XMOS Ltd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Finally, run the tool with your firmware file of choice (drag and drop your <code>.bin</code> file to replace <code>/path/to/firmware.bin</code>).</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo toneboard-burn-tool -i &#x2F;path&#x2F;to&#x2F;firmware.bin</span><br></pre></td></tr></table></figure>
+<p><em>Note: Upgrading will stuck at <code>Waiting for device to restart and enter DFU mode</code> for about 20 seconds, please wait patiently.</em></p>
+<ul>
+<li>If upgrading was done successfully, you should see:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Upgrading ToneBoard firmware...</span><br><span class="line">VID &#x3D; 0xbda, PID &#x3D; 0x411</span><br><span class="line">VID &#x3D; 0x1d6b, PID &#x3D; 0x3</span><br><span class="line">VID &#x3D; 0x1a86, PID &#x3D; 0x7523</span><br><span class="line">VID &#x3D; 0x2207, PID &#x3D; 0x330c</span><br><span class="line">VID &#x3D; 0x4ca, PID &#x3D; 0xa8</span><br><span class="line">VID &#x3D; 0x20b1, PID &#x3D; 0x8</span><br><span class="line">ToneBoard DFU application started - Interface 2 claimed</span><br><span class="line">Detaching device from application mode.</span><br><span class="line">Waiting for device to restart and enter DFU mode...</span><br><span class="line">VID &#x3D; 0x20b1, PID &#x3D; 0x8</span><br><span class="line">... DFU firmware upgrade device opened</span><br><span class="line">... Downloading image (firmware.bin) to device</span><br><span class="line">... Download complete</span><br><span class="line">... Returning device to application mode</span><br></pre></td></tr></table></figure>
+
+<p><strong>Uninstall Burning Tool:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;path&#x2F;to&#x2F;utils&#x2F;toneboard-dfu-tool </span><br><span class="line">$ sudo .&#x2F;UNINSTALL</span><br></pre></td></tr></table></figure>
+
+<h1 id="Upgrade-On-Mac-OS" class="article-heading"><a href="#Upgrade-On-Mac-OS" class="headerlink" title="Upgrade On Mac OS"></a>Upgrade On Mac OS<a class="article-anchor" href="#Upgrade-On-Mac-OS" aria-hidden="true"></a></h1><p><strong>Preparation:</strong></p>
+<ul>
+<li>Visit our Github and download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/numbqq/USB-Audio-2.0-Software-v6.1">Mac OS X - USB Upgrade Tool</a>.<ul>
+<li>Click the green <code>Clone or download</code> button.</li>
+<li>Then press the <code>Download ZIP</code> option.</li>
+<li>Afterwards, extract the <code>.zip</code> file to a directory of your choosing.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Open a Terminal window, by pressing <code>Command-Space</code> on your keyboard, then type <code>terminal</code> into Spotlight. </li>
+<li>From within Terminal type <code>cd your_directory/sc_usb_audio/module_dfu/host/xmos_dfu_osx</code>.<ul>
+<li>Replace <code>your_directory</code> with the directory that you’ve unzipped the USB Upgrade Tool to.</li>
+</ul>
+</li>
+<li>Alternatively, navigate to <code>/sc_usb_audio/module_dfu/host/</code> from within the Finder.<ul>
+<li>Then type <code>cd</code>, followed by <code>space</code>, into Terminal.</li>
+<li>And drag the <code>xmos_dfu_osx</code> folder into Terminal, and hit your <code>Enter</code> key.</li>
+</ul>
+</li>
+<li>Build the tool by typing: <code>make -f Makefile.OSX all</code> into your Terminal window, original instructions are <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.xmos.com/developer/published/dfu-user-guide?page=4#usb-audiosec-building-xmos-dfu">here</a>.</li>
+<li>If build was successful, you should see the following:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make -f Makefile.OSX all</span><br><span class="line">g++ -g -o xmosdfu xmosdfu.cpp -I. -IOSX libusb-1.0.0-x86_64.dylib -m64</span><br><span class="line">xmosdfu.cpp:96:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:100:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:256:1: warning: control may reach end of non-void function [-Wreturn-type]</span><br><span class="line">&#125;</span><br><span class="line">^</span><br><span class="line">xmosdfu.cpp:417:3: warning: bool literal returned from &#39;main&#39; [-Wmain]</span><br><span class="line">  return true;</span><br><span class="line">  ^      ~~~~</span><br><span class="line">6 warnings generated.</span><br></pre></td></tr></table></figure></li>
+<li>Finally, type <code>source setup.sh</code> into Terminal, original instructions are <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.xmos.com/developer/published/dfu-user-guide?version=&page=3">here</a>.<ul>
+<li>If successful, Terminal will be silent.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Upgrading:</strong></p>
+<ul>
+<li>Download a firmware file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/">https://dl.khadas.com/Firmware/ToneBoard/</a>, then extract the <code>.zip</code> file.</li>
+<li>Connect your TONE1 to your Macbook / iMac via a USB-C data cable.</li>
+<li>Return to Terminal and type <code>./xmosdfu --download</code>, followed by <code>space</code>, and drag the <code>firmware.bin</code> you just downloaded, from the Finder into Terminal. Then hit <code>Enter</code>.</li>
+<li>If successful, you should see the following Terminal output:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;xmosdfu --download &#x2F;Users&#x2F;ossyx&#x2F;Documents&#x2F;Wesion&#x2F;TONEBOARD\ FIRMWARE\ UPGRADE\ TOOL&#x2F;Khadas_Tone_Board_dfu-2018-1226-Upgrade-Firmware&#x2F;Khadas_Tone_Board_dfu_1226.bin </span><br><span class="line">VID &#x3D; 0x20b1, PID &#x3D; 0x8</span><br><span class="line">XMOS DFU application started - Interface 2 claimed</span><br><span class="line">Detaching device from application mode.</span><br><span class="line">Waiting for device to restart and enter DFU mode...</span><br><span class="line">VID &#x3D; 0x20b1, PID &#x3D; 0x8</span><br><span class="line">... DFU firmware upgrade device opened</span><br><span class="line">... Downloading image (&#x2F;Users&#x2F;ossyx&#x2F;Documents&#x2F;Wesion&#x2F;TONEBOARD FIRMWARE UPGRADE TOOL&#x2F;Khadas_Tone_Board_dfu-2018-1226-Upgrade-Firmware&#x2F;Khadas_Tone_Board_dfu_1226.bin) to device</span><br><span class="line">... Download complete</span><br><span class="line">... Returning device to application mode</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>If you get the following output when attempting to upgrade the firmware on Mac OS X:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;xmosdfu --download &#x2F;Users&#x2F;ossyx&#x2F;Downloads&#x2F;USB-Audio-2.0-Software-v6.1-master&#x2F;sc_usb_audio&#x2F;module_dfu&#x2F;host&#x2F;xmos_dfu_osx&#x2F;Khadas_Tone_Board_dfu_1226.bin </span><br><span class="line">dyld: Library not loaded: &#x2F;usr&#x2F;local&#x2F;lib&#x2F;libusb-1.0.0.dylib</span><br><span class="line">  Referenced from: &#x2F;Users&#x2F;ossyx&#x2F;Downloads&#x2F;USB-Audio-2.0-Software-v6.1-master&#x2F;sc_usb_audio&#x2F;module_dfu&#x2F;host&#x2F;xmos_dfu_osx&#x2F;.&#x2F;xmosdfu</span><br><span class="line">  Reason: image not found</span><br><span class="line">Abort trap: 6</span><br></pre></td></tr></table></figure></li>
+<li>It means you need to upgrade <code>libusb</code>. You can do this by typing <code>brew install libusb</code>.</li>
+<li>If typing <code>brew install libusb</code> didn’t work, it means that you need to install <a target="_blank" rel="noopener external nofollow noreferrer" href="https://brew.sh/">HomeBrew</a>.</li>
+<li>If HomeBrew fails, you need to install Xcode Command Line Tools, type <code>xcode-select --install</code> into Terminal.</li>
+</ul>
+<h1 id="See-Also" class="article-heading"><a href="#See-Also" class="headerlink" title="See Also:"></a>See Also:<a class="article-anchor" href="#See-Also" aria-hidden="true"></a></h1><ul>
+<li><a href="/tone1/index.html">TONE1 Beginners FAQ</a></li>
+<li><a href="/tone1/UserManual.html">TONE1 User Manual</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/ToneBoard/">TONE1 Firmware Images</a></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-09-24T09:22:17.619Z" itemprop="dateModified">Last updated: 2020-09-24</time>
+                <a href="UserManual.html" class="article-footer-prev" title="User Manual"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Windows"><span class="toc-text">Upgrade On Windows</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Ubuntu"><span class="toc-text">Upgrade On Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-On-Mac-OS"><span class="toc-text">Upgrade On Mac OS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#See-Also"><span class="toc-text">See Also:</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners FAQ</a><a href="UserManual.html" class="sidebar-link">User Manual</a><a href="HowtoUpgradeFirmware.html" class="sidebar-link current">How To Upgrade Firmware</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/vim1/" class="mobile-nav-link">VIM1</a><a href="/vim2/" class="mobile-nav-link">VIM2</a><a href="/vim3/" class="mobile-nav-link">VIM3</a><a href="/edge/" class="mobile-nav-link">Edge</a><a href="/tone1/" class="mobile-nav-link current">Tone1</a><a href="/hardware/" class="mobile-nav-link">Hardware</a><a href="/firmware/" class="mobile-nav-link">Firmware</a><a href="/faq/" class="mobile-nav-link">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners FAQ</a><a href="UserManual.html" class="mobile-nav-link">User Manual</a><a href="HowtoUpgradeFirmware.html" class="mobile-nav-link current">How To Upgrade Firmware</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="tone1/HowtoUpgradeFirmware.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
