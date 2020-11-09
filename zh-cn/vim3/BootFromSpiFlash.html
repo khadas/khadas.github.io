@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Boot From SPI Flash | Khadas Documentation</title>
+  <title>从SPI启动系统 | Khadas Documentation</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Khadas VIM3&#x2F;VIM3L contains a 16 MB SPI-Flash that’s used as boot storage; so you can boot from it. This guide is about how to boot from the on-board SPI-Flash. Build U-boot For SPI-FlashThe U-Boot for">
+  <meta name="description" content="Khadas VIM3以及VIM3L板载了 一块存储空间为16MB的SPI-falsh芯片,可用于从SPI启动系统,这篇文档将说明如何从SPI启动. 编译可用于SPI启动的Uboot从SPI启动的Uboot和从EMMC启动的Uboot,编译方法是一样的,通过fenix就可以轻松的编译出用于SPI启动的脚本. 这意味着你要有一个可以用于编译的fenix的环境.如果没有,请参照 fenix使用说明 搭">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Boot From SPI Flash">
+<meta property="og:title" content="从SPI启动系统">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/BootFromSpiFlash">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="Khadas VIM3&#x2F;VIM3L contains a 16 MB SPI-Flash that’s used as boot storage; so you can boot from it. This guide is about how to boot from the on-board SPI-Flash. Build U-boot For SPI-FlashThe U-Boot for">
+<meta property="og:description" content="Khadas VIM3以及VIM3L板载了 一块存储空间为16MB的SPI-falsh芯片,可用于从SPI启动系统,这篇文档将说明如何从SPI启动. 编译可用于SPI启动的Uboot从SPI启动的Uboot和从EMMC启动的Uboot,编译方法是一样的,通过fenix就可以轻松的编译出用于SPI启动的脚本. 这意味着你要有一个可以用于编译的fenix的环境.如果没有,请参照 fenix使用说明 搭">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-29T10:20:25.298Z">
-<meta property="article:modified_time" content="2020-10-29T10:20:25.298Z">
+<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -131,68 +131,71 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Boot From SPI Flash</h1>
+                <h1 class="article-title" itemprop="name">从SPI启动系统</h1>
                 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/BootFromSpiFlash.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Khadas VIM3/VIM3L contains a 16 MB SPI-Flash that’s used as boot storage; so you can boot from it. This guide is about how to boot from the on-board SPI-Flash.</p>
-<h3 id="Build-U-boot-For-SPI-Flash" class="article-heading"><a href="#Build-U-boot-For-SPI-Flash" class="headerlink" title="Build U-boot For SPI-Flash"></a>Build U-boot For SPI-Flash<a class="article-anchor" href="#Build-U-boot-For-SPI-Flash" aria-hidden="true"></a></h3><p>The U-Boot for SPI-Flash is the same as eMMC U-Boot. We recommend using <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">Fenix Script</a> to build U-Boot, as it’s easy this way.</p>
-<p><strong>This guide assumes that you have already setup a basic build environment. If not, please refer to <a href="/zh-cn/vim3/FenixScript.html">Fenix Usage</a>.</strong></p>
+                <p>Khadas VIM3以及VIM3L板载了 一块存储空间为16MB的SPI-falsh芯片,可用于从SPI启动系统,这篇文档将说明如何从SPI启动.</p>
+<h3 id="编译可用于SPI启动的Uboot" class="article-heading"><a href="#编译可用于SPI启动的Uboot" class="headerlink" title="编译可用于SPI启动的Uboot"></a>编译可用于SPI启动的Uboot<a class="article-anchor" href="#编译可用于SPI启动的Uboot" aria-hidden="true"></a></h3><p>从SPI启动的Uboot和从EMMC启动的Uboot,编译方法是一样的,通过<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">fenix</a>就可以轻松的编译出用于SPI启动的脚本.</p>
+<p><strong>这意味着你要有一个可以用于编译的fenix的环境.如果没有,请参照 <a href="/zh-cn/vim3/FenixScript.html">fenix使用说明</a> 搭建编译的环境</strong></p>
 <ul>
-<li>Setup Environment:</li>
+<li>选择编译的环境</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd fenix</span><br><span class="line">$ source env&#x2F;setenv.sh</span><br></pre></td></tr></table></figure>
-<p>Select <code>VIM3</code> or <code>VIM3L</code> board(This is according to your board).</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> fenix</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> env/setenv.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你的板子是VIM3,请选择VIM3选项,是VIM3L,请选择VIM3L</p>
 <ul>
-<li>Build U-boot</li>
+<li>编译uboot</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot</span><br></pre></td></tr></table></figure>
-<p>If successful, you will get a U-Boot for the SPI-Flash <code>u-boot.bin</code>, in the directory <code>fenix/u-boot/build</code>.</p>
-<h3 id="Burn-U-boot-To-SPI-Flash" class="article-heading"><a href="#Burn-U-boot-To-SPI-Flash" class="headerlink" title="Burn U-boot To SPI Flash"></a>Burn U-boot To SPI Flash<a class="article-anchor" href="#Burn-U-boot-To-SPI-Flash" aria-hidden="true"></a></h3><p>Copy <code>u-boot.bin</code> to an SD-Card or Thumbdrive (U-Disk) and insert it into your board or load it via TFTP.</p>
-<p><a href="/vim3/SetupSerialTool.html">Setup serial debugging tool</a> and boot to the U-Boot Command Line.</p>
-<h4 id="Load-U-boot-to-DDR" class="article-heading"><a href="#Load-U-boot-to-DDR" class="headerlink" title="Load U-boot to DDR"></a>Load U-boot to DDR<a class="article-anchor" href="#Load-U-boot-to-DDR" aria-hidden="true"></a></h4><ul>
-<li>Load U-Boot from SD-Card:</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make uboot</span></span><br></pre></td></tr></table></figure>
+
+<p>如果编译成功了,你将会在<code>fenix/u-boot/build</code>下找到一个可以烧录进SPI的Uboot固件<code>uboot.bin</code>.</p>
+<h3 id="烧录uboot进SPI-Flash" class="article-heading"><a href="#烧录uboot进SPI-Flash" class="headerlink" title="烧录uboot进SPI Flash"></a>烧录uboot进SPI Flash<a class="article-anchor" href="#烧录uboot进SPI-Flash" aria-hidden="true"></a></h3><p>将上一步编译得到的uboot放进SD卡,u盘,或者通过TFTP直接加载进内存中.</p>
+<p><a href="/vim3/SetupSerialTool.html">设置串口工具</a> 并且进入Uboot命令行</p>
+<h4 id="加载固件到DDR中" class="article-heading"><a href="#加载固件到DDR中" class="headerlink" title="加载固件到DDR中"></a>加载固件到DDR中<a class="article-anchor" href="#加载固件到DDR中" aria-hidden="true"></a></h4><ul>
+<li>从SD卡加载的方式:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#load mmc 0 1080000 u-boot.bin</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Load U-Boot from Thumbdrive (U-Disk):</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#usb start</span><br><span class="line">kvim3#load usb 0 1080000 u-boot.bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">load mmc 0 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>Load U-boot via TFTP</li>
+<li>从U盘加载的方式:</li>
 </ul>
-<p>Please refer <a href="/vim3/SetupTFTPServer.html">here</a> about how to setup the TFTP.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#tftp 1080000 u-boot.bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">usb start</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">load usb 0 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="Burning" class="article-heading"><a href="#Burning" class="headerlink" title="Burning"></a>Burning<a class="article-anchor" href="#Burning" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#sf probe</span><br><span class="line">kvim3#sf erase 0 +$filesize</span><br><span class="line">kvim3#sf write 1080000 0 $filesize</span><br></pre></td></tr></table></figure>
-<p><em>Tip: This will take a few seconds, please be patient.</em></p>
-<h3 id="Setup-bootmode-to-SPI" class="article-heading"><a href="#Setup-bootmode-to-SPI" class="headerlink" title="Setup bootmode to SPI"></a>Setup bootmode to SPI<a class="article-anchor" href="#Setup-bootmode-to-SPI" aria-hidden="true"></a></h3><p>If you want to boot from SPI Flash, you have to setup the bootmode to SPI. The default bootmode is boot from eMMC.</p>
 <ul>
-<li>Check current bootmode:</li>
+<li>通过TFTP的方式:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi bootmode r</span><br><span class="line">bootmode: emmc</span><br></pre></td></tr></table></figure>
-<p>Current bootmode is boot from eMMC.</p>
+<p>Please refer <a href="/vim3/SetupTFTPServer.html">here</a> about how to setup the TFTP.<br>设置TFTP的方法在<a href="/zh-cn/vim3/SetupTFTPServer.html">如何设TFTP服务器</a>的文档里有详细的说明.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">tftp 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="烧录" class="article-heading"><a href="#烧录" class="headerlink" title="烧录"></a>烧录<a class="article-anchor" href="#烧录" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">sf probe</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf erase 0 +<span class="variable">$filesize</span></span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf write 1080000 0 <span class="variable">$filesize</span></span></span><br></pre></td></tr></table></figure>
+
+<p><em>说明: 这一步需要一些时间,请耐心的等待</em></p>
+<h3 id="修改启动方式为SPI" class="article-heading"><a href="#修改启动方式为SPI" class="headerlink" title="修改启动方式为SPI"></a>修改启动方式为SPI<a class="article-anchor" href="#修改启动方式为SPI" aria-hidden="true"></a></h3><p>如果你想要从SPI启动系统,首先需要将启动方式设置为SPI.默认的启动方式是从eMMC启动的</p>
 <ul>
-<li>Setup bootmode to SPI:</li>
+<li>确认当前的启动方式:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi bootmode w spi</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi bootmode r</span></span><br><span class="line">bootmode: emmc</span><br></pre></td></tr></table></figure>
 
-<p>Poweroff the system to make it available:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#kbi poweroff</span><br></pre></td></tr></table></figure>
+<p>当前启动方式为eMMC</p>
+<ul>
+<li>设置为SPI启动:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi bootmode w spi</span></span><br></pre></td></tr></table></figure>
 
-<p>Press the <code>POWER</code> key to bootup, you will boot from the SPI-Flash.</p>
-<h3 id="Erase-the-SPI-Flash-to-prevent-boot-from-it" class="article-heading"><a href="#Erase-the-SPI-Flash-to-prevent-boot-from-it" class="headerlink" title="Erase the SPI Flash to prevent boot from it"></a>Erase the SPI Flash to prevent boot from it<a class="article-anchor" href="#Erase-the-SPI-Flash-to-prevent-boot-from-it" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#sf probe</span><br><span class="line">kvim3#sf erase 0 1000</span><br><span class="line">kvim3#reset</span><br></pre></td></tr></table></figure>
+<p>关机已使新设置的启动方式的参数生效:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi poweroff</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Troubleshooting" class="article-heading"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting<a class="article-anchor" href="#Troubleshooting" aria-hidden="true"></a></h3><ol>
-<li><p>Bootmode is boot from SPI, but the u-boot in SPI flash is corrupted, can’t enter u-boot command line.<br> 1) If u-boot in eMMC is correct, you can try <a href="/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST mode</a> or try <a href>SPI MASKROM</a> to boot from eMMC, then enter u-boot command line, erase the SPI flash or burn the new u-boot to SPI flash.<br> <strong>Note: Don’t use your PC to supply the power, or you will enter usb burning mode!</strong></p>
-<p> 2) U-boot in eMMC is also corrupted, you have to try <a href="/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST mode</a> to enter usb burning mode, and flash the image to emmc, then follow <code>step 1)</code>.<br> <strong>Note: You need to connect the board to your host PC!</strong></p>
-</li>
+<p>此时,再次按下power按键,就会从SPI启动了</p>
+<h3 id="不再需要从SPI启动时清除SPI" class="article-heading"><a href="#不再需要从SPI启动时清除SPI" class="headerlink" title="不再需要从SPI启动时清除SPI"></a>不再需要从SPI启动时清除SPI<a class="article-anchor" href="#不再需要从SPI启动时清除SPI" aria-hidden="true"></a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">sf probe</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf erase 0 1000</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">reset</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="故障排查" class="article-heading"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查<a class="article-anchor" href="#故障排查" aria-hidden="true"></a></h3><ol>
+<li>如果启动方式已经设置为从SPI启动,同时SPI的uboot损坏了是无法进入uboot的命令行的<br> 1) 如果uboot损坏了,你可以尝试使用<a href="/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST模式</a>从emmc启动,然后进入命令行,清除你的SPI或者从新烧录uboot进SPI<br> <strong>注意:此时不能使用PC的USB口给板子供电,会直接进入升级模式,而不是从EMMC启动</strong><br> 2) 如果EMMC的Uboot损坏了,你可以尝试使用<a href="/zh-cn/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST模式</a>进入升级模式,烧录一个固件到EMMC上,再重复步骤1.<br> <strong>注意: 此时板子需要通过type-C的线连接到PC</strong></li>
 </ol>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-10-29T10:20:25.298Z" itemprop="dateModified">上次更新：2020-10-29</time>
+                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
                 <a href="HowToTrainInception.html" class="article-footer-prev" title="如何训练自己的Inception模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="UBootUsage.html" class="article-footer-next" title="U-boot使用说明"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -201,7 +204,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-U-boot-For-SPI-Flash"><span class="toc-text">Build U-boot For SPI-Flash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Burn-U-boot-To-SPI-Flash"><span class="toc-text">Burn U-boot To SPI Flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Load-U-boot-to-DDR"><span class="toc-text">Load U-boot to DDR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Burning"><span class="toc-text">Burning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-bootmode-to-SPI"><span class="toc-text">Setup bootmode to SPI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erase-the-SPI-Flash-to-prevent-boot-from-it"><span class="toc-text">Erase the SPI Flash to prevent boot from it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%8F%AF%E7%94%A8%E4%BA%8ESPI%E5%90%AF%E5%8A%A8%E7%9A%84Uboot"><span class="toc-text">编译可用于SPI启动的Uboot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%A7%E5%BD%95uboot%E8%BF%9BSPI-Flash"><span class="toc-text">烧录uboot进SPI Flash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E5%9B%BA%E4%BB%B6%E5%88%B0DDR%E4%B8%AD"><span class="toc-text">加载固件到DDR中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%A7%E5%BD%95"><span class="toc-text">烧录</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F%E4%B8%BASPI"><span class="toc-text">修改启动方式为SPI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E4%BB%8ESPI%E5%90%AF%E5%8A%A8%E6%97%B6%E6%B8%85%E9%99%A4SPI"><span class="toc-text">不再需要从SPI启动时清除SPI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="toc-text">故障排查</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

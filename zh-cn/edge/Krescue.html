@@ -73,8 +73,8 @@
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/krescue_boot.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/krescue_list.png">
-<meta property="article:published_time" content="2020-10-29T10:20:25.298Z">
-<meta property="article:modified_time" content="2020-10-29T10:20:25.298Z">
+<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/Krescue_downloads.png">
@@ -148,9 +148,9 @@
 <li>一个可以制作启动盘的PC</li>
 </ol>
 <h3 id="制作Krescue启动盘" class="article-heading"><a href="#制作Krescue启动盘" class="headerlink" title="制作Krescue启动盘"></a>制作Krescue启动盘<a class="article-anchor" href="#制作Krescue启动盘" aria-hidden="true"></a></h3><h4 id="烧录工具Etcher" class="article-heading"><a href="#烧录工具Etcher" class="headerlink" title="烧录工具Etcher"></a>烧录工具Etcher<a class="article-anchor" href="#烧录工具Etcher" aria-hidden="true"></a></h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.balena.io/etcher/">Etcher</a>是一个兼容性较好同时操作界面简单易用的烧录工具，我们选用这个工具作为烧录Krescue到SD卡的工具。</p>
-<h4 id="下载Krescue镜像" class="article-heading"><a href="#下载Krescue镜像" class="headerlink" title="下载Krescue镜像"></a>下载Krescue镜像<a class="article-anchor" href="#下载Krescue镜像" aria-hidden="true"></a></h4><p>Krescue的镜像可以从<a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/Krescue/dump/">这里下载</a>,选择你相应的板子的固件。<br><img src="/images/vim1/Krescue_downloads.png" alt="Kerscure_downloads"></p>
+<h4 id="下载Krescue镜像" class="article-heading"><a href="#下载Krescue镜像" class="headerlink" title="下载Krescue镜像"></a>下载Krescue镜像<a class="article-anchor" href="#下载Krescue镜像" aria-hidden="true"></a></h4><p>Krescue的镜像可以从<a href="/zh-cn/Firmware/Krescue/dump/">这里下载</a>,选择你相应的板子的固件。<br><img src="/images/vim1/Krescue_downloads.png" alt="Kerscure_downloads"></p>
 <h4 id="制作启动盘" class="article-heading"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘<a class="article-anchor" href="#制作启动盘" aria-hidden="true"></a></h4><p>将mircoSD卡插进PC上。将下载的镜像烧录进SD卡。<br><img src="/images/vim1/HowtoUseEtcher.png" alt="Make_Krescue"></p>
-<h3 id="运行" class="article-heading"><a href="#运行" class="headerlink" title="运行"></a>运行<a class="article-anchor" href="#运行" aria-hidden="true"></a></h3><p>将制作好的SD卡插入板子,连接HDMI，进入<a href="https://docs.khadas.com/zh-cn/vim3/HowtoBootIntoUpgradeMode.html">升级模式</a>，看到下图就是成功启动了kerscure<br><img src="/images/vim1/krescue_boot.jpg" alt="boot Krescue"></p>
+<h3 id="运行" class="article-heading"><a href="#运行" class="headerlink" title="运行"></a>运行<a class="article-anchor" href="#运行" aria-hidden="true"></a></h3><p>将制作好的SD卡插入板子,连接HDMI，进入<a href="/zh-cn/vim3/HowtoBootIntoUpgradeMode.html">升级模式</a>，看到下图就是成功启动了kerscure<br><img src="/images/vim1/krescue_boot.jpg" alt="boot Krescue"></p>
 <h2 id="通过网络使用安装Krescue" class="article-heading"><a href="#通过网络使用安装Krescue" class="headerlink" title="通过网络使用安装Krescue"></a>通过网络使用安装Krescue<a class="article-anchor" href="#通过网络使用安装Krescue" aria-hidden="true"></a></h2><h3 id="准备工具-1" class="article-heading"><a href="#准备工具-1" class="headerlink" title="准备工具"></a>准备工具<a class="article-anchor" href="#准备工具-1" aria-hidden="true"></a></h3><ol>
 <li>mirco SD卡一个</li>
 <li>HDMI显示器，键盘或者khadas遥控器一个</li>
@@ -160,7 +160,7 @@
 <li>插入SD卡到板子上，确认SD卡的节点，一般是<code>/dev/mmcblk0</code>或者<code>/dev/mmcblk1</code>.记住节点的名称</li>
 <li>打开终端，运行命令:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ curl -sfL dl.khadas.com&#x2F;.mega | sh -s - -l</span><br></pre></td></tr></table></figure>
 你会看到可用的固件列表<br><img src="/images/vim1/krescue_list.png" alt="krescue firmware list"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ curl -sfL dl.khadas.com&#x2F;.mega | sh -s - [BOARD_ID] &gt; &#x2F;dev&#x2F;mmcblk0 (或者&#96;&#x2F;dev&#x2F;mmcblk1&#96;)</span><br></pre></td></tr></table></figure>
-等待烧录完成，镜像就被写入了SD卡里，此时就可以进入<a href="https://docs.khadas.com/zh-cn/vim3/HowtoBootIntoUpgradeMode.html">升级模式</a>启动krescue了。</li>
+等待烧录完成，镜像就被写入了SD卡里，此时就可以进入<a href="/zh-cn/vim3/HowtoBootIntoUpgradeMode.html">升级模式</a>启动krescue了。</li>
 </ol>
 <h2 id="使用krescue" class="article-heading"><a href="#使用krescue" class="headerlink" title="使用krescue"></a>使用krescue<a class="article-anchor" href="#使用krescue" aria-hidden="true"></a></h2><ol>
 <li><p>备份以及还原<br>通过选项3，可以将板子上EMMC的固件打包存放到SD卡中。通过选项2可以将SD卡中的系统还原到EMMC上。SD卡可以保存不止一个系统。</p>
@@ -184,7 +184,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-10-29T10:20:25.298Z" itemprop="dateModified">上次更新：2020-10-29</time>
+                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
                 <a href="HowToUpgradeTheSystem.html" class="article-footer-prev" title="如何升级系统"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="InstallDocker.html" class="article-footer-next" title="安装Docker"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
