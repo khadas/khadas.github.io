@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="下载NPU相关工具包SDK请访问这里来获取SDK下载链接。 下载NPU相关SDK到某个目录，如：~&#x2F;npu 目录说明：  docs：模型转换说明文档 acuity-toolkit：模型转换相关工具 linux_sdk：Linux SDK android_sdk：Android SDK  环境搭建要使用模型转换工具必须要先安装TensorFlow等工具。 主机环境要求：  Ubuntu 16.04">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -151,18 +151,15 @@
 <li><code>Ubuntu 18.04 X64</code></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install python3 python3-pip python3-virtualenv</span><br><span class="line">$ cd ~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;acuity-toolkit</span><br><span class="line">$ for req in $(cat requirements.txt); do pip3 install $req; done</span><br></pre></td></tr></table></figure>
-
 <p><em>注意：默认安装的TensorFlow为CPU版本，如果你的电脑有英伟达GPU，你也可以选择安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.tensorflow.org/install/gpu">GPU版本</a>来加速模型转换速度。</em></p>
 <p>验证TensorFlow安装：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nick@Nick:~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;acuity-toolkit$ python3</span><br><span class="line">Python 3.5.2 (default, Jul 10 2019, 11:58:48) </span><br><span class="line">[GCC 5.4.0 20160609] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; sess &#x3D; tf.Session()</span><br><span class="line">&gt;&gt;&gt; hello &#x3D; tf.constant(&quot;Hello World&quot;)</span><br><span class="line">&gt;&gt;&gt; print(sess.run(hello))</span><br><span class="line">b&#39;Hello World&#39;</span><br></pre></td></tr></table></figure>
-
 <p>如果看到<code>Hello World</code>打印说明<code>TensorFlow</code>安装成功。</p>
 <h3 id="模型转换" class="article-heading"><a href="#模型转换" class="headerlink" title="模型转换"></a>模型转换<a class="article-anchor" href="#模型转换" aria-hidden="true"></a></h3><p>要想把训练好的模型部署在VIM3上运行，需要进行模型转换，当前只支持 <code>Caffe/Tensorflow/Tflite/Darknet/Onnx/Pytroch/keras</code> 模型。</p>
 <p>SDK里面自带了一个<code>TensorFlow</code>模型转换的示例脚本。执行如下脚本进行模型转换：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;acuity-toolkit&#x2F;conversion_scripts</span><br><span class="line">$ .&#x2F;0_import_model.sh</span><br><span class="line">$ .&#x2F;1_quantize_model.sh</span><br><span class="line">$ .&#x2F;2_export_case_code.sh</span><br></pre></td></tr></table></figure>
 <p>转换成功后会生成case代码在目录<code>nbg_unify_model-name</code>如：<code>nbg_unify_inception_v3</code>下，这个就是我们最终需要的代码，可以编译后放在VIM3上运行。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd nbg_unify_inception_v3</span><br><span class="line">$ ll</span><br><span class="line">drwxrwxr-x 2 nick nick     4096 9月  20 15:16 .&#x2F;</span><br><span class="line">drwxrwxr-x 5 nick nick     4096 9月  20 15:16 ..&#x2F;</span><br><span class="line">-rw-rw-r-- 1 nick nick      577 9月  20 15:16 BUILD</span><br><span class="line">-rw-rw-r-- 1 nick nick    37763 9月  20 15:16 .cproject</span><br><span class="line">-rw-rw-r-- 1 nick nick 28807168 9月  20 15:16 inception_v3.nb</span><br><span class="line">-rw-rw-r-- 1 nick nick    12691 9月  20 15:16 inceptionv3.vcxproj</span><br><span class="line">-rw-rw-r-- 1 nick nick     5869 9月  20 15:16 main.c</span><br><span class="line">-rw-rw-r-- 1 nick nick     2000 9月  20 15:16 makefile.linux</span><br><span class="line">-rw-rw-r-- 1 nick nick     2194 9月  20 15:16 .project</span><br><span class="line">-rw-rw-r-- 1 nick nick      358 9月  20 15:16 vnn_global.h</span><br><span class="line">-rw-rw-r-- 1 nick nick     7191 9月  20 15:16 vnn_inceptionv3.c</span><br><span class="line">-rw-rw-r-- 1 nick nick      985 9月  20 15:16 vnn_inceptionv3.h</span><br><span class="line">-rw-rw-r-- 1 nick nick     3566 9月  20 15:16 vnn_post_process.c</span><br><span class="line">-rw-rw-r-- 1 nick nick      464 9月  20 15:16 vnn_post_process.h</span><br><span class="line">-rw-rw-r-- 1 nick nick    20385 9月  20 15:16 vnn_pre_process.c</span><br><span class="line">-rw-rw-r-- 1 nick nick     1294 9月  20 15:16 vnn_pre_process.h</span><br></pre></td></tr></table></figure>
-
 <p><em>注意：如果你要转换自己的模型，那么需要修改脚本里面相应文件的路径和参数。</em></p>
 <p>以上是一个模型转换的示例脚本，更多详细信息请参考模型转换文档<code>docs/zh-cn/模型转换运行用户指南(0.5).pdf</code>。</p>
 <h3 id="编译转换好的case代码" class="article-heading"><a href="#编译转换好的case代码" class="headerlink" title="编译转换好的case代码"></a>编译转换好的case代码<a class="article-anchor" href="#编译转换好的case代码" aria-hidden="true"></a></h3><h4 id="基于Linux运行" class="article-heading"><a href="#基于Linux运行" class="headerlink" title="基于Linux运行"></a>基于Linux运行<a class="article-anchor" href="#基于Linux运行" aria-hidden="true"></a></h4><p>要想在VIM3上运行这个模型，需要编译上述转换好的case代码。</p>
@@ -170,34 +167,29 @@
 <li>从示例demo中拷贝编译脚本到转换的case代码目录</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;acuity-toolkit&#x2F;conversion_scripts&#x2F;nbg_unify_inception_v3</span><br><span class="line">$ cp ~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;linux_sdk&#x2F;demo&#x2F;inceptionv3&#x2F;build_vx.sh .</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>编译case代码</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;build_vx.sh ~&#x2F;npu&#x2F;aml_npu_sdk&#x2F;linux_sdk&#x2F;linux_sdk</span><br></pre></td></tr></table></figure>
-
 <p><em>说明： 编译脚本用法： <strong>./build_vx.sh linux-SDK-directory</strong>。</em></p>
 <p>编译成功后生成的可执行文件在目录<code>bin_r</code>下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ll bin_r&#x2F;</span><br><span class="line">total 172</span><br><span class="line">drwxrwxr-x 2 nick nick   4096 9月  20 15:24 .&#x2F;</span><br><span class="line">drwxrwxr-x 3 nick nick   4096 9月  20 15:24 ..&#x2F;</span><br><span class="line">-rwxrwxr-x 1 nick nick 129568 9月  20 15:24 inceptionv3*</span><br><span class="line">-rw-rw-r-- 1 nick nick   6272 9月  20 15:24 main.o</span><br><span class="line">-rw-rw-r-- 1 nick nick   3888 9月  20 15:24 vnn_inceptionv3.o</span><br><span class="line">-rw-rw-r-- 1 nick nick   3496 9月  20 15:24 vnn_post_process.o</span><br><span class="line">-rw-rw-r-- 1 nick nick  16624 9月  20 15:24 vnn_pre_process.o</span><br></pre></td></tr></table></figure>
-
 <p><code>inceptionv3</code>即为编译好的可执行文件。</p>
 <ul>
 <li>在VIM3上运行</li>
 </ul>
 <p>固件版本需要<a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/VIM3/Ubuntu/EMMC/">V190830</a>及以上版本，并更新至最新系统。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ sudo apt update</span><br><span class="line">khadas@Khadas:~$ sudo apt full-upgrade</span><br><span class="line">khadas@Khadas:~$ sudo do-fenix-full-upgrade</span><br><span class="line">khadas@Khadas:~$ sync</span><br><span class="line">khadas@Khadas:~$ sudo reboot</span><br></pre></td></tr></table></figure>
-
 <p>拷贝上面编译生成的可执行文件<code>inceptionv3</code>以及模型文件<code>inception_v3.nb</code>到VIM3上，同时拷贝要识别的图片（尺寸为299x299的jpeg图片）到VIM3上并运行。</p>
 <p><em>说明：示例图片可以在目录<code>linux_sdk/demo/inceptionv3/bin_demo</code>下面找到。</em></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~&#x2F;inceptionv3# .&#x2F;inceptionv3 inception_v3.nb goldfish_299x299.jpg </span><br><span class="line">D [setup_node:367]Setup node id[0] uid[0] op[NBG]</span><br><span class="line">D [print_tensor:129]in : id[   1] shape[ 3, 299, 299, 1   ] fmt[u8 ] qnt[ASM zp&#x3D;137, scale&#x3D;0.007292]</span><br><span class="line">D [print_tensor:129]out: id[   0] shape[ 1001, 1          ] fmt[f16] qnt[NONE]</span><br><span class="line">D [optimize_node:311]Backward optimize neural network</span><br><span class="line">D [optimize_node:318]Forward optimize neural network</span><br><span class="line">I [compute_node:260]Create vx node</span><br><span class="line">Create Neural Network: 40ms or 40037us</span><br><span class="line">I [vsi_nn_PrintGraph:1308]Graph:</span><br><span class="line">I [vsi_nn_PrintGraph:1309]***************** Tensors ******************</span><br><span class="line">D [print_tensor:137]id[   0] shape[ 1001, 1          ] fmt[f16] qnt[NONE]</span><br><span class="line">D [print_tensor:137]id[   1] shape[ 3, 299, 299, 1   ] fmt[u8 ] qnt[ASM zp&#x3D;137, scale&#x3D;0.007292]</span><br><span class="line">I [vsi_nn_PrintGraph:1318]***************** Nodes ******************</span><br><span class="line">I [vsi_nn_PrintNode:156](             NBG)node[0] [in: 1 ], [out: 0 ] [33f7cec0]</span><br><span class="line">I [vsi_nn_PrintGraph:1327]******************************************</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 268203 data.</span><br><span class="line">Verify...</span><br><span class="line">Verify Graph: 1ms or 1562us</span><br><span class="line">Start run graph [1] times...</span><br><span class="line">Run the 1 time: 27ms or 27960us</span><br><span class="line">vxProcessGraph execution time:</span><br><span class="line">Total   27ms or 27973us</span><br><span class="line">Average 27.97ms or 27973.00us</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 2002 data.</span><br><span class="line"> --- Top5 ---</span><br><span class="line">  2: 0.826660</span><br><span class="line">795: 0.008255</span><br><span class="line">974: 0.004066</span><br><span class="line">393: 0.002390</span><br><span class="line">408: 0.002285</span><br><span class="line">I [vsi_nn_ConvertTensorToData:732]Create 2002 data.</span><br></pre></td></tr></table></figure>
-
 <p>这个demo只是做了top5处理，可以看到识别的概率最大为索引<code>2</code>的<code>0.826660</code>，对比labels <code>linux_sdk/inceptionv3_demo/bin_demo/imagenet_slim_labels.txt</code>可以发现识别出来是<code>金鱼</code>，结果正确。</p>
 <h4 id="基于Android运行" class="article-heading"><a href="#基于Android运行" class="headerlink" title="基于Android运行"></a>基于Android运行<a class="article-anchor" href="#基于Android运行" aria-hidden="true"></a></h4><p>参考Android&amp;Linux编译集成指导<code>docs/zh-cn/Android&amp;Linux编译集成指导(0.2).pdf</code> Android相关部分。</p>
 <h3 id="写在最后" class="article-heading"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后<a class="article-anchor" href="#写在最后" aria-hidden="true"></a></h3><p>以上只是简单说明了模型转换以及case代码编译运行，更多详细信息请参考模型转换文档<code>docs/zh-cn/模型转换运行用户指南(0.5).pdf</code>。</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToSetupPcieUsbPort.html" class="article-footer-prev" title="如何设置PCIe或USB3.0"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToUseKhadasNPURepositories.html" class="article-footer-next" title="如何使用khadas NPU仓库"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

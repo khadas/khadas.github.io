@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="Pre-Build NPU demo Repositoryaml_npu_demo_binaries repository are executable files repositories, this repository are used to run NPU demo on khadas VIM3&#x2F;VIM3L Repository information Repository address">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.773Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.773Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -156,23 +156,18 @@
 </li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://gitlab.com/khadas/aml_npu_demo_binaries</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" class="article-heading"><a href="#Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" class="headerlink" title="Use detect_demo or detect_demo_khadas or detect_demo_picture"></a>Use <code>detect_demo</code> or <code>detect_demo_khadas</code> or <code>detect_demo_picture</code><a class="article-anchor" href="#Use-detect-demo-or-detect-demo-khadas-or-detect-demo-picture" aria-hidden="true"></a></h3><p>Install demo:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo ./INSTALL</span></span><br></pre></td></tr></table></figure>
 <p>After installation, the instructions to install the README file can run the demo.</p>
 <p><code>detect_demo_uvc</code> is the running file of the USB camera<br><code>detect_demo_mipi</code>是mipi摄像头的运行文件</p>
 <p>uninstall demo:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./UNINSTALL</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="Use-inceptionv3" class="article-heading"><a href="#Use-inceptionv3" class="headerlink" title="Use inceptionv3"></a>Use inceptionv3<a class="article-anchor" href="#Use-inceptionv3" aria-hidden="true"></a></h3><p>If you board is VIM3</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries/inceptionv3/vim3</span></span><br></pre></td></tr></table></figure>
-
 <p>If you board is VIM3L</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span>/aml_npu_demo_binaries/inceptionv3/vim3l</span></span><br></pre></td></tr></table></figure>
-
 <p>run demo</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./inceptionv3 inception_v3.nb /path/to/picture</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>Image format needs to use jpg format</strong></p>
 <h1 id="aml-npu-app-Repository" class="article-heading"><a href="#aml-npu-app-Repository" class="headerlink" title="aml_npu_app Repository"></a>aml_npu_app Repository<a class="article-anchor" href="#aml-npu-app-Repository" aria-hidden="true"></a></h1><p>aml_npu_app repository is used to compile demo repository, <strong>this repository runs on PC</strong></p>
 <h2 id="Repository-information-1" class="article-heading"><a href="#Repository-information-1" class="headerlink" title="Repository information"></a>Repository information<a class="article-anchor" href="#Repository-information-1" aria-hidden="true"></a></h2><ul>
@@ -195,17 +190,14 @@
 </li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://gitlab.com/khadas/aml_npu_app</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="Compile" class="article-heading"><a href="#Compile" class="headerlink" title="Compile"></a>Compile<a class="article-anchor" href="#Compile" aria-hidden="true"></a></h3><p>Enter the location where you need to compile, here takes <code>yolov3</code> as an example.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$&#123;workspace&#125;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> aml_npu_app/detect_library/model_code/detect_yolo_v3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./build_vx.sh /path/to/sdk/linux_sdk/linux_sdk</span></span><br></pre></td></tr></table></figure>
-
 <p>After compilation, the files in the <code>bin_r</code> directory are the files generated by the compilation</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls bin_r/</span></span><br><span class="line">libnn_yolo_v3.so  vnn_yolov3.o  yolo_v3.o  yolov3_process.o</span><br></pre></td></tr></table></figure>
 
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.773Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowToUseNpu.html" class="article-footer-prev" title="How To Use the NPU"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToInstallDarknet.html" class="article-footer-next" title="How To Install Darnket"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

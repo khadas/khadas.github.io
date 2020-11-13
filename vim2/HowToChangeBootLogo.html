@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Where is Logo  Logo is stored in the &#x2F;usr&#x2F;share directory. $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp   Logo format  The image format requires a BMP format with a resolution of">
+  <meta name="description" content="Where is Logo  Logo is stored in the &#x2F;usr&#x2F;share directory. $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp  Logo format  The image format requires a BMP format with a resolution of">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Change Boot Logo">
 <meta property="og:url" content="https://docs.khadas.com/vim2/HowToChangeBootLogo">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="Where is Logo  Logo is stored in the &#x2F;usr&#x2F;share directory. $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp   Logo format  The image format requires a BMP format with a resolution of">
+<meta property="og:description" content="Where is Logo  Logo is stored in the &#x2F;usr&#x2F;share directory. $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp  Logo format  The image format requires a BMP format with a resolution of">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.330Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.330Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.769Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.769Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -140,25 +140,21 @@
 </ul>
 <p>Logo is stored in the <code>/usr/share</code> directory.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls /usr/share/fenix/logo/logo.bmp</span></span><br><span class="line">/usr/share/fenix/logo/logo.bmp</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>Logo format</li>
 </ul>
 <p>The image format requires a BMP format with a resolution of 500x500px and the Bit-Depth of 24 bits.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file /usr/share/fenix/logo/logo.bmp</span></span><br><span class="line">/usr/share/fenix/logo/logo.bmp: PC bitmap, Windows 3.x format, 500 x 500 x 24, image size 750002, resolution 2834 x 2834 px/m, cbSize 750056, bits offset 54</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>How To Change</li>
 </ul>
 <p>Switch to root user</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> su</span></span><br><span class="line">Password:</span><br><span class="line">root@Khadas:/home/khadas#</span><br></pre></td></tr></table></figure>
-
 <p>Replace the logo in the correct format, and you will see the new logo after restarting</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">root@Khadas:/home/khadas# cp $&#123;new-logo&#125;.bmp /usr/share/fenix/logo/logo.bmp</span><br><span class="line">root@Khadas:/home/khadas# sync</span><br><span class="line">root@Khadas:/home/khadas# reboot</span><br></pre></td></tr></table></figure>
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.330Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.769Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowToSetupHDMI.html" class="article-footer-prev" title="How To Setup HDMI"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToCustomMac.html" class="article-footer-next" title="How To Custom MAC Addres"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

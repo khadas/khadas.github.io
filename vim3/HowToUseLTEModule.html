@@ -86,8 +86,8 @@
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/LTE_gnome_psk.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/LTE_gnome_success.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/LTE_gnome_change_psk.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.773Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.773Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/LTE_edit_connect.png">
@@ -159,18 +159,13 @@
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.spectrummonitoring.com/frequencies/">spectrumonitoring</a></li>
 </ol>
 <h1 id="LTE-module-working-mode-setting" class="article-heading"><a href="#LTE-module-working-mode-setting" class="headerlink" title="LTE module working mode setting"></a>LTE module working mode setting<a class="article-anchor" href="#LTE-module-working-mode-setting" aria-hidden="true"></a></h1><h2 id="Install-minicom-in-your-boarad" class="article-heading"><a href="#Install-minicom-in-your-boarad" class="headerlink" title="Install minicom in your boarad"></a>Install minicom in your boarad<a class="article-anchor" href="#Install-minicom-in-your-boarad" aria-hidden="true"></a></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install minicom</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="Setting-to-USBNet-mode" class="article-heading"><a href="#Setting-to-USBNet-mode" class="headerlink" title="Setting to USBNet mode"></a>Setting to USBNet mode<a class="article-anchor" href="#Setting-to-USBNet-mode" aria-hidden="true"></a></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> minicom -D /dev/ttyUSB2</span></span><br></pre></td></tr></table></figure>
-
 <p>atfer open minicom , enter:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">AT+QCFG=&quot;usbnet&quot;,2</span><br><span class="line"></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
-
 <h2 id="Power-down-and-restart" class="article-heading"><a href="#Power-down-and-restart" class="headerlink" title="Power down and restart"></a>Power down and restart<a class="article-anchor" href="#Power-down-and-restart" aria-hidden="true"></a></h2><p>LTE module needs power down and restart to switch mode. Unplug VIMS and plug in again. LTE module now works in usbnet mode</p>
 <h2 id="Restore-LTE-module" class="article-heading"><a href="#Restore-LTE-module" class="headerlink" title="Restore LTE module"></a>Restore LTE module<a class="article-anchor" href="#Restore-LTE-module" aria-hidden="true"></a></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> minicom -D /dev/ttyUSB2</span></span><br></pre></td></tr></table></figure>
-
 <p>The default mode is <code>0</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">AT+QCFG=&quot;usbnet&quot;,0</span><br></pre></td></tr></table></figure>
-
 <p>Power down and restart to switch back to default mode</p>
 <h1 id="Use-LTE-Module-with-Ubuntu-Desktop" class="article-heading"><a href="#Use-LTE-Module-with-Ubuntu-Desktop" class="headerlink" title="Use LTE Module with Ubuntu Desktop"></a>Use LTE Module with Ubuntu Desktop<a class="article-anchor" href="#Use-LTE-Module-with-Ubuntu-Desktop" aria-hidden="true"></a></h1><h2 id="XFACE-Desktop" class="article-heading"><a href="#XFACE-Desktop" class="headerlink" title="XFACE Desktop"></a>XFACE Desktop<a class="article-anchor" href="#XFACE-Desktop" aria-hidden="true"></a></h2><h3 id="Step1-Open-edit-connections" class="article-heading"><a href="#Step1-Open-edit-connections" class="headerlink" title="Step1: Open edit connections"></a>Step1: Open <code>edit connections</code><a class="article-anchor" href="#Step1-Open-edit-connections" aria-hidden="true"></a></h3><p>Find <code>edit connections</code> in network menu.</p>
 <p><img src="/images/vim3/LTE_edit_connect.png" alt="LTE_edit_connect"></p>
@@ -206,17 +201,15 @@
 <p><img src="/images/vim3/LTE_gnome_change_psk.png" alt="LTE_gnome_change_psk"></p>
 <h1 id="Use-LTE-Module-with-Ubuntu-Server" class="article-heading"><a href="#Use-LTE-Module-with-Ubuntu-Server" class="headerlink" title="Use LTE Module with Ubuntu Server"></a>Use LTE Module with Ubuntu Server<a class="article-anchor" href="#Use-LTE-Module-with-Ubuntu-Server" aria-hidden="true"></a></h1><p>If you use Ubuntu Server, you just need a command to connect it .</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo nmcli connection add type gsm apn 3gnet user 0000 password 0000 con-name &quot;EM06 4G&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h1 id="How-to-check-you-connection-is-success" class="article-heading"><a href="#How-to-check-you-connection-is-success" class="headerlink" title="How to check  you connection is success"></a>How to check  you connection is success<a class="article-anchor" href="#How-to-check-you-connection-is-success" aria-hidden="true"></a></h1><p>You can test it by <code>ping</code> command. And you need to use <code>-I</code> option to choose the LTE Module.</p>
 <h2 id="check-your-network-node" class="article-heading"><a href="#check-your-network-node" class="headerlink" title="check your network node"></a>check your network node<a class="article-anchor" href="#check-your-network-node" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ifconfig -a</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">wwan0: flags&#x3D;4098&lt;BROADCAST,MULTICAST&gt;  mtu 1500</span><br><span class="line">        ether 1a:68:e0:a7:94:88  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 0  bytes 0 (0.0 B)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 0  bytes 0 (0.0 B)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
 <p>You will find <code>wwan0</code> via command <code>ifconfig -a</code></p>
 <h2 id="Use-ping-command-to-test" class="article-heading"><a href="#Use-ping-command-to-test" class="headerlink" title="Use ping command to test"></a>Use <code>ping</code> command to test<a class="article-anchor" href="#Use-ping-command-to-test" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ping www.baidu.com -I wwan0</span><br></pre></td></tr></table></figure>
 <p>If you LTE module work fine, It will be success.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.773Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowToUseMIPICamera.html" class="article-footer-prev" title="How To Use MIPI Camera"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CreateBurnCardViaCLI.html" class="article-footer-next" title="Create Burning Card Using CLI"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

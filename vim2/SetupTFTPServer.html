@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.Here we provide some instructions for reference: Ubuntu16.04Setup TFTPInstall TFTP packages: $ sudo ap">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.330Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.330Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.769Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.769Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -138,21 +138,16 @@
                 <p>Our approach to setup a TFTP server is quite similar to other guides that you can find via Google.<br>Here we provide some instructions for reference:</p>
 <h3 id="Ubuntu16-04" class="article-heading"><a href="#Ubuntu16-04" class="headerlink" title="Ubuntu16.04"></a>Ubuntu16.04<a class="article-anchor" href="#Ubuntu16-04" aria-hidden="true"></a></h3><h4 id="Setup-TFTP" class="article-heading"><a href="#Setup-TFTP" class="headerlink" title="Setup TFTP"></a>Setup TFTP<a class="article-anchor" href="#Setup-TFTP" aria-hidden="true"></a></h4><p>Install TFTP packages:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openbsd-inetd tftpd tftp</span><br></pre></td></tr></table></figure>
-
 <h4 id="Configuration" class="article-heading"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration" aria-hidden="true"></a></h4><p>To enable the TFTP server, edit the file <code>/etc/inetd.conf</code> as the root user, and locate the line that looks like the following:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#tftp   dgram   udp     wait    root    &#x2F;usr&#x2F;sbin&#x2F;tcpd  &#x2F;usr&#x2F;sbin&#x2F;in.tftpd</span><br></pre></td></tr></table></figure>
 <p>Uncomment this line, and add the option and value <code>-s /srv/tftp</code> to the end of this line: </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tftp   dgram   udp   wait   root   &#x2F;usr&#x2F;sbin&#x2F;tcpd  &#x2F;usr&#x2F;sbin&#x2F;in.tftpd -s &#x2F;srv&#x2F;tftp</span><br></pre></td></tr></table></figure>
-
 <p>Create and modify permissions on the TFTP root directory:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure>
-
 <p>Restart the TFTP Service:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo /etc/init.d/xinetd restart</span><br></pre></td></tr></table></figure>
-
 <h3 id="Ubuntu18-04" class="article-heading"><a href="#Ubuntu18-04" class="headerlink" title="Ubuntu18.04"></a>Ubuntu18.04<a class="article-anchor" href="#Ubuntu18-04" aria-hidden="true"></a></h3><h4 id="Setup-TFTP-1" class="article-heading"><a href="#Setup-TFTP-1" class="headerlink" title="Setup TFTP"></a>Setup TFTP<a class="article-anchor" href="#Setup-TFTP-1" aria-hidden="true"></a></h4><p>Install TFTP packages:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install tftp-hpa tftpd-hpa</span><br></pre></td></tr></table></figure>
-
 <h4 id="Configuration-1" class="article-heading"><a href="#Configuration-1" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration-1" aria-hidden="true"></a></h4><p>edit the file <code>/etc/default/tftpd-hpa</code> as the root user, and edit the line look like this:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TFTP_DIRECTORY&#x3D;&quot;&#x2F;usr&#x2F;lib&#x2F;tftpboot&quot;</span><br></pre></td></tr></table></figure>
 <p>change the dir to <code>/srv/tftp</code></p>
@@ -161,7 +156,6 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir /srv/tftp</span><br><span class="line">$ sudo chown -R $(whoami) /srv/tftp</span><br></pre></td></tr></table></figure>
 <p>Restart the TFTP Services:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo service tftpd-hpa restart</span><br></pre></td></tr></table></figure>
-
 <h3 id="Setup-For-Target-Device" class="article-heading"><a href="#Setup-For-Target-Device" class="headerlink" title="Setup For Target Device"></a>Setup For Target Device<a class="article-anchor" href="#Setup-For-Target-Device" aria-hidden="true"></a></h3><p>To setup TFTP on your target device, you will need to:</p>
 <ul>
 <li>Connect a LAN cable to your target device, and make sure your device is on same local network with your Host PC.</li>
@@ -170,30 +164,22 @@
 </ul>
 <p>Stop U-Boot autoboot by hitting <code>Enter</code> or <code>Space</code> key at the moment you power on your target device:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">U-Boot 2015.01 (May 18 2019 - 19:31:53)</span><br><span class="line"></span><br><span class="line">DRAM:  3.8 GiB</span><br><span class="line">Relocation Offset is: d6e56000</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">gpio: pin GPIOAO_7 (gpio 7) value is 1</span><br><span class="line">Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 </span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure>
-
 <p>Setup the ip address of the target client and TFTP host server:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# setenv ipaddr 192.168.1.249</span><br><span class="line">kvim3# setenv serverip 192.168.1.117</span><br></pre></td></tr></table></figure>
-
 <p>Save the settings:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# saveenv</span><br><span class="line">Saving Environment to aml-storage...</span><br><span class="line">mmc env offset: 0x6c00000 </span><br><span class="line">Writing to MMC(1)... done</span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure>
 <p>Running <code>saveenv</code> will save the env values to the env partition on the eMMC. You can run <code>defenv</code> to restore the env to the default values.</p>
 <p><strong>NOTE</strong>:How to confirm that your configuration is correct.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#print ipaddr</span><br><span class="line">ipaddr&#x3D;192.168.1.249</span><br><span class="line">kvim3#print serverip</span><br><span class="line">serverip&#x3D;192.168.1.117</span><br></pre></td></tr></table></figure>
-
 <h3 id="Test-Your-TFTP-Server" class="article-heading"><a href="#Test-Your-TFTP-Server" class="headerlink" title="Test Your TFTP Server"></a>Test Your TFTP Server<a class="article-anchor" href="#Test-Your-TFTP-Server" aria-hidden="true"></a></h3><p>Make sure you have copied the testing file to the TFTF root path:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ls /srv/tftp/u-boot.bin</span><br><span class="line">/srv/tftp/u-boot.bin</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
-
 <p>Load a file into the <code>0x1080000</code> address:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.117; our IP address is 192.168.1.249</span><br><span class="line">Filename &#39;u-boot.bin&#39;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: #################################################################</span><br><span class="line">	 #################################################################</span><br><span class="line">	 ###############################################</span><br><span class="line">	 2.5 MiB&#x2F;s</span><br><span class="line">done</span><br><span class="line">Bytes transferred &#x3D; 1371504 (14ed70 hex)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>If everything goes well, the terminal print-out will look similar to what is shown above.</p>
 <h3 id="Troubleshooting" class="article-heading"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting<a class="article-anchor" href="#Troubleshooting" aria-hidden="true"></a></h3><ul>
-<li><p>You might need to check the connection of your LAN cable if the terminal print-out looks like:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">dwmac.ff3f0000 Waiting for PHY auto negotiation to complete......... TIMEOUT !</span><br><span class="line">dwmac.ff3f0000: No link.</span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>You could have entered an incorrect server IP or Error filename address if the print-out looks like:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.177; our IP address is 192.168.1.249</span><br><span class="line">Filename &#39;u-boot.bin&#39;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: T T T T T T T T T T </span><br><span class="line">Retry count exceeded; starting again</span><br><span class="line">Speed: 1000, full duplex</span><br></pre></td></tr></table></figure>
-<p>In this instance, I had setup the server IP address to an incorrect one <code>192.168.1.177</code>, it should be <code>192.168.1.117</code> instead.</p>
-</li>
+<li>You might need to check the connection of your LAN cable if the terminal print-out looks like:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3# tftp 1080000 u-boot.bin</span><br><span class="line">dwmac.ff3f0000 Waiting for PHY auto negotiation to complete......... TIMEOUT !</span><br><span class="line">dwmac.ff3f0000: No link.</span><br><span class="line">kvim3#</span><br></pre></td></tr></table></figure></li>
+<li>You could have entered an incorrect server IP or Error filename address if the print-out looks like:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kvim3#tftp 1080000 u-boot.bin</span><br><span class="line">Speed: 1000, full duplex</span><br><span class="line">Using dwmac.ff3f0000 device</span><br><span class="line">TFTP from server 192.168.1.177; our IP address is 192.168.1.249</span><br><span class="line">Filename &#39;u-boot.bin&#39;.</span><br><span class="line">Load address: 0x1080000</span><br><span class="line">Loading: T T T T T T T T T T </span><br><span class="line">Retry count exceeded; starting again</span><br><span class="line">Speed: 1000, full duplex</span><br></pre></td></tr></table></figure>
+In this instance, I had setup the server IP address to an incorrect one <code>192.168.1.177</code>, it should be <code>192.168.1.117</code> instead.</li>
 </ul>
 <h3 id="Resources" class="article-heading"><a href="#Resources" class="headerlink" title="Resources"></a>Resources<a class="article-anchor" href="#Resources" aria-hidden="true"></a></h3><ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://help.ubuntu.com/community/TFTP">Ubuntu Wiki: TFTP</a></li>
@@ -202,7 +188,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.330Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.769Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="BuildBootLogoForUboot.html" class="article-footer-prev" title="Boot Logo For U-boot"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="LoadImagesWithUBootViaTFTP.html" class="article-footer-next" title="Load Images with U-Boot Using TFTP"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

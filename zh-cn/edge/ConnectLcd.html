@@ -75,8 +75,8 @@
 <meta property="og:image" content="https://docs.khadas.com/images/edge/edge_v_ts050.jpg">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/timing_attribute_reference_figure.png">
 <meta property="og:image" content="https://docs.khadas.com/images/edge/timing_attribute_reference_figure_2.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.773Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.773Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/edge/edge-v_display_interfaces.jpg">
@@ -163,7 +163,6 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">PRODUCT_PROPERTY_OVERRIDES += \</span><br><span class="line">    vendor.hwc.device.primary=HDMI-A \</span><br><span class="line">    vendor.hwc.device.extend=DP</span><br><span class="line">	<span class="comment">#vendor.hwc.device.extend=DSI</span></span><br><span class="line">    <span class="comment">#vendor.hwc.device.extend=eDP</span></span><br></pre></td></tr></table></figure>
 <h3 id="android-7-1配置" class="article-heading"><a href="#android-7-1配置" class="headerlink" title="android 7.1配置"></a>android 7.1配置<a class="article-anchor" href="#android-7-1配置" aria-hidden="true"></a></h3><p>device/rockchip/rk3399/rk3399_all.mk</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">PRODUCT_PROPERTY_OVERRIDES += \</span><br><span class="line">    sys.hwc.device.primary=HDMI-A \</span><br><span class="line">    sys.hwc.device.extend=DP</span><br><span class="line">	<span class="comment">#sys.hwc.device.extend=DSI</span></span><br><span class="line">    <span class="comment">#sys.hwc.device.extend=eDP</span></span><br></pre></td></tr></table></figure>
-
 <h1 id="3-（MIPI-HDMI）屏幕配置" class="article-heading"><a href="#3-（MIPI-HDMI）屏幕配置" class="headerlink" title="3.（MIPI + HDMI）屏幕配置"></a>3.（MIPI + HDMI）屏幕配置<a class="article-anchor" href="#3-（MIPI-HDMI）屏幕配置" aria-hidden="true"></a></h1><p><img src="/images/edge/edge_v_ts050.jpg" alt="TS050 and Edge-V"></p>
 <h2 id="3-1配置-dts" class="article-heading"><a href="#3-1配置-dts" class="headerlink" title="3.1配置 dts"></a>3.1配置 <strong>dts</strong><a class="article-anchor" href="#3-1配置-dts" aria-hidden="true"></a></h2><p>rk3399-khadas-edge-mipi-android.dtsi为例介绍：MIPI(主显) + HDMI（副显）</p>
 <h3 id="3-1-1-使能对应显示设备节点" class="article-heading"><a href="#3-1-1-使能对应显示设备节点" class="headerlink" title="3.1.1 使能对应显示设备节点"></a>3.1.1 使能对应显示设备节点<a class="article-anchor" href="#3-1-1-使能对应显示设备节点" aria-hidden="true"></a></h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&amp;hdmi &#123;</span><br><span class="line">	status = <span class="string">&quot;okay&quot;</span>;</span><br><span class="line">	rockchip,phy-table =</span><br><span class="line">		&lt;74250000 0x8009 0x0004 0x0272&gt;,</span><br><span class="line">		&lt;165000000 0x802b 0x0004 0x0209&gt;,</span><br><span class="line">		&lt;297000000 0x8029 0x0005 0x028d&gt;,</span><br><span class="line">		&lt;594000000 0x8039 0x0000 0x0090&gt;,</span><br><span class="line">		&lt;000000000 0x0000 0x0000 0x0000&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&amp;cdn_dp &#123;</span><br><span class="line">	status = <span class="string">&quot;disabled&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&amp;dsi &#123;</span><br><span class="line">    status = <span class="string">&quot;okay&quot;</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -190,10 +189,9 @@
 <h2 id="4-1-配置-dts" class="article-heading"><a href="#4-1-配置-dts" class="headerlink" title="4.1 配置 dts"></a>4.1 配置 <strong>dts</strong><a class="article-anchor" href="#4-1-配置-dts" aria-hidden="true"></a></h2><h3 id="android-9-0配置-2" class="article-heading"><a href="#android-9-0配置-2" class="headerlink" title="android 9.0配置"></a>android 9.0配置<a class="article-anchor" href="#android-9-0配置-2" aria-hidden="true"></a></h3><p>见下面dts，详解见前面两章节说明：<br>rk3399-khadas-edge-android.dts</p>
 <h2 id="4-2-主副显示器配置" class="article-heading"><a href="#4-2-主副显示器配置" class="headerlink" title="4.2 主副显示器配置"></a>4.2 主副显示器配置<a class="article-anchor" href="#4-2-主副显示器配置" aria-hidden="true"></a></h2><h3 id="android-9-0配置-3" class="article-heading"><a href="#android-9-0配置-3" class="headerlink" title="android 9.0配置"></a>android 9.0配置<a class="article-anchor" href="#android-9-0配置-3" aria-hidden="true"></a></h3><p>device/rockchip/rk3399/rk3399.mk</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">PRODUCT_PROPERTY_OVERRIDES += \</span><br><span class="line">    vendor.hwc.device.primary=HDMI-A,DP\</span><br><span class="line">	vendor.hwc.device.extend=DSI</span><br></pre></td></tr></table></figure>
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.773Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToSetupFan.html" class="article-footer-prev" title="如何设置风扇"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToUseLTEModule.html" class="article-footer-next" title="如何使用LTE模块"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

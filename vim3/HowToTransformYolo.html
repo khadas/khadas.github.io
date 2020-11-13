@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="The training completed model is based on the corresponding framework. Although most of the frameworks have C &#x2F; C + + interfaces, even if these interfaces are used, only CPU or GPU can be used. If you">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.773Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.773Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -139,7 +139,6 @@
 <h2 id="Apply-for-SDK" class="article-heading"><a href="#Apply-for-SDK" class="headerlink" title="Apply for SDK"></a>Apply for SDK<a class="article-anchor" href="#Apply-for-SDK" aria-hidden="true"></a></h2><p>About the trainsform SDK, you need to apply with our <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.khadas.com/npu-toolkit-vim3">website</a>. After filling in the information, it will be sent to your email.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Tool/acuity-toolkit-binary-5.0.0/conversion_scripts/</span><br></pre></td></tr></table></figure>
 
-
 <h2 id="How-to-use-Trainsform-tool" class="article-heading"><a href="#How-to-use-Trainsform-tool" class="headerlink" title="How to use Trainsform tool"></a>How to use Trainsform tool<a class="article-anchor" href="#How-to-use-Trainsform-tool" aria-hidden="true"></a></h2><h3 id="0-import-model-sh" class="article-heading"><a href="#0-import-model-sh" class="headerlink" title="0_import_model.sh"></a>0_import_model.sh<a class="article-anchor" href="#0-import-model-sh" aria-hidden="true"></a></h3><p>Parameter setting</p>
 <blockquote>
 <ol>
@@ -207,14 +206,13 @@
 <li>Copy the so file generated in the previous step and replace it with <code>lib</code>.</li>
 <li>Copy the Nb file in the previous step and replace the file in <code>nn_data</code>.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cp workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/bin_dir/libnn_yolo_v3.so <span class="variable">$workspace</span>/aml_npu_demo_binaries/detect_demo/lib/libnn_yolo_v3.so</span><br><span class="line">$ cp workspace/aml_npu_app/DDK_6.3.3.4/detect_library/model_code/detect_yolo_v3/nn_data/yolov3_88.nb <span class="variable">$workspace</span>/aml_npu_demo_binaries/detect_demo/n_data/yolov3_88.nb</span><br></pre></td></tr></table></figure>
 
-
 </li>
 </ol>
 <p>After the demo is completed, you can run your own Model.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.773Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowToTrainYolo.html" class="article-footer-prev" title="How To Train Yolo Model"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToTrainInception.html" class="article-footer-next" title="How To Train Inception Model"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

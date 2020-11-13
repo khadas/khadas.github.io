@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="Khadas VIM3以及VIM3L板载了 一块存储空间为16MB的SPI-falsh芯片,可用于从SPI启动系统,这篇文档将说明如何从SPI启动. 编译可用于SPI启动的Uboot从SPI启动的Uboot和从EMMC启动的Uboot,编译方法是一样的,通过fenix就可以轻松的编译出用于SPI启动的脚本. 这意味着你要有一个可以用于编译的fenix的环境.如果没有,请参照 fenix使用说明 搭">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -142,13 +142,11 @@
 <li>选择编译的环境</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> fenix</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> env/setenv.sh</span></span><br></pre></td></tr></table></figure>
-
 <p>如果你的板子是VIM3,请选择VIM3选项,是VIM3L,请选择VIM3L</p>
 <ul>
 <li>编译uboot</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make uboot</span></span><br></pre></td></tr></table></figure>
-
 <p>如果编译成功了,你将会在<code>fenix/u-boot/build</code>下找到一个可以烧录进SPI的Uboot固件<code>uboot.bin</code>.</p>
 <h3 id="烧录uboot进SPI-Flash" class="article-heading"><a href="#烧录uboot进SPI-Flash" class="headerlink" title="烧录uboot进SPI Flash"></a>烧录uboot进SPI Flash<a class="article-anchor" href="#烧录uboot进SPI-Flash" aria-hidden="true"></a></h3><p>将上一步编译得到的uboot放进SD卡,u盘,或者通过TFTP直接加载进内存中.</p>
 <p><a href="/vim3/SetupSerialTool.html">设置串口工具</a> 并且进入Uboot命令行</p>
@@ -156,46 +154,38 @@
 <li>从SD卡加载的方式:</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">load mmc 0 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>从U盘加载的方式:</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">usb start</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">load usb 0 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>通过TFTP的方式:</li>
 </ul>
 <p>Please refer <a href="/vim3/SetupTFTPServer.html">here</a> about how to setup the TFTP.<br>设置TFTP的方法在<a href="/zh-cn/vim3/SetupTFTPServer.html">如何设TFTP服务器</a>的文档里有详细的说明.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">tftp 1080000 u-boot.bin</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="烧录" class="article-heading"><a href="#烧录" class="headerlink" title="烧录"></a>烧录<a class="article-anchor" href="#烧录" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">sf probe</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf erase 0 +<span class="variable">$filesize</span></span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf write 1080000 0 <span class="variable">$filesize</span></span></span><br></pre></td></tr></table></figure>
-
 <p><em>说明: 这一步需要一些时间,请耐心的等待</em></p>
 <h3 id="修改启动方式为SPI" class="article-heading"><a href="#修改启动方式为SPI" class="headerlink" title="修改启动方式为SPI"></a>修改启动方式为SPI<a class="article-anchor" href="#修改启动方式为SPI" aria-hidden="true"></a></h3><p>如果你想要从SPI启动系统,首先需要将启动方式设置为SPI.默认的启动方式是从eMMC启动的</p>
 <ul>
 <li>确认当前的启动方式:</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi bootmode r</span></span><br><span class="line">bootmode: emmc</span><br></pre></td></tr></table></figure>
-
 <p>当前启动方式为eMMC</p>
 <ul>
 <li>设置为SPI启动:</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi bootmode w spi</span></span><br></pre></td></tr></table></figure>
-
 <p>关机已使新设置的启动方式的参数生效:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">kbi poweroff</span></span><br></pre></td></tr></table></figure>
-
 <p>此时,再次按下power按键,就会从SPI启动了</p>
 <h3 id="不再需要从SPI启动时清除SPI" class="article-heading"><a href="#不再需要从SPI启动时清除SPI" class="headerlink" title="不再需要从SPI启动时清除SPI"></a>不再需要从SPI启动时清除SPI<a class="article-anchor" href="#不再需要从SPI启动时清除SPI" aria-hidden="true"></a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">kvim3#</span><span class="bash">sf probe</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">sf erase 0 1000</span></span><br><span class="line"><span class="meta">kvim3#</span><span class="bash">reset</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="故障排查" class="article-heading"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查<a class="article-anchor" href="#故障排查" aria-hidden="true"></a></h3><ol>
 <li>如果启动方式已经设置为从SPI启动,同时SPI的uboot损坏了是无法进入uboot的命令行的<br> 1) 如果uboot损坏了,你可以尝试使用<a href="/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST模式</a>从emmc启动,然后进入命令行,清除你的SPI或者从新烧录uboot进SPI<br> <strong>注意:此时不能使用PC的USB口给板子供电,会直接进入升级模式,而不是从EMMC启动</strong><br> 2) 如果EMMC的Uboot损坏了,你可以尝试使用<a href="/zh-cn/vim3/HowtoBootIntoUpgradeMode.html#TST-Mode-Recommended">TST模式</a>进入升级模式,烧录一个固件到EMMC上,再重复步骤1.<br> <strong>注意: 此时板子需要通过type-C的线连接到PC</strong></li>
 </ol>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToTrainInception.html" class="article-footer-prev" title="如何训练自己的Inception模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="UBootUsage.html" class="article-footer-next" title="U-boot使用说明"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

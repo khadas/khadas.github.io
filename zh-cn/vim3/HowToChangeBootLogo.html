@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="存放位置  Logo存放在&#x2F;usr&#x2F;share目录下 $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp   Logo格式  图片格式要求为BMP格式,分辨率为500x500px,位深为24位. $ file &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;lo">
+  <meta name="description" content="存放位置  Logo存放在&#x2F;usr&#x2F;share目录下 $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp  Logo格式  图片格式要求为BMP格式,分辨率为500x500px,位深为24位. $ file &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;log">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何更换开机Logo">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToChangeBootLogo">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="存放位置  Logo存放在&#x2F;usr&#x2F;share目录下 $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp   Logo格式  图片格式要求为BMP格式,分辨率为500x500px,位深为24位. $ file &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;lo">
+<meta property="og:description" content="存放位置  Logo存放在&#x2F;usr&#x2F;share目录下 $ ls &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp  Logo格式  图片格式要求为BMP格式,分辨率为500x500px,位深为24位. $ file &#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;logo.bmp&#x2F;usr&#x2F;share&#x2F;fenix&#x2F;logo&#x2F;log">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -140,25 +140,21 @@
 </ul>
 <p>Logo存放在<code>/usr/share</code>目录下</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls /usr/share/fenix/logo/logo.bmp</span></span><br><span class="line">/usr/share/fenix/logo/logo.bmp</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>Logo格式</li>
 </ul>
 <p>图片格式要求为BMP格式,分辨率为500x500px,位深为24位.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file /usr/share/fenix/logo/logo.bmp</span></span><br><span class="line">/usr/share/fenix/logo/logo.bmp: PC bitmap, Windows 3.x format, 500 x 500 x 24, image size 750002, resolution 2834 x 2834 px/m, cbSize 750056, bits offset 54</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>如何替换</li>
 </ul>
 <p>切换到root用户</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> su</span></span><br><span class="line">Password:</span><br><span class="line">root@Khadas:/home/khadas#</span><br></pre></td></tr></table></figure>
-
 <p>将正确格式的Logo替换进去,重启就会看到新的Logo</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">root@Khadas:/home/khadas# cp $&#123;new-logo&#125;.bmp /usr/share/fenix/logo/logo.bmp</span><br><span class="line">root@Khadas:/home/khadas# sync</span><br><span class="line">root@Khadas:/home/khadas# reboot</span><br></pre></td></tr></table></figure>
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToSetupMaxCPUFrequency.html" class="article-footer-prev" title="如何设置最大CPU频率"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToCustomMac.html" class="article-footer-next" title="如何自定义MAC地址"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

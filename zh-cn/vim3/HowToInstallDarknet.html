@@ -71,8 +71,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_install_check.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_install_success.png">
@@ -146,7 +146,6 @@
 <h2 id="darknet安装" class="article-heading"><a href="#darknet安装" class="headerlink" title="darknet安装"></a>darknet安装<a class="article-anchor" href="#darknet安装" aria-hidden="true"></a></h2><h3 id="下载darnket" class="article-heading"><a href="#下载darnket" class="headerlink" title="下载darnket"></a>下载darnket<a class="article-anchor" href="#下载darnket" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/git</span><br><span class="line">$ <span class="built_in">cd</span> ~/git</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/pjreddie/darknet.git</span><br><span class="line">$ <span class="built_in">cd</span> darknet</span><br></pre></td></tr></table></figure>
 <h3 id="配置darknet" class="article-heading"><a href="#配置darknet" class="headerlink" title="配置darknet"></a>配置darknet<a class="article-anchor" href="#配置darknet" aria-hidden="true"></a></h3><p>编译darnket之前需要配置darknet已适配你的PC,修改Makefile文件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim Makefile</span><br></pre></td></tr></table></figure>
-
 <h4 id="使用GPU" class="article-heading"><a href="#使用GPU" class="headerlink" title="使用GPU"></a>使用GPU<a class="article-anchor" href="#使用GPU" aria-hidden="true"></a></h4><p>使用GPU将GPU和cudnn打开</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GPU&#x3D;0</span><br><span class="line">CUDNN&#x3D;0</span><br></pre></td></tr></table></figure>
 <p>修改为</p>
@@ -156,10 +155,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">OPENCV&#x3D;0</span><br></pre></td></tr></table></figure>
 <p>修改为</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">OPENCV&#x3D;1</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译" class="article-heading"><a href="#编译" class="headerlink" title="编译"></a>编译<a class="article-anchor" href="#编译" aria-hidden="true"></a></h3><p>在根目录下执行make</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ make</span><br></pre></td></tr></table></figure>
-
 <h2 id="darknet验证和使用" class="article-heading"><a href="#darknet验证和使用" class="headerlink" title="darknet验证和使用"></a>darknet验证和使用<a class="article-anchor" href="#darknet验证和使用" aria-hidden="true"></a></h2><h3 id="测试" class="article-heading"><a href="#测试" class="headerlink" title="测试"></a>测试<a class="article-anchor" href="#测试" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./darknet imtest data/eagle.jpg</span><br></pre></td></tr></table></figure>
 <p>如果看到类似下面的图案即使安装成功<br><img src="/images/vim3/darknet_install_success.png" alt="ai-basic0002-1"></p>
 <h3 id="使用yolo模型" class="article-heading"><a href="#使用yolo模型" class="headerlink" title="使用yolo模型"></a>使用yolo模型<a class="article-anchor" href="#使用yolo模型" aria-hidden="true"></a></h3><h4 id="获取训练好的模型文件" class="article-heading"><a href="#获取训练好的模型文件" class="headerlink" title="获取训练好的模型文件"></a>获取训练好的模型文件<a class="article-anchor" href="#获取训练好的模型文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://pjreddie.com/media/files/yolov3.weights</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -178,7 +175,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToUseKhadasNPURepositories.html" class="article-footer-prev" title="如何使用khadas NPU仓库"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToTrainYolo.html" class="article-footer-next" title="如何训练自己的yolo模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

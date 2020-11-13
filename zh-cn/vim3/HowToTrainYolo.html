@@ -71,8 +71,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
 <meta property="og:image" content="https://docs.khadas.com/images/vim3/howto_labelImg_tool.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim3/darknet_labelImg_tool.png">
@@ -150,7 +150,6 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span></span><br><span class="line">$ mkdir VOCdevkit</span><br><span class="line">$ <span class="built_in">cd</span> VOCdevkit</span><br><span class="line">$ mkdir VOC2019</span><br><span class="line">$ <span class="built_in">cd</span> VOC2019</span><br><span class="line">$ mkdir Annotations ImageSets JPEGImages SegmentationClass SegmentationObject</span><br><span class="line">$ <span class="built_in">cd</span> ImageSets</span><br><span class="line">$ mkdir Main</span><br></pre></td></tr></table></figure>
 <p>建立完的目录如下:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd $workspace</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">└── VOCdevkit</span><br><span class="line">    └── VOC2019</span><br><span class="line">        ├── Annotations</span><br><span class="line">        ├── ImageSets</span><br><span class="line">        │   └── Main</span><br><span class="line">        ├── JPEGImages</span><br><span class="line">        ├── labels</span><br><span class="line">        ├── SegmentationClass</span><br><span class="line">        └── SegmentationObject</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h3 id="准备数据集" class="article-heading"><a href="#准备数据集" class="headerlink" title="准备数据集"></a>准备数据集<a class="article-anchor" href="#准备数据集" aria-hidden="true"></a></h3><p>把训练的图片放入<code>$workspace/VOCdevkit/VOC2019/JPEGImages/</code>中。<br>这里对于训练图片的准备有一下说明:</p>
 <blockquote>
 <ol>
@@ -171,7 +170,6 @@
 <h4 id="设置labels" class="article-heading"><a href="#设置labels" class="headerlink" title="设置labels"></a>设置labels<a class="article-anchor" href="#设置labels" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/labelImg/data/</span><br><span class="line">$ vim predefined_classes.txt</span><br></pre></td></tr></table></figure>
 <p>可以看到默认的类别为20个，可以加在默认的类别后面，或者清空只写入你要训练的类别。<br>这里使用khadas的物体检测为例:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">Heatsink(Edge)</span><br></pre></td></tr></table></figure>
-
 <h4 id="标注" class="article-heading"><a href="#标注" class="headerlink" title="标注"></a>标注<a class="article-anchor" href="#标注" aria-hidden="true"></a></h4><p>如下图所示:<br><img src="/images/vim3/howto_labelImg_tool.png" alt="ai-examples0002-2"></p>
 <blockquote>
 <ol>
@@ -211,18 +209,14 @@
 <h4 id="新建backup目录" class="article-heading"><a href="#新建backup目录" class="headerlink" title="新建backup目录"></a>新建backup目录<a class="article-anchor" href="#新建backup目录" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mkdir backup</span><br></pre></td></tr></table></figure>
 <p><code>backup</code>目录用来存放训练产生的数据</p>
 <h4 id="移动训练数据文件" class="article-heading"><a href="#移动训练数据文件" class="headerlink" title="移动训练数据文件"></a>移动训练数据文件<a class="article-anchor" href="#移动训练数据文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ mv ../2019_train.txt ./train.txt</span><br><span class="line">$ mv ../2019_val.txt ./val.txt</span><br></pre></td></tr></table></figure>
-
 <h3 id="配置文件修改" class="article-heading"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改<a class="article-anchor" href="#配置文件修改" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br></pre></td></tr></table></figure>
-
 <h4 id="修改voc-names文件" class="article-heading"><a href="#修改voc-names文件" class="headerlink" title="修改voc.names文件"></a>修改voc.names文件<a class="article-anchor" href="#修改voc-names文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim voc.names</span><br></pre></td></tr></table></figure>
 <p>按照<code>$workspace/voc_label.py</code>设置的class的顺序，写入<code>voc.names</code>中，每个类为一行，<br>这里以khadas的物体检测为例;</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">person</span><br><span class="line">bicycle</span><br><span class="line">car</span><br><span class="line">...</span><br><span class="line">toothbrush</span><br><span class="line">Edge-V</span><br><span class="line">Edge</span><br><span class="line">VIM1</span><br><span class="line">VIM2</span><br><span class="line">VIM3</span><br><span class="line">VIM3L</span><br><span class="line">Fan3705</span><br><span class="line">Captain</span><br><span class="line">Captain+Edge</span><br><span class="line">ToneBoard</span><br><span class="line">Heatsink(VIMs)</span><br><span class="line">Heatsink(Edge)</span><br></pre></td></tr></table></figure>
-
 <h4 id="修改cfg文件" class="article-heading"><a href="#修改cfg文件" class="headerlink" title="修改cfg文件"></a>修改cfg文件<a class="article-anchor" href="#修改cfg文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim yolov3-voc.cfg</span><br></pre></td></tr></table></figure>
 <h5 id="修改组数和组大小参数" class="article-heading"><a href="#修改组数和组大小参数" class="headerlink" title="修改组数和组大小参数"></a>修改组数和组大小参数<a class="article-anchor" href="#修改组数和组大小参数" aria-hidden="true"></a></h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line">batch&#x3D;1</span><br><span class="line">subdivisions&#x3D;1</span><br><span class="line"># Training</span><br><span class="line"># batch&#x3D;64</span><br><span class="line"># subdivisions&#x3D;16</span><br></pre></td></tr></table></figure>
 <p>修改为</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Testing</span><br><span class="line"># batch&#x3D;1</span><br><span class="line"># subdivisions&#x3D;1</span><br><span class="line"># Training</span><br><span class="line">batch&#x3D;64</span><br><span class="line">subdivisions&#x3D;16</span><br></pre></td></tr></table></figure>
-
 <h5 id="修改yolo神经元参数" class="article-heading"><a href="#修改yolo神经元参数" class="headerlink" title="修改yolo神经元参数"></a>修改yolo神经元参数<a class="article-anchor" href="#修改yolo神经元参数" aria-hidden="true"></a></h5><p>一共有3处神经元要修改,找到[yolo]的三处</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[convolutional]</span><br><span class="line">size&#x3D;1</span><br><span class="line">stride&#x3D;1</span><br><span class="line">pad&#x3D;1</span><br><span class="line">filters&#x3D;85</span><br><span class="line">activation&#x3D;linear</span><br><span class="line"> </span><br><span class="line">[yolo]         </span><br><span class="line">mask &#x3D; 6,7,8</span><br><span class="line">anchors &#x3D; 10,13,  16,30,  33,23,  30,61,  62,45,  59,119,  116,90,  156,198,  373,326</span><br><span class="line">classes&#x3D;20</span><br><span class="line">num&#x3D;9</span><br><span class="line">jitter&#x3D;.3</span><br><span class="line">ignore_thresh &#x3D; .5</span><br><span class="line">truth_thresh &#x3D; 1</span><br><span class="line">random&#x3D;1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -242,13 +236,10 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">classes&#x3D; 92</span><br><span class="line">train  &#x3D; &#x2F;home&#x2F;khadas&#x2F;Pictures&#x2F;VOCdevkit&#x2F;yolov3-train&#x2F;train.txt</span><br><span class="line">valid  &#x3D; &#x2F;home&#x2F;khadas&#x2F;Pictures&#x2F;VOCdevkit&#x2F;yolov3-train&#x2F;val.txt</span><br><span class="line">names &#x3D; &#x2F;home&#x2F;khadas&#x2F;Pictures&#x2F;VOCdevkit&#x2F;yolov3-train&#x2F;voc.names</span><br><span class="line">backup &#x3D; &#x2F;home&#x2F;khadas&#x2F;Pictures&#x2F;VOCdevkit&#x2F;yolov3-train&#x2F;backup</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
 <p>准备完毕的目录如下:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$workspace</span>/yolov3_train/</span><br><span class="line">$ tree</span><br><span class="line">.</span><br><span class="line">├── backup</span><br><span class="line">├── train.txt</span><br><span class="line">├── val.txt</span><br><span class="line">├── voc.data</span><br><span class="line">├── voc.names</span><br><span class="line">└── yolov3-voc.cfg</span><br></pre></td></tr></table></figure>
-
 <h3 id="训练过程" class="article-heading"><a href="#训练过程" class="headerlink" title="训练过程"></a>训练过程<a class="article-anchor" href="#训练过程" aria-hidden="true"></a></h3><h4 id="获取权重文件" class="article-heading"><a href="#获取权重文件" class="headerlink" title="获取权重文件"></a>获取权重文件<a class="article-anchor" href="#获取权重文件" aria-hidden="true"></a></h4><p>你可以选择自己涉及一个权重文件，这里darknet官方提供了一个。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet/</span><br><span class="line">$ wget https://pjreddie.com/media/files/darknet53.conv.74</span><br></pre></td></tr></table></figure>
-
 <h4 id="训练命令" class="article-heading"><a href="#训练命令" class="headerlink" title="训练命令"></a>训练命令<a class="article-anchor" href="#训练命令" aria-hidden="true"></a></h4><h6 id="从头开始训练" class="article-heading"><a href="#从头开始训练" class="headerlink" title="从头开始训练"></a>从头开始训练<a class="article-anchor" href="#从头开始训练" aria-hidden="true"></a></h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/darknet</span><br><span class="line">$ ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg darknet53.conv.74</span><br></pre></td></tr></table></figure>
 <h6 id="从保存的中间点恢复训练" class="article-heading"><a href="#从保存的中间点恢复训练" class="headerlink" title="从保存的中间点恢复训练"></a>从保存的中间点恢复训练<a class="article-anchor" href="#从保存的中间点恢复训练" aria-hidden="true"></a></h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./darknet detector train <span class="variable">$workspace</span>/yolov3-train/voc.data <span class="variable">$workspace</span>/yolov3-train/yolov3-voc.cfg <span class="variable">$workspace</span>/yolov3-train/backup/yolov3-voc.backup</span><br></pre></td></tr></table></figure>
 <h4 id="训练状态" class="article-heading"><a href="#训练状态" class="headerlink" title="训练状态"></a>训练状态<a class="article-anchor" href="#训练状态" aria-hidden="true"></a></h4><p>训练时终端会打印出每一步的数据，如下:</p>
@@ -266,7 +257,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToInstallDarknet.html" class="article-footer-prev" title="如何安装darknet模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToTransformYolo.html" class="article-footer-next" title="如何转换yolo模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

@@ -62,16 +62,16 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="You can use Fenix (one-stop script) to build Ubuntu&#x2F;Debian images. Setup Build Host$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static  Clone Fenix">
+  <meta name="description" content="You can use Fenix (one-stop script) to build Ubuntu&#x2F;Debian images. Setup Build Host$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static Clone Fenix R">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Build Ubuntu&#x2F;Debian Images">
 <meta property="og:url" content="https://docs.khadas.com/edge/FenixScript">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="You can use Fenix (one-stop script) to build Ubuntu&#x2F;Debian images. Setup Build Host$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static  Clone Fenix">
+<meta property="og:description" content="You can use Fenix (one-stop script) to build Ubuntu&#x2F;Debian images. Setup Build Host$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static Clone Fenix R">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/FenixScript.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.330Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.330Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.769Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.769Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/FenixScript.png">
@@ -139,36 +139,24 @@
               <div class="article-content" itemprop="articleBody">
                 <p>You can use <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">Fenix</a> (one-stop script) to build Ubuntu/Debian images.</p>
 <h3 id="Setup-Build-Host" class="article-heading"><a href="#Setup-Build-Host" class="headerlink" title="Setup Build Host"></a>Setup Build Host<a class="article-anchor" href="#Setup-Build-Host" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install git make lsb-release qemu-user-static</span><br></pre></td></tr></table></figure>
-
 <h3 id="Clone-Fenix-Repository" class="article-heading"><a href="#Clone-Fenix-Repository" class="headerlink" title="Clone Fenix Repository"></a>Clone Fenix Repository<a class="article-anchor" href="#Clone-Fenix-Repository" aria-hidden="true"></a></h3><p>Clone Fenix repository to somewhere like: <code>~/project/</code></p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/project/</span><br><span class="line">$ <span class="built_in">cd</span> ~/project/</span><br><span class="line">$ git <span class="built_in">clone</span> --depth 1 https://github.com/khadas/fenix</span><br></pre></td></tr></table></figure>
-
 <h3 id="Setup-Build-Environment" class="article-heading"><a href="#Setup-Build-Environment" class="headerlink" title="Setup Build Environment"></a>Setup Build Environment<a class="article-anchor" href="#Setup-Build-Environment" aria-hidden="true"></a></h3><p>You should setup the build environment first. For example: Board type, Linux version, distribution, etc.</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/project/fenix</span><br><span class="line">$ <span class="built_in">source</span> env/setenv.sh</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-Full-Image" class="article-heading"><a href="#Build-Full-Image" class="headerlink" title="Build Full Image"></a>Build Full Image<a class="article-anchor" href="#Build-Full-Image" aria-hidden="true"></a></h3><p>If you have setup the environment, then it’s time to build the image. Fenix requires root privileges, so you’ll need to enter your password.</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make</span><br></pre></td></tr></table></figure>
-
 <p><strong>Tip:</strong>If this is your first time building an image, the script will check your Host’s environment and install some essential packages. In addition, repositories (U-Boot, Linux) will be cloned automatically from our Khadas GitHub.</p>
 <p>You can build the U-Boot and Kernel alone.</p>
 <h3 id="Build-U-Boot" class="article-heading"><a href="#Build-U-Boot" class="headerlink" title="Build U-Boot"></a>Build U-Boot<a class="article-anchor" href="#Build-U-Boot" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-U-boot-debian-package" class="article-heading"><a href="#Build-U-boot-debian-package" class="headerlink" title="Build U-boot debian package"></a>Build U-boot debian package<a class="article-anchor" href="#Build-U-boot-debian-package" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-Linux" class="article-heading"><a href="#Build-Linux" class="headerlink" title="Build Linux"></a>Build Linux<a class="article-anchor" href="#Build-Linux" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make kernel</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-Linux-debian-package" class="article-heading"><a href="#Build-Linux-debian-package" class="headerlink" title="Build Linux debian package"></a>Build Linux debian package<a class="article-anchor" href="#Build-Linux-debian-package" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make kernel-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-GPU-debian-package" class="article-heading"><a href="#Build-GPU-debian-package" class="headerlink" title="Build GPU debian package"></a>Build GPU debian package<a class="article-anchor" href="#Build-GPU-debian-package" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make gpu-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-Board-debian-package" class="article-heading"><a href="#Build-Board-debian-package" class="headerlink" title="Build Board debian package"></a>Build Board debian package<a class="article-anchor" href="#Build-Board-debian-package" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make board-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-all-debian-Packages" class="article-heading"><a href="#Build-all-debian-Packages" class="headerlink" title="Build all debian  Packages"></a>Build all debian  Packages<a class="article-anchor" href="#Build-all-debian-Packages" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make debs</span><br></pre></td></tr></table></figure>
 <h3 id="Build-Uboot-Image" class="article-heading"><a href="#Build-Uboot-Image" class="headerlink" title="Build Uboot Image"></a>Build Uboot Image<a class="article-anchor" href="#Build-Uboot-Image" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot-image</span><br></pre></td></tr></table></figure>
-
 <h3 id="Get-Help-Messages" class="article-heading"><a href="#Get-Help-Messages" class="headerlink" title="Get Help Messages"></a>Get Help Messages<a class="article-anchor" href="#Get-Help-Messages" aria-hidden="true"></a></h3><p>You can get help messags by executing <code>make help</code>:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make <span class="built_in">help</span></span><br><span class="line">Fenix scripts <span class="built_in">help</span> messages:</span><br><span class="line">  all           - Create image according to environment.</span><br><span class="line">  kernel        - Build linux kernel.</span><br><span class="line">  uboot         - Build u-boot.</span><br><span class="line">  uboot-deb     - Build u-boot debian package.</span><br><span class="line">  uboot-image   - Build minimal image only with u-boot.</span><br><span class="line">  kernel-deb    - Build linux debian package.</span><br><span class="line">  board-deb     - Build board debian package.</span><br><span class="line">  common-deb    - Build common debian package.</span><br><span class="line">  desktop-deb   - Build desktop debian package.</span><br><span class="line">  gpu-deb       - Build gpu debian package.</span><br><span class="line">  debs          - Build all debian packages.</span><br><span class="line">  image         - Pack update image.</span><br><span class="line">  clean         - Cleanup.</span><br><span class="line">  info          - Display current environment.</span><br></pre></td></tr></table></figure>
-
 <h3 id="Build-Options" class="article-heading"><a href="#Build-Options" class="headerlink" title="Build Options"></a>Build Options<a class="article-anchor" href="#Build-Options" aria-hidden="true"></a></h3><p>Trere are some options for building:</p>
 <ul>
 <li><p><code>NO_CCACHE</code> - ccache option</p>
@@ -211,23 +199,18 @@
 <h3 id="Build-Fenix-in-Docker" class="article-heading"><a href="#Build-Fenix-in-Docker" class="headerlink" title="Build Fenix in Docker"></a>Build Fenix in Docker<a class="article-anchor" href="#Build-Fenix-in-Docker" aria-hidden="true"></a></h3><p>Fenix is supported via Docker. We provide a <code>Ubuntu 20.04</code> build host, so you can build all images in Docker.</p>
 <h4 id="Install-Docker" class="article-heading"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a>Install Docker<a class="article-anchor" href="#Install-Docker" aria-hidden="true"></a></h4><p>Please refer to <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/engine/install/">Docker Official Documentation</a>.</p>
 <h4 id="Add-User-to-Docker-Group" class="article-heading"><a href="#Add-User-to-Docker-Group" class="headerlink" title="Add User to Docker Group"></a>Add User to Docker Group<a class="article-anchor" href="#Add-User-to-Docker-Group" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -aG docker $USER</span><br></pre></td></tr></table></figure>
-
 <p><em>Note: You need to logout or reboot the system to make it available.</em></p>
 <h4 id="Check-Docker" class="article-heading"><a href="#Check-Docker" class="headerlink" title="Check Docker"></a>Check Docker<a class="article-anchor" href="#Check-Docker" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run hello-world</span><br></pre></td></tr></table></figure>
-
 <p>If you see the following print outs, it means that Docker has installed successfully:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unable to find image &#39;hello-world:latest&#39; locally</span><br><span class="line">latest: Pulling from library&#x2F;hello-world</span><br><span class="line">ca4f61b1923c: Pull complete</span><br><span class="line">Digest: sha256:be0cd392e45be79ffeffa6b05338b98ebb16c87b255f48e297ec7f98e123905c</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https:&#x2F;&#x2F;cloud.docker.com&#x2F;</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https:&#x2F;&#x2F;docs.docker.com&#x2F;engine&#x2F;userguide&#x2F;</span><br></pre></td></tr></table></figure>
 <h4 id="Run-Fenix-in-Docker" class="article-heading"><a href="#Run-Fenix-in-Docker" class="headerlink" title="Run Fenix in Docker"></a>Run Fenix in Docker<a class="article-anchor" href="#Run-Fenix-in-Docker" aria-hidden="true"></a></h4><p>Get Docker Image:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;project&#x2F;fenix</span><br><span class="line">$ docker pull numbqq&#x2F;fenix:latest</span><br></pre></td></tr></table></figure>
-
 <p>Build Image in Docker:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -it --name fenix -v $(pwd):&#x2F;home&#x2F;khadas&#x2F;fenix \</span><br><span class="line">             -v &#x2F;etc&#x2F;localtime:&#x2F;etc&#x2F;localtime:ro \</span><br><span class="line">             -v &#x2F;etc&#x2F;timezone:&#x2F;etc&#x2F;timezone:ro \</span><br><span class="line">             -v $HOME&#x2F;.ccache:&#x2F;home&#x2F;khadas&#x2F;.ccache --privileged \</span><br><span class="line">             --device&#x3D;&#x2F;dev&#x2F;loop-control:&#x2F;dev&#x2F;loop-control \</span><br><span class="line">             --device&#x3D;&#x2F;dev&#x2F;loop0:&#x2F;dev&#x2F;loop0 --cap-add SYS_ADMIN \</span><br><span class="line">             numbqq&#x2F;fenix</span><br></pre></td></tr></table></figure>
 <p>We are in the Docker Container now, start your build.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@919cab43f66d:~&#x2F;fenix$ source env&#x2F;setenv.sh</span><br><span class="line">khadas@919cab43f66d:~&#x2F;fenix$ make</span><br></pre></td></tr></table></figure>
-
 <p>To restart the Docker container a second time.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker start fenix</span><br><span class="line">$ docker <span class="built_in">exec</span> -ti fenix bash</span><br></pre></td></tr></table></figure>
-
 <h3 id="Get-The-Latest-Night-Build-Image" class="article-heading"><a href="#Get-The-Latest-Night-Build-Image" class="headerlink" title="Get The Latest Night Build Image"></a>Get The Latest Night Build Image<a class="article-anchor" href="#Get-The-Latest-Night-Build-Image" aria-hidden="true"></a></h3><ul>
 <li>Visit <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">Fenix</a>(one-stop script)</li>
 <li>Click on the badge like Release Build,Test Build Ubuntu,Test Build Debian<br><img src="/images/vim1/FenixScript.png" alt="image"></li>
@@ -237,7 +220,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.330Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.769Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="InstructionsforEdgeSinglePackBurningTool.html" class="article-footer-prev" title="Instructions for Edge Single Pack Burning Tool"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToUpgradeTheSystem.html" class="article-footer-next" title="How To Upgrade the System"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

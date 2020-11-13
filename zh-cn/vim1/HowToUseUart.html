@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="确认串口硬件引脚uart_c引出到40Pin的引脚是15脚以及16脚  VIM1-GPIO-Pin-Out VIM2-GPIO-Pin-Out VIM3-GPIO-Pin-Out  打开串口通过Overlays打开uart的节点 $ vim &#x2F;boot&#x2F;env.txt  确保uart已经在overlays的列表中(默认已经打开) overlays&#x3D;uart4 pwm_ao_a pwm_f i2c0">
+  <meta name="description" content="确认串口硬件引脚uart_c引出到40Pin的引脚是15脚以及16脚  VIM1-GPIO-Pin-Out VIM2-GPIO-Pin-Out VIM3-GPIO-Pin-Out  打开串口通过Overlays打开uart的节点 $ vim &#x2F;boot&#x2F;env.txt 确保uart已经在overlays的列表中(默认已经打开) overlays&#x3D;uart4 pwm_ao_a pwm_f i2c0">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何使用串口">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/HowToUseUart">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="确认串口硬件引脚uart_c引出到40Pin的引脚是15脚以及16脚  VIM1-GPIO-Pin-Out VIM2-GPIO-Pin-Out VIM3-GPIO-Pin-Out  打开串口通过Overlays打开uart的节点 $ vim &#x2F;boot&#x2F;env.txt  确保uart已经在overlays的列表中(默认已经打开) overlays&#x3D;uart4 pwm_ao_a pwm_f i2c0">
+<meta property="og:description" content="确认串口硬件引脚uart_c引出到40Pin的引脚是15脚以及16脚  VIM1-GPIO-Pin-Out VIM2-GPIO-Pin-Out VIM3-GPIO-Pin-Out  打开串口通过Overlays打开uart的节点 $ vim &#x2F;boot&#x2F;env.txt 确保uart已经在overlays的列表中(默认已经打开) overlays&#x3D;uart4 pwm_ao_a pwm_f i2c0">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-09T02:15:58.338Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.338Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -143,27 +143,22 @@
 </ul>
 <h1 id="打开串口" class="article-heading"><a href="#打开串口" class="headerlink" title="打开串口"></a>打开串口<a class="article-anchor" href="#打开串口" aria-hidden="true"></a></h1><p>通过Overlays打开uart的节点</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim /boot/env.txt</span></span><br></pre></td></tr></table></figure>
-
 <p>确保uart已经在overlays的列表中(默认已经打开)</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">overlays=uart4 pwm_ao_a pwm_f i2c0</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意: VIM1/VIM2是uar4,VIM3/VIM3L是uart3</strong></p>
 <h1 id="PC设置串口工具" class="article-heading"><a href="#PC设置串口工具" class="headerlink" title="PC设置串口工具"></a>PC设置串口工具<a class="article-anchor" href="#PC设置串口工具" aria-hidden="true"></a></h1><p>通过tty转USB的串口工具连接板子上的串口与PC</p>
 <p>波特率设置成<code>115200</code>,这里以Ubuntu为例</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo minicom -b 115200 -D /dev/ttyUSBx</span></span><br></pre></td></tr></table></figure>
 
-
 <h1 id="使用串口" class="article-heading"><a href="#使用串口" class="headerlink" title="使用串口"></a>使用串口<a class="article-anchor" href="#使用串口" aria-hidden="true"></a></h1><p>在板子上打开终端,设置串口波特率</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo stty -F /dev/ttySx 115200</span></span><br></pre></td></tr></table></figure>
-
 <p>通过<code>echo</code>输出信息</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> khadas | sudo tee /dev/ttySx</span></span><br></pre></td></tr></table></figure>
-
 <p>在PC上就会看到对应的<code>khadas</code></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.338Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="HowToUseHardwarePWM.html" class="article-footer-prev" title="如何使用硬件PWM"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToControlLED.html" class="article-footer-next" title="如何控制LED灯"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

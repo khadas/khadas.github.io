@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Install ADB这里将会介绍如何安装以及如何使用ADB工具 如何安装ADB首先你要更新你的源，之后可以通过命令行直接安装。 $ sudo apt-get update$ sudo apt-get install android-tools-adb  添加权限&amp;编写配置文件现在ADB工具已经安装在你的计算机中，但在使用之前还要做一些准备。 添加权限$ sudo  useradd -G">
+  <meta name="description" content="Install ADB这里将会介绍如何安装以及如何使用ADB工具 如何安装ADB首先你要更新你的源，之后可以通过命令行直接安装。 $ sudo apt-get update$ sudo apt-get install android-tools-adb 添加权限&amp;编写配置文件现在ADB工具已经安装在你的计算机中，但在使用之前还要做一些准备。 添加权限$ sudo  useradd -G p">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何使用ADB">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/edge/HowToUseADBTool">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="Install ADB这里将会介绍如何安装以及如何使用ADB工具 如何安装ADB首先你要更新你的源，之后可以通过命令行直接安装。 $ sudo apt-get update$ sudo apt-get install android-tools-adb  添加权限&amp;编写配置文件现在ADB工具已经安装在你的计算机中，但在使用之前还要做一些准备。 添加权限$ sudo  useradd -G">
+<meta property="og:description" content="Install ADB这里将会介绍如何安装以及如何使用ADB工具 如何安装ADB首先你要更新你的源，之后可以通过命令行直接安装。 $ sudo apt-get update$ sudo apt-get install android-tools-adb 添加权限&amp;编写配置文件现在ADB工具已经安装在你的计算机中，但在使用之前还要做一些准备。 添加权限$ sudo  useradd -G p">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.773Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.773Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -138,19 +138,14 @@
                 <h1 id="Install-ADB" class="article-heading"><a href="#Install-ADB" class="headerlink" title="Install ADB"></a>Install ADB<a class="article-anchor" href="#Install-ADB" aria-hidden="true"></a></h1><p>这里将会介绍如何安装以及如何使用ADB工具</p>
 <h2 id="如何安装ADB" class="article-heading"><a href="#如何安装ADB" class="headerlink" title="如何安装ADB"></a>如何安装ADB<a class="article-anchor" href="#如何安装ADB" aria-hidden="true"></a></h2><p>首先你要更新你的源，之后可以通过命令行直接安装。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install android-tools-adb</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="添加权限-amp-编写配置文件" class="article-heading"><a href="#添加权限-amp-编写配置文件" class="headerlink" title="添加权限&amp;编写配置文件"></a>添加权限&amp;编写配置文件<a class="article-anchor" href="#添加权限-amp-编写配置文件" aria-hidden="true"></a></h2><p>现在ADB工具已经安装在你的计算机中，但在使用之前还要做一些准备。</p>
 <h3 id="添加权限" class="article-heading"><a href="#添加权限" class="headerlink" title="添加权限"></a>添加权限<a class="article-anchor" href="#添加权限" aria-hidden="true"></a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo  useradd -G plugdev <span class="variable">$USER</span></span></span><br></pre></td></tr></table></figure>
-
 <h3 id="编写配置文件" class="article-heading"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件<a class="article-anchor" href="#编写配置文件" aria-hidden="true"></a></h3><p>创建一个rules文件</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo vim /etc/udev/rules.d/51-android.rules</span></span><br></pre></td></tr></table></figure>
-
 <p>将以下内容写入文件中</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">SUBSYSTEM==&quot;usb&quot;, ENV&#123;DEVTYPE&#125;==&quot;usb_device&quot;, MODE=&quot;0666&quot;</span><br></pre></td></tr></table></figure>
-
 <p>这是一个通用配置。</p>
 <h3 id="重启你的udev" class="article-heading"><a href="#重启你的udev" class="headerlink" title="重启你的udev"></a>重启你的udev<a class="article-anchor" href="#重启你的udev" aria-hidden="true"></a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo /etc/init.d/udev restart</span></span><br></pre></td></tr></table></figure>
-
 <h1 id="如何使用ADB" class="article-heading"><a href="#如何使用ADB" class="headerlink" title="如何使用ADB"></a>如何使用ADB<a class="article-anchor" href="#如何使用ADB" aria-hidden="true"></a></h1><h3 id="网络ADB：" class="article-heading"><a href="#网络ADB：" class="headerlink" title="网络ADB："></a>网络ADB：<a class="article-anchor" href="#网络ADB：" aria-hidden="true"></a></h3><ul>
 <li><p>确保连上局域网Wi-Fi或有线网络</p>
 </li>
@@ -162,7 +157,6 @@
 </li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> adb connect xxx.xxx.xxx.xxx(IP 地址)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adb root</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adb connect xxx.xxx.xxx.xxx(IP 地址)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adb remount</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>进而可以进行push操作来debug</li>
 </ul>
@@ -175,7 +169,6 @@
 </li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> adb shell</span></span><br></pre></td></tr></table></figure>
-
 <h1 id="参考" class="article-heading"><a href="#参考" class="headerlink" title="参考"></a>参考<a class="article-anchor" href="#参考" aria-hidden="true"></a></h1><ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.android.com/studio/command-line/adb.html">Android Debug Brige</a></li>
 </ul>
@@ -183,7 +176,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.773Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="BuildAndroid.html" class="article-footer-prev" title="编译安卓源码"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowtoUseWol.html" class="article-footer-next" title="如何使用WOL"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

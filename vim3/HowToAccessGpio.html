@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="This guide is about how to access the GPIO using Android and Ubuntu. PreconditionsThe ROM must satisfy the following conditions: * Android M     &gt;&#x3D; V170603* Android N     &gt;&#x3D; V170421* U">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.330Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.330Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.769Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.769Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -144,13 +144,10 @@
 </ul>
 <p>Banks:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;c1109880.pinmux&#x2F;gpio-ranges</span><br><span class="line"></span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: banks GPIOS   [155 - 255] PINS [10 - 110]</span><br><span class="line">0: ao-bank GPIOS [145 - 154] PINS [ 0 -   9]</span><br><span class="line"></span><br><span class="line">Notice: ao-bank means GPIOAO_X gpios</span><br></pre></td></tr></table></figure>
-
 <p>Pins:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;c1109880.pinmux&#x2F;pins</span><br><span class="line">...</span><br><span class="line">pin 5 (GPIOAO_5) </span><br><span class="line">pin 6 (GPIOAO_6) </span><br><span class="line">...</span><br><span class="line">pin 28 (GPIOH_2) </span><br><span class="line">pin 29 (GPIOH_3) </span><br><span class="line">pin 30 (GPIOH_4) </span><br><span class="line">pin 31 (GPIOH_5) </span><br><span class="line">pin 32 (GPIOH_6) </span><br><span class="line">pin 33 (GPIOH_7) </span><br><span class="line">pin 34 (GPIOH_8) </span><br><span class="line">pin 35 (GPIOH_9) </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
 <p>For example, get the number of <code>GPIOH_4</code>, <code>GPIOH_5</code> and <code>GPIOAO_6</code>.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Number(GPIOH_5)  &#x3D; bank + pin &#x3D; 155 - 10 + 31 &#x3D; 176</span><br><span class="line">Number(GPIOH_4)  &#x3D; bank + pin &#x3D; 155 - 10 + 30 &#x3D; 175</span><br><span class="line">Number(GPIOAO_6) &#x3D; bank + pin &#x3D; 145 -  0 +  6 &#x3D; 151</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>Linux 4.9 (Android O and Ubuntu)</li>
 </ul>
@@ -158,17 +155,14 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;pinctrl@14&#x2F;gpio-ranges </span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: aobus-banks GPIOS [0 - 10] PINS [0 - 10]</span><br></pre></td></tr></table></figure>
 <p>Pins:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;pinctrl@14&#x2F;pins </span><br><span class="line">registered pins: 11</span><br><span class="line">pin 0 (GPIOAO_0)  pinctrl@14</span><br><span class="line">pin 1 (GPIOAO_1)  pinctrl@14</span><br><span class="line">pin 2 (GPIOAO_2)  pinctrl@14</span><br><span class="line">pin 3 (GPIOAO_3)  pinctrl@14</span><br><span class="line">pin 4 (GPIOAO_4)  pinctrl@14</span><br><span class="line">pin 5 (GPIOAO_5)  pinctrl@14</span><br><span class="line">pin 6 (GPIOAO_6)  pinctrl@14</span><br><span class="line">pin 7 (GPIOAO_7)  pinctrl@14</span><br><span class="line">pin 8 (GPIOAO_8)  pinctrl@14</span><br><span class="line">pin 9 (GPIOAO_9)  pinctrl@14</span><br><span class="line">pin 10 (GPIO_TEST_N)  pinctrl@14</span><br></pre></td></tr></table></figure>
-
 <p>For example, get the number of <code>GPIOAO_6</code>:<br>Number(GPIOAO_6) = bank + pin = 0 - 0 + 6 = 6</p>
 <p><code>periphs-banks</code>:<br>Banks:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;pinctrl@4b0&#x2F;gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: periphs-banks GPIOS [11 - 110] PINS [11 - 110]</span><br></pre></td></tr></table></figure>
 <p>Pins:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;pinctrl&#x2F;pinctrl@4b0&#x2F;pins </span><br><span class="line">registered pins: 100</span><br><span class="line">pin 11 (GPIOZ_0)  pinctrl@4b0</span><br><span class="line">pin 12 (GPIOZ_1)  pinctrl@4b0</span><br><span class="line">pin 13 (GPIOZ_2)  pinctrl@4b0</span><br><span class="line">...</span><br><span class="line">pin 27 (GPIOH_0)  pinctrl@4b0</span><br><span class="line">pin 28 (GPIOH_1)  pinctrl@4b0</span><br><span class="line">pin 29 (GPIOH_2)  pinctrl@4b0</span><br><span class="line">pin 30 (GPIOH_3)  pinctrl@4b0</span><br><span class="line">pin 31 (GPIOH_4)  pinctrl@4b0</span><br><span class="line">pin 32 (GPIOH_5)  pinctrl@4b0</span><br><span class="line">pin 33 (GPIOH_6)  pinctrl@4b0</span><br><span class="line">pin 34 (GPIOH_7)  pinctrl@4b0</span><br><span class="line">pin 35 (GPIOH_8)  pinctrl@4b0</span><br><span class="line">pin 36 (GPIOH_9)  pinctrl@4b0</span><br><span class="line">...</span><br><span class="line">pin 81 (GPIODV_21)  pinctrl@4b0</span><br><span class="line">pin 82 (GPIODV_22)  pinctrl@4b0</span><br><span class="line">pin 83 (GPIODV_23)  pinctrl@4b0</span><br><span class="line">pin 84 (GPIODV_24)  pinctrl@4b0</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
 <p>For example, get the number of <code>GPIOH_5</code>:<br>Number(GPIOH_5) = bank + pin = 11 - 11 + 32 = 32</p>
 <h3 id="On-Android" class="article-heading"><a href="#On-Android" class="headerlink" title="On Android"></a>On Android<a class="article-anchor" href="#On-Android" aria-hidden="true"></a></h3><p>** GPIO List **</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5       176</span><br><span class="line">PIN33       GPIOAO6      151</span><br></pre></td></tr></table></figure>
-
 <p>There are two ways to access the GPIO:</p>
 <ul>
 <li>ADB Command</li>
@@ -215,7 +209,6 @@
 <p>Release the gpio(GPIOH5)</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176 &gt; &#x2F;sys&#x2F;class&#x2F;gpio&#x2F;unexport</span><br></pre></td></tr></table></figure>
-
 <p>** Third-Party Applications **</p>
 <blockquote>
 <p>Get root permision</p>
@@ -241,15 +234,15 @@
 <p>Release the gpio(GPIOH5)</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">os.writeBytes(&quot;echo &quot; + 176 + &quot; &gt; &#x2F;sys&#x2F;class&#x2F;gpio&#x2F;unexport\n&quot;);</span><br></pre></td></tr></table></figure>
-
 <h3 id="On-Ubuntu" class="article-heading"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu<a class="article-anchor" href="#On-Ubuntu" aria-hidden="true"></a></h3><p>** GPIO List **</p>
 <ul>
 <li>Linux-3.14<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         176</span><br><span class="line">PIN33       GPIOAO6        151</span><br></pre></td></tr></table></figure></li>
-<li>Linux-4.9.40<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         32</span><br><span class="line">PIN33       GPIOAO6        6</span><br></pre></td></tr></table></figure>
-
+<li>Linux-4.9.40<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PIN         GPIO         Number</span><br><span class="line">PIN37       GPIOH5         32</span><br><span class="line">PIN33       GPIOAO6        6</span><br></pre></td></tr></table></figure></li>
+<li><ul>
+<li>How to access GPIO on Terminal **</li>
+</ul>
 </li>
 </ul>
-<p>** How to access GPIO on Terminal **</p>
 <blockquote>
 <p>[Example on linux-3.14]<br> Request the gpio(GPIOH5)</p>
 </blockquote>
@@ -278,10 +271,9 @@
 <p>Release the gpio(GPIOH5)</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo 176 &gt; &#x2F;sys&#x2F;class&#x2F;gpio&#x2F;unexport</span><br></pre></td></tr></table></figure>
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.330Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.769Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowtoEraseEMMC.html" class="article-footer-prev" title="Erase eMMC Storage"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToAccessI2c.html" class="article-footer-next" title="How To Access I2C"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

@@ -62,16 +62,16 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="你可以使用Fenix脚本来编译Ubuntu&#x2F;Debian固件。 设置本地编辑环境$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static  下载Fenix脚本下载Fenix脚本到本地路径，如:~&#x2F;project&#x2F; $ mkdir ~&#x2F;project&#x2F;">
+  <meta name="description" content="你可以使用Fenix脚本来编译Ubuntu&#x2F;Debian固件。 设置本地编辑环境$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static 下载Fenix脚本下载Fenix脚本到本地路径，如:~&#x2F;project&#x2F; $ mkdir ~&#x2F;project&#x2F;$">
 <meta property="og:type" content="website">
 <meta property="og:title" content="编译Ubuntu&#x2F;Debian固件">
 <meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/FenixScript">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="你可以使用Fenix脚本来编译Ubuntu&#x2F;Debian固件。 设置本地编辑环境$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static  下载Fenix脚本下载Fenix脚本到本地路径，如:~&#x2F;project&#x2F; $ mkdir ~&#x2F;project&#x2F;">
+<meta property="og:description" content="你可以使用Fenix脚本来编译Ubuntu&#x2F;Debian固件。 设置本地编辑环境$ sudo apt-get update$ sudo apt-get upgrade$ sudo apt-get install git make lsb-release qemu-user-static 下载Fenix脚本下载Fenix脚本到本地路径，如:~&#x2F;project&#x2F; $ mkdir ~&#x2F;project&#x2F;$">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.khadas.com/images/vim1/FenixScript.png">
-<meta property="article:published_time" content="2020-11-09T02:15:58.334Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.334Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.777Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.777Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.khadas.com/images/vim1/FenixScript.png">
@@ -139,36 +139,24 @@
               <div class="article-content" itemprop="articleBody">
                 <p>你可以使用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">Fenix</a>脚本来编译Ubuntu/Debian固件。</p>
 <h3 id="设置本地编辑环境" class="article-heading"><a href="#设置本地编辑环境" class="headerlink" title="设置本地编辑环境"></a>设置本地编辑环境<a class="article-anchor" href="#设置本地编辑环境" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install git make lsb-release qemu-user-static</span><br></pre></td></tr></table></figure>
-
 <h3 id="下载Fenix脚本" class="article-heading"><a href="#下载Fenix脚本" class="headerlink" title="下载Fenix脚本"></a>下载Fenix脚本<a class="article-anchor" href="#下载Fenix脚本" aria-hidden="true"></a></h3><p>下载Fenix脚本到本地路径，如:<code>~/project/</code></p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/project/</span><br><span class="line">$ <span class="built_in">cd</span> ~/project/</span><br><span class="line">$ git <span class="built_in">clone</span> --depth 1 https://github.com/khadas/fenix</span><br></pre></td></tr></table></figure>
-
 <h3 id="设置编译环境" class="article-heading"><a href="#设置编译环境" class="headerlink" title="设置编译环境"></a>设置编译环境<a class="article-anchor" href="#设置编译环境" aria-hidden="true"></a></h3><p>你需要先设置Fenix编译环境，如：选择Khadas开发板型号、u-boot版本、linux版本、linux发行版、安装方式等等。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/project/fenix</span><br><span class="line">$ <span class="built_in">source</span> env/setenv.sh</span><br></pre></td></tr></table></figure>
 <h3 id="开始编译完整固件" class="article-heading"><a href="#开始编译完整固件" class="headerlink" title="开始编译完整固件"></a>开始编译完整固件<a class="article-anchor" href="#开始编译完整固件" aria-hidden="true"></a></h3><p>在设置好环境执行<code>make</code>就会开始编译，编译过程会用到<code>root</code>权限，会提示你要输入密码才能继续编译。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make</span><br></pre></td></tr></table></figure>
-
 <p><strong>提示：</strong>如果是你第一次编译，那么时间会比较久，因为脚本会检测你的电脑的编译环境，可能会安装编译需要的一些软件包，同时还会从Khadas Github下载一些仓库（如：u-boot和linux）。</p>
 <p>你也可以选择单独编译u-boot和内核。</p>
 <h3 id="编译U-boot" class="article-heading"><a href="#编译U-boot" class="headerlink" title="编译U-boot"></a>编译U-boot<a class="article-anchor" href="#编译U-boot" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译U-boot-debian包" class="article-heading"><a href="#编译U-boot-debian包" class="headerlink" title="编译U-boot debian包"></a>编译U-boot debian包<a class="article-anchor" href="#编译U-boot-debian包" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译内核" class="article-heading"><a href="#编译内核" class="headerlink" title="编译内核"></a>编译内核<a class="article-anchor" href="#编译内核" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make kernel</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译内核debian包" class="article-heading"><a href="#编译内核debian包" class="headerlink" title="编译内核debian包"></a>编译内核debian包<a class="article-anchor" href="#编译内核debian包" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make kernel-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译GPU-debian包" class="article-heading"><a href="#编译GPU-debian包" class="headerlink" title="编译GPU debian包"></a>编译GPU debian包<a class="article-anchor" href="#编译GPU-debian包" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make gpu-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译板级debian包" class="article-heading"><a href="#编译板级debian包" class="headerlink" title="编译板级debian包"></a>编译板级debian包<a class="article-anchor" href="#编译板级debian包" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make board-deb</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译所有的debian包" class="article-heading"><a href="#编译所有的debian包" class="headerlink" title="编译所有的debian包"></a>编译所有的debian包<a class="article-anchor" href="#编译所有的debian包" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make debs</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译uboot-image" class="article-heading"><a href="#编译uboot-image" class="headerlink" title="编译uboot image"></a>编译uboot image<a class="article-anchor" href="#编译uboot-image" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ make uboot-image</span><br></pre></td></tr></table></figure>
-
 <h3 id="获取帮助信息" class="article-heading"><a href="#获取帮助信息" class="headerlink" title="获取帮助信息"></a>获取帮助信息<a class="article-anchor" href="#获取帮助信息" aria-hidden="true"></a></h3><p>通过执行<code>make help</code>来获取帮助信息。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make <span class="built_in">help</span></span><br><span class="line">Fenix scripts <span class="built_in">help</span> messages:</span><br><span class="line">  all           - Create image according to environment.</span><br><span class="line">  kernel        - Build linux kernel.</span><br><span class="line">  uboot         - Build u-boot.</span><br><span class="line">  uboot-deb     - Build u-boot debian package.</span><br><span class="line">  uboot-image   - Build minimal image only with u-boot.</span><br><span class="line">  kernel-deb    - Build linux debian package.</span><br><span class="line">  board-deb     - Build board debian package.</span><br><span class="line">  common-deb    - Build common debian package.</span><br><span class="line">  desktop-deb   - Build desktop debian package.</span><br><span class="line">  gpu-deb       - Build gpu debian package.</span><br><span class="line">  debs          - Build all debian packages.</span><br><span class="line">  image         - Pack update image.</span><br><span class="line">  clean         - Cleanup.</span><br><span class="line">  info          - Display current environment.</span><br></pre></td></tr></table></figure>
-
 <h3 id="编译选项" class="article-heading"><a href="#编译选项" class="headerlink" title="编译选项"></a>编译选项<a class="article-anchor" href="#编译选项" aria-hidden="true"></a></h3><ul>
 <li><p><code>NO_CCACHE</code> - ccache选项</p>
 <ul>
@@ -218,23 +206,18 @@
 <h3 id="使用Docker编译" class="article-heading"><a href="#使用Docker编译" class="headerlink" title="使用Docker编译"></a>使用Docker编译<a class="article-anchor" href="#使用Docker编译" aria-hidden="true"></a></h3><p>Fenix支持在Docker中编译，我们提供了一个<code>Ubuntu 20.04</code>的Docker环境，你可以在里面编译所有的固件。</p>
 <h4 id="安装Docker" class="article-heading"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker<a class="article-anchor" href="#安装Docker" aria-hidden="true"></a></h4><p>请参考<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/engine/install/">Docker官方安装文档</a>。</p>
 <h4 id="添加用户到Docker组" class="article-heading"><a href="#添加用户到Docker组" class="headerlink" title="添加用户到Docker组"></a>添加用户到Docker组<a class="article-anchor" href="#添加用户到Docker组" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -aG docker $USER</span><br></pre></td></tr></table></figure>
-
 <p><em>注意：你需要注销或重启系统来使其生效。</em></p>
 <h4 id="检查Docker" class="article-heading"><a href="#检查Docker" class="headerlink" title="检查Docker"></a>检查Docker<a class="article-anchor" href="#检查Docker" aria-hidden="true"></a></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run hello-world</span><br></pre></td></tr></table></figure>
-
 <p>如果你看到如下信息输出说明Docker安装成功：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unable to find image &#39;hello-world:latest&#39; locally</span><br><span class="line">latest: Pulling from library&#x2F;hello-world</span><br><span class="line">ca4f61b1923c: Pull complete</span><br><span class="line">Digest: sha256:be0cd392e45be79ffeffa6b05338b98ebb16c87b255f48e297ec7f98e123905c</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https:&#x2F;&#x2F;cloud.docker.com&#x2F;</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https:&#x2F;&#x2F;docs.docker.com&#x2F;engine&#x2F;userguide&#x2F;</span><br></pre></td></tr></table></figure>
 <h4 id="在Docker中运行Fenix" class="article-heading"><a href="#在Docker中运行Fenix" class="headerlink" title="在Docker中运行Fenix"></a>在Docker中运行Fenix<a class="article-anchor" href="#在Docker中运行Fenix" aria-hidden="true"></a></h4><p>获取Docker镜像：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;project&#x2F;fenix</span><br><span class="line">$ docker pull numbqq&#x2F;fenix:latest</span><br></pre></td></tr></table></figure>
-
 <p>进入Docker环境：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker run -it --name fenix -v $(pwd):&#x2F;home&#x2F;khadas&#x2F;fenix \</span><br><span class="line">             -v &#x2F;etc&#x2F;localtime:&#x2F;etc&#x2F;localtime:ro \</span><br><span class="line">             -v &#x2F;etc&#x2F;timezone:&#x2F;etc&#x2F;timezone:ro \</span><br><span class="line">             -v $HOME&#x2F;.ccache:&#x2F;home&#x2F;khadas&#x2F;.ccache --privileged \</span><br><span class="line">             --device&#x3D;&#x2F;dev&#x2F;loop-control:&#x2F;dev&#x2F;loop-control \</span><br><span class="line">             --device&#x3D;&#x2F;dev&#x2F;loop0:&#x2F;dev&#x2F;loop0 --cap-add SYS_ADMIN \</span><br><span class="line">             numbqq&#x2F;fenix</span><br></pre></td></tr></table></figure>
 <p>现在已经在Docker容器里面了，可以开始编译了：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">khadas@919cab43f66d:~&#x2F;fenix$ source env&#x2F;setenv.sh</span><br><span class="line">khadas@919cab43f66d:~&#x2F;fenix$ make</span><br></pre></td></tr></table></figure>
-
 <p>下一次可以用如下命令启动Docker：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker start fenix</span><br><span class="line">$ docker exec -ti fenix bash</span><br></pre></td></tr></table></figure>
-
 <h3 id="获取最新的nightly-build固件" class="article-heading"><a href="#获取最新的nightly-build固件" class="headerlink" title="获取最新的nightly build固件"></a>获取最新的nightly build固件<a class="article-anchor" href="#获取最新的nightly-build固件" aria-hidden="true"></a></h3><ul>
 <li>访问<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/fenix">Fenix</a>脚本</li>
 <li>点击下面的badge,如:Rlease Build,Test Build Ubuntu,Test Build Debian<br><img src="/images/vim1/FenixScript.png" alt="image"></li>
@@ -244,7 +227,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.334Z" itemprop="dateModified">上次更新：2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.777Z" itemprop="dateModified">上次更新：2020-11-13</time>
                 <a href="ForceResetFeatures.html" class="article-footer-prev" title="远程强制复位"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToUpgradeTheSystem.html" class="article-footer-next" title="如何升级系统"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Documentation">
 <meta property="og:description" content="Preperations  Establishing a Build Environment  Downloading the Android Source  Install Toolchains for Rockchip Platform  BuildingNote: Before you start to build, make sure you have done all the Prepe">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:57.965Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:57.965Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.397Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.397Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -152,7 +152,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rockdev&#x2F;Image-xxx&#x2F;</span><br><span class="line">├── MiniLoaderAll.bin</span><br><span class="line">├── boot.img</span><br><span class="line">├── dtbo.img</span><br><span class="line">├── kernel.img</span><br><span class="line">├── misc.img</span><br><span class="line">├── oem.img</span><br><span class="line">├── parameter.txt</span><br><span class="line">├── pcba_small_misc.img</span><br><span class="line">├── pcba_whole_misc.img</span><br><span class="line">├── recovery.img</span><br><span class="line">├── resource.img</span><br><span class="line">├── system.img</span><br><span class="line">├── trust.img</span><br><span class="line">├── uboot.img</span><br><span class="line">├── update.img</span><br><span class="line">├── vbmeta.img</span><br><span class="line">├── super.img</span><br><span class="line">└── vendor.img</span><br></pre></td></tr></table></figure>
 <p><strong>Packing update.img：</strong></p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch rk3399_Android10-userdebug</span><br><span class="line">$ ./pack_image.sh</span><br></pre></td></tr></table></figure>
-
 <h1 id="android-9-0" class="article-heading"><a href="#android-9-0" class="headerlink" title="android 9.0:"></a>android 9.0:<a class="article-anchor" href="#android-9-0" aria-hidden="true"></a></h1><p><strong>Build U-boot：</strong></p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> PATH_YOUR_PROJECT</span><br><span class="line">$ <span class="built_in">cd</span> u-boot</span><br><span class="line">$ make mrproper</span><br><span class="line">$ ./make.sh kedge</span><br></pre></td></tr></table></figure>
 <p><strong>Build kernel：</strong></p>
@@ -182,7 +181,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:57.965Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.397Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="DownloadAndroidSourceCode.html" class="article-footer-prev" title="Download Android Source Code"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToUseADBTool.html" class="article-footer-next" title="How To Use ADB Tool"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

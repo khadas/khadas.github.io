@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Take VIM1 as an example, VIM2 please replace dtb with kvim2_linux.dtb, and VIM3 please replace dtb with kvim3_linux.dtb. Connect 1-Wire module$ vim &#x2F;boot&#x2F;env.txt  Add onewire to configuration file ove">
+  <meta name="description" content="Take VIM1 as an example, VIM2 please replace dtb with kvim2_linux.dtb, and VIM3 please replace dtb with kvim3_linux.dtb. Connect 1-Wire module$ vim &#x2F;boot&#x2F;env.txt Add onewire to configuration file over">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How To Use 1-Wire">
 <meta property="og:url" content="https://docs.khadas.com/vim3/HowToUse1wire">
 <meta property="og:site_name" content="Khadas Documentation">
-<meta property="og:description" content="Take VIM1 as an example, VIM2 please replace dtb with kvim2_linux.dtb, and VIM3 please replace dtb with kvim3_linux.dtb. Connect 1-Wire module$ vim &#x2F;boot&#x2F;env.txt  Add onewire to configuration file ove">
+<meta property="og:description" content="Take VIM1 as an example, VIM2 please replace dtb with kvim2_linux.dtb, and VIM3 please replace dtb with kvim3_linux.dtb. Connect 1-Wire module$ vim &#x2F;boot&#x2F;env.txt Add onewire to configuration file over">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-09T02:15:58.330Z">
-<meta property="article:modified_time" content="2020-11-09T02:15:58.330Z">
+<meta property="article:published_time" content="2020-11-13T12:39:08.769Z">
+<meta property="article:modified_time" content="2020-11-13T12:39:08.769Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -137,23 +137,19 @@
               <div class="article-content" itemprop="articleBody">
                 <p>Take VIM1 as an example, VIM2 please replace dtb with <code>kvim2_linux.dtb</code>, and VIM3 please replace dtb with <code>kvim3_linux.dtb</code>.</p>
 <h1 id="Connect-1-Wire-module" class="article-heading"><a href="#Connect-1-Wire-module" class="headerlink" title="Connect 1-Wire module"></a>Connect 1-Wire module<a class="article-anchor" href="#Connect-1-Wire-module" aria-hidden="true"></a></h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim /boot/env.txt</span></span><br></pre></td></tr></table></figure>
-
 <p>Add onewire to configuration file</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">overlays=uart4 pwm_ao_a pwm_f i2c0 --&gt; overlays=uart4 pwm_ao_a pwm_f i2c0 onewire</span><br></pre></td></tr></table></figure>
-
 <p>For details on overlays, please refer to <a href="/vim1/HowToUseDeviceTreeOverlay.html">how to use device tree overlays</a></p>
 <h1 id="How-TO-Use" class="article-heading"><a href="#How-TO-Use" class="headerlink" title="How TO Use"></a>How TO Use<a class="article-anchor" href="#How-TO-Use" aria-hidden="true"></a></h1><p>enter driver directory,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:~$ cd /sys/bus/w1/devices</span><br><span class="line">khadas@Khadas:/sys/bus/w1/devices$ ls</span><br><span class="line">28-0119395ebf91  w1_bus_master1</span><br></pre></td></tr></table></figure>
 <p>the <code>ds18b20</code> node is <code>28-0119395ebf91</code>. enter node directory,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:/sys/bus/w1/devices$ cd 28-0119395ebf91</span><br><span class="line">khadas@Khadas:/sys/bus/w1/devices/28-0119395ebf91$ ls</span><br><span class="line">driver  id  name  power  subsystem  uevent  w1_slave</span><br></pre></td></tr></table></figure>
-
 <p>The value of the module can be read by reading the <code>w1_slave</code> file.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">khadas@Khadas:/sys/bus/w1/devices/28-0119395ebf91$ cat w1_slave </span><br><span class="line">b1 01 4b 46 7f ff 0c 10 d8 : crc=d8 YES</span><br><span class="line">b1 01 4b 46 7f ff 0c 10 d8 t=27062</span><br></pre></td></tr></table></figure>
 
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-11-09T02:15:58.330Z" itemprop="dateModified">Last updated: 2020-11-09</time>
+                <time class="article-footer-updated" datetime="2020-11-13T12:39:08.769Z" itemprop="dateModified">Last updated: 2020-11-13</time>
                 <a href="HowToSetAutoLogin.html" class="article-footer-prev" title="How To Set Auto Login"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToSetupHDMI.html" class="article-footer-next" title="How To Setup HDMI"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
