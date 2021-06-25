@@ -1,0 +1,1 @@
+!function(){"use strict";function e(){var e=this.value,t=this.dataset.canonical;"en"===e&&(e=""),e&&(e+="/"),location.href="/"+e+t}document.getElementById("lang-select").addEventListener("change",e),document.getElementById("mobile-lang-select").addEventListener("change",e)}();

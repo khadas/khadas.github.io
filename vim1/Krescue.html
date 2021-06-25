@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Krescue - take full control you khadas device | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/vim1/Krescue.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim1/Krescue.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim1/Krescue.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="What is krescueKrescue is an extremely small (21mb) operating system that you can boot directly from a micro-SD card or your EMMC. It is a “Swiss Army knife”, and you can use it to perform a variety o">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Krescue - take full control you khadas device">
+<meta property="og:url" content="https://docs.khadas.com/vim1/Krescue">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="What is krescueKrescue is an extremely small (21mb) operating system that you can boot directly from a micro-SD card or your EMMC. It is a “Swiss Army knife”, and you can use it to perform a variety o">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/Krescue_downloads.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/HowtoUseEtcher.png">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/krescue_boot.jpg">
+<meta property="og:image" content="https://docs.khadas.com/images/vim1/krescue_list.png">
+<meta property="article:published_time" content="2021-05-18T06:32:17.088Z">
+<meta property="article:modified_time" content="2021-05-18T06:32:17.088Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.khadas.com/images/vim1/Krescue_downloads.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/vim1/" class="main-nav-link secondary current">VIM1</a></li><li class="submenu"><a href="/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/vim3/" class="main-nav-link secondary ">VIM3</a></li></ul></div><a href="/edge/" class="main-nav-link  header">Edge</a><a href="/tone1/" class="main-nav-link  header">Tone1</a><a href="/hardware/hardwareVim1" class="main-nav-link  header">Hardware</a><a href="/firmware/Vim1AndroidFirmware" class="main-nav-link  header">Firmware</a><a href="/faq/" class="main-nav-link  header">FAQ</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim1/Krescue.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Krescue - take full control you khadas device</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/source/vim1/Krescue.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="What-is-krescue" class="article-heading"><a href="#What-is-krescue" class="headerlink" title="What is krescue"></a>What is krescue<a class="article-anchor" href="#What-is-krescue" aria-hidden="true"></a></h2><p>Krescue is an extremely small (21mb) operating system that you can boot directly from a micro-SD card or your EMMC. It is a “Swiss Army knife”, and you can use it to perform a variety of low-level SBC maintenance tasks. Most notable of which are backing-up your EMMC by dumping a raw-compressed .img.gz, and rapidly installing a new OS via flashing a .img.gz back into the EMMC.  Krescue can download and install OS images directly from the web via wired Ethernet.</p>
+<h2 id="Install-Krescue-by-mirco-SD-card" class="article-heading"><a href="#Install-Krescue-by-mirco-SD-card" class="headerlink" title="Install Krescue by mirco SD card"></a>Install Krescue by mirco SD card<a class="article-anchor" href="#Install-Krescue-by-mirco-SD-card" aria-hidden="true"></a></h2><h3 id="Means-of-preparation" class="article-heading"><a href="#Means-of-preparation" class="headerlink" title="Means of preparation"></a>Means of preparation<a class="article-anchor" href="#Means-of-preparation" aria-hidden="true"></a></h3><ol>
+<li>A mirco SD card.</li>
+<li>HDMI display，and a keyboard or a khadas remote control.</li>
+<li>One of VIM1/2/3 or Edge-V</li>
+<li>A PC that can be use to make the startup disk.</li>
+</ol>
+<h3 id="Make-Krescue-startup-disk" class="article-heading"><a href="#Make-Krescue-startup-disk" class="headerlink" title="Make Krescue startup disk"></a>Make Krescue startup disk<a class="article-anchor" href="#Make-Krescue-startup-disk" aria-hidden="true"></a></h3><h4 id="burning-tool-Etcher" class="article-heading"><a href="#burning-tool-Etcher" class="headerlink" title="burning tool : Etcher"></a>burning tool : Etcher<a class="article-anchor" href="#burning-tool-Etcher" aria-hidden="true"></a></h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.balena.io/etcher/">Etcher</a> is an easy-to-use burning tool with good compatibility and simple operation interface. We choose this tool as the burning tool for krecure to SD card.</p>
+<h4 id="downloads-Krescue-images" class="article-heading"><a href="#downloads-Krescue-images" class="headerlink" title="downloads Krescue images"></a>downloads Krescue images<a class="article-anchor" href="#downloads-Krescue-images" aria-hidden="true"></a></h4><p>THe Krescue images can be downloads in <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/Firmware/Krescue/dump/">there</a>,change you board’s version.<br><img src="/images/vim1/Krescue_downloads.png" alt="Kerscure_downloads"></p>
+<h4 id="Make-the-startup-disk" class="article-heading"><a href="#Make-the-startup-disk" class="headerlink" title="Make the startup disk"></a>Make the startup disk<a class="article-anchor" href="#Make-the-startup-disk" aria-hidden="true"></a></h4><p>Insert the mircosd card into the PC. Burn the downloaded image into SD card.<br><img src="/images/vim1/HowtoUseEtcher.png" alt="Make_Krescue"></p>
+<h3 id="Run" class="article-heading"><a href="#Run" class="headerlink" title="Run"></a>Run<a class="article-anchor" href="#Run" aria-hidden="true"></a></h3><p>Insert the SD card into the board, connect HDMI and enter the <a href="/vim3/HowtoBootIntoUpgradeMode.html">upgrade mode</a>,You can see that the following figure shows the successful startup of kerscure.<br><img src="/images/vim1/krescue_boot.jpg" alt="boot Krescue"></p>
+<h2 id="Install-Krescue-by-Internet" class="article-heading"><a href="#Install-Krescue-by-Internet" class="headerlink" title="Install Krescue by Internet"></a>Install Krescue by Internet<a class="article-anchor" href="#Install-Krescue-by-Internet" aria-hidden="true"></a></h2><h3 id="Means-of-preparation-1" class="article-heading"><a href="#Means-of-preparation-1" class="headerlink" title="Means of preparation"></a>Means of preparation<a class="article-anchor" href="#Means-of-preparation-1" aria-hidden="true"></a></h3><ol>
+<li>A mirco SD card.</li>
+<li>HDMI display，and a keyboard or a khadas remote control.</li>
+<li>One of VIM1/2/3 or Edge-V which was run with a buntu firmware</li>
+</ol>
+<h3 id="Install-by-Internet" class="article-heading"><a href="#Install-by-Internet" class="headerlink" title="Install by Internet"></a>Install by Internet<a class="article-anchor" href="#Install-by-Internet" aria-hidden="true"></a></h3><ol>
+<li>Insert the SD card into the board, and confirm the node of the SD card, generally <code>/dev/mmcblk0</code> or <code>/dev/mmcblk1</code>. Remember the name of the node.</li>
+<li>Open the terminal and run the command:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sfL dl.khadas.com/.mega | sh -s - -l</span><br></pre></td></tr></table></figure>
+You can see the list with firmware<br><img src="/images/vim1/krescue_list.png" alt="krescue firmware list"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sfL dl.khadas.com/.mega | sh -s - [BOARD_ID] &gt; /dev/mmcblk0 (或者`/dev/mmcblk1`)</span><br></pre></td></tr></table></figure>
+Note: When the system applies for -y parameter for “unsafe writing”, the path of SD card is wrong. In this case, forced writing will be written in EMMC, resulting in the failure to run other firmware.<br>After the burning is completed, the image is written to the SD card. At this time, you can enter [upgrade mode] (/vim3/HowtoBootIntoUpgradeMode.html) to start krecure.</li>
+</ol>
+<h2 id="Use-krescue" class="article-heading"><a href="#Use-krescue" class="headerlink" title="Use krescue"></a>Use krescue<a class="article-anchor" href="#Use-krescue" aria-hidden="true"></a></h2><ol>
+<li><p>Backup and restore<br>With option 4, the firmware of EMMC on the board can be packed and stored in SD card. Option 3 allows you to restore the system in the SD card to the EMMC. SD card can save more than one system, put the raw.img.xz file directly under the dumps file in the SD card.</p>
+</li>
+<li><p>View board information<br>With the device info in option 2, you can view board configuration and other related information.</p>
+</li>
+<li><p>KBI<br>With option 7, the KBI of the board can be controlled.</p>
+</li>
+<li><p>Shell terminal<br>Select option c to start the shell terminal.</p>
+</li>
+<li><p>games<br>Select option 9 to kill time during mirror backup or restore.</p>
+</li>
+<li><p>others<br>With option 1, you can enter wizard mode;<br>Select option a to reboot/poweroff;<br>Other functions can view the related help through readme docs in option b.</p>
+</li>
+</ol>
+<h2 id="Notes" class="article-heading"><a href="#Notes" class="headerlink" title="Notes"></a>Notes<a class="article-anchor" href="#Notes" aria-hidden="true"></a></h2><ol>
+<li>Select the firmware corresponding to your board model during burning. Vim3 and vim3l are different boards</li>
+<li>Install and use krecure through the network. The firmware on the board is required to be Ubuntu firmware</li>
+</ol>
+<h2 id="Mores" class="article-heading"><a href="#Mores" class="headerlink" title="Mores"></a>Mores<a class="article-anchor" href="#Mores" aria-hidden="true"></a></h2><p>What krecure can do is not only the parts mentioned in the document, but also the basic functions. For more functions, please refer to the following<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://youtu.be/ER4BOJUhoYU">https://youtu.be/ER4BOJUhoYU</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://youtu.be/vvpkbhnyhZY">https://youtu.be/vvpkbhnyhZY</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://forum.khadas.com/t/krescue-take-full-control-of-your-vim-device/5945">https://forum.khadas.com/t/krescue-take-full-control-of-your-vim-device/5945</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2021-05-18T06:32:17.088Z" itemprop="dateModified">Last updated: 2021-05-18</time>
+                <a href="HowToUpgradeTheSystem.html" class="article-footer-prev" title="Upgrade the System"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToSetupWatchdog.html" class="article-footer-next" title="Setup Watchdog"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-krescue"><span class="toc-text" title="What is krescue">What is krescue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Krescue-by-mirco-SD-card"><span class="toc-text" title="Install Krescue by mirco SD card">Install Krescue by mirco SD card</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Means-of-preparation"><span class="toc-text" title="Means of preparation">Means of preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Make-Krescue-startup-disk"><span class="toc-text" title="Make Krescue startup disk">Make Krescue startup disk</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#burning-tool-Etcher"><span class="toc-text" title="burning tool : Etcher">burning tool : Etcher</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#downloads-Krescue-images"><span class="toc-text" title="downloads Krescue images">downloads Krescue images</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Make-the-startup-disk"><span class="toc-text" title="Make the startup disk">Make the startup disk</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run"><span class="toc-text" title="Run">Run</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Krescue-by-Internet"><span class="toc-text" title="Install Krescue by Internet">Install Krescue by Internet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Means-of-preparation-1"><span class="toc-text" title="Means of preparation">Means of preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-by-Internet"><span class="toc-text" title="Install by Internet">Install by Internet</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-krescue"><span class="toc-text" title="Use krescue">Use krescue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-text" title="Notes">Notes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mores"><span class="toc-text" title="Mores">Mores</span></a></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Beginners Guide</a><a href="VimInterfaces.html" class="sidebar-link">VIM1 Interfaces</a><a href="HowToConnectWifi.html" class="sidebar-link">Setup Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">Setup Bluetooth</a><a href="AddChineseSupport.html" class="sidebar-link">Chinese Support</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">Upgrade Android Using SD-Card</a><a href="BootFromExtMedia.html" class="sidebar-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="sidebar-link">Extra Power Input</a></details></strong><strong class="sidebar-title"><details><summary>Accessories</summary><a href="HowToSetupFan.html" class="sidebar-link first">Cooling FAN Setup</a></details></strong><strong class="sidebar-title"><details><summary>Development</summary><a href="CreateBurnCardViaCLI.html" class="sidebar-link first">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="SetupSerialTool.html" class="sidebar-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="sidebar-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="sidebar-link">GPIO Usage</a><a href="HowToAccessI2c.html" class="sidebar-link">I2C Usage</a></details></strong><strong class="sidebar-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="sidebar-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="sidebar-link first">Install Toolchains</a><a href="DownloadAndroidSourceCode.html" class="sidebar-link">Download Android Source Code</a><a href="BuildAndroid.html" class="sidebar-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="sidebar-link">Fast Package Update Image</a><a href="HowToUseADBTool.html" class="sidebar-link">ADB Usage</a></details></strong><strong class="sidebar-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">Build Ubuntu/Debian Image</a><a href="HowToUpgradeTheSystem.html" class="sidebar-link">Upgrade the System</a><a href="Krescue.html" class="sidebar-link current">Krescue</a><a href="HowToSetupWatchdog.html" class="sidebar-link">Setup Watchdog</a><a href="InstallDocker.html" class="sidebar-link">Install Docker</a><a href="HowToRotateFramebuffer.html" class="sidebar-link">Rotate Framebuffer Console</a><a href="HowToUseWiringPi.html" class="sidebar-link">WiringPi Usage</a><a href="HowToUseWiringPi-Python.html" class="sidebar-link">WiringPi-Python Usage</a><a href="HowToUpgradeTheUboot.html" class="sidebar-link">Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="sidebar-link">Upgrade The kernel</a><a href="HowToUseHardwarePWM.html" class="sidebar-link">Hardware PWM Usage</a><a href="HowToUseUart.html" class="sidebar-link">Uart Usage</a><a href="HowToControlLED.html" class="sidebar-link">LED Usage</a><a href="HowToTestGPIOIRQ.html" class="sidebar-link">GPIO IRQ Usage</a><a href="HowToSetAutoLogin.html" class="sidebar-link">Auto Login Setup</a><a href="HowToUse1wire.html" class="sidebar-link">1-Wire Usage</a><a href="HowToSetupHDMI.html" class="sidebar-link">HDMI Resolution Setup</a><a href="DisplayUbuntuLogo.html" class="sidebar-link">Enable/Disable Ubuntu logo</a><a href="HowToChangeBootLogo.html" class="sidebar-link">Change Boot Logo</a><a href="HowToCustomMac.html" class="sidebar-link">Custom MAC Address Setup</a><a href="HowToUseDeviceTreeOverlay.html" class="sidebar-link">Device Tree Overlay Usage</a><a href="HowToCustomIRCodeToBoot.html" class="sidebar-link">Custom IR Code Setup</a><a href="HowToSetupFramebufferConsoleFont.html" class="sidebar-link">Framebuffer Console Font Setup</a><a href="HowToWriteSDImageToEmmc.html" class="sidebar-link">Write SD Image To eMMC</a><a href="HowToUseHardwareDecodingLibrary.html" class="sidebar-link">Hardware Decoding Library Usage</a><a href="HowToUseHardwareEncodingLibrary.html" class="sidebar-link">Hardware Encoding Library Usage</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="sidebar-link">32-bit Applications Usage</a><a href="HowToConfigureWi-FiToWorkInSTA+APMode.html" class="sidebar-link">Wi-Fi STA+AP Mode Setup</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2021 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/vim1/" class="mobile-nav-link secondary current">VIM1</a><a href="/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/vim3/" class="mobile-nav-link secondary ">VIM3</a></details></strong><a href="/edge/" class="mobile-nav-link  header">Edge</a><a href="/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/hardware/hardwareVim1" class="mobile-nav-link  header">Hardware</a><a href="/firmware/Vim1AndroidFirmware" class="mobile-nav-link  header">Firmware</a><a href="/faq/" class="mobile-nav-link  header">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Beginners Guide</a><a href="VimInterfaces.html" class="mobile-nav-link">VIM1 Interfaces</a><a href="HowToConnectWifi.html" class="mobile-nav-link">Setup Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">Setup Bluetooth</a><a href="AddChineseSupport.html" class="mobile-nav-link">Chinese Support</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">Enter Upgrade Mode</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">Upgrade Using USB-C Cable</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">Upgrade Android Using SD-Card</a><a href="BootFromExtMedia.html" class="mobile-nav-link">Boot From External Media</a><a href="ExtraPowerInput.html" class="mobile-nav-link">Extra Power Input</a></details></strong><strong class="mobile-nav-title"><details><summary>Accessories</summary><a href="HowToSetupFan.html" class="mobile-nav-link first">Cooling FAN Setup</a></details></strong><strong class="mobile-nav-title"><details><summary>Development</summary><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link first">Create Burning Card Using CLI</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="SetupSerialTool.html" class="mobile-nav-link">Serial Debugging Tool</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">Erase eMMC Storage</a><a href="HowToAccessGpio.html" class="mobile-nav-link">GPIO Usage</a><a href="HowToAccessI2c.html" class="mobile-nav-link">I2C Usage</a></details></strong><strong class="mobile-nav-title"><details><summary>U-Boot</summary><a href="UBootUsage.html" class="mobile-nav-link first">U-boot Usage Guide</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">Boot Logo For U-boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="mobile-nav-link first">Install Toolchains</a><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link">Download Android Source Code</a><a href="BuildAndroid.html" class="mobile-nav-link">Build Android Source Code</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">Fast Package Update Image</a><a href="HowToUseADBTool.html" class="mobile-nav-link">ADB Usage</a></details></strong><strong class="mobile-nav-title"><details open><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">Build Ubuntu/Debian Image</a><a href="HowToUpgradeTheSystem.html" class="mobile-nav-link">Upgrade the System</a><a href="Krescue.html" class="mobile-nav-link current">Krescue</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">Setup Watchdog</a><a href="InstallDocker.html" class="mobile-nav-link">Install Docker</a><a href="HowToRotateFramebuffer.html" class="mobile-nav-link">Rotate Framebuffer Console</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">WiringPi Usage</a><a href="HowToUseWiringPi-Python.html" class="mobile-nav-link">WiringPi-Python Usage</a><a href="HowToUpgradeTheUboot.html" class="mobile-nav-link">Upgrade The u-boot</a><a href="HowToUpgradeTheKernel.html" class="mobile-nav-link">Upgrade The kernel</a><a href="HowToUseHardwarePWM.html" class="mobile-nav-link">Hardware PWM Usage</a><a href="HowToUseUart.html" class="mobile-nav-link">Uart Usage</a><a href="HowToControlLED.html" class="mobile-nav-link">LED Usage</a><a href="HowToTestGPIOIRQ.html" class="mobile-nav-link">GPIO IRQ Usage</a><a href="HowToSetAutoLogin.html" class="mobile-nav-link">Auto Login Setup</a><a href="HowToUse1wire.html" class="mobile-nav-link">1-Wire Usage</a><a href="HowToSetupHDMI.html" class="mobile-nav-link">HDMI Resolution Setup</a><a href="DisplayUbuntuLogo.html" class="mobile-nav-link">Enable/Disable Ubuntu logo</a><a href="HowToChangeBootLogo.html" class="mobile-nav-link">Change Boot Logo</a><a href="HowToCustomMac.html" class="mobile-nav-link">Custom MAC Address Setup</a><a href="HowToUseDeviceTreeOverlay.html" class="mobile-nav-link">Device Tree Overlay Usage</a><a href="HowToCustomIRCodeToBoot.html" class="mobile-nav-link">Custom IR Code Setup</a><a href="HowToSetupFramebufferConsoleFont.html" class="mobile-nav-link">Framebuffer Console Font Setup</a><a href="HowToWriteSDImageToEmmc.html" class="mobile-nav-link">Write SD Image To eMMC</a><a href="HowToUseHardwareDecodingLibrary.html" class="mobile-nav-link">Hardware Decoding Library Usage</a><a href="HowToUseHardwareEncodingLibrary.html" class="mobile-nav-link">Hardware Encoding Library Usage</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="mobile-nav-link">32-bit Applications Usage</a><a href="HowToConfigureWi-FiToWorkInSTA+APMode.html" class="mobile-nav-link">Wi-Fi STA+AP Mode Setup</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim1/Krescue.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

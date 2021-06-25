@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainInception.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/vim3/HowToTrainInception.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/vim3/HowToTrainInception.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow 12$ mkdir inception$ cd inception  准备数据集这里以flowers图片集为例 123$ mkdir">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khadas Documentation">
+<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim3/HowToTrainInception">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="训练inception模型inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型. 准备训练环境和数据集安装TensorFlow安装TensorFlow按照这里进行安装:安装TensorFlow 12$ mkdir inception$ cd inception  准备数据集这里以flowers图片集为例 123$ mkdir">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-18T06:32:17.096Z">
+<meta property="article:modified_time" content="2021-05-18T06:32:17.096Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/zh-cn/vim3/" class="main-nav-link secondary current">VIM3</a></li></ul></div><a href="/zh-cn/edge/" class="main-nav-link  header">Edge</a><a href="/zh-cn/tone1/" class="main-nav-link  header">Tone1</a><a href="/zh-cn/hardware/hardwareVim3" class="main-nav-link  header">硬件资料</a><a href="/zh-cn/firmware/Vim3AndroidFirmware" class="main-nav-link  header">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link  header">FAQ</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/HowToTrainInception.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim3/HowToTrainInception.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="训练inception模型" class="article-heading"><a href="#训练inception模型" class="headerlink" title="训练inception模型"></a>训练inception模型<a class="article-anchor" href="#训练inception模型" aria-hidden="true"></a></h1><p>inception模型是一个用于监测物体的模型，同时只能监测一个物体。这里使用TensorFlow版本的inception模型.</p>
+<h2 id="准备训练环境和数据集" class="article-heading"><a href="#准备训练环境和数据集" class="headerlink" title="准备训练环境和数据集"></a>准备训练环境和数据集<a class="article-anchor" href="#准备训练环境和数据集" aria-hidden="true"></a></h2><h3 id="安装TensorFlow" class="article-heading"><a href="#安装TensorFlow" class="headerlink" title="安装TensorFlow"></a>安装TensorFlow<a class="article-anchor" href="#安装TensorFlow" aria-hidden="true"></a></h3><p>安装TensorFlow按照这里进行安装:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.tensorflow.org/install/pip?lang=python3">安装TensorFlow</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir inception</span><br><span class="line">$ <span class="built_in">cd</span> inception</span><br></pre></td></tr></table></figure>
+
+<h3 id="准备数据集" class="article-heading"><a href="#准备数据集" class="headerlink" title="准备数据集"></a>准备数据集<a class="article-anchor" href="#准备数据集" aria-hidden="true"></a></h3><p>这里以flowers图片集为例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir data/</span><br><span class="line">$ <span class="built_in">cd</span> data/</span><br><span class="line">$ mkdir flowers/</span><br></pre></td></tr></table></figure>
+<p>将图片放入其中，如下图所示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">daisy  dandelion  roses  sunflowers  tulips</span><br></pre></td></tr></table></figure>
+<p>每个图片的分类中图片至少要300以上</p>
+<h3 id="下载checkpoints文件" class="article-heading"><a href="#下载checkpoints文件" class="headerlink" title="下载checkpoints文件"></a>下载checkpoints文件<a class="article-anchor" href="#下载checkpoints文件" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ mkdir checkpoints</span><br><span class="line">$ <span class="built_in">cd</span> checkpoints</span><br><span class="line">$ wget http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz</span><br><span class="line">$ tar zxvf inception_v3_2016_08_28.tar.gz</span><br><span class="line">$ rm inception_v3_2016_08_28.tar.gz</span><br></pre></td></tr></table></figure>
+<p>在checkpoints文件夹中有一个inception模型的ckpt文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">inception_v3.ckpt</span><br></pre></td></tr></table></figure>
+<h3 id="clone训练用的slim工具" class="article-heading"><a href="#clone训练用的slim工具" class="headerlink" title="clone训练用的slim工具"></a>clone训练用的slim工具<a class="article-anchor" href="#clone训练用的slim工具" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/tensorflow/models.git</span><br></pre></td></tr></table></figure>
+
+<p>最后完整的目录如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">checkpoints  data  models</span><br></pre></td></tr></table></figure>
+<h2 id="转换数据集" class="article-heading"><a href="#转换数据集" class="headerlink" title="转换数据集"></a>转换数据集<a class="article-anchor" href="#转换数据集" aria-hidden="true"></a></h2><p>数据集准备好以后需要转转换成TensorFlow的图片格式，提供给TensorFlow训练，加快训练速度。</p>
+<h3 id="1-准备labels文件" class="article-heading"><a href="#1-准备labels文件" class="headerlink" title="1.准备labels文件"></a>1.准备labels文件<a class="article-anchor" href="#1-准备labels文件" aria-hidden="true"></a></h3><p>labels文件是模型用来验证和识别训练集的标识</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> data/</span><br><span class="line">$ vim labels.txt</span><br></pre></td></tr></table></figure>
+<p>每个类一行，我的图片集有5个类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0:daisy</span><br><span class="line">1:dandelion</span><br><span class="line">2:roses</span><br><span class="line">3:sunflowers</span><br><span class="line">4:tulips</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-生成list文件" class="article-heading"><a href="#2-生成list文件" class="headerlink" title="2.生成list文件"></a>2.生成list文件<a class="article-anchor" href="#2-生成list文件" aria-hidden="true"></a></h3><p>list文件将每个图片和labels对应起来.</p>
+<h4 id="generate-list-py" class="article-heading"><a href="#generate-list-py" class="headerlink" title="generate_list.py"></a>generate_list.py<a class="article-anchor" href="#generate-list-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim generate_list.py</span><br></pre></td></tr></table></figure>
+<p>将下面的python代码写入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">data_dir = &#x27;flowers/&#x27;</span><br><span class="line">class_names_to_ids = &#123;&#x27;daisy&#x27;: 0, &#x27;dandelion&#x27;: 1, &#x27;roses&#x27;: 2, &#x27;sunflowers&#x27;: 3, &#x27;tulips&#x27;: 4&#125;</span><br><span class="line">output_path = &#x27;list.txt&#x27;</span><br><span class="line">fd = open(output_path, &#x27;w&#x27;)</span><br><span class="line">for class_name in class_names_to_ids.keys():</span><br><span class="line">    images_list = os.listdir(data_dir + class_name)</span><br><span class="line">    for image_name in images_list:</span><br><span class="line">        fd.write(&#x27;&#123;&#125;/&#123;&#125; &#123;&#125;\n&#x27;.format(class_name, image_name, class_names_to_ids[class_name]))</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure>
+<p>注意图中的class要与labels文件对应起来</p>
+<h4 id="运行生成list文件" class="article-heading"><a href="#运行生成list文件" class="headerlink" title="运行生成list文件"></a>运行生成list文件<a class="article-anchor" href="#运行生成list文件" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 generate_list.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-生成train和val文件" class="article-heading"><a href="#3-生成train和val文件" class="headerlink" title="3.生成train和val文件"></a>3.生成train和val文件<a class="article-anchor" href="#3-生成train和val文件" aria-hidden="true"></a></h3><p>random_data.py将文件随便分成训练集和验证集</p>
+<h4 id="random-data-py" class="article-heading"><a href="#random-data-py" class="headerlink" title="random_data.py"></a>random_data.py<a class="article-anchor" href="#random-data-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim random_data.py</span><br></pre></td></tr></table></figure>
+<p>把下面的代码写入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">_NUM_VALIDATION = 350</span><br><span class="line">_RANDOM_SEED = 0</span><br><span class="line">list_path = &#x27;list.txt&#x27;</span><br><span class="line">train_list_path = &#x27;list_train.txt&#x27;</span><br><span class="line">val_list_path = &#x27;list_val.txt&#x27;</span><br><span class="line"></span><br><span class="line">fd = open(list_path)</span><br><span class="line">lines = fd.readlines()</span><br><span class="line">fd.close()</span><br><span class="line">random.seed(_RANDOM_SEED)</span><br><span class="line">random.shuffle(lines)</span><br><span class="line"></span><br><span class="line">fd = open(train_list_path, &#x27;w&#x27;)</span><br><span class="line">for line in lines[_NUM_VALIDATION:]:</span><br><span class="line">    fd.write(line)</span><br><span class="line">fd.close()</span><br><span class="line">fd = open(val_list_path, &#x27;w&#x27;)</span><br><span class="line">for line in lines[:_NUM_VALIDATION]:</span><br><span class="line">    fd.write(line)</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure>
+<p>上图中的<code>_NUM_VALIDATION</code>为验证集的数据大小，可修改。</p>
+<h4 id="生成训练集和验证集" class="article-heading"><a href="#生成训练集和验证集" class="headerlink" title="生成训练集和验证集"></a>生成训练集和验证集<a class="article-anchor" href="#生成训练集和验证集" aria-hidden="true"></a></h4><p>运行这个脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 random_data.py</span><br></pre></td></tr></table></figure>
+<p>在当前目录下，会生成list_train.txt和list_val.txt</p>
+<h3 id="4-转换数据集" class="article-heading"><a href="#4-转换数据集" class="headerlink" title="4.转换数据集"></a>4.转换数据集<a class="article-anchor" href="#4-转换数据集" aria-hidden="true"></a></h3><p>使用TensorFlow接口转换</p>
+<h4 id="转换脚本generate-TFRecord-py" class="article-heading"><a href="#转换脚本generate-TFRecord-py" class="headerlink" title="转换脚本generate_TFRecord.py"></a>转换脚本generate_TFRecord.py<a class="article-anchor" href="#转换脚本generate-TFRecord-py" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim generate_TFRecord.py</span><br></pre></td></tr></table></figure>
+<p>将下面代码写入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">sys.path.insert(0, &#x27;../models/research/slim/&#x27;)</span><br><span class="line">from datasets import dataset_utils</span><br><span class="line">import math</span><br><span class="line">import os</span><br><span class="line">import tensorflow as tf</span><br><span class="line">def convert_dataset(list_path, data_dir, output_dir, _NUM_SHARDS=5):</span><br><span class="line">    fd = open(list_path)</span><br><span class="line">    lines = [line.split() for line in fd]</span><br><span class="line">    fd.close()</span><br><span class="line">    num_per_shard = int(math.ceil(len(lines) / float(_NUM_SHARDS)))</span><br><span class="line">    with tf.Graph().as_default():</span><br><span class="line">        decode_jpeg_data = tf.placeholder(dtype=tf.string)</span><br><span class="line">        decode_jpeg = tf.image.decode_jpeg(decode_jpeg_data, channels=3)</span><br><span class="line">        with tf.Session(&#x27;&#x27;) as sess:</span><br><span class="line">            for shard_id in range(_NUM_SHARDS):</span><br><span class="line">                output_path = os.path.join(output_dir,</span><br><span class="line">                    data_dir+&#x27;_&#x27;+output_dir+&#x27;_&#123;:05&#125;-of-&#123;:05&#125;.tfrecord&#x27;.format(shard_id, _NUM_SHARDS))</span><br><span class="line">                tfrecord_writer = tf.python_io.TFRecordWriter(output_path)</span><br><span class="line">                start_ndx = shard_id * num_per_shard</span><br><span class="line">                end_ndx = min((shard_id + 1) * num_per_shard, len(lines))</span><br><span class="line">                for i in range(start_ndx, end_ndx):</span><br><span class="line">                    sys.stdout.write(&#x27;\r&gt;&gt; Converting image &#123;&#125;/&#123;&#125; shard &#123;&#125;&#x27;.format(</span><br><span class="line">                        i + 1, len(lines), shard_id))</span><br><span class="line">                    sys.stdout.flush()</span><br><span class="line">                    image_data = tf.gfile.FastGFile(os.path.join(data_dir, lines[i][0]), &#x27;rb&#x27;).read()</span><br><span class="line">                    image = sess.run(decode_jpeg, feed_dict=&#123;decode_jpeg_data: image_data&#125;)</span><br><span class="line">                    height, width = image.shape[0], image.shape[1]</span><br><span class="line">                    example = dataset_utils.image_to_tfexample(</span><br><span class="line">                        image_data, b&#x27;jpg&#x27;, height, width, int(lines[i][1]))</span><br><span class="line">                    tfrecord_writer.write(example.SerializeToString())</span><br><span class="line">                tfrecord_writer.close()</span><br><span class="line">    sys.stdout.write(&#x27;\n&#x27;)</span><br><span class="line">    sys.stdout.flush()</span><br><span class="line">os.system(&#x27;mkdir -p train&#x27;)</span><br><span class="line">convert_dataset(&#x27;list_train.txt&#x27;, &#x27;flowers&#x27;, &#x27;train&#x27;)</span><br><span class="line">os.system(&#x27;mkdir -p val&#x27;)</span><br><span class="line">convert_dataset(&#x27;list_val.txt&#x27;, &#x27;flowers&#x27;, &#x27;val&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="生成TensorFlow数据集" class="article-heading"><a href="#生成TensorFlow数据集" class="headerlink" title="生成TensorFlow数据集"></a>生成TensorFlow数据集<a class="article-anchor" href="#生成TensorFlow数据集" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 generate_TFRecord.py</span><br></pre></td></tr></table></figure>
+<p>会生成train和val两个文件夹</p>
+<p>所有转换工作完成以后，文件夹如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── flowers</span><br><span class="line">│   ├── daisy</span><br><span class="line">│   ├── dandelion</span><br><span class="line">│   ├── roses</span><br><span class="line">│   ├── sunflowers</span><br><span class="line">│   └── tulips</span><br><span class="line">├── generate_list.py</span><br><span class="line">├── generate_TFRecord.py</span><br><span class="line">├── labels.txt</span><br><span class="line">├── list_train.txt</span><br><span class="line">├── list.txt</span><br><span class="line">├── list_val.txt</span><br><span class="line">├── random_data.py</span><br><span class="line">├── train</span><br><span class="line">└── val</span><br></pre></td></tr></table></figure>
+
+<h2 id="训练" class="article-heading"><a href="#训练" class="headerlink" title="训练"></a>训练<a class="article-anchor" href="#训练" aria-hidden="true"></a></h2><ol>
+<li>TensorFlow框架的训练可以分成两种，微调或者从头训练。</li>
+<li>使用的是TensorFlow官方的slim工具<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> models/research/slim</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="训练方式" class="article-heading"><a href="#训练方式" class="headerlink" title="训练方式"></a>训练方式<a class="article-anchor" href="#训练方式" aria-hidden="true"></a></h3><h4 id="从头训练inception模型" class="article-heading"><a href="#从头训练inception模型" class="headerlink" title="从头训练inception模型"></a>从头训练inception模型<a class="article-anchor" href="#从头训练inception模型" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_train</span><br><span class="line">python train_image_classifier.py \</span><br><span class="line">    --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">    --dataset_name=flowers \</span><br><span class="line">    --dataset_split_name=train \</span><br><span class="line">    --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">    --model_name=inception_v3</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>DATASET_DIR 是训练数据集的路径，也就是刚才在data目录下生成的train目录</li>
+<li>TRAIN_DIR   是训练产生的数据保存的路径</li>
+<li>train_image_classifier.py   slim工具训练的脚本</li>
+<li>参数<br><code>--train_dir</code>          训练数据保存的路径<br><code>--dataset_name</code>       数据集的总名称<br><code>--dataset_split_name</code> 训练集的名称<br><code>--dataset_dir</code>        训练集路径<br><code>--model_name</code>         指定inception_v3模型，加载相应的神经网络<br>CHECKPOINT_PATH</li>
+</ol>
+</blockquote>
+<h4 id="微调inception模型" class="article-heading"><a href="#微调inception模型" class="headerlink" title="微调inception模型"></a>微调inception模型<a class="article-anchor" href="#微调inception模型" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_retrain</span><br><span class="line">$ CHECKPOINT_PATH=../../../checkpoints/inception_v3.ckpt</span><br><span class="line">$ python train_image_classifier.py \</span><br><span class="line">    --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">    --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">    --dataset_name=flowers \</span><br><span class="line">    --dataset_split_name=train \</span><br><span class="line">    --model_name=inception_v3 \</span><br><span class="line">    --checkpoint_path=<span class="variable">$&#123;CHECKPOINT_PATH&#125;</span> \</span><br><span class="line">    --checkpoint_exclude_scopes=InceptionV3/Logits,InceptionV3/AuxLogits \</span><br><span class="line">    --trainable_scopes=InceptionV3/Logits,InceptionV3/AuxLogits</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ol>
+<li>DATASET_DIR                  训练数据集的路径，也就是刚才在data目录下生成的train目录</li>
+<li>TRAIN_DIR                    训练产生的数据保存的路径</li>
+<li>CHECKPOINT_PATH              预训练的模型文件路径</li>
+<li>train_image_classifier.py    slim工具训练的脚本</li>
+<li>参数<br><code>--train_dir</code>          训练数据保存的路径<br><code>--dataset_name</code>       数据集的总名称<br><code>--dataset_split_name</code> 训练集的名称<br><code>--dataset_dir</code>        训练集路径<br><code>--model_name</code>         指定inception_v3模型，加载相应的神经网络<br><code>--checkpoint_path</code>    指定加载的预训练模型<br><code>--checkpoint_exclude_scopes</code> –trainable_scopes 锁定其它层，并只训练制定的层</li>
+</ol>
+</blockquote>
+<h3 id="查看训练过程" class="article-heading"><a href="#查看训练过程" class="headerlink" title="查看训练过程"></a>查看训练过程<a class="article-anchor" href="#查看训练过程" aria-hidden="true"></a></h3><h4 id="tensorboard" class="article-heading"><a href="#tensorboard" class="headerlink" title="tensorboard"></a>tensorboard<a class="article-anchor" href="#tensorboard" aria-hidden="true"></a></h4><p>tensorboard是TensorFlow框架用来查看训练过程的工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tensorboard --logdir=<span class="variable">$&#123;TRAIN_DIR&#125;</span></span><br></pre></td></tr></table></figure>
+<p>会看到类似的信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TensorBoard 1.14.0 at http://yan-pc:6006/ (Press CTRL+C to quit)</span><br></pre></td></tr></table></figure>
+<p>通过浏览器打开就可以看到相应的界面了。</p>
+<h3 id="训练数据处理" class="article-heading"><a href="#训练数据处理" class="headerlink" title="训练数据处理"></a>训练数据处理<a class="article-anchor" href="#训练数据处理" aria-hidden="true"></a></h3><p>训练的数据都保存在TRAIN_DIR指定的路径中</p>
+<h4 id="导出graph" class="article-heading"><a href="#导出graph" class="headerlink" title="导出graph"></a>导出graph<a class="article-anchor" href="#导出graph" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ TRAIN_DIR=/tmp/train_log/inception_v3_retrain</span><br><span class="line">$ DATASET_DIR=../../../data/train/</span><br><span class="line">$ python export_inference_graph.py \</span><br><span class="line">   --alsologtostderr \</span><br><span class="line">   --model_name=inception_v3 \</span><br><span class="line">   --train_dir=<span class="variable">$&#123;TRAIN_DIR&#125;</span> \</span><br><span class="line">   --dataset_dir=<span class="variable">$&#123;DATASET_DIR&#125;</span> \</span><br><span class="line">   --dataset_name=flowers \</span><br><span class="line">   --output_file=/tmp/inception_v3_inf_graph.pb</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>TRAIN_DIR                    训练产生的数据保存的路径</li>
+<li>DATASET_DIR                  训练数据集的路径，也就是刚才在data目录下生成的train目录</li>
+<li>export_inference_graph.py    导出训练数据的脚本</li>
+<li>参数<br><code>--train_dir</code>          训练数据保存的路径<br><code>--dataset_dir</code>        训练集路径<br><code>--model_name</code>         指定inception_v3模型，加载相应的神经网络<br><code>--dataset_name</code>       数据集的总名称<br><code>--output_file</code>        导出文件的位置</li>
+</ol>
+</blockquote>
+<h4 id="冻结graph" class="article-heading"><a href="#冻结graph" class="headerlink" title="冻结graph"></a>冻结graph<a class="article-anchor" href="#冻结graph" aria-hidden="true"></a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ python ~/path/to/tensorflow/tensorflow/python/tools/freeze_graph.py \</span><br><span class="line">    --input_graph=/tmp/inception_v3_inf_graph.pb \</span><br><span class="line">    --input_checkpoint=&#123;TRAIN_DIR&#125;/model.ckpt-66505 \</span><br><span class="line">    --input_binary=<span class="literal">true</span> --output_graph=/tmp/frozen_inception_v3.pb \</span><br><span class="line">    --output_node_names=InceptionV3/Predictions/Reshape_1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>freeze_graph工具是TensorFlow用来冻结graph的工具。工具的编译可以参考这里:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/tensorflow/models/tree/master/research/slim">TensorFlow工具的编译和使用</a></li>
+<li>参数<br><code>--input_graph</code>        输入的graph的位置<br><code>--input_checkpoint</code>   最后生成的ckpt文件，具体查看TRAIN_DIR下的checkpoint文件<br><code>--output_graph</code>       输出冻结后的graph的位置<br><code>--output_node_names</code>  输出的节点</li>
+</ol>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2021-05-18T06:32:17.096Z" itemprop="dateModified">上次更新：2021-05-18</time>
+                <a href="index.html" class="article-footer-next" title="概述"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text" title="训练inception模型">训练inception模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E8%AE%AD%E7%BB%83%E7%8E%AF%E5%A2%83%E5%92%8C%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text" title="准备训练环境和数据集">准备训练环境和数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85TensorFlow"><span class="toc-text" title="安装TensorFlow">安装TensorFlow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text" title="准备数据集">准备数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDcheckpoints%E6%96%87%E4%BB%B6"><span class="toc-text" title="下载checkpoints文件">下载checkpoints文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clone%E8%AE%AD%E7%BB%83%E7%94%A8%E7%9A%84slim%E5%B7%A5%E5%85%B7"><span class="toc-text" title="clone训练用的slim工具">clone训练用的slim工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text" title="转换数据集">转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87labels%E6%96%87%E4%BB%B6"><span class="toc-text" title="1.准备labels文件">1.准备labels文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%9F%E6%88%90list%E6%96%87%E4%BB%B6"><span class="toc-text" title="2.生成list文件">2.生成list文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#generate-list-py"><span class="toc-text" title="generate_list.py">generate_list.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%94%9F%E6%88%90list%E6%96%87%E4%BB%B6"><span class="toc-text" title="运行生成list文件">运行生成list文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%94%9F%E6%88%90train%E5%92%8Cval%E6%96%87%E4%BB%B6"><span class="toc-text" title="3.生成train和val文件">3.生成train和val文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#random-data-py"><span class="toc-text" title="random_data.py">random_data.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E8%AE%AD%E7%BB%83%E9%9B%86%E5%92%8C%E9%AA%8C%E8%AF%81%E9%9B%86"><span class="toc-text" title="生成训练集和验证集">生成训练集和验证集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BD%AC%E6%8D%A2%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text" title="4.转换数据集">4.转换数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E8%84%9A%E6%9C%ACgenerate-TFRecord-py"><span class="toc-text" title="转换脚本generate_TFRecord.py">转换脚本generate_TFRecord.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90TensorFlow%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text" title="生成TensorFlow数据集">生成TensorFlow数据集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83"><span class="toc-text" title="训练">训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%96%B9%E5%BC%8F"><span class="toc-text" title="训练方式">训练方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E5%A4%B4%E8%AE%AD%E7%BB%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text" title="从头训练inception模型">从头训练inception模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E8%B0%83inception%E6%A8%A1%E5%9E%8B"><span class="toc-text" title="微调inception模型">微调inception模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="toc-text" title="查看训练过程">查看训练过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tensorboard"><span class="toc-text" title="tensorboard">tensorboard</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-text" title="训练数据处理">训练数据处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%87%BAgraph"><span class="toc-text" title="导出graph">导出graph</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%BB%E7%BB%93graph"><span class="toc-text" title="冻结graph">冻结graph</span></a></li></ol></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="Vim3Interfaces.html" class="sidebar-link">VIM3接口描述</a><a href="HowToConnectWifi.html" class="sidebar-link">设置Wi-Fi</a><a href="HowToSetupBluetooth.html" class="sidebar-link">设置蓝牙</a><a href="AddChineseSupport.html" class="sidebar-link">增加中文支持</a><a href="HowtoBootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="sidebar-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="sidebar-link">通过TF卡升级安卓</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="sidebar-link">外部电源供电</a></details></strong><strong class="sidebar-title"><details><summary>配件</summary><a href="HowToSetupFan.html" class="sidebar-link first">设置风扇</a><a href="ConnectLcd.html" class="sidebar-link">配置触摸屏TS050</a><a href="UbuntuLandscapeSettings.html" class="sidebar-link">TS050屏幕旋转</a><a href="HowToUseMIPICamera.html" class="sidebar-link">MIPI摄像头用法</a><a href="HowToUseLTEModule.html" class="sidebar-link">LTE模块用法</a><a href="HowToEnableM2XETHThroughOverlays.html" class="sidebar-link">M2X ETH用法</a></details></strong><strong class="sidebar-title"><details><summary>开发</summary><a href="CreateBurnCardViaCLI.html" class="sidebar-link first">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="sidebar-link">擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="sidebar-link">GPIO用法</a><a href="HowToAccessI2c.html" class="sidebar-link">I2C接口用法</a><a href="HowtoUseWol.html" class="sidebar-link">WOL用法</a><a href="HowToSetupPcieUsbPort.html" class="sidebar-link">设置PCIe/USB3.0端口</a></details></strong><strong class="sidebar-title"><details><summary>NPU</summary><a href="HowToRunNPUDemo.html" class="sidebar-link first">NPU Demo用法</a><a href="HowToUseNPUSDK.html" class="sidebar-link">SDK使用说明</a><a href="HowToUseAmlNPUApp.html" class="sidebar-link">aml_npu_app源码仓库说明</a><a href="HowToConvertToUseNPU.html" class="sidebar-link">使用NPU跑自己的AI模型</a><a href="NPUPerformanceUsage.html" class="sidebar-link">NPU带宽及使用率说明文档</a><a href="HowToUseAMLNNApi.html" class="sidebar-link">AMLNNApi Demo用法</a><a href="HowToUseTengineSDK.html" class="sidebar-link">tengine SDK用法</a><a href="HowToUseTengineApp.html" class="sidebar-link">Tengine Demo用法</a></details></strong><strong class="sidebar-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="sidebar-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="sidebar-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="sidebar-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="sidebar-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="sidebar-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="sidebar-link first">安装交叉编译器</a><a href="DownloadAndroidSourceCode.html" class="sidebar-link">下载安卓源码</a><a href="BuildAndroid.html" class="sidebar-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="sidebar-link">快速打包安卓固件</a><a href="HowToUseADBTool.html" class="sidebar-link">ADB用法</a><a href="HowToUseFastboot.html" class="sidebar-link">Fastboot用法</a><a href="HowToAccessI2c_android.html" class="sidebar-link">I2C接口用法</a><a href="HowToEnableM2xEthernet_android.html" class="sidebar-link">如何使能M2x</a><a href="HowToChangeBootLogo_android.html" class="sidebar-link">更换开机Logo</a><a href="HowToChangeBootAnimation_android.html" class="sidebar-link">如何更新开机动画</a><a href="HowToUseUart_android.html" class="sidebar-link">串口用法</a><a href="HowToAppPlatformSign.html" class="sidebar-link">app如何系统签名</a><a href="HowToAddIr.html" class="sidebar-link">如何添加遥控器</a><a href="HowToUsePwm.html" class="sidebar-link">如何使用PWM</a><a href="HowToUseRecovery.html" class="sidebar-link">如何使用recovery</a></details></strong><strong class="sidebar-title"><details><summary>Linux</summary><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="HowToUpgradeTheSystem.html" class="sidebar-link">系统升级</a><a href="Krescue.html" class="sidebar-link">Krescue</a><a href="HowToSetupWatchdog.html" class="sidebar-link">设置看门狗</a><a href="InstallDocker.html" class="sidebar-link">安装Docker</a><a href="HowToRotateFramebuffer.html" class="sidebar-link">旋转Framebuffer Console</a><a href="HowToUseWiringPi.html" class="sidebar-link">WiringPi用法</a><a href="HowToUseWiringPi-Python.html" class="sidebar-link">wiringPi-Python用法</a><a href="HowToUpgradeTheUboot.html" class="sidebar-link">更新u-boot</a><a href="HowToUpgradeTheKernel.html" class="sidebar-link">更新内核</a><a href="HowToUseHardwarePWM.html" class="sidebar-link">使用硬件PWM</a><a href="HowToUseUart.html" class="sidebar-link">串口用法</a><a href="HowToControlLED.html" class="sidebar-link">LED灯用法</a><a href="HowToTestGPIOIRQ.html" class="sidebar-link">GPIO中断用法</a><a href="HowToSetAutoLogin.html" class="sidebar-link">设置自动登录</a><a href="HowToUse1wire.html" class="sidebar-link">单总线用法</a><a href="HowToSetupHDMI.html" class="sidebar-link">设置HDMI分辨率</a><a href="HowToSetupMaxCPUFrequency.html" class="sidebar-link">设置最大CPU频率</a><a href="DisplayUbuntuLogo.html" class="sidebar-link">显示/关闭Ubuntu logo</a><a href="HowToChangeBootLogo.html" class="sidebar-link">更换开机Logo</a><a href="HowToCustomMac.html" class="sidebar-link">自定义MAC地址</a><a href="HowToUseDeviceTreeOverlay.html" class="sidebar-link">Device Tree Overlay用法</a><a href="HowToCustomIRCodeToBoot.html" class="sidebar-link">自定义IR CODE启动系统</a><a href="HowToSetupFramebufferConsoleFont.html" class="sidebar-link">设置Framebuffer Console字体</a><a href="HowToWriteSDImageToEmmc.html" class="sidebar-link">把SD卡固件写入到eMMC</a><a href="HowToUseHardwareDecodingLibrary.html" class="sidebar-link">硬件解码库用法</a><a href="HowToUseHardwareEncodingLibrary.html" class="sidebar-link">使用硬件编码库</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="sidebar-link">64位系统下运行32位应用</a><a href="HowToConfigureWi-FiToWorkInSTA+APMode.html" class="sidebar-link">Wi-Fi同时配置STA+AP模式</a><a href="HowToUseUSBGadget.html" class="sidebar-link">USB Gadget用法</a><a href="GsensorSampleDemo.html" class="sidebar-link">Gsensor简单使用示例</a><a href="SDL2Usage.html" class="sidebar-link">SDL2 Mail使用说明</a><a href="PPSSPPUsage.html" class="sidebar-link">PPSSPP使用说明</a><a href="QT5Usage.html" class="sidebar-link">QT5的用法</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2021 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/zh-cn/vim3/" class="mobile-nav-link secondary current">VIM3</a></details></strong><a href="/zh-cn/edge/" class="mobile-nav-link  header">Edge</a><a href="/zh-cn/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/zh-cn/hardware/hardwareVim3" class="mobile-nav-link  header">硬件资料</a><a href="/zh-cn/firmware/Vim3AndroidFirmware" class="mobile-nav-link  header">固件下载</a><a href="/zh-cn/faq/" class="mobile-nav-link  header">FAQ</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="Vim3Interfaces.html" class="mobile-nav-link">VIM3接口描述</a><a href="HowToConnectWifi.html" class="mobile-nav-link">设置Wi-Fi</a><a href="HowToSetupBluetooth.html" class="mobile-nav-link">设置蓝牙</a><a href="AddChineseSupport.html" class="mobile-nav-link">增加中文支持</a><a href="HowtoBootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="UpgradeViaUSBCable.html" class="mobile-nav-link">通过USB升级</a><a href="UpgradeViaTFBurningCard.html" class="mobile-nav-link">通过TF卡升级安卓</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部媒体介质启动系统</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部电源供电</a></details></strong><strong class="mobile-nav-title"><details><summary>配件</summary><a href="HowToSetupFan.html" class="mobile-nav-link first">设置风扇</a><a href="ConnectLcd.html" class="mobile-nav-link">配置触摸屏TS050</a><a href="UbuntuLandscapeSettings.html" class="mobile-nav-link">TS050屏幕旋转</a><a href="HowToUseMIPICamera.html" class="mobile-nav-link">MIPI摄像头用法</a><a href="HowToUseLTEModule.html" class="mobile-nav-link">LTE模块用法</a><a href="HowToEnableM2XETHThroughOverlays.html" class="mobile-nav-link">M2X ETH用法</a></details></strong><strong class="mobile-nav-title"><details><summary>开发</summary><a href="CreateBurnCardViaCLI.html" class="mobile-nav-link first">通过命令行创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="HowtoEraseEMMC.html" class="mobile-nav-link">擦除eMMC存储器</a><a href="HowToAccessGpio.html" class="mobile-nav-link">GPIO用法</a><a href="HowToAccessI2c.html" class="mobile-nav-link">I2C接口用法</a><a href="HowtoUseWol.html" class="mobile-nav-link">WOL用法</a><a href="HowToSetupPcieUsbPort.html" class="mobile-nav-link">设置PCIe/USB3.0端口</a></details></strong><strong class="mobile-nav-title"><details><summary>NPU</summary><a href="HowToRunNPUDemo.html" class="mobile-nav-link first">NPU Demo用法</a><a href="HowToUseNPUSDK.html" class="mobile-nav-link">SDK使用说明</a><a href="HowToUseAmlNPUApp.html" class="mobile-nav-link">aml_npu_app源码仓库说明</a><a href="HowToConvertToUseNPU.html" class="mobile-nav-link">使用NPU跑自己的AI模型</a><a href="NPUPerformanceUsage.html" class="mobile-nav-link">NPU带宽及使用率说明文档</a><a href="HowToUseAMLNNApi.html" class="mobile-nav-link">AMLNNApi Demo用法</a><a href="HowToUseTengineSDK.html" class="mobile-nav-link">tengine SDK用法</a><a href="HowToUseTengineApp.html" class="mobile-nav-link">Tengine Demo用法</a></details></strong><strong class="mobile-nav-title"><details><summary>U-boot</summary><a href="BootFromSpiFlash.html" class="mobile-nav-link first">从SPI Flash启动系统</a><a href="UBootUsage.html" class="mobile-nav-link">U-boot使用说明</a><a href="BuildBootLogoForUboot.html" class="mobile-nav-link">编译U-boot启动Logo</a><a href="SetupTFTPServer.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="LoadImagesWithUBootViaTFTP.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-title"><details><summary>Android</summary><a href="InstallToolchains.html" class="mobile-nav-link first">安装交叉编译器</a><a href="DownloadAndroidSourceCode.html" class="mobile-nav-link">下载安卓源码</a><a href="BuildAndroid.html" class="mobile-nav-link">编译安卓源码</a><a href="FastPackageUpdateImage.html" class="mobile-nav-link">快速打包安卓固件</a><a href="HowToUseADBTool.html" class="mobile-nav-link">ADB用法</a><a href="HowToUseFastboot.html" class="mobile-nav-link">Fastboot用法</a><a href="HowToAccessI2c_android.html" class="mobile-nav-link">I2C接口用法</a><a href="HowToEnableM2xEthernet_android.html" class="mobile-nav-link">如何使能M2x</a><a href="HowToChangeBootLogo_android.html" class="mobile-nav-link">更换开机Logo</a><a href="HowToChangeBootAnimation_android.html" class="mobile-nav-link">如何更新开机动画</a><a href="HowToUseUart_android.html" class="mobile-nav-link">串口用法</a><a href="HowToAppPlatformSign.html" class="mobile-nav-link">app如何系统签名</a><a href="HowToAddIr.html" class="mobile-nav-link">如何添加遥控器</a><a href="HowToUsePwm.html" class="mobile-nav-link">如何使用PWM</a><a href="HowToUseRecovery.html" class="mobile-nav-link">如何使用recovery</a></details></strong><strong class="mobile-nav-title"><details><summary>Linux</summary><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="HowToUpgradeTheSystem.html" class="mobile-nav-link">系统升级</a><a href="Krescue.html" class="mobile-nav-link">Krescue</a><a href="HowToSetupWatchdog.html" class="mobile-nav-link">设置看门狗</a><a href="InstallDocker.html" class="mobile-nav-link">安装Docker</a><a href="HowToRotateFramebuffer.html" class="mobile-nav-link">旋转Framebuffer Console</a><a href="HowToUseWiringPi.html" class="mobile-nav-link">WiringPi用法</a><a href="HowToUseWiringPi-Python.html" class="mobile-nav-link">wiringPi-Python用法</a><a href="HowToUpgradeTheUboot.html" class="mobile-nav-link">更新u-boot</a><a href="HowToUpgradeTheKernel.html" class="mobile-nav-link">更新内核</a><a href="HowToUseHardwarePWM.html" class="mobile-nav-link">使用硬件PWM</a><a href="HowToUseUart.html" class="mobile-nav-link">串口用法</a><a href="HowToControlLED.html" class="mobile-nav-link">LED灯用法</a><a href="HowToTestGPIOIRQ.html" class="mobile-nav-link">GPIO中断用法</a><a href="HowToSetAutoLogin.html" class="mobile-nav-link">设置自动登录</a><a href="HowToUse1wire.html" class="mobile-nav-link">单总线用法</a><a href="HowToSetupHDMI.html" class="mobile-nav-link">设置HDMI分辨率</a><a href="HowToSetupMaxCPUFrequency.html" class="mobile-nav-link">设置最大CPU频率</a><a href="DisplayUbuntuLogo.html" class="mobile-nav-link">显示/关闭Ubuntu logo</a><a href="HowToChangeBootLogo.html" class="mobile-nav-link">更换开机Logo</a><a href="HowToCustomMac.html" class="mobile-nav-link">自定义MAC地址</a><a href="HowToUseDeviceTreeOverlay.html" class="mobile-nav-link">Device Tree Overlay用法</a><a href="HowToCustomIRCodeToBoot.html" class="mobile-nav-link">自定义IR CODE启动系统</a><a href="HowToSetupFramebufferConsoleFont.html" class="mobile-nav-link">设置Framebuffer Console字体</a><a href="HowToWriteSDImageToEmmc.html" class="mobile-nav-link">把SD卡固件写入到eMMC</a><a href="HowToUseHardwareDecodingLibrary.html" class="mobile-nav-link">硬件解码库用法</a><a href="HowToUseHardwareEncodingLibrary.html" class="mobile-nav-link">使用硬件编码库</a><a href="HowToRun32-bitApplicationsOn64-bitSystem.html" class="mobile-nav-link">64位系统下运行32位应用</a><a href="HowToConfigureWi-FiToWorkInSTA+APMode.html" class="mobile-nav-link">Wi-Fi同时配置STA+AP模式</a><a href="HowToUseUSBGadget.html" class="mobile-nav-link">USB Gadget用法</a><a href="GsensorSampleDemo.html" class="mobile-nav-link">Gsensor简单使用示例</a><a href="SDL2Usage.html" class="mobile-nav-link">SDL2 Mail使用说明</a><a href="PPSSPPUsage.html" class="mobile-nav-link">PPSSPP使用说明</a><a href="QT5Usage.html" class="mobile-nav-link">QT5的用法</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/HowToTrainInception.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
