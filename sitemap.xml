@@ -2,6 +2,181 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.khadas.com/vim1/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
+    
+    <lastmod>2021-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/</loc>
+    
+    <lastmod>2021-07-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim1/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim2/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim1/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim2/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToTestGPIOIRQ</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToGetGpsData</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToGetGsensorData</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseAndroidNpuDemo</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseNpuJni</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/vim3/HowToUseSettingsCommand</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/firmware/EdgeAndroidFirmware</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToGetGpsData</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToGetGsensorData</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseAndroidNpuDemo</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseNpuJni</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/vim3/HowToUseSettingsCommand</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/EdgeAndroidFirmware</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/vim3/HowToUseAMLNNApi</loc>
     
     <lastmod>2021-06-25</lastmod>
@@ -184,13 +359,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/EdgeAndroidFirmware</loc>
-    
-    <lastmod>2021-06-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/edge/UpgradeViaUSBCable</loc>
     
     <lastmod>2021-06-05</lastmod>
@@ -220,13 +388,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaUSBCable</loc>
-    
-    <lastmod>2021-06-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/firmware/EdgeAndroidFirmware</loc>
     
     <lastmod>2021-06-05</lastmod>
     
@@ -618,13 +779,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/faq/</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/edge/AddChineseSupport</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -906,6 +1060,13 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/edge/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/zh-cn/faq/</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -1234,13 +1395,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/HowToConnectWifi</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -1319,13 +1473,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim1/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim1/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -1724,13 +1871,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/vim2/HowToConnectWifi</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -1809,13 +1949,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim2/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim2/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -2095,13 +2228,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToConnectWifi</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -2180,13 +2306,6 @@
   
   <url>
     <loc>https://docs.khadas.com/zh-cn/vim3/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/zh-cn/vim3/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -2494,13 +2613,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/vim1/HowToConnectWifi</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -2579,13 +2691,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim1/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim1/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -2795,13 +2900,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim1/</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/vim2/BuildAndroid</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -2831,13 +2929,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim2/HowToChangeBootLogo</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -2922,13 +3013,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim2/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim2/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -3264,13 +3348,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim3/HowToConfigureWi-FiToWorkInSTA+APMode</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/vim3/HowToConnectWifi</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -3391,13 +3468,6 @@
   
   <url>
     <loc>https://docs.khadas.com/vim3/HowToSetupWatchdog</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/vim3/HowToTestGPIOIRQ</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -3901,14 +3971,14 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/DisplayUbuntuLogo</loc>
+    <loc>https://docs.khadas.com/vim2/DownloadAndroidSourceCode</loc>
     
     <lastmod>2021-05-18</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/vim2/DownloadAndroidSourceCode</loc>
+    <loc>https://docs.khadas.com/vim2/DisplayUbuntuLogo</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -4069,125 +4139,6 @@
   </url>
   
   <url>
-    <loc>https://docs.khadas.com/firmware/EdgeThirdpartyFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/EdgeUbuntuFirmwareReleaseNote</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim1AndroidFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim1ThirdpartyFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim2AndroidFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim2ThirdpartyFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim3AndroidFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim3ThirdpartyFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim3lAndroidFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/Vim3lThirdpartyFirmware</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareEdge</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/firmware/</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareTone1</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareVim1</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareVim2</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.khadas.com/hardware/hardwareVim3</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.khadas.com/edge/EdgeVInterfaces</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -4307,6 +4258,125 @@
   </url>
   
   <url>
+    <loc>https://docs.khadas.com/firmware/EdgeThirdpartyFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/EdgeUbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim1AndroidFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim1ThirdpartyFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim2AndroidFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim2ThirdpartyFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim3AndroidFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim3ThirdpartyFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim3lAndroidFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/Vim3lThirdpartyFirmware</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/firmware/</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareEdge</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareTone1</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareVim1</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareVim2</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/hardwareVim3</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.khadas.com/hardware/</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.khadas.com/zh-cn/firmware/EdgeUbuntuFirmwareReleaseNote</loc>
     
     <lastmod>2021-05-18</lastmod>
@@ -4407,7 +4477,7 @@
 
   <url>
     <loc>https://docs.khadas.com/</loc>
-    <lastmod>2021-06-25</lastmod>
+    <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
