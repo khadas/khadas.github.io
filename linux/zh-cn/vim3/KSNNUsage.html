@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>KSNN使用说明 | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/zh-cn/vim3/KSNNUsage.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/vim3/KSNNUsage.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/vim3/KSNNUsage.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/linux/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/linux//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/linux//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://khadas.github.io -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/linux/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/linux//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/linux/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="这篇文档主要介绍什么是KSNN以及如何在VIM3上面运行提供的示例。 安装KSNN clone代码到本地  khadas@Khadas:~$ git clone --recursive https:&#x2F;&#x2F;github.com&#x2F;khadas&#x2F;ksnn.git   安装依赖  khadas@Khadas:~$ pip3 install matplotlib   安装KSNN库  khadas@Khada">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KSNN使用说明">
+<meta property="og:url" content="https://khadas.github.io/zh-cn/vim3/KSNNUsage">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="这篇文档主要介绍什么是KSNN以及如何在VIM3上面运行提供的示例。 安装KSNN clone代码到本地  khadas@Khadas:~$ git clone --recursive https:&#x2F;&#x2F;github.com&#x2F;khadas&#x2F;ksnn.git   安装依赖  khadas@Khadas:~$ pip3 install matplotlib   安装KSNN库  khadas@Khada">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/linux/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/linux/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/linux/zh-cn/vim3/" class="main-nav-link secondary current">VIM3/3L</a></li><li class="submenu"><a href="/linux/zh-cn/vim4/" class="main-nav-link secondary ">VIM4</a></li></ul></div><a href="/linux/zh-cn/edge/" class="main-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="main-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim3" class="main-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/Vim3UbuntuFirmware" class="main-nav-link  header">固件下载</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/KSNNUsage.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">KSNN使用说明</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/linux/source/zh-cn/vim3/KSNNUsage.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>这篇文档主要介绍什么是KSNN以及如何在VIM3上面运行提供的示例。</p>
+<h2 id="安装KSNN" class="article-heading"><a href="#安装KSNN" class="headerlink" title="安装KSNN"></a>安装KSNN<a class="article-anchor" href="#安装KSNN" aria-hidden="true"></a></h2><ol>
+<li>clone代码到本地</li>
+</ol>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ git clone --recursive https://github.com/khadas/ksnn.git</pre>
+
+<ol start="2">
+<li>安装依赖</li>
+</ol>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ pip3 install matplotlib</pre>
+
+<ol start="3">
+<li>安装KSNN库</li>
+</ol>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ cd ksnn/ksnn</pre>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/ksnn</b></font>$ pip3 install ksnn-1.3-py3-none-any.whl</pre>
+
+<h2 id="使用示例" class="article-heading"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例<a class="article-anchor" href="#使用示例" aria-hidden="true"></a></h2><p>demo全部集中在examlpes目录下，</p>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ cd ksnn/examples/ &amp;&amp; ls
+<font color="#3465A4"><b>caffe</b></font>  <font color="#3465A4"><b>darknet</b></font>  <font color="#3465A4"><b>keras</b></font>  <font color="#3465A4"><b>onnx</b></font>  <font color="#3465A4"><b>pytorch</b></font>  <font color="#3465A4"><b>tensorflow</b></font>  <font color="#3465A4"><b>tflite</b></font></pre>
+
+<p>这里以Inception V3为例，其他demo是类似的。</p>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples</b></font>$ cd tensorflow &amp;&amp; ls
+README.md  box_priors.txt  <font color="#06989A"><b>data</b></font>  inceptionv3.py  <font color="#3465A4"><b>libs</b></font>  mobilenet_ssd_picture.py  <font color="#3465A4"><b>models</b></font></pre>
+
+<p>运行的命令和转换参数都在对应目录下的<code>README</code>文件里。</p>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples/tensorflow</b></font>$ cat README.md</pre>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run</span></span><br><span class="line"></span><br><span class="line">$ python3 inceptionv3.py --model ./models/VIM3/inceptionv3.nb --library ./libs/libnn_inceptionv3.so --picture ./data/goldfish_299x299.jpg --level 0</span><br><span class="line">$ python3 mobilenet_ssd_picture.py --model ./models/VIM3/mobilenet_ssd.nb --library ./libs/libnn_mobilenet_ssd.so --picture data/1080p.bmp --level 0</span><br><span class="line"></span><br><span class="line"><span class="comment"># Convert</span></span><br><span class="line"></span><br><span class="line">$ ./convert \</span><br><span class="line">--model-name inception \</span><br><span class="line">--platform tensorflow \</span><br><span class="line">--model inception_v3_2016_08_28_frozen.pb \</span><br><span class="line">--input-size-list <span class="string">&#x27;299,299,3&#x27;</span> \</span><br><span class="line">--inputs input \</span><br><span class="line">--outputs InceptionV3/Predictions/Reshape_1 \</span><br><span class="line">--mean-values <span class="string">&#x27;128,128,128,128&#x27;</span> \</span><br><span class="line">--quantized-dtype asymmetric_affine \</span><br><span class="line">--kboard VIM3 --print-level 1</span><br><span class="line"></span><br><span class="line">$ ./convert \</span><br><span class="line">--model-name mobilenet_ssd \</span><br><span class="line">--platform tensorflow \</span><br><span class="line">--model ssd_mobilenet_v1_coco_2017_11_17.pb \</span><br><span class="line">--input-size-list <span class="string">&#x27;300,300,3&#x27;</span> \</span><br><span class="line">--inputs FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/BatchNorm/batchnorm/mul_1 \</span><br><span class="line">--outputs <span class="string">&quot;&#x27;concat concat_1&#x27;&quot;</span> \</span><br><span class="line">--mean-values <span class="string">&#x27;127.5,127.5,127.5,127.5&#x27;</span> \</span><br><span class="line">--quantized-dtype asymmetric_affine \</span><br><span class="line">--kboard VIM3 --print-level 1</span><br><span class="line"></span><br><span class="line">If you use VIM3L , please use `VIM3L` to replace `VIM3`</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行Inception V3.</p>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples/tensorflow</b></font>$ python3 inceptionv3.py --model ./models/VIM3/inceptionv3.nb --library ./libs/libnn_inceptionv3.so --picture ./data/goldfish_299x299.jpg --level 0</pre>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> |--- KSNN Version: v1.3 +---| </span><br><span class="line">Start init neural network ...</span><br><span class="line">Done.</span><br><span class="line">Get input data ...</span><br><span class="line">Done.</span><br><span class="line">Start inference ...</span><br><span class="line">Done. inference :  0.042353153228759766</span><br><span class="line">----- Show Top5 +-----</span><br><span class="line">     2: 0.93457</span><br><span class="line">   795: 0.00328</span><br><span class="line">   408: 0.00158</span><br><span class="line">   974: 0.00148</span><br><span class="line">   393: 0.00093</span><br></pre></td></tr></table></figure>
+
+<p><code>--level</code>参数可同于调整打印信息等级。下面的命令将打印等级设置为最高。</p>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples/tensorflow</b></font>$ python3 inceptionv3.py --model ./models/VIM3/inceptionv3.nb --library ./libs/libnn_inceptionv3.so --picture ./data/goldfish_299x299.jpg --level 2</pre>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"> |--- KSNN Version: v1.3 +---| </span><br><span class="line">Start init neural network ...</span><br><span class="line"><span class="comment">#productname=VIPNano-QI, pid=0x88</span></span><br><span class="line">Create Neural Network: 283ms or 283181us</span><br><span class="line">Done.</span><br><span class="line">Get input data ...</span><br><span class="line">Done.</span><br><span class="line">Start inference ...</span><br><span class="line">Start run graph [1] <span class="built_in">times</span>...</span><br><span class="line">generate <span class="built_in">command</span> buffer, total device count=1, core count per-device: 1, </span><br><span class="line">current device <span class="built_in">id</span>=0, AXI SRAM base address=0xff000000</span><br><span class="line">---------------------------Begin VerifyTiling -------------------------</span><br><span class="line">AXI-SRAM = 1048576 Bytes VIP-SRAM = 522240 Bytes SWTILING_PHASE_FEATURES[1, 1, 0]</span><br><span class="line">  0 NBG [(   0    0    0 0,        0, 0x(nil)(0x(nil), 0x(nil)) -&gt;    0    0    0 0,        0, 0x(nil)(0x(nil), 0x(nil))) k(0 0    0,        0) pad(0 0) pool(0 0, 0 0)]</span><br><span class="line"></span><br><span class="line"> <span class="built_in">id</span> IN [ x  y  w   h ]   OUT  [ x  y  w  h ] (tx, ty, kpc) (ic, kc, kc/ks, ks/eks, kernel_type)</span><br><span class="line">   0 NBG DD 0x(nil) [   0    0        0        0] -&gt; DD 0x(nil) [   0    0        0        0] (  0,   0,   0) (       0,        0, 0.000000%, 0.000000%, NONE)</span><br><span class="line"></span><br><span class="line">PreLoadWeightBiases = 1048576  100.000000%</span><br><span class="line">---------------------------End VerifyTiling -------------------------</span><br><span class="line">layer_id: 0 layer name:network_binary_graph operation[0]:unkown operation <span class="built_in">type</span> target:unkown operation target.</span><br><span class="line">uid: 0</span><br><span class="line">abs_op_id: 0</span><br><span class="line">execution time:             20552 us</span><br><span class="line">[     1] TOTAL_READ_BANDWIDTH  (MByte): 67.540481</span><br><span class="line">[     2] TOTAL_WRITE_BANDWIDTH (MByte): 18.245340</span><br><span class="line">[     3] AXI_READ_BANDWIDTH  (MByte): 30.711348</span><br><span class="line">[     4] AXI_WRITE_BANDWIDTH (MByte): 15.229973</span><br><span class="line">[     5] DDR_READ_BANDWIDTH (MByte): 36.829133</span><br><span class="line">[     6] DDR_WRITE_BANDWIDTH (MByte): 3.015367</span><br><span class="line">[     7] GPUTOTALCYCLES: 94344921</span><br><span class="line">[     8] GPUIDLECYCLES: 78109663</span><br><span class="line">VPC_ELAPSETIME: 118090</span><br><span class="line">*********</span><br><span class="line">Run the 1 time: 118.00ms or 118636.00us</span><br><span class="line">vxProcessGraph execution time:</span><br><span class="line">Total   118.00ms or 118996.00us</span><br><span class="line">Average 119.00ms or 118996.00us</span><br><span class="line">Done. inference :  0.1422710418701172</span><br><span class="line">----- Show Top5 +-----</span><br><span class="line">     2: 0.93457</span><br><span class="line">   795: 0.00328</span><br><span class="line">   408: 0.00158</span><br><span class="line">   974: 0.00148</span><br><span class="line">   393: 0.00093</span><br></pre></td></tr></table></figure>
+
+<p>可以看到相关的所有信息。</p>
+<h2 id="摄像头Demo" class="article-heading"><a href="#摄像头Demo" class="headerlink" title="摄像头Demo"></a>摄像头Demo<a class="article-anchor" href="#摄像头Demo" aria-hidden="true"></a></h2><ol>
+<li>目前支持摄像头的Demo有Yolo系列和OpenPose。以Yolov3为例，</li>
+</ol>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ cd ksnn/examples/darknet/</pre>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples/darknet</b></font>$ python3 hand-cap.py --model ./models/VIM3/hand.nb --library ./libs/libnn_hand.so --device X</pre>
+
+<ol start="2">
+<li>目前支持RTSP的demo只有yolo系列。以Yolov3为例，</li>
+</ol>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~</b></font>$ cd ksnn/examples/darknet/</pre>
+<pre><font color="#4E9A06"><b>khadas@Khadas</b></font>:<font color="#3465A4"><b>~/ksnn/examples/darknet</b></font>$ python3 flask-yolov3.py --model ./models/VIM3/yolov3.nb --library ./libs/libnn_yolov3.so --device X</pre>
+
+<h2 id="更多" class="article-heading"><a href="#更多" class="headerlink" title="更多"></a>更多<a class="article-anchor" href="#更多" aria-hidden="true"></a></h2><p><a href="./KSNNConvert.html">KSNN转换工具使用说明</a><br><a href="./KSNNAPI.html">KSNN API文档</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.961Z" itemprop="dateModified">上次更新：2023-07-31</time>
+                <a href="NPUOperationTimes.html" class="article-footer-prev" title="获取单op运行耗时"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="KSNNConvert.html" class="article-footer-next" title="KSNN转换工具说明"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85KSNN"><span class="toc-text" title="安装KSNN">安装KSNN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-text" title="使用示例">使用示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4Demo"><span class="toc-text" title="摄像头Demo">摄像头Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E5%A4%9A"><span class="toc-text" title="更多">更多</span></a></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>快速上手</summary><a href="index.html" class="sidebar-link first">快速上手</a><a href="OsIntroduce.html" class="sidebar-link">选择操作系统</a><a href="InstallOsIntoEmmc.html" class="sidebar-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="sidebar-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部介质启动系统</a><a href="Hardware.html" class="sidebar-link">VIM3硬件描述</a></details></strong><strong class="sidebar-title"><details open><summary>配置</summary><strong class="sidebar-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="sidebar-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="sidebar-link">配置文件</a><a href="DeviceTreeOverlay.html" class="sidebar-link">Device Tree Overlay</a><a href="AutoLogin.html" class="sidebar-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="sidebar-link">把SD卡固件写入到eMMC</a><a href="ChineseSupportUsage.html" class="sidebar-link">中文支持</a></details></strong><strong class="sidebar-link"><details><summary>网络</summary><a href="Wifi.html" class="sidebar-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="sidebar-link">蓝牙</a><a href="CustomMac.html" class="sidebar-link">自定义MAC地址</a><a href="Wol.html" class="sidebar-link">远程唤醒</a></details></strong><strong class="sidebar-link"><details><summary>显示</summary><a href="HdmiResolution.html" class="sidebar-link secondary-first">设置HDMI分辨率</a><a href="RotateFramebuffer.html" class="sidebar-link">旋转Framebuffer</a><a href="UbuntuLogo.html" class="sidebar-link">Ubuntu Logo</a><a href="ChangeBootLogo.html" class="sidebar-link">修改启动Logo</a><a href="SetupFramebufferConsoleFont.html" class="sidebar-link">Framebuffer Console字体</a></details></strong><strong class="sidebar-link"><details><summary>配件</summary><a href="Fan.html" class="sidebar-link secondary-first">风扇</a><a href="MIPICamera.html" class="sidebar-link">MIPI摄像头</a><a href="TS050.html" class="sidebar-link">TS050触摸屏</a><a href="LteModule.html" class="sidebar-link">4G模块</a><a href="M2xEth.html" class="sidebar-link">M2X以太网口</a></details></strong><strong class="sidebar-link"><details><summary>硬件</summary><a href="PcieUsbPort.html" class="sidebar-link secondary-first">PCIe/USB3.0切换</a><a href="CustomIRCode.html" class="sidebar-link">自定义IR Code</a><a href="ExtraPowerInput.html" class="sidebar-link">外部供电</a><a href="MaxCPUFrequency.html" class="sidebar-link">CPU超频设置</a><a href="USBGadget.html" class="sidebar-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>应用</summary><strong class="sidebar-link"><details><summary>GPIO</summary><a href="Gpio.html" class="sidebar-link secondary-first">GPIO</a><a href="I2c.html" class="sidebar-link">I2C</a><a href="SPIUsage.html" class="sidebar-link">SPI</a><a href="LED.html" class="sidebar-link">LED</a><a href="1wire.html" class="sidebar-link">1-Wire</a><a href="Uart.html" class="sidebar-link">UART</a><a href="Pwm.html" class="sidebar-link">PWM</a><a href="GpioIRQ.html" class="sidebar-link">GPIO中断</a><a href="WiringPi.html" class="sidebar-link">WiringPi</a><a href="WiringPi-Python.html" class="sidebar-link">WiringPi-Python</a><a href="SoftPWM.html" class="sidebar-link">软件模拟PWM</a><a href="spdifin.html" class="sidebar-link">SPDIF IN</a></details></strong><a href="GsensorUsage.html" class="sidebar-link first">Gsensor</a><a href="PlayVideo.html" class="sidebar-link">播放视频</a><a href="RSTPCamera.html" class="sidebar-link">RSTP Web 摄像头</a><a href="HardwareDecoding.html" class="sidebar-link">硬件解码</a><a href="HardwareEncoding.html" class="sidebar-link">硬件编码</a><a href="Docker.html" class="sidebar-link">Docker</a><a href="Watchdog.html" class="sidebar-link">看门狗</a><a href="WifiApstaMode.html" class="sidebar-link">Wi-Fi STA/AP模式</a><a href="Sdl2.html" class="sidebar-link">SDL2</a><a href="Ppsspp.html" class="sidebar-link">PPSSPP</a><a href="QT5.html" class="sidebar-link">QT5</a><a href="32bitLibrary.html" class="sidebar-link">32位运行库</a></details></strong><strong class="sidebar-title"><details open><summary>NPU</summary><a href="NPUPrebuiltUsage.html" class="sidebar-link first">预编译NPU Demo</a><a href="NPUSDK.html" class="sidebar-link">NPU SDK</a><a href="NPUApp.html" class="sidebar-link">NPU Demo源码</a><a href="ConvertToUseNPU.html" class="sidebar-link">模型转换</a><a href="NPUPerformanceUsage.html" class="sidebar-link">NPU Performance</a><a href="NPUOperationTimes.html" class="sidebar-link">获取单op运行耗时</a><strong class="sidebar-link"><details open><summary>KSNN(Python API)</summary><a href="KSNNUsage.html" class="sidebar-link current secondary-first">KSNN使用说明</a><a href="KSNNConvert.html" class="sidebar-link">KSNN转换工具说明</a><a href="KSNNAPI.html" class="sidebar-link">KSNN API</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><strong class="sidebar-link"><details><summary>U-Boot</summary><a href="BuildUboot.html" class="sidebar-link secondary-first">编译U-Boot</a><a href="UpgradeUboot.html" class="sidebar-link">更新U-Boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP服务器搭建</a><a href="KbiGuidance.html" class="sidebar-link">KBI</a></details></strong><strong class="sidebar-link"><details><summary>Linux</summary><a href="BuildLinuxKernel.html" class="sidebar-link secondary-first">编译Linux内核</a><a href="UpgradeLinuxKernel.html" class="sidebar-link">更新Linux内核</a></details></strong><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="CreateBurnCard.html" class="sidebar-link">创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">创建启动卡</a><a href="EraseEmmc.html" class="sidebar-link">擦除eMMC</a></details></strong><strong class="sidebar-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="sidebar-link first">抓取Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/linux/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/linux/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/linux/zh-cn/vim3/" class="mobile-nav-link secondary current">VIM3/3L</a><a href="/linux/zh-cn/vim4/" class="mobile-nav-link secondary ">VIM4</a></details></strong><a href="/linux/zh-cn/edge/" class="mobile-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim3" class="mobile-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/Vim3UbuntuFirmware" class="mobile-nav-link  header">固件下载</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>快速上手</summary><a href="index.html" class="mobile-nav-link first">快速上手</a><a href="OsIntroduce.html" class="mobile-nav-link">选择操作系统</a><a href="InstallOsIntoEmmc.html" class="mobile-nav-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="mobile-nav-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部介质启动系统</a><a href="Hardware.html" class="mobile-nav-link">VIM3硬件描述</a></details></strong><strong class="mobile-nav-title"><details open><summary>配置</summary><strong class="mobile-nav-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="mobile-nav-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="mobile-nav-link">配置文件</a><a href="DeviceTreeOverlay.html" class="mobile-nav-link">Device Tree Overlay</a><a href="AutoLogin.html" class="mobile-nav-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="mobile-nav-link">把SD卡固件写入到eMMC</a><a href="ChineseSupportUsage.html" class="mobile-nav-link">中文支持</a></details></strong><strong class="mobile-nav-link"><details><summary>网络</summary><a href="Wifi.html" class="mobile-nav-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="mobile-nav-link">蓝牙</a><a href="CustomMac.html" class="mobile-nav-link">自定义MAC地址</a><a href="Wol.html" class="mobile-nav-link">远程唤醒</a></details></strong><strong class="mobile-nav-link"><details><summary>显示</summary><a href="HdmiResolution.html" class="mobile-nav-link secondary-first">设置HDMI分辨率</a><a href="RotateFramebuffer.html" class="mobile-nav-link">旋转Framebuffer</a><a href="UbuntuLogo.html" class="mobile-nav-link">Ubuntu Logo</a><a href="ChangeBootLogo.html" class="mobile-nav-link">修改启动Logo</a><a href="SetupFramebufferConsoleFont.html" class="mobile-nav-link">Framebuffer Console字体</a></details></strong><strong class="mobile-nav-link"><details><summary>配件</summary><a href="Fan.html" class="mobile-nav-link secondary-first">风扇</a><a href="MIPICamera.html" class="mobile-nav-link">MIPI摄像头</a><a href="TS050.html" class="mobile-nav-link">TS050触摸屏</a><a href="LteModule.html" class="mobile-nav-link">4G模块</a><a href="M2xEth.html" class="mobile-nav-link">M2X以太网口</a></details></strong><strong class="mobile-nav-link"><details><summary>硬件</summary><a href="PcieUsbPort.html" class="mobile-nav-link secondary-first">PCIe/USB3.0切换</a><a href="CustomIRCode.html" class="mobile-nav-link">自定义IR Code</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部供电</a><a href="MaxCPUFrequency.html" class="mobile-nav-link">CPU超频设置</a><a href="USBGadget.html" class="mobile-nav-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>应用</summary><strong class="mobile-nav-link"><details><summary>GPIO</summary><a href="Gpio.html" class="mobile-nav-link secondary-first">GPIO</a><a href="I2c.html" class="mobile-nav-link">I2C</a><a href="SPIUsage.html" class="mobile-nav-link">SPI</a><a href="LED.html" class="mobile-nav-link">LED</a><a href="1wire.html" class="mobile-nav-link">1-Wire</a><a href="Uart.html" class="mobile-nav-link">UART</a><a href="Pwm.html" class="mobile-nav-link">PWM</a><a href="GpioIRQ.html" class="mobile-nav-link">GPIO中断</a><a href="WiringPi.html" class="mobile-nav-link">WiringPi</a><a href="WiringPi-Python.html" class="mobile-nav-link">WiringPi-Python</a><a href="SoftPWM.html" class="mobile-nav-link">软件模拟PWM</a><a href="spdifin.html" class="mobile-nav-link">SPDIF IN</a></details></strong><a href="GsensorUsage.html" class="mobile-nav-link first">Gsensor</a><a href="PlayVideo.html" class="mobile-nav-link">播放视频</a><a href="RSTPCamera.html" class="mobile-nav-link">RSTP Web 摄像头</a><a href="HardwareDecoding.html" class="mobile-nav-link">硬件解码</a><a href="HardwareEncoding.html" class="mobile-nav-link">硬件编码</a><a href="Docker.html" class="mobile-nav-link">Docker</a><a href="Watchdog.html" class="mobile-nav-link">看门狗</a><a href="WifiApstaMode.html" class="mobile-nav-link">Wi-Fi STA/AP模式</a><a href="Sdl2.html" class="mobile-nav-link">SDL2</a><a href="Ppsspp.html" class="mobile-nav-link">PPSSPP</a><a href="QT5.html" class="mobile-nav-link">QT5</a><a href="32bitLibrary.html" class="mobile-nav-link">32位运行库</a></details></strong><strong class="mobile-nav-title"><details open><summary>NPU</summary><a href="NPUPrebuiltUsage.html" class="mobile-nav-link first">预编译NPU Demo</a><a href="NPUSDK.html" class="mobile-nav-link">NPU SDK</a><a href="NPUApp.html" class="mobile-nav-link">NPU Demo源码</a><a href="ConvertToUseNPU.html" class="mobile-nav-link">模型转换</a><a href="NPUPerformanceUsage.html" class="mobile-nav-link">NPU Performance</a><a href="NPUOperationTimes.html" class="mobile-nav-link">获取单op运行耗时</a><strong class="mobile-nav-link"><details open><summary>KSNN(Python API)</summary><a href="KSNNUsage.html" class="mobile-nav-link current secondary-first">KSNN使用说明</a><a href="KSNNConvert.html" class="mobile-nav-link">KSNN转换工具说明</a><a href="KSNNAPI.html" class="mobile-nav-link">KSNN API</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><strong class="mobile-nav-link"><details><summary>U-Boot</summary><a href="BuildUboot.html" class="mobile-nav-link secondary-first">编译U-Boot</a><a href="UpgradeUboot.html" class="mobile-nav-link">更新U-Boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP服务器搭建</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI</a></details></strong><strong class="mobile-nav-link"><details><summary>Linux</summary><a href="BuildLinuxKernel.html" class="mobile-nav-link secondary-first">编译Linux内核</a><a href="UpgradeLinuxKernel.html" class="mobile-nav-link">更新Linux内核</a></details></strong><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="CreateBurnCard.html" class="mobile-nav-link">创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">创建启动卡</a><a href="EraseEmmc.html" class="mobile-nav-link">擦除eMMC</a></details></strong><strong class="mobile-nav-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="mobile-nav-link first">抓取Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/KSNNUsage.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/linux/js/lang_select.js"></script>
+
+
+<script src="/linux/js/toc.js"></script>
+
+
+<script src="/linux/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

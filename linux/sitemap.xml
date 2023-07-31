@@ -1,0 +1,6936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/spdifin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/auto_login</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/boot_from_ext_media</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/boot_into_upgrade_mode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/boot_sequeue</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/build_linux_kernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/build_uboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/custom_mac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/device_tree_overlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/erase_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/gsensor_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/hardware_decoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/hardware_encoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/hdmi_resolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/lte_module</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/m2x_eth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/max_cpu_frequency</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/mipi_camera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/os_introduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/play_video</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ppsspp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/qt5</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/rotate_framebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/sdl2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/system_config_file</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ts050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ubuntu_logo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/upgrade_uboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/usb_gadget</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SoftPWMServo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/ConvertToUseNPU</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/GsensorUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/KSNNAPI</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/KSNNConvert</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/KSNNUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/LteModule</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/M2xEth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/MIPICamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/MaxCPUFrequency</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/NPUApp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/NPUOperationTimes</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/NPUPerformanceUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/NPUPrebuiltUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/NPUSDK</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/PcieUsbPort</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Ppsspp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/QT5</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SPIUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Sdl2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/TS050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/TengineApp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/TengineSDK</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/USBGadget</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/SoftPWMServo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/boot_from_spi_flash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/kbi_guidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/load_images_with_uboot_via_tftp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/setup_framebuffer_console_font</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/setup_serial_tool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/setup_tftp_server</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/soft_pwm_servo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/uboot_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/upgrade_linux_kernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/upgrade_system</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/wifi_apsta_mode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/wiringpi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/wiringpi_python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/write_sd_image_to_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/play_video</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ppsspp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/qt5</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/rotate_framebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/sdl2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/system_config_file</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ts050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ubuntu_logo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/upgrade_uboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/usb_gadget</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/LteModule</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/RockchipDocs</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/TS050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/edge/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/EdgeThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/EdgeUbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim1ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim1UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim2ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim2UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3lThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3lUbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim4_thirdparty_firmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim4_ubuntu_firmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareEdge</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareTone1</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareVim1</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareVim2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareVim3</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/hardwareVim4</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/hardware/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/tone1/HardwareDocs</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/tone1/HowToUseToneInLinux</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/tone1/HowtoUpgradeFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/tone1/UserManual</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/tone1/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim1/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim2/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim3/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/32bit_library</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/CreateBurnCardViaCLI</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/capture_log</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/change_boot_logo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/chinese_support_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/create_bootable_sdcard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/create_burn_card</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/extra_power_input</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/fenix_script</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/gpio_irq</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/i2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/install_os_into_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/install_os_into_sdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/vim4/led</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/ConvertToUseNPU</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/GsensorUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/KSNNAPI</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/KSNNConvert</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/KSNNUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/LteModule</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/M2xEth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/MIPICamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/MaxCPUFrequency</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/NPUApp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/NPUOperationTimes</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/NPUPerformanceUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/NPUPrebuiltUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/NPUSDK</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/PcieUsbPort</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Ppsspp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/QT5</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SPIUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Sdl2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/TS050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/TengineApp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/TengineSDK</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/USBGadget</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/spdifin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/auto_login</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/boot_from_ext_media</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/boot_from_spi_flash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/boot_into_upgrade_mode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/boot_sequeue</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/build_linux_kernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/build_uboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/custom_mac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/device_tree_overlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/erase_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/gsensor_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/hardware_decoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/hardware_encoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/hdmi_resolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/kbi_guidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/lte_module</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/m2x_eth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/max_cpu_frequency</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/mipi_camera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/os_introduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wol</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SoftPWMServo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim1/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim2/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BootFromExtMedia</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/CustomIRCode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/CustomMac</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/EraseEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/HardwareDecoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/HardwareEncoding</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/HdmiResolution</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/RSTPCamera</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/RotateFramebuffer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SoftPWM</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Uart</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/UbuntuLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim3/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/32bitLibrary</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/32bit_library</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ChangeBootLogo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ChineseSupportUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/CreateBootableSDCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/CreateBurnCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/ExtraPowerInput</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/I2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/LoadImagesWithUBootViaTFTP</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/SetupFramebufferConsoleFont</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/SetupTFTPServer</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/SoftPWMServo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/UBootUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/Wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/WifiApstaMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/WiringPi-Python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/WiringPi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/bluetooth</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/capture_log</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/change_boot_logo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/chinese_support_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/create_bootable_sdcard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/create_burn_card</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/docker</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/extra_power_input</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/fenix_script</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/gpio_irq</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/i2c</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/install_os_into_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/install_os_into_sdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/led</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/load_images_with_uboot_via_tftp</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/pwm</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/setup_framebuffer_console_font</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/setup_serial_tool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/setup_tftp_server</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/soft_pwm_servo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/uboot_usage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/upgrade_linux_kernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/upgrade_system</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/watchdog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wifi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wifi_apsta_mode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wifi_usage_desktop_version</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wiringpi</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/wiringpi_python</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/vim4/write_sd_image_to_emmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/tone1/HowToUseToneInLinux</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/tone1/HowtoUpgradeFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/tone1/UserManual</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/tone1/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/BuildLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/BuildUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/OsIntroduce</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/PlayVideo</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/vim4_ubuntu_firmware_release_note</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/vim4_ubuntu_firmware_release_note</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/1wire</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/AutoLogin</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/BluetoothUsage</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/BootFromSpiFlash</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/BootIntoUpgradeMode</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/CaptureLog</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/DeviceTreeOverlay</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Fan</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/FenixScript</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Gpio</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/GpioIRQ</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/InstallOsIntoEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/InstallOsIntoSdusb</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/KbiGuidance</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/LED</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/LteModule</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/RockchipDocs</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/SetupSerialTool</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/SystemConfigFile</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/TS050</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/UpgradeLinuxKernel</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/UpgradeSystem</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/UpgradeUboot</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/UpgradeViaTFBurningCard</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/WifiUsageDesktopVersion</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/WriteSDImageToEmmc</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/EdgeThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/EdgeUbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/EdgeUbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim1ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim1UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim1UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim2ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim2UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim2UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3ThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3UbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3lThirdpartyFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3lUbuntuFirmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/Vim3lUbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/vim4_thirdparty_firmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/firmware/vim4_ubuntu_firmware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareEdge</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareTone1</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareVim1</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareVim2</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareVim3</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/hardwareVim4</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/hardware/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/EdgeUbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim1UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim2UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3UbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/zh-cn/firmware/Vim3lUbuntuFirmwareReleaseNote</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/edge/Hardware</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/404</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://khadas.github.io/about/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://khadas.github.io/</loc>
+    <lastmod>2023-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
+  
+</urlset>

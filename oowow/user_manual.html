@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>User Manual | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/user_manual.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/user_manual.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/user_manual.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/oowow/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/oowow//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/oowow//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/oowow//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/oowow//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/oowow/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/oowow//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/oowow/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="What is OOWOW?OOWOW is an embedded service (integrated into your device) - it can be run at any time if you need to perform essential maintenance services on your device. About VIM4VIM4 is the first">
+<meta property="og:type" content="website">
+<meta property="og:title" content="User Manual">
+<meta property="og:url" content="https://khadas.github.io/user_manual">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="What is OOWOW?OOWOW is an embedded service (integrated into your device) - it can be run at any time if you need to perform essential maintenance services on your device. About VIM4VIM4 is the first">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://khadas.github.io/oowow/images/oowow.png">
+<meta property="article:published_time" content="2023-07-31T06:30:38.969Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.969Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://khadas.github.io/oowow/images/oowow.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="user_manual.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">User Manual</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/oowow/source/user_manual.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p><img src="/oowow/images/oowow.png" alt="oowow"></p>
+<h2 id="What-is-OOWOW" class="article-heading"><a href="#What-is-OOWOW" class="headerlink" title="What is OOWOW?"></a>What is OOWOW?<a class="article-anchor" href="#What-is-OOWOW" aria-hidden="true"></a></h2><p>OOWOW is an embedded service (integrated into your device) - it can be run at any time if you need to perform essential maintenance services on your device.</p>
+<h2 id="About-VIM4" class="article-heading"><a href="#About-VIM4" class="headerlink" title="About VIM4"></a>About VIM4<a class="article-anchor" href="#About-VIM4" aria-hidden="true"></a></h2><p>VIM4 is the first device from Khadas that includes the OOWOW embedded service. Since VIM4 comes without any pre-installed OS, users can use OOWOW to select and install their preferred OS.</p>
+<h2 id="OS-Delivery" class="article-heading"><a href="#OS-Delivery" class="headerlink" title="OS Delivery"></a>OS Delivery<a class="article-anchor" href="#OS-Delivery" aria-hidden="true"></a></h2><p>OOWOW provides rapid online OS download and installation, which will improve quality of life for single board computer users - with OOWOW, you can install / reinstall your preferred OS in just 2-3 minutes.</p>
+<h2 id="OOWOW-Wizard" class="article-heading"><a href="#OOWOW-Wizard" class="headerlink" title="OOWOW Wizard"></a>OOWOW Wizard<a class="article-anchor" href="#OOWOW-Wizard" aria-hidden="true"></a></h2><p>The OOWOW wizard will guide you to install a new OS in just 4 steps, and it automatically starts if your device storage is empty.</p>
+<ul>
+<li>Connect to internet over Wi-Fi or Ethernet</li>
+<li>Display OS images for your device</li>
+<li>Select OS installation image</li>
+<li>Download and install OS into your device</li>
+</ul>
+<p>Wizard Usage Example:<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/.temp/oowow/screencast/quick-start/-gallery?play=loop">https://dl.khadas.com/.temp/oowow/screencast/quick-start/-gallery?play=loop</a></p>
+<p><em><strong>Tip: If you need other features, exit from the wizard to the main menu.</strong></em></p>
+<h2 id="Main-Features" class="article-heading"><a href="#Main-Features" class="headerlink" title="Main Features"></a>Main Features<a class="article-anchor" href="#Main-Features" aria-hidden="true"></a></h2><ul>
+<li>Install / reinstall OS</li>
+<li>Download online OS images</li>
+<li>Backup and restore system</li>
+<li>Display full device information</li>
+<li>Configure device</li>
+<li>Device hardware testing</li>
+<li>Online script collection</li>
+<li>Rescue shell</li>
+<li>Developer and advanced features</li>
+</ul>
+<h2 id="Hardware" class="article-heading"><a href="#Hardware" class="headerlink" title="Hardware"></a>Hardware<a class="article-anchor" href="#Hardware" aria-hidden="true"></a></h2><h3 id="Hardware-Buttons" class="article-heading"><a href="#Hardware-Buttons" class="headerlink" title="Hardware Buttons"></a>Hardware Buttons<a class="article-anchor" href="#Hardware-Buttons" aria-hidden="true"></a></h3><p>You can use the three physical buttons on your device to interact directly with the OOWOW system, we will describe them in more detail within the next section.</p>
+<ul>
+<li>RESET - reset device</li>
+<li>FUNCTION - multi functions</li>
+<li>POWER - multi functions</li>
+</ul>
+<h3 id="VIM4-Button-Shortcuts" class="article-heading"><a href="#VIM4-Button-Shortcuts" class="headerlink" title="VIM4 Button Shortcuts"></a>VIM4 Button Shortcuts<a class="article-anchor" href="#VIM4-Button-Shortcuts" aria-hidden="true"></a></h3><ul>
+<li>Boot OOWOW - hold <strong>FUNCTION</strong> and short press <strong>RESET</strong> then release <strong>FUNCTION</strong></li>
+<li>Toggle Easy Wi-Fi - short press <strong>POWER</strong> button</li>
+<li>Toggle Hotspot -  short press <strong>FUNCTION</strong> button</li>
+<li>Accept Hotspot client  - short press <strong>POWER</strong> button</li>
+<li>Power off - Long press the <strong>POWER</strong> button until device shuts down</li>
+<li>Enter multifunction mode - press and hold <strong>FUNCTION</strong> button (loop cycle: Hotspot -&gt; Firewall Allow -&gt; Firewall Block -&gt; Cancel, each mode wait 2 sec ), release to activate selected function</li>
+</ul>
+<p><em><strong>Tip: All shortcut events will be displayed on OOWOW status bar and indicated by LEDs.</strong></em></p>
+<h3 id="Tips-to-Boot-OOWOW" class="article-heading"><a href="#Tips-to-Boot-OOWOW" class="headerlink" title="Tips to Boot OOWOW"></a>Tips to Boot OOWOW<a class="article-anchor" href="#Tips-to-Boot-OOWOW" aria-hidden="true"></a></h3><ul>
+<li>Eject your TF card before booting OOWOW (TF card has highest priority)</li>
+<li>Boot OOWOW from sleep: hold <strong>FUNCTION</strong> button + short press <strong>RESET</strong> button + release <strong>FUNCTION</strong> button</li>
+<li>Boot OOWOW with power cable: hold <strong>FUNCTION</strong> button + plug power cable</li>
+</ul>
+<h3 id="LED-Indication-Table" class="article-heading"><a href="#LED-Indication-Table" class="headerlink" title="LED Indication Table"></a>LED Indication Table<a class="article-anchor" href="#LED-Indication-Table" aria-hidden="true"></a></h3><p>Most system events have corresponding LED indications:</p>
+<ul>
+<li>Device starts or reboots: <strong>White solid</strong></li>
+<li>Device power off: <strong>Red solid</strong></li>
+<li>System start in default mode: <strong>White heartbeat</strong></li>
+<li>Network connected: <strong>White solid</strong></li>
+<li>Hotspot mode activated: <strong>White fast blinking</strong></li>
+<li>Hotspot mode ready: <strong>White solid</strong></li>
+<li>Hotspot client pending: <strong>White and red blinking</strong></li>
+<li>Hotspot client accepted: <strong>White slow blinking</strong></li>
+<li>Hotspot mode deactivated: <strong>White heartbeat</strong></li>
+<li>Easy Wi-Fi activated: <strong>White blinking</strong></li>
+<li>Easy Wi-Fi awaits connection: <strong>White slow blinking</strong></li>
+<li>Easy Wi-Fi deactivated: <strong>White heartbeat</strong></li>
+<li>Firewall block incoming: <strong>Red breathing</strong></li>
+<li>Firewall allow incoming: <strong>White solid, red off</strong></li>
+<li>Firewall disabled: <strong>Red blinking</strong></li>
+<li>Image installation progress: <strong>Red &amp; white blinking</strong></li>
+<li>Image installation done: <strong>White solid, red off</strong></li>
+</ul>
+<p>Multifunctional modes:</p>
+<ul>
+<li>Hotspot: <strong>White off</strong></li>
+<li>Firewall block incoming: <strong>White solid, red off</strong></li>
+<li>Firewall allow incoming: <strong>White &amp; red solid</strong></li>
+<li>Cancel: <strong>White blinking</strong></li>
+</ul>
+<h2 id="Interfaces" class="article-heading"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces<a class="article-anchor" href="#Interfaces" aria-hidden="true"></a></h2><h3 id="Main-Menu" class="article-heading"><a href="#Main-Menu" class="headerlink" title="Main Menu"></a>Main Menu<a class="article-anchor" href="#Main-Menu" aria-hidden="true"></a></h3><p>OOWOW provides a universal user interface (terminal mode menu + top status line) for HDMI, WEB, SSH, Serial-UART, etc (all interfaces work simultaneously)</p>
+<h4 id="Navigation" class="article-heading"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation<a class="article-anchor" href="#Navigation" aria-hidden="true"></a></h4><ul>
+<li>Keys: 0-9 A-Z ⇦ ⇨ ⇧ ⇩ Space Enter Esc Tab</li>
+<li>Mouse: select menu items and press buttons</li>
+</ul>
+<h4 id="HDMI-Keyboard" class="article-heading"><a href="#HDMI-Keyboard" class="headerlink" title="HDMI + Keyboard"></a>HDMI + Keyboard<a class="article-anchor" href="#HDMI-Keyboard" aria-hidden="true"></a></h4><p>A HDMI screen and keyboard is the primary interface modality.</p>
+<h4 id="Web-Access" class="article-heading"><a href="#Web-Access" class="headerlink" title="Web Access"></a>Web Access<a class="article-anchor" href="#Web-Access" aria-hidden="true"></a></h4><p>Examples:</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://device_ip/">http://DEVICE_IP</a> or <a target="_blank" rel="noopener external nofollow noreferrer" href="http://device_host_name/">http://DEVICE_HOST_NAME</a> - device page</li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://vim4-xxxxx.local/x/">http://vim4-xxxxx.local/x/</a> - welcome page</li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://vim4-xxxxx.local/x/control">http://vim4-xxxxx.local/x/control</a> - main menu</li>
+</ul>
+<p><em><strong>Tip: Access can be restricted by the Firewall.</strong></em></p>
+<h4 id="Mobile-Navigation" class="article-heading"><a href="#Mobile-Navigation" class="headerlink" title="Mobile Navigation"></a>Mobile Navigation<a class="article-anchor" href="#Mobile-Navigation" aria-hidden="true"></a></h4><ul>
+<li>Keys: 0-9 A-Z Space Enter</li>
+<li>Touchscreen: select menu items and press buttons</li>
+<li>Some virtual keyboard have additional keys: ⇦ ⇨ ⇧ ⇩ Esc Tab</li>
+</ul>
+<h4 id="SSH-Access" class="article-heading"><a href="#SSH-Access" class="headerlink" title="SSH Access"></a>SSH Access<a class="article-anchor" href="#SSH-Access" aria-hidden="true"></a></h4><ul>
+<li>root access works by default without password</li>
+<li><code>ssh root@vim4-xxxxx.local</code> - plain shell</li>
+<li><code>ssh root@vim4-xxxxx.local system</code> - main menu</li>
+</ul>
+<p><em><strong>Tip: Access can be restricted by the Firewall.</strong></em></p>
+<h4 id="Serial-UART-Access" class="article-heading"><a href="#Serial-UART-Access" class="headerlink" title="Serial UART Access"></a>Serial UART Access<a class="article-anchor" href="#Serial-UART-Access" aria-hidden="true"></a></h4><p>For developers and advanced users only.</p>
+<ul>
+<li>Check <a href="setup_serial_tool.html">documentation</a> to setup the serial debug tool</li>
+<li>root access works by default without password</li>
+<li><code>system</code> - main menu</li>
+</ul>
+<h3 id="WEB-API" class="article-heading"><a href="#WEB-API" class="headerlink" title="WEB API"></a>WEB API<a class="article-anchor" href="#WEB-API" aria-hidden="true"></a></h3><p>For developers and advanced users only.</p>
+<h2 id="Networks" class="article-heading"><a href="#Networks" class="headerlink" title="Networks"></a>Networks<a class="article-anchor" href="#Networks" aria-hidden="true"></a></h2><p>Network connection is required for:</p>
+<ul>
+<li>OS downloading and installation</li>
+<li>OOWOW system updates</li>
+<li>Dynamic syncing of online scripts</li>
+<li>Remote control over LAN and WLAN</li>
+</ul>
+<h3 id="Device-Network-Name" class="article-heading"><a href="#Device-Network-Name" class="headerlink" title="Device Network Name"></a>Device Network Name<a class="article-anchor" href="#Device-Network-Name" aria-hidden="true"></a></h3><p>Every OOWOW device can be accessed remotely via its unique LAN name.</p>
+<p>device-xxxxx:</p>
+<ul>
+<li>device: lowercase device name, e.g. VIM4 -&gt; vim4</li>
+<li>xxxxx: last 5 digits of the device serial number</li>
+</ul>
+<p>Network name examples:</p>
+<ul>
+<li>vim4-00010</li>
+<li>vim4-00012</li>
+<li>vim3-12333</li>
+</ul>
+<h3 id="Network-Name-Resolution" class="article-heading"><a href="#Network-Name-Resolution" class="headerlink" title="Network Name Resolution"></a>Network Name Resolution<a class="article-anchor" href="#Network-Name-Resolution" aria-hidden="true"></a></h3><p>Depends on your LAN configuration, for example:</p>
+<ul>
+<li>vim4-00010 - dns resolver</li>
+<li>vim4-00010.local - umdns resolving - canonical variant for OOWOW</li>
+<li>…</li>
+</ul>
+<p><em><strong>Tips:</strong></em></p>
+<ul>
+<li><em>Use device ip address if name resolution doesn’t work.</em></li>
+<li><em>OOWOW uses the DHCP hostname.</em></li>
+<li><em>OOWOW uses the MDNS hostname announcement.</em></li>
+</ul>
+<h3 id="Network-Name-Usage-Examples" class="article-heading"><a href="#Network-Name-Usage-Examples" class="headerlink" title="Network Name Usage Examples"></a>Network Name Usage Examples<a class="article-anchor" href="#Network-Name-Usage-Examples" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ping vim4-05690</span></span><br><span class="line">PING vim4-05690 (192.168.30.203) 56(84) bytes of data.</span><br><span class="line">64 bytes from 192.168.30.203 (192.168.30.203): icmp_seq=1 ttl=64 time=37.3 ms</span><br><span class="line"></span><br><span class="line"><span class="comment"># ping -c1 vim4-05690.local</span></span><br><span class="line">PING vim4-05690.local (192.168.30.203) 56(84) bytes of data.</span><br><span class="line">64 bytes from 192.168.30.203 (192.168.30.203): icmp_seq=1 ttl=64 time=37.3 ms</span><br><span class="line"></span><br><span class="line"><span class="comment"># curl http://vim4-05690.local</span></span><br><span class="line"><span class="comment"># curl http://192.168.30.203</span></span><br><span class="line"><span class="comment"># curl 192.168.30.203</span></span><br><span class="line"><span class="comment"># ssh root@vim4-05690</span></span><br><span class="line"><span class="comment"># ssh root@vim4-05690.local</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Ethernet-LAN" class="article-heading"><a href="#Ethernet-LAN" class="headerlink" title="Ethernet LAN"></a>Ethernet LAN<a class="article-anchor" href="#Ethernet-LAN" aria-hidden="true"></a></h3><p>Ethernet works automatically; just plug in an ethernet cable from your router.</p>
+<h3 id="Wireless-LAN" class="article-heading"><a href="#Wireless-LAN" class="headerlink" title="Wireless LAN"></a>Wireless LAN<a class="article-anchor" href="#Wireless-LAN" aria-hidden="true"></a></h3><p>User can setup and configure a WLAN connection<br><em><strong>Network -&gt; Wi-Fi -&gt; Wi-Fi Select Connection.</strong></em></p>
+<p><em><strong>Tips:</strong></em></p>
+<ul>
+<li><em>Wi-Fi configurations are automatically saved and will persist after rebooting.</em></li>
+<li><em>All system configurations will be saved only after a planned shutdown. Check <a target="_blank" rel="noopener external nofollow noreferrer" href="http://dl.khadas.com/.temp/oowow/screencast/howto-save-setting/-gallery?play=auto&delay=2">animation</a>.</em></li>
+</ul>
+<h3 id="Easy-Wi-Fi" class="article-heading"><a href="#Easy-Wi-Fi" class="headerlink" title="Easy Wi-Fi"></a>Easy Wi-Fi<a class="article-anchor" href="#Easy-Wi-Fi" aria-hidden="true"></a></h3><p>In cases wherein you are unable to configure a WLAN or LAN connection locally on your device, you can share your internet connection from a mobile device (e.g. smartphone) to your single board computer using the Easy Wi-Fi mode.</p>
+<p>You can enable the Easy Wi-Fi mode on your device in two ways:</p>
+<ul>
+<li>Toggle Easy Wi-Fi - short press <strong>POWER</strong> button</li>
+<li><em><strong>Network -&gt; Wi-Fi -&gt; Easy Wi-Fi oowow &gt; Enable / Disable</strong></em></li>
+</ul>
+<p>Setup a new hotspot from your mobile device with the following configuration:</p>
+<ul>
+<li>SSID: <strong>oowow</strong></li>
+<li>Password: <strong>12345678</strong></li>
+</ul>
+<p>Once OOWOW is in the Easy Wi-Fi mode, it will automatically scan and connect to your Wi-Fi hotspot generated by your mobile device.</p>
+<h3 id="Hotspot" class="article-heading"><a href="#Hotspot" class="headerlink" title="Hotspot"></a>Hotspot<a class="article-anchor" href="#Hotspot" aria-hidden="true"></a></h3><p>You can enable the OOWOW hotspot feature in two ways:</p>
+<ul>
+<li>Toggle hotspot - short press <strong>FUNCTION</strong> button</li>
+<li><em><strong>Network -&gt; Hotspot -&gt; Hotspot Enable / Disable</strong></em></li>
+</ul>
+<p>The OOWOW hotspot will have the following configuration:</p>
+<ul>
+<li>SSID: <strong>vim4-xxxxx</strong> ( xxxxx - last 5 digits from device serial number )</li>
+<li>Password: <strong>12345678</strong></li>
+</ul>
+<p>These hostnames can be used for device access via the hotspot:</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://172.23.0.1/">http://172.23.0.1</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://oowow/">http://oowow</a> or <a target="_blank" rel="noopener external nofollow noreferrer" href="http://oowow.local/">http://oowow.local</a> - works only for hotspot network</li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://vim4-xxxxx/">http://vim4-xxxxx</a> or <a target="_blank" rel="noopener external nofollow noreferrer" href="http://vim4-xxxxx.local/">http://vim4-xxxxx.local</a></li>
+</ul>
+<p><em><strong>Tip: For security reasons, you need to manually accept incoming hotspot connections by short pressing the POWER button once.</strong></em></p>
+<h3 id="Hotspot-QR-code" class="article-heading"><a href="#Hotspot-QR-code" class="headerlink" title="Hotspot QR code"></a>Hotspot QR code<a class="article-anchor" href="#Hotspot-QR-code" aria-hidden="true"></a></h3><p><em><strong>Network -&gt; Hotspot -&gt; Hotspot QR code.</strong></em></p>
+<h3 id="Web-access-QR-code" class="article-heading"><a href="#Web-access-QR-code" class="headerlink" title="Web access QR code"></a>Web access QR code<a class="article-anchor" href="#Web-access-QR-code" aria-hidden="true"></a></h3><ul>
+<li><em><strong>Network -&gt; Hotspot -&gt; Device Web Access QR code</strong></em></li>
+<li><em><strong>Network -&gt; Wi-Fi -&gt; Device Web Access QR code</strong></em></li>
+</ul>
+<h3 id="USB-OTG-Network" class="article-heading"><a href="#USB-OTG-Network" class="headerlink" title="USB-OTG Network"></a>USB-OTG Network<a class="article-anchor" href="#USB-OTG-Network" aria-hidden="true"></a></h3><p>Connect your device directly to your computer using a USB cable. This feature will interest developers or advanced users; there is only a peer-to-peer network connection, no internet packets will be forwarded to your device.</p>
+<h3 id="Firewall" class="article-heading"><a href="#Firewall" class="headerlink" title="Firewall"></a>Firewall<a class="article-anchor" href="#Firewall" aria-hidden="true"></a></h3><p><em><strong>Network -&gt; Firewall Mode:</strong></em></p>
+<ul>
+<li>block - Block all incoming connections <strong>SECURE</strong></li>
+<li>allow - Allow incoming connections from local networks <strong>RECOMMENDED</strong></li>
+<li>disabled -  Allow all connections, firewall disabled <strong>DANGER</strong></li>
+</ul>
+<p><em><strong>Tips:</strong></em></p>
+<ul>
+<li><em>By default, remote access is blocked by the firewall</em></li>
+<li><em>Easily configure the firewall with the hardware button shortcuts</em></li>
+<li><em>ICMP pings are always allowed, irrespective of firewall mode</em></li>
+<li><em>Hotspot mode allows incoming connections only after pressing the POWER button (device access: 172.23.0.1 or <a target="_blank" rel="noopener external nofollow noreferrer" href="http://172.23.0.1/">http://172.23.0.1</a>)</em></li>
+<li><em>USB-OTG connection is always allowed</em></li>
+</ul>
+<h3 id="Usage-Examples" class="article-heading"><a href="#Usage-Examples" class="headerlink" title="Usage Examples"></a>Usage Examples<a class="article-anchor" href="#Usage-Examples" aria-hidden="true"></a></h3><h4 id="Configure-Wi-Fi-with-Wizard" class="article-heading"><a href="#Configure-Wi-Fi-with-Wizard" class="headerlink" title="Configure Wi-Fi with Wizard"></a>Configure Wi-Fi with Wizard<a class="article-anchor" href="#Configure-Wi-Fi-with-Wizard" aria-hidden="true"></a></h4><p>Check <a target="_blank" rel="noopener external nofollow noreferrer" href="http://dl.khadas.com/.temp/oowow/screencast/wizard-wifi-usage/-gallery?play=loop">here</a>.</p>
+<h4 id="Wi-Fi-Connection" class="article-heading"><a href="#Wi-Fi-Connection" class="headerlink" title="Wi-Fi Connection"></a>Wi-Fi Connection<a class="article-anchor" href="#Wi-Fi-Connection" aria-hidden="true"></a></h4><p>Check <a target="_blank" rel="noopener external nofollow noreferrer" href="http://dl.khadas.com/.temp/oowow/screencast/network-wifi-setup/-gallery?play=loop">here</a>.</p>
+<h4 id="Easy-Wi-Fi-Connection" class="article-heading"><a href="#Easy-Wi-Fi-Connection" class="headerlink" title="Easy Wi-Fi Connection"></a>Easy Wi-Fi Connection<a class="article-anchor" href="#Easy-Wi-Fi-Connection" aria-hidden="true"></a></h4><p>Check <a target="_blank" rel="noopener external nofollow noreferrer" href="http://dl.khadas.com/.temp/oowow/screencast/easy-wifi-mode/-gallery">here</a>.</p>
+<h4 id="Hotspot-Mode" class="article-heading"><a href="#Hotspot-Mode" class="headerlink" title="Hotspot Mode"></a>Hotspot Mode<a class="article-anchor" href="#Hotspot-Mode" aria-hidden="true"></a></h4><p>Check <a target="_blank" rel="noopener external nofollow noreferrer" href="http://dl.khadas.com/.temp/oowow/screencast/hotspot-mode/-gallery">here</a>.</p>
+<h4 id="Hotspot-Mode-Ethernet-LAN" class="article-heading"><a href="#Hotspot-Mode-Ethernet-LAN" class="headerlink" title="Hotspot Mode + Ethernet LAN"></a>Hotspot Mode + Ethernet LAN<a class="article-anchor" href="#Hotspot-Mode-Ethernet-LAN" aria-hidden="true"></a></h4><p>Internet access provided by LAN ethernet cable, user device access provided by WLAN hotspot.</p>
+<h4 id="Hotspot-Mode-Wi-Fi-WLAN-Connection" class="article-heading"><a href="#Hotspot-Mode-Wi-Fi-WLAN-Connection" class="headerlink" title="Hotspot Mode + Wi-Fi WLAN Connection"></a>Hotspot Mode + Wi-Fi WLAN Connection<a class="article-anchor" href="#Hotspot-Mode-Wi-Fi-WLAN-Connection" aria-hidden="true"></a></h4><p>Internet access provided by WLAN wifi-connection and user device access provided by WLAN hotspot same time.</p>
+<h4 id="Ethernet" class="article-heading"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet<a class="article-anchor" href="#Ethernet" aria-hidden="true"></a></h4><p>TODO.</p>
+<h2 id="Security-and-Privacy" class="article-heading"><a href="#Security-and-Privacy" class="headerlink" title="Security and Privacy"></a>Security and Privacy<a class="article-anchor" href="#Security-and-Privacy" aria-hidden="true"></a></h2><ul>
+<li>OOWOW works only by user demand, and never works in the background</li>
+<li>OOWOW never sends any private data from your device to the internet</li>
+<li>By default, remote access to your device is blocked by the firewall</li>
+</ul>
+<h2 id="Limitations" class="article-heading"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations<a class="article-anchor" href="#Limitations" aria-hidden="true"></a></h2><ul>
+<li>Unicode international symbols don’t display properly for HDMI (Wi-Fi network names)</li>
+<li>IPV6 disabled at this time</li>
+</ul>
+<h2 id="Updates" class="article-heading"><a href="#Updates" class="headerlink" title="Updates"></a>Updates<a class="article-anchor" href="#Updates" aria-hidden="true"></a></h2><ul>
+<li>Automatically looks for updates when internet is connected, user will be notified if new updates need to be applied</li>
+<li>System updates must be manually approved by the user</li>
+<li>Don’t turn off computer - during update</li>
+</ul>
+<h2 id="Download-OOWOW" class="article-heading"><a href="#Download-OOWOW" class="headerlink" title="Download OOWOW"></a>Download OOWOW<a class="article-anchor" href="#Download-OOWOW" aria-hidden="true"></a></h2><p>Check <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/products/vim4/firmware/oowow/system/">here</a> for oowow system images.</p>
+<h3 id="Image-Types" class="article-heading"><a href="#Image-Types" class="headerlink" title="Image Types"></a>Image Types<a class="article-anchor" href="#Image-Types" aria-hidden="true"></a></h3><ul>
+<li>vim4-oowow-latest-sd.img.gz - latest oowow image for SD-card or USB-thumb drive</li>
+<li>vim4-oowow-latest-spi.img.gz - latest oowow image for SPI-flash</li>
+<li>vim4-oowow-latest-spi-upgrade-sd.img.gz - upgrade oowow SPI-flash firmware from SD-card</li>
+</ul>
+<h3 id="Filename-for-Latest-OOWOW-Version" class="article-heading"><a href="#Filename-for-Latest-OOWOW-Version" class="headerlink" title="Filename for Latest OOWOW Version"></a>Filename for Latest OOWOW Version<a class="article-anchor" href="#Filename-for-Latest-OOWOW-Version" aria-hidden="true"></a></h3><ul>
+<li>vim4-oowow-latest-sd.img.gz -&gt; versions/vim4/vim4-oowow-VERSION-sd.img.gz</li>
+</ul>
+<p><em><strong>Tip: Download the latest OOWOW image file with this link: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.khadas.com/products/vim4/firmware/oowow/system/vim4-oowow-latest-sd.img.gz">https://dl.khadas.com/products/vim4/firmware/oowow/system/vim4-oowow-latest-sd.img.gz</a>.</strong></em></p>
+<p>Download images using command line:</p>
+<ul>
+<li><code>curl -JOL https://dl.khadas.com/products/vim4/firmware/oowow/system/vim4-oowow-latest-sd.img.gz</code></li>
+<li><code>wget --content-disposition https://dl.khadas.com/products/vim4/firmware/oowow/system/vim4-oowow-latest-sd.img.gz</code></li>
+</ul>
+<h2 id="About-OOWOW" class="article-heading"><a href="#About-OOWOW" class="headerlink" title="About OOWOW"></a>About OOWOW<a class="article-anchor" href="#About-OOWOW" aria-hidden="true"></a></h2><h3 id="Why-Create-OOWOW" class="article-heading"><a href="#Why-Create-OOWOW" class="headerlink" title="Why Create OOWOW?"></a>Why Create OOWOW?<a class="article-anchor" href="#Why-Create-OOWOW" aria-hidden="true"></a></h3><p>The process of new OS Installation is the biggest headache for users of single board computers (SBC); before installing an OS, users must read tons of manuals, trawl through online forums, learn how to install/reinstall using their desktop/laptop PC, learn where to find proper images etc…If something goes wrong it is possible to “BRICK” (destroy) your device(even through we can use TST mode to recovery rhe device). </p>
+<p>In other words, any form of device upgrade, maintenance, or OS reinstallation requires advanced skills and external hardware, and this is out of reach for the average user, or users in regions without desktop/laptop PCs. With OOWOW your SBC becomes a standalone device; perform all maintenance functions and OS installation directly from the device itself.</p>
+<p>OOWOW understands the end user deeply; it provides an out-of the-box, universal OS delivery and device configuration solution for all SBCs in the market today and into the future.</p>
+<p>Live life easily with OOWOW!</p>
+<h3 id="What-is-the-meaning-of-‘OOWOW’" class="article-heading"><a href="#What-is-the-meaning-of-‘OOWOW’" class="headerlink" title="What is the meaning of ‘OOWOW’?"></a>What is the meaning of ‘OOWOW’?<a class="article-anchor" href="#What-is-the-meaning-of-‘OOWOW’" aria-hidden="true"></a></h3><p>oowow - infinity level wow (will be a new 77th word in the English dictionary).</p>
+<ul>
+<li>Pronunciation: /uː/  +  /wau/ = /u:wau/</li>
+<li>Variations: ∞wow, infinity wow, endless wow</li>
+</ul>
+<p><em><strong>Tips:</strong></em></p>
+<ul>
+<li><em><a target="_blank" rel="noopener external nofollow noreferrer" href="https://en.wiktionary.org/wiki/wow">https://en.wiktionary.org/wiki/wow</a></em></li>
+<li><em><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.crosswordsolver.org/words-starting-with-oo">https://www.crosswordsolver.org/words-starting-with-oo</a></em></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.969Z" itemprop="dateModified">Last updated: 2023-07-31</time>
+                <a href="index.html" class="article-footer-prev" title="Quick Start"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-OOWOW"><span class="toc-text" title="What is OOWOW?">What is OOWOW?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#About-VIM4"><span class="toc-text" title="About VIM4">About VIM4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-Delivery"><span class="toc-text" title="OS Delivery">OS Delivery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OOWOW-Wizard"><span class="toc-text" title="OOWOW Wizard">OOWOW Wizard</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Main-Features"><span class="toc-text" title="Main Features">Main Features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hardware"><span class="toc-text" title="Hardware">Hardware</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Buttons"><span class="toc-text" title="Hardware Buttons">Hardware Buttons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VIM4-Button-Shortcuts"><span class="toc-text" title="VIM4 Button Shortcuts">VIM4 Button Shortcuts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips-to-Boot-OOWOW"><span class="toc-text" title="Tips to Boot OOWOW">Tips to Boot OOWOW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LED-Indication-Table"><span class="toc-text" title="LED Indication Table">LED Indication Table</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interfaces"><span class="toc-text" title="Interfaces">Interfaces</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Main-Menu"><span class="toc-text" title="Main Menu">Main Menu</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Navigation"><span class="toc-text" title="Navigation">Navigation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HDMI-Keyboard"><span class="toc-text" title="HDMI + Keyboard">HDMI + Keyboard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web-Access"><span class="toc-text" title="Web Access">Web Access</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mobile-Navigation"><span class="toc-text" title="Mobile Navigation">Mobile Navigation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SSH-Access"><span class="toc-text" title="SSH Access">SSH Access</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Serial-UART-Access"><span class="toc-text" title="Serial UART Access">Serial UART Access</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WEB-API"><span class="toc-text" title="WEB API">WEB API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Networks"><span class="toc-text" title="Networks">Networks</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Device-Network-Name"><span class="toc-text" title="Device Network Name">Device Network Name</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network-Name-Resolution"><span class="toc-text" title="Network Name Resolution">Network Name Resolution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network-Name-Usage-Examples"><span class="toc-text" title="Network Name Usage Examples">Network Name Usage Examples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ethernet-LAN"><span class="toc-text" title="Ethernet LAN">Ethernet LAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wireless-LAN"><span class="toc-text" title="Wireless LAN">Wireless LAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Easy-Wi-Fi"><span class="toc-text" title="Easy Wi-Fi">Easy Wi-Fi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hotspot"><span class="toc-text" title="Hotspot">Hotspot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hotspot-QR-code"><span class="toc-text" title="Hotspot QR code">Hotspot QR code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-access-QR-code"><span class="toc-text" title="Web access QR code">Web access QR code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB-OTG-Network"><span class="toc-text" title="USB-OTG Network">USB-OTG Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Firewall"><span class="toc-text" title="Firewall">Firewall</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-Examples"><span class="toc-text" title="Usage Examples">Usage Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Configure-Wi-Fi-with-Wizard"><span class="toc-text" title="Configure Wi-Fi with Wizard">Configure Wi-Fi with Wizard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Wi-Fi-Connection"><span class="toc-text" title="Wi-Fi Connection">Wi-Fi Connection</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Easy-Wi-Fi-Connection"><span class="toc-text" title="Easy Wi-Fi Connection">Easy Wi-Fi Connection</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hotspot-Mode"><span class="toc-text" title="Hotspot Mode">Hotspot Mode</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hotspot-Mode-Ethernet-LAN"><span class="toc-text" title="Hotspot Mode + Ethernet LAN">Hotspot Mode + Ethernet LAN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hotspot-Mode-Wi-Fi-WLAN-Connection"><span class="toc-text" title="Hotspot Mode + Wi-Fi WLAN Connection">Hotspot Mode + Wi-Fi WLAN Connection</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ethernet"><span class="toc-text" title="Ethernet">Ethernet</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Security-and-Privacy"><span class="toc-text" title="Security and Privacy">Security and Privacy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Limitations"><span class="toc-text" title="Limitations">Limitations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Updates"><span class="toc-text" title="Updates">Updates</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-OOWOW"><span class="toc-text" title="Download OOWOW">Download OOWOW</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-Types"><span class="toc-text" title="Image Types">Image Types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filename-for-Latest-OOWOW-Version"><span class="toc-text" title="Filename for Latest OOWOW Version">Filename for Latest OOWOW Version</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#About-OOWOW"><span class="toc-text" title="About OOWOW">About OOWOW</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-Create-OOWOW"><span class="toc-text" title="Why Create OOWOW?">Why Create OOWOW?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-the-meaning-of-%E2%80%98OOWOW%E2%80%99"><span class="toc-text" title="What is the meaning of ‘OOWOW’?">What is the meaning of ‘OOWOW’?</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>OOWOW</summary><a href="index.html" class="sidebar-link first">Quick Start</a><a href="user_manual.html" class="sidebar-link current">User Manual</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>OOWOW</summary><a href="index.html" class="mobile-nav-link first">Quick Start</a><a href="user_manual.html" class="mobile-nav-link current">User Manual</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="user_manual.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/oowow/js/lang_select.js"></script>
+
+
+<script src="/oowow/js/toc.js"></script>
+
+
+<script src="/oowow/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

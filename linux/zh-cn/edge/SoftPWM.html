@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>WiringPi软件PWM | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/zh-cn/edge/SoftPWM.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/edge/SoftPWM.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/edge/SoftPWM.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/linux/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/linux//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/linux//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://khadas.github.io -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/linux/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/linux//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/linux/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="这篇文档主要介绍如何在WiringPi以及WiringPi-Python上使用软件PWM。 1. PWM舵机舵机控制原理舵机的基准信号都是周期为20ms，宽度为1.5ms。对应舵机的中间位置。   不同的宽度对应着舵机的不同角度，脉冲宽度对应的范围是0.5到2.5ms。 123450.5ms --  0度1ms   -- 45度1.5ms -- 90度2ms   -- 135度2.5ms -- 1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WiringPi软件PWM">
+<meta property="og:url" content="https://khadas.github.io/zh-cn/edge/SoftPWM">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="这篇文档主要介绍如何在WiringPi以及WiringPi-Python上使用软件PWM。 1. PWM舵机舵机控制原理舵机的基准信号都是周期为20ms，宽度为1.5ms。对应舵机的中间位置。   不同的宽度对应着舵机的不同角度，脉冲宽度对应的范围是0.5到2.5ms。 123450.5ms --  0度1ms   -- 45度1.5ms -- 90度2ms   -- 135度2.5ms -- 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://khadas.github.io/linux/images/vim3/servo-pwm-signal_orig.png">
+<meta property="og:image" content="https://khadas.github.io/linux/images/vim1/SoftPWMLED.png">
+<meta property="article:published_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://khadas.github.io/linux/images/vim3/servo-pwm-signal_orig.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/linux/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/linux/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/linux/zh-cn/vim3/" class="main-nav-link secondary ">VIM3/3L</a></li><li class="submenu"><a href="/linux/zh-cn/vim4/" class="main-nav-link secondary ">VIM4</a></li></ul></div><a href="/linux/zh-cn/edge/" class="main-nav-link current header">Edge</a><a href="/linux/zh-cn/tone1/" class="main-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareEdge" class="main-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/EdgeUbuntuFirmware" class="main-nav-link  header">固件下载</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="edge/SoftPWM.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">WiringPi软件PWM</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/linux/source/zh-cn/edge/SoftPWM.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>这篇文档主要介绍如何在WiringPi以及WiringPi-Python上使用软件PWM。</p>
+<h2 id="1-PWM舵机" class="article-heading"><a href="#1-PWM舵机" class="headerlink" title="1. PWM舵机"></a>1. PWM舵机<a class="article-anchor" href="#1-PWM舵机" aria-hidden="true"></a></h2><h3 id="舵机控制原理" class="article-heading"><a href="#舵机控制原理" class="headerlink" title="舵机控制原理"></a>舵机控制原理<a class="article-anchor" href="#舵机控制原理" aria-hidden="true"></a></h3><p>舵机的基准信号都是周期为20ms，宽度为1.5ms。对应舵机的中间位置。</p>
+<img src="/linux/images/vim3/servo-pwm-signal_orig.png" width="50%">
+
+<p>不同的宽度对应着舵机的不同角度，脉冲宽度对应的范围是0.5到2.5ms。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0.5ms --  0度</span><br><span class="line">1ms   -- 45度</span><br><span class="line">1.5ms -- 90度</span><br><span class="line">2ms   -- 135度</span><br><span class="line">2.5ms -- 180度</span><br></pre></td></tr></table></figure>
+
+<p>360度模拟舵机工作原理与舵机相同。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0.5ms -- 逆时针最大转速</span><br><span class="line">1.5ms -- 暂停转动</span><br><span class="line">2.5ms -- 顺时钟最大转速</span><br></pre></td></tr></table></figure>
+
+<h3 id="源码编译以及演示" class="article-heading"><a href="#源码编译以及演示" class="headerlink" title="源码编译以及演示"></a>源码编译以及演示<a class="article-anchor" href="#源码编译以及演示" aria-hidden="true"></a></h3><h4 id="说明" class="article-heading"><a href="#说明" class="headerlink" title="说明"></a>说明<a class="article-anchor" href="#说明" aria-hidden="true"></a></h4><ol>
+<li>通过<code>gpio readall</code>可查看可用的引脚</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ gpio readall</span><br><span class="line"> +------+-----+----------+------+---+----+-- Model Khadas VIM3/3L --+----+---+------+----------+-----+------+</span><br><span class="line"> | GPIO | wPi |   Name   | Mode | V | DS | PU/PD | Physical | PU/PD | DS | V | Mode |   Name   | wPi | GPIO |</span><br><span class="line"> +------+-----+----------+------+---+----+-------+----++----+-------+----+---+------+----------+-----+------+</span><br><span class="line"> |      |     |       5V |      |   |    |       |  1 || 21 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |       5V |      |   |    |       |  2 || 22 | P/U   |    | 1 | IN   | PIN.A15  | 6   |  475 |</span><br><span class="line"> |      |     |   USB_DM |      |   |    |       |  3 || 23 | P/U   |    | 1 | IN   | PIN.A14  | 7   |  474 |</span><br><span class="line"> |      |     |   USB_DP |      |   |    |       |  4 || 24 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       |  5 || 25 | P/U   |    | 1 | ALT0 | PIN.AO2  | 8   |  498 |</span><br><span class="line"> |      |     |   MCU3V3 |      |   |    |       |  6 || 26 | P/U   |    | 1 | ALT0 | PIN.AO3  | 9   |  499 |</span><br><span class="line"> |      |     |  MCUNRST |      |   |    |       |  7 || 27 |       |    |   |      | 3V3      |     |      |</span><br><span class="line"> |      |     |  MCUSWIM |      |   |    |       |  8 || 28 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       |  9 || 29 | P/D   |    | 0 | IN   | PIN.A1   | 10  |  461 |</span><br><span class="line"> |      |  18 |     ADC0 |      |   |    |       | 10 || 30 | P/D   |    | 0 | IN   | PIN.A0   | 11  |  460 |</span><br><span class="line"> |      |     |      1V8 |      |   |    |       | 11 || 31 | P/D   |    | 0 | IN   | PIN.A3   | 12  |  463 |</span><br><span class="line"> |      |  19 |     ADC1 |      |   |    |       | 12 || 32 | P/D   |    | 0 | IN   | PIN.A2   | 13  |  462 |</span><br><span class="line"> |  506 |   1 | PIN.AO10 | ALT3 | 0 |    |   P/U | 13 || 33 | P/D   |    | 0 | IN   | PIN.A4   | 14  |  464 |</span><br><span class="line"> |      |     |     GND3 |      |   |    |       | 14 || 34 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |  433 |   2 |   PIN.H6 |   IN | 0 |    |   P/D | 15 || 35 | P/D   |    | 0 | ALT3 | PWM-F    | 15  |  432 |</span><br><span class="line"> |  434 |   3 |   PIN.H7 |   IN | 0 |    |   P/D | 16 || 36 |       |    |   |      | RTC      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       | 17 || 37 | P/D   |    | 0 | OUT  | PIN.H4   | 16  |  431 |</span><br><span class="line"> |  497 |   4 |  PIN.AO1 | ALT0 | 1 |    |   P/U | 18 || 38 |       |    |   |      | MCU-FA1  |     |      |</span><br><span class="line"> |  496 |   5 |  PIN.AO0 | ALT0 | 1 |    |   P/U | 19 || 39 | P/D   |    | 0 | IN   | PIN.Z15  | 17  |  426 |</span><br><span class="line"> |      |     |      3V3 |      |   |    |       | 20 || 40 |       |    |   |      | GND      |     |      |</span><br><span class="line"> +------+-----+----------+------+---+----+-------+----++----+-------+----+---+------+----------+-----+------+</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>引脚配置成普通IO输出</p>
+</li>
+<li><p>通过<code>softPwmCreate()</code>和<code>softPwmWrite()</code>函数模拟PWM并控制</p>
+</li>
+</ol>
+<h4 id="WiringPi源码以及编译" class="article-heading"><a href="#WiringPi源码以及编译" class="headerlink" title="WiringPi源码以及编译"></a>WiringPi源码以及编译<a class="article-anchor" href="#WiringPi源码以及编译" aria-hidden="true"></a></h4><ol>
+<li>舵机在1800度、90度、0度之间来回切换，切换间隔为3S切换一次，周期为9S。</li>
+<li>模拟舵机在顺时针转动，暂停转动和逆时针转动来回切换，切换间隔为3S切换一次，周期为9S。</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wiringPi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;softPwm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> Pin = <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    wiringPiSetup();</span><br><span class="line">    pinMode(Pin, OUTPUT);</span><br><span class="line">    softPwmCreate(Pin, <span class="number">0</span>, <span class="number">200</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        softPwmWrite(Pin, <span class="number">25</span>);</span><br><span class="line">        delay(<span class="number">3000</span>);</span><br><span class="line">        softPwmWrite(Pin, <span class="number">15</span>);</span><br><span class="line">        delay(<span class="number">3000</span>);</span><br><span class="line">        softPwmWrite(Pin, <span class="number">5</span>);</span><br><span class="line">        delay(<span class="number">3000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>编译命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -o SoftPwm SoftPwm.c -lwiringPi -lpthread -lrt -lm -lcrypt</span><br></pre></td></tr></table></figure>
+
+<h4 id="WiringPi-Python源码" class="article-heading"><a href="#WiringPi-Python源码" class="headerlink" title="WiringPi-Python源码"></a>WiringPi-Python源码<a class="article-anchor" href="#WiringPi-Python源码" aria-hidden="true"></a></h4><ol>
+<li>舵机先后在180度、90度和0度之间切换，时间间隔为3S。</li>
+<li>模拟舵机在顺时针转动，暂停转动和逆时针转动之间切换，时间间隔为3S。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> wiringpi <span class="keyword">as</span> GPIO</span><br><span class="line"></span><br><span class="line">PWM_PIN = <span class="number">16</span></span><br><span class="line">PWM_OUTPUT = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">GPIO.wiringPiSetup()</span><br><span class="line"></span><br><span class="line">GPIO.pinMode(PWM_PIN, PWM_OUTPUT)</span><br><span class="line"></span><br><span class="line">GPIO.softPwmCreate(PWM_PIN, <span class="number">0</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">GPIO.softPwmWrite(PWM_PIN, <span class="number">25</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line">GPIO.softPwmWrite(PWM_PIN, <span class="number">15</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line">GPIO.softPwmWrite(PWM_PIN, <span class="number">5</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-PWM-RGB灯" class="article-heading"><a href="#2-PWM-RGB灯" class="headerlink" title="2. PWM RGB灯"></a>2. PWM RGB灯<a class="article-anchor" href="#2-PWM-RGB灯" aria-hidden="true"></a></h2><h3 id="控制原理" class="article-heading"><a href="#控制原理" class="headerlink" title="控制原理"></a>控制原理<a class="article-anchor" href="#控制原理" aria-hidden="true"></a></h3><p><img src="/linux/images/vim1/SoftPWMLED.png" alt="SoftPWMLED"></p>
+<p>模块由3路PWM控制，分别各控制三色通道中的一个。通过控制三个通道的发光强度，合成不同的颜色。</p>
+<h3 id="源码编译以及演示-1" class="article-heading"><a href="#源码编译以及演示-1" class="headerlink" title="源码编译以及演示"></a>源码编译以及演示<a class="article-anchor" href="#源码编译以及演示-1" aria-hidden="true"></a></h3><p>运行效果，红灯绿灯蓝灯白灯各亮起3秒。</p>
+<h4 id="说明-1" class="article-heading"><a href="#说明-1" class="headerlink" title="说明"></a>说明<a class="article-anchor" href="#说明-1" aria-hidden="true"></a></h4><ol>
+<li>通过<code>gpio readall</code>可查看可用的引脚</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ gpio readall</span><br><span class="line"> +------+-----+----------+------+---+----+-- Model Khadas VIM3/3L --+----+---+------+----------+-----+------+</span><br><span class="line"> | GPIO | wPi |   Name   | Mode | V | DS | PU/PD | Physical | PU/PD | DS | V | Mode |   Name   | wPi | GPIO |</span><br><span class="line"> +------+-----+----------+------+---+----+-------+----++----+-------+----+---+------+----------+-----+------+</span><br><span class="line"> |      |     |       5V |      |   |    |       |  1 || 21 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |       5V |      |   |    |       |  2 || 22 | P/U   |    | 1 | IN   | PIN.A15  | 6   |  475 |</span><br><span class="line"> |      |     |   USB_DM |      |   |    |       |  3 || 23 | P/U   |    | 1 | IN   | PIN.A14  | 7   |  474 |</span><br><span class="line"> |      |     |   USB_DP |      |   |    |       |  4 || 24 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       |  5 || 25 | P/U   |    | 1 | ALT0 | PIN.AO2  | 8   |  498 |</span><br><span class="line"> |      |     |   MCU3V3 |      |   |    |       |  6 || 26 | P/U   |    | 1 | ALT0 | PIN.AO3  | 9   |  499 |</span><br><span class="line"> |      |     |  MCUNRST |      |   |    |       |  7 || 27 |       |    |   |      | 3V3      |     |      |</span><br><span class="line"> |      |     |  MCUSWIM |      |   |    |       |  8 || 28 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       |  9 || 29 | P/D   |    | 0 | IN   | PIN.A1   | 10  |  461 |</span><br><span class="line"> |      |  18 |     ADC0 |      |   |    |       | 10 || 30 | P/D   |    | 0 | IN   | PIN.A0   | 11  |  460 |</span><br><span class="line"> |      |     |      1V8 |      |   |    |       | 11 || 31 | P/D   |    | 0 | IN   | PIN.A3   | 12  |  463 |</span><br><span class="line"> |      |  19 |     ADC1 |      |   |    |       | 12 || 32 | P/D   |    | 0 | IN   | PIN.A2   | 13  |  462 |</span><br><span class="line"> |  506 |   1 | PIN.AO10 | ALT3 | 0 |    |   P/U | 13 || 33 | P/D   |    | 0 | IN   | PIN.A4   | 14  |  464 |</span><br><span class="line"> |      |     |     GND3 |      |   |    |       | 14 || 34 |       |    |   |      | GND      |     |      |</span><br><span class="line"> |  433 |   2 |   PIN.H6 |   IN | 0 |    |   P/D | 15 || 35 | P/D   |    | 0 | ALT3 | PWM-F    | 15  |  432 |</span><br><span class="line"> |  434 |   3 |   PIN.H7 |   IN | 0 |    |   P/D | 16 || 36 |       |    |   |      | RTC      |     |      |</span><br><span class="line"> |      |     |      GND |      |   |    |       | 17 || 37 | P/D   |    | 0 | OUT  | PIN.H4   | 16  |  431 |</span><br><span class="line"> |  497 |   4 |  PIN.AO1 | ALT0 | 1 |    |   P/U | 18 || 38 |       |    |   |      | MCU-FA1  |     |      |</span><br><span class="line"> |  496 |   5 |  PIN.AO0 | ALT0 | 1 |    |   P/U | 19 || 39 | P/D   |    | 0 | IN   | PIN.Z15  | 17  |  426 |</span><br><span class="line"> |      |     |      3V3 |      |   |    |       | 20 || 40 |       |    |   |      | GND      |     |      |</span><br><span class="line"> +------+-----+----------+------+---+----+-------+----++----+-------+----+---+------+----------+-----+------+</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>引脚配置成普通IO输出</p>
+</li>
+<li><p>通过<code>softPwmCreate()</code>和<code>softPwmWrite()</code>函数模拟PWM并控制</p>
+</li>
+</ol>
+<h4 id="WiringPi源码以及编译-1" class="article-heading"><a href="#WiringPi源码以及编译-1" class="headerlink" title="WiringPi源码以及编译"></a>WiringPi源码以及编译<a class="article-anchor" href="#WiringPi源码以及编译-1" aria-hidden="true"></a></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wiringPi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;softPwm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> Pin_Blue = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> Pin_Red = <span class="number">11</span>;</span><br><span class="line"><span class="type">int</span> Pin_Green = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    wiringPiSetup();</span><br><span class="line">    pinMode(Pin_Blue, OUTPUT);</span><br><span class="line">    pinMode(Pin_Red, OUTPUT);</span><br><span class="line">    pinMode(Pin_Green, OUTPUT);</span><br><span class="line">    softPwmCreate(Pin_Blue, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">    softPwmCreate(Pin_Red, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">    softPwmCreate(Pin_Green, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Red LED\n&quot;</span>);</span><br><span class="line">    softPwmWrite(Pin_Red, <span class="number">255</span>);</span><br><span class="line">    softPwmWrite(Pin_Green, <span class="number">0</span>);</span><br><span class="line">	softPwmWrite(Pin_Blue, <span class="number">0</span>);</span><br><span class="line">	delay(<span class="number">3000</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Green LED\n&quot;</span>);</span><br><span class="line">    softPwmWrite(Pin_Red, <span class="number">0</span>);</span><br><span class="line">    softPwmWrite(Pin_Green, <span class="number">255</span>);</span><br><span class="line">	softPwmWrite(Pin_Blue, <span class="number">0</span>);</span><br><span class="line">	delay(<span class="number">3000</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Blue LED\n&quot;</span>);</span><br><span class="line">    softPwmWrite(Pin_Red, <span class="number">0</span>);</span><br><span class="line">    softPwmWrite(Pin_Green, <span class="number">0</span>);</span><br><span class="line">	softPwmWrite(Pin_Blue, <span class="number">255</span>);</span><br><span class="line">	delay(<span class="number">3000</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;White LED\n&quot;</span>);</span><br><span class="line">    softPwmWrite(Pin_Red, <span class="number">255</span>);</span><br><span class="line">    softPwmWrite(Pin_Green, <span class="number">255</span>);</span><br><span class="line">	softPwmWrite(Pin_Blue, <span class="number">255</span>);</span><br><span class="line">	delay(<span class="number">3000</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -o SoftPwm SoftPwm.c -lwiringPi -lpthread -lrt -lm -lcrypt</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="WiringPi-Python源码-1" class="article-heading"><a href="#WiringPi-Python源码-1" class="headerlink" title="WiringPi-Python源码"></a>WiringPi-Python源码<a class="article-anchor" href="#WiringPi-Python源码-1" aria-hidden="true"></a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> wiringpi <span class="keyword">as</span> GPIO</span><br><span class="line"></span><br><span class="line">RED_PIN = <span class="number">11</span></span><br><span class="line">BLUE_PIN = <span class="number">10</span></span><br><span class="line">GREEN_PIN = <span class="number">12</span></span><br><span class="line">PWM_OUTPUT = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">GPIO.wiringPiSetup()</span><br><span class="line"></span><br><span class="line">GPIO.pinMode(RED_PIN, PWM_OUTPUT)</span><br><span class="line"></span><br><span class="line">GPIO.softPwmCreate(RED_PIN, <span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmCreate(BLUE_PIN, <span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmCreate(GREEN_PIN, <span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GED LED&quot;</span>)</span><br><span class="line">GPIO.softPwmWrite(RED_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmWrite(GREEN_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.softPwmWrite(BLUE_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Green LED&quot;</span>)</span><br><span class="line">GPIO.softPwmWrite(RED_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.softPwmWrite(GREEN_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmWrite(BLUE_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Blue LED&quot;</span>)</span><br><span class="line">GPIO.softPwmWrite(RED_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.softPwmWrite(GREEN_PIN, <span class="number">0</span>)</span><br><span class="line">GPIO.softPwmWrite(BLUE_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;White LED&quot;</span>)</span><br><span class="line">GPIO.softPwmWrite(RED_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmWrite(GREEN_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.softPwmWrite(BLUE_PIN, <span class="number">255</span>)</span><br><span class="line">GPIO.delay(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+
+
+<p>其他颜色等可以自行尝试，配置不同的PWM就会产生不同的颜色。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.961Z" itemprop="dateModified">上次更新：2023-07-31</time>
+                <a href="WiringPi-Python.html" class="article-footer-prev" title="WiringPi-Python"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="RSTPCamera.html" class="article-footer-next" title="RSTP Web 摄像头"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-PWM%E8%88%B5%E6%9C%BA"><span class="toc-text" title="1. PWM舵机">1. PWM舵机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%88%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-text" title="舵机控制原理">舵机控制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E4%BB%A5%E5%8F%8A%E6%BC%94%E7%A4%BA"><span class="toc-text" title="源码编译以及演示">源码编译以及演示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text" title="说明">说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiringPi%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%AF%91"><span class="toc-text" title="WiringPi源码以及编译">WiringPi源码以及编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiringPi-Python%E6%BA%90%E7%A0%81"><span class="toc-text" title="WiringPi-Python源码">WiringPi-Python源码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-PWM-RGB%E7%81%AF"><span class="toc-text" title="2. PWM RGB灯">2. PWM RGB灯</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-text" title="控制原理">控制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E4%BB%A5%E5%8F%8A%E6%BC%94%E7%A4%BA-1"><span class="toc-text" title="源码编译以及演示">源码编译以及演示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="toc-text" title="说明">说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiringPi%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%AF%91-1"><span class="toc-text" title="WiringPi源码以及编译">WiringPi源码以及编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiringPi-Python%E6%BA%90%E7%A0%81-1"><span class="toc-text" title="WiringPi-Python源码">WiringPi-Python源码</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>快速上手</summary><a href="index.html" class="sidebar-link first">快速上手</a><a href="InstallOsIntoEmmc.html" class="sidebar-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="sidebar-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="Hardware.html" class="sidebar-link">Edge 硬件描述</a></details></strong><strong class="sidebar-title"><details open><summary>配置</summary><strong class="sidebar-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="sidebar-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="sidebar-link">配置文件</a><a href="AutoLogin.html" class="sidebar-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="sidebar-link">把SD卡固件写入到eMMC</a><a href="DeviceTreeOverlay.html" class="sidebar-link">Device Tree Overlay</a><a href="ChineseSupportUsage.html" class="sidebar-link">中文支持</a></details></strong><strong class="sidebar-link"><details><summary>网络</summary><a href="Wifi.html" class="sidebar-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="sidebar-link">蓝牙</a><a href="Wol.html" class="sidebar-link">远程唤醒</a></details></strong><strong class="sidebar-link"><details><summary>显示</summary><a href="UbuntuLogo.html" class="sidebar-link secondary-first">Ubuntu Logo</a><a href="SetupFramebufferConsoleFont.html" class="sidebar-link">Framebuffer Console字体</a></details></strong><strong class="sidebar-link"><details><summary>配件</summary><a href="Fan.html" class="sidebar-link secondary-first">风扇</a><a href="TS050.html" class="sidebar-link">TS050触摸屏</a><a href="LteModule.html" class="sidebar-link">4G模块</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>应用</summary><strong class="sidebar-link"><details open><summary>GPIO</summary><a href="Gpio.html" class="sidebar-link secondary-first">GPIO</a><a href="LED.html" class="sidebar-link">LED</a><a href="1wire.html" class="sidebar-link">1-Wire</a><a href="GpioIRQ.html" class="sidebar-link">GPIO中断</a><a href="WiringPi.html" class="sidebar-link">WiringPi</a><a href="WiringPi-Python.html" class="sidebar-link">WiringPi-Python</a><a href="SoftPWM.html" class="sidebar-link current">软件模拟PWM</a></details></strong><a href="RSTPCamera.html" class="sidebar-link first">RSTP Web 摄像头</a><a href="Docker.html" class="sidebar-link">Docker</a><a href="32bitLibrary.html" class="sidebar-link">32位运行库</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><strong class="sidebar-link"><details><summary>U-Boot</summary><a href="UpgradeUboot.html" class="sidebar-link secondary-first">更新U-Boot</a><a href="KbiGuidance.html" class="sidebar-link">KBI</a></details></strong><strong class="sidebar-link"><details><summary>Linux</summary><a href="UpgradeLinuxKernel.html" class="sidebar-link secondary-first">更新Linux内核</a></details></strong><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a></details></strong><strong class="sidebar-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="sidebar-link first">抓取Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link  header"><details ><summary>VIM</summary><a href="/linux/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/linux/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/linux/zh-cn/vim3/" class="mobile-nav-link secondary ">VIM3/3L</a><a href="/linux/zh-cn/vim4/" class="mobile-nav-link secondary ">VIM4</a></details></strong><a href="/linux/zh-cn/edge/" class="mobile-nav-link current header">Edge</a><a href="/linux/zh-cn/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareEdge" class="mobile-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/EdgeUbuntuFirmware" class="mobile-nav-link  header">固件下载</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>快速上手</summary><a href="index.html" class="mobile-nav-link first">快速上手</a><a href="InstallOsIntoEmmc.html" class="mobile-nav-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="mobile-nav-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="Hardware.html" class="mobile-nav-link">Edge 硬件描述</a></details></strong><strong class="mobile-nav-title"><details open><summary>配置</summary><strong class="mobile-nav-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="mobile-nav-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="mobile-nav-link">配置文件</a><a href="AutoLogin.html" class="mobile-nav-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="mobile-nav-link">把SD卡固件写入到eMMC</a><a href="DeviceTreeOverlay.html" class="mobile-nav-link">Device Tree Overlay</a><a href="ChineseSupportUsage.html" class="mobile-nav-link">中文支持</a></details></strong><strong class="mobile-nav-link"><details><summary>网络</summary><a href="Wifi.html" class="mobile-nav-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="mobile-nav-link">蓝牙</a><a href="Wol.html" class="mobile-nav-link">远程唤醒</a></details></strong><strong class="mobile-nav-link"><details><summary>显示</summary><a href="UbuntuLogo.html" class="mobile-nav-link secondary-first">Ubuntu Logo</a><a href="SetupFramebufferConsoleFont.html" class="mobile-nav-link">Framebuffer Console字体</a></details></strong><strong class="mobile-nav-link"><details><summary>配件</summary><a href="Fan.html" class="mobile-nav-link secondary-first">风扇</a><a href="TS050.html" class="mobile-nav-link">TS050触摸屏</a><a href="LteModule.html" class="mobile-nav-link">4G模块</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>应用</summary><strong class="mobile-nav-link"><details open><summary>GPIO</summary><a href="Gpio.html" class="mobile-nav-link secondary-first">GPIO</a><a href="LED.html" class="mobile-nav-link">LED</a><a href="1wire.html" class="mobile-nav-link">1-Wire</a><a href="GpioIRQ.html" class="mobile-nav-link">GPIO中断</a><a href="WiringPi.html" class="mobile-nav-link">WiringPi</a><a href="WiringPi-Python.html" class="mobile-nav-link">WiringPi-Python</a><a href="SoftPWM.html" class="mobile-nav-link current">软件模拟PWM</a></details></strong><a href="RSTPCamera.html" class="mobile-nav-link first">RSTP Web 摄像头</a><a href="Docker.html" class="mobile-nav-link">Docker</a><a href="32bitLibrary.html" class="mobile-nav-link">32位运行库</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><strong class="mobile-nav-link"><details><summary>U-Boot</summary><a href="UpgradeUboot.html" class="mobile-nav-link secondary-first">更新U-Boot</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI</a></details></strong><strong class="mobile-nav-link"><details><summary>Linux</summary><a href="UpgradeLinuxKernel.html" class="mobile-nav-link secondary-first">更新Linux内核</a></details></strong><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a></details></strong><strong class="mobile-nav-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="mobile-nav-link first">抓取Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="edge/SoftPWM.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/linux/js/lang_select.js"></script>
+
+
+<script src="/linux/js/toc.js"></script>
+
+
+<script src="/linux/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

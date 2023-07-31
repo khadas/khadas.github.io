@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Khadas设置使用说明 | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/zh-cn/vim4/khadas_settings_usage.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/vim4/khadas_settings_usage.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/vim4/khadas_settings_usage.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/android/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/android//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/android//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/android//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/android//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/android/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/android//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/android/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Khadas设置集成了一些自定义的功能，用户可以根据自己的爱好进行配置。 如何进入Khadas设置设置--&gt;Khadas设置   设置菜单说明1. HDMI IN：Micro HDMI IN端口输入源控制。2. Ethernet：以太网相关设置。3. Display &amp; Sound：背光调节和屏幕方向、密度等更多设置。   4. PowerKey definition：电源按键定义，">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khadas设置使用说明">
+<meta property="og:url" content="https://khadas.github.io/zh-cn/vim4/khadas_settings_usage">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="Khadas设置集成了一些自定义的功能，用户可以根据自己的爱好进行配置。 如何进入Khadas设置设置--&gt;Khadas设置   设置菜单说明1. HDMI IN：Micro HDMI IN端口输入源控制。2. Ethernet：以太网相关设置。3. Display &amp; Sound：背光调节和屏幕方向、密度等更多设置。   4. PowerKey definition：电源按键定义，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings1.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings2.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings3.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings4.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings5.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings6.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings7.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings8.png">
+<meta property="og:image" content="https://khadas.github.io/android/images/vim4/khadas_settings9.png">
+<meta property="article:published_time" content="2023-07-31T06:30:38.181Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.181Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://khadas.github.io/android/images/vim4/khadas_settings1.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/android/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/android/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/android/zh-cn/vim3/" class="main-nav-link secondary ">VIM3/3L</a></li><li class="submenu"><a href="/android/zh-cn/vim4/" class="main-nav-link secondary current">VIM4</a></li></ul></div><a href="/android/zh-cn/edge/" class="main-nav-link  header">Edge</a><a href="/android/zh-cn/hardware/hardwareVim4" class="main-nav-link  header">硬件资料</a><a href="/android/zh-cn/firmware/Vim4AndroidFirmware" class="main-nav-link  header">固件下载</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim4/khadas_settings_usage.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Khadas设置使用说明</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/android/source/zh-cn/vim4/khadas_settings_usage.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Khadas设置集成了一些自定义的功能，用户可以根据自己的爱好进行配置。</p>
+<h2 id="如何进入Khadas设置" class="article-heading"><a href="#如何进入Khadas设置" class="headerlink" title="如何进入Khadas设置"></a>如何进入Khadas设置<a class="article-anchor" href="#如何进入Khadas设置" aria-hidden="true"></a></h2><p><code>设置--&gt;Khadas设置</code></p>
+<img src="/android/images/vim4/khadas_settings1.png" width="75%" height="75%">
+
+<h2 id="设置菜单说明" class="article-heading"><a href="#设置菜单说明" class="headerlink" title="设置菜单说明"></a>设置菜单说明<a class="article-anchor" href="#设置菜单说明" aria-hidden="true"></a></h2><h5 id="1-HDMI-IN：Micro-HDMI-IN端口输入源控制。" class="article-heading"><a href="#1-HDMI-IN：Micro-HDMI-IN端口输入源控制。" class="headerlink" title="1. HDMI IN：Micro HDMI IN端口输入源控制。"></a>1. <code>HDMI IN</code>：Micro HDMI IN端口输入源控制。<a class="article-anchor" href="#1-HDMI-IN：Micro-HDMI-IN端口输入源控制。" aria-hidden="true"></a></h5><h5 id="2-Ethernet：以太网相关设置。" class="article-heading"><a href="#2-Ethernet：以太网相关设置。" class="headerlink" title="2. Ethernet：以太网相关设置。"></a>2. <code>Ethernet</code>：以太网相关设置。<a class="article-anchor" href="#2-Ethernet：以太网相关设置。" aria-hidden="true"></a></h5><h5 id="3-Display-amp-Sound：背光调节和屏幕方向、密度等更多设置。" class="article-heading"><a href="#3-Display-amp-Sound：背光调节和屏幕方向、密度等更多设置。" class="headerlink" title="3. Display &amp; Sound：背光调节和屏幕方向、密度等更多设置。"></a>3. <code>Display &amp; Sound</code>：背光调节和屏幕方向、密度等更多设置。<a class="article-anchor" href="#3-Display-amp-Sound：背光调节和屏幕方向、密度等更多设置。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings2.png" width="75%" height="75%">
+
+
+<h5 id="4-PowerKey-definition：电源按键定义，可以定义为休眠、关机、重启。" class="article-heading"><a href="#4-PowerKey-definition：电源按键定义，可以定义为休眠、关机、重启。" class="headerlink" title="4. PowerKey definition：电源按键定义，可以定义为休眠、关机、重启。"></a>4. <code>PowerKey definition</code>：电源按键定义，可以定义为休眠、关机、重启。<a class="article-anchor" href="#4-PowerKey-definition：电源按键定义，可以定义为休眠、关机、重启。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings3.png" width="75%" height="75%">
+
+
+<h5 id="5-FunctionKey-definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。" class="article-heading"><a href="#5-FunctionKey-definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。" class="headerlink" title="5. FunctionKey definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。"></a>5. <code>FunctionKey definition</code>：功能按键自定义，可根据Android标准按键码值对应表进行填写。<a class="article-anchor" href="#5-FunctionKey-definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings4.png" width="75%" height="75%">
+
+
+<h5 id="6-LEDs-control：白灯和红灯自定义控制。" class="article-heading"><a href="#6-LEDs-control：白灯和红灯自定义控制。" class="headerlink" title="6. LEDs control：白灯和红灯自定义控制。"></a>6. <code>LEDs control</code>：白灯和红灯自定义控制。<a class="article-anchor" href="#6-LEDs-control：白灯和红灯自定义控制。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings5.png" width="75%" height="75%">
+
+
+<h5 id="7-Cooling-fan：风扇自定义控制，默认根据温度自动调节风速。" class="article-heading"><a href="#7-Cooling-fan：风扇自定义控制，默认根据温度自动调节风速。" class="headerlink" title="7. Cooling fan：风扇自定义控制，默认根据温度自动调节风速。"></a>7. <code>Cooling fan</code>：风扇自定义控制，默认根据温度自动调节风速。<a class="article-anchor" href="#7-Cooling-fan：风扇自定义控制，默认根据温度自动调节风速。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings6.png" width="75%" height="75%">
+
+
+<h5 id="8-WOL：以太网唤醒-WOL-，允许你用手机或电脑通过局域网唤醒设备-请参考WOL用法。" class="article-heading"><a href="#8-WOL：以太网唤醒-WOL-，允许你用手机或电脑通过局域网唤醒设备-请参考WOL用法。" class="headerlink" title="8. WOL：以太网唤醒(WOL)，允许你用手机或电脑通过局域网唤醒设备, 请参考WOL用法。"></a>8. <code>WOL</code>：以太网唤醒(WOL)，允许你用手机或电脑通过局域网唤醒设备, 请参考<a href="Wol.html">WOL用法</a>。<a class="article-anchor" href="#8-WOL：以太网唤醒-WOL-，允许你用手机或电脑通过局域网唤醒设备-请参考WOL用法。" aria-hidden="true"></a></h5><h5 id="9-Status-bar-control：顶部状态栏和底部状态栏隐藏和显示控制。" class="article-heading"><a href="#9-Status-bar-control：顶部状态栏和底部状态栏隐藏和显示控制。" class="headerlink" title="9.Status bar control：顶部状态栏和底部状态栏隐藏和显示控制。"></a>9.<code>Status bar control</code>：顶部状态栏和底部状态栏隐藏和显示控制。<a class="article-anchor" href="#9-Status-bar-control：顶部状态栏和底部状态栏隐藏和显示控制。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings7.png" width="75%" height="75%">
+
+
+<h5 id="10-Logo-LED-control：控制扩展板上Logo-LED灯" class="article-heading"><a href="#10-Logo-LED-control：控制扩展板上Logo-LED灯" class="headerlink" title="10. Logo LED control：控制扩展板上Logo LED灯"></a>10. <code>Logo LED control</code>：控制扩展板上Logo LED灯<a class="article-anchor" href="#10-Logo-LED-control：控制扩展板上Logo-LED灯" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings8.png" width="75%" height="75%">
+
+
+<h5 id="11-Timer：定时开关机功能。" class="article-heading"><a href="#11-Timer：定时开关机功能。" class="headerlink" title="11. Timer：定时开关机功能。"></a>11. <code>Timer</code>：定时开关机功能。<a class="article-anchor" href="#11-Timer：定时开关机功能。" aria-hidden="true"></a></h5><img src="/android/images/vim4/khadas_settings9.png" width="75%" height="75%">
+
+
+<h5 id="12-Updater：在线升级功能。" class="article-heading"><a href="#12-Updater：在线升级功能。" class="headerlink" title="12. Updater：在线升级功能。"></a>12. <code>Updater</code>：在线升级功能。<a class="article-anchor" href="#12-Updater：在线升级功能。" aria-hidden="true"></a></h5>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.181Z" itemprop="dateModified">上次更新：2023-07-31</time>
+                <a href="index.html" class="article-footer-next" title="概述"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5Khadas%E8%AE%BE%E7%BD%AE"><span class="toc-text" title="如何进入Khadas设置">如何进入Khadas设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%8F%9C%E5%8D%95%E8%AF%B4%E6%98%8E"><span class="toc-text" title="设置菜单说明">设置菜单说明</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-HDMI-IN%EF%BC%9AMicro-HDMI-IN%E7%AB%AF%E5%8F%A3%E8%BE%93%E5%85%A5%E6%BA%90%E6%8E%A7%E5%88%B6%E3%80%82"><span class="toc-text" title="1. HDMI IN：Micro HDMI IN端口输入源控制。">1. HDMI IN：Micro HDMI IN端口输入源控制。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Ethernet%EF%BC%9A%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE%E3%80%82"><span class="toc-text" title="2. Ethernet：以太网相关设置。">2. Ethernet：以太网相关设置。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Display-amp-Sound%EF%BC%9A%E8%83%8C%E5%85%89%E8%B0%83%E8%8A%82%E5%92%8C%E5%B1%8F%E5%B9%95%E6%96%B9%E5%90%91%E3%80%81%E5%AF%86%E5%BA%A6%E7%AD%89%E6%9B%B4%E5%A4%9A%E8%AE%BE%E7%BD%AE%E3%80%82"><span class="toc-text" title="3. Display &amp; Sound：背光调节和屏幕方向、密度等更多设置。">3. Display &amp; Sound：背光调节和屏幕方向、密度等更多设置。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-PowerKey-definition%EF%BC%9A%E7%94%B5%E6%BA%90%E6%8C%89%E9%94%AE%E5%AE%9A%E4%B9%89%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AE%9A%E4%B9%89%E4%B8%BA%E4%BC%91%E7%9C%A0%E3%80%81%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E3%80%82"><span class="toc-text" title="4. PowerKey definition：电源按键定义，可以定义为休眠、关机、重启。">4. PowerKey definition：电源按键定义，可以定义为休眠、关机、重启。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-FunctionKey-definition%EF%BC%9A%E5%8A%9F%E8%83%BD%E6%8C%89%E9%94%AE%E8%87%AA%E5%AE%9A%E4%B9%89%EF%BC%8C%E5%8F%AF%E6%A0%B9%E6%8D%AEAndroid%E6%A0%87%E5%87%86%E6%8C%89%E9%94%AE%E7%A0%81%E5%80%BC%E5%AF%B9%E5%BA%94%E8%A1%A8%E8%BF%9B%E8%A1%8C%E5%A1%AB%E5%86%99%E3%80%82"><span class="toc-text" title="5. FunctionKey definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。">5. FunctionKey definition：功能按键自定义，可根据Android标准按键码值对应表进行填写。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-LEDs-control%EF%BC%9A%E7%99%BD%E7%81%AF%E5%92%8C%E7%BA%A2%E7%81%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E5%88%B6%E3%80%82"><span class="toc-text" title="6. LEDs control：白灯和红灯自定义控制。">6. LEDs control：白灯和红灯自定义控制。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-Cooling-fan%EF%BC%9A%E9%A3%8E%E6%89%87%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E5%88%B6%EF%BC%8C%E9%BB%98%E8%AE%A4%E6%A0%B9%E6%8D%AE%E6%B8%A9%E5%BA%A6%E8%87%AA%E5%8A%A8%E8%B0%83%E8%8A%82%E9%A3%8E%E9%80%9F%E3%80%82"><span class="toc-text" title="7. Cooling fan：风扇自定义控制，默认根据温度自动调节风速。">7. Cooling fan：风扇自定义控制，默认根据温度自动调节风速。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-WOL%EF%BC%9A%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%94%A4%E9%86%92-WOL-%EF%BC%8C%E5%85%81%E8%AE%B8%E4%BD%A0%E7%94%A8%E6%89%8B%E6%9C%BA%E6%88%96%E7%94%B5%E8%84%91%E9%80%9A%E8%BF%87%E5%B1%80%E5%9F%9F%E7%BD%91%E5%94%A4%E9%86%92%E8%AE%BE%E5%A4%87-%E8%AF%B7%E5%8F%82%E8%80%83WOL%E7%94%A8%E6%B3%95%E3%80%82"><span class="toc-text" title="8. WOL：以太网唤醒(WOL)，允许你用手机或电脑通过局域网唤醒设备, 请参考WOL用法。">8. WOL：以太网唤醒(WOL)，允许你用手机或电脑通过局域网唤醒设备, 请参考WOL用法。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-Status-bar-control%EF%BC%9A%E9%A1%B6%E9%83%A8%E7%8A%B6%E6%80%81%E6%A0%8F%E5%92%8C%E5%BA%95%E9%83%A8%E7%8A%B6%E6%80%81%E6%A0%8F%E9%9A%90%E8%97%8F%E5%92%8C%E6%98%BE%E7%A4%BA%E6%8E%A7%E5%88%B6%E3%80%82"><span class="toc-text" title="9.Status bar control：顶部状态栏和底部状态栏隐藏和显示控制。">9.Status bar control：顶部状态栏和底部状态栏隐藏和显示控制。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-Logo-LED-control%EF%BC%9A%E6%8E%A7%E5%88%B6%E6%89%A9%E5%B1%95%E6%9D%BF%E4%B8%8ALogo-LED%E7%81%AF"><span class="toc-text" title="10. Logo LED control：控制扩展板上Logo LED灯">10. Logo LED control：控制扩展板上Logo LED灯</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-Timer%EF%BC%9A%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E5%8A%9F%E8%83%BD%E3%80%82"><span class="toc-text" title="11. Timer：定时开关机功能。">11. Timer：定时开关机功能。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-Updater%EF%BC%9A%E5%9C%A8%E7%BA%BF%E5%8D%87%E7%BA%A7%E5%8A%9F%E8%83%BD%E3%80%82"><span class="toc-text" title="12. Updater：在线升级功能。">12. Updater：在线升级功能。</span></a></li></ol></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>快速开始</summary><a href="index.html" class="sidebar-link first">概述</a><a href="interfaces.html" class="sidebar-link">接口描述</a><a href="boot_into_upgrade_mode.html" class="sidebar-link">进入升级模式</a><a href="upgrade_via_usbcable.html" class="sidebar-link">通过USB升级</a></details></strong><strong class="sidebar-title"><details open><summary>资源控制</summary><strong class="sidebar-link"><details open><summary>系统控制</summary><a href="adb_tool.html" class="sidebar-link secondary-first">ADB工具使用</a><a href="change_boot_logo.html" class="sidebar-link">更换开机Logo</a><a href="change_boot_animation.html" class="sidebar-link">更换开机动画</a><a href="app_platform_sign.html" class="sidebar-link">APP获取系统权限</a><a href="get_gsensor_data.html" class="sidebar-link">G-Sensor数据获取</a><a href="settings_command.html" class="sidebar-link">ADB Settings命令</a><a href="android_tts.html" class="sidebar-link">TTS使用说明</a><a href="khadas_settings_usage.html" class="sidebar-link current">Khadas设置使用说明</a><a href="android_add_permission.html" class="sidebar-link">APP默认权限添加</a></details></strong><strong class="sidebar-link"><details open><summary>配件</summary><a href="connect_lcd.html" class="sidebar-link secondary-first">TS050屏幕连接</a></details></strong><strong class="sidebar-link"><details open><summary>板载资源</summary><a href="access_gpio.html" class="sidebar-link secondary-first">GPIO使用说明</a><a href="access_i2c.html" class="sidebar-link">I2C使用说明</a><a href="use_uart.html" class="sidebar-link">UART使用说明</a><a href="howto_use_pwm.html" class="sidebar-link">PWM使用说明</a><a href="wol.html" class="sidebar-link">远程唤醒</a><a href="howto_add_ir.html" class="sidebar-link">红外遥控器支持</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><strong class="sidebar-link"><details open><summary>U-Boot</summary><a href="uboot_usage.html" class="sidebar-link secondary-first">U-Boot使用说明</a><a href="setup_tftp_server.html" class="sidebar-link">搭建TFTP服务器</a><a href="load_images_with_uboot_via_tftp.html" class="sidebar-link">通过TFTP下载镜像</a><a href="kbi_guidance.html" class="sidebar-link">KBI说明</a></details></strong><strong class="sidebar-link"><details open><summary>固件&&系统</summary><a href="install_toolchains.html" class="sidebar-link secondary-first">安装交叉编译器</a><a href="download_android_sourcecode.html" class="sidebar-link">下载安卓源码</a><a href="build_android.html" class="sidebar-link">编译安卓源码</a><a href="create_burn_card_via_cli.html" class="sidebar-link">通过命令行创建烧录卡</a><a href="create_bootable_sdcard.html" class="sidebar-link">通过命令行创建启动卡</a><a href="erase_emmc.html" class="sidebar-link">擦除eMMC存储器</a><a href="howto_use_fastboot.html" class="sidebar-link">Fastboot使用说明</a></details></strong><strong class="sidebar-link"><details open><summary>硬件</summary><a href="setup_serial_tool.html" class="sidebar-link secondary-first">设置串口调试工具</a><a href="extra_power_input.html" class="sidebar-link">外部电源供电</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>故障排查</summary><a href="capture_log.html" class="sidebar-link first">抓取Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/android/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/android/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/android/zh-cn/vim3/" class="mobile-nav-link secondary ">VIM3/3L</a><a href="/android/zh-cn/vim4/" class="mobile-nav-link secondary current">VIM4</a></details></strong><a href="/android/zh-cn/edge/" class="mobile-nav-link  header">Edge</a><a href="/android/zh-cn/hardware/hardwareVim4" class="mobile-nav-link  header">硬件资料</a><a href="/android/zh-cn/firmware/Vim4AndroidFirmware" class="mobile-nav-link  header">固件下载</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>快速开始</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="interfaces.html" class="mobile-nav-link">接口描述</a><a href="boot_into_upgrade_mode.html" class="mobile-nav-link">进入升级模式</a><a href="upgrade_via_usbcable.html" class="mobile-nav-link">通过USB升级</a></details></strong><strong class="mobile-nav-title"><details open><summary>资源控制</summary><strong class="mobile-nav-link"><details open><summary>系统控制</summary><a href="adb_tool.html" class="mobile-nav-link secondary-first">ADB工具使用</a><a href="change_boot_logo.html" class="mobile-nav-link">更换开机Logo</a><a href="change_boot_animation.html" class="mobile-nav-link">更换开机动画</a><a href="app_platform_sign.html" class="mobile-nav-link">APP获取系统权限</a><a href="get_gsensor_data.html" class="mobile-nav-link">G-Sensor数据获取</a><a href="settings_command.html" class="mobile-nav-link">ADB Settings命令</a><a href="android_tts.html" class="mobile-nav-link">TTS使用说明</a><a href="khadas_settings_usage.html" class="mobile-nav-link current">Khadas设置使用说明</a><a href="android_add_permission.html" class="mobile-nav-link">APP默认权限添加</a></details></strong><strong class="mobile-nav-link"><details open><summary>配件</summary><a href="connect_lcd.html" class="mobile-nav-link secondary-first">TS050屏幕连接</a></details></strong><strong class="mobile-nav-link"><details open><summary>板载资源</summary><a href="access_gpio.html" class="mobile-nav-link secondary-first">GPIO使用说明</a><a href="access_i2c.html" class="mobile-nav-link">I2C使用说明</a><a href="use_uart.html" class="mobile-nav-link">UART使用说明</a><a href="howto_use_pwm.html" class="mobile-nav-link">PWM使用说明</a><a href="wol.html" class="mobile-nav-link">远程唤醒</a><a href="howto_add_ir.html" class="mobile-nav-link">红外遥控器支持</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><strong class="mobile-nav-link"><details open><summary>U-Boot</summary><a href="uboot_usage.html" class="mobile-nav-link secondary-first">U-Boot使用说明</a><a href="setup_tftp_server.html" class="mobile-nav-link">搭建TFTP服务器</a><a href="load_images_with_uboot_via_tftp.html" class="mobile-nav-link">通过TFTP下载镜像</a><a href="kbi_guidance.html" class="mobile-nav-link">KBI说明</a></details></strong><strong class="mobile-nav-link"><details open><summary>固件&&系统</summary><a href="install_toolchains.html" class="mobile-nav-link secondary-first">安装交叉编译器</a><a href="download_android_sourcecode.html" class="mobile-nav-link">下载安卓源码</a><a href="build_android.html" class="mobile-nav-link">编译安卓源码</a><a href="create_burn_card_via_cli.html" class="mobile-nav-link">通过命令行创建烧录卡</a><a href="create_bootable_sdcard.html" class="mobile-nav-link">通过命令行创建启动卡</a><a href="erase_emmc.html" class="mobile-nav-link">擦除eMMC存储器</a><a href="howto_use_fastboot.html" class="mobile-nav-link">Fastboot使用说明</a></details></strong><strong class="mobile-nav-link"><details open><summary>硬件</summary><a href="setup_serial_tool.html" class="mobile-nav-link secondary-first">设置串口调试工具</a><a href="extra_power_input.html" class="mobile-nav-link">外部电源供电</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>故障排查</summary><a href="capture_log.html" class="mobile-nav-link first">抓取Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim4/khadas_settings_usage.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/android/js/lang_select.js"></script>
+
+
+<script src="/android/js/toc.js"></script>
+
+
+<script src="/android/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

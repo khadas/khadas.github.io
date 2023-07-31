@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>GPIO | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/zh-cn/vim4/Gpio.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/vim4/Gpio.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/vim4/Gpio.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/linux/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/linux//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/linux//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://khadas.github.io -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/linux/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/linux//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/linux/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="这篇文档会介绍如何在Ubuntu下控制GPIO。 注意 这篇文档仅仅适用于VIM1&#x2F;VIM2&#x2F;VIM3 4.9内核和VIM4 5.4 内核。    获取GPIO数值计算方法GPIO数值计算方法为：Number &#x3D; Range Base + Pin Index。  Range Base 表示Range基数。 Pin Index 表示GPIO管脚相对于Range的偏移。  GPIO数值计算举例Amlo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GPIO">
+<meta property="og:url" content="https://khadas.github.io/zh-cn/vim4/Gpio">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="这篇文档会介绍如何在Ubuntu下控制GPIO。 注意 这篇文档仅仅适用于VIM1&#x2F;VIM2&#x2F;VIM3 4.9内核和VIM4 5.4 内核。    获取GPIO数值计算方法GPIO数值计算方法为：Number &#x3D; Range Base + Pin Index。  Range Base 表示Range基数。 Pin Index 表示GPIO管脚相对于Range的偏移。  GPIO数值计算举例Amlo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-31T06:30:38.957Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.957Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/linux/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/linux/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/linux/zh-cn/vim3/" class="main-nav-link secondary ">VIM3/3L</a></li><li class="submenu"><a href="/linux/zh-cn/vim4/" class="main-nav-link secondary current">VIM4</a></li></ul></div><a href="/linux/zh-cn/edge/" class="main-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="main-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim4" class="main-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/vim4_ubuntu_firmware" class="main-nav-link  header">固件下载</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim4/Gpio.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">GPIO</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/linux/source/zh-cn/vim4/Gpio.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>这篇文档会介绍如何在Ubuntu下控制GPIO。</p>
+<blockquote class="note warn"><strong class="note-title">注意</strong><ol>
+<li>这篇文档<strong>仅仅适用于VIM1/VIM2/VIM3 4.9内核和VIM4 5.4 内核</strong>。</li>
+</ol>
+</blockquote>
+
+<h2 id="获取GPIO数值" class="article-heading"><a href="#获取GPIO数值" class="headerlink" title="获取GPIO数值"></a>获取GPIO数值<a class="article-anchor" href="#获取GPIO数值" aria-hidden="true"></a></h2><h3 id="计算方法" class="article-heading"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法<a class="article-anchor" href="#计算方法" aria-hidden="true"></a></h3><p>GPIO数值计算方法为：<code>Number = Range Base + Pin Index</code>。</p>
+<ol>
+<li><code>Range Base</code> 表示Range基数。</li>
+<li><code>Pin Index</code> 表示GPIO管脚相对于Range的偏移。</li>
+</ol>
+<h3 id="GPIO数值计算举例" class="article-heading"><a href="#GPIO数值计算举例" class="headerlink" title="GPIO数值计算举例"></a>GPIO数值计算举例<a class="article-anchor" href="#GPIO数值计算举例" aria-hidden="true"></a></h3><p>Amlogic有些平台通常有两个GPIO Range， 如：AOBUS和Periphs。下面会分别对这些Range做一下介绍。</p>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="vim1-tab" data-toggle="tab" href="#vim1" role="tab" aria-controls="vim1" aria-selected="true">VIM1</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="vim2-tab" data-toggle="tab" href="#vim2" role="tab" aria-controls="vim2" aria-selected="false">VIM2</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="vim3-tab" data-toggle="tab" href="#vim3" role="tab" aria-controls="vim3" aria-selected="false">VIM3</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="vim4-tab" data-toggle="tab" href="#vim4" role="tab" aria-controls="vim4" aria-selected="false">VIM4</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="vim1" role="tabpanel" aria-labelledby="vim1-tab">
+
+<p><strong>AOBUS</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@14/gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: aobus-banks GPIOS [501 - 511] PINS [0 - 10]</span><br></pre></td></tr></table></figure>
+
+<p>AOBUS的<code>Range Base</code>为<code>501</code>。</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@14/pins</span><br><span class="line">registered pins: 11</span><br><span class="line">pin 0 (GPIOAO_0)  pinctrl@14</span><br><span class="line">pin 1 (GPIOAO_1)  pinctrl@14</span><br><span class="line">pin 2 (GPIOAO_2)  pinctrl@14</span><br><span class="line">pin 3 (GPIOAO_3)  pinctrl@14</span><br><span class="line">pin 4 (GPIOAO_4)  pinctrl@14</span><br><span class="line">pin 5 (GPIOAO_5)  pinctrl@14</span><br><span class="line">pin 6 (GPIOAO_6)  pinctrl@14</span><br><span class="line">pin 7 (GPIOAO_7)  pinctrl@14</span><br><span class="line">pin 8 (GPIOAO_8)  pinctrl@14</span><br><span class="line">pin 9 (GPIOAO_9)  pinctrl@14</span><br><span class="line">pin 10 (GPIO_TEST_N)  pinctrl@14</span><br></pre></td></tr></table></figure>
+
+<p>管脚对应的<code>Pin Index</code>如上。</p>
+<p><strong>Periphs</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@4b0/gpio-ranges </span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: periphs-banks GPIOS [401 - 500] PINS [0 - 99]</span><br></pre></td></tr></table></figure>
+
+<p>Periphs’ <code>Range Base</code> is <code>401</code>.</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@4b0/pins</span><br><span class="line">registered pins: 100</span><br><span class="line">pin 0 (GPIOZ_0)  pinctrl@4b0</span><br><span class="line">pin 1 (GPIOZ_1)  pinctrl@4b0</span><br><span class="line">pin 2 (GPIOZ_2)  pinctrl@4b0</span><br><span class="line">pin 3 (GPIOZ_3)  pinctrl@4b0</span><br><span class="line">pin 4 (GPIOZ_4)  pinctrl@4b0</span><br><span class="line">pin 5 (GPIOZ_5)  pinctrl@4b0</span><br><span class="line">pin 6 (GPIOZ_6)  pinctrl@4b0</span><br><span class="line">pin 7 (GPIOZ_7)  pinctrl@4b0</span><br><span class="line">pin 8 (GPIOZ_8)  pinctrl@4b0</span><br><span class="line">pin 9 (GPIOZ_9)  pinctrl@4b0</span><br><span class="line">pin 93 (GPIOX_14)  pinctrl@4b0</span><br><span class="line">pin 94 (GPIOX_15)  pinctrl@4b0</span><br><span class="line">pin 95 (GPIOX_16)  pinctrl@4b0</span><br><span class="line">pin 96 (GPIOX_17)  pinctrl@4b0</span><br><span class="line">pin 97 (GPIOX_18)  pinctrl@4b0</span><br><span class="line">pin 98 (GPIOCLK_0)  pinctrl@4b0</span><br><span class="line">pin 99 (GPIOCLK_1)  pinctrl@4b0</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>计算GPIO数值：</strong></li>
+</ol>
+<p>以<code>GPIOX_14</code>为例。</p>
+<p><code>GPIOX_14</code> = <code>Range Base</code> + <code>Pin Index</code> = <code>401</code> + <code>93</code> = <code>494</code>.</p>
+</div>
+<div class="tab-pane fade" id="vim2" role="tabpanel" aria-labelledby="vim2-tab">
+
+<p><strong>AOBUS</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@14/gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: aobus-banks GPIOS [501 - 511] PINS [0 - 10]</span><br></pre></td></tr></table></figure>
+
+<p>AOBUS的<code>Range Base</code>为<code>501</code>。</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@14/pins</span><br><span class="line">registered pins: 11</span><br><span class="line">pin 0 (GPIOAO_0)  pinctrl@14</span><br><span class="line">pin 1 (GPIOAO_1)  pinctrl@14</span><br><span class="line">pin 2 (GPIOAO_2)  pinctrl@14</span><br><span class="line">pin 3 (GPIOAO_3)  pinctrl@14</span><br><span class="line">pin 4 (GPIOAO_4)  pinctrl@14</span><br><span class="line">pin 5 (GPIOAO_5)  pinctrl@14</span><br><span class="line">pin 6 (GPIOAO_6)  pinctrl@14</span><br><span class="line">pin 7 (GPIOAO_7)  pinctrl@14</span><br><span class="line">pin 8 (GPIOAO_8)  pinctrl@14</span><br><span class="line">pin 9 (GPIOAO_9)  pinctrl@14</span><br><span class="line">pin 10 (GPIO_TEST_N)  pinctrl@14</span><br></pre></td></tr></table></figure>
+
+<p>管脚对应的<code>Pin Index</code>如上。</p>
+<p><strong>Periphs</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@4b0/gpio-ranges </span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: periphs-banks GPIOS [401 - 500] PINS [0 - 99]</span><br></pre></td></tr></table></figure>
+
+<p>Periphs的<code>Range Base</code>为<code>401</code>。</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@4b0/pins</span><br><span class="line">registered pins: 100</span><br><span class="line">pin 0 (GPIOZ_0)  pinctrl@4b0</span><br><span class="line">pin 1 (GPIOZ_1)  pinctrl@4b0</span><br><span class="line">pin 2 (GPIOZ_2)  pinctrl@4b0</span><br><span class="line">pin 3 (GPIOZ_3)  pinctrl@4b0</span><br><span class="line">pin 4 (GPIOZ_4)  pinctrl@4b0</span><br><span class="line">pin 5 (GPIOZ_5)  pinctrl@4b0</span><br><span class="line">pin 6 (GPIOZ_6)  pinctrl@4b0</span><br><span class="line">pin 7 (GPIOZ_7)  pinctrl@4b0</span><br><span class="line">pin 8 (GPIOZ_8)  pinctrl@4b0</span><br><span class="line">pin 9 (GPIOZ_9)  pinctrl@4b0</span><br><span class="line">pin 93 (GPIOX_14)  pinctrl@4b0</span><br><span class="line">pin 94 (GPIOX_15)  pinctrl@4b0</span><br><span class="line">pin 95 (GPIOX_16)  pinctrl@4b0</span><br><span class="line">pin 96 (GPIOX_17)  pinctrl@4b0</span><br><span class="line">pin 97 (GPIOX_18)  pinctrl@4b0</span><br><span class="line">pin 98 (GPIOCLK_0)  pinctrl@4b0</span><br><span class="line">pin 99 (GPIOCLK_1)  pinctrl@4b0</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>计算GPIO数值：</strong></li>
+</ol>
+<p>以<code>GPIOX_14</code>为例。</p>
+<p><code>GPIOX_14</code> = <code>Range Base</code> + <code>Pin Index</code> = <code>401</code> + <code>93</code> = <code>494</code></p>
+</div>
+<div class="tab-pane fade" id="vim3" role="tabpanel" aria-labelledby="vim3-tab">
+
+<p><strong>AOBUS</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@ff800014/gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: aobus-banks GPIOS [496 - 511] PINS [0 - 15]</span><br></pre></td></tr></table></figure>
+
+<p>AOBUS的<code>Range Base</code>为<code>496</code>。</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@ff800014/pins</span><br><span class="line">registered pins: 16</span><br><span class="line">pin 0 (GPIOAO_0)  pinctrl@ff800014</span><br><span class="line">pin 1 (GPIOAO_1)  pinctrl@ff800014</span><br><span class="line">pin 2 (GPIOAO_2)  pinctrl@ff800014</span><br><span class="line">pin 3 (GPIOAO_3)  pinctrl@ff800014</span><br><span class="line">pin 4 (GPIOAO_4)  pinctrl@ff800014</span><br><span class="line">pin 5 (GPIOAO_5)  pinctrl@ff800014</span><br><span class="line">pin 6 (GPIOAO_6)  pinctrl@ff800014</span><br><span class="line">pin 7 (GPIOAO_7)  pinctrl@ff800014</span><br><span class="line">pin 8 (GPIOAO_8)  pinctrl@ff800014</span><br><span class="line">pin 9 (GPIOAO_9)  pinctrl@ff800014</span><br><span class="line">pin 10 (GPIOAO_10)  pinctrl@ff800014</span><br><span class="line">pin 11 (GPIOAO_11)  pinctrl@ff800014</span><br><span class="line">pin 12 (GPIOE_0)  pinctrl@ff800014</span><br><span class="line">pin 13 (GPIOE_1)  pinctrl@ff800014</span><br><span class="line">pin 14 (GPIOE_2)  pinctrl@ff800014</span><br><span class="line">pin 15 (GPIO_TEST_N)  pinctrl@ff800014</span><br></pre></td></tr></table></figure>
+
+<p>管脚对应的<code>Pin Index</code>如上。</p>
+<p><strong>Periphs</strong></p>
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@ff634480/gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: periphs-banks GPIOS [410 - 495] PINS [0 - 85]</span><br></pre></td></tr></table></figure>
+
+<p>Periphs的<code>Range Base</code>为<code>410</code>。</p>
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/pinctrl@ff634480/pins</span><br><span class="line">registered pins: 86</span><br><span class="line">pin 0 (GPIOV_0)  pinctrl@ff634480</span><br><span class="line">pin 1 (GPIOZ_0)  pinctrl@ff634480</span><br><span class="line">pin 2 (GPIOZ_1)  pinctrl@ff634480</span><br><span class="line">pin 3 (GPIOZ_2)  pinctrl@ff634480</span><br><span class="line">pin 4 (GPIOZ_3)  pinctrl@ff634480</span><br><span class="line">pin 5 (GPIOZ_4)  pinctrl@ff634480</span><br><span class="line">pin 6 (GPIOZ_5)  pinctrl@ff634480</span><br><span class="line">pin 7 (GPIOZ_6)  pinctrl@ff634480</span><br><span class="line">pin 8 (GPIOZ_7)  pinctrl@ff634480</span><br><span class="line">pin 9 (GPIOZ_8)  pinctrl@ff634480</span><br><span class="line">...</span><br><span class="line">pin 76 (GPIOX_10)  pinctrl@ff634480</span><br><span class="line">pin 77 (GPIOX_11)  pinctrl@ff634480dd</span><br><span class="line">pin 78 (GPIOX_12)  pinctrl@ff634480</span><br><span class="line">pin 79 (GPIOX_13)  pinctrl@ff634480</span><br><span class="line">pin 80 (GPIOX_14)  pinctrl@ff634480</span><br><span class="line">pin 81 (GPIOX_15)  pinctrl@ff634480</span><br><span class="line">pin 82 (GPIOX_16)  pinctrl@ff634480</span><br><span class="line">pin 83 (GPIOX_17)  pinctrl@ff634480</span><br><span class="line">pin 84 (GPIOX_18)  pinctrl@ff634480</span><br><span class="line">pin 85 (GPIOX_19)  pinctrl@ff634480</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>计算GPIO数值：</strong></li>
+</ol>
+<p>以<code>GPIOX_10</code>为例。</p>
+<p><code>GPIOX_10</code> = <code>Range Base</code> + <code>Pin Index</code> = <code>410</code> + <code>76</code> = <code>486</code>.</p>
+</div>
+<div class="tab-pane fade" id="vim4" role="tabpanel" aria-labelledby="vim4-tab">
+
+<ol>
+<li><strong>获取<code>Range Base</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/fe000000.apb4\:pinctrl\@4000-pinctrl-meson/gpio-ranges</span><br><span class="line">GPIO ranges handled:</span><br><span class="line">0: periphs-banks GPIOS [355 - 511] PINS [0 - 156]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>获取<code>Pin Index</code>：</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ cat /sys/kernel/debug/pinctrl/fe000000.apb4\:pinctrl\@4000-pinctrl-meson/pins</span><br><span class="line">registered pins: 157</span><br><span class="line">pin 0 (GPIOB_0)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 1 (GPIOB_1)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 2 (GPIOB_2)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 3 (GPIOB_3)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 4 (GPIOB_4)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 5 (GPIOB_5)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 6 (GPIOB_6)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 7 (GPIOB_7)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 8 (GPIOB_8)  fe000000.apb4:pinctrl@4000</span><br><span class="line">pin 9 (GPIOB_9)  fe000000.apb4:pinctrl@4000</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>获取GPIO数值：</strong></li>
+</ol>
+<p>以<code>GPIOT_19</code>为例。</p>
+<p><code>GPIOT_19</code> = <code>Range Base</code> + <code>Pin Index</code> = <code>355</code> + <code>110</code> = <code>465</code>.</p>
+</div>
+</div>
+
+<h2 id="GPIO用法" class="article-heading"><a href="#GPIO用法" class="headerlink" title="GPIO用法"></a>GPIO用法<a class="article-anchor" href="#GPIO用法" aria-hidden="true"></a></h2><p>在获取到GPIO数值后就可以通过如下的步骤来控制GPIO了。以GPIO数值<code>465</code>为例进行说明如下。</p>
+<ul>
+<li>导出GPIO</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> 465 | sudo <span class="built_in">tee</span> /sys/class/gpio/export</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置GPIO输入或输出</li>
+</ul>
+<p>可以设置GPIO输入或者输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> out | sudo <span class="built_in">tee</span> /sys/class/gpio/gpio465/direction <span class="comment"># 设置GPIO输出</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="keyword">in</span> | sudo <span class="built_in">tee</span> /sys/class/gpio/gpio465/direction <span class="comment"># 设置GPIO输入</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置GPIO数值或获取GPIO数值</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> 1 | sudo <span class="built_in">tee</span> /sys/class/gpio/gpio465/value <span class="comment"># 设置GPIO输出高电平</span></span><br><span class="line">$ <span class="built_in">echo</span> 0 | sudo <span class="built_in">tee</span> /sys/class/gpio/gpio465/value <span class="comment"># 设置GPIO输出低电平</span></span><br><span class="line">$ <span class="built_in">cat</span> /sys/class/gpio/gpio465/value <span class="comment"># 获取GPIO数值</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>释放GPIO</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> 465 | sudo <span class="built_in">tee</span> /sys/class/gpio/unexport</span><br></pre></td></tr></table></figure>
+
+<p>释放GPIO。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.957Z" itemprop="dateModified">上次更新：2023-07-31</time>
+                <a href="index.html" class="article-footer-next" title="快速上手"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96GPIO%E6%95%B0%E5%80%BC"><span class="toc-text" title="获取GPIO数值">获取GPIO数值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-text" title="计算方法">计算方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPIO%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E4%B8%BE%E4%BE%8B"><span class="toc-text" title="GPIO数值计算举例">GPIO数值计算举例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPIO%E7%94%A8%E6%B3%95"><span class="toc-text" title="GPIO用法">GPIO用法</span></a></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>快速上手</summary><a href="index.html" class="sidebar-link first">快速上手</a><a href="os_introduce.html" class="sidebar-link">选择操作系统</a><a href="install_os_into_emmc.html" class="sidebar-link">安装操作系统到eMMC</a><a href="install_os_into_sdusb.html" class="sidebar-link">安装操作系统到SD/USB存储</a><a href="boot_into_upgrade_mode.html" class="sidebar-link">进入升级模式</a><a href="boot_from_ext_media.html" class="sidebar-link">从外部介质启动系统</a><a href="boot_sequeue.html" class="sidebar-link">系统启动优先级</a><a href="hardware.html" class="sidebar-link">VIM4硬件描述</a></details></strong><strong class="sidebar-title"><details open><summary>配置</summary><strong class="sidebar-link"><details><summary>基本</summary><a href="upgrade_system.html" class="sidebar-link secondary-first">升级系统</a><a href="system_config_file.html" class="sidebar-link">配置文件</a><a href="device_tree_overlay.html" class="sidebar-link">Device Tree Overlay</a><a href="auto_login.html" class="sidebar-link">自动登陆</a><a href="write_sd_image_to_emmc.html" class="sidebar-link">把SD卡固件写入到eMMC</a><a href="chinese_support_usage.html" class="sidebar-link">中文支持</a></details></strong><strong class="sidebar-link"><details><summary>网络</summary><a href="wifi.html" class="sidebar-link secondary-first">Wi-Fi</a><a href="bluetooth.html" class="sidebar-link">蓝牙</a><a href="custom_mac.html" class="sidebar-link">自定义MAC地址</a><a href="wol.html" class="sidebar-link">远程唤醒</a></details></strong><strong class="sidebar-link"><details><summary>显示</summary><a href="hdmi_resolution.html" class="sidebar-link secondary-first">设置HDMI分辨率</a><a href="rotate_framebuffer.html" class="sidebar-link">旋转Framebuffer</a><a href="ubuntu_logo.html" class="sidebar-link">Ubuntu Logo</a><a href="change_boot_logo.html" class="sidebar-link">修改启动Logo</a><a href="setup_framebuffer_console_font.html" class="sidebar-link">Framebuffer Console字体</a></details></strong><strong class="sidebar-link"><details><summary>配件</summary><a href="fan.html" class="sidebar-link secondary-first">风扇</a><a href="ts050.html" class="sidebar-link">TS050触摸屏</a><a href="lte_module.html" class="sidebar-link">4G模块</a><a href="m2x_eth.html" class="sidebar-link">M2X以太网口</a></details></strong><strong class="sidebar-link"><details><summary>硬件</summary><a href="extra_power_input.html" class="sidebar-link secondary-first">外部供电</a><a href="usb_gadget.html" class="sidebar-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>应用</summary><strong class="sidebar-link"><details><summary>GPIO</summary><a href="gpio.html" class="sidebar-link secondary-first">GPIO</a><a href="i2c.html" class="sidebar-link">I2C</a><a href="led.html" class="sidebar-link">LED</a><a href="1wire.html" class="sidebar-link">1-Wire</a><a href="uart.html" class="sidebar-link">UART</a><a href="pwm.html" class="sidebar-link">PWM</a><a href="gpio_irq.html" class="sidebar-link">GPIO中断</a><a href="wiringpi.html" class="sidebar-link">WiringPi</a><a href="wiringpi_python.html" class="sidebar-link">WiringPi-Python</a><a href="soft_pwm_servo.html" class="sidebar-link">软件模拟PWM</a></details></strong><a href="gsensor_usage.html" class="sidebar-link first">Gsensor</a><a href="play_video.html" class="sidebar-link">播放视频</a><a href="hardware_decoding.html" class="sidebar-link">硬件解码</a><a href="hardware_encoding.html" class="sidebar-link">硬件编码</a><a href="docker.html" class="sidebar-link">Docker</a><a href="watchdog.html" class="sidebar-link">看门狗</a><a href="wifi_apsta_mode.html" class="sidebar-link">Wi-Fi STA/AP模式</a><a href="sdl2.html" class="sidebar-link">SDL2</a><a href="ppsspp.html" class="sidebar-link">PPSSPP</a><a href="qt5.html" class="sidebar-link">QT5</a><a href="32bit_library.html" class="sidebar-link">32位运行库</a></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><strong class="sidebar-link"><details><summary>U-Boot</summary><a href="build_uboot.html" class="sidebar-link secondary-first">编译U-Boot</a><a href="upgrade_uboot.html" class="sidebar-link">更新U-Boot</a><a href="setup_tftp_server.html" class="sidebar-link">TFTP服务器搭建</a><a href="kbi_guidance.html" class="sidebar-link">KBI</a></details></strong><strong class="sidebar-link"><details><summary>Linux</summary><a href="build_linux_kernel.html" class="sidebar-link secondary-first">编译Linux内核</a><a href="upgrade_linux_kernel.html" class="sidebar-link">更新Linux内核</a></details></strong><a href="fenix_script.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="setup_serial_tool.html" class="sidebar-link">设置串口调试工具</a><a href="create_burn_card.html" class="sidebar-link">创建烧录卡</a><a href="create_bootable_sdcard.html" class="sidebar-link">创建启动卡</a><a href="erase_emmc.html" class="sidebar-link">擦除eMMC</a></details></strong><strong class="sidebar-title"><details open><summary>故障排查</summary><a href="capture_log.html" class="sidebar-link first">抓取Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/linux/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/linux/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/linux/zh-cn/vim3/" class="mobile-nav-link secondary ">VIM3/3L</a><a href="/linux/zh-cn/vim4/" class="mobile-nav-link secondary current">VIM4</a></details></strong><a href="/linux/zh-cn/edge/" class="mobile-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim4" class="mobile-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/vim4_ubuntu_firmware" class="mobile-nav-link  header">固件下载</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>快速上手</summary><a href="index.html" class="mobile-nav-link first">快速上手</a><a href="os_introduce.html" class="mobile-nav-link">选择操作系统</a><a href="install_os_into_emmc.html" class="mobile-nav-link">安装操作系统到eMMC</a><a href="install_os_into_sdusb.html" class="mobile-nav-link">安装操作系统到SD/USB存储</a><a href="boot_into_upgrade_mode.html" class="mobile-nav-link">进入升级模式</a><a href="boot_from_ext_media.html" class="mobile-nav-link">从外部介质启动系统</a><a href="boot_sequeue.html" class="mobile-nav-link">系统启动优先级</a><a href="hardware.html" class="mobile-nav-link">VIM4硬件描述</a></details></strong><strong class="mobile-nav-title"><details open><summary>配置</summary><strong class="mobile-nav-link"><details><summary>基本</summary><a href="upgrade_system.html" class="mobile-nav-link secondary-first">升级系统</a><a href="system_config_file.html" class="mobile-nav-link">配置文件</a><a href="device_tree_overlay.html" class="mobile-nav-link">Device Tree Overlay</a><a href="auto_login.html" class="mobile-nav-link">自动登陆</a><a href="write_sd_image_to_emmc.html" class="mobile-nav-link">把SD卡固件写入到eMMC</a><a href="chinese_support_usage.html" class="mobile-nav-link">中文支持</a></details></strong><strong class="mobile-nav-link"><details><summary>网络</summary><a href="wifi.html" class="mobile-nav-link secondary-first">Wi-Fi</a><a href="bluetooth.html" class="mobile-nav-link">蓝牙</a><a href="custom_mac.html" class="mobile-nav-link">自定义MAC地址</a><a href="wol.html" class="mobile-nav-link">远程唤醒</a></details></strong><strong class="mobile-nav-link"><details><summary>显示</summary><a href="hdmi_resolution.html" class="mobile-nav-link secondary-first">设置HDMI分辨率</a><a href="rotate_framebuffer.html" class="mobile-nav-link">旋转Framebuffer</a><a href="ubuntu_logo.html" class="mobile-nav-link">Ubuntu Logo</a><a href="change_boot_logo.html" class="mobile-nav-link">修改启动Logo</a><a href="setup_framebuffer_console_font.html" class="mobile-nav-link">Framebuffer Console字体</a></details></strong><strong class="mobile-nav-link"><details><summary>配件</summary><a href="fan.html" class="mobile-nav-link secondary-first">风扇</a><a href="ts050.html" class="mobile-nav-link">TS050触摸屏</a><a href="lte_module.html" class="mobile-nav-link">4G模块</a><a href="m2x_eth.html" class="mobile-nav-link">M2X以太网口</a></details></strong><strong class="mobile-nav-link"><details><summary>硬件</summary><a href="extra_power_input.html" class="mobile-nav-link secondary-first">外部供电</a><a href="usb_gadget.html" class="mobile-nav-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>应用</summary><strong class="mobile-nav-link"><details><summary>GPIO</summary><a href="gpio.html" class="mobile-nav-link secondary-first">GPIO</a><a href="i2c.html" class="mobile-nav-link">I2C</a><a href="led.html" class="mobile-nav-link">LED</a><a href="1wire.html" class="mobile-nav-link">1-Wire</a><a href="uart.html" class="mobile-nav-link">UART</a><a href="pwm.html" class="mobile-nav-link">PWM</a><a href="gpio_irq.html" class="mobile-nav-link">GPIO中断</a><a href="wiringpi.html" class="mobile-nav-link">WiringPi</a><a href="wiringpi_python.html" class="mobile-nav-link">WiringPi-Python</a><a href="soft_pwm_servo.html" class="mobile-nav-link">软件模拟PWM</a></details></strong><a href="gsensor_usage.html" class="mobile-nav-link first">Gsensor</a><a href="play_video.html" class="mobile-nav-link">播放视频</a><a href="hardware_decoding.html" class="mobile-nav-link">硬件解码</a><a href="hardware_encoding.html" class="mobile-nav-link">硬件编码</a><a href="docker.html" class="mobile-nav-link">Docker</a><a href="watchdog.html" class="mobile-nav-link">看门狗</a><a href="wifi_apsta_mode.html" class="mobile-nav-link">Wi-Fi STA/AP模式</a><a href="sdl2.html" class="mobile-nav-link">SDL2</a><a href="ppsspp.html" class="mobile-nav-link">PPSSPP</a><a href="qt5.html" class="mobile-nav-link">QT5</a><a href="32bit_library.html" class="mobile-nav-link">32位运行库</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><strong class="mobile-nav-link"><details><summary>U-Boot</summary><a href="build_uboot.html" class="mobile-nav-link secondary-first">编译U-Boot</a><a href="upgrade_uboot.html" class="mobile-nav-link">更新U-Boot</a><a href="setup_tftp_server.html" class="mobile-nav-link">TFTP服务器搭建</a><a href="kbi_guidance.html" class="mobile-nav-link">KBI</a></details></strong><strong class="mobile-nav-link"><details><summary>Linux</summary><a href="build_linux_kernel.html" class="mobile-nav-link secondary-first">编译Linux内核</a><a href="upgrade_linux_kernel.html" class="mobile-nav-link">更新Linux内核</a></details></strong><a href="fenix_script.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="setup_serial_tool.html" class="mobile-nav-link">设置串口调试工具</a><a href="create_burn_card.html" class="mobile-nav-link">创建烧录卡</a><a href="create_bootable_sdcard.html" class="mobile-nav-link">创建启动卡</a><a href="erase_emmc.html" class="mobile-nav-link">擦除eMMC</a></details></strong><strong class="mobile-nav-title"><details open><summary>故障排查</summary><a href="capture_log.html" class="mobile-nav-link first">抓取Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim4/Gpio.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/linux/js/lang_select.js"></script>
+
+
+<script src="/linux/js/toc.js"></script>
+
+
+<script src="/linux/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

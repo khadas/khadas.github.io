@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Gsensor | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/zh-cn/vim3/GsensorUsage.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/vim3/GsensorUsage.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/vim3/GsensorUsage.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/linux/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/linux//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/linux//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/linux//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://khadas.github.io -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/linux/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/linux//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/linux/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Gsensor节点Gsensor的设备节点在&#x2F;dev目录下 12$ ll &#x2F;dev&#x2F;accel crw-rw-rw- 1 root root 10, 50 Mar 18 12:17 &#x2F;dev&#x2F;accel  Gsensor示例Gsensor示例是通过ioctl函数对节点进行读写 源码源码只实现了使用默认设置读数据,其他功能用户可以自行实现 123456789101112131415161718192">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gsensor">
+<meta property="og:url" content="https://khadas.github.io/zh-cn/vim3/GsensorUsage">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="Gsensor节点Gsensor的设备节点在&#x2F;dev目录下 12$ ll &#x2F;dev&#x2F;accel crw-rw-rw- 1 root root 10, 50 Mar 18 12:17 &#x2F;dev&#x2F;accel  Gsensor示例Gsensor示例是通过ioctl函数对节点进行读写 源码源码只实现了使用默认设置读数据,其他功能用户可以自行实现 123456789101112131415161718192">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.961Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/linux/zh-cn/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/linux/zh-cn/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/linux/zh-cn/vim3/" class="main-nav-link secondary current">VIM3/3L</a></li><li class="submenu"><a href="/linux/zh-cn/vim4/" class="main-nav-link secondary ">VIM4</a></li></ul></div><a href="/linux/zh-cn/edge/" class="main-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="main-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim3" class="main-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/Vim3UbuntuFirmware" class="main-nav-link  header">固件下载</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="vim3/GsensorUsage.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Gsensor</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/linux/source/zh-cn/vim3/GsensorUsage.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="Gsensor节点" class="article-heading"><a href="#Gsensor节点" class="headerlink" title="Gsensor节点"></a>Gsensor节点<a class="article-anchor" href="#Gsensor节点" aria-hidden="true"></a></h2><p>Gsensor的设备节点在<code>/dev</code>目录下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ll /dev/accel </span><br><span class="line">crw-rw-rw- 1 root root 10, 50 Mar 18 12:17 /dev/accel</span><br></pre></td></tr></table></figure>
+
+<h2 id="Gsensor示例" class="article-heading"><a href="#Gsensor示例" class="headerlink" title="Gsensor示例"></a>Gsensor示例<a class="article-anchor" href="#Gsensor示例" aria-hidden="true"></a></h2><p>Gsensor示例是通过ioctl函数对节点进行读写</p>
+<h3 id="源码" class="article-heading"><a href="#源码" class="headerlink" title="源码"></a>源码<a class="article-anchor" href="#源码" aria-hidden="true"></a></h3><p>源码只实现了使用默认设置读数据,其他功能用户可以自行实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/ioctl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GBUFF_SIZE                12</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_MAGIC       <span class="string">&#x27;a&#x27;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_INIT              _IO(GSENSOR_IOCTL_MAGIC, 0x01)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_RESET             _IO(GSENSOR_IOCTL_MAGIC, 0x04)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_CLOSE             _IO(GSENSOR_IOCTL_MAGIC, 0x02)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_START             _IO(GSENSOR_IOCTL_MAGIC, 0x03)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_GETDATA           _IOR(GSENSOR_IOCTL_MAGIC, 0x08, char[GBUFF_SIZE+1])</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_APP_SET_RATE      _IOW(GSENSOR_IOCTL_MAGIC, 0x10, short)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GSENSOR_IOCTL_GET_CALIBRATION   _IOR(GSENSOR_IOCTL_MAGIC, 0x11, int[3])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sensor_axis</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    <span class="type">int</span> z;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> *gsensor_device = <span class="string">&quot;/dev/accel&quot;</span>;</span><br><span class="line"><span class="type">int</span> gsensor_fd = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> **argv)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">sensor_axis</span> <span class="title">gsensor_data</span>;</span></span><br><span class="line"></span><br><span class="line">        gsensor_fd = open(gsensor_device, O_RDWR);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="number">0</span> &gt; gsensor_fd)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;gsensor node open failed ...\n&quot;</span>);</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;gsensor node open success!!!\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(ioctl(gsensor_fd, GSENSOR_IOCTL_START, <span class="literal">NULL</span>) == <span class="number">-1</span>) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;gsensor start failed ... \n&quot;</span>);</span><br><span class="line">                close(gsensor_fd);</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;gsensor start sueecss !!!\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;start to get gsensor data ...\n&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(ioctl(gsensor_fd, GSENSOR_IOCTL_GETDATA, &amp;gsensor_data) == <span class="number">-1</span>) &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;gsensor get data faile ... \n&quot;</span>);</span><br><span class="line">                        close(gsensor_fd);</span><br><span class="line">                        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;gsensor_data -- x:%d,y:%d,z:%d \n&quot;</span>, gsensor_data.x, gsensor_data.y, gsensor_data.z);</span><br><span class="line">                sleep(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        close(gsensor_fd);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译" class="article-heading"><a href="#编译" class="headerlink" title="编译"></a>编译<a class="article-anchor" href="#编译" aria-hidden="true"></a></h3><p>在板子上直接使用<code>gcc</code>编译即可</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -o gsensor_sample_demo gsensor_sample_demo.c</span><br><span class="line">gsensor_sample_demo.c: In <span class="keyword">function</span> ‘main’:</span><br><span class="line">gsensor_sample_demo.c:34:3: warning: implicit declaration of <span class="keyword">function</span> ‘<span class="built_in">exit</span>’ [-Wimplicit-function-declaration]</span><br><span class="line">   34 |   <span class="built_in">exit</span>(-1);</span><br><span class="line">      |   ^~~~</span><br><span class="line">gsensor_sample_demo.c:34:3: warning: incompatible implicit declaration of built-in <span class="keyword">function</span> ‘<span class="built_in">exit</span>’</span><br><span class="line">gsensor_sample_demo.c:4:1: note: include ‘&lt;stdlib.h&gt;’ or provide a declaration of ‘<span class="built_in">exit</span>’</span><br><span class="line">    3 | <span class="comment">#include &lt;fcntl.h&gt;</span></span><br><span class="line">  +++ |+<span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line">    4 |</span><br><span class="line">gsensor_sample_demo.c:41:3: warning: implicit declaration of <span class="keyword">function</span> ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]</span><br><span class="line">   41 |   close(gsensor_fd);</span><br><span class="line">      |   ^~~~~</span><br><span class="line">      |   pclose</span><br><span class="line">gsensor_sample_demo.c:42:3: warning: incompatible implicit declaration of built-in <span class="keyword">function</span> ‘<span class="built_in">exit</span>’</span><br><span class="line">   42 |   <span class="built_in">exit</span>(-1);</span><br><span class="line">      |   ^~~~</span><br><span class="line">gsensor_sample_demo.c:42:3: note: include ‘&lt;stdlib.h&gt;’ or provide a declaration of ‘<span class="built_in">exit</span>’</span><br><span class="line">gsensor_sample_demo.c:53:4: warning: incompatible implicit declaration of built-in <span class="keyword">function</span> ‘<span class="built_in">exit</span>’</span><br><span class="line">   53 |    <span class="built_in">exit</span>(-1);</span><br><span class="line">      |    ^~~~</span><br><span class="line">gsensor_sample_demo.c:53:4: note: include ‘&lt;stdlib.h&gt;’ or provide a declaration of ‘<span class="built_in">exit</span>’</span><br><span class="line">gsensor_sample_demo.c:57:3: warning: implicit declaration of <span class="keyword">function</span> ‘<span class="built_in">sleep</span>’ [-Wimplicit-function-declaration]</span><br><span class="line">   57 |   <span class="built_in">sleep</span>(1);</span><br><span class="line">      |   ^~~~~</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="运行" class="article-heading"><a href="#运行" class="headerlink" title="运行"></a>运行<a class="article-anchor" href="#运行" aria-hidden="true"></a></h3><p>运行时旋转板子,可以看到gsensor数据的变化</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ ./gsensor_sample_demo</span><br><span class="line">gsensor node open success!!!</span><br><span class="line">gsensor start sueecss !!!</span><br><span class="line">start to get gsensor data ...</span><br><span class="line">gsensor_data -- x:-2112,y:16,z:16448</span><br><span class="line">gsensor_data -- x:-2128,y:176,z:16128</span><br><span class="line">gsensor_data -- x:-1632,y:2784,z:15968</span><br><span class="line">gsensor_data -- x:7440,y:-3760,z:14608</span><br><span class="line">gsensor_data -- x:-512,y:-7280,z:12128</span><br><span class="line">gsensor_data -- x:-14384,y:-2336,z:11280</span><br><span class="line">gsensor_data -- x:9952,y:-5264,z:15216</span><br><span class="line">gsensor_data -- x:-6432,y:3760,z:24896</span><br></pre></td></tr></table></figure>
+
+
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.961Z" itemprop="dateModified">上次更新：2023-07-31</time>
+                <a href="spdifin.html" class="article-footer-prev" title="SPDIF IN"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="PlayVideo.html" class="article-footer-next" title="播放视频"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gsensor%E8%8A%82%E7%82%B9"><span class="toc-text" title="Gsensor节点">Gsensor节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gsensor%E7%A4%BA%E4%BE%8B"><span class="toc-text" title="Gsensor示例">Gsensor示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-text" title="源码">源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-text" title="编译">编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-text" title="运行">运行</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">回到顶部</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>快速上手</summary><a href="index.html" class="sidebar-link first">快速上手</a><a href="OsIntroduce.html" class="sidebar-link">选择操作系统</a><a href="InstallOsIntoEmmc.html" class="sidebar-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="sidebar-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="sidebar-link">进入升级模式</a><a href="BootFromExtMedia.html" class="sidebar-link">从外部介质启动系统</a><a href="Hardware.html" class="sidebar-link">VIM3硬件描述</a></details></strong><strong class="sidebar-title"><details open><summary>配置</summary><strong class="sidebar-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="sidebar-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="sidebar-link">配置文件</a><a href="DeviceTreeOverlay.html" class="sidebar-link">Device Tree Overlay</a><a href="AutoLogin.html" class="sidebar-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="sidebar-link">把SD卡固件写入到eMMC</a><a href="ChineseSupportUsage.html" class="sidebar-link">中文支持</a></details></strong><strong class="sidebar-link"><details><summary>网络</summary><a href="Wifi.html" class="sidebar-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="sidebar-link">蓝牙</a><a href="CustomMac.html" class="sidebar-link">自定义MAC地址</a><a href="Wol.html" class="sidebar-link">远程唤醒</a></details></strong><strong class="sidebar-link"><details><summary>显示</summary><a href="HdmiResolution.html" class="sidebar-link secondary-first">设置HDMI分辨率</a><a href="RotateFramebuffer.html" class="sidebar-link">旋转Framebuffer</a><a href="UbuntuLogo.html" class="sidebar-link">Ubuntu Logo</a><a href="ChangeBootLogo.html" class="sidebar-link">修改启动Logo</a><a href="SetupFramebufferConsoleFont.html" class="sidebar-link">Framebuffer Console字体</a></details></strong><strong class="sidebar-link"><details><summary>配件</summary><a href="Fan.html" class="sidebar-link secondary-first">风扇</a><a href="MIPICamera.html" class="sidebar-link">MIPI摄像头</a><a href="TS050.html" class="sidebar-link">TS050触摸屏</a><a href="LteModule.html" class="sidebar-link">4G模块</a><a href="M2xEth.html" class="sidebar-link">M2X以太网口</a></details></strong><strong class="sidebar-link"><details><summary>硬件</summary><a href="PcieUsbPort.html" class="sidebar-link secondary-first">PCIe/USB3.0切换</a><a href="CustomIRCode.html" class="sidebar-link">自定义IR Code</a><a href="ExtraPowerInput.html" class="sidebar-link">外部供电</a><a href="MaxCPUFrequency.html" class="sidebar-link">CPU超频设置</a><a href="USBGadget.html" class="sidebar-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>应用</summary><strong class="sidebar-link"><details><summary>GPIO</summary><a href="Gpio.html" class="sidebar-link secondary-first">GPIO</a><a href="I2c.html" class="sidebar-link">I2C</a><a href="SPIUsage.html" class="sidebar-link">SPI</a><a href="LED.html" class="sidebar-link">LED</a><a href="1wire.html" class="sidebar-link">1-Wire</a><a href="Uart.html" class="sidebar-link">UART</a><a href="Pwm.html" class="sidebar-link">PWM</a><a href="GpioIRQ.html" class="sidebar-link">GPIO中断</a><a href="WiringPi.html" class="sidebar-link">WiringPi</a><a href="WiringPi-Python.html" class="sidebar-link">WiringPi-Python</a><a href="SoftPWM.html" class="sidebar-link">软件模拟PWM</a><a href="spdifin.html" class="sidebar-link">SPDIF IN</a></details></strong><a href="GsensorUsage.html" class="sidebar-link current first">Gsensor</a><a href="PlayVideo.html" class="sidebar-link">播放视频</a><a href="RSTPCamera.html" class="sidebar-link">RSTP Web 摄像头</a><a href="HardwareDecoding.html" class="sidebar-link">硬件解码</a><a href="HardwareEncoding.html" class="sidebar-link">硬件编码</a><a href="Docker.html" class="sidebar-link">Docker</a><a href="Watchdog.html" class="sidebar-link">看门狗</a><a href="WifiApstaMode.html" class="sidebar-link">Wi-Fi STA/AP模式</a><a href="Sdl2.html" class="sidebar-link">SDL2</a><a href="Ppsspp.html" class="sidebar-link">PPSSPP</a><a href="QT5.html" class="sidebar-link">QT5</a><a href="32bitLibrary.html" class="sidebar-link">32位运行库</a></details></strong><strong class="sidebar-title"><details open><summary>NPU</summary><a href="NPUPrebuiltUsage.html" class="sidebar-link first">预编译NPU Demo</a><a href="NPUSDK.html" class="sidebar-link">NPU SDK</a><a href="NPUApp.html" class="sidebar-link">NPU Demo源码</a><a href="ConvertToUseNPU.html" class="sidebar-link">模型转换</a><a href="NPUPerformanceUsage.html" class="sidebar-link">NPU Performance</a><a href="NPUOperationTimes.html" class="sidebar-link">获取单op运行耗时</a><strong class="sidebar-link"><details><summary>KSNN(Python API)</summary><a href="KSNNUsage.html" class="sidebar-link secondary-first">KSNN使用说明</a><a href="KSNNConvert.html" class="sidebar-link">KSNN转换工具说明</a><a href="KSNNAPI.html" class="sidebar-link">KSNN API</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>开发</summary><strong class="sidebar-link"><details><summary>U-Boot</summary><a href="BuildUboot.html" class="sidebar-link secondary-first">编译U-Boot</a><a href="UpgradeUboot.html" class="sidebar-link">更新U-Boot</a><a href="SetupTFTPServer.html" class="sidebar-link">TFTP服务器搭建</a><a href="KbiGuidance.html" class="sidebar-link">KBI</a></details></strong><strong class="sidebar-link"><details><summary>Linux</summary><a href="BuildLinuxKernel.html" class="sidebar-link secondary-first">编译Linux内核</a><a href="UpgradeLinuxKernel.html" class="sidebar-link">更新Linux内核</a></details></strong><a href="FenixScript.html" class="sidebar-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="sidebar-link">设置串口调试工具</a><a href="CreateBurnCard.html" class="sidebar-link">创建烧录卡</a><a href="CreateBootableSDCard.html" class="sidebar-link">创建启动卡</a><a href="EraseEmmc.html" class="sidebar-link">擦除eMMC</a></details></strong><strong class="sidebar-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="sidebar-link first">抓取Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/linux/zh-cn/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/linux/zh-cn/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/linux/zh-cn/vim3/" class="mobile-nav-link secondary current">VIM3/3L</a><a href="/linux/zh-cn/vim4/" class="mobile-nav-link secondary ">VIM4</a></details></strong><a href="/linux/zh-cn/edge/" class="mobile-nav-link  header">Edge</a><a href="/linux/zh-cn/tone1/" class="mobile-nav-link  header">Tone1</a><a href="/linux/zh-cn/hardware/hardwareVim3" class="mobile-nav-link  header">硬件资料</a><a href="/linux/zh-cn/firmware/Vim3UbuntuFirmware" class="mobile-nav-link  header">固件下载</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>快速上手</summary><a href="index.html" class="mobile-nav-link first">快速上手</a><a href="OsIntroduce.html" class="mobile-nav-link">选择操作系统</a><a href="InstallOsIntoEmmc.html" class="mobile-nav-link">安装操作系统到eMMC</a><a href="InstallOsIntoSdusb.html" class="mobile-nav-link">安装操作系统到SD/USB存储</a><a href="BootIntoUpgradeMode.html" class="mobile-nav-link">进入升级模式</a><a href="BootFromExtMedia.html" class="mobile-nav-link">从外部介质启动系统</a><a href="Hardware.html" class="mobile-nav-link">VIM3硬件描述</a></details></strong><strong class="mobile-nav-title"><details open><summary>配置</summary><strong class="mobile-nav-link"><details><summary>基本</summary><a href="UpgradeSystem.html" class="mobile-nav-link secondary-first">升级系统</a><a href="SystemConfigFile.html" class="mobile-nav-link">配置文件</a><a href="DeviceTreeOverlay.html" class="mobile-nav-link">Device Tree Overlay</a><a href="AutoLogin.html" class="mobile-nav-link">自动登陆</a><a href="WriteSDImageToEmmc.html" class="mobile-nav-link">把SD卡固件写入到eMMC</a><a href="ChineseSupportUsage.html" class="mobile-nav-link">中文支持</a></details></strong><strong class="mobile-nav-link"><details><summary>网络</summary><a href="Wifi.html" class="mobile-nav-link secondary-first">Wi-Fi</a><a href="Bluetooth.html" class="mobile-nav-link">蓝牙</a><a href="CustomMac.html" class="mobile-nav-link">自定义MAC地址</a><a href="Wol.html" class="mobile-nav-link">远程唤醒</a></details></strong><strong class="mobile-nav-link"><details><summary>显示</summary><a href="HdmiResolution.html" class="mobile-nav-link secondary-first">设置HDMI分辨率</a><a href="RotateFramebuffer.html" class="mobile-nav-link">旋转Framebuffer</a><a href="UbuntuLogo.html" class="mobile-nav-link">Ubuntu Logo</a><a href="ChangeBootLogo.html" class="mobile-nav-link">修改启动Logo</a><a href="SetupFramebufferConsoleFont.html" class="mobile-nav-link">Framebuffer Console字体</a></details></strong><strong class="mobile-nav-link"><details><summary>配件</summary><a href="Fan.html" class="mobile-nav-link secondary-first">风扇</a><a href="MIPICamera.html" class="mobile-nav-link">MIPI摄像头</a><a href="TS050.html" class="mobile-nav-link">TS050触摸屏</a><a href="LteModule.html" class="mobile-nav-link">4G模块</a><a href="M2xEth.html" class="mobile-nav-link">M2X以太网口</a></details></strong><strong class="mobile-nav-link"><details><summary>硬件</summary><a href="PcieUsbPort.html" class="mobile-nav-link secondary-first">PCIe/USB3.0切换</a><a href="CustomIRCode.html" class="mobile-nav-link">自定义IR Code</a><a href="ExtraPowerInput.html" class="mobile-nav-link">外部供电</a><a href="MaxCPUFrequency.html" class="mobile-nav-link">CPU超频设置</a><a href="USBGadget.html" class="mobile-nav-link">USB Gadget使用说明</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>应用</summary><strong class="mobile-nav-link"><details><summary>GPIO</summary><a href="Gpio.html" class="mobile-nav-link secondary-first">GPIO</a><a href="I2c.html" class="mobile-nav-link">I2C</a><a href="SPIUsage.html" class="mobile-nav-link">SPI</a><a href="LED.html" class="mobile-nav-link">LED</a><a href="1wire.html" class="mobile-nav-link">1-Wire</a><a href="Uart.html" class="mobile-nav-link">UART</a><a href="Pwm.html" class="mobile-nav-link">PWM</a><a href="GpioIRQ.html" class="mobile-nav-link">GPIO中断</a><a href="WiringPi.html" class="mobile-nav-link">WiringPi</a><a href="WiringPi-Python.html" class="mobile-nav-link">WiringPi-Python</a><a href="SoftPWM.html" class="mobile-nav-link">软件模拟PWM</a><a href="spdifin.html" class="mobile-nav-link">SPDIF IN</a></details></strong><a href="GsensorUsage.html" class="mobile-nav-link current first">Gsensor</a><a href="PlayVideo.html" class="mobile-nav-link">播放视频</a><a href="RSTPCamera.html" class="mobile-nav-link">RSTP Web 摄像头</a><a href="HardwareDecoding.html" class="mobile-nav-link">硬件解码</a><a href="HardwareEncoding.html" class="mobile-nav-link">硬件编码</a><a href="Docker.html" class="mobile-nav-link">Docker</a><a href="Watchdog.html" class="mobile-nav-link">看门狗</a><a href="WifiApstaMode.html" class="mobile-nav-link">Wi-Fi STA/AP模式</a><a href="Sdl2.html" class="mobile-nav-link">SDL2</a><a href="Ppsspp.html" class="mobile-nav-link">PPSSPP</a><a href="QT5.html" class="mobile-nav-link">QT5</a><a href="32bitLibrary.html" class="mobile-nav-link">32位运行库</a></details></strong><strong class="mobile-nav-title"><details open><summary>NPU</summary><a href="NPUPrebuiltUsage.html" class="mobile-nav-link first">预编译NPU Demo</a><a href="NPUSDK.html" class="mobile-nav-link">NPU SDK</a><a href="NPUApp.html" class="mobile-nav-link">NPU Demo源码</a><a href="ConvertToUseNPU.html" class="mobile-nav-link">模型转换</a><a href="NPUPerformanceUsage.html" class="mobile-nav-link">NPU Performance</a><a href="NPUOperationTimes.html" class="mobile-nav-link">获取单op运行耗时</a><strong class="mobile-nav-link"><details><summary>KSNN(Python API)</summary><a href="KSNNUsage.html" class="mobile-nav-link secondary-first">KSNN使用说明</a><a href="KSNNConvert.html" class="mobile-nav-link">KSNN转换工具说明</a><a href="KSNNAPI.html" class="mobile-nav-link">KSNN API</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>开发</summary><strong class="mobile-nav-link"><details><summary>U-Boot</summary><a href="BuildUboot.html" class="mobile-nav-link secondary-first">编译U-Boot</a><a href="UpgradeUboot.html" class="mobile-nav-link">更新U-Boot</a><a href="SetupTFTPServer.html" class="mobile-nav-link">TFTP服务器搭建</a><a href="KbiGuidance.html" class="mobile-nav-link">KBI</a></details></strong><strong class="mobile-nav-link"><details><summary>Linux</summary><a href="BuildLinuxKernel.html" class="mobile-nav-link secondary-first">编译Linux内核</a><a href="UpgradeLinuxKernel.html" class="mobile-nav-link">更新Linux内核</a></details></strong><a href="FenixScript.html" class="mobile-nav-link first">编译Ubuntu/Debian固件</a><a href="SetupSerialTool.html" class="mobile-nav-link">设置串口调试工具</a><a href="CreateBurnCard.html" class="mobile-nav-link">创建烧录卡</a><a href="CreateBootableSDCard.html" class="mobile-nav-link">创建启动卡</a><a href="EraseEmmc.html" class="mobile-nav-link">擦除eMMC</a></details></strong><strong class="mobile-nav-title"><details open><summary>故障排查</summary><a href="CaptureLog.html" class="mobile-nav-link first">抓取Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="vim3/GsensorUsage.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/linux/js/lang_select.js"></script>
+
+
+<script src="/linux/js/toc.js"></script>
+
+
+<script src="/linux/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>How To Use Android NPU JNI | Khadas Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://khadas.github.io/vim4/NpuJniUsage.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://khadas.github.io/vim4/NpuJniUsage.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://khadas.github.io/zh-cn/vim4/NpuJniUsage.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/android/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/android//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/android//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/android//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/android//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/android/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/android//css/font/fontawesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/android/atom.xml" title="Khadas Documentation" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="NOTEBefore run android NPU Demo,please download newest firmware,and update system to latest version.    Get NPU APP&#x2F;JNI source codeCurrently, the source code of NPU JNI is not integrated into the firm">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How To Use Android NPU JNI">
+<meta property="og:url" content="https://khadas.github.io/vim4/NpuJniUsage">
+<meta property="og:site_name" content="Khadas Documentation">
+<meta property="og:description" content="NOTEBefore run android NPU Demo,please download newest firmware,and update system to latest version.    Get NPU APP&#x2F;JNI source codeCurrently, the source code of NPU JNI is not integrated into the firm">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-31T06:30:38.173Z">
+<meta property="article:modified_time" content="2023-07-31T06:30:38.173Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <div style="display:inline-block"><div class="btn-group"><div class="main-nav-link dropdown-toggle current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VIM</div><ul class="dropdown-menu submenu-list" aria-labelledby="dropdownMenuLink"><li class="submenu"><a href="/android/vim1/" class="main-nav-link secondary ">VIM1</a></li><li class="submenu"><a href="/android/vim2/" class="main-nav-link secondary ">VIM2</a></li><li class="submenu"><a href="/android/vim3/" class="main-nav-link secondary ">VIM3/3L</a></li><li class="submenu"><a href="/android/vim4/" class="main-nav-link secondary current">VIM4</a></li></ul></div><a href="/android/edge/" class="main-nav-link  header">Edge</a><a href="/android/hardware/hardwareVim4" class="main-nav-link  header">Hardware</a><a href="/android/firmware/Vim4AndroidFirmware" class="main-nav-link  header">Firmware</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="vim4/NpuJniUsage.html">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner inner-article">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">How To Use Android NPU JNI</h1>
+                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_docs/edit/master/android/source/vim4/NpuJniUsage.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <blockquote class="note warn"><strong class="note-title">NOTE</strong><p>Before run android NPU Demo,please download newest <a href="/android/firmware/Vim3AndroidFirmware.html">firmware</a>,and update system to latest version.</p>
+</blockquote>
+
+
+<h3 id="Get-NPU-APP-JNI-source-code" class="article-heading"><a href="#Get-NPU-APP-JNI-source-code" class="headerlink" title="Get NPU APP/JNI source code"></a>Get NPU APP/JNI source code<a class="article-anchor" href="#Get-NPU-APP-JNI-source-code" aria-hidden="true"></a></h3><p>Currently, the source code of NPU JNI is not integrated into the firmware and needs to be downloaded from gitlab.</p>
+<p>Jni gitlab repository address:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_android_npu_library">https://github.com/khadas/khadas_android_npu_library</a></p>
+<p>App gitlab repository address:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/khadas/khadas_android_npu_app">https://github.com/khadas/khadas_android_npu_app</a></p>
+<h3 id="Install-NDK-build-environment" class="article-heading"><a href="#Install-NDK-build-environment" class="headerlink" title="Install NDK build environment"></a>Install NDK build environment<a class="article-anchor" href="#Install-NDK-build-environment" aria-hidden="true"></a></h3><p><code>1)</code> Download NDK<br>    wget <a target="_blank" rel="noopener external nofollow noreferrer" href="https://dl.google.com/android/repository/android-ndk-r17-linux-x86_64.zip">https://dl.google.com/android/repository/android-ndk-r17-linux-x86_64.zip</a><br><code>2)</code> Unzip<br>    unzip android-ndk-r17-linux-x86_64.zip<br><code>3)</code> Configure NDK environment variables: open .bashrc and add the following two lines to the end of the file, Or add it to the /etc/profile file</p>
+<pre><code>export NDKROOT=/usr/ndk/android-ndk-r17
+export PATH=$NDKROOT:$PATH
+save and exit,update environment variables：source ~/.bashrc.
+</code></pre>
+<p><code>4)</code> Check whether the NDK installation is completed:<br>    enter the “ndk-build” command in the shell to check if your installation is successful, if not “ndk-build not found” is displayed.</p>
+<h3 id="NDK-build-NPU-JNI-so-library" class="article-heading"><a href="#NDK-build-NPU-JNI-so-library" class="headerlink" title="NDK build NPU JNI so library"></a>NDK build NPU JNI so library<a class="article-anchor" href="#NDK-build-NPU-JNI-so-library" aria-hidden="true"></a></h3><p>After downloading the source code of NPU JNI, enter khadas_ android_ npu_ Library directory, as follows</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu_library# ll</span><br><span class="line">total 24</span><br><span class="line">drwxr-xr-x 5 root root 4096 Jun  3 13:46 ./</span><br><span class="line">drwxr-xr-x 4 root root 4096 Jun  3 13:45 ../</span><br><span class="line">drwxr-xr-x 5 root root 4096 Jun  4 13:54 detect_code/</span><br><span class="line">drwxr-xr-x 8 root root 4096 Jun  3 14:04 .git/</span><br><span class="line">drwxr-xr-x 5 root root 4096 Jun  3 13:46 model_code/</span><br><span class="line">-rw-r--r-- 1 root root   28 Jun  3 13:45 README.md</span><br></pre></td></tr></table></figure>
+<p><code>1)</code> build libkhadas_npu_jni.so </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu_library/detect_code# ndk-build </span><br><span class="line">Android NDK: android-9 is unsupported. Using minimum supported version android-14.    </span><br><span class="line">Android NDK: WARNING: APP_STL gnustl_static is deprecated and will be removed in the next release. Please switch to either c++_static or c++_shared. See https://developer.android.com/ndk/guides/cpp-support.html for more information.    </span><br><span class="line">/bin/sh: 1: test: -ge: unexpected operator</span><br><span class="line">Android NDK: WARNING:jni/Android.mk:khadas_npu_jni: non-system libraries in linker flags: -lopencv_java4    </span><br><span class="line">Android NDK:     This is likely to result in incorrect builds. Try using LOCAL_STATIC_LIBRARIES    </span><br><span class="line">Android NDK:     or LOCAL_SHARED_LIBRARIES instead to list the library dependencies of the    </span><br><span class="line">Android NDK:     current module    </span><br><span class="line">[armeabi-v7a] Install        : libkhadas_npu_jni.so =&gt; libs/armeabi-v7a/libkhadas_npu_jni.so</span><br></pre></td></tr></table></figure>
+<p><code>2)</code> build libnn_yoloface.so</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu_library/model_code/detect_yoloface# ndk-build </span><br><span class="line">Android NDK: android-9 is unsupported. Using minimum supported version android-14.    </span><br><span class="line">Android NDK: WARNING: APP_STL gnustl_static is deprecated and will be removed in the next release. Please switch to either c++_static or c++_shared. See https://developer.android.com/ndk/guides/cpp-support.html for more information.    </span><br><span class="line">/bin/sh: 1: test: -ge: unexpected operator</span><br><span class="line">Android NDK: WARNING:jni/Android.mk:nn_yoloface: non-system libraries in linker flags: -lovxlib    </span><br><span class="line">Android NDK:     This is likely to result in incorrect builds. Try using LOCAL_STATIC_LIBRARIES    </span><br><span class="line">Android NDK:     or LOCAL_SHARED_LIBRARIES instead to list the library dependencies of the    </span><br><span class="line">Android NDK:     current module    </span><br><span class="line">[armeabi-v7a] Install        : libnn_yoloface.so =&gt; libs/armeabi-v7a/libnn_yoloface.so</span><br></pre></td></tr></table></figure>
+<p><code>3)</code> buld libnn_yolo_v2.so</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu_library/model_code/detect_yolo_v2# ndk-build </span><br><span class="line">Android NDK: android-9 is unsupported. Using minimum supported version android-14.    </span><br><span class="line">Android NDK: WARNING: APP_STL gnustl_static is deprecated and will be removed in the next release. Please switch to either c++_static or c++_shared. See https://developer.android.com/ndk/guides/cpp-support.html for more information.    </span><br><span class="line">/bin/sh: 1: test: -ge: unexpected operator</span><br><span class="line">Android NDK: WARNING:jni/Android.mk:nn_yolo_v2: non-system libraries in linker flags: -lovxlib    </span><br><span class="line">Android NDK:     This is likely to result in incorrect builds. Try using LOCAL_STATIC_LIBRARIES    </span><br><span class="line">Android NDK:     or LOCAL_SHARED_LIBRARIES instead to list the library dependencies of the    </span><br><span class="line">Android NDK:     current module    </span><br><span class="line">[armeabi-v7a] Install        : libnn_yolo_v2.so =&gt; libs/armeabi-v7a/libnn_yolo_v2.so</span><br></pre></td></tr></table></figure>
+<p><code>4)</code> build libnn_yolo_v3.so</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu_library/model_code/detect_yolo_v3# ndk-build </span><br><span class="line">Android NDK: android-9 is unsupported. Using minimum supported version android-14.    </span><br><span class="line">Android NDK: WARNING: APP_STL gnustl_static is deprecated and will be removed in the next release. Please switch to either c++_static or c++_shared. See https://developer.android.com/ndk/guides/cpp-support.html for more information.    </span><br><span class="line">/bin/sh: 1: test: -ge: unexpected operator</span><br><span class="line">Android NDK: WARNING:jni/Android.mk:nn_yolo_v3: non-system libraries in linker flags: -lovxlib    </span><br><span class="line">Android NDK:     This is likely to result in incorrect builds. Try using LOCAL_STATIC_LIBRARIES    </span><br><span class="line">Android NDK:     or LOCAL_SHARED_LIBRARIES instead to list the library dependencies of the    </span><br><span class="line">Android NDK:     current module    </span><br><span class="line">[armeabi-v7a] Install        : libnn_yolo_v3.so =&gt; libs/armeabi-v7a/libnn_yolo_v3.so</span><br></pre></td></tr></table></figure>
+<h3 id="So-library-description" class="article-heading"><a href="#So-library-description" class="headerlink" title="So library description"></a>So library description<a class="article-anchor" href="#So-library-description" aria-hidden="true"></a></h3><p>libkhadas_npu_jni.so: The NPU related api encapsulated by khadas is called by khadas NPU demo APP，please refer to khadas_android_npu_library and khadas_android_npu_app code.</p>
+<p>libnn_yoloface.so: compiled by yoloface face detection case code which automatically generated by the model conversion tool , For details on how to transfer out the case code, please refer to the description of NPU model conversion in Linux doc.</p>
+<p>libnn_yolo_v2.so: compiled by yolo_v2 image recognition case code which automatically generated by the model conversion tool , For details on how to transfer out the case code, please refer to the description of NPU model conversion in Linux doc.</p>
+<p>libnn_yolo_v3.so: compiled by yolo_v3 image recognition case code which automatically generated by the model conversion tool , For details on how to transfer out the case code, please refer to the descr<br>iption of NPU model conversion in Linux doc.</p>
+<h3 id="khadas-android-npu-app-app-so-library-usage" class="article-heading"><a href="#khadas-android-npu-app-app-so-library-usage" class="headerlink" title="khadas_android_npu_app app so library usage"></a>khadas_android_npu_app app so library usage<a class="article-anchor" href="#khadas-android-npu-app-app-so-library-usage" aria-hidden="true"></a></h3><p>After download NPU APP source code，app/libs/armeabi-v7a directory include libkhadas_npu_jni.so libnn_yoloface.so libnn_yolo_v2.so libnn_yolo_v3.so and other NPU releated library，libovxlib.so etc,app call libkhadas_npu_jni.so api by JNI. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">root@lxx-NUC10i7FNH:/home/lxx/khadas_android_npu/khadas_android_npu/app/libs/armeabi-v7a# ll</span><br><span class="line">total 33008</span><br><span class="line">drwxr-xr-x  2 root root     4096 Jun  3 11:31 ./</span><br><span class="line">drwxr-xr-x 20 root root     4096 Jun  3 11:31 ../</span><br><span class="line">-rwxr-xr-x  1 root root     5408 Jun  3 11:31 ld-android.so*</span><br><span class="line">-rw-r--r--  1 root root   227220 Jun  3 11:31 libarchmodelSw.so</span><br><span class="line">-rwxr-xr-x  1 root root   657000 Jun  3 11:31 libc++_shared.so*</span><br><span class="line">-rwxr-xr-x  1 root root   832796 Jun  3 11:31 libc.so*</span><br><span class="line">-rw-r--r--  1 root root   636316 Jun  3 11:31 libc++.so</span><br><span class="line">-rw-r--r--  1 root root    67444 Jun  3 11:31 libcutils.so</span><br><span class="line">-rwxr-xr-x  1 root root     5940 Jun  3 11:31 libdl.so*</span><br><span class="line">-rw-r--r--  1 root root  1273224 Jun  3 11:31 libGAL.so</span><br><span class="line">-rwxr-xr-x  1 root root    26312 Jun  3 11:31 libkhadas_npu_jni.so*</span><br><span class="line">-rwxr-xr-x  1 root root    89020 Jun  3 11:31 liblog.so*</span><br><span class="line">-rwxr-xr-x  1 root root   136680 Jun  3 11:31 libm.so*</span><br><span class="line">-rw-r--r--  1 root root   226016 Jun  3 11:31 libNNArchPerf.so</span><br><span class="line">-rwxr-xr-x  1 root root    18032 Jun  3 11:31 libnn_yoloface.so*</span><br><span class="line">-rwxr-xr-x  1 root root    22180 Jun  3 11:31 libnn_yolo_v2.so*</span><br><span class="line">-rwxr-xr-x  1 root root    22252 Jun  3 11:31 libnn_yolo_v3.so*</span><br><span class="line">-rw-r--r--  1 root root 10076740 Jun  3 11:31 libopencv_java4.so</span><br><span class="line">-rw-r--r--  1 root root  1669588 Jun  3 11:31 libOpenVX.so</span><br><span class="line">-rw-r--r--  1 root root  2763276 Jun  3 11:31 libovxlib.so</span><br><span class="line">-rwxr-xr-x  1 root root    15928 Jun  3 11:31 libsync.so*</span><br><span class="line">-rw-r--r--  1 root root 14976940 Jun  3 11:31 libVSC.so</span><br></pre></td></tr></table></figure>
+
+
+
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-07-31T06:30:38.173Z" itemprop="dateModified">Last updated: 2023-07-31</time>
+                <a href="index.html" class="article-footer-next" title="Overview"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-NPU-APP-JNI-source-code"><span class="toc-text" title="Get NPU APP&#x2F;JNI source code">Get NPU APP&#x2F;JNI source code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-NDK-build-environment"><span class="toc-text" title="Install NDK build environment">Install NDK build environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NDK-build-NPU-JNI-so-library"><span class="toc-text" title="NDK build NPU JNI so library">NDK build NPU JNI so library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#So-library-description"><span class="toc-text" title="So library description">So library description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#khadas-android-npu-app-app-so-library-usage"><span class="toc-text" title="khadas_android_npu_app app so library usage">khadas_android_npu_app app so library usage</span></a></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Quick Start</summary><a href="index.html" class="sidebar-link first">Overview</a><a href="interfaces.html" class="sidebar-link">VIM4 Hardware</a><a href="boot_into_upgrade_mode.html" class="sidebar-link">Boot Into Upgrade Mode</a><a href="upgrade_via_usbcable.html" class="sidebar-link">Install OS into eMMC</a></details></strong><strong class="sidebar-title"><details open><summary>Resources Control</summary><strong class="sidebar-link"><details open><summary>System Control</summary><a href="adb_tool.html" class="sidebar-link secondary-first">ADB Tool</a><a href="change_boot_logo.html" class="sidebar-link">Change Boot Logo</a><a href="change_boot_animation.html" class="sidebar-link">Change Boot Animation</a><a href="app_platform_sign.html" class="sidebar-link">System Permissions for APP</a><a href="get_gsensor_data.html" class="sidebar-link">Get G-Sensor Data</a><a href="settings_command.html" class="sidebar-link">ADB Settings Commands</a><a href="android_tts.html" class="sidebar-link">TTS Usage</a><a href="khadas_settings_usage.html" class="sidebar-link">Khadas Settings</a><a href="android_add_permission.html" class="sidebar-link">Default Permissions for APP</a></details></strong><strong class="sidebar-link"><details open><summary>Accessories</summary><a href="connect_lcd.html" class="sidebar-link secondary-first">TS050 Connection</a></details></strong><strong class="sidebar-link"><details open><summary>Board Resources</summary><a href="access_gpio.html" class="sidebar-link secondary-first">GPIO Access Usage</a><a href="access_i2c.html" class="sidebar-link">I2C Usage</a><a href="use_uart.html" class="sidebar-link">UART Usage</a><a href="howto_use_pwm.html" class="sidebar-link">PWM Usage</a><a href="wol.html" class="sidebar-link">Wake-On-LAN</a><a href="howto_add_ir.html" class="sidebar-link">IR Remote Support</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>Development</summary><strong class="sidebar-link"><details open><summary>U-Boot</summary><a href="uboot_usage.html" class="sidebar-link secondary-first">U-Boot Usage Guide</a><a href="setup_tftp_server.html" class="sidebar-link">TFTP Server for U-Boot</a><a href="load_images_with_uboot_via_tftp.html" class="sidebar-link">Load Images with U-Boot via TFTP</a><a href="kbi_guidance.html" class="sidebar-link">KBI Guide</a></details></strong><strong class="sidebar-link"><details open><summary>Firmware && System</summary><a href="install_toolchains.html" class="sidebar-link secondary-first">Install Toolchains</a><a href="download_android_sourcecode.html" class="sidebar-link">Download Android Source Code</a><a href="build_android.html" class="sidebar-link">Build Android Source Code</a><a href="create_burn_card_via_cli.html" class="sidebar-link">Create Burning Card Using CLI</a><a href="create_bootable_sdcard.html" class="sidebar-link">Create Booting Card Using CLI</a><a href="erase_emmc.html" class="sidebar-link">Erase EMMC</a><a href="howto_use_fastboot.html" class="sidebar-link">FastBoot Uasge</a></details></strong><strong class="sidebar-link"><details open><summary>Hardware</summary><a href="setup_serial_tool.html" class="sidebar-link secondary-first">Serial Debugging Tool</a><a href="extra_power_input.html" class="sidebar-link">Extra Power Input</a></details></strong></details></strong><strong class="sidebar-title"><details open><summary>Troubleshooting</summary><a href="capture_log.html" class="sidebar-link first">Capture Running Log</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2023 <a href="https://www.khadas.com/" rel="external nofollow noreferrer" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://facebook.com/khadas.official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/khadas_official" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://youtube.com/c/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://github.com/khadas" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <strong class="mobile-nav-link current header"><details open><summary>VIM</summary><a href="/android/vim1/" class="mobile-nav-link secondary ">VIM1</a><a href="/android/vim2/" class="mobile-nav-link secondary ">VIM2</a><a href="/android/vim3/" class="mobile-nav-link secondary ">VIM3/3L</a><a href="/android/vim4/" class="mobile-nav-link secondary current">VIM4</a></details></strong><a href="/android/edge/" class="mobile-nav-link  header">Edge</a><a href="/android/hardware/hardwareVim4" class="mobile-nav-link  header">Hardware</a><a href="/android/firmware/Vim4AndroidFirmware" class="mobile-nav-link  header">Firmware</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas" class="mobile-nav-link header" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Quick Start</summary><a href="index.html" class="mobile-nav-link first">Overview</a><a href="interfaces.html" class="mobile-nav-link">VIM4 Hardware</a><a href="boot_into_upgrade_mode.html" class="mobile-nav-link">Boot Into Upgrade Mode</a><a href="upgrade_via_usbcable.html" class="mobile-nav-link">Install OS into eMMC</a></details></strong><strong class="mobile-nav-title"><details open><summary>Resources Control</summary><strong class="mobile-nav-link"><details open><summary>System Control</summary><a href="adb_tool.html" class="mobile-nav-link secondary-first">ADB Tool</a><a href="change_boot_logo.html" class="mobile-nav-link">Change Boot Logo</a><a href="change_boot_animation.html" class="mobile-nav-link">Change Boot Animation</a><a href="app_platform_sign.html" class="mobile-nav-link">System Permissions for APP</a><a href="get_gsensor_data.html" class="mobile-nav-link">Get G-Sensor Data</a><a href="settings_command.html" class="mobile-nav-link">ADB Settings Commands</a><a href="android_tts.html" class="mobile-nav-link">TTS Usage</a><a href="khadas_settings_usage.html" class="mobile-nav-link">Khadas Settings</a><a href="android_add_permission.html" class="mobile-nav-link">Default Permissions for APP</a></details></strong><strong class="mobile-nav-link"><details open><summary>Accessories</summary><a href="connect_lcd.html" class="mobile-nav-link secondary-first">TS050 Connection</a></details></strong><strong class="mobile-nav-link"><details open><summary>Board Resources</summary><a href="access_gpio.html" class="mobile-nav-link secondary-first">GPIO Access Usage</a><a href="access_i2c.html" class="mobile-nav-link">I2C Usage</a><a href="use_uart.html" class="mobile-nav-link">UART Usage</a><a href="howto_use_pwm.html" class="mobile-nav-link">PWM Usage</a><a href="wol.html" class="mobile-nav-link">Wake-On-LAN</a><a href="howto_add_ir.html" class="mobile-nav-link">IR Remote Support</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>Development</summary><strong class="mobile-nav-link"><details open><summary>U-Boot</summary><a href="uboot_usage.html" class="mobile-nav-link secondary-first">U-Boot Usage Guide</a><a href="setup_tftp_server.html" class="mobile-nav-link">TFTP Server for U-Boot</a><a href="load_images_with_uboot_via_tftp.html" class="mobile-nav-link">Load Images with U-Boot via TFTP</a><a href="kbi_guidance.html" class="mobile-nav-link">KBI Guide</a></details></strong><strong class="mobile-nav-link"><details open><summary>Firmware && System</summary><a href="install_toolchains.html" class="mobile-nav-link secondary-first">Install Toolchains</a><a href="download_android_sourcecode.html" class="mobile-nav-link">Download Android Source Code</a><a href="build_android.html" class="mobile-nav-link">Build Android Source Code</a><a href="create_burn_card_via_cli.html" class="mobile-nav-link">Create Burning Card Using CLI</a><a href="create_bootable_sdcard.html" class="mobile-nav-link">Create Booting Card Using CLI</a><a href="erase_emmc.html" class="mobile-nav-link">Erase EMMC</a><a href="howto_use_fastboot.html" class="mobile-nav-link">FastBoot Uasge</a></details></strong><strong class="mobile-nav-link"><details open><summary>Hardware</summary><a href="setup_serial_tool.html" class="mobile-nav-link secondary-first">Serial Debugging Tool</a><a href="extra_power_input.html" class="mobile-nav-link">Extra Power Input</a></details></strong></details></strong><strong class="mobile-nav-title"><details open><summary>Troubleshooting</summary><a href="capture_log.html" class="mobile-nav-link first">Capture Running Log</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="vim4/NpuJniUsage.html">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/android/js/lang_select.js"></script>
+
+
+<script src="/android/js/toc.js"></script>
+
+
+<script src="/android/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
